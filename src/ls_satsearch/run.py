@@ -12,7 +12,6 @@ from time import monotonic
 import numpy as np
 import yaml
 from astropy.coordinates import SkyCoord
-import astropy.units as u
 
 from .data import Field, load_bricks, make_area, select, sweeps
 from .search import exact_onoff, load_isochrone, point_fit, scan
@@ -193,6 +192,9 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
                     area_fraction=frac, inputs=info, observing_conditions_source_sample=co,
                     cutflow=cutflow, io_seconds=io_time, status='prepared')
     write_json(summary / 'manifest.json', manifest)
+    from .plots import overview, candidate
+
+    overview(figures / 'coverage_cmd.png', field, area, sample, spec, cfg, template)
     if not len(sample) or not effective_area:
         manifest['status'] = 'no_usable_gr'
         write_json(summary / 'manifest.json', manifest)
@@ -200,9 +202,6 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
     raw, peaks, seconds, cmd = scan(sample, field, area, template, cfg)
     write_csv(work / 'all_template_peaks.csv', raw)
     write_csv(summary / 'deduplicated_peaks.csv', peaks)
-    from .plots import overview, candidate
-
-    overview(figures / 'coverage_cmd.png', field, area, sample, spec, cfg, template)
     if spec.get('truth'):
         truth = next(b for b in read_csv(Path('references/benchmarks.csv')) if b['name'] == spec['truth'])
         records = recovery(peaks, truth, field, area, cfg, depth)
@@ -222,9 +221,10 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
         for delta in (-.25, 0., .25):
             dm = peak['dm'] + delta
             trial = dict(peak, dm=dm)
+            _, ratio = cmd.weights(dm)
             for factor in (.7, 1., 1.4):
                 rh = trial['rh_arcmin'] * factor
-                fit, indices, prob = point_fit(sample, cmd, field, area, trial, radius=rh)
+                fit, indices, prob = point_fit(sample, cmd, field, area, trial, radius=rh, ratio=ratio)
                 if fit and (refit is None or fit['ts'] > refit[0]['ts']):
                     refit = (dict(fit, fit_dm=dm, fit_rh_arcmin=rh), indices, prob)
         if refit is None:

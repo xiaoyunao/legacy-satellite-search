@@ -1,6 +1,9 @@
 """Read bounded DR11 products and construct an independent effective-area raster."""
 
+import os
 import re
+from concurrent.futures import ProcessPoolExecutor
+from contextlib import nullcontext
 from pathlib import Path
 from dataclasses import dataclass
 
@@ -118,6 +121,29 @@ def load_bricks(root):
         return f[1].read(columns=[actual[k] for k in cols], upper=True)
 
 
+def _sample_brick(task):
+    root, name, ix, iy, ras, decs, maskbits = task
+    prefix = root / 'south/coadd' / name[:3] / name / f'legacysurvey-{name}'
+    paths = [f'{prefix}-{kind}.fits.fz' for kind in ('maskbits', 'nexp-g', 'nexp-r')]
+    if not all(Path(p).is_file() for p in paths):
+        return name, ix, iy, None
+    ra, dec = np.meshgrid(ras, decs)
+    with fitsio.FITS(paths[0]) as f:
+        image = f[1].read()
+        header = dict(f[1].read_header())
+    wcs_keys = ('CTYPE', 'CUNIT', 'CRPIX', 'CRVAL', 'CDELT', 'CD1_', 'CD2_', 'PC1_', 'PC2_', 'PV')
+    wcs = WCS({k: v for k, v in header.items() if k.startswith(wcs_keys)}, naxis=2)
+    xx, yy = wcs.world_to_pixel_values(ra, dec)
+    xx, yy = np.rint(xx).astype(int), np.rint(yy).astype(int)
+    inside = (xx >= 0) & (yy >= 0) & (xx < image.shape[1]) & (yy < image.shape[0])
+    xx = np.clip(xx, 0, image.shape[1] - 1)
+    yy = np.clip(yy, 0, image.shape[0] - 1)
+    local = inside & ((image[yy, xx].astype(np.int64) & (maskbits | 1)) == 0)
+    for path in paths[1:]:
+        local &= fitsio.read(path, ext=1)[yy, xx] > 0
+    return name, ix, iy, local
+
+
 def make_area(root, field, bricks, maskbits, subsample, census=None, survey=None):
     """Sample g/r exposure and maskbits using primary brick boundaries and image WCS."""
     size = field.n * subsample
@@ -127,37 +153,27 @@ def make_area(root, field, bricks, maskbits, subsample, census=None, survey=None
     good = np.zeros((size, size), dtype=bool)
     brick_ok = field.overlap(bricks['RA1'], bricks['RA2'], bricks['DEC1'], bricks['DEC2'])
     brick_ok &= (bricks['PSFDEPTH_G'] > 0) & (bricks['PSFDEPTH_R'] > 0)
-    absent = []
-    seen = 0
+    tasks = []
     for b in bricks[brick_ok]:
         name = b['BRICKNAME'].strip()
         dra = (rafull - b['RA1']) % 360
         ix = np.flatnonzero(dra < (b['RA2'] - b['RA1']) % 360)
         iy = np.flatnonzero((decfull >= b['DEC1']) & (decfull < b['DEC2']))
-        if not ix.size or not iy.size:
-            continue
-        prefix = root / 'south/coadd' / name[:3] / name / f'legacysurvey-{name}'
-        paths = [f'{prefix}-{kind}.fits.fz' for kind in ('maskbits', 'nexp-g', 'nexp-r')]
-        if not all(Path(p).is_file() for p in paths):
-            absent.append(name)
-            continue
-        ra, dec = np.meshgrid(rafull[ix], decfull[iy])
-        with fitsio.FITS(paths[0]) as f:
-            image = f[1].read()
-            header = dict(f[1].read_header())
-        wcs = WCS(header, naxis=2)
-        xx, yy = wcs.world_to_pixel_values(ra, dec)
-        xx, yy = np.rint(xx).astype(int), np.rint(yy).astype(int)
-        inside = (xx >= 0) & (yy >= 0) & (xx < image.shape[1]) & (yy < image.shape[0])
-        xx = np.clip(xx, 0, image.shape[1] - 1)
-        yy = np.clip(yy, 0, image.shape[0] - 1)
-        local = inside & ((image[yy, xx].astype(np.int64) & (maskbits | 1)) == 0)
-        for path in paths[1:]:
-            local &= fitsio.read(path, ext=1)[yy, xx] > 0
-        if census is not None:
-            local &= census.accept(ra, dec, survey)
-        good[np.ix_(iy, ix)] = local
-        seen += 1
+        if ix.size and iy.size:
+            tasks.append((root, name, ix, iy, rafull[ix], decfull[iy], maskbits))
+    absent = []
+    seen = 0
+    ncpu = min(len(tasks), int(os.getenv('SLURM_CPUS_PER_TASK', '1')))
+    context = ProcessPoolExecutor(ncpu) if ncpu > 1 else nullcontext()
+    with context as pool:
+        for name, ix, iy, local in (pool.map(_sample_brick, tasks) if pool else map(_sample_brick, tasks)):
+            if local is None:
+                absent.append(name)
+                continue
+            if census is not None:
+                local &= census.accept(*np.meshgrid(rafull[ix], decfull[iy]), survey)
+            good[np.ix_(iy, ix)] = local
+            seen += 1
     return good, {'area_bricks_read': seen, 'area_bricks_missing_products': absent,
                   'area_sample_arcmin': cell}
 

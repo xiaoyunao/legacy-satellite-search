@@ -53,7 +53,6 @@ def choose(root, data_root, cfg, output):
     ordinary, deep = np.percentile(metric[good & central_bits], [35, 70])
     masks = {'ordinary': (metric >= ordinary) & (metric < deep),
              'deep': metric >= deep}
-    counts = {}
     for survey, role, layer, width in [(3, 'pilot_dev', 'ordinary', 2.7),
                                         (3, 'pilot_dev', 'deep', 2.7),
                                         (3, 'pilot_eval', 'ordinary', 2.7),
@@ -67,7 +66,7 @@ def choose(root, data_root, cfg, output):
             other = SkyCoord([p['ra'] for p in fields], [p['dec'] for p in fields], unit='deg')
             if min(center.separation(other).deg.min(), center.separation(known_sky).deg.min()) < 8:
                 continue
-            f = Field(float(b['RA']), float(b['DEC']), width, min(cfg['radii_arcmin']) / 3)
+            f = Field(float(b['RA']), float(b['DEC']), width, min(cfg['radii_arcmin']) / 3, buffer=0)
             span = np.linspace(-width * 30, width * 30, 17)
             ra, dec = f.sky(*np.meshgrid(span, span))
             if float(np.mean(census.accept(ra, dec, survey))) < .96:
@@ -88,7 +87,6 @@ def choose(root, data_root, cfg, output):
                                center_brick_g5=float(b['PSFDEPTH_G']), center_brick_r5=float(b['PSFDEPTH_R']),
                                center_brick_g_seeing=float(b['PSFSIZE_G']), max_inner_brick_ebv=float(
                                    np.max(bricks['EBV'][inner])), other_search_overlap='unknown'))
-            counts[ident] = area_deg2
             print(f'{ident}: {f.ra:.5f}, {f.dec:.5f}; {area_deg2:.3f} deg2', flush=True)
             break
         else:

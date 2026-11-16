@@ -3,7 +3,6 @@ import json
 import os
 from pathlib import Path
 
-import fitsio
 import numpy as np
 import yaml
 
@@ -13,11 +12,6 @@ from .data import Field, load_bricks, make_area, select, sweeps
 def main():
     root = Path(os.environ['LS_DR11_ROOT'])
     config = yaml.safe_load(Path('configs/search.yaml').read_text())
-    data_path = Path(os.environ['LS_SAT_DATA'])
-    with fitsio.FITS(data_path / 'resources/census.fits.gz') as f:
-        print('Census HDUs:', f, flush=True)
-        print({k: v for k, v in dict(f[1].read_header()).items()
-               if k in ('NSIDE', 'ORDERING', 'NAXIS2', 'TFORM1', 'TTYPE1', 'INDXSCHM')}, flush=True)
     bricks = load_bricks(root)
     print('Brick summary columns:', bricks.dtype.names, flush=True)
     field = Field(210.020, 14.5135, 0.25, 1/6, buffer=0)
