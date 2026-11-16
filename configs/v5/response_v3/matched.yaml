@@ -1,0 +1,10 @@
+# The central 2.1-degree rectangles share a 26-arcmin background buffer.
+width_deg: 2.1
+buffer_arcmin: 26
+radii_arcmin: [0.5, 1, 2, 4]
+review_budgets_deg2: [0.3]
+fields:
+- {id: fresh_01, role: pilot_dev, survey: 3, ra: 204.47882736156353, dec: 31.75}
+- {id: fresh_03, role: pilot_dev, survey: 3, ra: 233.16400580551525, dec: 17.0}
+- {id: pegasus4, role: recovery, truth: Pegasus_IV, ra: 328.85, dec: 26.25}
+- {id: aquarius4, role: recovery, truth: Aquarius_IV, ra: 330.12, dec: -2.26}

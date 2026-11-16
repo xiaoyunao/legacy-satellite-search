@@ -21,11 +21,12 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - Completed the frozen 60.705 deg² evaluation. A baseline selected 23 primary-budget groups, including the blind recovery of Hercules. Reviewed 49 modes and visually assessed all 23 groups.
 - Completed two preregistered independent controls and four matched-survey response replays. Expanded the matched development calibration to 16.851 deg². LS baseline and deep both recover DELVE 4 and DELVE 5 at the common budget.
 
-## Next experiment
+## Fifth-round execution
 
-1. Keep the frozen A baseline as the production discovery channel. Use new independent blocks to measure field-to-field review load, with the known-system responses reported explicitly.
-2. Test whether the two compact controls generalize. Choose more jointly covered ordinary-processed controls, validate faint-end selection, and repeat matched injections near the observed transition in several backgrounds.
-3. Use the narrow supported parameter range to decide whether to expand the compact-search area. Track the wide, low-member sensitivity limit.
+1. Apply the existing frozen A baseline to the registered three-batch expansion. Measure actual masked area, known-object response, candidate load and image review. Keep the two DES deep controls separate.
+2. Review all retained modes in the three compact weak-control fields before associating the published centres or spectroscopic members.
+3. Compare shared-population conditional and proxy-response trials on four matched backgrounds. Keep the fine-grid 0.25 arcmin comparison separate from the production result.
+4. Decide whether to expand the compact search based on real follow-up quality and evidence under the fixed review budget.
 
 ## Validation criteria
 

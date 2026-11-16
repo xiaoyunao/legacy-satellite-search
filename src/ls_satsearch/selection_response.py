@@ -20,13 +20,14 @@ def measurement_curve(mags, errors, target):
                      for i in im])*10**(.4*np.maximum(target-m[-1],0))
 
 
-def perturb(mags, pool, pos, rng):
+def perturb(mags, pool, pos, rng, *, standard_noise=None):
     """Use nearby measured errors before applying sample cuts."""
     xy,values,errors,tree = pool
     ids = np.atleast_1d(tree.query(pos,k=min(2400,len(xy)))[1])
     sig = np.column_stack([measurement_curve(values[ids,b],errors[ids,b],mags[:,b])
                            for b in range(mags.shape[1])])
-    noisy = mags + rng.normal(size=mags.shape)*sig
+    noise = rng.normal(size=mags.shape) if standard_noise is None else standard_noise
+    noisy = mags + noise*sig
     return noisy, sig*10**(.4*(noisy-mags))
 
 
@@ -40,7 +41,7 @@ def gr_accept(phot,err,cfg):
             (phot <= [cfg['g_max'],cfg['r_max']])).all(axis=1)
 
 
-def models(field,area,spec,matched,cfg):
+def models(field,area,spec,matched,cfg, *, include_ls_response=False):
     root,data,_ = settings()
     spec = dict(spec,width=matched['width_deg'],buffer_arcmin=matched['buffer_arcmin'])
     _,ls,_,_ = field_cache(root,data,spec,cfg,load_bricks(root))
@@ -92,10 +93,35 @@ def models(field,area,spec,matched,cfg):
             rows.append(dict(g_lo=g_edges[gidx],g_hi=g_edges[gidx+1],color_lo=colour_edges[cidx],
                              color_hi=colour_edges[cidx+1],parent=n,i_valid=ni,i_snr=ns,
                              morphology_pass=nm,response_calibrated=calibrated))
-    return ls_pool,before,(g_edges,colour_edges,bins),rows
+    original = ls_pool,before,(g_edges,colour_edges,bins),rows
+    if not include_ls_response:
+        return original
+    reliable = gr & good_i & morphology & (ge<=.15) & (re<=.15)
+    if not reliable.any():
+        raise ValueError('No high-quality PS1 point-source proxies')
+    detected_xy = xy[masked]
+    source_types = np.char.strip(ls['TYPE'][masked].astype('U'))
+    is_point = source_types=='PSF'
+    ls_mag,ls_err = ls_pool[1:3]
+    near_ps1 = cKDTree(ps_xy[reliable]).query(detected_xy,distance_upper_bound=.7/60)[0]<np.inf
+    parent = near_ps1 & gr_accept(ls_mag,ls_err,cfg)
+    left_color = ls_mag[:,0]-ls_mag[:,1]
+    ls_bins,ls_rows = {},[]
+    for gidx in range(len(g_edges)-1):
+        for cidx in range(len(colour_edges)-1):
+            use = parent&(ls_mag[:,0]>=g_edges[gidx])&(ls_mag[:,0]<g_edges[gidx+1])
+            use &= (left_color>=colour_edges[cidx])&(left_color<colour_edges[cidx+1])
+            n, passed = int(use.sum()), int((use&is_point).sum())
+            ls_bins[gidx,cidx] = passed/n if n>=20 else None
+            ls_rows.append(dict(g_lo=g_edges[gidx],g_hi=g_edges[gidx+1],color_lo=colour_edges[cidx],
+                                color_hi=colour_edges[cidx+1],parent=n,morphology_pass=passed,
+                                response_calibrated=n>=20))
+    point_pool = pool(detected_xy[is_point],ls_mag[is_point],ls_err[is_point])
+    ps1_point = pool(ps_xy[morphology&valid_i],before[1][morphology&valid_i],before[2][morphology&valid_i])
+    return original+(point_pool,ps1_point,(g_edges,colour_edges,ls_bins),ls_rows,is_point)
 
 
-def ps1_select(phot,err,cfg,response,rng):
+def ps1_select(phot,err,cfg,response,rng, *, uniforms=None):
     """Apply g/r photometry, independent i availability/SNR, and a morphology proxy."""
     g_edges,c_edges,bins = response
     gi = np.searchsorted(g_edges,phot[:,0],side='right')-1
@@ -104,10 +130,11 @@ def ps1_select(phot,err,cfg,response,rng):
     rates = [bins.get((g,c)) for g,c in zip(gi,ci)]
     pi,pm = np.asarray([rate if rate is not None else (1.,1.) for rate in rates]).T
     gr = gr_accept(phot[:,:2],err[:,:2],cfg)
+    ui, um = uniforms if uniforms is not None else rng.random((2,len(phot)))
     i_valid = (np.isfinite(phot[:,2]+err[:,2]) & (phot[:,2]>0) & (err[:,2]>0) &
-               (rng.random(len(phot))<pi))
+               (ui<pi))
     i_snr = i_valid & (err[:,2]<=2.5/np.log(10)/cfg['min_snr'])
-    psf = rng.random(len(phot))<pm
+    psf = um<pm
     return gr&i_snr&psf, dict(N_gr=int(gr.sum()),N_gr_i_valid=int((gr&i_valid).sum()),
                               N_gr_i_snr=int((gr&i_snr).sum()),N_gr_i_psf=int((gr&i_snr&psf).sum()),
                               N_response_unsupported=int(sum(use and rate is None for use,rate in zip(gr,rates))))

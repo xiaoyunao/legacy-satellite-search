@@ -260,7 +260,7 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
 
 
 def review_sky_groups(table, policy, budget, *, archived_run=None, archive_version=None,
-                      products=Path('results')):
+                      products=Path('results'), blind_reference=False):
     """Refit each retained distance–size hypothesis and summarize each sky group."""
     from astropy.coordinates import SkyCoord
     from .evaluate import source_references
@@ -272,13 +272,15 @@ def review_sky_groups(table, policy, budget, *, archived_run=None, archive_versi
         if r['policy'] != policy or float(r['budget']) != budget:
             continue
         method, depth = r['channel'].split('_')
-        position = SkyCoord(float(r['ra_deg']),float(r['dec_deg']),unit='deg')
-        distances = position.separation(catalog).arcmin
-        i = int(distances.argmin())
+        nearest = {}
+        if not blind_reference:
+            position = SkyCoord(float(r['ra_deg']),float(r['dec_deg']),unit='deg')
+            distances = position.separation(catalog).arcmin
+            i = int(distances.argmin())
+            nearest = dict(nearest_known=references[i][0],nearest_known_arcmin=float(distances[i]),
+                           nearest_known_catalog=references[i][3])
         rows.append(dict(r,field_id=r['field'],depth=depth,method=method,branch='main',rank=r['peak_rank'],
-                         candidate_group_id=r['group_id'],nearest_known=references[i][0],
-                         nearest_known_arcmin=float(distances[i]),nearest_known_catalog=references[i][3],
-                         evidence_level='L0'))
+                         candidate_group_id=r['group_id'],evidence_level='L0',**nearest))
     batches = sorted({(r['field_id'],r['depth']) for r in rows})
     kwargs = dict(archived_run=archived_run,archive_version=archive_version,products=products)
     allocated = int(os.environ.get('SLURM_CPUS_PER_TASK','1'))
@@ -301,8 +303,8 @@ def review_sky_groups(table, policy, budget, *, archived_run=None, archive_versi
         key = r['candidate_group_id']
         fit = fits[key,str(r['rank'])]
         grouped.setdefault(key,[]).append(dict(fit, discovery_representative=r['representative'],
-                                              discovery_score=r['score'], nearest_known=r['nearest_known'],
-                                              nearest_known_arcmin=r['nearest_known_arcmin']))
+                                              discovery_score=r['score'], nearest_known=r.get('nearest_known'),
+                                              nearest_known_arcmin=r.get('nearest_known_arcmin')))
     totals = []
     for key,modes in grouped.items():
         completed = [m for m in modes if m['fit_status']=='complete']
@@ -360,12 +362,13 @@ if __name__ == '__main__':
     p.add_argument('--group-limit',type=int)
     p.add_argument('--archived-run',type=Path)
     p.add_argument('--archive-version')
+    p.add_argument('--blind-reference',action='store_true')
     p.add_argument('--products',type=Path,default=Path('results'))
     p.add_argument('--refresh-image', help='Saved hypothesis label, such as main-B-1')
     args = p.parse_args()
     if args.groups:
         review_sky_groups(args.groups,args.policy,args.budget,archived_run=args.archived_run,
-                          archive_version=args.archive_version,products=args.products)
+                          archive_version=args.archive_version,products=args.products,blind_reference=args.blind_reference)
     elif not args.field:
         p.error('Provide a field or --groups')
     elif args.refresh_image:

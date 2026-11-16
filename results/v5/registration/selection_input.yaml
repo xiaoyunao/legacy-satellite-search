@@ -1,0 +1,37 @@
+seed: 481707
+batches: 3
+ps1_fields_per_batch: 12
+deep_control_fields: 2
+width_deg: 3.25
+minimum_center_separation_deg: 5
+minimum_proxy_coverage: 0.97
+max_ebv: 0.10
+candidate_rationale:
+  search: PS1 census assignment, usable LS g and r, high Galactic latitude and low extinction
+  deep_control: Known deeper DES census coverage for context
+previous_fields:
+- configs/fields.yaml
+- configs/v4/fields.yaml
+- configs/v5/weak/fields.yaml
+# These are coarse imaging regions, not satellite-search masks. An outside label is not a completeness statement.
+overlap_sources:
+  hsc: https://hsc-release.mtk.nao.ac.jp/doc/index.php/survey-depth/
+  kids: https://kids.strw.leidenuniv.nl/DR5/
+  rubin_dp1: https://docushare.lsstcorp.org/docushare/dsweb/Get/Rendition-89587/RTN-011.pdf
+overlap_regions:
+  hsc_coarse:
+    - [0, 50, -9, 9]
+    - [126, 225, -9, 9]
+    - [222, 258, 40, 48]
+    - [315, 360, -9, 9]
+  kids_coarse:
+    - [126, 225, -7, 7]
+    - [325, 54, -42, -24]
+  rubin_dp1_coarse:
+    - [34, 42, 3, 11]
+    - [49, 57, -32, -24]
+    - [146, 154, -2, 6]
+    - [179, 187, -65, -56]
+    - [235, 244, -55, -45]
+    - [264, 276, -33, -21]
+    - [309, 320, -60, -48]

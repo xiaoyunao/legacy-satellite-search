@@ -1,0 +1,4 @@
+fields:
+  - {id: weak_01, role: pilot_eval, layer: compact_control, ra: 290.05, dec: -60.59, width: 1.5}
+  - {id: weak_02, role: pilot_eval, layer: compact_control, ra: 230.525, dec: 27.75, width: 2.1}
+  - {id: weak_03, role: pilot_eval, layer: compact_control, ra: 222.40, dec: 17.25, width: 2.1}
