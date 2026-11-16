@@ -1,0 +1,7 @@
+policy,branch,budget,field,role,area_deg2,kept_sky_groups,passing_hypotheses,cutoff
+A_base,main,0.3,delve4,recovery,4.357729552469135,5,8,5.808549934974592
+A_base,main,0.3,delve5,recovery,4.245426311728394,2,4,5.808549934974592
+A_base,main,0.3,fresh_01,pilot_dev,4.16532986111111,2,3,5.808549934974592
+A_base,main,0.3,fresh_03,pilot_dev,4.159809027777777,1,3,5.808549934974592
+A_base,main,0.3,fresh_05,pilot_dev,4.2078240740740736,2,5,5.808549934974592
+A_base,main,0.3,fresh_09,pilot_dev,4.317579089506172,0,0,5.808549934974592

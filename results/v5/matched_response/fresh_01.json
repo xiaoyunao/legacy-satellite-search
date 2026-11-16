@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "job": "61406369",
+  "seed": [
+    481705,
+    204478,
+    55
+  ],
+  "model": "Common latent rows and sky positions, common standardized gr noise and morphology draws. Proxy shape response conditional on observed counterpart; unsupported bins use unity. Catalog entry and image completeness are unmeasured."
+}

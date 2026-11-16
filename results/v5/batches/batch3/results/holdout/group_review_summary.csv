@@ -1,0 +1,28 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+expand_25-A_base-0.3-001,awaiting_visual_review,1,1,1,1,13.846052430897531,17.5,0.35,0.0,DELVE 4,321.89026519668295,L0
+expand_26-A_base-0.3-001,awaiting_visual_review,1,1,1,1,8.133807500652246,19.0,0.5,0.0,Pisces II,839.9182016506243,L0
+expand_26-A_base-0.3-002,awaiting_visual_review,1,1,1,2,9.91342060073338,17.5,0.5,0.0,Pisces II,769.909668996648,L0
+expand_27-A_base-0.3-001,awaiting_visual_review,2,2,2,1,0.8959663515953755,20.5,2.0,0.0,DELVE 4,629.1314705463905,L0
+expand_27-A_base-0.3-002,awaiting_visual_review,1,1,1,3,3.2567873323413714,20.25,1.0,0.0,DELVE 4,533.8447204038803,L0
+expand_30-A_base-0.3-001,awaiting_visual_review,1,1,1,1,6.494139523737056,16.75,1.0,0.0,Segue 2,505.2955552159191,L0
+expand_30-A_base-0.3-002,awaiting_visual_review,1,1,1,2,11.026698018355642,17.75,0.35,0.0,Segue 2,552.864224209573,L0
+expand_30-A_base-0.3-003,awaiting_visual_review,1,1,1,3,0.2687513635652232,17.0,2.8,0.0,Segue 2,576.6244028548808,L0
+expand_31-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,20.0,5.6,0.0,Leo Minor I,845.8431973307627,L0
+expand_31-A_base-0.3-002,awaiting_visual_review,1,1,1,2,1.6382574724307695,18.75,0.7,0.0,Leo Minor I,751.68376804022,L0
+expand_32-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,16.75,0.35,0.0,Hercules,186.06691678438807,L0
+expand_32-A_base-0.3-002,awaiting_visual_review,1,1,1,2,3.2581334764653294,16.75,0.5,0.0,Hercules,277.2903926011246,L0
+expand_32-A_base-0.3-003,awaiting_visual_review,1,1,1,3,6.581413449622451,16.25,0.7,0.0,Hercules,218.11648123162092,L0
+expand_33-A_base-0.3-001,awaiting_visual_review,6,6,6,1,0.4374676775891402,16.75,16.0,0.0,Ursa Major III,275.97827030634653,L0
+expand_33-A_base-0.3-002,awaiting_visual_review,1,1,1,6,5.697040487045717,16.75,0.7,0.0,Leo Minor I,234.87725319544396,L0
+expand_33-A_base-0.3-003,awaiting_visual_review,1,1,1,8,4.859793675323376,18.75,0.5,0.0,Leo Minor I,287.9173545013136,L0
+expand_33-A_base-0.3-004,awaiting_visual_review,3,3,3,9,7.7442822713924215,17.5,0.35,0.15975390064478034,Leo Minor I,242.5431347746717,L0
+expand_33-A_base-0.3-005,awaiting_visual_review,1,1,1,12,0.0,20.5,11.2,0.0,Ursa Major III,215.42125823845637,L0
+expand_34-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,19.0,0.35,0.0,Pisces II,1337.6705206775382,L0
+expand_34-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.8401039959692849,19.25,0.5,0.0,Pisces II,1332.1747970888996,L0
+expand_34-A_base-0.3-003,awaiting_visual_review,1,1,1,3,0.0,19.5,2.8,0.0,Aquarius III,1494.4148684451723,L0
+expand_35-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.6609860481165528,17.75,0.7,0.0,Balbinot 1,476.66806788692975,L0
+expand_36-A_base-0.3-001,awaiting_visual_review,4,4,3,1,0.0,20.5,11.2,0.0,DELVE 4,247.37269966847384,L0
+expand_36-A_base-0.3-002,awaiting_visual_review,1,1,1,4,0.0,18.75,11.2,0.0,DELVE 4,268.3842945420984,L0
+expand_36-A_base-0.3-003,awaiting_visual_review,2,2,2,6,0.0,19.0,11.2,0.0,DELVE 4,260.11013685712726,L0
+expand_36-A_base-0.3-004,awaiting_visual_review,2,2,2,8,7.4344756592539065,19.25,0.5,0.0,DELVE 4,293.94725748159914,L0
+expand_36-A_base-0.3-005,awaiting_visual_review,1,1,1,9,1.4743120867763162,18.0,0.5,0.0,DELVE 4,247.13369353208793,L0

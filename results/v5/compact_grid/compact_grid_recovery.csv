@@ -1,0 +1,9 @@
+arm,survey,policy,budget,name,field,covered,spatial,blind_dm,blind_dm_error,blind_correct,correct_mode_exists,correct_mode_dm,wide_mode_exists,offset_arcmin,representative_channel
+fine_base,ls_base,A_base,0.3,DELVE_4,delve4,True,True,17.5,-0.7660625688767198,False,False,,True,0.6676851673459061,A_base
+fine_base,ls_base,A_base,0.3,DELVE_5,delve5,True,True,18.0,0.04467696486750583,True,True,18.0,True,0.708378283429488,A_base
+fine_base,ps1,A_base,0.3,DELVE_4,delve4,True,False,,,False,False,,False,,
+fine_base,ps1,A_base,0.3,DELVE_5,delve5,True,False,,,False,False,,False,,
+fine_compact,ls_base,A_base,0.3,DELVE_4,delve4,True,True,17.5,-0.7660625688767198,False,False,,True,0.6676851673459061,A_base
+fine_compact,ls_base,A_base,0.3,DELVE_5,delve5,True,True,18.0,0.04467696486750583,True,True,18.0,True,0.708378283429488,A_base
+fine_compact,ps1,A_base,0.3,DELVE_4,delve4,True,False,,,False,False,,False,,
+fine_compact,ps1,A_base,0.3,DELVE_5,delve5,True,False,,,False,False,,False,,

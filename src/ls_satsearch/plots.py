@@ -7,7 +7,8 @@ import numpy as np
 def overview(path, field, area, sample, spec, cfg, model):
     fig, ax = plt.subplots(1, 2, figsize=(10, 4.5), layout='constrained')
     lim = field.limit / 60
-    ax[0].imshow(area, origin='lower', extent=[-lim, lim, -lim, lim], cmap='cividis', interpolation='nearest')
+    ax[0].imshow(area, origin='lower', extent=[-lim, lim, -lim, lim], cmap='cividis',
+                 vmin=0, vmax=1, interpolation='nearest')
     w = field.width / 2
     ax[0].add_patch(plt.Rectangle((-w, -w), 2*w, 2*w, fill=False, color='orange', lw=1.3))
     ax[0].set(xlabel='East (deg)', ylabel='North (deg)', title='Usable exposure and analysis region')
@@ -74,8 +75,9 @@ def candidate(path, spec, field, area, sample, sources, valid, mags, chosen, pea
         return int(np.clip((coord + field.limit) * sc, 0, n))
     i, j, k, l = pixel(x-lim), pixel(x+lim), pixel(y-lim), pixel(y+lim)
     extent = [i/sc-field.limit-x, j/sc-field.limit-x, k/sc-field.limit-y, l/sc-field.limit-y]
-    ax.imshow(area[k:l, i:j], origin='lower', extent=extent, cmap='cividis')
-    ax.set(xlabel='East (arcmin)', ylabel='North (arcmin)', title='Local gr exposure and mask')
+    ax.imshow(area[k:l, i:j], origin='lower', extent=extent, cmap='cividis',
+              vmin=0, vmax=1, interpolation='nearest')
+    ax.set(xlabel='East (arcmin)', ylabel='North (arcmin)', title='Local gr mask (yellow is usable)')
     fig.suptitle(f"{spec['id']} · {peak['method']} rank {peak['rank']} · "
                  f"({peak['ra_deg']:.4f}, {peak['dec_deg']:.4f}) · DM {dm:.2f} · "
                  f"$r_h$ {rh:.2f}′")

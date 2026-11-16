@@ -1,0 +1,39 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+expand_01-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,16.25,11.2,0.0,Canes Venatici II,180.9988247977532,L0
+expand_02-A_base-0.3-001,awaiting_visual_review,5,5,5,4,0.0344794292814381,16.25,11.2,0.0,DELVE 4,635.5747959103506,L0
+expand_02-A_base-0.3-002,awaiting_visual_review,6,6,6,5,6.1462736339983834,16.25,8.0,1.0080399992358053,DELVE 4,619.6585764605983,L0
+expand_02-A_base-0.3-003,awaiting_visual_review,6,6,5,11,7.260606795201461,20.75,5.6,0.0,DELVE 4,563.807532181397,L0
+expand_02-A_base-0.3-004,awaiting_visual_review,5,5,4,14,1.0861681073987448,19.75,8.0,0.0,DELVE 4,564.2693717307294,L0
+expand_02-A_base-0.3-005,awaiting_visual_review,2,2,2,22,5.589205296775354,17.75,0.7,0.0,DELVE 4,664.7706304476895,L0
+expand_02-A_base-0.3-006,awaiting_visual_review,2,2,2,25,1.915444585806501,16.5,5.6,0.0,DELVE 4,617.3007106722649,L0
+expand_02-A_base-0.3-007,awaiting_visual_review,1,1,1,26,0.0,19.75,11.2,0.0,DELVE 4,567.6982928072044,L0
+expand_03-A_base-0.3-001,awaiting_visual_review,6,6,6,1,0.0,20.25,11.2,0.0,Bootes IV,1248.6763477041177,L0
+expand_03-A_base-0.3-002,awaiting_visual_review,2,2,2,5,0.0,20.5,11.2,0.0,Bootes IV,1267.7971880421803,L0
+expand_03-A_base-0.3-003,awaiting_visual_review,2,2,1,7,30.789644946982953,20.0,0.35,8.059701491838199,Hercules,1256.8360010012445,L0
+expand_03-A_base-0.3-004,awaiting_visual_review,1,1,1,10,5.538423459922125,20.25,0.7,0.2373076612207945,Hercules,1217.7896675061875,L0
+expand_05-A_base-0.3-001,awaiting_visual_review,4,4,4,2,5.352032369162746,20.0,5.6,0.0,Bootes V,124.73810458586847,L0
+expand_05-A_base-0.3-002,awaiting_visual_review,1,1,1,4,0.0,18.25,2.8,0.0,Bootes V,259.58580288755746,L0
+expand_05-A_base-0.3-003,awaiting_visual_review,1,1,1,5,4.4485228091649205,16.75,0.35,0.0,Bootes V,180.2817506525153,L0
+expand_05-A_base-0.3-004,awaiting_visual_review,1,1,1,7,1.8107011712880547,17.75,1.4,0.0,Bootes V,177.984251007098,L0
+expand_07-A_base-0.3-001,awaiting_visual_review,6,6,5,1,0.9605547768665303,21.0,8.0,0.0,Bootes V,474.17817909920655,L0
+expand_07-A_base-0.3-002,awaiting_visual_review,6,6,5,4,0.11792295388431562,20.5,11.2,0.0,Bootes V,465.29707619471907,L0
+expand_07-A_base-0.3-003,awaiting_visual_review,2,2,2,5,15.532125388317121,18.75,0.5,2.7733769188544137,Bootes V,419.71181269312007,L0
+expand_07-A_base-0.3-004,awaiting_visual_review,1,1,1,14,0.3987475617653078,21.0,5.6,0.0,Bootes V,460.7499612466066,L0
+expand_08-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,18.25,0.7,0.0,DELVE 5,318.76667244949493,L0
+expand_09-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,16.25,11.2,0.0,Hercules,1296.2657845247838,L0
+expand_09-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.5574668321396454,17.75,0.35,0.0,Hercules,1208.985434926333,L0
+expand_09-A_base-0.3-003,awaiting_visual_review,1,1,1,3,8.763466071250242,20.25,0.35,0.0,Hercules,1344.920497295484,L0
+expand_09-A_base-0.3-004,awaiting_visual_review,1,1,1,4,4.470717550609221,19.75,0.5,0.0,Hercules,1224.0120924926514,L0
+expand_09-A_base-0.3-005,awaiting_visual_review,1,1,1,5,13.650275775617189,20.25,0.35,0.025947493135834776,Hercules,1342.3347481470275,L0
+expand_10-A_base-0.3-001,awaiting_visual_review,1,1,1,1,6.978537341187764,18.25,1.4,0.0,Segue 2,1171.692408052651,L0
+expand_10-A_base-0.3-002,awaiting_visual_review,1,1,1,2,1.989416562200562,18.5,0.7,0.0,Segue 2,1266.8265041549835,L0
+expand_11-A_base-0.3-001,awaiting_visual_review,8,8,6,1,0.0,16.5,5.6,0.0,Ursa Major III,302.8205947211008,L0
+expand_11-A_base-0.3-002,awaiting_visual_review,2,2,2,2,0.0,20.25,11.2,0.0,Ursa Major III,288.1752933295063,L0
+expand_11-A_base-0.3-003,awaiting_visual_review,1,1,1,7,0.0,20.0,11.2,0.0,Ursa Major III,375.17968079154446,L0
+expand_11-A_base-0.3-004,awaiting_visual_review,1,1,1,8,0.0,17.25,2.8,0.0,Ursa Major III,305.7273881327118,L0
+expand_11-A_base-0.3-005,awaiting_visual_review,1,1,1,9,0.20353103987262688,17.25,2.8,0.0,Ursa Major III,307.2358426686015,L0
+expand_12-A_base-0.3-001,awaiting_visual_review,3,3,3,2,5.527862050789122,19.75,0.35,0.0,Hercules,652.7852136256176,L0
+expand_12-A_base-0.3-002,awaiting_visual_review,1,1,1,4,2.262873379363528,19.5,2.0,0.0,Hercules,765.4015590933138,L0
+expand_37-A_base-0.3-001,awaiting_visual_review,1,1,1,1,6.211546090022422,17.25,0.5,0.0,Fornax,264.15867568284654,L0
+expand_37-A_base-0.3-002,awaiting_visual_review,1,1,1,2,10.630893232544802,18.0,0.35,0.066031838601051,Fornax,322.7689600804913,L0
+expand_38-A_base-0.3-001,awaiting_visual_review,1,1,1,1,14.590993914707743,21.0,1.0,1.513253654491126,Fornax,591.895449068206,L0

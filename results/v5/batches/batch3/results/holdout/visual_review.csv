@@ -1,0 +1,28 @@
+group_id,visual_disposition,evidence_level,review_note
+expand_25-A_base-0.3-001,photometric_reserve,L0,Sparse apparent subgiant/turnoff pattern with little residual after deletion and a nearby circular mask. Keep as a lower-priority L0.
+expand_26-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_26-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_27-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_27-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_30-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_30-A_base-0.3-002,insufficient_photometric_evidence,L0,Few consistent CMD points and an adjacent non-PSF excess. One high-weight stamp is faint.
+expand_30-A_base-0.3-003,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_31-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_31-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_32-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_32-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_32-A_base-0.3-003,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_33-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_33-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_33-A_base-0.3-003,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_33-A_base-0.3-004,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_33-A_base-0.3-005,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_34-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_34-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_34-A_base-0.3-003,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_35-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_36-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_36-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_36-A_base-0.3-003,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_36-A_base-0.3-004,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.
+expand_36-A_base-0.3-005,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside group fit and area metrics.

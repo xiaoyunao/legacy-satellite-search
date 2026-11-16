@@ -1,0 +1,11 @@
+group_id,rank,nearest_harris_2010,separation_arcmin,cluster_dm,fit_dm,in_review_aperture,input_url,input_sha256
+weak_01-A_base-0.3-001,6,NGC 6752,27.291043904869134,13.010299956639813,20.25,True,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_01-A_base-0.3-002,7,NGC 6752,92.82920019230085,13.010299956639813,18.75,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_01-A_base-0.3-003,13,NGC 6752,50.60034780613061,13.010299956639813,17.0,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_02-A_base-0.3-001,5,Pal 14,1001.785042744513,19.41830717576809,17.75,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_02-A_base-0.3-002,6,Pal 14,1001.3092688025638,19.41830717576809,19.0,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_02-A_base-0.3-003,7,NGC 5466,1038.4248195824823,16.020599913279625,17.75,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_02-A_base-0.3-004,8,Pal 14,948.577132160513,19.41830717576809,20.25,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_03-A_base-0.3-001,3,NGC 5466,888.5015442682331,16.020599913279625,18.0,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_03-A_base-0.3-002,6,NGC 5466,889.1842357968802,16.020599913279625,18.0,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658
+weak_03-A_base-0.3-003,8,NGC 5466,888.6365293490434,16.020599913279625,18.0,False,https://physics.mcmaster.ca/~harris/mwgc.dat,b457a690adc422fb2e8e05a23e1de50b62d1d5ac10dce99963c956c1b17ca658

@@ -1,0 +1,10 @@
+{
+  "seed": [
+    481705,
+    204478,
+    25
+  ],
+  "mask_version": "v3",
+  "job": "61411109",
+  "experiment": "isolated conditional LS catalog injections"
+}

@@ -1,0 +1,15 @@
+{
+  "group_id": "expand_03-A_base-0.3-003",
+  "job": "61409662",
+  "ps1_cone_rows": 513,
+  "ra_deg": 258.0775572867658,
+  "dec_deg": 31.464058460463264,
+  "radius_deg": 0.05,
+  "n_ls_p_ge_half": 9,
+  "astro_match_arcsec": 0.8,
+  "n_ps1_match": 9,
+  "n_ps1_gr_snr5": 9,
+  "n_ps1_gr_snr5_and_ps1_point": 7,
+  "input_sha256": "28981eab34948dc03d5da948c5a574a5bb33a4cb16569615fd2092d657ef9126",
+  "catalogue_query": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=258.0775572867658&dec=31.464058460463264&radius=0.05&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&pagesize=25000"
+}

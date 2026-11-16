@@ -1,0 +1,3 @@
+policy,budget,name,field,covered,spatial,blind_correct,correct_mode_exists,wide_mode_exists
+A_base,0.3,DELVE_4,delve4,True,False,False,False,False
+A_base,0.3,DELVE_5,delve5,True,False,False,False,False

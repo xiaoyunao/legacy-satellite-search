@@ -1,0 +1,28 @@
+group_id,field,phase,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level,known_catalog_nearby,near_mask_hole_2arcmin,mask_invalid_fraction_in_6arcmin,nearest_mask_hole_arcmin
+expand_25-A_base-0.3-001,expand_25,discovery,awaiting_visual_review,1,1,1,1,13.846052430897531,17.5,0.35,0.0,DELVE 4,321.89026519668295,L0,False,True,0.020567288801571708,0.7149689192936528
+expand_26-A_base-0.3-001,expand_26,discovery,awaiting_visual_review,1,1,1,1,8.133807500652246,19.0,0.5,0.0,Pisces II,839.9182016506243,L0,False,False,0.00939111220230788,3.1319367454943374
+expand_26-A_base-0.3-002,expand_26,discovery,awaiting_visual_review,1,1,1,2,9.91342060073338,17.5,0.5,0.0,Pisces II,769.909668996648,L0,False,False,0.0068131598330468945,2.3311001217821072
+expand_27-A_base-0.3-001,expand_27,discovery,awaiting_visual_review,2,2,2,1,0.8959663515953755,20.5,2.0,0.0,DELVE 4,629.1314705463905,L0,False,True,0.006567640559783943,0.6481812160874207
+expand_27-A_base-0.3-002,expand_27,discovery,awaiting_visual_review,1,1,1,3,3.2567873323413714,20.25,1.0,0.0,DELVE 4,533.8447204038803,L0,False,True,0.008777314019150504,0.792762399601542
+expand_30-A_base-0.3-001,expand_30,discovery,awaiting_visual_review,1,1,1,1,6.494139523737056,16.75,1.0,0.0,Segue 2,505.2955552159191,L0,False,True,0.012582862754726245,1.1740835669674181
+expand_30-A_base-0.3-002,expand_30,discovery,awaiting_visual_review,1,1,1,2,11.026698018355642,17.75,0.35,0.0,Segue 2,552.864224209573,L0,False,False,0.002087426326129666,2.6315526679974237
+expand_30-A_base-0.3-003,expand_30,discovery,awaiting_visual_review,1,1,1,3,0.2687513635652232,17.0,2.8,0.0,Segue 2,576.6244028548808,L0,False,False,0.03117712041242175,2.112035616281885
+expand_31-A_base-0.3-001,expand_31,discovery,awaiting_visual_review,1,1,1,1,0.0,20.0,5.6,0.0,Leo Minor I,845.8431973307627,L0,False,True,0.042045175546280386,1.8754629058217898
+expand_31-A_base-0.3-002,expand_31,discovery,awaiting_visual_review,1,1,1,2,1.6382574724307695,18.75,0.7,0.0,Leo Minor I,751.68376804022,L0,False,True,0.03498220203755984,0.3111359117097049
+expand_32-A_base-0.3-001,expand_32,discovery,awaiting_visual_review,1,1,1,1,0.0,16.75,0.35,0.0,Hercules,186.06691678438807,L0,False,False,0.0047262460103118095,2.716334335501413
+expand_32-A_base-0.3-002,expand_32,discovery,awaiting_visual_review,1,1,1,2,3.2581334764653294,16.75,0.5,0.0,Hercules,277.2903926011246,L0,False,True,0.030935428431131843,1.0290907529359568
+expand_32-A_base-0.3-003,expand_32,discovery,awaiting_visual_review,1,1,1,3,6.581413449622451,16.25,0.7,0.0,Hercules,218.11648123162092,L0,False,True,0.018104823861544127,0.5793914431925404
+expand_33-A_base-0.3-001,expand_33,discovery,awaiting_visual_review,6,6,6,1,0.4374676775891402,16.75,16.0,0.0,Ursa Major III,275.97827030634653,L0,False,True,0.03940584335870366,1.370573683616574
+expand_33-A_base-0.3-002,expand_33,discovery,awaiting_visual_review,1,1,1,6,5.697040487045717,16.75,0.7,0.0,Leo Minor I,234.87725319544396,L0,False,False,0.0025165725509452494,2.889756814066474
+expand_33-A_base-0.3-003,expand_33,discovery,awaiting_visual_review,1,1,1,8,4.859793675323376,18.75,0.5,0.0,Leo Minor I,287.9173545013136,L0,False,False,0.008347655290940338,4.035003097892259
+expand_33-A_base-0.3-004,expand_33,discovery,awaiting_visual_review,3,3,3,9,7.7442822713924215,17.5,0.35,0.15975390064478034,Leo Minor I,242.5431347746717,L0,False,False,0.0013506876227897839,3.920928532319003
+expand_33-A_base-0.3-005,expand_33,discovery,awaiting_visual_review,1,1,1,12,0.0,20.5,11.2,0.0,Ursa Major III,215.42125823845637,L0,False,False,0.004787625828627547,3.6652459368749644
+expand_34-A_base-0.3-001,expand_34,discovery,awaiting_visual_review,1,1,1,1,0.0,19.0,0.35,0.0,Pisces II,1337.6705206775382,L0,False,True,0.008900073655781979,1.1257713405093919
+expand_34-A_base-0.3-002,expand_34,discovery,awaiting_visual_review,1,1,1,2,0.8401039959692849,19.25,0.5,0.0,Pisces II,1332.1747970888996,L0,False,False,0.007611097471151486,2.2737939416069683
+expand_34-A_base-0.3-003,expand_34,discovery,awaiting_visual_review,1,1,1,3,0.0,19.5,2.8,0.0,Aquarius III,1494.4148684451723,L0,False,True,0.007979376381045912,1.1257713405095113
+expand_35-A_base-0.3-001,expand_35,discovery,awaiting_visual_review,1,1,1,1,0.6609860481165528,17.75,0.7,0.0,Balbinot 1,476.66806788692975,L0,False,True,0.005155271879219344,1.8818209266549464
+expand_36-A_base-0.3-001,expand_36,discovery,awaiting_visual_review,4,4,3,1,0.0,20.5,11.2,0.0,DELVE 4,247.37269966847384,L0,False,False,0.015590473852197398,3.291930369183928
+expand_36-A_base-0.3-002,expand_36,discovery,awaiting_visual_review,1,1,1,4,0.0,18.75,11.2,0.0,DELVE 4,268.3842945420984,L0,False,True,0.04462312791554137,1.720989702339098
+expand_36-A_base-0.3-003,expand_36,discovery,awaiting_visual_review,2,2,2,6,0.0,19.0,11.2,0.0,DELVE 4,260.11013685712726,L0,False,False,0.0017800147311563957,2.475575129585957
+expand_36-A_base-0.3-004,expand_36,discovery,awaiting_visual_review,2,2,2,8,7.4344756592539065,19.25,0.5,0.0,DELVE 4,293.94725748159914,L0,False,True,0.002577952369260987,1.8717564537676628
+expand_36-A_base-0.3-005,expand_36,discovery,awaiting_visual_review,1,1,1,9,1.4743120867763162,18.0,0.5,0.0,DELVE 4,247.13369353208793,L0,False,False,0.00018413945494721336,5.3622264239980035

@@ -1,0 +1,39 @@
+group_id,visual_disposition,evidence_level,review_note
+expand_01-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_02-A_base-0.3-001,coverage_edge_context,L0,Peak in a low-coverage field; a mask hole is within 2 arcmin. Local fits and coadd thumbnails show no comparable compact CMD excess.
+expand_02-A_base-0.3-002,coverage_edge_context,L0,Peak in a low-coverage field; a mask hole is within 2 arcmin. Local fits and coadd thumbnails show no comparable compact CMD excess.
+expand_02-A_base-0.3-003,coverage_edge_context,L0,Peak in a low-coverage field; a mask hole is within 2 arcmin. Local fits and coadd thumbnails show no comparable compact CMD excess.
+expand_02-A_base-0.3-004,coverage_edge_context,L0,Peak in a low-coverage field; a mask hole is within 2 arcmin. Local fits and coadd thumbnails show no comparable compact CMD excess.
+expand_02-A_base-0.3-005,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_02-A_base-0.3-006,coverage_edge_context,L0,Peak in a low-coverage field; a mask hole is within 2 arcmin. Local fits and coadd thumbnails show no comparable compact CMD excess.
+expand_02-A_base-0.3-007,coverage_edge_context,L0,Peak in a low-coverage field; a mask hole is within 2 arcmin. Local fits and coadd thumbnails show no comparable compact CMD excess.
+expand_03-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_03-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_03-A_base-0.3-003,worth_targeted_followup,L0,"Compact PSF excess, matching faint sequence and point-like high-weight sources. Stable to brighter cuts. Centre intersects a small depth/seeing stripe, so maintain L0 pending independent follow-up."
+expand_03-A_base-0.3-004,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_05-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_05-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_05-A_base-0.3-003,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_05-A_base-0.3-004,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_07-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_07-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_07-A_base-0.3-003,insufficient_photometric_evidence,L0,"Three high-weight compact sources, one near a bright neighbour. Limited residual signal."
+expand_07-A_base-0.3-004,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_08-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_09-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_09-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_09-A_base-0.3-003,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_09-A_base-0.3-004,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_09-A_base-0.3-005,insufficient_photometric_evidence,L0,Sparse core with a faint stamp and adjacent bright source. Residual close to zero.
+expand_10-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_10-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_11-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_11-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_11-A_base-0.3-003,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_11-A_base-0.3-004,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_11-A_base-0.3-005,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_12-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_12-A_base-0.3-002,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_37-A_base-0.3-001,L0_after_visual_triage,L0,Checked best-mode g/r coadd thumbnail alongside the group fit and area metrics.
+expand_37-A_base-0.3-002,insufficient_photometric_evidence,L0,"Three compact sources, with near-zero residual and weak independent photometric support at this stage."
+expand_38-A_base-0.3-001,insufficient_photometric_evidence,L0,"Compact stamps in deep-control area, but the fitted signal has little residual."

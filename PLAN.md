@@ -21,12 +21,17 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - Completed the frozen 60.705 deg² evaluation. A baseline selected 23 primary-budget groups, including the blind recovery of Hercules. Reviewed 49 modes and visually assessed all 23 groups.
 - Completed two preregistered independent controls and four matched-survey response replays. Expanded the matched development calibration to 16.851 deg². LS baseline and deep both recover DELVE 4 and DELVE 5 at the common budget.
 
-## Fifth-round execution
+## Fifth-round results
 
-1. Apply the existing frozen A baseline to the registered three-batch expansion. Measure actual masked area, known-object response, candidate load and image review. Keep the two DES deep controls separate.
-2. Review all retained modes in the three compact weak-control fields before associating the published centres or spectroscopic members.
-3. Compare shared-population conditional and proxy-response trials on four matched backgrounds. Keep the fine-grid 0.25 arcmin comparison separate from the production result.
-4. Decide whether to expand the compact search based on real follow-up quality and evidence under the fixed review budget.
+- Completed all three frozen discovery batches. Their 36 PS1 fields contain 339.769 effective deg² and 96 primary groups. Separate DES controls contain 20.526 deg² and three primary groups. Completed 193 modes and visually triaged all 99 groups.
+- DELVE 3/4/5 passed candidate triage before the published-member associations. One new L0 position merits targeted follow-up.
+- Completed 24 field-matched LS–PS1 trials and eight paired fine-grid injections. The depth comparison supports a compact follow-up experiment. The 0.25 arcmin grid yielded no extra positional recoveries in the tested controls.
+
+## Next work
+
+1. Test the leading compact L0 group using independent photometry and a local, conditions-matched background.
+2. Measure candidate load and mask proximity against random positions in the same fields. Diagnose narrow observing-condition stripes and extended known systems.
+3. Continue frozen A searches with effective area and prior-search overlap reported per field. Consider a separate deeper compact arm after an independent calibration of catalog entry and morphology.
 
 ## Validation criteria
 

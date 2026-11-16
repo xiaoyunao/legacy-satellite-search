@@ -1,0 +1,35 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+expand_13-A_base-0.3-001,awaiting_visual_review,3,3,3,1,0.0,20.5,11.2,0.0,Bootes III,289.80416495984645,L0
+expand_13-A_base-0.3-002,awaiting_visual_review,3,3,2,4,6.876971812475958,19.25,1.0,0.18347360342470154,Bootes III,403.0171973875947,L0
+expand_13-A_base-0.3-003,awaiting_visual_review,1,1,1,5,7.460381049838556,19.0,0.5,0.0,Bootes III,392.99103263792097,L0
+expand_13-A_base-0.3-004,awaiting_visual_review,1,1,1,6,0.4341313610682529,16.75,1.4,0.0,Bootes III,406.7191061306863,L0
+expand_14-A_base-0.3-001,awaiting_visual_review,1,1,1,1,8.972049665839565,18.0,0.5,0.0,Triangulum II,1480.559077687133,L0
+expand_15-A_base-0.3-001,awaiting_visual_review,4,4,4,1,1.0755150723183817,20.75,11.2,0.0,DELVE 4,425.6354583545058,L0
+expand_15-A_base-0.3-002,awaiting_visual_review,5,5,5,4,0.1359908564587018,16.25,11.2,0.0,DELVE 4,404.96519141901996,L0
+expand_15-A_base-0.3-003,awaiting_visual_review,3,3,3,5,0.0,16.25,11.2,0.0,DELVE 4,437.29797508070254,L0
+expand_15-A_base-0.3-004,awaiting_visual_review,4,4,4,16,10.32327468074439,18.0,0.35,0.0,DELVE 4,277.83915157162113,L0
+expand_15-A_base-0.3-005,awaiting_visual_review,3,3,3,14,0.0,19.25,11.2,0.0,DELVE 4,412.34937086456733,L0
+expand_15-A_base-0.3-006,awaiting_visual_review,1,1,1,20,4.345158824872332,17.25,0.7,0.0,DELVE 4,277.2710166512262,L0
+expand_17-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,16.75,11.2,0.0,Hercules,715.1542381938765,L0
+expand_17-A_base-0.3-002,awaiting_visual_review,1,1,1,2,5.381773485012852,17.0,0.5,0.0,Hercules,664.1228686950308,L0
+expand_17-A_base-0.3-003,awaiting_visual_review,1,1,1,3,3.275331867717264,19.75,0.35,0.0,Hercules,748.3124141140136,L0
+expand_17-A_base-0.3-004,awaiting_visual_review,1,1,1,4,0.0,17.75,1.4,0.0,Hercules,719.3887726369098,L0
+expand_17-A_base-0.3-005,awaiting_visual_review,1,1,1,5,3.2482314220195923,17.0,0.35,0.0,Hercules,667.7177569234686,L0
+expand_18-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,17.5,0.35,0.0,Hercules,427.9534653337943,L0
+expand_18-A_base-0.3-002,awaiting_visual_review,1,1,1,2,5.86453074037494,20.5,1.0,0.024927991457452725,Hercules,439.6138639018017,L0
+expand_19-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.994841856513736,20.5,1.0,0.0,Bootes V,227.12614608467047,L0
+expand_20-A_base-0.3-001,awaiting_visual_review,1,1,1,1,12.355457331559995,19.5,0.5,0.5247479824216734,DELVE 4,366.76185843092617,L0
+expand_20-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.0,16.75,11.2,0.0,DELVE 4,373.26779901234556,L0
+expand_20-A_base-0.3-003,awaiting_visual_review,1,1,1,3,1.9269943007729635,17.0,0.5,0.0,DELVE 4,311.4258430825329,L0
+expand_21-A_base-0.3-001,awaiting_visual_review,8,8,8,1,178.44520590006584,21.0,11.2,153.90677638270745,Triangulum II,556.3264353326064,L0
+expand_21-A_base-0.3-002,awaiting_visual_review,2,2,2,9,0.0,20.25,11.2,0.0,Triangulum II,605.2034765425925,L0
+expand_21-A_base-0.3-003,awaiting_visual_review,1,1,1,10,0.0,19.25,1.4,0.0,Triangulum II,573.3894362986754,L0
+expand_22-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.57574899431974,19.25,0.5,0.0,Balbinot 1,616.4376514642939,L0
+expand_22-A_base-0.3-002,awaiting_visual_review,2,2,2,2,5.966295975906702,20.0,2.0,0.0,Balbinot 1,476.66006104744014,L0
+expand_22-A_base-0.3-003,awaiting_visual_review,1,1,1,3,8.336628551478755,20.25,0.7,0.5876551874012477,Balbinot 1,552.1123321852766,L0
+expand_22-A_base-0.3-004,awaiting_visual_review,1,1,1,5,0.3030505165091686,17.5,2.0,0.0,Balbinot 1,514.4260122874956,L0
+expand_23-A_base-0.3-001,awaiting_visual_review,4,4,4,3,0.006491429532283655,16.75,5.6,0.0,Triangulum II,959.3017936426751,L0
+expand_23-A_base-0.3-002,awaiting_visual_review,1,1,1,4,10.720626508912519,20.0,1.0,0.09662117323974173,Triangulum II,984.0434347439452,L0
+expand_23-A_base-0.3-003,awaiting_visual_review,1,1,1,5,0.18132670784572769,17.5,0.7,0.0,Triangulum II,1079.4504296139426,L0
+expand_23-A_base-0.3-004,awaiting_visual_review,1,1,1,6,0.30184797700335064,20.0,0.5,0.0,Triangulum II,982.736080815116,L0
+expand_24-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.321387649119444,16.75,0.7,0.0,Pisces II,809.1294399381923,L0

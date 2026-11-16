@@ -1,0 +1,60 @@
+{
+  "field": {
+    "id": "fresh_09",
+    "role": "pilot_dev",
+    "survey": 3,
+    "ra": 334.2296511627907,
+    "dec": 17.5
+  },
+  "config": {
+    "seed": 481705,
+    "region": "south",
+    "dm": [
+      16.5,
+      20.75,
+      0.25
+    ],
+    "radii_arcmin": [
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "min_snr": 5,
+    "reject_maskbits": [
+      1,
+      5,
+      6,
+      10,
+      19
+    ],
+    "coverage_subdivision": 1,
+    "min_on_fraction": 0.75,
+    "min_off_fraction": 0.6,
+    "peak_seed_floor": 2.0,
+    "background_tile_arcmin": 120,
+    "match_min_arcmin": 2,
+    "match_rh_factor": 1,
+    "match_dm_tolerance": 0.75,
+    "review_budgets_deg2": [
+      0.3
+    ],
+    "isochrone": "isochrones/des/bressan2012/iso_a12.0_z0.00010.dat",
+    "g_max": 24.0,
+    "r_max": 23.5,
+    "methods": [
+      "A"
+    ]
+  },
+  "status": "complete",
+  "area_deg2": 4.317579089506172,
+  "depth": "base",
+  "timer": {
+    "A": 16.58813499592361,
+    "B": 0.0,
+    "cmd": 5.53412441801629,
+    "shared": 0.21472342798369937
+  },
+  "arm": "fine_base",
+  "job": "61405236"
+}
