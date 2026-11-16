@@ -1,0 +1,22 @@
+candidate: expand_03-A_base-0.3-003
+field: expand_03
+ra_deg: 258.0775572867658
+dec_deg: 31.464058460463264
+dm: 20.0
+rh_arcmin: 0.35
+membership_rank: 7
+ps1_radius_deg: 0.28
+ps1_magnitude_caps: [24.0, 23.5]
+ps1_min_snr: 5
+ps1_ikron_delta: 0.05
+center_aperture_arcmin: 0.525
+control_radius_arcmin: [4, 14]
+control_draws: 4096
+control_neighbors: 256
+mask_draws: 768
+mask_neighbors: 48
+ps1_scan_radii: [0.5, 1, 2]
+ps1_scan_dm: [16.5, 20.75, 0.25]
+ps1_scan_width_deg: 0.3
+ps1_scan_buffer_arcmin: 7
+seed: 481706
