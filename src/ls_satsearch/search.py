@@ -11,25 +11,44 @@ from scipy.spatial import cKDTree
 from scipy.special import logsumexp, xlogy
 from scipy.stats import binom
 
+from .hypotheses import BRANCHES, template_branch
 
-def load_isochrone(path):
+
+def load_isochrone(path, *, legacy_locus=False, bands=('g', 'r')):
     with path.open() as handle:
         for line in handle:
             if line.startswith('#') and 'int_IMF' in line and 'M_ini' in line:
                 tokens = line[1:].split()
-                cols = [tokens.index(key) for key in ('g', 'r', 'int_IMF')]
+                stage = 'stage' if 'stage' in tokens else 'label'
+                cols = [tokens.index(key) for key in (*bands, 'int_IMF', 'M_ini', stage)]
                 break
         else:
-            raise ValueError('Expected PARSEC header with g, r and integral IMF')
-    g, r, integral = np.loadtxt(path, usecols=cols, unpack=True)
+            raise ValueError('Expected PARSEC header with g, r, integral IMF and evolutionary stage')
+    g, r, integral, mass, phase = np.loadtxt(path, usecols=cols, unpack=True)
     weights = np.maximum(np.gradient(integral), 0)
-    if not np.all(np.isfinite(g + r + weights)) or not np.any(weights > 0):
+    native = np.column_stack((g, r))
+    if not np.all(np.isfinite(native)) or np.any(np.diff(integral) < 0) or not np.any(weights > 0):
         raise ValueError('Invalid PARSEC template or IMF')
-    length = np.hypot(np.diff(g), np.diff(r))
-    along = np.r_[0, np.cumsum(length)]
-    fine = np.linspace(0, along[-1], int(along[-1] / .015) + 2)
-    return np.column_stack((g, r)), weights, np.column_stack(
-        (np.interp(fine, along, g), np.interp(fine, along, r)))
+    # CMD v2.7 can label both the RGB tip and the ZAHB as stage 4.
+    # The adjacent, equal-integral stage-4 pair at the entry to CHeB
+    # marks the handoff between the low-mass RGB and HB tracks.
+    start_he = np.flatnonzero((phase[:-1] == 3) & (phase[1:] == 4)) + 1
+    handoff = [i + 1 for i in start_he if i + 1 < len(phase) and phase[i + 1] == 4
+               and mass[i] == mass[i + 1] and integral[i] == integral[i + 1]]
+    if not len(start_he):
+        raise ValueError('Expected RGB to core helium transition in the old PARSEC template')
+    # Treat each contiguous phase as a separate interpolation segment.
+    phase_breaks = np.flatnonzero(np.diff(phase)) + 1
+    if handoff:
+        # The first stage-4 row belongs to the RGB segment for these tables.
+        phase_breaks = np.array([i + 1 if i + 1 in handoff else i for i in phase_breaks])
+    segments = [native] if legacy_locus else np.split(native, phase_breaks)
+    fine_segments = []
+    for nodes in segments:
+        along = np.r_[0, np.cumsum(np.linalg.norm(np.diff(nodes, axis=0), axis=1))]
+        fine = np.linspace(0, along[-1], int(np.ceil(along[-1] / .015)) + 1)
+        fine_segments.append(np.column_stack([np.interp(fine, along, band) for band in nodes.T]))
+    return native, weights, np.concatenate(fine_segments)
 
 
 class CMD:
@@ -241,23 +260,29 @@ def maxima(score, ok, floor):
 
 
 def deduplicate(peaks):
+    """Collapse compatible templates within each method and distance branch."""
+    grouped = {(method, branch): [] for method in ('A','B') for branch in BRANCHES}
+    for peak in peaks:
+        peak['branch'] = template_branch(peak['dm'])
+        grouped[peak['method'], peak['branch']].append(peak)
     result = []
-    for method in ('A', 'B'):
-        rows = sorted((p for p in peaks if p['method'] == method),
-                      key=lambda p: (-p['score'], p['dm'], p['rh_arcmin'], p['x'], p['y']))
+    for rows in grouped.values():
+        rows.sort(key=lambda p: (-p['score'], p['dm'], p['rh_arcmin'], p['x'], p['y']))
         if not rows:
             continue
         xy = np.array([(r['x'], r['y']) for r in rows])
         tree = cKDTree(xy)
-        rh = np.array([r['rh_arcmin'] for r in rows])
+        rh, dm = (np.array([r[key] for r in rows]) for key in ('rh_arcmin', 'dm'))
         assigned = np.zeros(len(rows), dtype=int)
         rank = 0
         for i, row in enumerate(rows):
             if not assigned[i]:
                 rank += 1
-                nearby = np.array(tree.query_ball_point(xy[i], max(.5, .75 * rh.max())))
+                nearby = np.asarray(tree.query_ball_point(xy[i], max(.5, .75 * rh[i])))
                 dist = np.linalg.norm(xy[nearby] - xy[i], axis=1)
-                use = (assigned[nearby] == 0) & (dist <= np.maximum(.5, .75 * np.maximum(rh[i], rh[nearby])))
+                use = ((assigned[nearby] == 0) & (abs(dm[nearby] - dm[i]) <= .5)
+                       & (rh[nearby] >= rh[i]/2) & (rh[nearby] <= 2*rh[i])
+                       & (dist <= np.maximum(.5, .75 * np.minimum(rh[i], rh[nearby]))))
                 assigned[nearby[use]] = rank
                 result.append(dict(row, rank=rank))
             row['dedup_rank'] = int(assigned[i])

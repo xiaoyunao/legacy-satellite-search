@@ -11,7 +11,7 @@ import numpy as np
 import yaml
 
 from .data import Field, load_bricks, make_area
-from .run import coverage_metrics, read_csv, settings, sha
+from .run import config_path, coverage_metrics, read_csv, settings, sha
 
 
 class Census:
@@ -36,7 +36,7 @@ class Census:
         return in_survey & ((bits & self.bad) == 0)
 
 
-def choose(root, data_root, cfg, output):
+def choose(root, data_root, cfg, output, expansion=False):
     census = Census(data_root)
     bricks = load_bricks(root)
     good = (bricks['EBV'] < .1) & (bricks['PSFDEPTH_G'] > 0) & (bricks['PSFDEPTH_R'] > 0)
@@ -44,20 +44,30 @@ def choose(root, data_root, cfg, output):
     sc = SkyCoord(pool['RA'], pool['DEC'], unit='deg')
     good = (np.abs(sc.galactic.b.deg) > 30) & (np.abs(pool['DEC']) < 63)
     central_bits = census.accept(pool['RA'], pool['DEC'], 3)
-    rng = np.random.default_rng(cfg['seed'])
-    baseline = yaml.safe_load(Path('configs/fields.yaml').read_text())
+    seed = cfg['seed'] + int(expansion)
+    rng = np.random.default_rng(seed)
+    baseline = yaml.safe_load(config_path('fields.yaml').read_text())
     fields = [f for f in baseline['fields'] if f['role'] not in ('pilot_dev', 'pilot_eval', 'deep_control')]
+    if expansion:
+        fields = list(baseline['fields'])
+    initial = len(fields)
+
     known = read_csv(Path('references/benchmarks.csv'))
     known_sky = SkyCoord([float(p['ra_deg']) for p in known], [float(p['dec_deg']) for p in known], unit='deg')
     metric = pool['PSFDEPTH_G'] + pool['PSFDEPTH_R'] - .3 * (pool['PSFSIZE_G'] + pool['PSFSIZE_R'])
     ordinary, deep = np.percentile(metric[good & central_bits], [35, 70])
-    masks = {'ordinary': (metric >= ordinary) & (metric < deep),
-             'deep': metric >= deep}
-    for survey, role, layer, width in [(3, 'pilot_dev', 'ordinary', 2.7),
+    masks = {'ordinary': (metric >= ordinary) & (metric < deep), 'deep': metric >= deep,
+             'shallower': metric < ordinary}
+    requests = [(3, 'pilot_dev', 'ordinary', 2.7),
                                         (3, 'pilot_dev', 'deep', 2.7),
                                         (3, 'pilot_eval', 'ordinary', 2.7),
                                         (3, 'pilot_eval', 'deep', 2.7),
-                                        (1, 'deep_control', 'deep', 2.)]:
+                                        (1, 'deep_control', 'deep', 2.)]
+    if expansion:
+        requests = [(3, role, layer, 3.25) for _ in range(2)
+                    for layer in ('ordinary','deep','shallower')
+                    for role in ('pilot_dev','pilot_eval')]
+    for serial, (survey, role, layer, width) in enumerate(requests, 1):
         eligible = good & census.accept(pool['RA'], pool['DEC'], survey)
         eligible &= masks[layer] if survey == 3 else metric >= deep
         for index in rng.permutation(np.flatnonzero(eligible)):
@@ -82,21 +92,29 @@ def choose(root, data_root, cfg, output):
             if fraction < .85:
                 continue
             ident = role.replace('pilot_', '') + '_' + layer if survey == 3 else 'des_control'
+            if expansion:
+                ident = f'fresh_{serial:02d}'
             fields.append(dict(id=ident, role=role, layer=layer, survey=survey, ra=f.ra, dec=f.dec,
                                width=width, effective_area_deg2=area_deg2, effective_fraction=fraction,
+                               evaluation_kind='fresh_holdout' if expansion and role=='pilot_eval' else 'development',
                                center_brick_g5=float(b['PSFDEPTH_G']), center_brick_r5=float(b['PSFDEPTH_R']),
                                center_brick_g_seeing=float(b['PSFSIZE_G']), max_inner_brick_ebv=float(
                                    np.max(bricks['EBV'][inner])), other_search_overlap='unknown'))
             print(f'{ident}: {f.ra:.5f}, {f.dec:.5f}; {area_deg2:.3f} deg2', flush=True)
+            if expansion:
+                staging=output.with_suffix('.progress.yaml')
+                temp=staging.with_suffix('.tmp')
+                temp.write_text(yaml.safe_dump(dict(fields=fields[initial:]),sort_keys=False))
+                temp.replace(staging)
             break
         else:
             raise RuntimeError(f'No eligible field found for {role}/{layer}')
-    record = dict(selection_seed=cfg['seed'], census_sha256=sha(data_root / 'resources/census.fits.gz'),
+    record = dict(selection_seed=seed, census_sha256=sha(data_root / 'resources/census.fits.gz'),
                   source_commit='1a02f50d25cac74c02ddba8401a5af20aa2db4fe',
                   selection='Seeded eligible brick centers, different sky patches; >=85% gr and census effective '
                             'area, inner brick EBV<0.10, |b_center|>30; depth and seeing proxies from brick summary',
                   other_search_overlap='unknown for HSC, UNIONS, KiDS and Rubin',
-                  fields=fields)
+                  fields=fields[initial:] if expansion else fields)
     temp = output.with_suffix('.tmp')
     temp.write_text(yaml.safe_dump(record, sort_keys=False))
     temp.replace(output)
@@ -105,5 +123,6 @@ def choose(root, data_root, cfg, output):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output', type=Path)
+    parser.add_argument('--expansion',action='store_true')
     args = parser.parse_args()
-    choose(*settings(), args.output)
+    choose(*settings(), args.output, expansion=args.expansion)

@@ -90,8 +90,15 @@ def quantile(x):
     return np.percentile(x, [10, 50, 90]).tolist() if len(x) else None
 
 
+def runs_path(data_root):
+    return data_root / 'runs' / 'v2'
+
+
 def recovery(rows, truth, field, coverage, cfg, depth):
+    from .hypotheses import truth_branch
+
     records = []
+    branch = truth_branch(float(truth['D_kpc']))
     x, y = field.xy(float(truth['ra_deg']), float(truth['dec_deg']))
     radius = max(.5, float(truth['theta_h_arcmin']))
     fraction = coverage_metrics(field, coverage, cfg, 1.5 * radius, (x, y))
@@ -104,17 +111,22 @@ def recovery(rows, truth, field, coverage, cfg, depth):
     off_fraction = float((ring & coverage[np.ix_(iy, ix)]).sum() / ring.sum()) if ring.any() else 0.
     covered = fraction >= cfg['min_on_fraction'] and off_fraction >= cfg['min_off_fraction']
     for method in ('A', 'B'):
-        record = dict(name=truth['name'], method=method, depth=depth, covered=covered,
+        record = dict(name=truth['name'], branch=branch, method=method, depth=depth, covered=covered,
                       core_valid_fraction=fraction, off_valid_fraction=off_fraction,
                       entered_peak_table=False, truth_dm=5 * np.log10(float(truth['D_kpc'])) + 10,
                       scale_below_grid=float(truth['theta_h_arcmin']) < min(cfg['radii_arcmin']))
         if covered:
             pos = SkyCoord(float(truth['ra_deg']), float(truth['dec_deg']), unit='deg')
-            peers = [r for r in rows if r['method'] == method]
+            peers = [r for r in rows if r['method'] == method and r['branch'] == branch]
             if peers:
                 coords = SkyCoord([r['ra_deg'] for r in peers], [r['dec_deg'] for r in peers], unit='deg')
                 sep = pos.separation(coords).arcmin
-                indices = np.flatnonzero((sep <= max(cfg['match_min_arcmin'], radius)) &
+                nearby = np.flatnonzero(sep <= max(cfg['match_min_arcmin'], cfg['match_rh_factor'] * radius))
+                if len(nearby):
+                    top = peers[nearby[0]]
+                    record.update(spatial_score=top['score'], spatial_rank=top['rank'],
+                                  spatial_dm=top['dm'], spatial_offset_arcmin=sep[nearby[0]])
+                indices = np.flatnonzero((sep <= max(cfg['match_min_arcmin'], cfg['match_rh_factor'] * radius)) &
                                          (abs(np.array([r['dm'] for r in peers]) - record['truth_dm'])
                                           <= cfg['match_dm_tolerance']))
                 if len(indices):
@@ -165,7 +177,7 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
     name = f"{spec['id']}-{depth}{tag}"
     summary = Path('results/summary') / name
     figures = Path('results/figures') / name
-    work = data_root / 'runs' / name
+    work = runs_path(data_root) / name
     for path in (summary, figures, work):
         path.mkdir(exist_ok=True, parents=True)
     sample, cutflow, valid, mags, chosen = select(sources, field, area, cfg)
@@ -248,7 +260,7 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
         fit['max_member_probability'] = np.max(prob, initial=0.)
         fit['fixed_fit_ts_drop_top3'] = -2 * np.log1p(-np.minimum(prob[strongest], 1 - 1e-12)).sum()
         results.append({**peak, **fit})
-        suffix = f"{peak['method']}-{peak['rank']}"
+        suffix = f"{peak['branch']}-{peak['method']}-{peak['rank']}"
         np.savez_compressed(work / f'membership-{suffix}.npz', source_ids=sources[
             ['RELEASE', 'BRICKID', 'OBJID']][chosen][idx], probability=prob)
         candidate(figures / f'candidate-{suffix}.png', spec, field, area, sample, sources, valid,
@@ -266,6 +278,8 @@ def main():
     p.add_argument('--depth', choices=('base', 'deep'), default='base')
     p.add_argument('--tag', default='')
     args = p.parse_args()
+    if not os.environ.get('LS_SAT_V2_WORKSPACE'):
+        p.error('Use an isolated v2 workspace and set LS_SAT_V2_WORKSPACE=1')
     root, data_root, cfg = settings()
     if cfg['region'] != 'south':
         p.error('Only south DECam gr is available in this release')

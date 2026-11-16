@@ -2,7 +2,34 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
-## Run on Perlmutter
+## Branch-aware revision
+
+The current code writes branch-aware results. The original scientific report and baseline files remain under their original paths and are reproducible from commit `4e9f4f2`. The revision is deployed in `$HOME/projects/legacy-satellite-search/revisions/branch-v2` and writes source-level work products under `$PSCRATCH/legacy-satellite-search/runs/v2`. The original four PS1 fields are now regression data.
+
+From the NERSC revision directory with its own `src`, `configs`, `references`, `scripts` and `.venv`:
+
+```bash
+mkdir -p logs
+sbatch -A desi -q shared scripts/v2.sh search leo_minor
+sbatch -A desi -q shared scripts/v2.sh audit
+sbatch -A desi -q shared scripts/v2.sh search dev_ordinary
+# Submit after the matching background scans have finished.
+sbatch -A desi -q shared scripts/v2.sh paired dev_ordinary 30
+sbatch -A desi -q shared scripts/v2.sh regression
+```
+
+Run `python -m ls_satsearch.paired` in the revision directory after the paired jobs and branch-specific cutoffs are available. `scripts/v2.sh fields configs/fields-fresh.yaml --expansion` selects new disjoint block geometry without evaluating candidate peaks. Keep the new field manifest in a distinct results workspace when evaluating.
+
+### Branches and matching
+
+- Template nodes below μ=16.50 form the near branch. Nodes from 16.50 to 20.75 form the main branch and represent the 20–150 kpc design. Nodes from 21.00 form the far branch. Truth cohorts use 20 and 150 kpc.
+- Within a branch and method, peak merging requires ≤0.5 mag in DM, ≤2 in radius ratio, and separation ≤max(0.5′, 0.75 times the smaller radius). Sky-review groups link retained records across methods, depths and distance hypotheses. Cutoffs are calibrated within each branch and method before any grouping.
+- Recovery tables report spatial passage and both the original 0.75 mag and stricter 0.25 mag distance match diagnostics. Source audit flags are recorded in total PSF, CMD and fitted membership weights. The sample selection retains these measurements.
+- The two depth injection arms share latent stars, local noise draws, positions and mask. Paired recovery groups are conditional on catalog availability. Candidate C uses bounded local centres and retained hypotheses. Cutout generation and scientific assessment have independent status fields.
+
+## Reproduce the original pilot
+
+Use commit `4e9f4f2` for the commands in this section.
 
 Run setup and Slurm submission from the project's home-directory checkout. Shared CFS is read-only. The run writes source caches, full peak lineage, and member probabilities to `$LS_SAT_DATA` (default `$PSCRATCH/legacy-satellite-search`). It writes aggregate summaries and PNGs beneath the home-directory checkout.
 

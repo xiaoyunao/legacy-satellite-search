@@ -29,15 +29,15 @@ def choose_sites(field, good, cfg, n, rng):
     raise RuntimeError(f'Only {len(sites)} clean independent injection locations')
 
 
-def inject_one(pos, distance, rh, count, rng, field, area, cfg, sample, model, tree):
+def inject_one(pos, distance, rh, count, rng, field, area, cfg, sample, model, tree, *, truncation=7):
     dm = 5 * np.log10(distance) + 10
     mags = model[0] + dm
     # Conditional luminosity function in a window that straddles our catalog cut.
     p = model[1] * (mags[:, 0] <= cfg['g_max']+.4) * (mags[:, 1] <= cfg['r_max']+.4)
     p /= p.sum()
     gr = mags[rng.choice(len(mags), count, p=p)]
-    # Plummer sample truncated at 7 r_h to keep the compact trials separated.
-    q = rng.uniform(0, 49/50, count)
+    # Finite Plummer aperture keeps different sites from overlapping.
+    q = rng.uniform(0, truncation**2/(1+truncation**2), count)
     radial = rh * np.sqrt(q / (1-q))
     theta = rng.uniform(0, 2*np.pi, count)
     xy = pos + np.column_stack([radial*np.cos(theta), radial*np.sin(theta)])
@@ -69,7 +69,7 @@ def inject_one(pos, distance, rh, count, rng, field, area, cfg, sample, model, t
 
 
 def match_trial(peaks, truth, method, cfg):
-    return next((p for p in peaks if p['method'] == method and
+    return next((p for p in peaks if p['method'] == method and p.get('branch','main') == 'main' and
                  np.hypot(float(p['x']) - truth['x'], float(p['y']) - truth['y']) <=
                  max(cfg['match_min_arcmin'], truth['rh_arcmin']) and
                  abs(float(p['dm']) - truth['dm']) <= cfg['match_dm_tolerance']), None)

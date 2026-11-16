@@ -112,3 +112,16 @@ fields:
   center_brick_g_seeing: 1.2537254095077515
   max_inner_brick_ebv: 0.02177085168659687
   other_search_overlap: unknown
+
+- id: aquarius4
+  role: recovery_evaluation
+  ra: 330.12
+  dec: -2.26
+  width: 1.5
+  truth: Aquarius_IV
+- id: delve3
+  role: recovery_evaluation
+  ra: 290.05
+  dec: -60.59
+  width: 1.5
+  truth: DELVE_3

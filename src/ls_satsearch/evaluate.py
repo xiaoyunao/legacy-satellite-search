@@ -9,6 +9,7 @@ import numpy as np
 from astropy.coordinates import SkyCoord
 from scipy.stats import chi2
 
+from .hypotheses import BRANCHES, group_candidates
 from .run import read_csv, write_csv, write_json
 
 
@@ -18,8 +19,10 @@ def thresholds(dev, area, budgets):
         scores = sorted((float(r['score']) for r in dev if r['method'] == method), reverse=True)
         for budget in budgets:
             target = int(math.floor(budget * area))
-            if len(scores) <= target:
+            if not scores or not target:
                 cutoff = None
+            elif len(scores) <= target:
+                cutoff = scores[-1]
             else:
                 cutoff = float(np.nextafter(scores[target], np.inf))
             result[(method, budget)] = (cutoff, target)
@@ -65,11 +68,13 @@ def evaluate(summary):
         recovery.extend(dict(r, field=m['field']['id'], role=m['field']['role']) for r in
                         csv_or_empty(path / 'recovery.csv'))
         forced.extend(dict(r, field=m['field']['id']) for r in csv_or_empty(path / 'forced_fit.csv'))
-    if recovery:
-        write_csv(summary / 'known_recovery_summary.csv', recovery)
+    if any('branch' not in row for row in recovery):
+        raise ValueError('Use a v2 results workspace with branch-aware recovery')
     if forced:
         write_csv(summary / 'forced_fit_summary.csv', forced)
-    report, candidates, cuts, foot = [], [], [], []
+    report, candidates, cuts, foot, blocks = [], [], [], [], []
+    assessments = {(r['field_id'],r['depth'],r['branch'],r['method'],r['rank']):r
+                   for r in csv_or_empty(summary/'image_assessment.csv')}
     references = source_references()
     coords = SkyCoord([p[1] for p in references], [p[2] for p in references], unit='deg')
     for path, m in manifests.items():
@@ -99,76 +104,104 @@ def evaluate(summary):
         ep = [fmt_peak(p, r) for p in ev for r in read_csv(p / 'deduplicated_peaks.csv')]
         cp = [fmt_peak(p, r) for p in ctrl for r in read_csv(p / 'deduplicated_peaks.csv')]
         budgets = next(iter(dev.values()))['config']['review_budgets_deg2']
-        thresholds_by_method = thresholds(dp, dev_area, budgets)
-        for (method, budget), (cutoff, target) in thresholds_by_method.items():
-            dev_kept = [r for r in dp if r['method'] == method and survives(r, cutoff)]
-            ev_kept = [r for r in ep if r['method'] == method and survives(r, cutoff)]
-            ctrl_kept = [r for r in cp if r['method'] == method and survives(r, cutoff)]
-            eligible = [r for r in recovery if r['method'] == method and r['depth'] == depth and
-                        r['covered'] == 'True' and r['role'] in ('recovery', 'recovery_evaluation')]
-            kept = [r for r in eligible if r.get('score') and survives(r, cutoff)]
-            retained = {r['name'] for r in kept}
-            for row in recovery:
-                if row['method'] == method and row['depth'] == depth and row in eligible:
-                    row[f'passes_budget_{budget}'] = row['name'] in retained
-            lo, hi = interval(len(ev_kept), ev_area) if ev_area else (None, None)
-            matched_recovery = [float(r['offset_arcmin']) for r in kept]
-            dm = [abs(float(r['delta_dm'])) for r in kept]
-            cfg = dict(depth=depth, method=method, budget_per_deg2=budget, cutoff=cutoff,
-                       dev_target_peaks=target, dev_area_deg2=dev_area,
-                       dev_peaks=len(dev_kept), dev_peaks_per_deg2=len(dev_kept)/dev_area,
-                       evaluation_peaks=len(ev_kept) if ev_area else None,
-                       evaluation_area_deg2=ev_area,
-                       evaluation_peaks_per_deg2=len(ev_kept)/ev_area if ev_area else None,
-                       count_interval95_low=lo, count_interval95_high=hi,
-                       des_control_area_deg2=control_area,
-                       des_control_peaks=len(ctrl_kept) if control_area else None,
-                       development_fields=len(dev), evaluation_fields=len(ev),
-                       benchmark_eligible=len(eligible), benchmark_recovered=len(kept),
-                       heldout_benchmark_eligible=sum(r['role'] == 'recovery_evaluation' for r in eligible),
-                       heldout_benchmark_recovered=sum(r['role'] == 'recovery_evaluation' for r in kept),
-                       median_offset_arcmin=np.median(matched_recovery) if matched_recovery else None,
-                       median_abs_dm_error=np.median(dm) if dm else None,
-                       evaluation_search_seconds=sum(m['scan_seconds'][method] for m in ev.values()),
-                       evaluation_shared_and_cmd_seconds=sum(m['scan_seconds']['cmd'] + m['scan_seconds']['shared']
-                                                             for m in ev.values()))
-            report.append(cfg)
-            cuts.append(dict(depth=depth, method=method, budget=budget, cutoff=cutoff))
-        # Publish the fixed 0.3-budget L0 list. Keep A/B as separate entries with cross-association.
-        highest_budget = max(budgets)
-        chosen = [r for r in ep if survives(r, thresholds_by_method[(r['method'], highest_budget)][0])]
-        for r in chosen:
-            position = SkyCoord(float(r['ra_deg']), float(r['dec_deg']), unit='deg')
-            sep = position.separation(coords).arcmin
-            i = int(sep.argmin())
-            peers = [q for q in chosen if q['field_id'] == r['field_id'] and q['method'] != r['method']]
-            refs = csv_or_empty(summary / r['field'] / 'candidate_refits.csv')
-            refit = next((q for q in refs if q['method'] == r['method'] and q['rank'] == r['rank']), {})
-            checks = csv_or_empty(summary / r['field'] / 'review.csv')
-            review = next((q for q in checks if q['method'] == r['method'] and q['rank'] == r['rank']), {})
-            matches = []
-            for q in peers:
-                other = SkyCoord(float(q['ra_deg']), float(q['dec_deg']), unit='deg')
-                if position.separation(other).arcmin <= max(1., float(r['rh_arcmin']), float(q['rh_arcmin'])):
-                    matches.append(f"{q['method']}-{q['rank']}")
-            candidates.append(dict(**r, depth=depth, evidence_level='L0', budget_per_deg2=highest_budget,
-                                   nearest_known=references[i][0], nearest_known_arcmin=float(sep[i]),
-                                   nearest_known_catalog=references[i][3], other_method=';'.join(matches),
-                                   C_ts=review.get('ts', refit.get('ts')),
-                                   C_fit_rh=review.get('fit_rh_arcmin', refit.get('fit_rh_arcmin')),
-                                   C_fit_dm=review.get('fit_dm', refit.get('fit_dm')),
-                                   C_richness=review.get('richness', refit.get('richness')),
-                                   C_refit_TS_without_top1=review.get('C_refit_TS_without_top1'),
-                                   C_refit_TS_without_top3=review.get('C_refit_TS_without_top3'),
-                                   C_fixed_fit_ts_drop_top3=refit.get('fixed_fit_ts_drop_top3'),
-                                   cmd_on_snr5=review.get('cmd_on_snr5'),
-                                   cmd_on_snr7=review.get('cmd_on_snr7'),
-                                   diagnostic_reviewed=bool(review)))
+        for branch in BRANCHES:
+            thresholds_by_method = thresholds([r for r in dp if r['branch'] == branch], dev_area, budgets)
+            for (method, budget), (cutoff, target) in thresholds_by_method.items():
+                dev_kept = [r for r in dp if r['method'] == method and r['branch'] == branch and survives(r, cutoff)]
+                ev_kept = [r for r in ep if r['method'] == method and r['branch'] == branch and survives(r, cutoff)]
+                ctrl_kept = [r for r in cp if r['method'] == method and r['branch'] == branch and survives(r, cutoff)]
+                eligible = [r for r in recovery if r['method'] == method and r['depth'] == depth and
+                            r['covered'] == 'True' and r['branch'] == branch]
+                kept = [r for r in eligible if r.get('score') and survives(r, cutoff)]
+                retained = {r['name'] for r in kept}
+                for row in recovery:
+                    if row['method'] == method and row['depth'] == depth and row in eligible:
+                        row[f'passes_budget_{budget}'] = row['name'] in retained
+                        row[f'passes_spatial_budget_{budget}'] = bool(row.get('spatial_score') and
+                            survives({'score':row['spatial_score']}, cutoff))
+                        row[f'passes_dm025_budget_{budget}'] = (
+                            row['name'] in retained and abs(float(row['delta_dm'])) <= .25)
+                lo, hi = interval(len(ev_kept), ev_area) if ev_area else (None, None)
+                matched_recovery = [float(r['offset_arcmin']) for r in kept]
+                dm = [abs(float(r['delta_dm'])) for r in kept]
+                cfg = dict(branch=branch, depth=depth, method=method, budget_per_deg2=budget, cutoff=cutoff,
+                           dev_target_peaks=target, dev_area_deg2=dev_area,
+                           dev_peaks=len(dev_kept), dev_peaks_per_deg2=len(dev_kept)/dev_area,
+                           evaluation_peaks=len(ev_kept) if ev_area else None,
+                           evaluation_kind='previously_inspected_regression' if not any(
+                               m['field'].get('evaluation_kind') == 'fresh_holdout' for m in ev.values())
+                               else 'fresh_holdout',
+                           evaluation_area_deg2=ev_area,
+                           evaluation_peaks_per_deg2=len(ev_kept)/ev_area if ev_area else None,
+                           count_interval95_low=lo, count_interval95_high=hi,
+                           des_control_area_deg2=control_area,
+                           des_control_peaks=len(ctrl_kept) if control_area else None,
+                           development_fields=len(dev), evaluation_fields=len(ev),
+                           benchmark_eligible=len(eligible), benchmark_recovered=len(kept),
+                           heldout_benchmark_eligible=sum(r['role'] == 'recovery_evaluation' for r in eligible),
+                           heldout_benchmark_recovered=sum(r['role'] == 'recovery_evaluation' for r in kept),
+                           median_offset_arcmin=np.median(matched_recovery) if matched_recovery else None,
+                           median_abs_dm_error=np.median(dm) if dm else None,
+                           evaluation_search_seconds=sum(m['scan_seconds'][method] for m in ev.values()),
+                           evaluation_shared_and_cmd_seconds=sum(m['scan_seconds']['cmd'] + m['scan_seconds']['shared']
+                                                                 for m in ev.values()))
+                report.append(cfg)
+                cuts.append(dict(branch=branch, depth=depth, method=method, budget=budget, cutoff=cutoff))
+                for pool, retained_peaks in ((dev, dev_kept), (ev, ev_kept), (ctrl, ctrl_kept)):
+                    for path, m in pool.items():
+                        n = sum(r['field'] == path.name for r in retained_peaks)
+                        blocks.append(dict(field=m['field']['id'], role=m['field']['role'], branch=branch,
+                                           method=method, depth=depth, budget=budget, retained=n,
+                                           area_deg2=m['area_deg2'], rate=n/m['area_deg2']))
+            # Publish the fixed 0.3-budget L0 list. Keep A/B as separate entries with cross-association.
+            highest_budget = max(budgets)
+            chosen = [r for r in ep if r['branch'] == branch and survives(r, thresholds_by_method[(r['method'], highest_budget)][0])]
+            for r in chosen:
+                position = SkyCoord(float(r['ra_deg']), float(r['dec_deg']), unit='deg')
+                sep = position.separation(coords).arcmin
+                i = int(sep.argmin())
+                peers = [q for q in chosen if q['field_id'] == r['field_id'] and q['method'] != r['method']]
+                refs = csv_or_empty(summary / r['field'] / 'candidate_refits.csv')
+                refit = next((q for q in refs if q['branch'] == r['branch'] and q['method'] == r['method'] and q['rank'] == r['rank']), {})
+                checks = csv_or_empty(summary / r['field'] / 'review.csv')
+                review = next((q for q in checks if q['branch'] == r['branch'] and q['method'] == r['method'] and q['rank'] == r['rank']), {})
+                matches = []
+                for q in peers:
+                    other = SkyCoord(float(q['ra_deg']), float(q['dec_deg']), unit='deg')
+                    if position.separation(other).arcmin <= max(1., float(r['rh_arcmin']), float(q['rh_arcmin'])):
+                        matches.append(f"{q['method']}-{q['rank']}")
+                candidates.append(dict(**r, depth=depth, evidence_level='L0', budget_per_deg2=highest_budget,
+                                       nearest_known=references[i][0], nearest_known_arcmin=float(sep[i]),
+                                       nearest_known_catalog=references[i][3], other_method=';'.join(matches),
+                                       C_ts=review.get('ts', refit.get('ts')),
+                                       C_fit_rh=review.get('fit_rh_arcmin', refit.get('fit_rh_arcmin')),
+                                       C_fit_dm=review.get('fit_dm', refit.get('fit_dm')),
+                                       C_richness=review.get('richness', refit.get('richness')),
+                                       C_refit_TS_without_top1=review.get('C_refit_TS_without_top1'),
+                                       C_refit_TS_without_top3=review.get('C_refit_TS_without_top3'),
+                                       C_fixed_fit_ts_drop_top3=refit.get('fixed_fit_ts_drop_top3'),
+                                       cmd_on_snr5=review.get('cmd_on_snr5'),
+                                       cmd_on_snr7=review.get('cmd_on_snr7'),
+                                       diagnostics_generated=bool(review),
+                                   image_diagnostic_generated=review.get('image_diagnostic_generated', 'False'),
+                                   C_effective_members=review.get('effective_members'),
+                                   C_top1_membership_fraction=review.get('top1_membership_fraction'),
+                                   C_top3_membership_fraction=review.get('top3_membership_fraction'),
+                                       image_checked=False, assessment='pending',
+                                       assessment_reason='Scientific image assessment pending'))
     if recovery:
         write_csv(summary / 'known_recovery_summary.csv', recovery)
     if report:
         write_csv(summary / 'method_comparison.csv', report)
         write_json(summary / 'review_cutoffs.json', cuts)
+        write_csv(summary / 'block_comparison.csv', blocks)
+        group_candidates(candidates)
+        for row in candidates:
+            key = tuple(row[k] for k in ('field_id','depth','branch','method','rank'))
+            if key in assessments:
+                item = assessments[key]
+                row.update(image_checked=True, assessment=item['assessment'],
+                           assessment_reason=item['assessment_reason'])
         if any(r['evaluation_fields'] for r in report):
             write_csv(summary / 'pilot_candidate_summary.csv', candidates,
                       ('field_id', 'method', 'rank', 'ra_deg', 'dec_deg', 'dm', 'rh_arcmin', 'score', 'evidence_level'))
