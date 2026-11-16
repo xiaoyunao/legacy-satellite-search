@@ -1,0 +1,3 @@
+fields:
+  - {id: delve4, role: recovery, truth: DELVE_4, ra: 230.525, dec: 27.75}
+  - {id: delve5, role: recovery, truth: DELVE_5, ra: 222.40, dec: 17.25}

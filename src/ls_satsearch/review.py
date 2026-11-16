@@ -115,32 +115,36 @@ def coadd_stamp(files, field, x, y, radius, pixel_scale):
     return stamp, [-edge,edge,-edge,edge]
 
 
-def image_cutouts(path, root, bricks, field, peak, member_xy, prob):
+def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=False):
     x,y = peak['x'],peak['y']
     bx,by = field.xy(bricks['RA'],bricks['DEC'])
-    near = np.flatnonzero(np.hypot(bx-x,by-y) < 18)
-    ids = near[np.argsort(np.hypot(bx[near]-x,by[near]-y))]
-    if not len(ids):
-        return False
     fig,axes = plt.subplots(2,4,figsize=(12,6),layout='constrained')
-    strong = np.argsort(prob)[::-1][:3]
-    filled = []
+    strong = np.flatnonzero(prob>0)
+    strong = strong[np.argsort(prob[strong])[::-1][:3]]
+    status = {}
     for band,row in zip('gr',axes):
-        files = []
-        for i in ids:
-            name = bricks['BRICKNAME'][i].strip()
-            file = root/'south/coadd'/name[:3]/name/f'legacysurvey-{name}-image-{band}.fits.fz'
-            if file.is_file():
-                files.append(file)
         sites = [(x,y,min(270,max(30,2*peak['rh_arcmin']*60)),.524,f'{band} · candidate centre')]
         sites.extend((*member_xy[i],4.,.262,f'{band} · source {j+1}, p={prob[i]:.2f}')
                      for j,i in enumerate(strong))
-        for j,(ax,(cx,cy,size,pixel_scale,title)) in enumerate(zip(row,sites)):
+        for j,ax in enumerate(row):
+            if j >= len(sites):
+                ax.set_axis_off()
+                continue
+            cx,cy,size,pixel_scale,title = sites[j]
+            distance = np.hypot(bx-cx,by-cy)
+            ids = np.flatnonzero(distance<18)
+            files = []
+            for i in ids[np.argsort(distance[ids])]:
+                name = bricks['BRICKNAME'][i].strip()
+                file = root/'south/coadd'/name[:3]/name/f'legacysurvey-{name}-image-{band}.fits.fz'
+                if file.is_file():
+                    files.append(file)
             stamp,extent = coadd_stamp(files,field,cx,cy,size,pixel_scale)
-            present = np.isfinite(stamp)
-            if not j:
-                filled.append(present.any())
-            if not present.any():
+            middle = stamp.shape[0]//2
+            available = bool(np.isfinite(stamp[middle,middle]))
+            key = 'centre' if not j else f'source{j}'
+            status[f'{band}_{key}'] = 'available' if available else 'missing'
+            if not np.isfinite(stamp).any():
                 ax.set_title(f'{title} · unavailable')
                 continue
             lo,hi=np.nanpercentile(stamp,(8,99.5))
@@ -154,19 +158,27 @@ def image_cutouts(path, root, bricks, field, peak, member_xy, prob):
                    xlim=(-size,size),ylim=(-size,size))
     ra,dec = field.sky(x,y)
     fig.suptitle(f'LS DR11 · {ra:.5f}, {dec:+.5f}')
-    if all(filled):
+    centre = all(status[f'{b}_centre']=='available' for b in 'gr')
+    if centre or details:
         fig.savefig(path,dpi=140)
     plt.close(fig)
-    return all(filled)
+    if not details:
+        return centre
+    return dict(image_diagnostic_generated=True, image_centre_complete=centre,
+                image_expected_member_stamps=2*len(strong),
+                image_missed_member_stamps=sum(v=='missing' for k,v in status.items() if 'source' in k),
+                image_pending=any(v=='missing' for v in status.values()), **status)
 
 
-def review(field_id, depth, group_limit=None, group_rows=None):
+def review(field_id, depth, group_limit=None, group_rows=None, *,
+           archived_run=None, archive_version=None, products=Path('results')):
     root, data_root, cfg = settings()
     if depth == 'deep':
         for b in 'gr':
             cfg[f'{b}_max'] += .5
-    out = Path('results/summary') / f'{field_id}-{depth}'
-    manifest = json.loads((out/'manifest.json').read_text())
+    out = products/'summary'/f'{field_id}-{depth}'
+    scan_summary = (archived_run/'summary'/out.name) if archived_run else out
+    manifest = json.loads((scan_summary/'manifest.json').read_text())
     spec = manifest['field']
     bricks = load_bricks(root)
     source = read_csv(Path('results/summary/pilot_candidate_summary.csv')) if group_rows is None else group_rows
@@ -186,9 +198,12 @@ def review(field_id, depth, group_limit=None, group_rows=None):
     cmd = CMD(sample, model, cfg)
     tree = cKDTree(sample[:, :2])
     work = runs_path(data_root)/f'{field_id}-{depth}'
-    figure_dir = Path('results/figures') / f'{field_id}-{depth}'
+    figure_dir = products/'figures'/out.name
+    for folder in (out, figure_dir, work):
+        folder.mkdir(parents=True, exist_ok=True)
+    raw_dir = data_root/'runs'/archive_version/out.name if archive_version else work
     summary = []
-    with (work/'all_template_peaks.csv').open() as f:
+    with (raw_dir/'all_template_peaks.csv').open() as f:
         raw_peaks = [convert_peak(r) for r in csv.DictReader(f)]
     raw_xy = np.array([(r['x'],r['y']) for r in raw_peaks]).reshape(-1,2)
     raw_tree = cKDTree(raw_xy)
@@ -196,6 +211,10 @@ def review(field_id, depth, group_limit=None, group_rows=None):
         peak = convert_peak(row)
         best = fit_at_peak(peak, sample, field, area, cmd)
         if best is None:
+            if group_rows is not None:
+                summary.append(dict(field=field_id,depth=depth,rank=peak['rank'],
+                                    candidate_group_id=row['candidate_group_id'],
+                                    fit_status='unavailable', seed_dm=peak['dm'], seed_rh_arcmin=peak['rh_arcmin']))
             continue
         fit_peak, fit, idx, prob, ratio = best
         ranking = np.argsort(prob)[::-1]
@@ -224,20 +243,22 @@ def review(field_id, depth, group_limit=None, group_rows=None):
         metadata = observing_page(figure_dir/f'candidate-{label}-environment.png',
                                   root, bricks, data, valid, field, fit_peak, row)
         images = image_cutouts(figure_dir/f'candidate-{label}-images.png', root, bricks, field,
-                               fit_peak,sample[idx,:2],prob)
+                               fit_peak,sample[idx,:2],prob,details=True)
         np.savez_compressed(work/f'membership-{label}.npz', source_ids=data[
             ['RELEASE', 'BRICKID', 'OBJID']][chosen][idx], probability=prob)
         summary.append(dict(field=field_id, depth=depth, branch=peak['branch'], method=peak['method'], rank=peak['rank'],
                             fit_dm=fit_peak['dm'], fit_rh_arcmin=fit_peak['rh_arcmin'],
-                            evidence_level='L0', image_diagnostic_generated=images,
+                            evidence_level='L0', fit_status='complete', **images,
+                            seed_dm=peak['dm'], seed_rh_arcmin=peak['rh_arcmin'],
                             candidate_group_id=row['candidate_group_id'], fit_ra_deg=fit_peak['ra_deg'],
                             fit_dec_deg=fit_peak['dec_deg'], **fit, **test, **metadata))
     if summary:
         write_csv(out/'review.csv', summary)
 
 
-def review_sky_groups(table, policy, budget):
-    """Render one main-branch review page set for each selected sky group."""
+def review_sky_groups(table, policy, budget, *, archived_run=None, archive_version=None,
+                      products=Path('results')):
+    """Refit each retained distance–size hypothesis and summarize each sky group."""
     from astropy.coordinates import SkyCoord
     from .evaluate import source_references
 
@@ -245,7 +266,7 @@ def review_sky_groups(table, policy, budget):
     catalog = SkyCoord([r[1] for r in references],[r[2] for r in references],unit='deg')
     rows = []
     for r in read_csv(table):
-        if r['representative'] != 'True' or r['policy'] != policy or float(r['budget']) != budget:
+        if r['policy'] != policy or float(r['budget']) != budget:
             continue
         method, depth = r['channel'].split('_')
         position = SkyCoord(float(r['ra_deg']),float(r['dec_deg']),unit='deg')
@@ -255,8 +276,36 @@ def review_sky_groups(table, policy, budget):
                          candidate_group_id=r['group_id'],nearest_known=references[i][0],
                          nearest_known_arcmin=float(distances[i]),nearest_known_catalog=references[i][3],
                          evidence_level='L0'))
+    fits = {}
     for field_id,depth in sorted({(r['field_id'],r['depth']) for r in rows}):
-        review(field_id,depth,group_rows=rows)
+        review(field_id,depth,group_rows=rows,archived_run=archived_run,
+               archive_version=archive_version,products=products)
+        for r in read_csv(products/'summary'/f'{field_id}-{depth}'/'review.csv'):
+            fits[r['candidate_group_id'],str(r['rank'])] = r
+    grouped = {}
+    for r in rows:
+        key = r['candidate_group_id']
+        fit = fits[key,str(r['rank'])]
+        grouped.setdefault(key,[]).append(dict(fit, discovery_representative=r['representative'],
+                                              discovery_score=r['score'], nearest_known=r['nearest_known'],
+                                              nearest_known_arcmin=r['nearest_known_arcmin']))
+    totals = []
+    for key,modes in grouped.items():
+        completed = [m for m in modes if m['fit_status']=='complete']
+        best = max(completed, key=lambda m: float(m['ts'])) if completed else {}
+        totals.append(dict(group_id=key, modes_attempted=len(modes), modes_fit=len(completed),
+                           fitted_dm_modes=len({m['fit_dm'] for m in completed}),
+                           best_peak_rank=best.get('rank'), best_ts=best.get('ts'),
+                           best_dm=best.get('fit_dm'), best_rh=best.get('fit_rh_arcmin'),
+                           best_ts_without_top3=best.get('C_refit_TS_without_top3'),
+                           nearest_known=best.get('nearest_known'), nearest_known_arcmin=best.get('nearest_known_arcmin'),
+                           review_status=('fit_incomplete' if len(completed)<len(modes) else
+                                          'key_images_pending' if any(m['image_pending']=='True' for m in completed)
+                                          else 'awaiting_visual_review'),
+                           evidence_level='L0'))
+    write_csv(table.parent/'group_review_modes.csv',list(f for modes in grouped.values() for f in modes),
+              keys=('candidate_group_id','rank','fit_status'))
+    write_csv(table.parent/'group_review_summary.csv',totals,keys=('group_id','review_status'))
     write_csv(table.parent/'reviewed_group_inputs.csv',rows,
               keys=('candidate_group_id','field_id','depth','method','rank'))
 
@@ -295,10 +344,14 @@ if __name__ == '__main__':
     p.add_argument('--budget', type=float, default=.3)
     p.add_argument('--depth', choices=('base', 'deep'), default='base')
     p.add_argument('--group-limit',type=int)
+    p.add_argument('--archived-run',type=Path)
+    p.add_argument('--archive-version')
+    p.add_argument('--products',type=Path,default=Path('results'))
     p.add_argument('--refresh-image', help='Saved hypothesis label, such as main-B-1')
     args = p.parse_args()
     if args.groups:
-        review_sky_groups(args.groups,args.policy,args.budget)
+        review_sky_groups(args.groups,args.policy,args.budget,archived_run=args.archived_run,
+                          archive_version=args.archive_version,products=args.products)
     elif not args.field:
         p.error('Provide a field or --groups')
     elif args.refresh_image:

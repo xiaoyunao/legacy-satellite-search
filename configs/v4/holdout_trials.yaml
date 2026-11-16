@@ -1,0 +1,4 @@
+# Preregistered before candidate inspection. Each site is scanned separately.
+fields:
+  fresh_02: {distance_kpc: 50, rh_pc: 30, latent_count: 36, seed_offset: 204}
+  fresh_04: {distance_kpc: 100, rh_pc: 30, latent_count: 56, seed_offset: 405}

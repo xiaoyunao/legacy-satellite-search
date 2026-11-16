@@ -61,7 +61,7 @@ def reddening(ra, dec):
     return ebv
 
 
-def ps1_catalog(field, area, cfg, spec, matched, directory):
+def ps1_measurements(spec, matched, directory):
     manifest = json.loads((directory / 'manifest.json').read_text())
     _, centers = design(spec, matched)
     tiles = {(p['ra_deg'], p['dec_deg'], p['radius_deg']) for p in manifest['pages']}
@@ -81,7 +81,12 @@ def ps1_catalog(field, area, cfg, spec, matched, directory):
                     continue
                 seen.add(ident)
                 rows.append(tuple(float(row[key] or 'nan') for key in columns))
-    ra, dec, g, r, ge, re, i, kron, ie = np.asarray(rows, dtype=float).reshape(-1, len(columns)).T
+    return np.asarray(rows, dtype=float).reshape(-1, len(columns)), manifest
+
+
+def ps1_catalog(field, area, cfg, spec, matched, directory):
+    rows, manifest = ps1_measurements(spec,matched,directory)
+    ra, dec, g, r, ge, re, i, kron, ie = rows.T
     finite = np.isfinite([ra,dec,g,r,ge,re,i,kron,ie]).all(axis=0)
     limit = 2.5 / np.log(10) / cfg['min_snr']
     quality = (finite & (ge > 0) & (re > 0) & (ie > 0) & (ge <= limit) & (re <= limit) &
@@ -165,6 +170,10 @@ def run(field_id):
 def combine():
     matched = yaml.safe_load(config_path('matched.yaml').read_text())
     expected = {f['id'] for f in matched['fields']}
+    if matched.get('coverage_preflight'):
+        unusable = {row['name'] for row in read_csv(Path(matched['coverage_preflight']))
+                    if row['usable']=='False'}
+        expected -= {f['id'] for f in matched['fields'] if f.get('truth') in unusable}
     rows, recoveries = [], []
     for survey in SURVEYS:
         summary = DEST/survey/'summary'
