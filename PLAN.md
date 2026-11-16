@@ -10,12 +10,17 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - Froze disjoint 61.100 deg² development and 60.705 deg² evaluation cohorts.
 - Recomputed old field results by sky group and separated spatial detection, correct mode retention and truth-blind highest mode.
 
-## Current execution
+## Third-round measurements
 
-1. Run the six new development fields. Calibrate the A configurations together at matched total sky group cost, evaluate B and A/B on the same two controls, and inspect the generated main-branch group cutouts.
-2. Compare the three independent samples, LS baseline, LS deeper and PS1, on two joint development fields and two offset known-system fields. Use the same latent population for a small conditional injection comparison. Check position, distance, delivered N and review burden.
-3. Isolate three 80 pc failures to test annulus interference, scanning losses and available members. Use two added delivered-member counts at one site to bracket the threshold.
-4. Freeze production configuration from the development results, then open the six independent evaluation blocks. Review one diagnostic set per group. Log actual overlap masks, operating area and limits before any footprint expansion.
+- Six fresh development fields completed at both depths (61.100 effective deg²), including A/B controls on two blocks. Group budget calibration and the visual review of 18 baseline groups are published.
+- The three 80 pc diagnostics reproduced the overlay runs. Isolation made little difference. One nested ladder crossed the fixed cut between 45 and 65 usable members.
+- The matched survey experiment completed on four fields. Pegasus IV is recovered by all three samples; the Aquarius IV centre is outside the shared usable mask. Four shared-population trials give positional detection counts of 2, 2 and 3 for LS baseline, LS deeper and PS1.
+
+## Next experiment
+
+1. Use the development evidence to freeze the main discovery channel, candidate budget and screening rule before opening the 60.705 effective deg² held-out cohort.
+2. Apply the frozen group threshold and inspect representative groups with the same review procedure.
+3. Extend the independent LS–PS1 comparison with additional ordinary processed benchmark systems that have reliable common-area coverage.
 
 ## Validation criteria
 

@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "seed": [
+    481705,
+    233164,
+    34
+  ],
+  "job": "61395413",
+  "model_sha256": [
+    "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+    "4fa53e8a963933310941ae5c43da4391e782a3760320fa61bd5c940e4ffb201b"
+  ],
+  "selection": "Conditional catalog injection. Morphology/measurement completeness is unmodeled."
+}

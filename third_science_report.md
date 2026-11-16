@@ -45,6 +45,16 @@ v2 的 12 个 A 加深 80 pc 试验保留峰均低于重算后的归档组阈值
 
 Pegasus IV 在 4.254 deg² 联合区域里由三个样本均盲检出，且均过线。LS 的位置恢复在此对象上更接近文献中心。Aquarius IV 场有 4.364 deg² LS 有效面积，联合后剩 0.152 deg²，目标中央的共同有效比例为零，恢复比较可评估对象数为一。[候选预算](results/v3/matched/matched_survey_comparison.csv) · [对照恢复](results/v3/matched/matched_survey_recovery.csv)
 
+四个共享潜在星族试验覆盖 50 和 100 kpc、固定 30 pc，分别抽取 28 或 40 颗潜在成员。各目录按相同联合掩膜和各自测量误差切选。四个位置在各样本的空场扫描中均无过线空间组。
+
+| 样本 | 四次试验可用成员总数 | 检出位置 | 保留正确距离模式 | 盲选最高模式正确 |
+| --- | ---: | ---: | ---: | ---: |
+| LS 基线 | 54 | 2/4 | 2/4 | 1/4 |
+| LS 加深 | 85 | 2/4 | 1/4 | 0/4 |
+| PS1 | 68 | 3/4 | 3/4 | 1/4 |
+
+LS 加深增加了可用成员数，四个位置的空间检出数相对 LS 基线没有增加。PS1 多过线的一个例子在 fresh_01、50 kpc，最高排名距离模式偏离注入真值。例数有限，且试验以已实现的目录测量为条件。当前实测支持 LS 对 Pegasus IV 的位置恢复优势；总体新增检出能力仍待更多可评估弱对照和独立天区验证。[fresh_01 配对注入](results/v3/matched/injections/fresh_01.csv) · [fresh_03 配对注入](results/v3/matched/injections/fresh_03.csv)
+
 ## 新区的决策顺序
 
 六块开发场的两套深度扫描均完成，共 61.100 有效 deg²。A 在所有场运行，B 在 fresh_01 和 fresh_05 运行。内区按 TYPE 选择的 PSF 源从 471,907 增至 643,496，增加 36.4%；同一有效测光范围内的非 PSF 源从 1,007,680 增至 1,495,597。源数变化描述目录切选。[12 份扫描 manifest](results/v3/development)
@@ -60,3 +70,5 @@ Pegasus IV 在 4.254 deg² 联合区域里由三个样本均盲检出，且均�
 并集使用分数归一化和单独的总成本切点。fresh_01、fresh_05 共 20.068 deg² 的同区 A/B 对照，在 0.3 档分别标定至最多六组，B 基线的六组全部出现在 fresh_01。这种集中度需在更大独立面积检验。已复查 A 基线的 18 个主分支天空组。候选最高 C TS 为 13.343；去除贡献最高的三颗源后，18 个候选的 TS 均低于 0.500。图像中个别高权重源有近邻或偏心亮光，数个小图无有效切片。18 组均保留 L0。[逐组图像审查](results/v3/development_groups/all_A/visual_review.csv) · [诊断图](results/v3/figures)
 
 生产规则冻结后才打开 60.705 deg² 的新评价区。[全部 A 开发场](results/v3/development_groups/all_A/sky_group_blocks.csv) · [两块 A/B 对照](results/v3/development_groups/AB_controls/sky_group_blocks.csv)
+
+下一轮优先用 A 基线作为独立评价备选，并补齐普通处理、两巡天均有覆盖的弱系统对照。[Slurm 作业核验](results/v3/slurm_jobs.csv)

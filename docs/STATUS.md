@@ -2,13 +2,13 @@
 
 ## 第三轮 · 2026-11-16
 
-- 完成 v2 真实归档的天空组重算，保留 v1/v2 原结果。六个新开发块开始排队。独立评价区保留封存。
-- 新开发场 Slurm 61395259–61395264；三处宽系统诊断 61395357、61395360、61395361。最近核验均因 Perlmutter CPU `PartitionDown` 待运行。
-- 四场 PS1 分页下载已在 NERSC scratch 执行。配对 61395365–61395368 在对应下载通过校验后自动释放。比较 61395369 和共享潜在星族注入 61395412、61395413 等待前置任务。
-- 新开发场校准 61395362 与候选诊断 61395411 已提交依赖。当前仅有归档重算的科学结果；新区恢复、LS–PS1 相对增益与宽系统隔离试验结果待计算。
-- NERSC 新版工作目录为 `$HOME/projects/legacy-satellite-search/revisions/group-v3`。Scratch 工作目录为 `$PSCRATCH/legacy-satellite-search/runs/v3`。PS1 页文件只存 scratch。
-- [科学报告](../third_science_report.md) · [Slurm 快照](../results/v3/slurm_jobs.csv)
-
+- Perlmutter 常规和共享 CPU 分区恢复。核验 18 项第三轮作业完成并返回 0:0。
+- 开发场扫描 61395259–61395264，天空组标定 61395362，候选复查 61395411。六个场共 61.100 有效 deg²，含 12 份完成的扫描 manifest。同步 18 个天空组的逐组复查及 66 张诊断 PNG。
+- 80 pc 诊断 61395357、61395360、61395361 全部完成。同步真值孔径计数、普通搜索峰链、组标定及投递成员数。
+- LS–PS1 对照扫描 61395365–61395368、预算汇总 61395369、配对注入 61395412–61395413 全部完成。同步 12 份配对扫描 manifest、可评估目标的恢复结果和四组注入结果。
+- 约 60.705 deg² 独立评价区保留封存。原始 survey 文件、逐源表、FITS、全量峰表和成员数据仍在 NERSC。
+- NERSC 工作目录为 `$HOME/projects/legacy-satellite-search/revisions/group-v3`，scratch 为 `$PSCRATCH/legacy-satellite-search/runs/v3`。
+- [第三轮科学报告](../third_science_report.md) · [Slurm 完成记录](../results/v3/slurm_jobs.csv)
 
 ## 2026-11-16
 
