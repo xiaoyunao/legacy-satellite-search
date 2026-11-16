@@ -1,0 +1,7 @@
+fields:
+- {id: bootes, role: recovery, ra: 209.65, dec: 14.75, width: 2, truth: Bootes_I}
+- {id: coma, role: recovery, ra: 187.15, dec: 23.62, width: 2, truth: Coma_Berenices}
+- {id: pegasus4, role: recovery, ra: 328.85, dec: 26.25, width: 2, truth: Pegasus_IV}
+- {id: virgo2, role: recovery_evaluation, ra: 224.63, dec: 6.21, width: 2, truth: Virgo_II}
+- {id: leo_minor, role: recovery_evaluation, ra: 164.55, dec: 28.55, width: 2, truth: Leo_Minor_I}
+- {id: uma3, role: compact, ra: 174.35, dec: 31.30, width: 2, truth: Ursa_Major_III}
