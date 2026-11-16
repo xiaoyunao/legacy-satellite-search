@@ -4,10 +4,13 @@ import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
 import numpy as np
 
+from ls_satsearch.data import Field
 from ls_satsearch.group_budget import evaluate
+from ls_satsearch.matched import ps1_catalog
 from ls_satsearch.run import read_csv, write_csv
 from ls_satsearch.selection_response import ps1_select
 
@@ -31,6 +34,18 @@ class HoldoutTest(unittest.TestCase):
             result = {float(r['budget']):int(r['evaluation_sky_groups'])
                       for r in read_csv(root/'out/sky_group_comparison.csv')}
             self.assertEqual(result,{.1:2,.3:3})
+
+    def test_ps1_cutflow_counts_preselection_measurements(self):
+        field = Field(180.,0.,1.,1.,buffer=0)
+        area = np.ones((field.n,field.n),dtype=bool)
+        rows = np.array([[180.,0.,22.,21.5,.1,.1,21.2,21.2,.1],
+                         [180.1,0.,22.,21.5,.1,.1,21.2,21.1,.1]])
+        cfg = dict(g_max=24.,r_max=23.5,min_snr=5.)
+        with patch('ls_satsearch.matched.ps1_measurements',return_value=(rows,{})):
+            with patch('ls_satsearch.matched.reddening',side_effect=lambda ra,dec: np.zeros(len(ra))):
+                selected, stages, _ = ps1_catalog(field,area,cfg,{}, {}, Path('.'))
+        self.assertEqual(stages['unique_primary'],2)
+        self.assertEqual(len(selected),1)
 
     def test_ps1_i_snr_is_required(self):
         phot=np.array([[22.,21.5,21.2],[22.,21.5,21.2],[22.,21.5,np.nan]])

@@ -101,7 +101,7 @@ def ps1_catalog(field, area, cfg, spec, matched, directory):
     g0, r0 = g[index] - 3.172*ebv, r[index] - 2.271*ebv
     accept = in_area & psf & np.isfinite(ebv) & (g0 <= cfg['g_max']) & (r0 <= cfg['r_max'])
     sample = np.column_stack([x,y,g0,r0,ge[index],re[index]])[accept]
-    return sample, dict(unique_primary=len(seen), valid_gr_i=int(quality.sum()),
+    return sample, dict(unique_primary=len(rows), valid_gr_i=int(quality.sum()),
                         buffered_rows=int(use.sum()), area=int(in_area.sum()),
                         area_psf=int((in_area & psf).sum()), selected=len(sample)), manifest
 

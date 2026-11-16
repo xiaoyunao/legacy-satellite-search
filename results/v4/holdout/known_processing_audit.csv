@@ -1,0 +1,3 @@
+name,field,region,truth_dm,rh_arcmin,psf,cmd_psf,forced_cmd,resolved_cmd,cluster_cmd
+Hercules,fresh_06,centre,20.58,3.120206807739268,442,161,0,118,0
+Hercules,fresh_06,annulus,20.58,3.120206807739268,3322,747,1,0,0
