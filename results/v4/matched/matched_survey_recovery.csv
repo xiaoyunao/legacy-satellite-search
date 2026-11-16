@@ -1,0 +1,13 @@
+survey,policy,budget,name,field,covered,spatial,blind_correct,correct_mode_exists,blind_dm,blind_dm_error,correct_mode_dm,wide_mode_exists,offset_arcmin,representative_channel
+ls_base,A_base,0.3,Aquarius_IV,aquarius4,False,False,False,False,,,,,,
+ls_base,A_base,0.3,DELVE_4,delve4,True,True,False,False,17.5,-0.7660625688767198,,True,0.6676851673459061,A_base
+ls_base,A_base,0.3,DELVE_5,delve5,True,True,True,True,18.0,0.04467696486750583,18.0,True,0.708378283429488,A_base
+ls_base,A_base,0.3,Pegasus_IV,pegasus4,True,True,False,True,20.25,0.4799989897740815,20.0,True,0.35039183346584296,A_base
+ls_deep,A_base,0.3,Aquarius_IV,aquarius4,False,False,False,False,,,,,,
+ls_deep,A_base,0.3,DELVE_4,delve4,True,True,False,True,19.25,0.9839374311232802,18.5,True,0.36906480281492743,A_base
+ls_deep,A_base,0.3,DELVE_5,delve5,True,True,True,True,18.0,0.04467696486750583,18.0,True,1.3724597303821608,A_base
+ls_deep,A_base,0.3,Pegasus_IV,pegasus4,True,True,True,True,19.75,-0.020001010225918492,19.75,True,0.435321870125677,A_base
+ps1,A_base,0.3,Aquarius_IV,aquarius4,False,False,False,False,,,,,,
+ps1,A_base,0.3,DELVE_4,delve4,True,False,False,False,,,,False,,
+ps1,A_base,0.3,DELVE_5,delve5,True,False,False,False,,,,False,,
+ps1,A_base,0.3,Pegasus_IV,pegasus4,True,True,True,True,19.75,-0.020001010225918492,19.75,True,1.0325345612306471,A_base

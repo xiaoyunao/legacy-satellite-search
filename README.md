@@ -2,6 +2,20 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Frozen independent evaluation
+
+The [fourth science report](fourth_science_report.md) records the first independent 60.705 deg² evaluation. The main and auxiliary A-baseline cutoffs are fixed in `configs/v4/production.json`. The holdout runner checks the registered field definition and search recipe. The matching experiment uses its own angular grid and review-budget calibration.
+
+Run these commands from the NERSC `revisions/holdout-v4` checkout with the project environment. Submit the combine step after all six scan IDs complete, followed by mode review once candidate tables are available.
+
+```bash
+sbatch -A desi -q shared scripts/v4.sh holdout fresh_02
+sbatch -A desi -q shared scripts/v4.sh holdout combine
+sbatch -A desi -q shared scripts/v4.sh review --groups results/holdout/sky_group_candidates.csv
+```
+
+The independent field IDs are fresh_02, fresh_04, fresh_06, fresh_08, fresh_10 and fresh_12. See [the run status](docs/STATUS.md) for the matched-input acquisition and processing locations. Aggregate outputs and images live under `results/v4/` in the repository.
+
 ## Third-round experiment
 
 Read the [current science objective](docs/PROJECT_MEMORY.md) and [third science report](third_science_report.md). In the NERSC revision checkout at `$HOME/projects/legacy-satellite-search/revisions/group-v3`, the v3 wrapper snapshots source and configuration at job start and writes scratch products under `$PSCRATCH/legacy-satellite-search/runs/v3`. Submission and acquisition status are linked from [STATUS](docs/STATUS.md).

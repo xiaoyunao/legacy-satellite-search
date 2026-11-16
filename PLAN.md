@@ -16,12 +16,16 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - The three 80 pc diagnostics reproduced the overlay runs. Isolation made little difference. One nested ladder crossed the fixed cut between 45 and 65 usable members.
 - The matched survey experiment completed on four fields. Pegasus IV is recovered by all three samples; the Aquarius IV centre is outside the shared usable mask. Four shared-population trials give positional detection counts of 2, 2 and 3 for LS baseline, LS deeper and PS1.
 
-## Fourth-round execution
+## Fourth-round results
 
-1. Apply the versioned A-baseline cut to the six registered independent fields. Report actual review load by block and verify recovery with two preregistered conditional injections.
-2. Refit all preserved modes for each reviewed development and evaluation group. Record missing image evidence separately.
-3. Replay the four matched-survey trials, add measured-error and PS1 i/morphology response, then expand matched calibration to fresh_05 and fresh_09. Check joint aperture coverage before collecting PS1 photometry around DELVE 4 and DELVE 5.
-4. Decide whether to extend the independent area or prioritize selection-response work after these measurements, using the current science memory.
+- Completed the frozen 60.705 deg² evaluation. A baseline selected 23 primary-budget groups, including the blind recovery of Hercules. Reviewed 49 modes and visually assessed all 23 groups.
+- Completed two preregistered independent controls and four matched-survey response replays. Expanded the matched development calibration to 16.851 deg². LS baseline and deep both recover DELVE 4 and DELVE 5 at the common budget.
+
+## Next experiment
+
+1. Keep the frozen A baseline as the production discovery channel. Use new independent blocks to measure field-to-field review load, with the known-system responses reported explicitly.
+2. Test whether the two compact controls generalize. Choose more jointly covered ordinary-processed controls, validate faint-end selection, and repeat matched injections near the observed transition in several backgrounds.
+3. Use the narrow supported parameter range to decide whether to expand the compact-search area. Track the wide, low-member sensitivity limit.
 
 ## Validation criteria
 

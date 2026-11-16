@@ -2,7 +2,10 @@
 
 import argparse
 import csv
+from concurrent.futures import ProcessPoolExecutor
 import json
+from multiprocessing import get_context
+import os
 from pathlib import Path
 
 import fitsio
@@ -276,10 +279,21 @@ def review_sky_groups(table, policy, budget, *, archived_run=None, archive_versi
                          candidate_group_id=r['group_id'],nearest_known=references[i][0],
                          nearest_known_arcmin=float(distances[i]),nearest_known_catalog=references[i][3],
                          evidence_level='L0'))
+    batches = sorted({(r['field_id'],r['depth']) for r in rows})
+    kwargs = dict(archived_run=archived_run,archive_version=archive_version,products=products)
+    allocated = int(os.environ.get('SLURM_CPUS_PER_TASK','1'))
+    workers = min(len(batches), max(1,allocated//2))
+    if workers>1:
+        with ProcessPoolExecutor(max_workers=workers,mp_context=get_context('fork')) as executor:
+            futures = [executor.submit(review,field_id,depth,group_rows=rows,**kwargs)
+                       for field_id,depth in batches]
+            for result in futures:
+                result.result()
+    else:
+        for field_id,depth in batches:
+            review(field_id,depth,group_rows=rows,**kwargs)
     fits = {}
-    for field_id,depth in sorted({(r['field_id'],r['depth']) for r in rows}):
-        review(field_id,depth,group_rows=rows,archived_run=archived_run,
-               archive_version=archive_version,products=products)
+    for field_id,depth in batches:
         for r in read_csv(products/'summary'/f'{field_id}-{depth}'/'review.csv'):
             fits[r['candidate_group_id'],str(r['rank'])] = r
     grouped = {}

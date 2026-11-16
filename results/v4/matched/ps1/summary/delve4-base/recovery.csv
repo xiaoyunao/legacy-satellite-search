@@ -1,0 +1,2 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+DELVE_4,main,A,ps1,True,1.0,0.9996288047512992,True,18.26606256887672,True,5.485210690098722,14,17.5,0.08552376424593176,15,5.417891647104941,19.0,0.5,0.3207933655240113,0.8910926820111424,0.7339374311232802,18.09573444801933
