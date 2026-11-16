@@ -1,0 +1,7 @@
+{
+  "reference": "https://zenodo.org/records/18688283",
+  "payload_sha256": "153f21e28406ab9b384fa096cd36ad0450274d11f38543975c15ea6307dfd360",
+  "preunblind_sha256": "1cac5441a2791f4d0cbc66b2c2317cbc0d7c228d1020eb1b3375e48338524ca7",
+  "matcher_arcsec": 0.8,
+  "complete_column": "inCompleteSample"
+}
