@@ -1,0 +1,11 @@
+group_id,disposition,photometric_reason
+weak_01-A_base-0.3-001,background_or_extended_structure,Very broad response with an off-centre radial maximum and a large foreground density gradient. Crowded CMD and an even stronger nearby response at low DM merit background inspection.
+weak_01-A_base-0.3-002,worth_targeted_followup,Resolved point-like images plus a narrow central PSF concentration and a turnoff seam across several magnitudes. Strong C residual despite removal of the top three.
+weak_01-A_base-0.3-003,insufficient_photometric_evidence,Weak C and little central contrast in the PSF profile. Nearby mask holes and one moderately weighted point source.
+weak_02-A_base-0.3-001,worth_targeted_followup,Compact PSF excess spanning the turnoff and brighter stars; top stamps broadly point-like with neighbours in two thumbnails. Residual signal persists after dropping three. Nearby alternative modes broaden distance interpretation.
+weak_02-A_base-0.3-002,worth_targeted_followup,Point-like high-weight sources and a populated turnoff at a different distance solution. Centre sits inside the adjacent compact response; inspect jointly.
+weak_02-A_base-0.3-003,insufficient_photometric_evidence,Marginal CMD and radial contrast. One high-weight star dominates and another stamp has nearby structure.
+weak_02-A_base-0.3-004,insufficient_photometric_evidence,Weak C fit and comparable central and comparison CMD structure. Point-like stamps alone provide little support.
+weak_03-A_base-0.3-001,worth_targeted_followup,"Concentrated PSF profile plus a turnoff sequence across several brightness bins, clear point-like stamps, substantial residual C signal."
+weak_03-A_base-0.3-002,worth_targeted_followup,Coherent turnoff and strong PSF profile with point-like stamps; separation and overlapping profiles favour joint review with group 001.
+weak_03-A_base-0.3-003,insufficient_photometric_evidence,Broad seed and weak C evidence with no comparable CMD contrast. Treat alongside the nearby compact groups.
