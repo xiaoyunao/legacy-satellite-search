@@ -1,0 +1,3 @@
+name,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc,failure_reason
+Pegasus_IV,A,deep,True,0.9976744186046511,0.9974987125726477,True,19.77000101022592,False,1,26.642065547159095,20.25,2,0.3132482577528857,0.19687404249416174,0.4799989897740815,22.252045430196304,
+Pegasus_IV,B,deep,True,0.9976744186046511,0.9974987125726477,False,19.77000101022592,False,,,,,,,,,no de-duplicated peak inside position and DM match tolerances

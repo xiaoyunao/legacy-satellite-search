@@ -1,0 +1,2 @@
+field,depth,method,rank,fit_dm,fit_rh_arcmin,evidence_level,ts,richness,profile_integral,bg_per_arcmin2,n_local,C_refit_TS_without_top1,C_refit_TS_without_top3,cmd_on_snr5,cmd_off_snr5,cmd_on_snr7,cmd_off_snr7,g_depth_local_p10_p50_p90,g_seeing_local_p10_p50_p90,ebv_local_p10_p50_p90
+eval_deep,base,A,1,16.5,1.4,L0,0.0,0.0,0.9231784033598122,1.8642551166111376,146,0.0,0.0,34,118,34,118,"[24.376473426818848, 24.64284324645996, 24.808412551879883]","[1.4941473007202148, 1.5377057790756226, 1.784712553024292]","[0.02546276804059744, 0.027071564458310604, 0.031030895188450813]"

@@ -8,3 +8,6 @@
 - Compare development-set quantiles at 0.1 and 0.3 reviews per effective square degree. Reserve two spatially disjoint PS1 fields for evaluation, one in each condition layer.
 - Use a circular truncated fit window and an outer background annulus for candidate C. Allow a small DM and radius refinement and condition on the observed error class and hard sample limits. This is a candidate refit.
 - Boötes I 的固定中心 CMD 超额在两带限深增加 0.5 mag 后从 705.6 增至 1205.2。用同一个改动在各 PS1 盲场复扫，并独立为两种深度标定阈值。
+- 基线采用 A 做发现。加深设置保留作下一轮优先对照，因 Virgo II 在相同较紧留出审查量下通过切点。外推前需要普通目录处理的弱对照。
+- 现在分开记录 Peg IV 的原始 B 峰、被分配的宽峰和通过审查切点的状态。下一次峰合并试验会在新留出区评价。
+- A 的极端尾概率饱和已通过稳定对数求和纠正。Boötes I 加深扫描重新执行并替换正式恢复表。先前输出留在 scratch。

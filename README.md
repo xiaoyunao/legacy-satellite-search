@@ -19,20 +19,18 @@ sbatch -A desi -q shared -c 8 scripts/freeze_fields.sh
 The field selection job writes `configs/fields-frozen.yaml` before running a detector. The repository's final `fields.yaml` records the frozen selection when available. For a new selection, preserve the previous field manifest and copy the frozen file into `configs/fields.yaml` before submitting pilot jobs. To rerun frozen pilot results, use IDs in the committed field manifest. `LS_DR11_ROOT` can override the shared survey path. Materialize the pinned census file on scratch before PS1/DECam comparison jobs by running the field job or decompressing `resources/census.fits.gz` in place.
 
 ```bash
-sbatch -A desi -q shared scripts/slurm.sh dev_ordinary
-sbatch -A desi -q shared scripts/slurm.sh dev_deep
-sbatch -A desi -q shared scripts/slurm.sh eval_ordinary
-sbatch -A desi -q shared scripts/slurm.sh eval_deep
-sbatch -A desi -q shared scripts/slurm.sh --depth deep dev_ordinary
+sbatch -A desi -q shared scripts/slurm.sh --both-depths dev_ordinary
+sbatch -A desi -q shared scripts/slurm.sh --both-depths dev_deep
+sbatch -A desi -q shared scripts/slurm.sh --both-depths eval_ordinary
+sbatch -A desi -q shared scripts/slurm.sh --both-depths eval_deep
 sbatch -A desi -q shared --array=0-3%2 scripts/injections.sh dev_ordinary
 ```
 
-Submit injections after the base scan of the same field. Analysis and plotting below consume aggregate result tables and can run on the Mac after selectively syncing those outputs.
+Submit injections after the base scan of the same field. After the blind scans and controls finish, run `sbatch -A desi -q shared scripts/pilot_analysis.sh` in the NERSC checkout to select retained peaks, produce candidate diagnostics and build the main tables. The injection and plotting commands below also work on the Mac from the synced aggregates.
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -e .
-.venv/bin/python -m ls_satsearch.evaluate
 .venv/bin/python -m ls_satsearch.inject
 .venv/bin/python -m ls_satsearch.summarize
 ```
@@ -41,7 +39,7 @@ python3 -m venv .venv
 
 - Exact usable-area samples come from the DR11 primary brick boundaries, masks and positive g/r exposure at a five-arcsec equal-area lattice. Pilot uses valid survey assignment bits from the pinned census map.
 - Common selection requires valid g/r measurement, S/N ≥ 5, extinction-corrected g ≤ 23.5 and r ≤ 23.0, and TYPE=PSF. Source- and pixel-level excluded mask bits are named in the config and documented in [the release bit definitions](https://www.legacysurvey.org/dr11/bitmasks/). CLUSTER and RESOLVED are retained. The deeper trial extends each working magnitude cutoff by 0.5 mag.
-- A proposes CMD top-hat aperture peaks and ranks exact counts by conditional binomial tail. Spatial proposal aperture diameter is based on the common Plummer radius parameter. B uses the same apertures on regularized CMD likelihood-ratio weights and ranks the compensated excess against local weighted variance. Neither ranking is a whole-scan false-alarm probability.
+- A proposes CMD top-hat aperture peaks and ranks exact counts by conditional binomial tail. Spatial proposal aperture diameter is based on the common Plummer radius parameter. B uses the same apertures on regularized CMD likelihood-ratio weights and ranks the compensated excess against local weighted variance. Calibrate both rankings against real control fields to estimate whole-scan review densities.
 - Both scan 37 distance moduli by six angular scales, with position grid spacing one-third of each scale. The background annulus spans 3.5–6 radii, and the inner aperture spans 1.5 radii. Field buffers admit backgrounds outside the analysis rectangle. Sources and area use the same census assignment rule inside and outside the rectangle.
 - Peaks meeting the proposal floor are saved before spatial de-duplication. The scratch-only full peak table preserves each template peak's merged rank. Evaluation matches the highest-ranked merged peak within the frozen spatial and distance tolerances in `docs/DECISIONS.md`. The benchmark JSON holds the original field-level literature provenance.
 - C refits candidate richness using a local-annulus background, masked spatial normalization and the CMD density ratio conditional on observed error class. Reported radii and DM from C come from a small grid centred on the A/B peak. Nearby background gradients, unmeasured classification completeness and the conditional error model limit interpretation.
@@ -51,3 +49,5 @@ python3 -m venv .venv
 ## Locations and outputs
 
 Program, rules and reproducibility docs are in `src/`, `scripts/`, `configs/`, `docs/` and `references/`. `results/summary/` records manifests, cuts, known recovery, matched review costs and candidate statistics. `results/figures/` contains static diagnostics. Slurm stdout stays under `logs/` on Perlmutter. Raw LS measurements, catalogs, coverage caches, full template peaks and candidate-member tables stay on NERSC. Sync only the approved summary tables and figures to the Mac.
+
+Read the [first science report](first_science_report.md) for measured recovery, candidate review and the next experiment. [Slurm accounting](results/summary/slurm_jobs.csv) records control, pilot, review and injection job outcomes.

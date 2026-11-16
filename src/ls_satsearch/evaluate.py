@@ -89,16 +89,21 @@ def evaluate(summary):
         ev = {p: m for p, m in manifests.items() if m['status'] == 'complete' and m['depth'] == depth and m['field']['role'] == 'pilot_eval'}
         if not dev:
             continue
+        ctrl = {p: m for p, m in manifests.items() if m['status'] == 'complete' and
+                m['depth'] == depth and m['field']['role'] == 'deep_control'}
+        control_area = sum(m['area_deg2'] for m in ctrl.values())
         dev_area = sum(m['area_deg2'] for m in dev.values())
         ev_area = sum(m['area_deg2'] for m in ev.values())
         fmt_peak = lambda p, r: dict(r, field=p.name, field_id=manifests[p]['field']['id'])
         dp = [fmt_peak(p, r) for p in dev for r in read_csv(p / 'deduplicated_peaks.csv')]
         ep = [fmt_peak(p, r) for p in ev for r in read_csv(p / 'deduplicated_peaks.csv')]
+        cp = [fmt_peak(p, r) for p in ctrl for r in read_csv(p / 'deduplicated_peaks.csv')]
         budgets = next(iter(dev.values()))['config']['review_budgets_deg2']
         thresholds_by_method = thresholds(dp, dev_area, budgets)
         for (method, budget), (cutoff, target) in thresholds_by_method.items():
             dev_kept = [r for r in dp if r['method'] == method and survives(r, cutoff)]
             ev_kept = [r for r in ep if r['method'] == method and survives(r, cutoff)]
+            ctrl_kept = [r for r in cp if r['method'] == method and survives(r, cutoff)]
             eligible = [r for r in recovery if r['method'] == method and r['depth'] == depth and
                         r['covered'] == 'True' and r['role'] in ('recovery', 'recovery_evaluation')]
             kept = [r for r in eligible if r.get('score') and survives(r, cutoff)]
@@ -116,6 +121,8 @@ def evaluate(summary):
                        evaluation_area_deg2=ev_area,
                        evaluation_peaks_per_deg2=len(ev_kept)/ev_area if ev_area else None,
                        count_interval95_low=lo, count_interval95_high=hi,
+                       des_control_area_deg2=control_area,
+                       des_control_peaks=len(ctrl_kept) if control_area else None,
                        development_fields=len(dev), evaluation_fields=len(ev),
                        benchmark_eligible=len(eligible), benchmark_recovered=len(kept),
                        heldout_benchmark_eligible=sum(r['role'] == 'recovery_evaluation' for r in eligible),

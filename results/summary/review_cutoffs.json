@@ -1,0 +1,50 @@
+[
+  {
+    "depth": "base",
+    "method": "A",
+    "budget": 0.1,
+    "cutoff": 7.2530304384469515
+  },
+  {
+    "depth": "base",
+    "method": "A",
+    "budget": 0.3,
+    "cutoff": 6.650298097476127
+  },
+  {
+    "depth": "base",
+    "method": "B",
+    "budget": 0.1,
+    "cutoff": 21.070111827641487
+  },
+  {
+    "depth": "base",
+    "method": "B",
+    "budget": 0.3,
+    "cutoff": 20.132892103215443
+  },
+  {
+    "depth": "deep",
+    "method": "A",
+    "budget": 0.1,
+    "cutoff": 12.711981048091982
+  },
+  {
+    "depth": "deep",
+    "method": "A",
+    "budget": 0.3,
+    "cutoff": 8.948076500600875
+  },
+  {
+    "depth": "deep",
+    "method": "B",
+    "budget": 0.1,
+    "cutoff": 26.884666999678714
+  },
+  {
+    "depth": "deep",
+    "method": "B",
+    "budget": 0.3,
+    "cutoff": 24.952505680504892
+  }
+]
