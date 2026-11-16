@@ -7,5 +7,5 @@ export LS_SAT_CONFIG_DIR="${LS_SAT_CONFIG_DIR:-configs/v3}" PYTHONPATH=src
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 field=$1
 job=$2
-.venv/bin/python -u -m ls_satsearch.ps1_tiles "$field"
+.venv/bin/python -u -m ls_satsearch.ps1_tiles "$field" --workers "${LS_PS1_DOWNLOAD_WORKERS:-1}"
 scontrol release "$job"

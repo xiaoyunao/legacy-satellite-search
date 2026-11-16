@@ -1,0 +1,19 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level,visual_note
+fresh_01-A_base-0.3-001,insufficient_photometric_evidence,4,4,3,3,0.0691412677828227,16.25,16.0,0.0,Canes Venatici I,31.52428042308066,L0,Centre and source stamps inspected.
+fresh_01-A_base-0.3-002,insufficient_photometric_evidence,1,1,1,4,13.342890561220553,18.5,0.7,0.49909805612607183,Canes Venatici I,188.07362640186616,L0,Two close brightness maxima in the highest-contribution source stamp.
+fresh_01-A_base-0.3-003,insufficient_photometric_evidence,1,1,1,6,3.843497661761292,20.25,1.0,0.0,Canes Venatici I,82.85791290431753,L0,Centre and source stamps inspected.
+fresh_03-A_base-0.3-001,insufficient_photometric_evidence,2,2,2,1,0.0,16.25,11.2,0.0,DELVE 5,630.9277362862066,L0,Centre checked. TS=0 modes have no positive-weight member stamps to request.
+fresh_03-A_base-0.3-002,insufficient_photometric_evidence,1,1,1,2,0.1456890364895389,16.25,22.4,0.0,DELVE 5,622.93200184503,L0,Bright streak visible in the centre mosaic. Positive-weight source cutouts recovered.
+fresh_03-A_base-0.3-003,insufficient_photometric_evidence,1,1,1,4,10.47953671619662,20.25,0.5,0.05433807835192406,DELVE 4,579.2862934338871,L0,Centre and source stamps inspected.
+fresh_03-A_base-0.3-004,insufficient_photometric_evidence,1,1,1,5,9.38376924672356,19.0,0.7,0.07842320063734176,DELVE 4,581.1887230755856,L0,Second high-contribution stamp has bright off-centre light.
+fresh_03-A_base-0.3-005,insufficient_photometric_evidence,1,1,1,6,0.11774199298923782,16.75,2.8,0.0,DELVE 5,590.5301320509326,L0,Centre and source stamps inspected.
+fresh_03-A_base-0.3-006,insufficient_photometric_evidence,1,1,1,7,2.71197174836235,20.0,1.0,0.0,DELVE 4,624.230654864721,L0,Centre and source stamps inspected.
+fresh_05-A_base-0.3-001,insufficient_photometric_evidence,1,1,1,1,1.702813360248685,16.75,0.7,0.0,Koposov 2,854.4937264531488,L0,Centre and source stamps inspected.
+fresh_05-A_base-0.3-002,insufficient_photometric_evidence,1,1,1,2,5.131859219709482,18.25,1.0,0.0,Koposov 2,809.5061843652763,L0,Centre and source stamps inspected.
+fresh_07-A_base-0.3-001,insufficient_photometric_evidence,1,1,1,1,6.102838561683489,19.0,1.0,0.0072571965305840425,DELVE 5,399.6667591642915,L0,Second high-contribution stamp has a bright neighbouring source.
+fresh_07-A_base-0.3-002,insufficient_photometric_evidence,1,1,1,2,3.234403986942694,19.0,2.0,0.0,Bootes III,471.6718491236137,L0,Centre and source stamps inspected.
+fresh_07-A_base-0.3-003,insufficient_photometric_evidence,1,1,1,3,1.4697940748919116,17.25,5.6,0.0,DELVE 5,421.0891157461152,L0,Centre and source stamps inspected.
+fresh_09-A_base-0.3-001,insufficient_photometric_evidence,1,1,1,1,5.7986139718625616,20.25,1.4,0.0,Balbinot 1,238.1644102527804,L0,Third high-contribution stamp has a bright neighbouring source.
+fresh_11-A_base-0.3-001,insufficient_photometric_evidence,2,2,2,1,0.0,20.0,11.2,0.0,Koposov 2,422.639918555424,L0,Centre checked. TS=0 modes have no positive-weight member stamps to request.
+fresh_11-A_base-0.3-002,insufficient_photometric_evidence,1,1,1,2,0.0,20.5,11.2,0.0,Koposov 2,452.6643153436695,L0,Centre and source stamps inspected.
+fresh_11-A_base-0.3-003,insufficient_photometric_evidence,1,1,1,3,0.0,19.5,5.6,0.0,Koposov 2,476.4726510708306,L0,Centre and source stamps inspected.

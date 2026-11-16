@@ -1,6 +1,7 @@
 """Acquire bounded, paginated PS1 stack input in NERSC scratch."""
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import csv
 import io
 from itertools import product
@@ -52,15 +53,16 @@ def boundary_repeats(ids, previous, page_size):
     return sum(ident == previous for ident in ids)
 
 
-def acquire(field_id):
+def acquire(field_id, workers=1):
     _,data,_=settings()
     matched=yaml.safe_load(config_path('matched.yaml').read_text())
     spec=next(f for f in matched['fields'] if f['id']==field_id)
     field,tiles=design(spec,matched)
     out=data/'resources/ps1/tiles-v3'/field_id
     out.mkdir(exist_ok=True,parents=True)
-    result=[]
-    for i,(ra,dec) in enumerate(tiles):
+    def acquire_tile(task):
+        i,(ra,dec) = task
+        result = []
         total=0
         previous=None
         for page in range(1,21):
@@ -91,12 +93,18 @@ def acquire(field_id):
         else:
             raise RuntimeError(f'Page limit reached for cone {i} in {field_id}')
         print(f'{field_id} {i+1}/{len(tiles)} {total}',flush=True)
-    write_json(out/'manifest.json',dict(field=spec,limit_arcmin=field.limit,pages=result,
+        return result
+
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        pages = [p for tile in executor.map(acquire_tile,enumerate(tiles)) for p in tile]
+    write_json(out/'manifest.json',dict(field=spec,limit_arcmin=field.limit,pages=pages,
                                        matched_config_sha256=sha(config_path('matched.yaml'))))
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('fields',nargs='+')
-    for field_id in p.parse_args().fields:
-        acquire(field_id)
+    p.add_argument('--workers', type=int, choices=(1,2), default=1)
+    args = p.parse_args()
+    for field_id in args.fields:
+        acquire(field_id,args.workers)
