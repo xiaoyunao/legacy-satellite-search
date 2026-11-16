@@ -1,0 +1,7251 @@
+{
+  "south/tractor/000/tractor-0001m002.fits": {
+    "url": "https://portal.nersc.gov/cfs/cosmo/data/legacysurvey/dr11/south/tractor/000/tractor-0001m002.fits",
+    "http_status": 206,
+    "header": {
+      "LEGPIPEV": "DR10.9.1",
+      "SURVEY": "DECaLS+BASS+MzLS",
+      "DEPNAM01": "astropy",
+      "DEPVER01": "7.2.0",
+      "BANDS": "g,r,z"
+    },
+    "nrow": 9179,
+    "columns": [
+      {
+        "name": "ls_id_dr11",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "release",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "brickid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickname",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "objid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brick_primary",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "maskbits",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "fitbits",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "type",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "ra",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "dec",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "ra_ivar",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "dec_ivar",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "bx",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "dchisq",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "ebv",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "mjd_min",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "mjd_max",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "nearest_neighbor",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "ref_cat",
+        "format": "2A",
+        "unit": null
+      },
+      {
+        "name": "ref_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "pmra",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "pmdec",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "parallax",
+        "format": "E",
+        "unit": "mas"
+      },
+      {
+        "name": "pmra_ivar",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "pmdec_ivar",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "parallax_ivar",
+        "format": "E",
+        "unit": "mas^(-2)"
+      },
+      {
+        "name": "ref_epoch",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_g_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_g_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_g_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_bp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_rp_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_rp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_rp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_variable_flag",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_excess_noise",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_excess_noise_sig",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_n_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_n_good_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_weight_al",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_duplicated_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "gaia_a_g_val",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_e_bp_min_rp_val",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_rp_excess_factor",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_sigma5d_max",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_params_solved",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "flux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_i",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w1",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w2",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w3",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w4",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_ivar_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_i",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w3",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w4",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "fiberflux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fiberflux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fiberflux_i",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fiberflux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_i",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_i",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_i",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_i",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_ivar_g",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_r",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_i",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_z",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_masked_g",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked_r",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked_i",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked_z",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w1",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w2",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w3",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w4",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w1",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w2",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w3",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w4",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_ivar_w1",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w2",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w3",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w4",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "mw_transmission_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nobs_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_i",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w1",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w2",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w3",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w4",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "rchisq_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ngood_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ngood_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ngood_i",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ngood_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_i",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_i",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "wisemask_w1",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "wisemask_w2",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "psfsize_g",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfsize_r",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfsize_i",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfsize_z",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfdepth_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_i",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_i",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w3",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w4",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "wise_coadd_id",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "wise_x",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_y",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w1",
+        "format": "25E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "lc_flux_w2",
+        "format": "25E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "lc_flux_ivar_w1",
+        "format": "25E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "lc_flux_ivar_w2",
+        "format": "25E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "lc_nobs_w1",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w2",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w1",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w2",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w1",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w2",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w1",
+        "format": "25D",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w2",
+        "format": "25D",
+        "unit": null
+      },
+      {
+        "name": "lc_epoch_index_w1",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_epoch_index_w2",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "sersic",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "sersic_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "shape_r_ivar",
+        "format": "E",
+        "unit": "arcsec^(-2)"
+      },
+      {
+        "name": "shape_e1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2_ivar",
+        "format": "E",
+        "unit": null
+      }
+    ]
+  },
+  "south/tractor-i/000/tractor-i-0001m002.fits": {
+    "url": "https://portal.nersc.gov/cfs/cosmo/data/legacysurvey/dr11/south/tractor-i/000/tractor-i-0001m002.fits",
+    "http_status": 206,
+    "header": {
+      "LEGPIPEV": "DR10.9.1",
+      "SURVEY": "DECaLS+BASS+MzLS",
+      "DEPNAM01": "astropy",
+      "DEPVER01": "7.2.0",
+      "BANDS": "g,r,z"
+    },
+    "nrow": 9179,
+    "columns": [
+      {
+        "name": "ra",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "dec",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "ibx",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "iby",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "peaksed",
+        "format": "4A",
+        "unit": null
+      },
+      {
+        "name": "ref_cat",
+        "format": "2A",
+        "unit": null
+      },
+      {
+        "name": "ref_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mask_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "in_bounds",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "iscluster",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "keep_radius",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ignore_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "kmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_n_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ggguess",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "pa",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "radius_pix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "parallax",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "freezeparams",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "isbright",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "source_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "isgalaxy",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "phot_variable_flag",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ra_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pmdec_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ref_epoch",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "dec_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "pmdec",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "parallax_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fitmode",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "radius",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "set_galaxy_maskbit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "jmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pmra_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "hmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_g_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ismcloud",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "isgaia",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "astrometric_excess_noise",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "istycho",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "pmra",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ismedium",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "astrometric_excess_noise_sig",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "duplicated_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "dup",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "astrometric_params_solved",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "astrometric_n_good_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "pointsource",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "phot_g_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "ba",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_g_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_sigma5d_max",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "zguess",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "isresolved",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "islargegalaxy",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_rp_excess_factor",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "iterative",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "fracflux",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "fracin",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "rchisq",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "cpu_arch",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "cpu_source",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "cpu_blob",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_width",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_height",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_npix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "blob_nimages",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_totalpix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_width",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_height",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_npix",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_nimages",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "bx0",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by0",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "hit_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "hit_ser_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "hit_r_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "dchisq",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "force_keep_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "fit_background",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "forced_pointsource",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ran_on_gpu",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "regular",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "bx",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "objid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "blob",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "ninblob",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickname",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "nobs",
+        "format": "3I",
+        "unit": null
+      },
+      {
+        "name": "ngood",
+        "format": "3I",
+        "unit": null
+      },
+      {
+        "name": "anymask",
+        "format": "3I",
+        "unit": null
+      },
+      {
+        "name": "allmask",
+        "format": "3I",
+        "unit": null
+      },
+      {
+        "name": "psfsize",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "galdepth",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "mjd_min",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "mjd_max",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "apflux_blobresid",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "brick_primary",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "nea_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "flux",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "type",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "sersic",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "sersic_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fiberflux",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "fibertotflux",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "wise_coadd_id",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "wise_x",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_y",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_mask",
+        "format": "2B",
+        "unit": null
+      },
+      {
+        "name": "flux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w1",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_ivar_w1",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w2",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_ivar_w2",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "nobs_w1",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w2",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w3",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w4",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w1",
+        "format": "24I",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w2",
+        "format": "24I",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w1",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w2",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w1",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w2",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w1",
+        "format": "24D",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w2",
+        "format": "24D",
+        "unit": null
+      },
+      {
+        "name": "maskbits",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "fitbits",
+        "format": "I",
+        "unit": null
+      }
+    ]
+  },
+  "north/tractor/000/tractor-0001m002.fits": {
+    "url": "https://portal.nersc.gov/cfs/cosmo/data/legacysurvey/dr11/north/tractor/000/tractor-0001m002.fits",
+    "http_status": 206,
+    "header": {
+      "LEGPIPEV": "DR11.0.6",
+      "SURVEY": "DECaLS+BASS+MzLS",
+      "DEPNAM01": "astropy",
+      "DEPVER01": "7.2.0",
+      "BANDS": "z"
+    },
+    "nrow": 1940,
+    "columns": [
+      {
+        "name": "ls_id_dr11",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "release",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "brickid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickname",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "objid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brick_primary",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "maskbits",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "fitbits",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "type",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "ra",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "dec",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "ra_ivar",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "dec_ivar",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "bx",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "dchisq",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "ebv",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "mjd_min",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "mjd_max",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "nearest_neighbor",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "ref_cat",
+        "format": "2A",
+        "unit": null
+      },
+      {
+        "name": "ref_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "pmra",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "pmdec",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "parallax",
+        "format": "E",
+        "unit": "mas"
+      },
+      {
+        "name": "pmra_ivar",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "pmdec_ivar",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "parallax_ivar",
+        "format": "E",
+        "unit": "mas^(-2)"
+      },
+      {
+        "name": "ref_epoch",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_g_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_g_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_g_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_bp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_rp_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_rp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_rp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_variable_flag",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_excess_noise",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_excess_noise_sig",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_n_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_n_good_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_weight_al",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_duplicated_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "gaia_a_g_val",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_e_bp_min_rp_val",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_rp_excess_factor",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_sigma5d_max",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_params_solved",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "flux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w1",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w2",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w3",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w4",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_ivar_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w3",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w4",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "fiberflux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fiberflux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fiberflux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_ivar_g",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_r",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_z",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_masked_g",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked_r",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked_z",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w1",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w2",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w3",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w4",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w1",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w2",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w3",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w4",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_ivar_w1",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w2",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w3",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w4",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "mw_transmission_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nobs_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w1",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w2",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w3",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w4",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "rchisq_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ngood_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ngood_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ngood_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "wisemask_w1",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "wisemask_w2",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "psfsize_g",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfsize_r",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfsize_z",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfdepth_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w3",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w4",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "wise_coadd_id",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "wise_x",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_y",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w1",
+        "format": "25E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "lc_flux_w2",
+        "format": "25E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "lc_flux_ivar_w1",
+        "format": "25E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "lc_flux_ivar_w2",
+        "format": "25E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "lc_nobs_w1",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w2",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w1",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w2",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w1",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w2",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w1",
+        "format": "25D",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w2",
+        "format": "25D",
+        "unit": null
+      },
+      {
+        "name": "lc_epoch_index_w1",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_epoch_index_w2",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "sersic",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "sersic_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "shape_r_ivar",
+        "format": "E",
+        "unit": "arcsec^(-2)"
+      },
+      {
+        "name": "shape_e1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2_ivar",
+        "format": "E",
+        "unit": null
+      }
+    ]
+  },
+  "north/tractor-i/000/tractor-i-0001m002.fits": {
+    "url": "https://portal.nersc.gov/cfs/cosmo/data/legacysurvey/dr11/north/tractor-i/000/tractor-i-0001m002.fits",
+    "http_status": 206,
+    "header": {
+      "LEGPIPEV": "DR11.0.6",
+      "SURVEY": "DECaLS+BASS+MzLS",
+      "DEPNAM01": "astropy",
+      "DEPVER01": "7.2.0",
+      "BANDS": "z"
+    },
+    "nrow": 1940,
+    "columns": [
+      {
+        "name": "ra",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "dec",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "ibx",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "iby",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "peaksed",
+        "format": "1A",
+        "unit": null
+      },
+      {
+        "name": "ref_cat",
+        "format": "2A",
+        "unit": null
+      },
+      {
+        "name": "ref_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mask_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "islargegalaxy",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "issgafit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "astrometric_n_good_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "hmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_sigma5d_max",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "isgaia",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "duplicated_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ignore_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "radius_pix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "pmdec_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "dup",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_rp_excess_factor",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_params_solved",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "istycho",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "dec_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "isresolved",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "astrometric_n_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "keep_radius",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "ref_epoch",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ba",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pmdec",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fitmode",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "in_bounds",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "parallax_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "set_galaxy_maskbit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "iscluster",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "isgalaxy",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "phot_g_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "pmra",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "jmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_excess_noise",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "freezeparams",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "source_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_g_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ggguess",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "zguess",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "parallax",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "ra_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_variable_flag",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "astrometric_excess_noise_sig",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ismcloud",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ismedium",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "radius",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "kmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pointsource",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pa",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pmra_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "isbright",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_g_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "iterative",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "fracflux",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "fracin",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "rchisq",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "cpu_arch",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "cpu_source",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "cpu_blob",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_width",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_height",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_npix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "blob_nimages",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_totalpix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_width",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_height",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_npix",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_nimages",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "bx0",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by0",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "hit_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "hit_ser_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "hit_r_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "dchisq",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "force_keep_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "fit_background",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "forced_pointsource",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ran_on_gpu",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "regular",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "bx",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "objid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "blob",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "ninblob",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickname",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "nobs",
+        "format": "1I",
+        "unit": null
+      },
+      {
+        "name": "ngood",
+        "format": "1I",
+        "unit": null
+      },
+      {
+        "name": "anymask",
+        "format": "1I",
+        "unit": null
+      },
+      {
+        "name": "allmask",
+        "format": "1I",
+        "unit": null
+      },
+      {
+        "name": "psfsize",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "galdepth",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "mjd_min",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "mjd_max",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_blobresid",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "flux",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "type",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "sersic",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "sersic_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fiberflux",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "fibertotflux",
+        "format": "1E",
+        "unit": null
+      },
+      {
+        "name": "wise_coadd_id",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "wise_x",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_y",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_mask",
+        "format": "2B",
+        "unit": null
+      },
+      {
+        "name": "flux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w1",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_ivar_w1",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w2",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_ivar_w2",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "nobs_w1",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w2",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w3",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w4",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w1",
+        "format": "24I",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w2",
+        "format": "24I",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w1",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w2",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w1",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w2",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w1",
+        "format": "24D",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w2",
+        "format": "24D",
+        "unit": null
+      },
+      {
+        "name": "brick_primary",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "maskbits",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "fitbits",
+        "format": "I",
+        "unit": null
+      }
+    ]
+  },
+  "south/sweep/11.0/sweep-000m005-005p000.fits": {
+    "url": "https://portal.nersc.gov/cfs/cosmo/data/legacysurvey/dr11/south/sweep/11.0/sweep-000m005-005p000.fits",
+    "http_status": 206,
+    "header": {
+      "BANDS": "g,r,z",
+      "DEPNAM01": "astropy",
+      "DEPVER01": "7.2.0",
+      "SURVEY": "DECaLS+BASS+MzLS"
+    },
+    "nrow": 3585830,
+    "columns": [
+      {
+        "name": "RELEASE",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "BRICKID",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "BRICKNAME",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "OBJID",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "TYPE",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "RA",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "DEC",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "RA_IVAR",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "DEC_IVAR",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "DCHISQ",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "EBV",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "FLUX_G",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_R",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_I",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_Z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_W1",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_W2",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_W3",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_W4",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_IVAR_G",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_R",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_I",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_Z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_W1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_W2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_W3",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_W4",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "MW_TRANSMISSION_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_I",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_W1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_W2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_W3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_W4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "NOBS_G",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_R",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_I",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_Z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_W1",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_W2",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_W3",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_W4",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_I",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_W1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_W2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_W3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_W4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_I",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_W1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_W2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_W3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_W4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACMASKED_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACMASKED_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACMASKED_I",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACMASKED_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACIN_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACIN_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACIN_I",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACIN_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ANYMASK_G",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ANYMASK_R",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ANYMASK_I",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ANYMASK_Z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ALLMASK_G",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ALLMASK_R",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ALLMASK_I",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ALLMASK_Z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "WISEMASK_W1",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "WISEMASK_W2",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "PSFSIZE_G",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "PSFSIZE_R",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "PSFSIZE_I",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "PSFSIZE_Z",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "PSFDEPTH_G",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_R",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_I",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_Z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "GALDEPTH_G",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "GALDEPTH_R",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "GALDEPTH_I",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "GALDEPTH_Z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_W1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_W2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "WISE_COADD_ID",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "SHAPE_R",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "SHAPE_R_IVAR",
+        "format": "E",
+        "unit": "arcsec^(-2)"
+      },
+      {
+        "name": "SHAPE_E1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "SHAPE_E1_IVAR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "SHAPE_E2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "SHAPE_E2_IVAR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FIBERFLUX_G",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERFLUX_R",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERFLUX_I",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERFLUX_Z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERTOTFLUX_G",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERTOTFLUX_R",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERTOTFLUX_I",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERTOTFLUX_Z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "REF_CAT",
+        "format": "2A",
+        "unit": null
+      },
+      {
+        "name": "REF_ID",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "REF_EPOCH",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_PHOT_G_MEAN_MAG",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "GAIA_PHOT_G_MEAN_FLUX_OVER_ERROR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_PHOT_BP_MEAN_MAG",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "GAIA_PHOT_BP_MEAN_FLUX_OVER_ERROR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_PHOT_RP_MEAN_MAG",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "GAIA_PHOT_RP_MEAN_FLUX_OVER_ERROR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_ASTROMETRIC_EXCESS_NOISE",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_DUPLICATED_SOURCE",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "GAIA_PHOT_BP_RP_EXCESS_FACTOR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_ASTROMETRIC_SIGMA5D_MAX",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_ASTROMETRIC_PARAMS_SOLVED",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "PARALLAX",
+        "format": "E",
+        "unit": "mas"
+      },
+      {
+        "name": "PARALLAX_IVAR",
+        "format": "E",
+        "unit": "mas^(-2)"
+      },
+      {
+        "name": "PMRA",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "PMRA_IVAR",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "PMDEC",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "PMDEC_IVAR",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "MASKBITS",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "FITBITS",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "SERSIC",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "SERSIC_IVAR",
+        "format": "E",
+        "unit": null
+      }
+    ]
+  },
+  "north/sweep/11.0/sweep-000m005-005p000.fits": {
+    "url": "https://portal.nersc.gov/cfs/cosmo/data/legacysurvey/dr11/north/sweep/11.0/sweep-000m005-005p000.fits",
+    "http_status": 206,
+    "header": {
+      "BANDS": "z",
+      "DEPNAM01": "astropy",
+      "DEPVER01": "7.2.0",
+      "LEGPIPEV": "DR11.0.6",
+      "SURVEY": "DECaLS+BASS+MzLS"
+    },
+    "nrow": 250586,
+    "columns": [
+      {
+        "name": "RELEASE",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "BRICKID",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "BRICKNAME",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "OBJID",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "TYPE",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "RA",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "DEC",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "RA_IVAR",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "DEC_IVAR",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "DCHISQ",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "EBV",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "FLUX_G",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_R",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_Z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_W1",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_W2",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_W3",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_W4",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FLUX_IVAR_G",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_R",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_Z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_W1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_W2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_W3",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "FLUX_IVAR_W4",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "MW_TRANSMISSION_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_W1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_W2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_W3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "MW_TRANSMISSION_W4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "NOBS_G",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_R",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_Z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_W1",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_W2",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_W3",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "NOBS_W4",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_W1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_W2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_W3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "RCHISQ_W4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_W1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_W2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_W3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACFLUX_W4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACMASKED_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACMASKED_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACMASKED_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACIN_G",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACIN_R",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FRACIN_Z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ANYMASK_G",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ANYMASK_R",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ANYMASK_Z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ALLMASK_G",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ALLMASK_R",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ALLMASK_Z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "WISEMASK_W1",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "WISEMASK_W2",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "PSFSIZE_G",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "PSFSIZE_R",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "PSFSIZE_Z",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "PSFDEPTH_G",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_R",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_Z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "GALDEPTH_G",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "GALDEPTH_R",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "GALDEPTH_Z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_W1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "PSFDEPTH_W2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "WISE_COADD_ID",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "SHAPE_R",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "SHAPE_R_IVAR",
+        "format": "E",
+        "unit": "arcsec^(-2)"
+      },
+      {
+        "name": "SHAPE_E1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "SHAPE_E1_IVAR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "SHAPE_E2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "SHAPE_E2_IVAR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "FIBERFLUX_G",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERFLUX_R",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERFLUX_Z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERTOTFLUX_G",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERTOTFLUX_R",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "FIBERTOTFLUX_Z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "REF_CAT",
+        "format": "2A",
+        "unit": null
+      },
+      {
+        "name": "REF_ID",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "REF_EPOCH",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_PHOT_G_MEAN_MAG",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "GAIA_PHOT_G_MEAN_FLUX_OVER_ERROR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_PHOT_BP_MEAN_MAG",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "GAIA_PHOT_BP_MEAN_FLUX_OVER_ERROR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_PHOT_RP_MEAN_MAG",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "GAIA_PHOT_RP_MEAN_FLUX_OVER_ERROR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_ASTROMETRIC_EXCESS_NOISE",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_DUPLICATED_SOURCE",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "GAIA_PHOT_BP_RP_EXCESS_FACTOR",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_ASTROMETRIC_SIGMA5D_MAX",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "GAIA_ASTROMETRIC_PARAMS_SOLVED",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "PARALLAX",
+        "format": "E",
+        "unit": "mas"
+      },
+      {
+        "name": "PARALLAX_IVAR",
+        "format": "E",
+        "unit": "mas^(-2)"
+      },
+      {
+        "name": "PMRA",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "PMRA_IVAR",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "PMDEC",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "PMDEC_IVAR",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "MASKBITS",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "FITBITS",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "SERSIC",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "SERSIC_IVAR",
+        "format": "E",
+        "unit": null
+      }
+    ]
+  },
+  "south/tractor/000/tractor-0001m300.fits": {
+    "url": "https://portal.nersc.gov/cfs/cosmo/data/legacysurvey/dr11/south/tractor/000/tractor-0001m300.fits",
+    "header": {
+      "LEGPIPEV": "DR11.0.6",
+      "BANDS": "g,r,z"
+    },
+    "nrow": 4345,
+    "columns": [
+      {
+        "name": "ls_id_dr11",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "release",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "brickid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickname",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "objid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brick_primary",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "maskbits",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "fitbits",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "type",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "ra",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "dec",
+        "format": "D",
+        "unit": "deg"
+      },
+      {
+        "name": "ra_ivar",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "dec_ivar",
+        "format": "E",
+        "unit": "deg^(-2)"
+      },
+      {
+        "name": "bx",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "dchisq",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "ebv",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "mjd_min",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "mjd_max",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "nearest_neighbor",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "ref_cat",
+        "format": "2A",
+        "unit": null
+      },
+      {
+        "name": "ref_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "pmra",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "pmdec",
+        "format": "E",
+        "unit": "mas/yr"
+      },
+      {
+        "name": "parallax",
+        "format": "E",
+        "unit": "mas"
+      },
+      {
+        "name": "pmra_ivar",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "pmdec_ivar",
+        "format": "E",
+        "unit": "(mas/yr)^(-2)"
+      },
+      {
+        "name": "parallax_ivar",
+        "format": "E",
+        "unit": "mas^(-2)"
+      },
+      {
+        "name": "ref_epoch",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_g_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_g_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_g_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_bp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_rp_mean_mag",
+        "format": "E",
+        "unit": "mag"
+      },
+      {
+        "name": "gaia_phot_rp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_rp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_variable_flag",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_excess_noise",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_excess_noise_sig",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_n_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_n_good_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_weight_al",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_duplicated_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "gaia_a_g_val",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_e_bp_min_rp_val",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_phot_bp_rp_excess_factor",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_sigma5d_max",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "gaia_astrometric_params_solved",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "flux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_i",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w1",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w2",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w3",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_w4",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "flux_ivar_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_i",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w3",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "flux_ivar_w4",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "fiberflux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fiberflux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fiberflux_i",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fiberflux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_g",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_r",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_i",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "fibertotflux_z",
+        "format": "E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_i",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_i",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_g",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_r",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_i",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_blobresid_z",
+        "format": "8E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_ivar_g",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_r",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_i",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_z",
+        "format": "8E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_masked_g",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked_r",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked_i",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked_z",
+        "format": "8E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w1",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w2",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w3",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_w4",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w1",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w2",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w3",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_resid_w4",
+        "format": "5E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "apflux_ivar_w1",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w2",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w3",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "apflux_ivar_w4",
+        "format": "5E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "mw_transmission_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mw_transmission_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nobs_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_i",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w1",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w2",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w3",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w4",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "rchisq_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracin_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ngood_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ngood_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ngood_i",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "ngood_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_i",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "anymask_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_g",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_r",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_i",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "allmask_z",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "wisemask_w1",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "wisemask_w2",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "psfsize_g",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfsize_r",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfsize_i",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfsize_z",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "psfdepth_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_i",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_g",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_r",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_i",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "galdepth_z",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w1",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w2",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w3",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "psfdepth_w4",
+        "format": "E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "wise_coadd_id",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "wise_x",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_y",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w1",
+        "format": "25E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "lc_flux_w2",
+        "format": "25E",
+        "unit": "nanomaggies"
+      },
+      {
+        "name": "lc_flux_ivar_w1",
+        "format": "25E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "lc_flux_ivar_w2",
+        "format": "25E",
+        "unit": "nanomaggies^(-2)"
+      },
+      {
+        "name": "lc_nobs_w1",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w2",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w1",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w2",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w1",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w2",
+        "format": "25E",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w1",
+        "format": "25D",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w2",
+        "format": "25D",
+        "unit": null
+      },
+      {
+        "name": "lc_epoch_index_w1",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "lc_epoch_index_w2",
+        "format": "25I",
+        "unit": null
+      },
+      {
+        "name": "sersic",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "sersic_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r",
+        "format": "E",
+        "unit": "arcsec"
+      },
+      {
+        "name": "shape_r_ivar",
+        "format": "E",
+        "unit": "arcsec^(-2)"
+      },
+      {
+        "name": "shape_e1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2_ivar",
+        "format": "E",
+        "unit": null
+      }
+    ],
+    "partial_rows_diagnostic": {
+      "flux_i": {
+        "sample_n": 67,
+        "positive_n": 63,
+        "min": 0.0,
+        "max": 243.1205291748047
+      },
+      "flux_ivar_i": {
+        "sample_n": 67,
+        "positive_n": 63,
+        "min": 0.0,
+        "max": 311.8704528808594
+      },
+      "nobs_i": {
+        "sample_n": 67,
+        "positive_n": 63,
+        "min": 0.0,
+        "max": 3.0
+      }
+    }
+  },
+  "south/tractor-i/000/tractor-i-0001m300.fits": {
+    "url": "https://portal.nersc.gov/cfs/cosmo/data/legacysurvey/dr11/south/tractor-i/000/tractor-i-0001m300.fits",
+    "header": {
+      "LEGPIPEV": "DR11.0.6",
+      "BANDS": "g,r,z"
+    },
+    "nrow": 4345,
+    "columns": [
+      {
+        "name": "ra",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "dec",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "ibx",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "iby",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "peaksed",
+        "format": "4A",
+        "unit": null
+      },
+      {
+        "name": "ref_cat",
+        "format": "2A",
+        "unit": null
+      },
+      {
+        "name": "ref_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "isresolved",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "keep_radius",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_excess_noise",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pmdec_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pmdec",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_n_good_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "radius_pix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "ignore_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "pointsource",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ra_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "isbright",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "fitmode",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "istycho",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "radius",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "phot_variable_flag",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "astrometric_params_solved",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_sigma5d_max",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "parallax",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ref_epoch",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_g_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "ba",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "isgalaxy",
+        "format": "B",
+        "unit": null
+      },
+      {
+        "name": "zguess",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_g_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "dec_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "source_id",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "iscluster",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "kmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "duplicated_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ggguess",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "freezeparams",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "pa",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "dup",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "jmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "isgaia",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "astrometric_n_obs_al",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "islargegalaxy",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "phot_g_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "set_galaxy_maskbit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "pmra",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "ismcloud",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ismedium",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "astrometric_excess_noise_sig",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_rp_excess_factor",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "hmag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "mask_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_rp_mean_mag",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "in_bounds",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "parallax_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_n_obs",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "decam_mag_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "issgafit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "pmra_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "phot_bp_mean_flux_over_error",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "iterative",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "fracflux",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "fracin",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "fracmasked",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "rchisq",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "cpu_arch",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "cpu_source",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "cpu_blob",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_width",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_height",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_npix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "blob_nimages",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_totalpix",
+        "format": "K",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_width",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_height",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_npix",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "blob_symm_nimages",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "bx0",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by0",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "hit_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "hit_ser_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "hit_r_limit",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "dchisq",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "force_keep_source",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "fit_background",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "forced_pointsource",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "ran_on_gpu",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "regular",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "bx",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "by",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "objid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "blob",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "ninblob",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickid",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "brickname",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "nobs",
+        "format": "3I",
+        "unit": null
+      },
+      {
+        "name": "ngood",
+        "format": "3I",
+        "unit": null
+      },
+      {
+        "name": "anymask",
+        "format": "3I",
+        "unit": null
+      },
+      {
+        "name": "allmask",
+        "format": "3I",
+        "unit": null
+      },
+      {
+        "name": "psfsize",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "galdepth",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "mjd_min",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "mjd_max",
+        "format": "D",
+        "unit": null
+      },
+      {
+        "name": "nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_g",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_z",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "apflux_masked",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "apflux_blobresid",
+        "format": "24E",
+        "unit": null
+      },
+      {
+        "name": "brick_primary",
+        "format": "L",
+        "unit": null
+      },
+      {
+        "name": "nea_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "blob_nea_i",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "flux",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "type",
+        "format": "3A",
+        "unit": null
+      },
+      {
+        "name": "sersic",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "sersic_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_r_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e1_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "shape_e2_ivar",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fiberflux",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "fibertotflux",
+        "format": "3E",
+        "unit": null
+      },
+      {
+        "name": "wise_coadd_id",
+        "format": "8A",
+        "unit": null
+      },
+      {
+        "name": "wise_x",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_y",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "wise_mask",
+        "format": "2B",
+        "unit": null
+      },
+      {
+        "name": "flux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w1",
+        "format": "23E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_ivar_w1",
+        "format": "23E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w1",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_w2",
+        "format": "23E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_flux_ivar_w2",
+        "format": "23E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w2",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w3",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "flux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "flux_ivar_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "psfdepth_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "apflux_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_resid_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "apflux_ivar_w4",
+        "format": "5E",
+        "unit": null
+      },
+      {
+        "name": "nobs_w1",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w2",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w3",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "nobs_w4",
+        "format": "I",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "fracflux_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w1",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w2",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w3",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "rchisq_w4",
+        "format": "E",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w1",
+        "format": "23I",
+        "unit": null
+      },
+      {
+        "name": "lc_nobs_w2",
+        "format": "23I",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w1",
+        "format": "23E",
+        "unit": null
+      },
+      {
+        "name": "lc_fracflux_w2",
+        "format": "23E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w1",
+        "format": "23E",
+        "unit": null
+      },
+      {
+        "name": "lc_rchisq_w2",
+        "format": "23E",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w1",
+        "format": "23D",
+        "unit": null
+      },
+      {
+        "name": "lc_mjd_w2",
+        "format": "23D",
+        "unit": null
+      },
+      {
+        "name": "maskbits",
+        "format": "J",
+        "unit": null
+      },
+      {
+        "name": "fitbits",
+        "format": "I",
+        "unit": null
+      }
+    ],
+    "partial_rows_diagnostic": {}
+  }
+}

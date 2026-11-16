@@ -1,0 +1,65 @@
+[
+  {
+    "repository": "apace7/local_volume_database",
+    "commit": "c40961a42d2beb302be1da90bca2016c284ef63c",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/README.md",
+    "local_path": "codex_benchmark_sources/lvdb_README.md",
+    "bytes": 4044,
+    "sha256": "087768823e591a3188807eb6a2ac625c781e5f5586c6534efac107fd1522bd57"
+  },
+  {
+    "repository": "apace7/local_volume_database",
+    "commit": "c40961a42d2beb302be1da90bca2016c284ef63c",
+    "path": "data/dwarf_mw.csv",
+    "url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+    "local_path": "codex_benchmark_sources/lvdb_data_dwarf_mw.csv",
+    "bytes": 46509,
+    "sha256": "8e80a917658c150474f80c8541d36a119eb5b255531dae5def5a85866a4ff021"
+  },
+  {
+    "repository": "apace7/local_volume_database",
+    "commit": "c40961a42d2beb302be1da90bca2016c284ef63c",
+    "path": "data/gc_ambiguous.csv",
+    "url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv",
+    "local_path": "codex_benchmark_sources/lvdb_data_gc_ambiguous.csv",
+    "bytes": 12610,
+    "sha256": "29f3705de191a4523da96763aeab8dd4aa4ecb7265735cf12193e6827728b7dc"
+  },
+  {
+    "repository": "apace7/local_volume_database",
+    "commit": "c40961a42d2beb302be1da90bca2016c284ef63c",
+    "path": "data/gc_mw_new.csv",
+    "url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_mw_new.csv",
+    "local_path": "codex_benchmark_sources/lvdb_data_gc_mw_new.csv",
+    "bytes": 34530,
+    "sha256": "887569cf35e783375a17d865d4b015f9e0ef8ec8fc3425dacf760d85c2d1ffd0"
+  },
+  {
+    "repository": "apace7/local_volume_database",
+    "commit": "c40961a42d2beb302be1da90bca2016c284ef63c",
+    "path": "data/readme.md",
+    "url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/readme.md",
+    "local_path": "codex_benchmark_sources/lvdb_data_readme.md",
+    "bytes": 327,
+    "sha256": "62c586229d4ddcd4a5a8e63b1adc90d85b93b23cc50d894445ac4a8cad610372"
+  },
+  {
+    "repository": "delve-survey/delve_mw_census",
+    "commit": "1a02f50d25cac74c02ddba8401a5af20aa2db4fe",
+    "path": "data/offical_delve_census_refgalaxy_list.csv",
+    "url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+    "local_path": "codex_benchmark_sources/offical_delve_census_refgalaxy_list.csv",
+    "bytes": 17371,
+    "sha256": "bd51bde708ef407e8cb66fa6c9973e870019544b70d7d6e4b81ca7737d7f5f63"
+  },
+  {
+    "repository": "delve-survey/delve_mw_census",
+    "commit": "1a02f50d25cac74c02ddba8401a5af20aa2db4fe",
+    "path": "data/offical_delve_census_refambigous_list.csv",
+    "url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+    "local_path": "codex_benchmark_sources/offical_delve_census_refambigous_list.csv",
+    "bytes": 6941,
+    "sha256": "6824dad4b5933b83cd32b857cd245e72bc59c7a18d256eee2fbe15cc820d1d11"
+  }
+]

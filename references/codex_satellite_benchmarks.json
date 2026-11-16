@@ -1,0 +1,1608 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-11-16",
+  "purpose": "Recovery benchmarks for a DESI Legacy Surveys photometric satellite-search pilot; not a completeness-selected population sample",
+  "n_objects": 18,
+  "first_run_n_objects": 12,
+  "units": {
+    "ra_icrs_deg": "degree",
+    "dec_icrs_deg": "degree",
+    "D_kpc": "heliocentric kpc",
+    "M_V": "integrated absolute V magnitude",
+    "theta_half_arcmin": "projected circularized half-light angular radius in arcmin",
+    "rhalf_pc": "projected circularized half-light physical radius in pc"
+  },
+  "radius_policy": "Never treat native catalog rhalf as automatically circularized. Canonical theta_half_arcmin and rhalf_pc are explicitly circularized; derived quantities are labeled. Separately marginalized/rounded published summaries need not obey exact central-value geometric identities. No 3D deprojection is applied.",
+  "coverage_policy": "Every LS DR11 footprint and usable-gr status is unknown until runtime checking. Do not equate census DES/DELVE/PS1 region with Legacy coverage. Unknown is null, not false.",
+  "catalog_version_policy": "Source CSVs are pinned to immutable commits; primary papers are pinned to arXiv versions. Current LVDB crosschecks are retained without silently replacing adopted values.",
+  "run_policy": [
+    "Start with 3 strong controls, then the remaining 9 first_run diagnostic systems.",
+    "Verify footprint and quality before categorizing non-recovery; preserve known-system tag bits for control runs while honoring actual invalid-image masks.",
+    "Run blind scans over local cutouts; a forced-center statistic is a separate diagnostic, not blind-search recovery.",
+    "Use a predeclared angular/distance matching rule and retain matched and missed outputs; do not tune until every source appears.",
+    "Use later withheld fields and injections for honest performance estimates; these known systems are not a selection-function training truth set.",
+    "Stress extension contains systems outside baseline distance/scale/latitude support and published photometric candidates; none is an unconditional must-pass unit test."
+  ],
+  "sources": {
+    "census_galaxies": {
+      "url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+      "repository": "delve-survey/delve_mw_census",
+      "commit": "1a02f50d25cac74c02ddba8401a5af20aa2db4fe",
+      "arxiv_id": "2509.12313",
+      "table": "author CSV; equivalent to census main satellite compilation",
+      "local_file": "codex_benchmark_sources/offical_delve_census_refgalaxy_list.csv"
+    },
+    "census_compact": {
+      "url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+      "repository": "delve-survey/delve_mw_census",
+      "commit": "1a02f50d25cac74c02ddba8401a5af20aa2db4fe",
+      "arxiv_id": "2509.12313",
+      "table": "author CSV; Appendix A compact systems",
+      "local_file": "codex_benchmark_sources/offical_delve_census_refambigous_list.csv"
+    },
+    "lvdb_dwarf": {
+      "url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+      "repository": "apace7/local_volume_database",
+      "commit": "c40961a42d2beb302be1da90bca2016c284ef63c",
+      "arxiv_id": "2411.07424",
+      "local_file": "codex_benchmark_sources/lvdb_data_dwarf_mw.csv"
+    },
+    "lvdb_compact": {
+      "url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv",
+      "repository": "apace7/local_volume_database",
+      "commit": "c40961a42d2beb302be1da90bca2016c284ef63c",
+      "arxiv_id": "2411.07424",
+      "local_file": "codex_benchmark_sources/lvdb_data_gc_ambiguous.csv"
+    },
+    "lvdb_clusters": {
+      "url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_mw_new.csv",
+      "repository": "apace7/local_volume_database",
+      "commit": "c40961a42d2beb302be1da90bca2016c284ef63c",
+      "arxiv_id": "2411.07424",
+      "local_file": "codex_benchmark_sources/lvdb_data_gc_mw_new.csv"
+    },
+    "six_2023": {
+      "url": "https://arxiv.org/html/2209.12422v1#S4.T2",
+      "arxiv_id": "2209.12422",
+      "arxiv_version": "v1",
+      "table": "Table 2",
+      "description": "Cerny et al. six DELVE companions; published 2023"
+    },
+    "bootes_leominor_2026": {
+      "url": "https://arxiv.org/html/2610.07182v1#S4.T2",
+      "arxiv_id": "2610.07182",
+      "arxiv_version": "v1",
+      "table": "Table 2 and classification discussion",
+      "description": "Boötes V and Leo Minor I confirmed as dwarfs from metallicity spreads"
+    },
+    "pegasus4_2023": {
+      "url": "https://arxiv.org/html/2203.11788v1#S3.T1",
+      "arxiv_id": "2203.11788",
+      "arxiv_version": "v1",
+      "table": "Table 1",
+      "description": "Discovery and spectroscopic confirmation"
+    },
+    "hsc_2024": {
+      "url": "https://arxiv.org/html/2311.05439v2#S3.T1",
+      "arxiv_id": "2311.05439",
+      "arxiv_version": "v2",
+      "table": "Table 1",
+      "description": "HSC final results; reported r_h is along the major axis"
+    },
+    "delve7_2026": {
+      "url": "https://arxiv.org/html/2510.11684v2#S4.T1",
+      "arxiv_id": "2510.11684",
+      "arxiv_version": "v2",
+      "table": "Table 1"
+    },
+    "uma3_2024": {
+      "url": "https://arxiv.org/html/2311.10147v1#S3.T2",
+      "arxiv_id": "2311.10147",
+      "arxiv_version": "v1",
+      "table": "Table 2",
+      "description": "UNIONS discovery; original 0.9 arcmin / 3 pc radius is semi-major-axis radius"
+    },
+    "uma3_2026": {
+      "url": "https://arxiv.org/html/2510.02431v2",
+      "arxiv_id": "2510.02431",
+      "arxiv_version": "v2",
+      "table": "Sections II and IV",
+      "description": "Repeat spectroscopy favors likely cluster interpretation; dwarf scenario not completely excluded"
+    },
+    "ufcs_2026": {
+      "url": "https://arxiv.org/html/2602.17652v1",
+      "arxiv_id": "2602.17652",
+      "arxiv_version": "v1",
+      "table": "Tables 1, 5, 6; Section VII.6",
+      "description": "19 UFCS spectroscopy and standardized circularized radii"
+    },
+    "gemini1_2026": {
+      "url": "https://arxiv.org/html/2606.09975v1#S3.T1",
+      "arxiv_id": "2606.09975",
+      "arxiv_version": "v1",
+      "table": "Table 1; Section IV.2"
+    },
+    "aquarius4_2026": {
+      "url": "https://arxiv.org/html/2608.02601v1#S3",
+      "arxiv_id": "2608.02601",
+      "arxiv_version": "v1",
+      "table": "Section III parameter list",
+      "doi": "10.3847/2515-5172/ae993b"
+    },
+    "virgo3_2026": {
+      "url": "https://arxiv.org/html/2607.25044v4",
+      "arxiv_id": "2607.25044",
+      "arxiv_version": "v4",
+      "table": "Fitted and derived parameters in Section 2.3; discussion defines major vs circularized radius"
+    }
+  },
+  "benchmarks": [
+    {
+      "id": "bootes_1",
+      "name": "Boötes I",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "strong_control",
+      "ra_icrs_deg": 210.02,
+      "dec_icrs_deg": 14.5135,
+      "D_kpc": 66.3743,
+      "M_V": -6.02,
+      "theta_half_arcmin": 8.3315,
+      "rhalf_pc": 160.8605,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Derived from author CSV circularized physical radius / heliocentric distance; no deprojection",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "arxiv_id": "2509.12313",
+        "reference_bibcodes": {
+          "ref_structure": "Munoz2018ApJ...860...66M",
+          "ref_distance": "DallOra2006ApJ...653L.109D",
+          "ref_m_v": "Munoz2018ApJ...860...66M"
+        }
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Frozen census-reference parameters are deliberate recovery-test centers; not a claim that no later structural fit exists.",
+        "Current LVDB records a later 2026 structural fit with a larger radius. Keep this frozen census baseline for first recovery; do not use it as a precision structural validation target."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "bootes_1",
+        "survey_region": "DELVE",
+        "passes_census_threshold": true,
+        "original_status": "True",
+        "historical_class_code": "D",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 69.6383055,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "bootes_1",
+        "ra_deg": 210.020417,
+        "dec_deg": 14.5166,
+        "D_kpc": 66.37,
+        "M_V": -6.02,
+        "rhalf_native_arcmin": 14.73,
+        "rhalf_sph_physical_pc": 214.95,
+        "ref_structure": "Sato2026arXiv260916476S",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "native_radius": {
+        "value_arcmin": 9.97,
+        "definition": "catalog rhalf: major-axis half-light radius when ellipticity is measured; circularized value if only an ellipticity upper limit is supplied",
+        "ellipticity": 0.3,
+        "rhalf_sph_physical_pc": 160.8605354939023,
+        "source_id": "census_galaxies"
+      },
+      "classification": {
+        "discovery_label": "Known pre-2020 dwarf galaxy",
+        "latest_label": "confirmed_dwarf",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "census_galaxies",
+          "lvdb_dwarf"
+        ],
+        "notes": "Current LVDB records a later 2026 structural fit with a larger radius. Keep this frozen census baseline for first recovery; do not use it as a precision structural validation target."
+      },
+      "discovery_arxiv_ids": [],
+      "arxiv_ids": [
+        "2411.07424",
+        "2509.12313"
+      ],
+      "all_primary_source_urls": [
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "coma_berenices_1",
+      "name": "Coma Berenices",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "strong_control",
+      "ra_icrs_deg": 186.7454,
+      "dec_icrs_deg": 23.9069,
+      "D_kpc": 42.2669,
+      "M_V": -4.29,
+      "theta_half_arcmin": 4.46862,
+      "rhalf_pc": 54.9414,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Derived from author CSV circularized physical radius / heliocentric distance; no deprojection",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "arxiv_id": "2509.12313",
+        "reference_bibcodes": {
+          "ref_structure": "Munoz2018ApJ...860...66M",
+          "ref_distance": "Musella2009ApJ...695L..83M",
+          "ref_m_v": "Munoz2018ApJ...860...66M"
+        }
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Frozen census-reference parameters are deliberate recovery-test centers; not a claim that no later structural fit exists."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "coma_berenices_1",
+        "survey_region": "DELVE",
+        "passes_census_threshold": true,
+        "original_status": "True",
+        "historical_class_code": "D",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 83.6122845,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "coma_berenices_1",
+        "ra_deg": 186.7454,
+        "dec_deg": 23.9069,
+        "D_kpc": 42.27,
+        "M_V": -4.29,
+        "rhalf_native_arcmin": 5.64,
+        "rhalf_sph_physical_pc": 54.94,
+        "ref_structure": "Munoz2018ApJ...860...66M",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "native_radius": {
+        "value_arcmin": 5.64,
+        "definition": "catalog rhalf: major-axis half-light radius when ellipticity is measured; circularized value if only an ellipticity upper limit is supplied",
+        "ellipticity": 0.37,
+        "rhalf_sph_physical_pc": 54.94140322274969,
+        "source_id": "census_galaxies"
+      },
+      "classification": {
+        "discovery_label": "Known pre-2020 dwarf galaxy",
+        "latest_label": "confirmed_dwarf",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "census_galaxies",
+          "lvdb_dwarf"
+        ],
+        "notes": ""
+      },
+      "discovery_arxiv_ids": [],
+      "arxiv_ids": [
+        "2411.07424",
+        "2509.12313"
+      ],
+      "all_primary_source_urls": [
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "canes_venatici_2",
+      "name": "Canes Venatici II",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "strong_control",
+      "ra_icrs_deg": 194.2927,
+      "dec_icrs_deg": 34.3226,
+      "D_kpc": 159.9558,
+      "M_V": -5.17,
+      "theta_half_arcmin": 1.16139,
+      "rhalf_pc": 54.0384,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Derived from author CSV circularized physical radius / heliocentric distance; no deprojection",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "arxiv_id": "2509.12313",
+        "reference_bibcodes": {
+          "ref_structure": "Munoz2018ApJ...860...66M",
+          "ref_distance": "Greco2008ApJ...675L..73G",
+          "ref_m_v": "Munoz2018ApJ...860...66M"
+        }
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Frozen census-reference parameters are deliberate recovery-test centers; not a claim that no later structural fit exists."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "canes_venatici_2",
+        "survey_region": "PS1",
+        "passes_census_threshold": true,
+        "original_status": "True",
+        "historical_class_code": "D",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 82.7012046,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "canes_venatici_2",
+        "ra_deg": 194.2927,
+        "dec_deg": 34.3226,
+        "D_kpc": 159.96,
+        "M_V": -5.17,
+        "rhalf_native_arcmin": 1.52,
+        "rhalf_sph_physical_pc": 54.04,
+        "ref_structure": "Munoz2018ApJ...860...66M",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "native_radius": {
+        "value_arcmin": 1.52,
+        "definition": "catalog rhalf: major-axis half-light radius when ellipticity is measured; circularized value if only an ellipticity upper limit is supplied",
+        "ellipticity": 0.4,
+        "rhalf_sph_physical_pc": 54.038420810506864,
+        "source_id": "census_galaxies"
+      },
+      "classification": {
+        "discovery_label": "Known pre-2020 dwarf galaxy",
+        "latest_label": "confirmed_dwarf",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "census_galaxies",
+          "lvdb_dwarf"
+        ],
+        "notes": ""
+      },
+      "discovery_arxiv_ids": [],
+      "arxiv_ids": [
+        "2411.07424",
+        "2509.12313"
+      ],
+      "all_primary_source_urls": [
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "bootes_5",
+      "name": "Boötes V",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "ps1_census_miss",
+      "ra_icrs_deg": 213.909,
+      "dec_icrs_deg": 32.914,
+      "D_kpc": 102,
+      "M_V": -3.2,
+      "theta_half_arcmin": 0.67,
+      "rhalf_pc": 20,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "six_2023",
+        "source_url": "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "arxiv_id": "2209.12422"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Clear metallicity spread confirms dwarf classification in October 2026."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "bootes_5",
+        "survey_region": "PS1",
+        "passes_census_threshold": false,
+        "original_status": "False",
+        "historical_class_code": "PD",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 70.9176811,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "bootes_5",
+        "ra_deg": 213.909,
+        "dec_deg": 32.914,
+        "D_kpc": 101.86,
+        "M_V": -3.2,
+        "rhalf_native_arcmin": 0.76,
+        "rhalf_sph_physical_pc": 19.93,
+        "ref_structure": "Cerny2023ApJ...953....1C",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "dwarf_candidate",
+        "latest_label": "confirmed_dwarf",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "bootes_leominor_2026"
+        ],
+        "notes": "Clear metallicity spread confirms dwarf classification in October 2026."
+      },
+      "discovery_arxiv_ids": [
+        "2209.12422",
+        "2209.08242"
+      ],
+      "arxiv_ids": [
+        "2209.08242",
+        "2209.12422",
+        "2610.07182"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "https://arxiv.org/html/2610.07182v1#S4.T2",
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "leo_minor_1",
+      "name": "Leo Minor I",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "threshold_case",
+      "ra_icrs_deg": 164.261,
+      "dec_icrs_deg": 28.875,
+      "D_kpc": 82,
+      "M_V": -2.4,
+      "theta_half_arcmin": 1.09,
+      "rhalf_pc": 26,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "six_2023",
+        "source_url": "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "arxiv_id": "2209.12422"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Clear metallicity spread confirms dwarf classification in October 2026."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "leo_minor_1",
+        "survey_region": "DELVE",
+        "passes_census_threshold": false,
+        "original_status": "False",
+        "historical_class_code": "PD",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 64.7496332,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "leo_minor_1",
+        "ra_deg": 164.261,
+        "dec_deg": 28.875,
+        "D_kpc": 81.66,
+        "M_V": -2.4,
+        "rhalf_native_arcmin": 1.09,
+        "rhalf_sph_physical_pc": 25.53,
+        "ref_structure": "Cerny2023ApJ...953....1C",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "dwarf_candidate",
+        "latest_label": "confirmed_dwarf",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "bootes_leominor_2026"
+        ],
+        "notes": "Clear metallicity spread confirms dwarf classification in October 2026."
+      },
+      "discovery_arxiv_ids": [
+        "2209.12422"
+      ],
+      "arxiv_ids": [
+        "2209.12422",
+        "2610.07182"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "https://arxiv.org/html/2610.07182v1#S4.T2",
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "virgo_2",
+      "name": "Virgo II",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "threshold_case",
+      "ra_icrs_deg": 225.059,
+      "dec_icrs_deg": 5.909,
+      "D_kpc": 72,
+      "M_V": -1.6,
+      "theta_half_arcmin": 0.74,
+      "rhalf_pc": 16,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "six_2023",
+        "source_url": "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "arxiv_id": "2209.12422"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Real photometrically followed-up system; final dwarf/cluster classification remains unsettled in evidence checked."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "virgo_2",
+        "survey_region": "DELVE",
+        "passes_census_threshold": false,
+        "original_status": "False",
+        "historical_class_code": "PD",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 52.754283,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "virgo_2",
+        "ra_deg": 225.059,
+        "dec_deg": 5.909,
+        "D_kpc": 72.44,
+        "M_V": -1.6,
+        "rhalf_native_arcmin": 0.74,
+        "rhalf_sph_physical_pc": 15.4,
+        "ref_structure": "Cerny2023ApJ...953....1C",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "dwarf_candidate",
+        "latest_label": "dwarf_candidate",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "six_2023"
+        ],
+        "notes": "Real photometrically followed-up system; final dwarf/cluster classification remains unsettled in evidence checked."
+      },
+      "discovery_arxiv_ids": [
+        "2209.12422"
+      ],
+      "arxiv_ids": [
+        "2209.12422"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "delve_3",
+      "name": "DELVE 3",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "compact_reference",
+      "ra_icrs_deg": 290.396,
+      "dec_icrs_deg": -60.784,
+      "D_kpc": 56,
+      "M_V": -1.3,
+      "theta_half_arcmin": 0.4,
+      "rhalf_pc": 7,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "six_2023",
+        "source_url": "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "arxiv_id": "2209.12422"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "2026 spectroscopy lists it among most promising galaxy candidates; do not label it a confirmed dwarf or securely classified cluster.",
+        "Circularized radius is below a 0.5 arcmin baseline kernel. Compare baseline recovery with an optional finer compact branch; do not tune the entire search to force detection."
+      ],
+      "census_reference": {
+        "source_id": "census_compact",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+        "row_key": "delve_3",
+        "survey_region": "DELVE",
+        "passes_census_threshold": true,
+        "original_status": "Yes",
+        "historical_class_code": "A",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": -27.0618531,
+      "database_crosscheck": {
+        "source_id": "lvdb_compact",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv",
+        "row_key": "delve_3",
+        "ra_deg": 290.396,
+        "dec_deg": -60.784,
+        "D_kpc": 55.72,
+        "M_V": -1.3,
+        "rhalf_native_arcmin": 0.4,
+        "rhalf_sph_physical_pc": 6.45,
+        "ref_structure": "Cerny2023ApJ...953....1C",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "likely_star_cluster",
+        "latest_label": "plausible_dwarf_candidate_unconfirmed",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "ufcs_2026"
+        ],
+        "notes": "2026 spectroscopy lists it among most promising galaxy candidates; do not label it a confirmed dwarf or securely classified cluster."
+      },
+      "discovery_arxiv_ids": [
+        "2209.12422"
+      ],
+      "arxiv_ids": [
+        "2209.12422",
+        "2602.17652"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "https://arxiv.org/html/2602.17652v1",
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "delve_4",
+      "name": "DELVE 4",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "compact_ps1_census_miss",
+      "ra_icrs_deg": 230.775,
+      "dec_icrs_deg": 27.395,
+      "D_kpc": 45,
+      "M_V": -0.2,
+      "theta_half_arcmin": 0.36,
+      "rhalf_pc": 5,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "six_2023",
+        "source_url": "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "arxiv_id": "2209.12422"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Potential metallicity spread permits dwarf interpretation, but membership alternatives leave classification ambiguous.",
+        "Circularized radius is below a 0.5 arcmin baseline kernel. Compare baseline recovery with an optional finer compact branch; do not tune the entire search to force detection."
+      ],
+      "census_reference": {
+        "source_id": "census_compact",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+        "row_key": "delve_4",
+        "survey_region": "PS1",
+        "passes_census_threshold": false,
+        "original_status": "No",
+        "historical_class_code": "A",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 56.4284503,
+      "database_crosscheck": {
+        "source_id": "lvdb_compact",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv",
+        "row_key": "delve_4",
+        "ra_deg": 230.775,
+        "dec_deg": 27.395,
+        "D_kpc": 45.29,
+        "M_V": -0.2,
+        "rhalf_native_arcmin": 0.49,
+        "rhalf_sph_physical_pc": 4.79,
+        "ref_structure": "Cerny2023ApJ...953....1C",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "likely_star_cluster",
+        "latest_label": "ambiguous_compact_stellar_system",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "ufcs_2026"
+        ],
+        "notes": "Potential metallicity spread permits dwarf interpretation, but membership alternatives leave classification ambiguous."
+      },
+      "discovery_arxiv_ids": [
+        "2209.12422"
+      ],
+      "arxiv_ids": [
+        "2209.12422",
+        "2602.17652"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "https://arxiv.org/html/2602.17652v1",
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "delve_5",
+      "name": "DELVE 5",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "compact_sparse_ps1_census_miss",
+      "ra_icrs_deg": 222.104,
+      "dec_icrs_deg": 17.468,
+      "D_kpc": 39,
+      "M_V": 0.4,
+      "theta_half_arcmin": 0.45,
+      "rhalf_pc": 5,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "six_2023",
+        "source_url": "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "arxiv_id": "2209.12422"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Only about three spectroscopic members; insufficient metallicity/dispersion evidence for classification.",
+        "Circularized radius is below a 0.5 arcmin baseline kernel. Compare baseline recovery with an optional finer compact branch; do not tune the entire search to force detection."
+      ],
+      "census_reference": {
+        "source_id": "census_compact",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+        "row_key": "delve_5",
+        "survey_region": "PS1",
+        "passes_census_threshold": false,
+        "original_status": "No",
+        "historical_class_code": "A",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 61.3560783,
+      "database_crosscheck": {
+        "source_id": "lvdb_compact",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv",
+        "row_key": "delve_5",
+        "ra_deg": 222.104,
+        "dec_deg": 17.468,
+        "D_kpc": 39.26,
+        "M_V": 0.4,
+        "rhalf_native_arcmin": 0.68,
+        "rhalf_sph_physical_pc": 4.71,
+        "ref_structure": "Cerny2023ApJ...953....1C",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "likely_star_cluster",
+        "latest_label": "unclassified_compact_stellar_system",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "ufcs_2026"
+        ],
+        "notes": "Only about three spectroscopic members; insufficient metallicity/dispersion evidence for classification."
+      },
+      "discovery_arxiv_ids": [
+        "2209.12422"
+      ],
+      "arxiv_ids": [
+        "2209.12422",
+        "2602.17652"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2209.12422v1#S4.T2",
+        "https://arxiv.org/html/2602.17652v1",
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "pisces_2",
+      "name": "Pisces II",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "distant_ps1_census_miss",
+      "ra_icrs_deg": 344.6364583,
+      "dec_icrs_deg": 5.9555444,
+      "D_kpc": 182.81,
+      "M_V": -4.28,
+      "theta_half_arcmin": 1.05894,
+      "rhalf_pc": 56.3117,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Derived from author CSV circularized physical radius / heliocentric distance; no deprojection",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "arxiv_id": "2509.12313",
+        "reference_bibcodes": {
+          "ref_structure": "Richstein2022ApJ...933..217R",
+          "ref_distance": "Sand2012ApJ...756...79S",
+          "ref_m_v": "Richstein2022ApJ...933..217R"
+        }
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Frozen census-reference parameters are deliberate recovery-test centers; not a claim that no later structural fit exists."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "pisces_2",
+        "survey_region": "PS1",
+        "passes_census_threshold": false,
+        "original_status": "False",
+        "historical_class_code": "D",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": -47.1078917,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "pisces_2",
+        "ra_deg": 344.6364583,
+        "dec_deg": 5.9555444,
+        "D_kpc": 182.81,
+        "M_V": -4.28,
+        "rhalf_native_arcmin": 1.34,
+        "rhalf_sph_physical_pc": 56.31,
+        "ref_structure": "Richstein2022ApJ...933..217R",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "native_radius": {
+        "value_arcmin": 1.34,
+        "definition": "catalog rhalf: major-axis half-light radius when ellipticity is measured; circularized value if only an ellipticity upper limit is supplied",
+        "ellipticity": 0.37,
+        "rhalf_sph_physical_pc": 56.3117041544501,
+        "source_id": "census_galaxies"
+      },
+      "classification": {
+        "discovery_label": "Known pre-2020 dwarf galaxy",
+        "latest_label": "confirmed_dwarf",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "census_galaxies",
+          "lvdb_dwarf"
+        ],
+        "notes": ""
+      },
+      "discovery_arxiv_ids": [],
+      "arxiv_ids": [
+        "2411.07424",
+        "2509.12313"
+      ],
+      "all_primary_source_urls": [
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "pegasus_4",
+      "name": "Pegasus IV",
+      "aliases": [],
+      "priority_tier": "first_run",
+      "benchmark_role": "ps1_census_miss_confirmed_dwarf",
+      "ra_icrs_deg": 328.539,
+      "dec_icrs_deg": 26.62,
+      "D_kpc": 89.9498,
+      "M_V": -4.25,
+      "theta_half_arcmin": 1.59111,
+      "rhalf_pc": 41.6319,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Derived from author CSV circularized physical radius / heliocentric distance; no deprojection",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "arxiv_id": "2509.12313",
+        "reference_bibcodes": {
+          "ref_structure": "Cerny2023ApJ...942..111C",
+          "ref_distance": "Cerny2023ApJ...942..111C",
+          "ref_m_v": "Cerny2023ApJ...942..111C"
+        }
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Frozen census-reference parameters are deliberate recovery-test centers; not a claim that no later structural fit exists.",
+        "Discovery and spectroscopy are in arXiv:2203.11788; a census miss is a selection-threshold result, not uncertainty about its existence."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "pegasus_4",
+        "survey_region": "PS1",
+        "passes_census_threshold": false,
+        "original_status": "False",
+        "historical_class_code": "D",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": -21.4031056,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "pegasus_4",
+        "ra_deg": 328.539,
+        "dec_deg": 26.62,
+        "D_kpc": 89.95,
+        "M_V": -4.25,
+        "rhalf_native_arcmin": 1.6,
+        "rhalf_sph_physical_pc": 41.63,
+        "ref_structure": "Cerny2023ApJ...942..111C",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "native_radius": {
+        "value_arcmin": 1.6,
+        "definition": "catalog rhalf: major-axis half-light radius when ellipticity is measured; circularized value if only an ellipticity upper limit is supplied",
+        "ellipticity": null,
+        "rhalf_sph_physical_pc": 41.63193157751107,
+        "source_id": "census_galaxies"
+      },
+      "classification": {
+        "discovery_label": "Spectroscopically confirmed dwarf at discovery",
+        "latest_label": "confirmed_dwarf",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "census_galaxies",
+          "lvdb_dwarf"
+        ],
+        "notes": "Discovery and spectroscopy are in arXiv:2203.11788; a census miss is a selection-threshold result, not uncertainty about its existence."
+      },
+      "discovery_arxiv_ids": [
+        "2203.11788"
+      ],
+      "arxiv_ids": [
+        "2203.11788",
+        "2411.07424",
+        "2509.12313"
+      ],
+      "all_primary_source_urls": [
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "ursa_major_3",
+      "name": "Ursa Major III / UNIONS 1",
+      "aliases": [
+        "UMa III",
+        "UMa III/U1",
+        "UNIONS 1"
+      ],
+      "priority_tier": "first_run",
+      "benchmark_role": "nearby_ms_only_sparse",
+      "ra_icrs_deg": 174.70745,
+      "dec_icrs_deg": 31.07833,
+      "D_kpc": 10,
+      "M_V": 2.2,
+      "theta_half_arcmin": 0.68755,
+      "rhalf_pc": 2,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Derived from rounded 2.0 pc circularized radius and 10 kpc distance in UFCS Table 1",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "ufcs_2026",
+        "source_url": "https://arxiv.org/html/2602.17652v1",
+        "arxiv_id": "2602.17652",
+        "coordinate_source_id": "census_compact"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Distance modulus 15.0 is below the 16 mag lower bound of the standard census wrapper; explicitly enable the near-distance branch. A non-recovery under a 16–23 grid is expected, not a software failure."
+      ],
+      "census_reference": {
+        "source_id": "census_compact",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+        "row_key": "ursa_major_3",
+        "survey_region": "PS1",
+        "passes_census_threshold": false,
+        "original_status": "No",
+        "historical_class_code": "A",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 73.6765136,
+      "database_crosscheck": {
+        "source_id": "lvdb_clusters",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_mw_new.csv",
+        "row_key": "ursa_major_3",
+        "ra_deg": 174.70745,
+        "dec_deg": 31.07833,
+        "D_kpc": 10.0,
+        "M_V": 2.2,
+        "rhalf_native_arcmin": 0.9,
+        "rhalf_sph_physical_pc": 1.73,
+        "ref_structure": "Smith2024ApJ...961...92S",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "extremely_faint_stellar_system_dwarf_or_cluster",
+        "latest_label": "ambiguous_likely_star_cluster",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "uma3_2026",
+          "ufcs_2026"
+        ],
+        "notes": "Repeat spectroscopy favors the cluster interpretation; the later UFCS synthesis still treats a dwarf scenario as viable, not confirmed."
+      },
+      "discovery_arxiv_ids": [
+        "2311.10147"
+      ],
+      "native_radius": {
+        "value_arcmin": 0.9,
+        "value_pc": 3,
+        "definition": "original discovery semi-major-axis half-light radius, not circularized",
+        "ellipticity": 0.5,
+        "source_id": "uma3_2024"
+      },
+      "arxiv_ids": [
+        "2311.10147",
+        "2510.02431",
+        "2602.17652"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2602.17652v1",
+        "https://arxiv.org/html/2510.02431v2",
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refambigous_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_mw_new.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "delve_7",
+      "name": "DELVE 7",
+      "aliases": [],
+      "priority_tier": "stress_extension",
+      "benchmark_role": "subkernel_ms_only_extreme",
+      "ra_icrs_deg": 304.107,
+      "dec_icrs_deg": -50.33,
+      "D_kpc": 42,
+      "M_V": 1.2,
+      "theta_half_arcmin": 0.2,
+      "rhalf_pc": 2,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "delve7_2026",
+        "source_url": "https://arxiv.org/html/2510.11684v2#S4.T1",
+        "arxiv_id": "2510.11684"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Published radius is strongly uncertain: theta=0.20(-0.10,+0.35) arcmin, rhalf=2(-1,+4) pc; values are marginal posterior summaries and rounded independently.",
+        "Below a 0.5 arcmin minimum template radius; do not require recovery by that baseline."
+      ],
+      "galactic_latitude_deg_from_lvdb": -33.840151,
+      "database_crosscheck": {
+        "source_id": "lvdb_compact",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv",
+        "row_key": "delve_7",
+        "ra_deg": 304.107,
+        "dec_deg": -50.33,
+        "D_kpc": 41.69,
+        "M_V": 1.2,
+        "rhalf_native_arcmin": 0.32,
+        "rhalf_sph_physical_pc": 2.78,
+        "ref_structure": "Tan2026ApJ..1000...46T",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "likely_cluster_ambiguous_without_spectroscopy",
+        "latest_label": "unclassified_compact_stellar_system",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "delve7_2026",
+          "ufcs_2026"
+        ],
+        "notes": "Extremely sparse main sequence; no decisive spectroscopic classification in checked evidence."
+      },
+      "discovery_arxiv_ids": [
+        "2510.11684"
+      ],
+      "arxiv_ids": [
+        "2510.11684",
+        "2602.17652"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2510.11684v2#S4.T1",
+        "https://arxiv.org/html/2602.17652v1",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "pegasus_3",
+      "name": "Pegasus III",
+      "aliases": [],
+      "priority_tier": "stress_extension",
+      "benchmark_role": "distant_ps1_census_miss",
+      "ra_icrs_deg": 336.1074167,
+      "dec_icrs_deg": 5.4150472,
+      "D_kpc": 214.783,
+      "M_V": -4.17,
+      "theta_half_arcmin": 1.31432,
+      "rhalf_pc": 82.116,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Derived from author CSV circularized physical radius / heliocentric distance; no deprojection",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "arxiv_id": "2509.12313",
+        "reference_bibcodes": {
+          "ref_structure": "Richstein2022ApJ...933..217R",
+          "ref_distance": "Kim2016ApJ...833...16K",
+          "ref_m_v": "Richstein2022ApJ...933..217R"
+        }
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Frozen census-reference parameters are deliberate recovery-test centers; not a claim that no later structural fit exists."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "pegasus_3",
+        "survey_region": "PS1",
+        "passes_census_threshold": false,
+        "original_status": "False",
+        "historical_class_code": "D",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": -41.8262343,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "pegasus_3",
+        "ra_deg": 336.1074167,
+        "dec_deg": 5.4150472,
+        "D_kpc": 214.78,
+        "M_V": -4.17,
+        "rhalf_native_arcmin": 1.67,
+        "rhalf_sph_physical_pc": 82.12,
+        "ref_structure": "Richstein2022ApJ...933..217R",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "native_radius": {
+        "value_arcmin": 1.67,
+        "definition": "catalog rhalf: major-axis half-light radius when ellipticity is measured; circularized value if only an ellipticity upper limit is supplied",
+        "ellipticity": 0.37,
+        "rhalf_sph_physical_pc": 82.11598575435423,
+        "source_id": "census_galaxies"
+      },
+      "classification": {
+        "discovery_label": "Known pre-2020 dwarf galaxy",
+        "latest_label": "confirmed_dwarf",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "census_galaxies",
+          "lvdb_dwarf"
+        ],
+        "notes": ""
+      },
+      "discovery_arxiv_ids": [],
+      "arxiv_ids": [
+        "2411.07424",
+        "2509.12313"
+      ],
+      "all_primary_source_urls": [
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "sextans_2",
+      "name": "Sextans II",
+      "aliases": [],
+      "priority_tier": "stress_extension",
+      "benchmark_role": "deep_survey_diffuse_reference",
+      "ra_icrs_deg": 156.437,
+      "dec_icrs_deg": -0.631,
+      "D_kpc": 125.8925,
+      "M_V": -3.91,
+      "theta_half_arcmin": 3.1346,
+      "rhalf_pc": 114.7912,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Derived from author CSV circularized physical radius / heliocentric distance; no deprojection",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "arxiv_id": "2509.12313",
+        "reference_bibcodes": {
+          "ref_structure": "Homma2024PASJ...76..733H",
+          "ref_distance": "Homma2024PASJ...76..733H",
+          "ref_m_v": "Homma2024PASJ...76..733H"
+        }
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Frozen census-reference parameters are deliberate recovery-test centers; not a claim that no later structural fit exists.",
+        "Canonical parameters follow the HSC/census convention. Independent KiDS discovery (arXiv:2311.06037) reports a different D≈145 kpc solution; do not average or mix those parameter sets."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "sextans_2",
+        "survey_region": "DELVE",
+        "passes_census_threshold": true,
+        "original_status": "True",
+        "historical_class_code": "PD",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 45.3223285,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "sextans_2",
+        "ra_deg": 156.437,
+        "dec_deg": -0.631,
+        "D_kpc": 125.89,
+        "M_V": -3.91,
+        "rhalf_native_arcmin": 4.2,
+        "rhalf_sph_physical_pc": 114.79,
+        "ref_structure": "Homma2024PASJ...76..733H",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "native_radius": {
+        "value_arcmin": 4.2,
+        "definition": "catalog rhalf: major-axis half-light radius when ellipticity is measured; circularized value if only an ellipticity upper limit is supplied",
+        "ellipticity": 0.43,
+        "rhalf_sph_physical_pc": 114.79120926992364,
+        "source_id": "census_galaxies"
+      },
+      "classification": {
+        "discovery_label": "independent_HSC_and_KiDS_photometric_dwarf_candidate",
+        "latest_label": "dwarf_candidate",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "hsc_2024",
+          "census_galaxies"
+        ],
+        "notes": "Canonical parameters follow the HSC/census convention. Independent KiDS discovery (arXiv:2311.06037) reports a different D≈145 kpc solution; do not average or mix those parameter sets."
+      },
+      "discovery_arxiv_ids": [
+        "2311.05439",
+        "2311.06037"
+      ],
+      "arxiv_ids": [
+        "2311.05439",
+        "2311.06037",
+        "2509.12313"
+      ],
+      "all_primary_source_urls": [
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://arxiv.org/html/2311.05439v2#S3.T1",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "virgo_3",
+      "name": "Virgo III",
+      "aliases": [],
+      "priority_tier": "stress_extension",
+      "benchmark_role": "deep_far_difficult",
+      "ra_icrs_deg": 186.35,
+      "dec_icrs_deg": 4.442,
+      "D_kpc": 151,
+      "M_V": -2.72,
+      "theta_half_arcmin": 1.22,
+      "rhalf_pc": 53,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "virgo3_2026",
+        "source_url": "https://arxiv.org/html/2607.25044v4",
+        "arxiv_id": "2607.25044"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Adopts 2026 Rubin refinement: circularized theta=1.22 arcmin and rhalf=53 pc. Original HSC 1.0 arcmin /44 pc are major-axis values; do not mix these definitions."
+      ],
+      "census_reference": {
+        "source_id": "census_galaxies",
+        "source_url": "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "row_key": "virgo_3",
+        "survey_region": "DELVE",
+        "passes_census_threshold": false,
+        "original_status": "False",
+        "historical_class_code": "PD",
+        "interpretation": "False/No means failing the published strict census criterion, not necessarily zero signal or no earlier discovery."
+      },
+      "galactic_latitude_deg_from_lvdb": 66.4784801,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "virgo_3",
+        "ra_deg": 186.35,
+        "dec_deg": 4.442,
+        "D_kpc": 151.36,
+        "M_V": -2.72,
+        "rhalf_native_arcmin": 1.68,
+        "rhalf_sph_physical_pc": 52.43,
+        "ref_structure": "Pai2026arXiv260725044P",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "HSC_photometric_dwarf_candidate",
+        "latest_label": "photometrically_confirmed_stellar_system_dwarf_candidate",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "virgo3_2026",
+          "hsc_2024"
+        ],
+        "notes": "Deep Rubin imaging strongly supports the stellar system and refines morphology; no spectroscopic dwarf classification claimed."
+      },
+      "discovery_arxiv_ids": [
+        "2311.05439"
+      ],
+      "arxiv_ids": [
+        "2311.05439",
+        "2607.25044"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2607.25044v4",
+        "https://arxiv.org/html/2311.05439v2#S3.T1",
+        "https://raw.githubusercontent.com/delve-survey/delve_mw_census/1a02f50d25cac74c02ddba8401a5af20aa2db4fe/data/offical_delve_census_refgalaxy_list.csv",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "delve_8_gemini_1",
+      "name": "Gemini I / DELVE 8",
+      "aliases": [
+        "DELVE 8",
+        "Gemini I"
+      ],
+      "priority_tier": "stress_extension",
+      "benchmark_role": "distant_subkernel_low_latitude_stress",
+      "ra_icrs_deg": 118.386,
+      "dec_icrs_deg": 15.99,
+      "D_kpc": 120,
+      "M_V": -2.1,
+      "theta_half_arcmin": 0.25,
+      "rhalf_pc": 8.6,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "gemini1_2026",
+        "source_url": "https://arxiv.org/html/2606.09975v1#S3.T1",
+        "arxiv_id": "2606.09975"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Galactic latitude about +20.77 deg: excluded by a |b|>25 deg pilot cut. Test only in an explicitly separate diagnostic branch.",
+        "theta=0.25 arcmin lies below a 0.5 arcmin minimum template radius; non-recovery is not automatically a failure."
+      ],
+      "galactic_latitude_deg_from_lvdb": 20.7706595,
+      "database_crosscheck": {
+        "source_id": "lvdb_compact",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv",
+        "row_key": "delve_8_gemini_1",
+        "ra_deg": 118.386,
+        "dec_deg": 15.99,
+        "D_kpc": 119.67,
+        "M_V": -2.1,
+        "rhalf_native_arcmin": 0.37,
+        "rhalf_sph_physical_pc": 8.0,
+        "ref_structure": "Overdeck2026arXiv260609975O",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "compact_stellar_system_unclassified",
+        "latest_label": "spectroscopically_confirmed_stellar_system_unclassified",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "gemini1_2026"
+        ],
+        "notes": "Four spectroscopic members support the system; errors are too large to classify its internal dynamics/dark matter."
+      },
+      "discovery_arxiv_ids": [
+        "2606.09975"
+      ],
+      "arxiv_ids": [
+        "2606.09975"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2606.09975v1#S3.T1",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/gc_ambiguous.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    },
+    {
+      "id": "aquarius_4",
+      "name": "Aquarius IV",
+      "aliases": [
+        "Rubin J2201-0234"
+      ],
+      "priority_tier": "stress_extension",
+      "benchmark_role": "recent_distant_photometric_candidate",
+      "ra_icrs_deg": 330.474,
+      "dec_icrs_deg": -2.575,
+      "D_kpc": 109,
+      "M_V": -1.9,
+      "theta_half_arcmin": 0.6,
+      "rhalf_pc": 19,
+      "radius_definition": "projected_circularized_half_light_radius",
+      "theta_value_provenance": "Published circularized / azimuthally averaged projected half-light radius",
+      "coordinate_note": "Published equatorial J2000 centroids, treated as ICRS for arcminute-scale cutouts; not a sub-arcsecond astrometric reference.",
+      "parameter_provenance": {
+        "source_id": "aquarius4_2026",
+        "source_url": "https://arxiv.org/html/2608.02601v1#S3",
+        "arxiv_id": "2608.02601"
+      },
+      "ls_dr11_coverage": {
+        "status": "not_verified",
+        "in_footprint": null,
+        "usable_gr": null,
+        "must_query_at_runtime": true,
+        "note": "No LS cutout/catalog/coverage query has been executed for this benchmark; census Survey does not establish LS coverage."
+      },
+      "notes": [
+        "Use the paper’s published D=109 kpc and rhalf=19 pc; LVDB computes D≈107.65 kpc from the central distance modulus. Do not silently mix or force equality of nonlinear posterior summaries."
+      ],
+      "galactic_latitude_deg_from_lvdb": -42.6245097,
+      "database_crosscheck": {
+        "source_id": "lvdb_dwarf",
+        "source_url": "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv",
+        "row_key": "aquarius_4",
+        "ra_deg": 330.474,
+        "dec_deg": -2.575,
+        "D_kpc": 107.65,
+        "M_V": -1.9,
+        "rhalf_native_arcmin": 0.6,
+        "rhalf_sph_physical_pc": 18.6,
+        "ref_structure": "Cerny2026RNAAS..10..239C",
+        "note": "Provenance crosscheck, not an instruction to overwrite the explicitly adopted primary-paper parameters."
+      },
+      "classification": {
+        "discovery_label": "photometric_dwarf_candidate",
+        "latest_label": "photometric_dwarf_candidate",
+        "classification_as_of": "2026-11-16",
+        "source_ids": [
+          "aquarius4_2026"
+        ],
+        "notes": "Rubin/DECam evidence; deeper imaging and spectroscopy still needed for stronger properties and physical classification."
+      },
+      "discovery_arxiv_ids": [
+        "2608.02601"
+      ],
+      "arxiv_ids": [
+        "2608.02601"
+      ],
+      "all_primary_source_urls": [
+        "https://arxiv.org/html/2608.02601v1#S3",
+        "https://raw.githubusercontent.com/apace7/local_volume_database/c40961a42d2beb302be1da90bca2016c284ef63c/data/dwarf_mw.csv"
+      ],
+      "acceptance_policy": "Diagnostic recovery target. First verify actual LS gr coverage, usable stars, masks, distance-grid and scale support; do not demand 100 percent recovery of all benchmarks."
+    }
+  ]
+}
