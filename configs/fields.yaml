@@ -1,7 +1,114 @@
+selection_seed: 481705
+census_sha256: 74a9fcbbf429e5506b15d45bb24a79ec87814b3b5330cdccb2b7ae52b5c64365
+source_commit: 1a02f50d25cac74c02ddba8401a5af20aa2db4fe
+selection: Seeded eligible brick centers, different sky patches; >=85% gr and census
+  effective area, inner brick EBV<0.10, |b_center|>30; depth and seeing proxies from
+  brick summary
+other_search_overlap: unknown for HSC, UNIONS, KiDS and Rubin
 fields:
-- {id: bootes, role: recovery, ra: 209.65, dec: 14.75, width: 2, truth: Bootes_I}
-- {id: coma, role: recovery, ra: 187.15, dec: 23.62, width: 2, truth: Coma_Berenices}
-- {id: pegasus4, role: recovery, ra: 328.85, dec: 26.25, width: 2, truth: Pegasus_IV}
-- {id: virgo2, role: recovery_evaluation, ra: 224.63, dec: 6.21, width: 2, truth: Virgo_II}
-- {id: leo_minor, role: recovery_evaluation, ra: 164.55, dec: 28.55, width: 2, truth: Leo_Minor_I}
-- {id: uma3, role: compact, ra: 174.35, dec: 31.30, width: 2, truth: Ursa_Major_III}
+- id: bootes
+  role: recovery
+  ra: 209.65
+  dec: 14.75
+  width: 2
+  truth: Bootes_I
+- id: coma
+  role: recovery
+  ra: 187.15
+  dec: 23.62
+  width: 2
+  truth: Coma_Berenices
+- id: pegasus4
+  role: recovery
+  ra: 328.85
+  dec: 26.25
+  width: 2
+  truth: Pegasus_IV
+- id: virgo2
+  role: recovery_evaluation
+  ra: 224.63
+  dec: 6.21
+  width: 2
+  truth: Virgo_II
+- id: leo_minor
+  role: recovery_evaluation
+  ra: 164.55
+  dec: 28.55
+  width: 2
+  truth: Leo_Minor_I
+- id: uma3
+  role: compact
+  ra: 174.35
+  dec: 31.3
+  width: 2
+  truth: Ursa_Major_III
+- id: dev_ordinary
+  role: pilot_dev
+  layer: ordinary
+  survey: 3
+  ra: 247.4271844660194
+  dec: 31.0
+  width: 2.7
+  effective_area_deg2: 7.2019058641975295
+  effective_fraction: 0.987915756405697
+  center_brick_g5: 24.698497772216797
+  center_brick_r5: 24.251272201538086
+  center_brick_g_seeing: 1.674809217453003
+  max_inner_brick_ebv: 0.03559200093150139
+  other_search_overlap: unknown
+- id: dev_deep
+  role: pilot_dev
+  layer: deep
+  survey: 3
+  ra: 241.3262195121951
+  dec: 24.5
+  width: 2.7
+  effective_area_deg2: 7.141440972222221
+  effective_fraction: 0.9796215325407712
+  center_brick_g5: 24.893531799316406
+  center_brick_r5: 24.29742431640625
+  center_brick_g_seeing: 1.5243384838104248
+  max_inner_brick_ebv: 0.08388583362102509
+  other_search_overlap: unknown
+- id: eval_ordinary
+  role: pilot_eval
+  layer: ordinary
+  survey: 3
+  ra: 22.16417910447761
+  dec: 21.75
+  width: 2.7
+  effective_area_deg2: 7.144427083333332
+  effective_fraction: 0.9800311499771376
+  center_brick_g5: 24.751718521118164
+  center_brick_r5: 24.252784729003906
+  center_brick_g_seeing: 1.554023027420044
+  max_inner_brick_ebv: 0.09323148429393768
+  other_search_overlap: unknown
+- id: eval_deep
+  role: pilot_eval
+  layer: deep
+  survey: 3
+  ra: 9.580209895052473
+  dec: 22.25
+  width: 2.7
+  effective_area_deg2: 7.045009645061727
+  effective_fraction: 0.9663936412979052
+  center_brick_g5: 24.9134521484375
+  center_brick_r5: 24.279632568359375
+  center_brick_g_seeing: 1.5597268342971802
+  max_inner_brick_ebv: 0.04808608442544937
+  other_search_overlap: unknown
+- id: des_control
+  role: deep_control
+  layer: deep
+  survey: 1
+  ra: 37.22222222222222
+  dec: -47.75
+  width: 2.0
+  effective_area_deg2: 3.849828317901234
+  effective_fraction: 0.9624570794753087
+  center_brick_g5: 25.496654510498047
+  center_brick_r5: 25.177316665649414
+  center_brick_g_seeing: 1.2537254095077515
+  max_inner_brick_ebv: 0.02177085168659687
+  other_search_overlap: unknown

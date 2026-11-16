@@ -14,4 +14,9 @@ job_snapshot="$LS_SAT_DATA/jobs/$SLURM_JOB_ID"
 mkdir -p "$job_snapshot"
 cp -r src configs "$job_snapshot/"
 export PYTHONPATH="$job_snapshot/src" LS_SAT_CONFIG_DIR="$job_snapshot/configs"
+if [[ ${1:-} == --both-depths ]]; then
+    shift
+    .venv/bin/python -u -m ls_satsearch.run "$@"
+    exec .venv/bin/python -u -m ls_satsearch.run --depth deep "$@"
+fi
 exec .venv/bin/python -u -m ls_satsearch.run "$@"
