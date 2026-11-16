@@ -25,12 +25,12 @@ def overlaps(ra,dec,regions):
     return False
 
 
-def register_batches(registration):
+def register_batches(registration, destination=Path('configs/v5')):
     """Materialize per-batch cohort hashes and array order before catalog reads."""
     fields = yaml.safe_load((registration/'fields.yaml').read_text())
     all_policy = json.loads((registration/'production.json').read_text())
     for n in sorted({f['batch'] for f in fields['fields']}):
-        folder = Path('configs/v5')/f'batch{n}'
+        folder = destination/f'batch{n}'
         folder.mkdir(exist_ok=True,parents=True)
         specs = [f for f in fields['fields'] if f['batch']==n]
         cohort = folder/'fields.yaml'
@@ -54,7 +54,7 @@ def choose():
                np.isfinite(bricks['PSFSIZE_G']+bricks['PSFSIZE_R'])&
                (bricks['EBV']<plan['max_ebv']))
     gal_b = SkyCoord(bricks['RA'],bricks['DEC'],unit='deg').galactic.b.deg
-    permit = quality & (abs(gal_b)>30) & (abs(bricks['DEC'])<58)
+    permit = quality & (abs(gal_b)>30) & (abs(bricks['DEC'])<plan.get('max_abs_dec',58))
     possible = {survey:np.flatnonzero(permit & atlas.accept(bricks['RA'],bricks['DEC'],survey))
                 for survey in (3,1)}
     metric = bricks['PSFDEPTH_G']+bricks['PSFDEPTH_R']-.3*(bricks['PSFSIZE_G']+bricks['PSFSIZE_R'])
@@ -101,7 +101,7 @@ def choose():
         j,b,f,proxy,cls=best
         visited.append(uv[j])
         layer = 'shallower' if metric[j]<lower else 'deep' if metric[j]>=upper else 'ordinary'
-        ident=f'expand_{len(fields)+1:02d}'
+        ident=f"{plan.get('id_prefix','expand')}_{len(fields)+1:02d}"
         fields.append(dict(id=ident,role='pilot_eval',batch=batch,layer=layer,survey=survey,
                            ra=f.ra,dec=f.dec,width=width,proxy_area_deg2=width**2*proxy,
                            proxy_coverage=proxy,phase='discovery' if survey==3 else 'deep_control',
@@ -117,7 +117,7 @@ def choose():
     frozen=json.loads(frozen_path.read_text())
     frozen.update(field_file_sha256=sha(out/'fields.yaml'),inherited_policy_sha256=sha(frozen_path))
     write_json(out/'production.json',frozen)
-    register_batches(out)
+    register_batches(out,Path(plan.get('batch_config_dir','configs/v5')))
     print(f"Registered {len(fields)} blocks; proxy area {sum(f['proxy_area_deg2'] for f in fields):.2f} deg²")
 
 
