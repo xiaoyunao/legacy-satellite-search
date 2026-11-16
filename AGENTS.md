@@ -16,7 +16,7 @@ Substructure 项目长期工作原则
 用 NERSC 的 DESI Legacy Imaging Surveys DR11 测光，搜索新的银河系暗弱卫星/恒星系统。优先验证在现有普查仍依赖较浅数据的区域是否存在实测检出增益。已知流、球状星团、矮星系外围宽成分不在本项目范围；已知系统仅作恢复和诊断。光谱不是发现阶段的必需条件。
 
 使用方式
-将以上原则写入新代码项目根目录 AGENTS.md，并以 docs/PROJECT_MEMORY.md 记录科学主线与历次改变的理由。该文本是供保存和复用的项目规则；它不表示当前 ChatGPT 项目设置已经更新。
+每轮开始先读 docs/PROJECT_MEMORY.md 的当前科学主线与决策条件。结束时依据实测证据更新该主线。docs/STATUS.md 记录执行状态，docs/DECISIONS.md 记录规则修改的依据。
 
 ## 执行与持久化
 

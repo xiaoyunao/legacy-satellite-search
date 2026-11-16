@@ -1,15 +1,25 @@
-# Project memory
+# 当前科学主线
 
-Find Galactic faint stellar systems with measurable sensitivity gained from released LS photometry. The main pilot samples usable south DR11 gr in the DELVE census PS1 assignment. PS1 assignment records the census data choice. Independent deep search overlap is unknown except where an explicit search mask has been checked.
+用 LS DR11 测光寻找此前遗漏的银河系暗弱恒星系统。优先检验 DELVE census 采用 PS1 的有效区域是否有可实测的新增检出能力。近期关注约 20–150 kpc 的老年贫金属系统，较近的紧致系统独立校准。其他深搜重叠按已核实的搜索掩膜记录。
 
-The primary sensitivity question concerns old, metal-poor systems at roughly 20–150 kpc. The actual control grid covers 5–316 kpc. The near/compact trial is tracked as a separate branch with its own interpretation. A very sparse overdensity may be a cluster, dwarf galaxy, data fluctuation, or processing artifact.
+## 当前证据
 
-Comparison uses an identical catalog and area definition for A and B. C fits a subset of the peaks from those searches. Recovery, forced fits, catalog injections and independent evidence have distinct meanings in the results.
+- A 基线是目前默认发现器。旧场等天空组成本重算中，A 两种深度均在七个主分支对照中检出六个位置。加深提高了正确距离模式的留存率，并增加旧回归场的待审查组数。
+- DELVE 3 在普通目录处理代理样本中可恢复，Aquarius IV 仍未通过。Virgo II 与 Leo Minor I 有较多强制 PSF 源，用于诊断特殊目录处理。已知源恢复、强制拟合、注入恢复和独立确认分别记载。
+- 36 对已完成的 LS 条件注入只有三对改变恢复分类。80 pc 的 12 个案例在两套深度下均未恢复。保留普通处理与尺度范围对能力外推的限制。
+- LS 基线相对真实 PS1 的灵敏度增益、普通未知系统的完整度和新系统的独立确认仍待测。LS 内部加深的收益与 LS 相对于 PS1 的收益分别检验。
+- [第三轮科学报告](../third_science_report.md)记载当前重算与实验范围。[运行状态](STATUS.md)记录实际提交、完成和阻塞。
 
-## First-round result
+## 当前实验
 
-A gave fewer held-out review peaks and more benchmark recoveries in the baseline comparison. The +0.5 mag cut recovered Virgo II at the tighter budget with the same observed review count in 14.189 effective evaluation deg². Virgo II has a high fraction of forced PSF objects near its centre. The gain therefore needs independent weak systems with ordinary catalog processing. Pegasus IV raw B peaks provide a concrete compact-versus-broad merge diagnostic. The L0 sample is sensitive to dropping its strongest few sources.
+按天空候选组总成本在新开发场比较 A 基线、加深和相应并集。两块开发场兼跑 B，衡量其互补价值。记录空间检出、是否保留正确距离模式和盲选最高排名距离是否正确。冻结投产规则后再搜索独立评价场。每个主分支入选天空组先生成一套诊断，再按图像、已知对象关联和稳定性分级。
 
-## Branch-aware result
+在同一有效天空分别搜索 LS 和 PS1 原生目录。使用同一个潜在恒星系统的配对注入，测量各目录留下的可用星数及匹配的恢复结果。小范围配对的通带、缓冲、尺度和目录定义见科学报告。
 
-The old fields are development/regression evidence. At the 0.3 main-branch budget A recovers 6/7 at both depths. Separately requiring a compatible distance within 0.25 mag gives 4/7 at baseline and 6/7 when deep. DELVE 3 is recovered by both methods at both depths. Aquarius IV fails both depths. Of 36 matched-population injections, A has one baseline-only and two deep-only at 0.3. All twelve 80 pc trials fail both depths and methods despite increased usable member counts. Use small fresh LS/PS1 comparisons and ordinary-processing cases before expanding to the full frozen area.
+宽系统复跑比较原六源叠加、单源及少量可用成员数阶梯。已知中心精确计数用于定位信号损失。普通扫描的原始峰、去重峰和组过线依次检查。
+
+## 路线调整条件
+
+- 加深或 B 在总预算下补回可靠系统才加入生产方案。先验证新开发场的组成本及场间离散。
+- 只有发现目录分类限制时才投入分类修正；只有宽系统诊断显示信号在扫描中丢失时才改搜索器。有充分证据的距离、尺度和成员数范围决定扩展范围。
+- 小面积无新系统时，依据有效面积、实测恢复和审查成本决定扩展。对本轮遇到的低灵敏度区域记录边界。候选的独立确认与物理分类留给新增观测证据。

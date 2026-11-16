@@ -91,7 +91,7 @@ def quantile(x):
 
 
 def runs_path(data_root):
-    return data_root / 'runs' / 'v2'
+    return data_root / 'runs' / os.environ.get('LS_SAT_RUN_VERSION', 'v2')
 
 
 def recovery(rows, truth, field, coverage, cfg, depth):
@@ -110,7 +110,7 @@ def recovery(rows, truth, field, coverage, cfg, depth):
     ring = (rad >= 3.5 * radius) & (rad <= off_limit)
     off_fraction = float((ring & coverage[np.ix_(iy, ix)]).sum() / ring.sum()) if ring.any() else 0.
     covered = fraction >= cfg['min_on_fraction'] and off_fraction >= cfg['min_off_fraction']
-    for method in ('A', 'B'):
+    for method in cfg.get('methods', ('A', 'B')):
         record = dict(name=truth['name'], branch=branch, method=method, depth=depth, covered=covered,
                       core_valid_fraction=fraction, off_valid_fraction=off_fraction,
                       entered_peak_table=False, truth_dm=5 * np.log10(float(truth['D_kpc'])) + 10,
@@ -145,7 +145,8 @@ def recovery(rows, truth, field, coverage, cfg, depth):
 def field_cache(root, data_root, spec, cfg, bricks):
     from .fields import Census
 
-    field = Field(spec['ra'], spec['dec'], spec['width'], min(cfg['radii_arcmin']) / 3)
+    field = Field(spec['ra'], spec['dec'], spec['width'], min(cfg['radii_arcmin']) / 3,
+                  buffer=spec.get('buffer_arcmin',102))
     key = dict(geometry=[field.ra, field.dec, field.width, field.step, field.buffer],
                mask=cfg['reject_maskbits'], subdivision=cfg['coverage_subdivision'],
                census=spec.get('survey'), root=str(root))
@@ -264,7 +265,9 @@ def main():
     model = load_isochrone(data_root / 'resources' / cfg['isochrone'])
     bricks = load_bricks(root)
     for name in args.fields:
-        execute(fields[name], root, data_root, cfg, bricks, model, args.depth, args.tag)
+        spec = fields[name]
+        field_cfg = dict(cfg, methods=cfg.get('method_fields', {}).get(name, cfg.get('methods', ['A','B'])))
+        execute(spec, root, data_root, field_cfg, bricks, model, args.depth, args.tag)
 
 
 if __name__ == '__main__':

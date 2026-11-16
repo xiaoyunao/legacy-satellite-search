@@ -160,7 +160,7 @@ def image_cutouts(path, root, bricks, field, peak, member_xy, prob):
     return all(filled)
 
 
-def review(field_id, depth, group_limit=None):
+def review(field_id, depth, group_limit=None, group_rows=None):
     root, data_root, cfg = settings()
     if depth == 'deep':
         for b in 'gr':
@@ -169,8 +169,8 @@ def review(field_id, depth, group_limit=None):
     manifest = json.loads((out/'manifest.json').read_text())
     spec = manifest['field']
     bricks = load_bricks(root)
-    fields = [r for r in read_csv(Path('results/summary/pilot_candidate_summary.csv'))
-              if r['field_id'] == field_id and r['depth'] == depth]
+    source = read_csv(Path('results/summary/pilot_candidate_summary.csv')) if group_rows is None else group_rows
+    fields = [r for r in source if r['field_id'] == field_id and r['depth'] == depth]
     if group_limit:
         selected = set()
         for row in sorted(fields, key=lambda r: (r['branch'] != 'main', int(r['rank']))):
@@ -236,6 +236,31 @@ def review(field_id, depth, group_limit=None):
         write_csv(out/'review.csv', summary)
 
 
+def review_sky_groups(table, policy, budget):
+    """Render one main-branch review page set for each selected sky group."""
+    from astropy.coordinates import SkyCoord
+    from .evaluate import source_references
+
+    references = source_references()
+    catalog = SkyCoord([r[1] for r in references],[r[2] for r in references],unit='deg')
+    rows = []
+    for r in read_csv(table):
+        if r['representative'] != 'True' or r['policy'] != policy or float(r['budget']) != budget:
+            continue
+        method, depth = r['channel'].split('_')
+        position = SkyCoord(float(r['ra_deg']),float(r['dec_deg']),unit='deg')
+        distances = position.separation(catalog).arcmin
+        i = int(distances.argmin())
+        rows.append(dict(r,field_id=r['field'],depth=depth,method=method,branch='main',rank=r['peak_rank'],
+                         candidate_group_id=r['group_id'],nearest_known=references[i][0],
+                         nearest_known_arcmin=float(distances[i]),nearest_known_catalog=references[i][3],
+                         evidence_level='L0'))
+    for field_id,depth in sorted({(r['field_id'],r['depth']) for r in rows}):
+        review(field_id,depth,group_rows=rows)
+    write_csv(table.parent/'reviewed_group_inputs.csv',rows,
+              keys=('candidate_group_id','field_id','depth','method','rank'))
+
+
 def refresh_image(field_id, depth, label):
     """Render a new coadd mosaic from a saved fit and scratch membership table."""
     root,data_root,cfg = settings()
@@ -264,12 +289,19 @@ def refresh_image(field_id, depth, label):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('field')
+    p.add_argument('field', nargs='?')
+    p.add_argument('--groups', type=Path)
+    p.add_argument('--policy', default='A_base')
+    p.add_argument('--budget', type=float, default=.3)
     p.add_argument('--depth', choices=('base', 'deep'), default='base')
     p.add_argument('--group-limit',type=int)
     p.add_argument('--refresh-image', help='Saved hypothesis label, such as main-B-1')
     args = p.parse_args()
-    if args.refresh_image:
+    if args.groups:
+        review_sky_groups(args.groups,args.policy,args.budget)
+    elif not args.field:
+        p.error('Provide a field or --groups')
+    elif args.refresh_image:
         refresh_image(args.field,args.depth,args.refresh_image)
     else:
         review(args.field, args.depth, args.group_limit)

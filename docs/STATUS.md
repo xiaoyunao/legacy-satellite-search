@@ -1,5 +1,15 @@
 # Status
 
+## 第三轮 · 2026-11-16
+
+- 完成 v2 真实归档的天空组重算，保留 v1/v2 原结果。六个新开发块开始排队。独立评价区保留封存。
+- 新开发场 Slurm 61395259–61395264；三处宽系统诊断 61395357、61395360、61395361。最近核验均因 Perlmutter CPU `PartitionDown` 待运行。
+- 四场 PS1 分页下载已在 NERSC scratch 执行。配对 61395365–61395368 在对应下载通过校验后自动释放。比较 61395369 和共享潜在星族注入 61395412、61395413 等待前置任务。
+- 新开发场校准 61395362 与候选诊断 61395411 已提交依赖。当前仅有归档重算的科学结果；新区恢复、LS–PS1 相对增益与宽系统隔离试验结果待计算。
+- NERSC 新版工作目录为 `$HOME/projects/legacy-satellite-search/revisions/group-v3`。Scratch 工作目录为 `$PSCRATCH/legacy-satellite-search/runs/v3`。PS1 页文件只存 scratch。
+- [科学报告](../third_science_report.md) · [Slurm 快照](../results/v3/slurm_jobs.csv)
+
+
 ## 2026-11-16
 
 - Perlmutter SSH and CFS access verified. Project venv installed under personal project. Input model and census files passed SHA-256 validation.

@@ -29,18 +29,7 @@ def choose_sites(field, good, cfg, n, rng):
     raise RuntimeError(f'Only {len(sites)} clean independent injection locations')
 
 
-def inject_one(pos, distance, rh, count, rng, field, area, cfg, sample, model, tree, *, truncation=7):
-    dm = 5 * np.log10(distance) + 10
-    mags = model[0] + dm
-    # Conditional luminosity function in a window that straddles our catalog cut.
-    p = model[1] * (mags[:, 0] <= cfg['g_max']+.4) * (mags[:, 1] <= cfg['r_max']+.4)
-    p /= p.sum()
-    gr = mags[rng.choice(len(mags), count, p=p)]
-    # Finite Plummer aperture keeps different sites from overlapping.
-    q = rng.uniform(0, truncation**2/(1+truncation**2), count)
-    radial = rh * np.sqrt(q / (1-q))
-    theta = rng.uniform(0, 2*np.pi, count)
-    xy = pos + np.column_stack([radial*np.cos(theta), radial*np.sin(theta)])
+def observe(gr, pos, rng, cfg, sample, tree):
     # Nearby observed stars provide an empirical error--magnitude relation.
     by_distance = tree.query(pos, k=min(len(sample), 1800))[1]
     background = sample[np.atleast_1d(by_distance)]
@@ -60,6 +49,22 @@ def inject_one(pos, distance, rh, count, rng, field, area, cfg, sample, model, t
     sigma_obs = sig * 10**(.4*(noisy-gr))
     eligible = (np.all(noisy <= [cfg['g_max'], cfg['r_max']], axis=1) &
                 np.all(sigma_obs <= 2.5/np.log(10)/cfg['min_snr'], axis=1))
+    return noisy, sigma_obs, eligible
+
+
+def inject_one(pos, distance, rh, count, rng, field, area, cfg, sample, model, tree, *, truncation=7):
+    dm = 5 * np.log10(distance) + 10
+    mags = model[0] + dm
+    # Conditional luminosity function in a window that straddles our catalog cut.
+    p = model[1] * (mags[:, 0] <= cfg['g_max']+.4) * (mags[:, 1] <= cfg['r_max']+.4)
+    p /= p.sum()
+    gr = mags[rng.choice(len(mags), count, p=p)]
+    # Finite Plummer aperture keeps different sites from overlapping.
+    q = rng.uniform(0, truncation**2/(1+truncation**2), count)
+    radial = rh * np.sqrt(q / (1-q))
+    theta = rng.uniform(0, 2*np.pi, count)
+    xy = pos + np.column_stack([radial*np.cos(theta), radial*np.sin(theta)])
+    noisy, sigma_obs, eligible = observe(gr, pos, rng, cfg, sample, tree)
     si, sj = sample_pixels(field, area, *xy.T)
     valid = area[si, sj]
     output = np.column_stack([xy, noisy, sigma_obs])[eligible & valid]

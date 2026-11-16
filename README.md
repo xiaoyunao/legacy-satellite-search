@@ -2,6 +2,31 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Third-round experiment
+
+Read the [current science objective](docs/PROJECT_MEMORY.md) and [third science report](third_science_report.md). In the NERSC revision checkout at `$HOME/projects/legacy-satellite-search/revisions/group-v3`, the v3 wrapper snapshots source and configuration at job start and writes scratch products under `$PSCRATCH/legacy-satellite-search/runs/v3`. Submission and acquisition status are linked from [STATUS](docs/STATUS.md).
+
+```bash
+mkdir -p logs
+sbatch -A desi -q shared scripts/v3.sh search fresh_01
+sbatch -A desi -q shared scripts/v3.sh wide_diagnostic dev_ordinary 5
+# Once all six development jobs finish, calibrate and review main-branch groups.
+sbatch -A desi -q shared scripts/v3.sh dev_groups
+sbatch -A desi -q shared scripts/v3.sh review \
+  --groups results/development_groups/all_A/sky_group_candidates.csv --policy A_base
+```
+
+For the matched comparison, stage the pinned PS1 mask (compressed file and decompressed FITS) and native model under scratch. Submit `scripts/v3.sh matched FIELD` with `sbatch --hold`, then run `bash scripts/acquire_ps1_v3.sh FIELD JOB_ID` on the login node. The acquisition releases its held job after all pages pass validation. Run `scripts/v3.sh matched combine` on Slurm after the four matched jobs finish. The two `matched_inject` runs use the resulting group cutoffs. Field names, buffer and supported scales are fixed in `configs/v3/matched.yaml`.
+
+Archived comparison reproduces from the v2 summary manifests and de-duplicated peak tables on Perlmutter. Set `--archive` and use a separate output directory.
+
+```bash
+sbatch -A desi -q shared scripts/v3.sh group_budget --archive \
+  --summary ../branch-v2/results/summary --output results/group-regression
+```
+
+The frozen-policy evaluator accepts `--apply path/to/sky_group_policy.json`. Select the production channels and group budget from the completed development experiment before submitting the evaluation blocks.
+
 ## Branch-aware revision
 
 The current code writes branch-aware results. See the [second science report](second_science_report.md) for the completed regression, audit and paired results. The original scientific report and baseline files remain under their original paths and are reproducible from commit `4e9f4f2`. The revision is deployed in `$HOME/projects/legacy-satellite-search/revisions/branch-v2` and writes source-level work products under `$PSCRATCH/legacy-satellite-search/runs/v2`. The original four PS1 fields are now regression data.
@@ -23,7 +48,7 @@ Run `python -m ls_satsearch.paired` in the revision directory after the paired j
 ### Branches and matching
 
 - Template nodes below μ=16.50 form the near branch. Nodes from 16.50 to 20.75 form the main branch and represent the 20–150 kpc design. Nodes from 21.00 form the far branch. Truth cohorts use 20 and 150 kpc.
-- Within a branch and method, peak merging requires ≤0.5 mag in DM, ≤2 in radius ratio, and separation ≤max(0.5′, 0.75 times the smaller radius). Sky-review groups link retained records across methods, depths and distance hypotheses. Cutoffs are calibrated within each branch and method before any grouping.
+- Within a branch and method, peak merging requires ≤0.5 mag in DM, ≤2 in radius ratio, and separation ≤max(0.5′, 0.75 times the smaller radius). Sky-review groups link retained records across methods, depths and distance hypotheses. V2 calibrated its hypothesis cutoffs within each branch and method before grouping. The v3 main comparison calibrates the group count directly.
 - Recovery tables report spatial passage and both the original 0.75 mag and stricter 0.25 mag distance match diagnostics. Source audit flags are recorded in total PSF, CMD and fitted membership weights. The sample selection retains these measurements.
 - The two depth injection arms share latent stars, local noise draws, positions and mask. Paired recovery groups are conditional on catalog availability. Candidate C uses bounded local centres and retained hypotheses. Cutout generation and scientific assessment have independent status fields.
 

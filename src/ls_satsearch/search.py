@@ -177,6 +177,7 @@ def scan(sample, field, coverage, model, cfg):
     started = monotonic()
     cmd = CMD(sample, model, cfg)
     common_seconds = monotonic() - started
+    methods = cfg.get('methods', ('A', 'B'))
     seconds = dict(A=0., B=0., cmd=common_seconds, shared=0.)
     iy, ix = field.pixel(*sample[:, :2].T)
     linear = iy * field.n + ix
@@ -206,47 +207,50 @@ def scan(sample, field, coverage, model, cfg):
         started = monotonic()
         selected, ratio = cmd.weights(dm)
         weight = np.minimum(ratio, 25.)
-        images = [np.bincount(linear, weights=w, minlength=field.n**2).reshape(field.n, field.n)
-                  for w in (selected, weight, weight**2)]
+        images = {key: np.bincount(linear, weights=w, minlength=field.n**2).reshape(field.n, field.n)
+                  for key, w in [('count', selected), ('weight', weight), ('weight2', weight**2)]
+                  if ('A' if key == 'count' else 'B') in methods}
         seconds['cmd'] += monotonic() - started
         for factor, radius, on, off, aon, aoff, pos, ok, p, alpha in grids:
-            started = monotonic()
-            count = rebin(images[0], factor)
-            ni, no = [np.rint(convolution(count, k)).clip(0) for k in (on, off)]
-            nt = ni + no
-            expect = nt * p
-            deviance = 2 * (xlogy(ni, (ni + 1e-15) / (expect + 1e-15)) +
-                            xlogy(no, (no + 1e-15) / (nt - expect + 1e-15)))
-            a_score = np.sqrt(np.maximum(deviance, 0))
-            a_score[(ni <= expect) | (ni < 3)] = 0
-            for i, j in maxima(a_score, ok, cfg['peak_seed_floor']):
-                x, y = pos[j], pos[i]
-                n_on, n_off, area_on, area_off = exact_onoff(
-                    field, x, y, radius, tree, coverage, selected)
-                if (area_on < cfg['min_on_fraction'] * np.pi * (1.5 * radius)**2 or
-                        area_off < cfg['min_off_fraction'] * np.pi * (6**2 - 3.5**2) * radius**2):
-                    continue
-                prob = area_on / (area_on + area_off)
-                score = binomial_tail_score(n_on, n_on + n_off, prob)
-                peaks.append(dict(method='A', x=x, y=y, dm=dm, rh_arcmin=radius,
-                                  score=score, n_on=n_on, n_off=n_off,
-                                  area_on_arcmin2=area_on, area_off_arcmin2=area_off))
-            seconds['A'] += monotonic() - started
-            started = monotonic()
-            weighted, squared = [rebin(im, factor) for im in images[1:]]
-            wi, wo = [convolution(weighted, k) for k in (on, off)]
-            var_off = np.maximum(convolution(squared, off), 0)
-            # Regularize local variance of the compensated weighted aperture.
-            global_v = squared.sum() / max(area_high.sum() * field.step**2, 1)
-            var_density = (var_off + 15 * global_v) / (aoff + 15)
-            variance = (aon + alpha**2 * aoff) * var_density
-            b_score = (wi - alpha * wo) / np.sqrt(np.maximum(variance, 1))
-            b_score[convolution(rebin((images[1] > 0).astype(float), factor), on) < 2.5] = 0
-            for i, j in maxima(b_score, ok, cfg['peak_seed_floor']):
-                peaks.append(dict(method='B', x=pos[j], y=pos[i], dm=dm, rh_arcmin=radius,
-                                  score=b_score[i, j], weighted_on=wi[i, j], weighted_off=wo[i, j],
-                                  area_on_arcmin2=aon[i, j], area_off_arcmin2=aoff[i, j]))
-            seconds['B'] += monotonic() - started
+            if 'A' in methods:
+                started = monotonic()
+                count = rebin(images['count'], factor)
+                ni, no = [np.rint(convolution(count, k)).clip(0) for k in (on, off)]
+                nt = ni + no
+                expect = nt * p
+                deviance = 2 * (xlogy(ni, (ni + 1e-15) / (expect + 1e-15)) +
+                                xlogy(no, (no + 1e-15) / (nt - expect + 1e-15)))
+                a_score = np.sqrt(np.maximum(deviance, 0))
+                a_score[(ni <= expect) | (ni < 3)] = 0
+                for i, j in maxima(a_score, ok, cfg['peak_seed_floor']):
+                    x, y = pos[j], pos[i]
+                    n_on, n_off, area_on, area_off = exact_onoff(
+                        field, x, y, radius, tree, coverage, selected)
+                    if (area_on < cfg['min_on_fraction'] * np.pi * (1.5 * radius)**2 or
+                            area_off < cfg['min_off_fraction'] * np.pi * (6**2 - 3.5**2) * radius**2):
+                        continue
+                    prob = area_on / (area_on + area_off)
+                    score = binomial_tail_score(n_on, n_on + n_off, prob)
+                    peaks.append(dict(method='A', x=x, y=y, dm=dm, rh_arcmin=radius,
+                                      score=score, n_on=n_on, n_off=n_off,
+                                      area_on_arcmin2=area_on, area_off_arcmin2=area_off))
+                seconds['A'] += monotonic() - started
+            if 'B' in methods:
+                started = monotonic()
+                weighted, squared = [rebin(im, factor) for im in (images['weight'], images['weight2'])]
+                wi, wo = [convolution(weighted, k) for k in (on, off)]
+                var_off = np.maximum(convolution(squared, off), 0)
+                # Regularize local variance of the compensated weighted aperture.
+                global_v = squared.sum() / max(area_high.sum() * field.step**2, 1)
+                var_density = (var_off + 15 * global_v) / (aoff + 15)
+                variance = (aon + alpha**2 * aoff) * var_density
+                b_score = (wi - alpha * wo) / np.sqrt(np.maximum(variance, 1))
+                b_score[convolution(rebin((images['weight'] > 0).astype(float), factor), on) < 2.5] = 0
+                for i, j in maxima(b_score, ok, cfg['peak_seed_floor']):
+                    peaks.append(dict(method='B', x=pos[j], y=pos[i], dm=dm, rh_arcmin=radius,
+                                      score=b_score[i, j], weighted_on=wi[i, j], weighted_off=wo[i, j],
+                                      area_on_arcmin2=aon[i, j], area_off_arcmin2=aoff[i, j]))
+                seconds['B'] += monotonic() - started
     for i, peak in enumerate(peaks):
         peak['raw_peak_id'] = i + 1
         peak['ra_deg'], peak['dec_deg'] = field.sky(peak['x'], peak['y'])

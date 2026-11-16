@@ -2,19 +2,24 @@
 
 ## Current objective
 
-Measure the depth effect for ordinary-processed faint systems in fresh fields and compare LS and PS1 at matched review cost.
+Use LS DR11 to detect previously missed faint Galactic stellar systems and measure the gain against PS1 in the census PS1 assignment. See [current scientific direction](docs/PROJECT_MEMORY.md).
 
 ## Completed milestones
 
-- Original real-data pilot and the branch-aware regression on the same 28.533 effective PS1-assigned deg².
-- Segmented evolutionary loci, compatible-peak merges, separate distance branches and non-destructive sky groups.
-- An 18-source processing audit and seven main-branch controls, plus UMa III.
-- 36 matched-population depth pairs and six template-mismatch pairs, with joint outcome and retained-member counts.
-- Frozen geometry for 121.805 effective new deg² and real PS1 input probes in five small cones.
+- Completed v1/v2 real-data pilots, ordinary processing audit, paired depth injections and five PS1 catalog probes.
+- Froze disjoint 61.100 deg² development and 60.705 deg² evaluation cohorts.
+- Recomputed old field results by sky group and separated spatial detection, correct mode retention and truth-blind highest mode.
 
-## Next experiment
+## Current execution
 
-1. Use a small predeclared subset of the new blocks and the ordinary-processing weak controls. Align usable area for LS and PS1, use their native bandpasses and compare calibrated review burden.
-2. Keep the two A depths paired and test whether the distance-matching gain reproduces on ordinary controls. Keep B as a control for the compact end.
-3. Compare wide versus compact injections at fixed delivered member counts. Rank sensitivity and localization together.
-4. Use fresh block results and their dispersion to decide how far to expand into the frozen geometry.
+1. Run the six new development fields. Calibrate the A configurations together at matched total sky group cost, evaluate B and A/B on the same two controls, and inspect the generated main-branch group cutouts.
+2. Compare the three independent samples, LS baseline, LS deeper and PS1, on two joint development fields and two offset known-system fields. Use the same latent population for a small conditional injection comparison. Check position, distance, delivered N and review burden.
+3. Isolate three 80 pc failures to test annulus interference, scanning losses and available members. Use two added delivered-member counts at one site to bracket the threshold.
+4. Freeze production configuration from the development results, then open the six independent evaluation blocks. Review one diagnostic set per group. Log actual overlap masks, operating area and limits before any footprint expansion.
+
+## Validation criteria
+
+- Each completed job records input, configuration, effective area, method and timings. Candidate budget calibration checks the entire planned development cohort.
+- Survey measurements use independent samples on identical usable masks with explicit native photometry and search settings.
+- Decisions about deeper or combined searches depend on matching the same total review budgets. Use the held-out count and its area after the policy is frozen.
+- [Execution status](docs/STATUS.md) records scheduler and input availability.

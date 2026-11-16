@@ -16,6 +16,24 @@ from .run import config_path, coverage_metrics, field_cache, read_csv, settings,
 from .search import load_isochrone, scan
 
 
+def populations(base, deep, radius, field, area, background, injected_model,
+                tree, rng, conditions, sites, field_id, mismatch):
+    truth, stars = [], {'base':[], 'deep':[]}
+    for i, ((distance,n),(x,y)) in enumerate(zip(conditions,sites)):
+        rh = np.degrees(np.arctan(radius/(1000*distance)))*60
+        pos = np.array([x,y]) + rng.uniform(-2,2,size=2)
+        if coverage_metrics(field, area, base, limit=max(4,3*rh), center=pos) < .80:
+            raise RuntimeError(f'Poor joint sky coverage at site {i} in {field_id}')
+        eligible, t = inject_one(pos,distance,rh,n,rng,field,area,deep,background,
+                                 injected_model,tree,truncation=3)
+        shallow = eligible[np.all(eligible[:,2:4] <= [base['g_max'],base['r_max']],axis=1)]
+        truth.append(dict(t, trial=i, rh_pc=radius, N_base=len(shallow), N_deep=len(eligible),
+                          generation_age=10 if mismatch else 12))
+        stars['base'].append(shallow)
+        stars['deep'].append(eligible)
+    return truth, stars
+
+
 def run(field_id, radius, mismatch=False, legacy_locus=False):
     root, data_root, base = settings()
     deep = dict(base, g_max=base['g_max']+.5, r_max=base['r_max']+.5)
@@ -32,19 +50,8 @@ def run(field_id, radius, mismatch=False, legacy_locus=False):
     conditions = list(product((50,100),(12,22,36)))
     rng.shuffle(conditions)
     sites = [(x,y) for y in (-44,0,44) for x in (-27,27)]
-    truth, stars = [], {'base':[], 'deep':[]}
-    for i, ((distance,n),(x,y)) in enumerate(zip(conditions,sites)):
-        rh = np.degrees(np.arctan(radius/(1000*distance)))*60
-        pos = np.array([x,y]) + rng.uniform(-2,2,size=2)
-        if coverage_metrics(field, area, base, limit=max(4,3*rh), center=pos) < .80:
-            raise RuntimeError(f'Poor joint sky coverage at site {i} in {field_id}')
-        eligible, t = inject_one(pos,distance,rh,n,rng,field,area,deep,background['deep'],
-                                 injected_model,tree,truncation=3)
-        shallow = eligible[np.all(eligible[:,2:4] <= [base['g_max'],base['r_max']],axis=1)]
-        truth.append(dict(t, trial=i, rh_pc=radius, N_base=len(shallow), N_deep=len(eligible),
-                          generation_age=10 if mismatch else 12))
-        stars['base'].append(shallow)
-        stars['deep'].append(eligible)
+    truth, stars = populations(base, deep, radius, field, area, background['deep'], injected_model,
+                               tree, rng, conditions, sites, field_id, mismatch)
     rows = []
     timing = {}
     for depth,cfg in (('base',base),('deep',deep)):
