@@ -1,0 +1,2 @@
+policy,branch,budget,cutoff,dev_area_deg2,eval_area_deg2,evaluation_kind,target_dev_sky_groups,dev_sky_groups,evaluation_sky_groups,benchmark_n,spatial_n,correct_mode_n,blind_correct_n
+A_base,main,0.3,6.343507250119485,8.325138888888887,0,development,2,2,0,1,1,1,0

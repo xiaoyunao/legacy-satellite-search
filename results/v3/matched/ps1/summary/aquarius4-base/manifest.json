@@ -1,0 +1,663 @@
+{
+  "field": {
+    "id": "aquarius4",
+    "role": "recovery",
+    "truth": "Aquarius_IV",
+    "ra": 330.12,
+    "dec": -2.26,
+    "width": 2.1,
+    "buffer_arcmin": 26
+  },
+  "survey": "ps1",
+  "depth": "base",
+  "config": {
+    "seed": 481705,
+    "region": "south",
+    "dm": [
+      16.5,
+      20.75,
+      0.25
+    ],
+    "radii_arcmin": [
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "g_max": 24.0,
+    "r_max": 23.5,
+    "min_snr": 5,
+    "reject_maskbits": [
+      1,
+      5,
+      6,
+      10,
+      19
+    ],
+    "coverage_subdivision": 2,
+    "min_on_fraction": 0.75,
+    "min_off_fraction": 0.6,
+    "peak_seed_floor": 2.0,
+    "background_tile_arcmin": 120,
+    "match_min_arcmin": 2,
+    "match_rh_factor": 1,
+    "match_dm_tolerance": 0.75,
+    "review_budgets_deg2": [
+      0.3
+    ],
+    "isochrone": "isochrones/des/bressan2012/iso_a12.0_z0.00010.dat",
+    "methods": [
+      "A"
+    ],
+    "method_fields": {
+      "fresh_01": [
+        "A",
+        "B"
+      ],
+      "fresh_05": [
+        "A",
+        "B"
+      ]
+    }
+  },
+  "bands": [
+    "gP1",
+    "rP1"
+  ],
+  "release": "PS1 DR2 stack",
+  "area_deg2": 0.15208140432098763,
+  "area_fraction": 0.034485579211108314,
+  "ls_area_deg2": 4.36393711419753,
+  "cutflow": {
+    "unique_primary": 588581,
+    "valid_gr_i": 178547,
+    "buffered_rows": 146887,
+    "area": 9253,
+    "area_psf": 5249,
+    "selected": 5249
+  },
+  "inputs": {
+    "acquisition": {
+      "field": {
+        "id": "aquarius4",
+        "role": "recovery",
+        "truth": "Aquarius_IV",
+        "ra": 330.12,
+        "dec": -2.26
+      },
+      "limit_arcmin": 90.66666666666666,
+      "pages": [
+        {
+          "tile": 0,
+          "page": 1,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-00-01.csv",
+          "sha256": "864393e6a0c192dafba7691c9cde024f44c5b2e24a2e9c21da5e0beb42eac697",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 0,
+          "page": 2,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 16789,
+          "path": "cone-00-02.csv",
+          "sha256": "31655b63163375b16ee61facfcd821471440c56824efb04c1763a3f1477b79ff",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 1,
+          "page": 1,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-01-01.csv",
+          "sha256": "0fd16c73d8e2168074c11972f9a8d9b83544c8753e2d8466a20a0a4f0139a8f9",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 1,
+          "page": 2,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 13794,
+          "path": "cone-01-02.csv",
+          "sha256": "5294aef658607545014327a2bb4570a02c45e2120fad518d7f7f738fbee8ddd8",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 2,
+          "page": 1,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-02-01.csv",
+          "sha256": "afbdfb750525fca820e338bbaefb146722d17452bd17daf072a6d3c023302cca",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 2,
+          "page": 2,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 14785,
+          "path": "cone-02-02.csv",
+          "sha256": "201c26dad0d7377f06206ced77aa173e2ff436204e37a596d462cbc339f0dc64",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 3,
+          "page": 1,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-03-01.csv",
+          "sha256": "4f96ef33d903cd2778621ca0e7fe975712ce4fec4421b380b48d5a6e0b92ee1e",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 3,
+          "page": 2,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 15533,
+          "path": "cone-03-02.csv",
+          "sha256": "63bbfa18c326dd2a6c944ac6fd99ed9297017f0d863ad5664babf42f7624c06a",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 4,
+          "page": 1,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-04-01.csv",
+          "sha256": "5778b623e43a4da3f7a57be2e3a7fc3a1a6d3cdfc50941d34b544a9060032ae9",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 4,
+          "page": 2,
+          "ra_deg": 328.91017006775337,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 18136,
+          "path": "cone-04-02.csv",
+          "sha256": "c0256def2a11af9338908120f70f44be409e96a2de2db915b4ed2024d260d3ca",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=328.91017007&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 5,
+          "page": 1,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-05-01.csv",
+          "sha256": "d32fd9645534571f0138c9b918f5cc0e3e592927a60f0bb94023e95822560c6b",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 5,
+          "page": 2,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 16094,
+          "path": "cone-05-02.csv",
+          "sha256": "d706d91787d93bf3f34b4eb35aee2c917be8ec439a2dbdb91894060bdb7458f0",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 6,
+          "page": 1,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-06-01.csv",
+          "sha256": "4f7fef985768710abdda33629ebb0ecf38c3953fee03172ff6f770a2077a20d8",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 6,
+          "page": 2,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 13067,
+          "path": "cone-06-02.csv",
+          "sha256": "db6881a84001dfa4e5cf5b427d234a4c0001c3202fb2e771567d937de1ae0845",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 7,
+          "page": 1,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-07-01.csv",
+          "sha256": "182bf5b30fa7217a45fbfac50379ff12bb85af1c51beedc38871b7a049a11261",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 7,
+          "page": 2,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 15240,
+          "path": "cone-07-02.csv",
+          "sha256": "5f44f94b264b10c40fa88b6deaeccc68142dc32397971cf7c40815248287eb64",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 8,
+          "page": 1,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-08-01.csv",
+          "sha256": "ffcb5015349506e5d7147ca24321957ea6095e0c49e562fb9518fcc6206a732a",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 8,
+          "page": 2,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 15623,
+          "path": "cone-08-02.csv",
+          "sha256": "65b8d9d76ecc0f4bd74d6568c553477358a783dec63970c35fed7fe8f5b6e589",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 9,
+          "page": 1,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-09-01.csv",
+          "sha256": "ad62ead829d6bd26a998f7770e92d5dac9596137d1410fa61994efd3b8549784",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 9,
+          "page": 2,
+          "ra_deg": 329.5150850338767,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 16361,
+          "path": "cone-09-02.csv",
+          "sha256": "57e3aa46664673c4dc9894db98916d25c527ec839d2e9de0b9178e7cdf76f838",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=329.51508503&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 10,
+          "page": 1,
+          "ra_deg": 330.12,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-10-01.csv",
+          "sha256": "f96c89844817cadd627b1eeae72fa8c167baab388bef108bc2eeb51af0793ac5",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 10,
+          "page": 2,
+          "ra_deg": 330.12,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 16637,
+          "path": "cone-10-02.csv",
+          "sha256": "573e13329483dab8b62b5f54efd8bdbbcb6be359c9f9e5b6af18190071898e6d",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 11,
+          "page": 1,
+          "ra_deg": 330.12,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-11-01.csv",
+          "sha256": "34a65752d5c7c32d573efec81a111614034a88045008fe3e0dc06def992e3819",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 11,
+          "page": 2,
+          "ra_deg": 330.12,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 14519,
+          "path": "cone-11-02.csv",
+          "sha256": "7b368a3ae94e10980adc313024a553e628ba13c4e78868904cdbd5e6c6186b31",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 12,
+          "page": 1,
+          "ra_deg": 330.12,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-12-01.csv",
+          "sha256": "d8d103923a87e610fd48727af90fe4e9a8bb3b9ac48f9a0e40c3bcd6bf15a1e8",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 12,
+          "page": 2,
+          "ra_deg": 330.12,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 15748,
+          "path": "cone-12-02.csv",
+          "sha256": "530b35a4b36d9abe901105f1597ed83b4139da2b3c55cd2a999f26fca381eb40",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 13,
+          "page": 1,
+          "ra_deg": 330.12,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-13-01.csv",
+          "sha256": "39aa127d7d879775947824d5181f1dd0d45cf367a9a9ccd7943203773421e3ae",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 13,
+          "page": 2,
+          "ra_deg": 330.12,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 15582,
+          "path": "cone-13-02.csv",
+          "sha256": "fbe78bed3d2ea62bbdda17882570a5f572ab22420035d9ddbcadf4224db32a65",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 14,
+          "page": 1,
+          "ra_deg": 330.12,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-14-01.csv",
+          "sha256": "4214756e378f9a0743de9b4dd315d343cbad84ae1bcd1bf3a250697963c245eb",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 14,
+          "page": 2,
+          "ra_deg": 330.12,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 17452,
+          "path": "cone-14-02.csv",
+          "sha256": "d8c52124f9a693981e38c75c183e0d46469c10ba100ea7e6abdc787a96f2d225",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.12000000&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 15,
+          "page": 1,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-15-01.csv",
+          "sha256": "17f9fbc41181edd980ccd45cf22588cfcfcbefba6684a390e23b00e0eff31bd8",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 15,
+          "page": 2,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 13148,
+          "path": "cone-15-02.csv",
+          "sha256": "2d9f7c7e3a456496b396e8e1c34cb9452846412f0393983a9e2c91d81d0f1c33",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 16,
+          "page": 1,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-16-01.csv",
+          "sha256": "3e9eea281d8b4373cd2810ad66516e170c6c968df5b87bcd712239ed1d4feec2",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 16,
+          "page": 2,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 13944,
+          "path": "cone-16-02.csv",
+          "sha256": "7cb92c96916e0f64432a6f2222b0fcb3d16aa02cb12b19da125221587c0e0f69",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 17,
+          "page": 1,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-17-01.csv",
+          "sha256": "9a5e63956f11443aaee15c226d397e420f2f99b86806eefee3760706ccf64d73",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 17,
+          "page": 2,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 17226,
+          "path": "cone-17-02.csv",
+          "sha256": "e67ffa87074c60bb6217b9639700eb4eef297fa0b3705a2d5d29a430945ebad9",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 18,
+          "page": 1,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-18-01.csv",
+          "sha256": "551c9e532ff3b0c7d3479a7aab7c8fde69f96f190c1232a44082b7ab03279a39",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 18,
+          "page": 2,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 14840,
+          "path": "cone-18-02.csv",
+          "sha256": "1bf0702d633c0e853a593c044fc4e566f4e286cad9ee8f91aea051734efd172c",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 19,
+          "page": 1,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-19-01.csv",
+          "sha256": "de4be136588d626c9d644a476e619a7ea2468604b1f59b8a76c6615ff51c9563",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 19,
+          "page": 2,
+          "ra_deg": 330.7249149661233,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 18155,
+          "path": "cone-19-02.csv",
+          "sha256": "2c5f47dc9df25ff0f21a407a6d2b4b7b2f42f74399e46afa9a36497de41ae1a9",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=330.72491497&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 20,
+          "page": 1,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-20-01.csv",
+          "sha256": "5ca3f473d2946f9ed96a84d1dee87acd1fbb0edd6297803ceb793e5d3b36ec31",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 20,
+          "page": 2,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -3.4694824936435245,
+          "radius_deg": 0.49,
+          "rows": 11998,
+          "path": "cone-20-02.csv",
+          "sha256": "922654ca22b7b1f7e177fe5af7be4f811e9b18a1f54de37c5410802a7e11262d",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-3.46948249&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 21,
+          "page": 1,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-21-01.csv",
+          "sha256": "ecd8c9fa3f80ddaced8fdfac3649eb52963a7d98b69e9fd2609e694e49e6407f",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 21,
+          "page": 2,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -2.8645815459187545,
+          "radius_deg": 0.49,
+          "rows": 13836,
+          "path": "cone-21-02.csv",
+          "sha256": "b45f00df7da1b61a624446bf8c8d37457f9c33e8126917eefbe5c074854c7af8",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-2.86458155&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 22,
+          "page": 1,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-22-01.csv",
+          "sha256": "05ff6ee7f63f7065f475577f610307c29b5471602602eaecba69b2a7768fe43b",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 22,
+          "page": 2,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -2.26,
+          "radius_deg": 0.49,
+          "rows": 13628,
+          "path": "cone-22-02.csv",
+          "sha256": "19a6bc307cb4df8a43eeefa8338dcca4ba4a658ebce17e8c1ff00a1ae31c0157",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-2.26000000&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 23,
+          "page": 1,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-23-01.csv",
+          "sha256": "e9d99996d70d29c740994c0ccda2486a9d5cb2ab24f0b50948854210c246a920",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 23,
+          "page": 2,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -1.6556701276557464,
+          "radius_deg": 0.49,
+          "rows": 11806,
+          "path": "cone-23-02.csv",
+          "sha256": "287759ef458879d83e88f11ae728dc509132ae8de3e2b62fcc8fe8f7cbe8092e",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-1.65567013&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        },
+        {
+          "tile": 24,
+          "page": 1,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 25000,
+          "path": "cone-24-01.csv",
+          "sha256": "d7d85aa2a706c6eb84f70b67cb59b2d6d1a65f4df3827e88b2712bb345cbc93a",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=1"
+        },
+        {
+          "tile": 24,
+          "page": 2,
+          "ra_deg": 331.32982993224664,
+          "dec_deg": -1.0515244534908494,
+          "radius_deg": 0.49,
+          "rows": 19261,
+          "path": "cone-24-02.csv",
+          "sha256": "4d38a4e34f9acb40f9be5a568b255edf35e2439d2baae50042c4211dbfad4139",
+          "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=331.32982993&dec=-1.05152445&radius=0.49&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&sort_by=objID.asc&pagesize=25000&page=2"
+        }
+      ],
+      "matched_config_sha256": "73e66ba73321f1efe34c693abd5ede42197106a952ea08d359ed1af871bc54cf"
+    },
+    "extinction_coefficients": [
+      3.172,
+      2.271
+    ],
+    "morphology": "iPSF-iKron < 0.05 with valid i and S/N >=5"
+  },
+  "model_sha256": "4fa53e8a963933310941ae5c43da4391e782a3760320fa61bd5c940e4ffb201b",
+  "matched_config_sha256": "73e66ba73321f1efe34c693abd5ede42197106a952ea08d359ed1af871bc54cf",
+  "ps1_mask_sha256": "907c5b379310025fa6a2b1f74c996e53692ac707fedaec37a0611ab70b8a3ddd",
+  "slurm_job_id": "61395368",
+  "status": "complete",
+  "timing": {
+    "A": 2.5990630669984967,
+    "B": 0.0,
+    "cmd": 0.3327808291069232,
+    "shared": 0.14121555298333988
+  },
+  "raw_peaks": 1250,
+  "deduplicated_peaks": 295,
+  "wall_seconds": 9.662116667022929
+}

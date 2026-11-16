@@ -1,0 +1,19 @@
+group_id,review_class,evidence_level,image_notes,ts,ts_without_top3,nearest_known,nearest_known_arcmin,diagnostic
+fresh_01-A_base-0.3-001,insufficient photometric evidence,L0,Centre and source stamps inspected.,0.0,0.0,Canes Venatici I,31.52428042308066,figures/fresh_01-base/candidate-main-A-1-images.png
+fresh_01-A_base-0.3-002,insufficient photometric evidence,L0,Two close brightness maxima in the highest-contribution source stamp.,13.342890561220553,0.49909805612607183,Canes Venatici I,188.07362640186616,figures/fresh_01-base/candidate-main-A-4-images.png
+fresh_01-A_base-0.3-003,insufficient photometric evidence,L0,Centre and source stamps inspected.,3.843497661761292,0.0,Canes Venatici I,82.85791290431753,figures/fresh_01-base/candidate-main-A-6-images.png
+fresh_03-A_base-0.3-001,insufficient photometric evidence,L0,Candidate-centre mosaics present; three source stamps unavailable.,0.0,0.0,DELVE 5,630.9277362862066,figures/fresh_03-base/candidate-main-A-1-images.png
+fresh_03-A_base-0.3-002,insufficient photometric evidence,L0,Bright-source streak crosses the centre mosaic; highest-contribution source stamp unavailable.,0.1456890364895389,0.0,DELVE 5,622.93200184503,figures/fresh_03-base/candidate-main-A-2-images.png
+fresh_03-A_base-0.3-003,insufficient photometric evidence,L0,Centre and source stamps inspected.,10.47953671619662,0.05433807835192406,DELVE 4,579.2862934338871,figures/fresh_03-base/candidate-main-A-4-images.png
+fresh_03-A_base-0.3-004,insufficient photometric evidence,L0,Second high-contribution stamp has bright off-centre light.,9.38376924672356,0.07842320063734176,DELVE 4,581.1887230755856,figures/fresh_03-base/candidate-main-A-5-images.png
+fresh_03-A_base-0.3-005,insufficient photometric evidence,L0,Centre and source stamps inspected.,0.11774199298923782,0.0,DELVE 5,590.5301320509326,figures/fresh_03-base/candidate-main-A-6-images.png
+fresh_03-A_base-0.3-006,insufficient photometric evidence,L0,Centre and source stamps inspected.,2.71197174836235,0.0,DELVE 4,624.230654864721,figures/fresh_03-base/candidate-main-A-7-images.png
+fresh_05-A_base-0.3-001,insufficient photometric evidence,L0,Centre and source stamps inspected.,1.702813360248685,0.0,Koposov 2,854.4937264531488,figures/fresh_05-base/candidate-main-A-1-images.png
+fresh_05-A_base-0.3-002,insufficient photometric evidence,L0,Centre and source stamps inspected.,5.131859219709482,0.0,Koposov 2,809.5061843652763,figures/fresh_05-base/candidate-main-A-2-images.png
+fresh_07-A_base-0.3-001,insufficient photometric evidence,L0,Second high-contribution stamp has a bright neighbouring source.,6.102838561683489,0.0072571965305840425,DELVE 5,399.6667591642915,figures/fresh_07-base/candidate-main-A-1-images.png
+fresh_07-A_base-0.3-002,insufficient photometric evidence,L0,Centre and source stamps inspected.,3.234403986942694,0.0,Bootes III,471.6718491236137,figures/fresh_07-base/candidate-main-A-2-images.png
+fresh_07-A_base-0.3-003,insufficient photometric evidence,L0,Centre and source stamps inspected.,1.4697940748919116,0.0,DELVE 5,421.0891157461152,figures/fresh_07-base/candidate-main-A-3-images.png
+fresh_09-A_base-0.3-001,insufficient photometric evidence,L0,Third high-contribution stamp has a bright neighbouring source.,5.7986139718625616,0.0,Balbinot 1,238.1644102527804,figures/fresh_09-base/candidate-main-A-1-images.png
+fresh_11-A_base-0.3-001,insufficient photometric evidence,L0,Candidate-centre mosaics present; three source stamps unavailable.,0.0,0.0,Koposov 2,422.639918555424,figures/fresh_11-base/candidate-main-A-1-images.png
+fresh_11-A_base-0.3-002,insufficient photometric evidence,L0,Centre and source stamps inspected.,0.0,0.0,Koposov 2,452.6643153436695,figures/fresh_11-base/candidate-main-A-2-images.png
+fresh_11-A_base-0.3-003,insufficient photometric evidence,L0,Centre and source stamps inspected.,0.0,0.0,Koposov 2,476.4726510708306,figures/fresh_11-base/candidate-main-A-3-images.png

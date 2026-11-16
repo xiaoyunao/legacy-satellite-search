@@ -1,0 +1,7 @@
+policy,branch,budget,cutoff,dev_area_deg2,eval_area_deg2,evaluation_kind,target_dev_sky_groups,dev_sky_groups,evaluation_sky_groups,benchmark_n,spatial_n,correct_mode_n,blind_correct_n
+A_base,main,0.1,6.9232059661508565,61.09968171296295,0,development,6,6,0,0,0,0,0
+A_base,main,0.3,6.137901371660258,61.09968171296295,0,development,18,18,0,0,0,0,0
+A_deep,main,0.1,11.550494964542212,61.09968171296295,0,development,6,6,0,0,0,0,0
+A_deep,main,0.3,7.520695022636638,61.09968171296295,0,development,18,18,0,0,0,0,0
+A_union,main,0.1,1.5358281288865225,61.09968171296295,0,development,6,6,0,0,0,0,0
+A_union,main,0.3,1.0601084362402422,61.09968171296295,0,development,18,18,0,0,0,0,0

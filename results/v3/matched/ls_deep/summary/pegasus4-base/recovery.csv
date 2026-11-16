@@ -1,0 +1,2 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+Pegasus_IV,main,A,ls_deep,True,0.9976744186046511,0.9974987125726477,True,19.77000101022592,False,25.447979693181132,1,19.75,0.435321870125677,1,25.447979693181132,19.75,2,0.4353218701256261,0.27359633848421927,-0.020001010225918492,-0.8247061866254484

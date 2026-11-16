@@ -1,0 +1,7 @@
+survey,policy,budget,name,field,covered,spatial,blind_correct,correct_mode_exists,blind_dm,blind_dm_error,correct_mode_dm,wide_mode_exists,offset_arcmin,representative_channel
+ls_base,A_base,0.3,Aquarius_IV,aquarius4,False,False,False,False,,,,,,
+ls_base,A_base,0.3,Pegasus_IV,pegasus4,True,True,False,True,20.25,0.4799989897740815,20.0,True,0.35039183346584296,A_base
+ls_deep,A_base,0.3,Aquarius_IV,aquarius4,False,False,False,False,,,,,,
+ls_deep,A_base,0.3,Pegasus_IV,pegasus4,True,True,True,True,19.75,-0.020001010225918492,19.75,True,0.435321870125677,A_base
+ps1,A_base,0.3,Aquarius_IV,aquarius4,False,False,False,False,,,,,,
+ps1,A_base,0.3,Pegasus_IV,pegasus4,True,True,True,True,19.75,-0.020001010225918492,19.75,True,1.0325345612306471,A_base

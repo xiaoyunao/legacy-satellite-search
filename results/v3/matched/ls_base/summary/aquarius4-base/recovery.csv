@@ -1,0 +1,2 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,failure_reason
+Aquarius_IV,main,A,ls_base,False,0.0,0.0,False,20.187132489703117,False,insufficient usable area at the fixed diagnostic aperture

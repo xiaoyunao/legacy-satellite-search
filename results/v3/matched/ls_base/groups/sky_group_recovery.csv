@@ -1,0 +1,3 @@
+policy,budget,name,field,covered,spatial,blind_correct,correct_mode_exists,blind_dm,blind_dm_error,correct_mode_dm,wide_mode_exists,offset_arcmin,representative_channel
+A_base,0.3,Aquarius_IV,aquarius4,False,False,False,False,,,,,,
+A_base,0.3,Pegasus_IV,pegasus4,True,True,False,True,20.25,0.4799989897740815,20.0,True,0.35039183346584296,A_base

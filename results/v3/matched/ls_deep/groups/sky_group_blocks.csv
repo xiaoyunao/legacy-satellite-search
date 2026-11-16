@@ -1,0 +1,5 @@
+policy,branch,budget,field,role,area_deg2,kept_sky_groups,passing_hypotheses,cutoff
+A_base,main,0.3,aquarius4,recovery,0.15208140432098763,0,0,5.931712852650271
+A_base,main,0.3,fresh_01,pilot_dev,4.16532986111111,1,1,5.931712852650271
+A_base,main,0.3,fresh_03,pilot_dev,4.159809027777777,1,1,5.931712852650271
+A_base,main,0.3,pegasus4,recovery,4.253734567901234,12,31,5.931712852650271
