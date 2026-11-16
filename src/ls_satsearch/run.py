@@ -38,7 +38,7 @@ def write_csv(path, rows, keys=()):
     fields = list(dict.fromkeys([*keys, *(k for row in rows for k in row)]))
     tmp = path.with_suffix(path.suffix + '.tmp')
     with tmp.open('w', newline='') as f:
-        writer = csv.DictWriter(f, fields)
+        writer = csv.DictWriter(f, fields, lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
     tmp.replace(path)

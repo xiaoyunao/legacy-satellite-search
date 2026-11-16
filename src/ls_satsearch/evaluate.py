@@ -56,7 +56,8 @@ def evaluate(summary):
     manifests = {}
     for path in sorted(summary.glob('*/manifest.json')):
         m = json.loads(path.read_text())
-        if m['status'] in ('complete', 'no_usable_gr'):
+        canonical = f"{m['field']['id']}-{m['depth']}"
+        if path.parent.name == canonical and m['status'] in ('complete', 'no_usable_gr'):
             manifests[path.parent] = m
     recovery = []
     forced = []
@@ -103,7 +104,7 @@ def evaluate(summary):
             kept = [r for r in eligible if r.get('score') and survives(r, cutoff)]
             retained = {r['name'] for r in kept}
             for row in recovery:
-                if row['method'] == method and row['depth'] == depth:
+                if row['method'] == method and row['depth'] == depth and row in eligible:
                     row[f'passes_budget_{budget}'] = row['name'] in retained
             lo, hi = interval(len(ev_kept), ev_area) if ev_area else (None, None)
             matched_recovery = [float(r['offset_arcmin']) for r in kept]
@@ -136,6 +137,8 @@ def evaluate(summary):
             peers = [q for q in chosen if q['field_id'] == r['field_id'] and q['method'] != r['method']]
             refs = csv_or_empty(summary / r['field'] / 'candidate_refits.csv')
             refit = next((q for q in refs if q['method'] == r['method'] and q['rank'] == r['rank']), {})
+            checks = csv_or_empty(summary / r['field'] / 'review.csv')
+            review = next((q for q in checks if q['method'] == r['method'] and q['rank'] == r['rank']), {})
             matches = []
             for q in peers:
                 other = SkyCoord(float(q['ra_deg']), float(q['dec_deg']), unit='deg')
@@ -144,9 +147,16 @@ def evaluate(summary):
             candidates.append(dict(**r, depth=depth, evidence_level='L0', budget_per_deg2=highest_budget,
                                    nearest_known=references[i][0], nearest_known_arcmin=float(sep[i]),
                                    nearest_known_catalog=references[i][3], other_method=';'.join(matches),
-                                   C_ts=refit.get('ts'), C_fit_rh=refit.get('fit_rh_arcmin'),
-                                   C_fit_dm=refit.get('fit_dm'), C_richness=refit.get('richness'),
-                                   C_fixed_fit_ts_drop_top3=refit.get('fixed_fit_ts_drop_top3')))
+                                   C_ts=review.get('ts', refit.get('ts')),
+                                   C_fit_rh=review.get('fit_rh_arcmin', refit.get('fit_rh_arcmin')),
+                                   C_fit_dm=review.get('fit_dm', refit.get('fit_dm')),
+                                   C_richness=review.get('richness', refit.get('richness')),
+                                   C_refit_TS_without_top1=review.get('C_refit_TS_without_top1'),
+                                   C_refit_TS_without_top3=review.get('C_refit_TS_without_top3'),
+                                   C_fixed_fit_ts_drop_top3=refit.get('fixed_fit_ts_drop_top3'),
+                                   cmd_on_snr5=review.get('cmd_on_snr5'),
+                                   cmd_on_snr7=review.get('cmd_on_snr7'),
+                                   diagnostic_reviewed=bool(review)))
     if recovery:
         write_csv(summary / 'known_recovery_summary.csv', recovery)
     if report:
