@@ -43,6 +43,15 @@ def download(query):
             time.sleep(2**attempt)
 
 
+def boundary_repeats(ids, previous, page_size):
+    """Accept an equal boundary while rejecting reversed and stalled pages."""
+    if (len(ids) > page_size or any(a > b for a,b in zip(ids,ids[1:])) or
+            (previous is not None and ids and
+             (ids[0] < previous or (len(ids) == page_size and ids[-1] == previous)))):
+        raise ValueError('MAST pagination reversed order or stopped advancing')
+    return sum(ident == previous for ident in ids)
+
+
 def acquire(field_id):
     _,data,_=settings()
     matched=yaml.safe_load(config_path('matched.yaml').read_text())
@@ -53,6 +62,7 @@ def acquire(field_id):
     result=[]
     for i,(ra,dec) in enumerate(tiles):
         total=0
+        previous=None
         for page in range(1,21):
             query=URL+'.csv?'+urlencode(dict(ra=f'{ra:.8f}',dec=f'{dec:.8f}',radius=RADIUS,
                         primaryDetection=1,columns='['+','.join(COLUMNS)+']',sort_by='objID.asc',
@@ -67,15 +77,13 @@ def acquire(field_id):
                 raise ValueError(f'Invalid MAST response for {field_id}, cone {i}, page {page}')
             ids = [int(r['objID']) for r in reader]
             count = len(ids)
-            if (any(a > b for a,b in zip(ids,ids[1:])) or
-                    (page > 1 and count and ids[0] <= previous)):
-                raise ValueError('MAST paging returned unordered or repeated results')
+            repeats=boundary_repeats(ids,previous,PAGE_SIZE)
             if not path.exists():
                 tmp=path.with_suffix('.tmp')
                 tmp.write_bytes(contents)
                 tmp.replace(path)
             result.append(dict(tile=i,page=page,ra_deg=ra,dec_deg=dec,radius_deg=RADIUS,
-                               rows=count,path=path.name,sha256=sha(path),url=query))
+                               rows=count,boundary_repeats=repeats,path=path.name,sha256=sha(path),url=query))
             total+=count
             if count<PAGE_SIZE:
                 break
