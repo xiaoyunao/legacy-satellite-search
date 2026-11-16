@@ -1,0 +1,46 @@
+{
+  "field": {
+    "id": "dev_deep",
+    "role": "pilot_dev",
+    "layer": "deep",
+    "survey": 3,
+    "ra": 241.3262195121951,
+    "dec": 24.5,
+    "width": 2.7,
+    "effective_area_deg2": 7.141440972222221,
+    "effective_fraction": 0.9796215325407712,
+    "center_brick_g5": 24.893531799316406,
+    "center_brick_r5": 24.29742431640625,
+    "center_brick_g_seeing": 1.5243384838104248,
+    "max_inner_brick_ebv": 0.08388583362102509,
+    "other_search_overlap": "unknown"
+  },
+  "timing": {
+    "blank": {
+      "A": 38.24837674497394,
+      "B": 0.0,
+      "cmd": 22.954251159913838,
+      "shared": 0.7789786949870177
+    },
+    "overlay": {
+      "A": 38.20704052603105,
+      "B": 0.0,
+      "cmd": 23.139789986074902,
+      "shared": 0.7891569689963944
+    },
+    "isolated": {
+      "A": 37.57195975986542,
+      "B": 0.0,
+      "cmd": 23.00929234706564,
+      "shared": 0.7896040639607236
+    }
+  },
+  "rng_keys": [
+    481705,
+    80,
+    241326
+  ],
+  "cutoff_policy_sha256": "cefd974faea986e5c7f5436dd1aaedf80baf42a7041985ec536655ebbc189948",
+  "status": "complete",
+  "job": "61395361"
+}
