@@ -1,6 +1,7 @@
 """Calibrate review budgets on development fields and score frozen evaluation data."""
 
 import argparse
+import csv
 import json
 import math
 from pathlib import Path
@@ -55,18 +56,62 @@ def source_references():
     return rows
 
 
-def evaluate(summary):
+def sky_group_count(rows, depth):
+    grouped = [dict(r, depth=depth) for r in rows]
+    group_candidates(grouped)
+    return len({r['candidate_group_id'] for r in grouped})
+
+
+def strict_recovery(path, rows, truth, cfg):
+    if not rows or not (path/'deduplicated_peaks.csv').exists():
+        return
+    ra,dec = float(truth['ra_deg']),float(truth['dec_deg'])
+    reference = SkyCoord(ra,dec,unit='deg')
+    radius = max(cfg['match_min_arcmin'],cfg['match_rh_factor']*float(truth['theta_h_arcmin']))
+    branch, dm = rows[0]['branch'],float(rows[0]['truth_dm'])
+    matches = {}
+    with (path/'deduplicated_peaks.csv').open() as handle:
+        for peak in csv.DictReader(handle):
+            method = peak['method']
+            if method in matches or peak['branch']!=branch or abs(float(peak['dm'])-dm)>.25:
+                continue
+            pdec = float(peak['dec_deg'])
+            if abs(pdec-dec)*60 > radius:
+                continue
+            pra = float(peak['ra_deg'])
+            dra = (pra-ra+180)%360-180
+            if abs(dra)*60*max(.05,np.cos(np.deg2rad(dec))) > 1.1*radius:
+                continue
+            distance = reference.separation(SkyCoord(pra,pdec,unit='deg')).arcmin
+            if distance <= radius:
+                matches[method] = (peak,distance)
+    for row in rows:
+        if row['method'] in matches and row['covered']=='True':
+            peak, distance = matches[row['method']]
+            row.update(strict_score=peak['score'],strict_rank=peak['rank'],
+                       strict_dm=peak['dm'],strict_offset_arcmin=distance)
+
+
+def evaluate(summary, include_saved_benchmarks=False):
     manifests = {}
     for path in sorted(summary.glob('*/manifest.json')):
         m = json.loads(path.read_text())
         canonical = f"{m['field']['id']}-{m['depth']}"
-        if path.parent.name == canonical and m['status'] in ('complete', 'no_usable_gr'):
+        done = m['status'] in ('complete','no_usable_gr')
+        if include_saved_benchmarks and m['status']=='prepared' and m['field'].get('truth'):
+            products = [path.parent / name for name in ('recovery.csv','deduplicated_peaks.csv')]
+            done = all(p.is_file() and p.stat().st_mtime >= path.stat().st_mtime for p in products)
+        if path.parent.name == canonical and done:
             manifests[path.parent] = m
     recovery = []
     forced = []
+    truths = {r['name']:r for r in read_csv(Path('references/benchmarks.csv'))}
     for path, m in manifests.items():
+        recovered = csv_or_empty(path/'recovery.csv')
+        if recovered and all('branch' in r for r in recovered):
+            strict_recovery(path,recovered,truths[m['field']['truth']],m['config'])
         recovery.extend(dict(r, field=m['field']['id'], role=m['field']['role']) for r in
-                        csv_or_empty(path / 'recovery.csv'))
+                        recovered)
         forced.extend(dict(r, field=m['field']['id']) for r in csv_or_empty(path / 'forced_fit.csv'))
     if any('branch' not in row for row in recovery):
         raise ValueError('Use a v2 results workspace with branch-aware recovery')
@@ -119,8 +164,8 @@ def evaluate(summary):
                         row[f'passes_budget_{budget}'] = row['name'] in retained
                         row[f'passes_spatial_budget_{budget}'] = bool(row.get('spatial_score') and
                             survives({'score':row['spatial_score']}, cutoff))
-                        row[f'passes_dm025_budget_{budget}'] = (
-                            row['name'] in retained and abs(float(row['delta_dm'])) <= .25)
+                        row[f'passes_dm025_budget_{budget}'] = bool(row.get('strict_score') and
+                            survives({'score':row['strict_score']},cutoff))
                 lo, hi = interval(len(ev_kept), ev_area) if ev_area else (None, None)
                 matched_recovery = [float(r['offset_arcmin']) for r in kept]
                 dm = [abs(float(r['delta_dm'])) for r in kept]
@@ -137,7 +182,11 @@ def evaluate(summary):
                            des_control_area_deg2=control_area,
                            des_control_peaks=len(ctrl_kept) if control_area else None,
                            development_fields=len(dev), evaluation_fields=len(ev),
+                       development_sky_groups=sky_group_count(dev_kept,depth),
+                       evaluation_sky_groups=sky_group_count(ev_kept,depth) if ev_area else None,
                            benchmark_eligible=len(eligible), benchmark_recovered=len(kept),
+                           benchmark_strict_recovered=sum(bool(r.get(f'passes_dm025_budget_{budget}')) for r in eligible),
+                           benchmark_spatial_recovered=sum(bool(r.get(f'passes_spatial_budget_{budget}')) for r in eligible),
                            heldout_benchmark_eligible=sum(r['role'] == 'recovery_evaluation' for r in eligible),
                            heldout_benchmark_recovered=sum(r['role'] == 'recovery_evaluation' for r in kept),
                            median_offset_arcmin=np.median(matched_recovery) if matched_recovery else None,
@@ -149,9 +198,11 @@ def evaluate(summary):
                 cuts.append(dict(branch=branch, depth=depth, method=method, budget=budget, cutoff=cutoff))
                 for pool, retained_peaks in ((dev, dev_kept), (ev, ev_kept), (ctrl, ctrl_kept)):
                     for path, m in pool.items():
-                        n = sum(r['field'] == path.name for r in retained_peaks)
+                        scoped = [r for r in retained_peaks if r['field'] == path.name]
+                        n = len(scoped)
                         blocks.append(dict(field=m['field']['id'], role=m['field']['role'], branch=branch,
                                            method=method, depth=depth, budget=budget, retained=n,
+                                           sky_groups=sky_group_count(scoped,depth),
                                            area_deg2=m['area_deg2'], rate=n/m['area_deg2']))
             # Publish the fixed 0.3-budget L0 list. Keep A/B as separate entries with cross-association.
             highest_budget = max(budgets)
@@ -210,4 +261,7 @@ def evaluate(summary):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--summary', type=Path, default=Path('results/summary'))
-    evaluate(p.parse_args().summary)
+    p.add_argument('--include-saved-benchmarks',action='store_true',
+                   help='Use already written benchmark scan outputs while optional follow-up plots are running')
+    args=p.parse_args()
+    evaluate(args.summary,args.include_saved_benchmarks)

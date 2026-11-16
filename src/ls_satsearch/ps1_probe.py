@@ -1,5 +1,6 @@
 """Exercise access to real PS1 stack photometry and its native PARSEC template."""
 
+import argparse
 import csv
 import hashlib
 import json
@@ -9,6 +10,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 
 import numpy as np
+import yaml
 
 from .run import read_csv, settings, write_csv
 from .search import load_isochrone
@@ -18,16 +20,23 @@ COLS=('objID','raStack','decStack','primaryDetection','gPSFMag','rPSFMag',
       'gPSFMagErr','rPSFMagErr','rKronMag')
 
 
-def main():
+def main(fresh=None):
     _,data,cfg=settings()
     dest=data/'resources/ps1'
     native=data/'resources/isochrones/ps1'/Path(cfg['isochrone']).parent.name/Path(cfg['isochrone']).name
     model=load_isochrone(native,bands=('gP1','rP1'))
     known=read_csv(Path('references/benchmarks.csv'))
+    names=('Pegasus_IV','Leo_Minor_I','Aquarius_IV')
+    targets=[(name,'benchmark',row['ra_deg'],row['dec_deg']) for name in names
+             for row in known if row['name']==name]
+    if fresh is not None:
+        fields=yaml.safe_load(fresh.read_text())['fields']
+        for role in ('pilot_dev','pilot_eval'):
+            field=next(r for r in fields if r['role']==role and r['layer']=='ordinary')
+            targets.append((field['id'],role,field['ra'],field['dec']))
     result=[]
-    for name in ('Pegasus_IV','Leo_Minor_I','Aquarius_IV'):
-        row=next(r for r in known if r['name']==name)
-        request=dict(ra=row['ra_deg'],dec=row['dec_deg'],radius=.35,primaryDetection=1,
+    for name,role,ra,dec in targets:
+        request=dict(ra=ra,dec=dec,radius=.35,primaryDetection=1,
                      columns='['+','.join(COLS)+']',pagesize=50000)
         query=URL+'.csv?'+urlencode(request)
         path=dest/f'{name}-035deg.csv'
@@ -45,7 +54,7 @@ def main():
         gr=np.array([[float(r[k]) for k in COLS[4:]] for r in rows.values()])
         valid=np.all((gr[:,:2]>0)&(gr[:,:2]<35),axis=1) & np.all((gr[:,2:4]>0)&(gr[:,2:4]<.217),axis=1)
         morphology=(gr[:,4]>0)&(gr[:,1]-gr[:,4]<.05)
-        result.append(dict(name=name,release='PS1 DR2 stack',radius_deg=.35,unique_rows=len(rows),
+        result.append(dict(name=name,role=role,release='PS1 DR2 stack',radius_deg=.35,unique_rows=len(rows),
                            possible_page_cap=len(rows)>=50000,valid_gr=int(valid.sum()),
                            morphology_proxy_gr=int((valid&morphology).sum()), query=query,
                            native_template_rows=len(model[0]), native_template_sha256=hashlib.sha256(
@@ -55,4 +64,6 @@ def main():
 
 
 if __name__=='__main__':
-    main()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--fresh',type=Path)
+    main(parser.parse_args().fresh)

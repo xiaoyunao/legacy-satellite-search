@@ -1,0 +1,170 @@
+[
+  {
+    "branch": "near",
+    "depth": "base",
+    "method": "A",
+    "budget": 0.1,
+    "cutoff": 7.2530304384469515
+  },
+  {
+    "branch": "near",
+    "depth": "base",
+    "method": "A",
+    "budget": 0.3,
+    "cutoff": 6.344098194853418
+  },
+  {
+    "branch": "near",
+    "depth": "base",
+    "method": "B",
+    "budget": 0.1,
+    "cutoff": 18.145079354447272
+  },
+  {
+    "branch": "near",
+    "depth": "base",
+    "method": "B",
+    "budget": 0.3,
+    "cutoff": 17.93138637742343
+  },
+  {
+    "branch": "main",
+    "depth": "base",
+    "method": "A",
+    "budget": 0.1,
+    "cutoff": 6.5315731795491745
+  },
+  {
+    "branch": "main",
+    "depth": "base",
+    "method": "A",
+    "budget": 0.3,
+    "cutoff": 5.9828478331292665
+  },
+  {
+    "branch": "main",
+    "depth": "base",
+    "method": "B",
+    "budget": 0.1,
+    "cutoff": 21.070111827641487
+  },
+  {
+    "branch": "main",
+    "depth": "base",
+    "method": "B",
+    "budget": 0.3,
+    "cutoff": 19.087378832279814
+  },
+  {
+    "branch": "far",
+    "depth": "base",
+    "method": "A",
+    "budget": 0.1,
+    "cutoff": 5.903247589186651
+  },
+  {
+    "branch": "far",
+    "depth": "base",
+    "method": "A",
+    "budget": 0.3,
+    "cutoff": 5.514322186520476
+  },
+  {
+    "branch": "far",
+    "depth": "base",
+    "method": "B",
+    "budget": 0.1,
+    "cutoff": 20.18428985680001
+  },
+  {
+    "branch": "far",
+    "depth": "base",
+    "method": "B",
+    "budget": 0.3,
+    "cutoff": 20.09330546724096
+  },
+  {
+    "branch": "near",
+    "depth": "deep",
+    "method": "A",
+    "budget": 0.1,
+    "cutoff": 14.755642022460048
+  },
+  {
+    "branch": "near",
+    "depth": "deep",
+    "method": "A",
+    "budget": 0.3,
+    "cutoff": 11.684205978318532
+  },
+  {
+    "branch": "near",
+    "depth": "deep",
+    "method": "B",
+    "budget": 0.1,
+    "cutoff": 19.794988979156287
+  },
+  {
+    "branch": "near",
+    "depth": "deep",
+    "method": "B",
+    "budget": 0.3,
+    "cutoff": 19.06497122792631
+  },
+  {
+    "branch": "main",
+    "depth": "deep",
+    "method": "A",
+    "budget": 0.1,
+    "cutoff": 9.805437599452885
+  },
+  {
+    "branch": "main",
+    "depth": "deep",
+    "method": "A",
+    "budget": 0.3,
+    "cutoff": 8.47631024087869
+  },
+  {
+    "branch": "main",
+    "depth": "deep",
+    "method": "B",
+    "budget": 0.1,
+    "cutoff": 25.617696403804654
+  },
+  {
+    "branch": "main",
+    "depth": "deep",
+    "method": "B",
+    "budget": 0.3,
+    "cutoff": 21.89314499246024
+  },
+  {
+    "branch": "far",
+    "depth": "deep",
+    "method": "A",
+    "budget": 0.1,
+    "cutoff": 12.935800919487253
+  },
+  {
+    "branch": "far",
+    "depth": "deep",
+    "method": "A",
+    "budget": 0.3,
+    "cutoff": 10.181650067200927
+  },
+  {
+    "branch": "far",
+    "depth": "deep",
+    "method": "B",
+    "budget": 0.1,
+    "cutoff": 27.4639588610885
+  },
+  {
+    "branch": "far",
+    "depth": "deep",
+    "method": "B",
+    "budget": 0.3,
+    "cutoff": 22.46830251020489
+  }
+]

@@ -1,0 +1,3 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+Aquarius_IV,main,A,deep,True,1.0,1.0,True,20.187132489703117,False,5.854310475682892,5,20.5,0.9756871257412714,5,5.854310475682892,20.5,1,0.9756871257412651,1.6261452095687754,0.31286751029688276,16.892541179416753
+Aquarius_IV,main,B,deep,True,1.0,1.0,True,20.187132489703117,False,8.054536527044567,130,20.0,0.032513204869106985,130,8.054536527044567,20.0,0.5,0.03251320486910884,0.054188674781848065,-0.18713248970311724,-9.0

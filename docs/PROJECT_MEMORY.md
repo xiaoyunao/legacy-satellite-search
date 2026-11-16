@@ -9,3 +9,7 @@ Comparison uses an identical catalog and area definition for A and B. C fits a s
 ## First-round result
 
 A gave fewer held-out review peaks and more benchmark recoveries in the baseline comparison. The +0.5 mag cut recovered Virgo II at the tighter budget with the same observed review count in 14.189 effective evaluation deg². Virgo II has a high fraction of forced PSF objects near its centre. The gain therefore needs independent weak systems with ordinary catalog processing. Pegasus IV raw B peaks provide a concrete compact-versus-broad merge diagnostic. The L0 sample is sensitive to dropping its strongest few sources.
+
+## Branch-aware result
+
+The old fields are development/regression evidence. At the 0.3 main-branch budget A recovers 6/7 at both depths. Separately requiring a compatible distance within 0.25 mag gives 4/7 at baseline and 6/7 when deep. DELVE 3 is recovered by both methods at both depths. Aquarius IV fails both depths. Of 36 matched-population injections, A has one baseline-only and two deep-only at 0.3. All twelve 80 pc trials fail both depths and methods despite increased usable member counts. Use small fresh LS/PS1 comparisons and ordinary-processing cases before expanding to the full frozen area.

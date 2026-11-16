@@ -1,0 +1,4 @@
+field_id,depth,branch,method,rank,assessment,assessment_reason
+eval_ordinary,base,main,B,1,L0 follow-up only,Two compact bright cutouts and a neighboring image feature within the third cutout. Check blending before interpreting this sparse CMD peak.
+eval_ordinary,base,main,B,2,L0 follow-up only,The three strongest contributors are visible in both bands. Their image morphology alone leaves stellar membership and the spatial association uncertain.
+eval_ordinary,deep,main,B,1,L0 follow-up only,The g/r mosaic crosses the brick boundary. The third high-probability source is offset from brighter extended light in both bands. Check the deblend before interpreting it as a member.

@@ -4,7 +4,7 @@ A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. I
 
 ## Branch-aware revision
 
-The current code writes branch-aware results. The original scientific report and baseline files remain under their original paths and are reproducible from commit `4e9f4f2`. The revision is deployed in `$HOME/projects/legacy-satellite-search/revisions/branch-v2` and writes source-level work products under `$PSCRATCH/legacy-satellite-search/runs/v2`. The original four PS1 fields are now regression data.
+The current code writes branch-aware results. See the [second science report](second_science_report.md) for the completed regression, audit and paired results. The original scientific report and baseline files remain under their original paths and are reproducible from commit `4e9f4f2`. The revision is deployed in `$HOME/projects/legacy-satellite-search/revisions/branch-v2` and writes source-level work products under `$PSCRATCH/legacy-satellite-search/runs/v2`. The original four PS1 fields are now regression data.
 
 From the NERSC revision directory with its own `src`, `configs`, `references`, `scripts` and `.venv`:
 

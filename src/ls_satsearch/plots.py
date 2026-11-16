@@ -60,7 +60,9 @@ def candidate(path, spec, field, area, sample, sources, valid, mags, chosen, pea
     ax.legend()
     ax = axes[1, 1]
     nearby = [p for p in raw if p['method'] == peak['method'] and np.hypot(p['x']-x,p['y']-y) < rh]
-    by_dm = {p['dm']: max(q['score'] for q in nearby if q['dm'] == p['dm']) for p in nearby}
+    by_dm = {}
+    for p in nearby:
+        by_dm[p['dm']] = max(p['score'],by_dm.get(p['dm'],-np.inf))
     if by_dm:
         points = np.array(sorted(by_dm.items()))
         ax.plot(*points.T, '.-')

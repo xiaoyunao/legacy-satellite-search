@@ -1,0 +1,3 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+Leo_Minor_I,main,A,deep,True,1.0,0.9814437832759161,True,19.569069261918585,False,10.465744076852223,1,20.5,0.40512977167230196,4,9.661659681083655,19.75,1,0.7020473574753274,0.6440801444727774,0.1809307380814147,7.125093813374548
+Leo_Minor_I,main,B,deep,True,1.0,0.9814437832759161,True,19.569069261918585,False,22.980358884607597,36,16.75,0.056415821505312214,137,18.494025027995566,20.0,1,0.7020473574753274,0.6440801444727774,0.4309307380814147,18.0

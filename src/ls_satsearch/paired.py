@@ -16,7 +16,7 @@ from .run import config_path, coverage_metrics, field_cache, read_csv, settings,
 from .search import load_isochrone, scan
 
 
-def run(field_id, radius, mismatch=False):
+def run(field_id, radius, mismatch=False, legacy_locus=False):
     root, data_root, base = settings()
     deep = dict(base, g_max=base['g_max']+.5, r_max=base['r_max']+.5)
     spec = next(f for f in yaml.safe_load(config_path('fields.yaml').read_text())['fields'] if f['id']==field_id)
@@ -26,7 +26,7 @@ def run(field_id, radius, mismatch=False):
     background = {name:select(data,field,area,cfg)[0] for name,cfg in (('base',base),('deep',deep))}
     tree = cKDTree(background['deep'][:,:2])
     template = data_root/'resources'/base['isochrone']
-    model = load_isochrone(template)
+    model = load_isochrone(template,legacy_locus=legacy_locus)
     injected_model = load_isochrone(template.with_name('iso_a10.0_z0.00010.dat')) if mismatch else model
     rng = np.random.default_rng(np.random.SeedSequence([base['seed'], radius, int(spec['ra']*1000)]))
     conditions = list(product((50,100),(12,22,36)))
@@ -57,16 +57,15 @@ def run(field_id, radius, mismatch=False):
                 rows.append(dict(t,field=field_id,method=method,depth=depth,
                                  injected_score=peak.get('score'), blank_score=blank.get('score'),
                                  found_dm=peak.get('dm'), found_rank=peak.get('rank')))
-    output=Path('results/summary/paired_trials')
+    output=Path('results/summary')/('legacy_locus_trials' if legacy_locus else 'paired_trials')
     output.mkdir(exist_ok=True,parents=True)
     name=f'{field_id}-{radius}pc-{10 if mismatch else 12}gyr'
     write_csv(output/f'{name}.csv',rows)
     write_json(output/f'{name}.json',dict(timing=timing,seed=base['seed'],rng_keys=[radius,int(spec['ra']*1000)],
-                                         truncate_rh=3,field=field_id))
+                                         truncate_rh=3,legacy_locus=legacy_locus,field=field_id))
 
 
-def combine():
-    dest=Path('results/summary')
+def combine(dest=Path('results/summary')):
     cuts={(r['method'],r['budget'],r['depth']):r['cutoff']
           for r in json.loads((dest/'review_cutoffs.json').read_text()) if r['branch']=='main'}
     pairs={}
@@ -104,10 +103,12 @@ if __name__=='__main__':
     parser.add_argument('field',nargs='?')
     parser.add_argument('radius',nargs='?',type=int,choices=(10,30,80))
     parser.add_argument('--mismatch',action='store_true')
+    parser.add_argument('--legacy-locus',action='store_true')
+    parser.add_argument('--summary',type=Path,default=Path('results/summary'))
     args=parser.parse_args()
     if args.field:
         if args.radius is None:
             parser.error('Specify the radius in parsecs')
-        run(args.field,args.radius,args.mismatch)
+        run(args.field,args.radius,args.mismatch,args.legacy_locus)
     else:
-        combine()
+        combine(args.summary)

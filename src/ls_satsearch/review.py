@@ -7,7 +7,7 @@ from pathlib import Path
 
 import fitsio
 from astropy.wcs import WCS
-from astropy.wcs.utils import proj_plane_pixel_scales
+from scipy.ndimage import map_coordinates
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.spatial import cKDTree
@@ -85,55 +85,79 @@ def observing_page(path, root, bricks, data, valid, field, peak, row):
     return {f'{k}_local_p10_p50_p90': quantile(v) for k, v in zip(('g_depth', 'g_seeing', 'ebv'), values)}
 
 
+def coadd_stamp(files, field, x, y, radius, pixel_scale):
+    n = int(np.ceil(radius/pixel_scale))
+    axis = np.arange(-n,n+1)*pixel_scale
+    xx,yy = np.meshgrid(x+axis/60,y+axis/60)
+    ra,dec = field.sky(xx,yy)
+    stamp = np.full(ra.shape,np.nan)
+    allowed = ('CTYPE','CUNIT','CRPIX','CRVAL','CDELT','CD1_','CD2_','PC1_','PC2_')
+    for path in files:
+        missing = np.isnan(stamp)
+        if not missing.any():
+            break
+        with fitsio.FITS(path) as f:
+            hdu = f[1]
+            hdr = dict(hdu.read_header())
+            wcs = WCS({k:v for k,v in hdr.items() if k.startswith(allowed)})
+            px,py = wcs.world_to_pixel_values(ra[missing],dec[missing])
+            h,w = hdu.get_dims()
+            inside = (px>=0)&(py>=0)&(px<=w-1)&(py<=h-1)
+            if not inside.any():
+                continue
+            px,py = px[inside],py[inside]
+            x0,x1 = int(px.min()), min(w,int(np.ceil(px.max()))+1)
+            y0,y1 = int(py.min()), min(h,int(np.ceil(py.max()))+1)
+            slab = hdu[y0:y1,x0:x1]
+        vals = map_coordinates(slab.astype(float),[py-y0,px-x0],order=1,prefilter=False)
+        stamp.flat[np.flatnonzero(missing)[inside]] = vals
+    edge = (n+.5)*pixel_scale
+    return stamp, [-edge,edge,-edge,edge]
+
+
 def image_cutouts(path, root, bricks, field, peak, member_xy, prob):
-    ra,dec=peak['ra_deg'],peak['dec_deg']
-    inside=((ra-bricks['RA1'])%360 < (bricks['RA2']-bricks['RA1'])%360
-            ) & (bricks['DEC1'] <= dec) & (dec < bricks['DEC2'])
-    if not np.any(inside):
+    x,y = peak['x'],peak['y']
+    bx,by = field.xy(bricks['RA'],bricks['DEC'])
+    near = np.flatnonzero(np.hypot(bx-x,by-y) < 18)
+    ids = near[np.argsort(np.hypot(bx[near]-x,by[near]-y))]
+    if not len(ids):
         return False
-    name=bricks['BRICKNAME'][inside][0].strip()
-    base=root/'south/coadd'/name[:3]/name/f'legacysurvey-{name}'
-    files=[Path(f'{base}-image-{band}.fits.fz') for band in 'gr']
-    if not all(p.is_file() for p in files):
-        return False
-    fig,axes=plt.subplots(2,4,figsize=(12,6),layout='constrained')
-    coords=field.sky(*member_xy.T)
-    strong=np.argsort(prob)[::-1][:3]
-    for band,file,row in zip('gr',files,axes):
-        with fitsio.FITS(file) as f:
-            hdu=f[1]
-            hdr=dict(hdu.read_header())
-            allowed=('CTYPE','CUNIT','CRPIX','CRVAL','CDELT','CD1_','CD2_','PC1_','PC2_')
-            wcs=WCS({k:v for k,v in hdr.items() if k.startswith(allowed)})
-            scale=float(proj_plane_pixel_scales(wcs)[0]*3600)
-            cx,cy=wcs.world_to_pixel_values(ra,dec)
-            xs,ys=wcs.world_to_pixel_values(*coords)
-            h,w=hdu.get_dims()
-            sites=[(cx,cy,min(270,max(30,2*peak['rh_arcmin']*60)),
-                    f'{band} · candidate centre')]
-            sites.extend((xs[i],ys[i],4.,f'{band} · source {j+1}, p={prob[i]:.2f}')
-                         for j,i in enumerate(strong))
-            for ax,(x,y,size,title) in zip(row,sites):
-                half=int(np.ceil(size/scale))
-                x0,x1=max(0,int(x)-half),min(w,int(x)+half+1)
-                y0,y1=max(0,int(y)-half),min(h,int(y)+half+1)
-                if x0>=x1 or y0>=y1:
-                    ax.set_title('Outside coadd')
-                    continue
-                data=hdu[y0:y1,x0:x1]
-                lo,hi=np.nanpercentile(data,(8,99.5))
-                extent=[(x0-.5-x)*scale,(x1-.5-x)*scale,(y0-.5-y)*scale,(y1-.5-y)*scale]
-                ax.imshow(data,origin='lower',extent=extent,cmap='gray',vmin=lo,vmax=hi)
-                if ax is row[0]:
-                    keep=prob>.05
-                    ax.scatter((xs[keep]-x)*scale,(ys[keep]-y)*scale,facecolors='none',
-                               edgecolors='#68e4ff',s=20)
-                ax.plot(0,0,marker='+',color='#ffbb50',ms=9)
-                ax.set(xlabel='Image offset (arcsec)',title=title,xlim=(-size,size),ylim=(-size,size))
-    fig.suptitle(f'LS DR11 · {ra:.5f}, {dec:+.5f} · {name}')
-    fig.savefig(path,dpi=140)
+    fig,axes = plt.subplots(2,4,figsize=(12,6),layout='constrained')
+    strong = np.argsort(prob)[::-1][:3]
+    filled = []
+    for band,row in zip('gr',axes):
+        files = []
+        for i in ids:
+            name = bricks['BRICKNAME'][i].strip()
+            file = root/'south/coadd'/name[:3]/name/f'legacysurvey-{name}-image-{band}.fits.fz'
+            if file.is_file():
+                files.append(file)
+        sites = [(x,y,min(270,max(30,2*peak['rh_arcmin']*60)),.524,f'{band} · candidate centre')]
+        sites.extend((*member_xy[i],4.,.262,f'{band} · source {j+1}, p={prob[i]:.2f}')
+                     for j,i in enumerate(strong))
+        for j,(ax,(cx,cy,size,pixel_scale,title)) in enumerate(zip(row,sites)):
+            stamp,extent = coadd_stamp(files,field,cx,cy,size,pixel_scale)
+            present = np.isfinite(stamp)
+            if not j:
+                filled.append(present.any())
+            if not present.any():
+                ax.set_title(f'{title} · unavailable')
+                continue
+            lo,hi=np.nanpercentile(stamp,(8,99.5))
+            ax.imshow(stamp,origin='lower',extent=extent,cmap='gray',vmin=lo,vmax=hi)
+            if not j:
+                keep=prob>.05
+                ax.scatter((member_xy[keep,0]-cx)*60,(member_xy[keep,1]-cy)*60,facecolors='none',
+                           edgecolors='#68e4ff',s=20)
+            ax.plot(0,0,marker='+',color='#ffbb50',ms=9)
+            ax.set(xlabel='East (arcsec)',ylabel='North (arcsec)',title=title,
+                   xlim=(-size,size),ylim=(-size,size))
+    ra,dec = field.sky(x,y)
+    fig.suptitle(f'LS DR11 · {ra:.5f}, {dec:+.5f}')
+    if all(filled):
+        fig.savefig(path,dpi=140)
     plt.close(fig)
-    return True
+    return all(filled)
 
 
 def review(field_id, depth, group_limit=None):
@@ -212,10 +236,40 @@ def review(field_id, depth, group_limit=None):
         write_csv(out/'review.csv', summary)
 
 
+def refresh_image(field_id, depth, label):
+    """Render a new coadd mosaic from a saved fit and scratch membership table."""
+    root,data_root,cfg = settings()
+    run = f'{field_id}-{depth}'
+    base = Path('results/summary')/run
+    spec = json.loads((base/'manifest.json').read_text())['field']
+    row = next(r for r in read_csv(base/'review.csv')
+               if f"{r['branch']}-{r['method']}-{r['rank']}"==label)
+    bricks = load_bricks(root)
+    field,data,_,_ = field_cache(root,data_root,spec,cfg,bricks)
+    x,y = field.xy(float(row['fit_ra_deg']),float(row['fit_dec_deg']))
+    rh = float(row['fit_rh_arcmin'])
+    with np.load(runs_path(data_root)/run/f'membership-{label}.npz',allow_pickle=False) as saved:
+        probabilities = {tuple(v):p for v,p in zip(saved['source_ids'],saved['probability'])}
+    sx,sy = field.xy(data['RA'],data['DEC'])
+    local = np.flatnonzero(np.hypot(sx-x,sy-y)<=3.5*rh)
+    keys = data[['RELEASE','BRICKID','OBJID']]
+    members = [(i,probabilities[tuple(keys[i])]) for i in local if tuple(keys[i]) in probabilities]
+    idx = np.array([i for i,_ in members],dtype=int)
+    prob = np.array([p for _,p in members])
+    path = Path('results/figures')/run/f'candidate-{label}-images.png'
+    if not image_cutouts(path,root,bricks,field,dict(x=x,y=y,rh_arcmin=rh),
+                         np.column_stack((sx[idx],sy[idx])),prob):
+        raise RuntimeError(f'Incomplete g/r image mosaic for {run} {label}')
+
+
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('field')
     p.add_argument('--depth', choices=('base', 'deep'), default='base')
     p.add_argument('--group-limit',type=int)
+    p.add_argument('--refresh-image', help='Saved hypothesis label, such as main-B-1')
     args = p.parse_args()
-    review(args.field, args.depth, args.group_limit)
+    if args.refresh_image:
+        refresh_image(args.field,args.depth,args.refresh_image)
+    else:
+        review(args.field, args.depth, args.group_limit)

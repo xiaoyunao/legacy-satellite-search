@@ -1,0 +1,3 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+Ursa_Major_III,near,A,deep,True,1.0,0.9956641702798581,True,15.0,False,9.144856404398224,1,14.25,0.5070352619962999,1,9.144856404398224,14.25,1,0.5070352619962621,0.7374522027434545,-0.75,-2.9205421561586213
+Ursa_Major_III,near,B,deep,True,1.0,0.9956641702798581,True,15.0,False,14.77531278205446,45,14.0,0.957307461220501,55,14.089629448019567,14.5,0.5,0.2439952412061518,0.3548763598373235,-0.5,-2.056717652757184

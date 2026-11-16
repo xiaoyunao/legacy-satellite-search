@@ -66,7 +66,7 @@ def figures(base, out):
 
     path = base/'method_comparison.csv'
     if path.exists():
-        all_rows = read_csv(path)
+        all_rows = [r for r in read_csv(path) if r.get('branch','main')=='main']
         rows = [r for r in all_rows if r['evaluation_peaks_per_deg2']]
         if rows:
             fig, axes = plt.subplots(1, 2, figsize=(10, 4.2), layout='constrained')
@@ -79,7 +79,9 @@ def figures(base, out):
                 ax.plot([i-.24, i+.24], [float(r['budget_per_deg2'])]*2, color='0.5', lw=1.2)
             labels = [f"{r['method']} {r['depth']}\n{r['budget_per_deg2']}" for r in rows]
             ax.set(xticks=np.arange(len(rows)), xticklabels=labels, ylim=(0, None),
-                   ylabel='Retained peaks per effective deg²', title='Held-out review density')
+                   ylabel='Retained peaks per effective deg²',
+                   title=('Review density on prior fields' if rows[0].get('evaluation_kind')==
+                          'previously_inspected_regression' else 'Held-out review density'))
             ax.tick_params(axis='x', labelsize=8)
             ax = axes[1]
             for i, r in enumerate(rows):
@@ -117,6 +119,32 @@ def figures(base, out):
             ax.legend()
         axes[0].set_ylabel('Conditional recovery fraction')
         fig.savefig(out/'conditional_injections.png', dpi=160)
+        plt.close(fig)
+
+    paired = base/'paired_depth_summary.csv'
+    if paired.exists():
+        table = [r for r in read_csv(paired) if r['generation_age']=='12' and r['budget']=='0.3']
+        fig, axes = plt.subplots(1,2,figsize=(10,4.2),layout='constrained',sharey=True)
+        for ax, distance in zip(axes,('50','100')):
+            rows = [r for r in table if r['distance_kpc']==distance]
+            for method,color,delta in [('A','#1b6ca8',-.12),('B','#c15338',.12)]:
+                items = sorted((r for r in rows if r['method']==method),key=lambda r:int(r['rh_pc']))
+                for j,r in enumerate(items):
+                    n=int(r['n_pairs'])
+                    if not n:
+                        continue
+                    a=int(r['base_only'])+int(r['both'])
+                    b=int(r['deep_only'])+int(r['both'])
+                    ax.plot([j+delta-.05,j+delta+.05],[a/n,b/n],'.-',color=color,ms=9)
+                    ax.text(j+delta,b/n+.04,f'{a}→{b}',color=color,ha='center',fontsize=8)
+            ax.set(xticks=range(3),xticklabels=['10','30','80'],ylim=(-.06,1.14),
+                   title=f'{distance} kpc',xlabel='Half-light radius (pc)')
+        axes[0].set_ylabel('Recovered fraction')
+        handles=[plt.Line2D([],[],color='#1b6ca8',marker='.',label='A'),
+                 plt.Line2D([],[],color='#c15338',marker='.',label='B')]
+        axes[1].legend(handles=handles,loc='upper right')
+        fig.suptitle('Paired depth trials · counts from baseline to deeper selection')
+        fig.savefig(out/'paired_depth.png',dpi=160)
         plt.close(fig)
 
 

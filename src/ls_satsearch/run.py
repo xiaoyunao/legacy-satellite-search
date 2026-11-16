@@ -211,7 +211,7 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
                     area_fraction=frac, inputs=info, observing_conditions_source_sample=co,
                     cutflow=cutflow, io_seconds=io_time, status='prepared')
     write_json(summary / 'manifest.json', manifest)
-    from .plots import overview, candidate
+    from .plots import overview
 
     overview(figures / 'coverage_cmd.png', field, area, sample, spec, cfg, template)
     if not len(sample) or not effective_area:
@@ -240,32 +240,6 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
             fit, _, _ = point_fit(sample, cmd, field, area, best, ratio=ratio)
             write_csv(summary / 'forced_fit.csv', [dict(name=truth['name'], depth=depth, dm=best['dm'],
                       rh_arcmin=best['rh_arcmin'], n_on=n1, n_off=n2, area_on=a1, area_off=a2, **(fit or {}))])
-    results = []
-    for peak in [p for p in peaks if p['rank'] <= 2]:
-        refit = None
-        for delta in (-.25, 0., .25):
-            dm = peak['dm'] + delta
-            trial = dict(peak, dm=dm)
-            _, ratio = cmd.weights(dm)
-            for factor in (.7, 1., 1.4):
-                rh = trial['rh_arcmin'] * factor
-                fit, indices, prob = point_fit(sample, cmd, field, area, trial, radius=rh, ratio=ratio)
-                if fit and (refit is None or fit['ts'] > refit[0]['ts']):
-                    refit = (dict(fit, fit_dm=dm, fit_rh_arcmin=rh), indices, prob)
-        if refit is None:
-            continue
-        fit, idx, prob = refit
-        fit_peak = dict(peak, dm=fit['fit_dm'], rh_arcmin=fit['fit_rh_arcmin'])
-        strongest = np.argsort(prob)[-3:][::-1]
-        fit['max_member_probability'] = np.max(prob, initial=0.)
-        fit['fixed_fit_ts_drop_top3'] = -2 * np.log1p(-np.minimum(prob[strongest], 1 - 1e-12)).sum()
-        results.append({**peak, **fit})
-        suffix = f"{peak['branch']}-{peak['method']}-{peak['rank']}"
-        np.savez_compressed(work / f'membership-{suffix}.npz', source_ids=sources[
-            ['RELEASE', 'BRICKID', 'OBJID']][chosen][idx], probability=prob)
-        candidate(figures / f'candidate-{suffix}.png', spec, field, area, sample, sources, valid,
-                  mags, chosen, fit_peak, idx, prob, raw, template, co)
-    write_csv(summary / 'candidate_refits.csv', results)
     manifest.update(status='complete', scan_seconds=seconds, wall_seconds=monotonic() - begin,
                     raw_peaks=len(raw), deduplicated_peaks=len(peaks))
     write_json(summary / 'manifest.json', manifest)

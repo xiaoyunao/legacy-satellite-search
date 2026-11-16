@@ -5,6 +5,7 @@ import unittest
 import numpy as np
 from scipy.spatial import cKDTree
 
+from ls_satsearch.evaluate import strict_recovery
 from ls_satsearch.hypotheses import group_candidates, template_branch
 from ls_satsearch.search import deduplicate, load_isochrone
 
@@ -29,6 +30,17 @@ class SearchHypothesesTest(unittest.TestCase):
         group_candidates(rows)
         self.assertEqual(rows[0]['candidate_group_id'],rows[1]['candidate_group_id'])
         self.assertNotEqual(rows[0]['candidate_group_id'],rows[2]['candidate_group_id'])
+
+    def test_strict_distance_can_select_an_alternate_hypothesis(self):
+        with TemporaryDirectory() as directory:
+            base=Path(directory)
+            (base/'deduplicated_peaks.csv').write_text(
+                'method,branch,score,dm,ra_deg,dec_deg,rank\n'
+                'A,main,12,20.5,12,2,1\nA,main,10,19.75,12,2,2\n')
+            rows=[dict(method='A',branch='main',truth_dm='19.8',covered='True')]
+            strict_recovery(base,rows,dict(ra_deg=12,dec_deg=2,theta_h_arcmin=1),
+                            dict(match_min_arcmin=2,match_rh_factor=1))
+            self.assertEqual(rows[0]['strict_rank'],'2')
 
     def test_zahb_break_keeps_imf_rows(self):
         with TemporaryDirectory() as directory:
