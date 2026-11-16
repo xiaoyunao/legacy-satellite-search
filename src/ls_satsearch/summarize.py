@@ -1,5 +1,6 @@
 """Draw the first-round aggregate figures from reviewed result tables."""
 from pathlib import Path
+import json
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -9,6 +10,22 @@ from .run import read_csv
 
 def figures(base, out):
     out.mkdir(parents=True, exist_ok=True)
+    probe = base/'bootes_schema_probe.json'
+    if probe.exists():
+        flow = json.loads(probe.read_text())['cutflow']
+        keys = ('raw', 'valid_G', 'snr_G', 'mag_G', 'valid_R', 'snr_R', 'mag_R',
+                'exclude_bit_19', 'area', 'psf')
+        names = ('All', 'Valid g', 'g S/N', 'g₀ cut', 'Valid r', 'r S/N', 'r₀ cut',
+                 'Maskbits', 'Usable area', 'PSF')
+        fig, ax = plt.subplots(figsize=(8, 4.6), layout='constrained')
+        counts = [flow[k] for k in keys]
+        bars = ax.barh(names, counts, color='#1b6ca8')
+        ax.bar_label(bars, labels=[f'{n:,}' for n in counts], padding=3)
+        ax.invert_yaxis()
+        ax.set(xlim=(0, 1.13*max(counts)), xlabel='Catalog sources', title='Boötes I core · DR11 south gr')
+        fig.savefig(out/'bootes_core_cutflow.png', dpi=160)
+        plt.close(fig)
+
     field_path = base/'field_conditions.csv'
     if field_path.exists():
         rows = read_csv(field_path)
@@ -85,7 +102,6 @@ def figures(base, out):
         for ax, distance in zip(axes, ('50', '100')):
             for method, c, offset in [('A', '#1b6ca8', -.14), ('B', '#c15338', .14)]:
                 pos, y, elo, ehi = [], [], [], []
-                labels = []
                 for r in keep:
                     if r['method'] != method or r['distance_kpc'] != distance:
                         continue
