@@ -2,12 +2,12 @@ seed: 481708
 batches: 2
 ps1_fields_per_batch: 10
 deep_control_fields: 0
-width_deg: 3.25
-minimum_center_separation_deg: 5
-minimum_proxy_coverage: 0.97
+width_deg: 3.0
+minimum_center_separation_deg: 4.6
+minimum_proxy_coverage: 0.9
 max_ebv: 0.1
 candidate_rationale:
-  search: New PS1-assigned high-latitude southern DR11 fields below Dec 30 with external
+  search: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with external
     imaging context recorded
   deep_control: Known deeper DES census coverage for context
 previous_fields:
@@ -75,6 +75,7 @@ overlap_regions:
     - 110
     - -14
     - -7
-max_abs_dec: 30
+max_abs_dec: 34
 id_prefix: verify
 batch_config_dir: configs/v6
+allow_partial: true

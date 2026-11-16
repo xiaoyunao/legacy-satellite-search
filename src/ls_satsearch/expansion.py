@@ -71,9 +71,9 @@ def choose():
                 for _ in range(plan['ps1_fields_per_batch'])]
     requests += [(1,1)]*plan['deep_control_fields']
     queue = {s:list(rng.permutation(possible[s])) for s in possible}
+    deferred = []
     for batch,survey in requests:
         best = None
-        fallback = None
         while queue[survey]:
             j = queue[survey].pop()
             if np.max(np.asarray(visited)@uv[j])>minimum:
@@ -89,15 +89,18 @@ def choose():
             if proxy<plan['minimum_proxy_coverage']:
                 continue
             if survey==3 and any(cls.values()):
-                if fallback is None:
-                    fallback=(j,b,f,proxy,cls)
+                deferred.append((j,b,f,proxy,cls))
                 continue
             best=(j,b,f,proxy,cls)
             break
         if best is None:
-            if fallback is None or np.max(np.asarray(visited)@uv[fallback[0]])>minimum:
-                raise RuntimeError(f'Insufficient distinct controls for survey {survey}')
-            best=fallback
+            if survey==3:
+                best=next((p for p in deferred if np.max(np.asarray(visited)@uv[p[0]])<=minimum),None)
+            if best is None:
+                if fields and plan.get('allow_partial',False):
+                    print(f'Registering {len(fields)} eligible fields from {len(requests)} requested',flush=True)
+                    break
+                raise RuntimeError(f'Insufficient distinct controls for survey {survey} after {len(fields)} fields')
         j,b,f,proxy,cls=best
         visited.append(uv[j])
         layer = 'shallower' if metric[j]<lower else 'deep' if metric[j]>=upper else 'ordinary'

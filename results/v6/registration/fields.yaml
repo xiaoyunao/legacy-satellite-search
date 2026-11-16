@@ -1,0 +1,444 @@
+seed: 481708
+selection_sha256: dba5471423abb36e1d8ec32de0e8daf084734c3a1a3d0f53cc843f8571311a12
+census_sha256: 74a9fcbbf429e5506b15d45bb24a79ec87814b3b5330cdccb2b7ae52b5c64365
+fields:
+- id: verify_01
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 216.65693430656935
+  dec: 18.25
+  width: 3.0
+  proxy_area_deg2: 8.510204081632654
+  proxy_coverage: 0.9455782312925171
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.742460250854492
+  center_r_depth: 24.293487548828125
+- id: verify_02
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 219.0483870967742
+  dec: 30.75
+  width: 3.0
+  proxy_area_deg2: 8.489795918367347
+  proxy_coverage: 0.9433106575963719
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.787315368652344
+  center_r_depth: 24.115312576293945
+- id: verify_03
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 10.682926829268293
+  dec: 31.5
+  width: 3.0
+  proxy_area_deg2: 8.653061224489797
+  proxy_coverage: 0.9614512471655329
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.793869018554688
+  center_r_depth: 24.2069034576416
+- id: verify_04
+  role: pilot_eval
+  batch: 1
+  layer: deep
+  survey: 3
+  ra: 210.30882352941177
+  dec: 19.5
+  width: 3.0
+  proxy_area_deg2: 8.591836734693878
+  proxy_coverage: 0.9546485260770975
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.923200607299805
+  center_r_depth: 24.26295280456543
+- id: verify_05
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 186.91176470588235
+  dec: 32.0
+  width: 3.0
+  proxy_area_deg2: 8.53061224489796
+  proxy_coverage: 0.9478458049886621
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.67877197265625
+  center_r_depth: 24.247215270996094
+- id: verify_06
+  role: pilot_eval
+  batch: 1
+  layer: shallower
+  survey: 3
+  ra: 198.11232449297972
+  dec: 27.25
+  width: 3.0
+  proxy_area_deg2: 8.326530612244898
+  proxy_coverage: 0.9251700680272109
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.6317081451416
+  center_r_depth: 23.974281311035156
+- id: verify_07
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 348.90934844192634
+  dec: 11.75
+  width: 3.0
+  proxy_area_deg2: 8.428571428571429
+  proxy_coverage: 0.9365079365079365
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.76762580871582
+  center_r_depth: 24.141525268554688
+- id: verify_08
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 2.0897832817337463
+  dec: 26.5
+  width: 3.0
+  proxy_area_deg2: 8.53061224489796
+  proxy_coverage: 0.9478458049886621
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.84329605102539
+  center_r_depth: 24.161651611328125
+- id: verify_09
+  role: pilot_eval
+  batch: 1
+  layer: deep
+  survey: 3
+  ra: 33.046875
+  dec: 27.5
+  width: 3.0
+  proxy_area_deg2: 8.775510204081632
+  proxy_coverage: 0.9750566893424036
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 25.00432014465332
+  center_r_depth: 24.241943359375
+- id: verify_10
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 219.21428571428572
+  dec: 13.75
+  width: 3.0
+  proxy_area_deg2: 8.673469387755102
+  proxy_coverage: 0.963718820861678
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.703136444091797
+  center_r_depth: 24.25701141357422
+- id: verify_11
+  role: pilot_eval
+  batch: 2
+  layer: deep
+  survey: 3
+  ra: 26.82819383259912
+  dec: 19.25
+  width: 3.0
+  proxy_area_deg2: 8.551020408163266
+  proxy_coverage: 0.9501133786848073
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.942968368530273
+  center_r_depth: 24.27286148071289
+- id: verify_12
+  role: pilot_eval
+  batch: 2
+  layer: deep
+  survey: 3
+  ra: 334.5234708392603
+  dec: 12.75
+  width: 3.0
+  proxy_area_deg2: 8.83673469387755
+  proxy_coverage: 0.981859410430839
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.859455108642578
+  center_r_depth: 24.183950424194336
+- id: verify_13
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 162.23880597014926
+  dec: 33.25
+  width: 3.0
+  proxy_area_deg2: 8.387755102040817
+  proxy_coverage: 0.9319727891156463
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.649065017700195
+  center_r_depth: 24.238487243652344
+- id: verify_14
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 21.923076923076923
+  dec: 13.25
+  width: 3.0
+  proxy_area_deg2: 8.571428571428571
+  proxy_coverage: 0.9523809523809523
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.74472427368164
+  center_r_depth: 24.101831436157227
+- id: verify_15
+  role: pilot_eval
+  batch: 2
+  layer: deep
+  survey: 3
+  ra: 20.634146341463413
+  dec: 31.5
+  width: 3.0
+  proxy_area_deg2: 8.428571428571429
+  proxy_coverage: 0.9365079365079365
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.859399795532227
+  center_r_depth: 24.213895797729492
+- id: verify_16
+  role: pilot_eval
+  batch: 2
+  layer: ordinary
+  survey: 3
+  ra: 203.37480559875584
+  dec: 27.0
+  width: 3.0
+  proxy_area_deg2: 8.285714285714285
+  proxy_coverage: 0.9206349206349206
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.673803329467773
+  center_r_depth: 24.134939193725586
+- id: verify_17
+  role: pilot_eval
+  batch: 2
+  layer: deep
+  survey: 3
+  ra: 198.21589205397302
+  dec: 22.25
+  width: 3.0
+  proxy_area_deg2: 8.122448979591837
+  proxy_coverage: 0.9024943310657596
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.812593460083008
+  center_r_depth: 24.287227630615234
+- id: verify_18
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 343.41074020319303
+  dec: -17.0
+  width: 3.0
+  proxy_area_deg2: 8.122448979591837
+  proxy_coverage: 0.9024943310657596
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.54803466796875
+  center_r_depth: 24.138240814208984
+- id: verify_19
+  role: pilot_eval
+  batch: 2
+  layer: deep
+  survey: 3
+  ra: 235.78864353312304
+  dec: 28.5
+  width: 3.0
+  proxy_area_deg2: 8.693877551020408
+  proxy_coverage: 0.9659863945578231
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 25.029096603393555
+  center_r_depth: 24.304840087890625
+- id: verify_20
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 235.1778093883357
+  dec: 12.75
+  width: 3.0
+  proxy_area_deg2: 8.36734693877551
+  proxy_coverage: 0.9297052154195011
+  phase: discovery
+  rationale: New PS1-assigned high-latitude southern DR11 fields below Dec 34 with
+    external imaging context recorded
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.740009307861328
+  center_r_depth: 24.09429359436035
