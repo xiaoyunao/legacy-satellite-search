@@ -8,7 +8,7 @@ from scipy.ndimage import gaussian_filter, maximum_filter, map_coordinates
 from scipy.optimize import brentq
 from scipy.signal import fftconvolve
 from scipy.spatial import cKDTree
-from scipy.special import xlogy
+from scipy.special import logsumexp, xlogy
 from scipy.stats import binom
 
 
@@ -146,6 +146,14 @@ def exact_onoff(field, x, y, radius, tree, coverage, on_cmd):
     return n_on, n_off, a_on, a_off
 
 
+def binomial_tail_score(k, n, p):
+    """Compute -log10 P(X>=k) without collapsing very small tails into ties."""
+    log_tail = binom.logsf(k - 1, n, p)
+    if not np.isfinite(log_tail):
+        log_tail = logsumexp(binom.logpmf(np.arange(k, n + 1), n, p))
+    return -float(log_tail) / np.log(10)
+
+
 def scan(sample, field, coverage, model, cfg):
     started = monotonic()
     cmd = CMD(sample, model, cfg)
@@ -200,11 +208,9 @@ def scan(sample, field, coverage, model, cfg):
                         area_off < cfg['min_off_fraction'] * np.pi * (6**2 - 3.5**2) * radius**2):
                     continue
                 prob = area_on / (area_on + area_off)
-                score = -float(binom.logsf(n_on - 1, n_on + n_off, prob)) / np.log(10)
-                # Keep exact tails in log space. Underflow is possible only far
-                # beyond the useful range of finite pilot threshold calibration.
+                score = binomial_tail_score(n_on, n_on + n_off, prob)
                 peaks.append(dict(method='A', x=x, y=y, dm=dm, rh_arcmin=radius,
-                                  score=min(score, 300.), n_on=n_on, n_off=n_off,
+                                  score=score, n_on=n_on, n_off=n_off,
                                   area_on_arcmin2=area_on, area_off_arcmin2=area_off))
             seconds['A'] += monotonic() - started
             started = monotonic()

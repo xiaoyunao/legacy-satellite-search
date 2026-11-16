@@ -15,3 +15,5 @@ __pycache__/
 *.tar.gz
 *.local.yaml
 .env
+
+*.egg-info/
