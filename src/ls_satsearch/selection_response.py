@@ -41,7 +41,7 @@ def gr_accept(phot,err,cfg):
             (phot <= [cfg['g_max'],cfg['r_max']])).all(axis=1)
 
 
-def models(field,area,spec,matched,cfg, *, include_ls_response=False):
+def models(field,area,spec,matched,cfg, *, ls_config=None):
     root,data,_ = settings()
     spec = dict(spec,width=matched['width_deg'],buffer_arcmin=matched['buffer_arcmin'])
     _,ls,_,_ = field_cache(root,data,spec,cfg,load_bricks(root))
@@ -94,7 +94,7 @@ def models(field,area,spec,matched,cfg, *, include_ls_response=False):
                              color_hi=colour_edges[cidx+1],parent=n,i_valid=ni,i_snr=ns,
                              morphology_pass=nm,response_calibrated=calibrated))
     original = ls_pool,before,(g_edges,colour_edges,bins),rows
-    if not include_ls_response:
+    if ls_config is None:
         return original
     reliable = gr & good_i & morphology & (ge<=.15) & (re<=.15)
     if not reliable.any():
@@ -104,8 +104,9 @@ def models(field,area,spec,matched,cfg, *, include_ls_response=False):
     is_point = source_types=='PSF'
     ls_mag,ls_err = ls_pool[1:3]
     near_ps1 = cKDTree(ps_xy[reliable]).query(detected_xy,distance_upper_bound=.7/60)[0]<np.inf
-    parent = near_ps1 & gr_accept(ls_mag,ls_err,cfg)
-    left_color = ls_mag[:,0]-ls_mag[:,1]
+    parent = near_ps1 & gr_accept(ls_mag,ls_err,ls_config)
+    left_color = np.full(len(parent),np.nan)
+    left_color[parent] = ls_mag[parent,0]-ls_mag[parent,1]
     ls_bins,ls_rows = {},[]
     for gidx in range(len(g_edges)-1):
         for cidx in range(len(colour_edges)-1):

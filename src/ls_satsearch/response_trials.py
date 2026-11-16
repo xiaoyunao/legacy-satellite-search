@@ -62,7 +62,7 @@ def run(field_id,version,archive):
         raise ValueError('Matched sample masks differ')
     area=masks[0]
     ls,_,ps1_response,ps1_bins,ls_point,ps1_point,ls_response,ls_bins,is_point=sr.models(
-        field,area,spec,matched,configs['ps1'],include_ls_response=True)
+        field,area,spec,matched,configs['ps1'],ls_config=configs['ls_deep'])
     paths=[data/'resources'/cfg['isochrone'],data/'resources'/PS1_MODEL]
     signatures=[np.loadtxt(p,usecols=(0,1,2,3,4,5,6,7,14,15)) for p in paths]
     if not np.array_equal(*signatures):
@@ -99,15 +99,13 @@ def run(field_id,version,archive):
                 intrinsic=np.column_stack([model_ps1[0][draw]+dm,model_i[draw]+dm+1.682*reddening(ra,dec)])
                 phot,err=sr.perturb(intrinsic,ps1_point,pos,rng,standard_noise=noise)
                 grade,counts=sr.ps1_select(phot,err,c,ps1_response,rng,uniforms=uniforms)
-                unsupported=counts['N_response_unsupported']
                 model=model_ps1
             else:
                 phot,err=ls_obs
                 rates,unknown=get_rate(phot,ls_response)
                 usable=sr.gr_accept(phot,err,c)
                 grade=usable&(uniforms[1]<rates)
-                unsupported=int((unknown&usable).sum())
-                counts=dict(N_gr=int(usable.sum()))
+                counts=dict(N_gr=int(usable.sum()),N_response_unsupported=int((unknown&usable).sum()))
                 model=model_ls
             g,r=phot[:,:2],err[:,:2]
             conditional=sr.gr_accept(g,r,c)
@@ -123,7 +121,7 @@ def run(field_id,version,archive):
                 blank=matches(empty[survey],truth,cuts[survey],c)
                 trials.append(dict(field=field_id,trial=trial,survey=survey,arm=label,
                                    D_kpc=distance,rh_pc=size,N_latent=n,N_in_valid_area=int(in_area.sum()),
-                                   N_used=int(index.sum()),N_response_unsupported=unsupported,
+                                   N_used=int(index.sum()),
                                    blank_spatial=blank['spatial'],cutoff=cuts[survey],**counts,**last))
     out=Path('results/matched_response')
     out.mkdir(exist_ok=True,parents=True)

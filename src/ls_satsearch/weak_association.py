@@ -75,8 +75,9 @@ def main():
                                   C_status=mode['fit_status'])
                     if mode['fit_status']=='complete':
                         with np.load(runs_path(data)/run/f"membership-main-A-{mode['rank']}.npz",allow_pickle=False) as fit:
-                            probs = {tuple(k):float(p) for k,p in zip(fit['source_ids'],fit['probability']) if p>0}
-                        top = set(sorted(probs,key=probs.get,reverse=True)[:3])
+                            ids,probability = fit['source_ids'],fit['probability']
+                            probs = {tuple(k):float(p) for k,p in zip(ids,probability) if p>0}
+                            top = {tuple(ids[j]) for j in np.argsort(probability)[::-1][:3] if probability[j]>0}
                         detected = [tuple(keys[i]) for i in matched[selected]]
                         cpos = SkyCoord(float(mode['fit_ra_deg']),float(mode['fit_dec_deg']),unit='deg')
                         values.update(fitted_dm=mode['fit_dm'], C_offset_arcmin=float(center.separation(cpos).arcmin),

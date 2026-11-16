@@ -2,6 +2,21 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Controlled discovery expansion
+
+The [fifth science report](fifth_science_report.md) follows the expanded A-baseline search, the compact-control review, and the matched LS and PS1 selection-response experiment. The [expansion registry](results/v5/registration) records fields and immutable policy digests. DES deep controls carry a separate phase in the results.
+
+On NERSC, `scripts/v5.sh` runs each stage on Slurm with the project environment. In a fresh NERSC checkout with the input resources prepared, reconstruct the per-batch configurations from the published registry before submitting the arrays:
+
+```bash
+export LS_SAT_WORKSPACE="$PWD"
+export LS_SAT_CONFIG_DIR="$PWD/configs/v5"
+PYTHONPATH=src .venv/bin/python -c "from pathlib import Path; from ls_satsearch.expansion import register_batches; register_batches(Path('results/v5/registration'))"
+bash scripts/v5_submit_batches.sh
+```
+
+The submitter links the scan arrays and frozen summaries in order. Each per-batch C review uses the saved significant modes. See [run status](docs/STATUS.md) for the actual job IDs.
+
 ## Frozen independent evaluation
 
 The [fourth science report](fourth_science_report.md) records the first independent 60.705 deg² evaluation. The main and auxiliary A-baseline cutoffs are fixed in `configs/v4/production.json`. The holdout runner checks the registered field definition and search recipe. The matching experiment uses its own angular grid and review-budget calibration.

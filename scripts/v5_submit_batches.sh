@@ -1,9 +1,8 @@
 #!/bin/bash
 # Submit in the v5 home checkout. Registry is produced by the selection job.
 set -euo pipefail
-selector=$1
 export LS_SAT_WORKSPACE="$PWD"
-prerequisite=$selector
+prerequisite=${1:-}
 for n in 1 2 3; do
     batch="batches/batch$n"
     mkdir -p "$batch/logs"
@@ -11,7 +10,11 @@ for n in 1 2 3; do
     export LS_SAT_V5_PROFILE="batch$n"
     count=12
     if [[ "$n" == 1 ]]; then count=14; fi
-    scan=$(sbatch --parsable --dependency=afterok:"$prerequisite" --array="0-$((count-1))%12" \
+    scan_dependency=()
+    if [[ -n "$prerequisite" ]]; then
+        scan_dependency=(--dependency=afterok:"$prerequisite")
+    fi
+    scan=$(sbatch --parsable "${scan_dependency[@]}" --array="0-$((count-1))%12" \
         --chdir="$PWD/$batch" -A desi -q shared -J "lsv5-b$n-scan" scripts/v5.sh scan-list \
         "$PWD/configs/v5/batch$n/fields.list")
     group=$(sbatch --parsable --dependency=afterok:"$scan" --chdir="$PWD/$batch" \
