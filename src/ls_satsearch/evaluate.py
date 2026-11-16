@@ -56,7 +56,7 @@ def evaluate(summary):
     manifests = {}
     for path in sorted(summary.glob('*/manifest.json')):
         m = json.loads(path.read_text())
-        if m['status'] == 'complete':
+        if m['status'] in ('complete', 'no_usable_gr'):
             manifests[path.parent] = m
     recovery = []
     forced = []
@@ -84,8 +84,8 @@ def evaluate(summary):
     if foot:
         write_csv(summary / 'field_conditions.csv', foot)
     for depth in ('base', 'deep'):
-        dev = {p: m for p, m in manifests.items() if m['depth'] == depth and m['field']['role'] == 'pilot_dev'}
-        ev = {p: m for p, m in manifests.items() if m['depth'] == depth and m['field']['role'] == 'pilot_eval'}
+        dev = {p: m for p, m in manifests.items() if m['status'] == 'complete' and m['depth'] == depth and m['field']['role'] == 'pilot_dev'}
+        ev = {p: m for p, m in manifests.items() if m['status'] == 'complete' and m['depth'] == depth and m['field']['role'] == 'pilot_eval'}
         if not dev:
             continue
         dev_area = sum(m['area_deg2'] for m in dev.values())

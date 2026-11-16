@@ -10,7 +10,7 @@ from scipy.spatial import cKDTree
 from scipy.stats import binomtest
 
 from .data import load_bricks, sample_pixels, select
-from .run import coverage_metrics, field_cache, read_csv, settings, write_csv, write_json
+from .run import config_path, coverage_metrics, field_cache, read_csv, settings, write_csv, write_json
 from .search import load_isochrone, scan
 
 
@@ -77,7 +77,7 @@ def match_trial(peaks, truth, method, cfg):
 
 def run(field_id, replicate):
     root, data_root, cfg = settings()
-    field_specs = {f['id']: f for f in yaml.safe_load(Path('configs/fields.yaml').read_text())['fields']}
+    field_specs = {f['id']: f for f in yaml.safe_load(config_path('fields.yaml').read_text())['fields']}
     spec = field_specs[field_id]
     if spec['role'] != 'pilot_dev':
         raise ValueError('This injection experiment uses development fields')

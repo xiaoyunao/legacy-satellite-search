@@ -157,8 +157,8 @@ def scan(sample, field, coverage, model, cfg):
     area_high = rebin(coverage, coverage.shape[0] // field.n)
     area_high = area_high / (coverage.shape[0] // field.n)**2
     grids = []
-    for i, radius in enumerate(cfg['radii_arcmin']):
-        factor = 2**i
+    for radius in cfg['radii_arcmin']:
+        factor = min(32, 2**int(np.floor(np.log2(radius / (3*field.step) + 1e-10))))
         step = field.step * factor
         on, off = kernels(radius / step)
         a = rebin(area_high, factor) * field.step**2

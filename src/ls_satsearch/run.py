@@ -2,6 +2,7 @@
 
 import argparse
 import csv
+import fcntl
 import hashlib
 from importlib.metadata import version
 import json
@@ -51,7 +52,11 @@ def read_csv(path):
 def settings():
     root = Path(os.environ['LS_DR11_ROOT'])
     data = Path(os.environ['LS_SAT_DATA'])
-    return root, data, yaml.safe_load(Path('configs/search.yaml').read_text())
+    return root, data, yaml.safe_load(config_path('search.yaml').read_text())
+
+
+def config_path(name):
+    return Path(os.environ.get('LS_SAT_CONFIG_DIR', 'configs')) / name
 
 
 def associated(peak, truth, config):
@@ -137,18 +142,20 @@ def field_cache(root, data_root, spec, cfg, bricks):
     xs = cache / 'catalog.npy'
     ar = cache / 'coverage.npy'
     info_path = cache / 'inputs.json'
-    if info_path.exists() and xs.exists() and ar.exists():
-        return field, np.load(xs, allow_pickle=False), np.load(ar, allow_pickle=False), json.loads(info_path.read_text())
-    sources, provenance = sweeps(root, field)
-    survey = spec.get('survey')
-    coverage, mask_info = make_area(root, field, bricks, sum(1 << bit for bit in cfg['reject_maskbits']),
-                                   cfg['coverage_subdivision'],
-                                   Census(data_root) if survey else None, survey)
-    info = {**provenance, **mask_info, **key}
-    np.save(xs, sources, allow_pickle=False)
-    np.save(ar, coverage, allow_pickle=False)
-    write_json(info_path, info)
-    return field, sources, coverage, info
+    with (cache / 'prepare.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        if info_path.exists() and xs.exists() and ar.exists():
+            return field, np.load(xs, allow_pickle=False), np.load(ar, allow_pickle=False), json.loads(info_path.read_text())
+        sources, provenance = sweeps(root, field)
+        survey = spec.get('survey')
+        coverage, mask_info = make_area(root, field, bricks, sum(1 << bit for bit in cfg['reject_maskbits']),
+                                       cfg['coverage_subdivision'],
+                                       Census(data_root) if survey else None, survey)
+        info = {**provenance, **mask_info, **key}
+        np.save(xs, sources, allow_pickle=False)
+        np.save(ar, coverage, allow_pickle=False)
+        write_json(info_path, info)
+        return field, sources, coverage, info
 
 
 def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
@@ -183,10 +190,10 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
     manifest = dict(field=spec, bandpass='DECam g,r', release='DR11 south',
                     source_release_codes=np.unique(sources['RELEASE']).tolist(),
                     config=cfg, config_hash=hashlib.sha256(json.dumps(cfg, sort_keys=True).encode()).hexdigest(),
-                    fields_sha256=sha(Path('configs/fields.yaml')), seed=cfg['seed'], depth=depth,
+                    fields_sha256=sha(config_path('fields.yaml')), seed=cfg['seed'], depth=depth,
                     versions={p: version(p) for p in ('numpy', 'scipy', 'fitsio', 'astropy', 'astropy-healpix',
                                                        'matplotlib', 'pyyaml')},
-                    code_sha256={p.name: sha(p) for p in sorted(Path('src/ls_satsearch').glob('*.py'))},
+                    code_sha256={p.name: sha(p) for p in sorted(Path(__file__).parent.glob('*.py'))},
                     model_sha256=sha(data_root / 'resources' / cfg['isochrone']),
                     slurm_job_id=os.environ.get('SLURM_JOB_ID'), area_deg2=effective_area,
                     area_fraction=frac, inputs=info, observing_conditions_source_sample=co,
@@ -197,6 +204,12 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
     overview(figures / 'coverage_cmd.png', field, area, sample, spec, cfg, template)
     if not len(sample) or not effective_area:
         manifest['status'] = 'no_usable_gr'
+        if spec.get('truth'):
+            truth = next(b for b in read_csv(Path('references/benchmarks.csv')) if b['name'] == spec['truth'])
+            rows = recovery([], truth, field, area, cfg, depth)
+            for row in rows:
+                row.update(covered=False, failure_reason='no usable search sample')
+            write_csv(summary / 'recovery.csv', rows)
         write_json(summary / 'manifest.json', manifest)
         return
     raw, peaks, seconds, cmd = scan(sample, field, area, template, cfg)
@@ -254,10 +267,12 @@ def main():
     p.add_argument('--tag', default='')
     args = p.parse_args()
     root, data_root, cfg = settings()
+    if cfg['region'] != 'south':
+        p.error('Only south DECam gr is available in this release')
     if args.depth == 'deep':
         for band in 'gr':
             cfg[f'{band}_max'] += .5
-    fields = {s['id']: s for s in yaml.safe_load(Path('configs/fields.yaml').read_text())['fields']}
+    fields = {s['id']: s for s in yaml.safe_load(config_path('fields.yaml').read_text())['fields']}
     model = load_isochrone(data_root / 'resources' / cfg['isochrone'])
     bricks = load_bricks(root)
     for name in args.fields:

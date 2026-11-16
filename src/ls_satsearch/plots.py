@@ -69,9 +69,10 @@ def candidate(path, spec, field, area, sample, sources, valid, mags, chosen, pea
     n = len(area)
     sc = n / (2 * field.limit)
     def pixel(coord):
-        return int((coord + field.limit) * sc)
+        return int(np.clip((coord + field.limit) * sc, 0, n))
     i, j, k, l = pixel(x-lim), pixel(x+lim), pixel(y-lim), pixel(y+lim)
-    ax.imshow(area[k:l, i:j], origin='lower', extent=[-lim, lim, -lim, lim], cmap='cividis')
+    extent = [i/sc-field.limit-x, j/sc-field.limit-x, k/sc-field.limit-y, l/sc-field.limit-y]
+    ax.imshow(area[k:l, i:j], origin='lower', extent=extent, cmap='cividis')
     ax.set(xlabel='East (arcmin)', ylabel='North (arcmin)', title='Local gr exposure and mask')
     fig.suptitle(f"{spec['id']} · {peak['method']} rank {peak['rank']} · "
                  f"({peak['ra_deg']:.4f}, {peak['dec_deg']:.4f}) · DM {dm:.2f} · "

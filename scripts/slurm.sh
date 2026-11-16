@@ -8,7 +8,10 @@
 #SBATCH --output=logs/%x-%j.log
 set -euo pipefail
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg
-export PYTHONPATH="$PWD/src"
 export LS_DR11_ROOT="${LS_DR11_ROOT:-/global/cfs/cdirs/cosmo/data/legacysurvey/dr11}"
 export LS_SAT_DATA="${LS_SAT_DATA:-$PSCRATCH/legacy-satellite-search}"
-exec .venv/bin/python -m ls_satsearch.run "$@"
+job_snapshot="$LS_SAT_DATA/jobs/$SLURM_JOB_ID"
+mkdir -p "$job_snapshot"
+cp -r src configs "$job_snapshot/"
+export PYTHONPATH="$job_snapshot/src" LS_SAT_CONFIG_DIR="$job_snapshot/configs"
+exec .venv/bin/python -u -m ls_satsearch.run "$@"
