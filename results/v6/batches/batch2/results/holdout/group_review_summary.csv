@@ -1,0 +1,19 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+verify_12-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.641818524208454,19.5,0.5,0.0,Balbinot 1,206.416695281443,L0
+verify_13-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.8199176834617266,16.75,0.5,0.0,Leo Minor I,282.18936631292956,L0
+verify_13-A_base-0.3-002,awaiting_visual_review,1,1,1,2,12.60685258904489,16.5,0.5,1.4126942847498833,Leo Minor I,333.8460272445281,L0
+verify_15-A_base-0.3-001,awaiting_visual_review,1,1,1,1,6.082461854172881,16.75,0.5,0.0,Triangulum II,668.8715111820794,L0
+verify_15-A_base-0.3-002,awaiting_visual_review,1,1,1,2,4.801701334888238,18.0,0.35,0.0,Triangulum II,702.7359267856203,L0
+verify_16-A_base-0.3-001,awaiting_visual_review,2,2,2,1,0.0,20.0,11.2,0.0,Canes Venatici I,363.7522208418789,L0
+verify_16-A_base-0.3-002,awaiting_visual_review,1,1,1,2,17.665830105942554,21.0,0.5,0.5283312941545668,Bootes III,270.46676609370974,L0
+verify_16-A_base-0.3-003,awaiting_visual_review,2,2,2,6,2.5522607627065614,18.25,2.8,0.0,Canes Venatici I,383.1489614921845,L0
+verify_16-A_base-0.3-004,awaiting_visual_review,1,1,1,5,10.557550407080685,16.25,0.7,0.6860776657574768,Bootes III,399.74030389273645,L0
+verify_17-A_base-0.3-001,awaiting_visual_review,3,3,3,2,16.510891173994164,20.75,0.35,0.12562293631988486,Coma Berenices,679.5244537796522,L0
+verify_18-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,20.5,11.2,0.0,Aquarius II,601.7881918965251,L0
+verify_19-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.7579878067389529,18.75,0.7,0.0,DELVE 4,278.20215220268085,L0
+verify_19-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.5177245358983287,19.25,0.7,0.0,DELVE 4,338.2904901081763,L0
+verify_19-A_base-0.3-003,awaiting_visual_review,1,1,1,3,0.0,17.25,11.2,0.0,DELVE 4,364.8334963602792,L0
+verify_19-A_base-0.3-004,awaiting_visual_review,1,1,1,4,7.995289761453112,19.75,0.5,0.05217047228238825,DELVE 4,328.1271638534276,L0
+verify_20-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,18.75,0.7,0.0,Hercules,653.2528825460063,L0
+verify_20-A_base-0.3-002,awaiting_visual_review,1,1,1,2,2.231836345004524,20.75,1.4,0.0,Virgo II,651.4737054991167,L0
+verify_20-A_base-0.3-003,awaiting_visual_review,1,1,1,3,13.025830297645768,17.75,0.5,0.19686710413079878,DELVE 5,702.7764407864499,L0

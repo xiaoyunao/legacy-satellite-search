@@ -2,6 +2,32 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Candidate verification
+
+The [sixth science report](sixth_science_report.md) records independent PS1 photometry, CFHT imagery, Gaia and DESI follow-up, fixed-policy expansion, and additional compact depth controls. The [registered fields](results/v6/registration) were frozen before opening the new scans.
+
+From the NERSC v6 revision with v4 and v5 results installed next to it, submit the verification modules on Slurm. The raw archives and source tables remain in scratch.
+
+```bash
+mkdir -p logs
+sbatch -A desi -q shared scripts/v6.sh verify_candidate
+sbatch -A desi -q shared scripts/v6.sh verify_candidate --gaia-veto
+sbatch -A desi -q shared scripts/v6.sh verify_candidate --gaia-veto --review-local
+sbatch -A desi -q shared scripts/v6.sh candidate_archives
+sbatch -A desi -q shared scripts/v6.sh cfht_cutouts
+sbatch -A desi -q shared scripts/v6.sh mask_controls
+sbatch -A desi -q shared scripts/v6.sh depth_followup expand_13
+```
+
+The expansion reuses `holdout FIELD`, `holdout combine` and `expansion_review` in each batch working directory with `LS_SAT_V6_PROFILE=batch1` or `batch2`. Reconstruct per-batch settings with the registry:
+
+```bash
+export LS_SAT_WORKSPACE="$PWD" LS_SAT_CONFIG_DIR="$PWD/configs/v6"
+PYTHONPATH=src .venv/bin/python -c "from pathlib import Path; from ls_satsearch.expansion import register_batches; register_batches(Path('results/v6/registration'), Path('configs/v6'))"
+```
+
+After the first batch is combined, the second scan and both C reviews can run in one 96-CPU allocation using `scripts/v6_expansion_allocation.sh`. Actual job IDs are in [the execution record](docs/STATUS.md).
+
 ## Controlled discovery expansion
 
 The [fifth science report](fifth_science_report.md) follows the expanded A-baseline search, the compact-control review, and the matched LS and PS1 selection-response experiment. The [expansion registry](results/v5/registration) records fields and immutable policy digests. DES deep controls carry a separate phase in the results.

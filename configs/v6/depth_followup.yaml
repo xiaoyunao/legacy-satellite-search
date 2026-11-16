@@ -1,0 +1,11 @@
+seed: 481709
+background_fields: [expand_13, expand_24]
+weak_reference: DELVE_7
+weak_field: {id: verify_delve7, ra: 303.95, dec: -50.2, width: 1, buffer_arcmin: 26}
+test_width_deg: 1
+test_buffer_arcmin: 26
+conditions:
+- [50, 10, 22]
+- [50, 10, 36]
+- [100, 15, 22]
+- [100, 15, 36]

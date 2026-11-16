@@ -1,0 +1,19 @@
+group_id,field,phase,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level,known_catalog_nearby,near_mask_hole_2arcmin,mask_invalid_fraction_in_6arcmin,nearest_mask_hole_arcmin
+verify_12-A_base-0.3-001,verify_12,discovery,awaiting_visual_review,1,1,1,1,2.641818524208454,19.5,0.5,0.0,Balbinot 1,206.416695281443,L0,False,True,0.02080775840903511,1.6340559625928066
+verify_13-A_base-0.3-001,verify_13,discovery,awaiting_visual_review,1,1,1,1,4.8199176834617266,16.75,0.5,0.0,Leo Minor I,282.18936631292956,L0,False,False,0.0009206972747360667,3.830161731427492
+verify_13-A_base-0.3-002,verify_13,discovery,awaiting_visual_review,1,1,1,2,12.60685258904489,16.5,0.5,1.4126942847498833,Leo Minor I,333.8460272445281,L0,False,False,0.010495948931991161,2.03186422337274
+verify_15-A_base-0.3-001,verify_15,discovery,awaiting_visual_review,1,1,1,1,6.082461854172881,16.75,0.5,0.0,Triangulum II,668.8715111820794,L0,False,False,0.00018413945494721336,2.5310570914144344
+verify_15-A_base-0.3-002,verify_15,discovery,awaiting_visual_review,1,1,1,2,4.801701334888238,18.0,0.35,0.0,Triangulum II,702.7359267856203,L0,False,True,0.025970039292730843,1.050826394372498
+verify_16-A_base-0.3-001,verify_16,discovery,awaiting_visual_review,2,2,2,1,0.0,20.0,11.2,0.0,Canes Venatici I,363.7522208418789,L0,False,False,0.002332433095998036,2.9726764969561565
+verify_16-A_base-0.3-002,verify_16,discovery,awaiting_visual_review,1,1,1,2,17.665830105942554,21.0,0.5,0.5283312941545668,Bootes III,270.46676609370974,L0,False,False,0.0027007120058924624,2.0522683926706122
+verify_16-A_base-0.3-003,verify_16,discovery,awaiting_visual_review,2,2,2,6,2.5522607627065614,18.25,2.8,0.0,Canes Venatici I,383.1489614921845,L0,False,True,0.007733857107782961,0.13176156917371318
+verify_16-A_base-0.3-004,verify_16,discovery,awaiting_visual_review,1,1,1,5,10.557550407080685,16.25,0.7,0.6860776657574768,Bootes III,399.74030389273645,L0,False,True,0.0006750951270406285,1.8180040948492013
+verify_17-A_base-0.3-001,verify_17,discovery,awaiting_visual_review,3,3,3,2,16.510891173994164,20.75,0.35,0.12562293631988486,Coma Berenices,679.5244537796522,L0,False,False,0.00220967345936656,2.0454896181058855
+verify_18-A_base-0.3-001,verify_18,discovery,awaiting_visual_review,1,1,1,1,0.0,20.5,11.2,0.0,Aquarius II,601.7881918965251,L0,False,True,0.07678615271298797,1.4252192813754332
+verify_19-A_base-0.3-001,verify_19,discovery,awaiting_visual_review,1,1,1,1,0.7579878067389529,18.75,0.7,0.0,DELVE 4,278.20215220268085,L0,False,True,0.004112447827154432,1.4778456542471072
+verify_19-A_base-0.3-002,verify_19,discovery,awaiting_visual_review,1,1,1,2,0.5177245358983287,19.25,0.7,0.0,DELVE 4,338.2904901081763,L0,False,True,0.0061986007119184975,0.9970094170954508
+verify_19-A_base-0.3-003,verify_19,discovery,awaiting_visual_review,1,1,1,3,0.0,17.25,11.2,0.0,DELVE 4,364.8334963602792,L0,False,True,0.005708323103363614,1.886538570444886
+verify_19-A_base-0.3-004,verify_19,discovery,awaiting_visual_review,1,1,1,4,7.995289761453112,19.75,0.5,0.05217047228238825,DELVE 4,328.1271638534276,L0,False,True,0.006874539651362632,1.9121323175975284
+verify_20-A_base-0.3-001,verify_20,discovery,awaiting_visual_review,1,1,1,1,0.0,18.75,0.7,0.0,Hercules,653.2528825460063,L0,False,False,0.0038669285538914804,2.4755751295853248
+verify_20-A_base-0.3-002,verify_20,discovery,awaiting_visual_review,1,1,1,2,2.231836345004524,20.75,1.4,0.0,Virgo II,651.4737054991167,L0,False,True,0.3163064833005894,1.6343959128683092
+verify_20-A_base-0.3-003,verify_20,discovery,awaiting_visual_review,1,1,1,3,13.025830297645768,17.75,0.5,0.19686710413079878,DELVE 5,702.7764407864499,L0,False,False,0.0,

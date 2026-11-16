@@ -27,11 +27,17 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - DELVE 3/4/5 passed candidate triage before the published-member associations. One new L0 position merits targeted follow-up.
 - Completed 24 field-matched LS–PS1 trials and eight paired fine-grid injections. The depth comparison supports a compact follow-up experiment. The 0.25 arcmin grid yielded no extra positional recoveries in the tested controls.
 
+## Sixth-round verification
+
+- PS1 reproduces the leading L0 position. Its fixed-distance likelihood is weak, and the highest local C mode is closer. Gaia indicates bright-source contamination. Public CFHT r imaging and Subaru g header coverage are recorded.
+- Matched random locations explain much of the mask proximity. The next 20 frozen fields cover 168.204 effective deg² and yield 39 primary groups. All 48 C modes and 39 representative images were inspected.
+- In eight paired compact injections, baseline and deeper LS recovered 3 and 5 positions. The DELVE 7 deeper peak recovered position alone.
+
 ## Next work
 
-1. Test the leading compact L0 group using independent photometry and a local, conditions-matched background.
-2. Measure candidate load and mask proximity against random positions in the same fields. Diagnose narrow observing-condition stripes and extended known systems.
-3. Continue frozen A searches with effective area and prior-search overlap reported per field. Consider a separate deeper compact arm after an independent calibration of catalog entry and morphology.
+1. Obtain calibrated Subaru g imaging or source measurements for the verified CCDs and match CFHT r photometry. Check effective area and turnoff completeness before running the frozen-position test.
+2. Compare the two-phase candidate load and the new field-level prior imaging context when registering the next fixed-policy expansion.
+3. Continue compact-depth and paired LS–PS1 response experiments in independent conditions. Promotion to a production arm requires a gain at comparable review load and consistent results on ordinary faint references.
 
 ## Validation criteria
 

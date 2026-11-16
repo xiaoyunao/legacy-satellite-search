@@ -1,0 +1,35 @@
+{
+  "job": "61416790",
+  "frozen_ls_candidates": 9,
+  "gaia": {
+    "status": "complete",
+    "endpoint": "https://gea.esac.esa.int/tap-server/tap/sync",
+    "gaia_cone_sources": 56,
+    "matches": 3,
+    "qualified_parallax": 3,
+    "foreground_parallax": 1,
+    "astrometric_matches_with_pm": 3,
+    "radial_velocity_matches": 0,
+    "match_arcsec": 0.8,
+    "input_sha256": "77b2b743cd6683127fa3e353e3f632066cbdbd2eee750423913b7c2d69dc16b8",
+    "pm_pair_n": 2,
+    "pm_consistency_chi2": 185.70855245107785,
+    "pm_consistency_tail": 4.719545899409352e-41
+  },
+  "desi": {
+    "status": "complete",
+    "release": "DESI DR2 loa",
+    "healpix": [
+      9474
+    ],
+    "files_scanned": 3,
+    "files": [
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/backup/94/9474/redrock-main-backup-9474.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/bright/94/9474/redrock-main-bright-9474.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/dark/94/9474/redrock-main-dark-9474.fits"
+    ],
+    "cone_spectroscopic_targets": 31,
+    "member_matches": 0,
+    "match_arcsec": 0.8
+  }
+}

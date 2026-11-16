@@ -1,0 +1,39 @@
+{
+  "budgets": [
+    {
+      "budget": 0.1,
+      "area_deg2": 168.2040470679012,
+      "groups": 6,
+      "observed_groups_per_deg2": 0.03567096098215698,
+      "block_bootstrap_95": [
+        0.011784147008035956,
+        0.06597249504791838
+      ],
+      "median_field_density": 0.0,
+      "fields_with_no_groups": 15
+    },
+    {
+      "budget": 0.3,
+      "area_deg2": 168.2040470679012,
+      "groups": 39,
+      "observed_groups_per_deg2": 0.23186124638402036,
+      "block_bootstrap_95": [
+        0.167885932886095,
+        0.296332291202546
+      ],
+      "median_field_density": 0.2379512522660733,
+      "fields_with_no_groups": 3
+    }
+  ],
+  "batches": {
+    "batch1": {
+      "modes": 26,
+      "groups": 21
+    },
+    "batch2": {
+      "modes": 22,
+      "groups": 18
+    }
+  },
+  "inspected": 39
+}

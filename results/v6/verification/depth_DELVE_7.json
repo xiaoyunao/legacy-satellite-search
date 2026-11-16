@@ -1,0 +1,9 @@
+{
+  "job": "61415699",
+  "cutoffs": {
+    "ls_base": 6.264362366951701,
+    "ls_deep": 6.049380576418341
+  },
+  "config_sha256": "7465518ddf14fd013d8dda7451ecb7a2a2121ef7f403c86d833ad805f1831afa",
+  "weak": true
+}

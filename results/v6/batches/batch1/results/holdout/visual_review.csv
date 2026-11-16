@@ -1,0 +1,22 @@
+group_id,image_checked,visual_disposition,evidence_level,review_note
+verify_01-A_base-0.3-001,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_01-A_base-0.3-002,True,coverage_artifact_context,L0,Linear constant-declination image feature in both central stamps; weak C response.
+verify_02-A_base-0.3-001,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_02-A_base-0.3-002,True,coverage_edge_context,L0,Checked both central stamps. Weak C response in a local mask neighborhood.
+verify_02-A_base-0.3-003,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_02-A_base-0.3-004,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_03-A_base-0.3-001,True,low_C_support,L0,Checked both central stamps and the available source thumbnails. Residual C support is weak.
+verify_03-A_base-0.3-002,True,bright_source_blend_context,L0,High-weight sources lie by extended or blended light and the central non-PSF profile is also enhanced. C residual is zero.
+verify_04-A_base-0.3-001,True,low_C_support,L0,Checked both central stamps and the available source thumbnails. Residual C support is weak.
+verify_04-A_base-0.3-002,True,low_C_support,L0,Checked both central stamps and the available source thumbnails. Residual C support is weak.
+verify_04-A_base-0.3-003,True,few_source_peak,L0,Small CMD sample with limited sequence coherence. Removing three sources leaves TS 0.007.
+verify_05-A_base-0.3-001,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_05-A_base-0.3-002,True,low_C_support,L0,Checked both central stamps and the available source thumbnails. Residual C support is weak.
+verify_06-A_base-0.3-001,True,low_priority_compact_L0,L0,"Three compact sources are visible in both bands, with only four PSFs in the plotted central CMD. C residual is 0.356."
+verify_06-A_base-0.3-002,True,low_C_support,L0,Image shows resolved individual sources and multiple field populations. Weak C residual and a linear coverage break outside the core.
+verify_07-A_base-0.3-001,True,low_priority_compact_L0,L0,"Compact core and near-mask bright star. Central CMD is sparse and multicolored, with C residual 1.565."
+verify_07-A_base-0.3-002,True,low_C_support,L0,Checked both central stamps and the available source thumbnails. Residual C support is weak.
+verify_08-A_base-0.3-001,True,coverage_artifact_context,L0,Bright linear artifact in both central bands and nearest hole within 0.30 arcmin.
+verify_08-A_base-0.3-002,True,low_C_support,L0,Coadd shapes largely compatible with point sources. The central CMD remains broad and the C residual is 0.122.
+verify_08-A_base-0.3-003,True,bright_source_blend_context,L0,Image shows edge light from a bright source and a nearby coverage hole.
+verify_09-A_base-0.3-001,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.

@@ -1,0 +1,23 @@
+{
+  "groups": 96,
+  "config": "3f22c43d7c510fd08c3649bf402c04b1ac57844f58caa2eab624c6bc98074fd8",
+  "slurm": "61414956",
+  "2arcmin": {
+    "observed": 61,
+    "expected_matched": 54.14583333333333,
+    "difference": 0.07139756944444443,
+    "field_bootstrap_interval": [
+      -0.01959331535832154,
+      0.16548764221609777
+    ]
+  },
+  "within_rh": {
+    "observed": 49,
+    "expected_matched": 45.083333333333336,
+    "difference": 0.04079861111111111,
+    "field_bootstrap_interval": [
+      -0.02384411549707602,
+      0.10599082689606741
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+field,trial,arm,N_used,N_generated,rh_pc,D_kpc,cutoff,blank_spatial,spatial,blind_correct,correct_mode_exists,wide_mode_exists,blind_dm,blind_dm_error,correct_mode_dm,offset_arcmin,representative_channel
+expand_13,0,ls_base,6,22,10,50,6.264362366951701,False,False,False,False,False,,,,,
+expand_13,0,ls_deep,9,22,10,50,6.049380576418341,False,False,False,False,False,,,,,
+expand_13,1,ls_base,16,36,10,50,6.264362366951701,False,True,False,True,True,17.5,-0.9948500216800937,18.25,0.13095986998175813,A_base
+expand_13,1,ls_deep,24,36,10,50,6.049380576418341,False,True,False,True,True,17.5,-0.9948500216800937,18.25,0.13095986998175813,A_base
+expand_13,2,ls_base,7,22,15,100,6.264362366951701,False,False,False,False,False,,,,,
+expand_13,2,ls_deep,15,22,15,100,6.049380576418341,False,False,False,False,False,,,,,
+expand_13,3,ls_base,12,36,15,100,6.264362366951701,False,True,False,False,True,20.5,0.5,,0.4929702295002341,A_base
+expand_13,3,ls_deep,20,36,15,100,6.049380576418341,False,True,False,True,True,19.5,-0.5,20.25,0.45832457881702,A_base

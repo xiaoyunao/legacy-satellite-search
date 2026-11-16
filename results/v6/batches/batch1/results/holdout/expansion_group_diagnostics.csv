@@ -1,0 +1,22 @@
+group_id,field,phase,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level,known_catalog_nearby,near_mask_hole_2arcmin,mask_invalid_fraction_in_6arcmin,nearest_mask_hole_arcmin
+verify_01-A_base-0.3-001,verify_01,discovery,awaiting_visual_review,1,1,1,1,0.0,19.75,11.2,0.0,DELVE 5,344.3731578082447,L0,False,False,0.00024551927326295114,2.035279123636302
+verify_01-A_base-0.3-002,verify_01,discovery,awaiting_visual_review,1,1,1,2,1.2860910028730554,20.75,1.4,0.0,DELVE 5,240.57574809850118,L0,False,True,0.049729862475442047,0.5018023072443957
+verify_02-A_base-0.3-001,verify_02,discovery,awaiting_visual_review,4,4,2,1,0.0,19.5,11.2,0.0,Bootes V,388.18823833459163,L0,False,False,0.007795236926098699,2.183428751095337
+verify_02-A_base-0.3-002,verify_02,discovery,awaiting_visual_review,1,1,1,4,3.1638760382145,18.25,1.4,0.0,Bootes V,211.55764396547394,L0,False,True,0.0022716110019646366,0.8557809948297986
+verify_02-A_base-0.3-003,verify_02,discovery,awaiting_visual_review,1,1,1,5,0.0,17.25,11.2,0.0,Bootes V,371.69356282474496,L0,False,True,0.020132580407561995,1.569014198646973
+verify_02-A_base-0.3-004,verify_02,discovery,awaiting_visual_review,1,1,1,6,0.0,20.25,11.2,0.0,Bootes V,300.8137411747564,L0,False,True,0.003989688190522956,1.4252192813737972
+verify_03-A_base-0.3-001,verify_03,discovery,awaiting_visual_review,1,1,1,1,0.5190122887039657,19.25,1.4,0.0,Triangulum II,1050.6877650612219,L0,False,False,0.008165520628683693,3.4276854840812296
+verify_03-A_base-0.3-002,verify_03,discovery,awaiting_visual_review,1,1,1,2,11.14884239765643,18.75,0.5,0.0,Triangulum II,1258.4377553695358,L0,False,True,0.007120058924625583,1.9302058036505476
+verify_04-A_base-0.3-001,verify_04,discovery,awaiting_visual_review,1,1,1,1,2.7305222908744957,20.5,0.35,0.0,Bootes I,348.56876144215033,L0,False,False,0.00343811394891945,5.313903409400922
+verify_04-A_base-0.3-002,verify_04,discovery,awaiting_visual_review,2,2,2,4,2.796809967673757,19.5,1.0,0.0,Bootes I,256.0401128183519,L0,False,False,6.137981831573779e-05,5.421472227273989
+verify_04-A_base-0.3-003,verify_04,discovery,awaiting_visual_review,1,1,1,3,9.06050366095735,19.25,0.35,0.007233974791458431,Bootes I,218.88384385096583,L0,False,False,0.0009823182711198428,3.3063596127601023
+verify_05-A_base-0.3-001,verify_05,discovery,awaiting_visual_review,1,1,1,1,0.0,20.5,11.2,0.0,Canes Venatici II,352.879322537493,L0,False,True,0.0027620918242082003,0.3173238794106623
+verify_05-A_base-0.3-002,verify_05,discovery,awaiting_visual_review,1,1,1,2,2.292119320346244,18.5,2.0,0.0,Canes Venatici II,393.2529174383932,L0,False,False,0.0013503560029462312,2.744312300012054
+verify_06-A_base-0.3-001,verify_06,discovery,awaiting_visual_review,1,1,1,1,16.158241473807905,18.25,0.35,0.3558054842284737,Canes Venatici I,421.46274830273995,L0,False,False,0.0,
+verify_06-A_base-0.3-002,verify_06,discovery,awaiting_visual_review,1,1,1,2,5.191768898614226,20.25,2.0,0.1193615519097162,Canes Venatici I,380.2063915058944,L0,False,False,0.005769702921679352,3.7085674083427427
+verify_07-A_base-0.3-001,verify_07,discovery,awaiting_visual_review,2,2,1,2,17.351257633372065,17.75,0.35,1.5647355384911092,Pisces II,464.2132378498318,L0,False,True,0.0023938129143137735,1.4636806725194214
+verify_07-A_base-0.3-002,verify_07,discovery,awaiting_visual_review,1,1,1,3,1.4243336942301474,18.0,0.35,0.0,Pisces II,375.7124281223237,L0,False,False,0.0068762278978389,3.4617051835447943
+verify_08-A_base-0.3-001,verify_08,discovery,awaiting_visual_review,1,1,1,1,0.9502805893307982,17.0,1.4,0.0,Pisces II,1604.9158414643316,L0,False,True,0.027620918242082005,0.2946278254939761
+verify_08-A_base-0.3-002,verify_08,discovery,awaiting_visual_review,1,1,1,2,6.002806864826095,20.25,1.0,0.12173699149801465,Pisces II,1593.8140728902015,L0,False,False,0.00018413945494721336,4.650642130095469
+verify_08-A_base-0.3-003,verify_08,discovery,awaiting_visual_review,1,1,1,3,0.36325805081899976,16.75,0.5,0.0,Pisces II,1578.1857414799442,L0,False,True,0.0427203535477535,0.7095577652468059
+verify_09-A_base-0.3-001,verify_09,discovery,awaiting_visual_review,1,1,1,1,0.0,19.5,11.2,0.0,Segue 2,417.0144900179092,L0,False,True,0.012521482936410509,1.9799340617532022

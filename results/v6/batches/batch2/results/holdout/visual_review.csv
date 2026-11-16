@@ -1,0 +1,19 @@
+group_id,image_checked,visual_disposition,evidence_level,review_note
+verify_12-A_base-0.3-001,True,coverage_edge_context,L0,Checked both central stamps. Weak C response in a local mask neighborhood.
+verify_13-A_base-0.3-001,True,bright_source_blend_context,L0,Bright-source light affects the first source stamp. Removing three sources leaves zero residual TS.
+verify_13-A_base-0.3-002,True,low_priority_compact_L0,L0,"Coadds show a small core of faint compact sources. The CMD is broadly compatible near the main sequence, and the nearby A distance curve has additional modes. Residual TS 1.413."
+verify_15-A_base-0.3-001,True,few_source_peak,L0,The coadd source stamps show some asymmetric light. The sparse CMD fit has zero residual TS after removal.
+verify_15-A_base-0.3-002,True,coverage_edge_context,L0,Checked both central stamps. Weak C response in a local mask neighborhood.
+verify_16-A_base-0.3-001,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_16-A_base-0.3-002,True,low_priority_compact_L0,L0,"Coadds show several compact central sources. Central CMD is sparse, non-PSF sources are also abundant, and C residual is 0.528."
+verify_16-A_base-0.3-003,True,coverage_edge_context,L0,Checked both central stamps. Weak C response in a local mask neighborhood.
+verify_16-A_base-0.3-004,True,few_source_peak,L0,Some central faint sources align with the selected CMD mode. Background non-PSF density is high and C residual is 0.686.
+verify_17-A_base-0.3-001,True,low_priority_compact_L0,L0,Three compact sources appear in both bands. Five central CMD entries and a separate near-distance A mode make this fit fragile; residual TS 0.126.
+verify_18-A_base-0.3-001,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_19-A_base-0.3-001,True,coverage_edge_context,L0,Checked both central stamps. Weak C response in a local mask neighborhood.
+verify_19-A_base-0.3-002,True,bright_source_blend_context,L0,The first source is adjacent to diffuse bright light in g and r.
+verify_19-A_base-0.3-003,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_19-A_base-0.3-004,True,few_source_peak,L0,Source thumbnails are compact. Strongest contribution dominates; C residual is 0.052.
+verify_20-A_base-0.3-001,True,no_C_support,L0,Checked both central stamps. C fitted zero signal amplitude for the representative mode.
+verify_20-A_base-0.3-002,True,coverage_edge_context,L0,Checked both central stamps. Weak C response in a local mask neighborhood.
+verify_20-A_base-0.3-003,True,few_source_peak,L0,"Central PSF and non-PSF counts are both enhanced. Several LS sources lie near the CMD locus, with residual TS 0.197."

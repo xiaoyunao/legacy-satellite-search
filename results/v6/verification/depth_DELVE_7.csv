@@ -1,0 +1,3 @@
+field,arm,cutoff,N_psf_within_2arcmin,forced_psf,covered,core_valid_fraction,off_valid_fraction,spatial,blind_correct,correct_mode_exists,wide_mode_exists,blind_dm,blind_dm_error,correct_mode_dm,offset_arcmin,representative_channel
+DELVE_7,ls_base,6.264362366951701,98,0,True,1.0,1.0,False,False,False,False,,,,,
+DELVE_7,ls_deep,6.049380576418341,114,0,True,1.0,1.0,True,False,False,False,16.5,-1.616246451989504,,0.612772689399754,A_base
