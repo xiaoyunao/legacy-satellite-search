@@ -1,0 +1,28 @@
+blind_id,group_id,origin,stratum,stratum_size,stratum_selected,grade,reason
+B01,gap_28-A_base-0.3-001,rollout,compact_1_mask_1_ts_2,18,2,ambiguous,Compact PSF contrast but few CMD stars across a wide range and visible depth structure.
+B02,gap_82-A_base-0.3-001,rollout,compact_1_mask_1_ts_3,18,2,low,PSF concentration is off centre and near an exposure edge with a similar sparse background CMD.
+B03,gap_57-A_base-0.3-001,rollout,compact_1_mask_0_ts_2,20,2,ambiguous,Sharp PSF core and clean brightest images but the faint CMD has weak continuity.
+B04,gap_89-A_base-0.3-001,rollout,compact_1_mask_0_ts_1,20,2,low,Clean pointlike images but a very sparse core with no persuasive sequence or centered radial excess.
+B05,survey_35-A_base-0.3-001,rollout,compact_1_mask_1_ts_1,18,2,low,The PSF distribution is diffuse and some high-weight stamps contain neighbours.
+B06,wide_06-A_base-0.3-006,rollout,compact_1_mask_0_ts_3,19,2,ambiguous,Several faint CMD stars and a sharp spot with clean stamps but very few core objects.
+B07,survey_36-A_base-0.3-003,rollout,compact_1_mask_0_ts_3,19,2,low,Off-centred radial response dominated by non-PSF counts and a sparse core.
+B08,gap_45-A_base-0.3-001,rollout,compact_1_mask_0_ts_2,20,2,low,No sharp PSF contrast and close neighbours in the image stamps.
+B09,wide_06-A_base-0.3-001,rollout,compact_0_mask_0_ts_3,12,2,low,Large mask holes with nearly flat PSF counts and similar central and background CMDs.
+B10,weak_02-A_base-0.3-001,DELVE_4,,,,ambiguous,A narrow faint locus is visible but the central PSF and non-PSF profiles rise together.
+B11,wide_03-A_base-0.3-004,rollout,compact_0_mask_1_ts_3,19,2,low,Wide response follows a substantial coverage edge and depth transition.
+B12,survey_20-A_base-0.3-001,rollout,compact_1_mask_1_ts_3,18,2,ambiguous,Pointlike stamps and a possible core with a strong depth step in the outer field.
+B13,weak_03-A_base-0.3-001,DELVE_5,,,,targeted,Center concentration with a visible main sequence and mostly clean g and r stamps.
+B14,survey_26-A_base-0.3-005,rollout,compact_0_mask_0_ts_2,13,2,low,Broad response over variable seeing and coverage with weak core contrast.
+B15,survey_57-A_base-0.3-001,rollout,compact_1_mask_0_ts_1,20,2,low,A few plausible stars with a sparse CMD and a non-PSF radial excess.
+B16,gap_56-A_base-0.3-001,rollout,compact_1_mask_1_ts_1,18,2,low,Strong central non-PSF signal and very few sequence stars.
+B17,survey_49-A_base-0.3-002,rollout,compact_0_mask_1_ts_2,19,2,low,Nearly flat PSF profile with a bright image feature off centre.
+B18,survey_69-A_base-0.3-002,rollout,compact_0_mask_0_ts_2,13,2,low,Broad response without a centered excess or a distinctive CMD sequence.
+B19,wide_08-A_base-0.3-001,rollout,compact_0_mask_0_ts_3,12,2,low,Comparable core and background CMDs with no centered radial peak.
+B20,gap_88-A_base-0.3-001,rollout,compact_0_mask_0_ts_1,13,2,low,Large coverage discontinuity and depth gradients across the trial aperture.
+B21,survey_19-A_base-0.3-002,rollout,compact_1_mask_1_ts_2,18,2,ambiguous,Pointlike sources near the locus but a central non-PSF spike and a weak PSF core.
+B22,survey_03-A_base-0.3-004,rollout,compact_0_mask_1_ts_1,19,2,low,Off-centre footprint edge and strongly varying seeing dominate the spatial context.
+B23,wide_06-A_base-0.3-004,rollout,compact_0_mask_1_ts_3,19,2,low,The fitting region overlaps a large bright-object mask with a broad field CMD.
+B24,gap_84-A_base-0.3-001,rollout,compact_0_mask_1_ts_1,19,2,low,Weak and essentially flat PSF profile amid background and exposure structure.
+B25,gap_100-A_base-0.3-002,rollout,compact_0_mask_0_ts_1,13,2,low,Some broad spatial variation with extensive holes and similar CMDs.
+B26,weak_01-A_base-0.3-002,DELVE_3,,,,targeted,Centered PSF enhancement with clear faint sequence and mostly clean point-source cutouts.
+B27,survey_59-A_base-0.3-001,rollout,compact_0_mask_1_ts_2,19,2,low,Wide footprint edge and no centered PSF enhancement.

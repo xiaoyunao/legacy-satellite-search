@@ -8,6 +8,7 @@ from pathlib import Path
 
 import astropy.units as u
 from astropy.coordinates import SkyCoord
+from astropy.io import fits
 from astropy_healpix import HEALPix
 import numpy as np
 from scipy.spatial import cKDTree
@@ -40,7 +41,48 @@ def executed_coverage(lon, lat, data, rollout):
     return searched, len(rows), sum(float(r['area_deg2']) for r in rows)
 
 
-def run(rollout=None):
+def moc_contains(path, lon, lat):
+    """Test sky positions against an ICRS HEALPix NUNIQ coverage file."""
+    with fits.open(path) as hdus:
+        header=hdus[1].header
+        if header.get('ORDERING')!='NUNIQ' or header.get('COORDSYS')!='C':
+            raise ValueError(f'Expected an equatorial spatial NUNIQ MOC: {path}')
+        name=next(k for k in hdus[1].columns.names if k in ('UNIQ','PIXEL'))
+        uniq=np.asarray(hdus[1].data[name],dtype=np.int64)
+    if not len(uniq):
+        return np.zeros_like(lon,dtype=bool)
+    bases=4 << (2*np.arange(30,dtype=np.int64))
+    order=np.searchsorted(bases,uniq,side='right')-1
+    if np.any(order<0):
+        raise ValueError('Invalid spatial MOC indices')
+    highest=int(order.max())
+    width=1 << (2*(highest-order))
+    lo=(uniq-bases[order])*width
+    idx=np.argsort(lo)
+    hi=np.maximum.accumulate((lo+width)[idx])
+    pix=HEALPix(nside=1 << highest,order='nested').lonlat_to_healpix(lon*u.deg,lat*u.deg)
+    segment=np.searchsorted(lo[idx],pix,side='right')-1
+    return (segment>=0)&(pix<hi[np.maximum(segment,0)])
+
+
+def rank_ps1_cells(out, lon, lat, remaining, cell, mocs):
+    pixel_masks={p.stem:moc_contains(p,lon,lat) for p in mocs}
+    joint=np.logical_or.reduce(list(pixel_masks.values()))
+    selected=np.flatnonzero(remaining)
+    tile=(lon[selected]//2).astype(int)+180*(lat[selected]//2).astype(int)
+    rows=[]
+    for k in np.unique(tile):
+        i=selected[tile==k]
+        rows.append(dict(ra_min_deg=2*int(k%180),dec_min_deg=2*int(k//180),
+                         eligible_proxy_deg2=len(i)*cell,covered_by_released_mocs_deg2=joint[i].sum()*cell,
+                         outside_released_mocs_deg2=(~joint[i]).sum()*cell))
+    rows.sort(key=lambda r:-r['outside_released_mocs_deg2'])
+    write_csv(out/'ps1_ranked_proxy_cells.csv',rows)
+    write_csv(out/'ps1_footprint_overlap.csv',[dict(mask=name,overlap_deg2=(remaining&mask).sum()*cell,
+              tested_area_deg2=remaining.sum()*cell) for name,mask in (*pixel_masks.items(),('union',joint))])
+
+
+def run(rollout=None, *, output=None, mocs=()):
     root,data,_=settings()
     plan=yaml.safe_load(config_path('expansion.yaml').read_text())
     nside=256
@@ -93,16 +135,21 @@ def run(rollout=None):
                              prior_nominal_covered_proxy_deg2=float((area&previous).sum()*cell),
                              new_mask_covered_proxy_deg2=float((area&~previous&executed).sum()*cell),
                              remaining_proxy_deg2=float((area&~previous&~executed).sum()*cell)))
-    out=rollout/'footprint' if rollout else Path('results/footprint')
+    out=output or (rollout/'footprint' if rollout else Path('results/footprint'))
     out.mkdir(exist_ok=True,parents=True)
     write_csv(out/'remaining_extent.csv',rows)
     write_json(out/'method.json',dict(job=os.environ.get('SLURM_JOB_ID'),nside=nside,pixel_area_deg2=cell,
                prior_centers=len(seen_ids),mask='DELVE census accepted plus LS south positive gr brick depth, EBV<0.10 and absolute b>=25',
                new_completed_fields=n,new_effective_native_area_deg2=native,
                scope='Brick-centre eligibility proxy. New deductions sample the executed core masks; legacy cohorts use nominal core bounds.'))
+    if mocs:
+        rank_ps1_cells(out,lon,lat,(survey==3)&~previous&~executed,cell,mocs)
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rollout',type=Path)
-    run(parser.parse_args().rollout)
+    parser.add_argument('--output',type=Path)
+    parser.add_argument('--moc',type=Path,action='append',default=[])
+    args=parser.parse_args()
+    run(args.rollout,output=args.output,mocs=args.moc)

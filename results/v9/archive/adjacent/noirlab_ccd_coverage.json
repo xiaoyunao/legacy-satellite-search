@@ -1,0 +1,7 @@
+{
+  "job": "61454273",
+  "core_union": 0.611962071480671,
+  "annulus_union": 0.7772758384668036,
+  "central_pixel_coverage": true,
+  "scope": "Finite image pixels in archive WCS; quality, depth and PSF need validation if usable."
+}

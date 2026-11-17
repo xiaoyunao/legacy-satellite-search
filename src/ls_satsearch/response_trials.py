@@ -38,7 +38,7 @@ def audit_errors(field_id,pool,point):
     return rows
 
 
-def run(field_id,version,archive):
+def run(field_id,version,archive,physical_plan=None,output=None):
     _,data,cfg=settings()
     matched=yaml.safe_load(config_path('matched.yaml').read_text())
     spec=next(s for s in matched['fields'] if s['id']==field_id and s['role']=='pilot_dev')
@@ -72,21 +72,36 @@ def run(field_id,version,archive):
     with paths[1].open() as f:
         headers=next(line[1:].split() for line in f if line.startswith('#') and 'iP1' in line)
     model_i=np.loadtxt(paths[1],usecols=headers.index('iP1'))
-    seed=[cfg['seed'],int(spec['ra']*1000),55]
+    physical = yaml.safe_load(physical_plan.read_text()) if physical_plan else None
+    seed=[cfg['seed'],int(spec['ra']*1000),physical['seed'] if physical else 55]
     rng=np.random.default_rng(np.random.SeedSequence(seed))
-    positions=choose_sites(field,area,cfg,6,rng)
-    conditions=[(50,10,28),(100,15,40)]*3
+    conditions = physical['conditions'] if physical else [(50,10,28),(100,15,40)]*3
+    positions=choose_sites(field,area,cfg,len(conditions),rng)
+    if physical and len(positions)!=len(conditions):
+        raise ValueError('Physical pilot is missing eligible injection sites')
+    # The archived native templates lack Johnson V. Use a fixed SDSS-like
+    # colour transformation as a luminosity proxy for the entire IMF.
+    g_abs,r_abs=model_ls[0].T
+    v_proxy=g_abs-.59*(g_abs-r_abs)-.01
+    v_flux=10**(-.4*v_proxy)
     trials=[]
-    for trial,(pos,(distance,size,n)) in enumerate(zip(positions,conditions)):
+    for trial,(pos,(distance,size,normalization)) in enumerate(zip(positions,conditions)):
         dm=5*np.log10(distance)+10
         rh=np.degrees(np.arctan(size/(1000*distance)))*60
-        valid_model=np.any([np.all(model[0]+dm<=[c['g_max']+.4,c['r_max']+.4],axis=1)
+        margin=.8 if physical else .4
+        valid_model=np.any([np.all(model[0]+dm<=[c['g_max']+margin,c['r_max']+margin],axis=1)
                             for model,c in ((model_ls,configs['ls_deep']),(model_ps1,configs['ps1']))],axis=0)
         weights=model_ls[1]*valid_model
+        if physical:
+            total_lum=10**(-.4*normalization)
+            expected=weights.sum()*total_lum/np.dot(model_ls[1],v_flux)
+            n=rng.poisson(expected)
+        else:
+            n=normalization
         draw=rng.choice(len(weights),n,p=weights/weights.sum())
-        q=rng.uniform(0,.9,n); t=rng.uniform(0,2*np.pi,n)
+        q=rng.uniform(0,1 if physical else .9,n); t=rng.uniform(0,2*np.pi,n)
         xy=pos+rh*np.sqrt(q/(1-q))[:,None]*np.column_stack([np.cos(t),np.sin(t)])
-        in_area=area[sample_pixels(field,area,*xy.T)]
+        in_area=area[sample_pixels(field,area,*xy.T)]&np.all(np.abs(xy)<field.limit,axis=1)
         ra,dec=field.sky(*xy.T)
         truth_ra,truth_dec=field.sky(*pos)
         truth=dict(ra_deg=truth_ra,dec_deg=truth_dec,D_kpc=distance,theta_h_arcmin=rh)
@@ -95,6 +110,8 @@ def run(field_id,version,archive):
         ls_obs=sr.perturb(model_ls[0][draw]+dm,ls_point,pos,rng,standard_noise=noise[:,:2])
         for survey in SURVEYS:
             c=configs[survey]
+            if physical:
+                c=dict(c,dm=[16.5,20.75,c['dm'][2]])
             if survey=='ps1':
                 intrinsic=np.column_stack([model_ps1[0][draw]+dm,model_i[draw]+dm+1.682*reddening(ra,dec)])
                 phot,err=sr.perturb(intrinsic,ps1_point,pos,rng,standard_noise=noise)
@@ -110,20 +127,27 @@ def run(field_id,version,archive):
             g,r=phot[:,:2],err[:,:2]
             conditional=sr.gr_accept(g,r,c)
             last_selection,last=None,None
-            for label,sel in [('conditional_gr',conditional),('both_proxy_response',grade)]:
+            arms=[('both_proxy_response',grade)] if physical else [('conditional_gr',conditional),('both_proxy_response',grade)]
+            for label,sel in arms:
                 index=sel&in_area
+                blank=matches(empty[survey],truth,cuts[survey],c)
                 if last is None or not np.array_equal(index,last_selection):
                     delivered=np.column_stack([xy,g,r])[index]
-                    _,peaks,timing,_=scan(np.vstack([samples[survey],delivered]),field,area,model,c)
-                    eligible=[dict(p,channel='A_base',ranking=p['score']) for p in peaks if p['score']>=cuts[survey]]
-                    last=matches(groups(eligible),truth,cuts[survey],c)
+                    if physical and len(delivered)==0:
+                        last=blank
+                    else:
+                        _,peaks,_,_=scan(np.vstack([samples[survey],delivered]),field,area,model,c)
+                        eligible=[dict(p,channel='A_base',ranking=p['score']) for p in peaks if
+                                  p['score']>=cuts[survey] and (not physical or p['branch']=='main')]
+                        last=matches(groups(eligible),truth,cuts[survey],c)
                 last_selection=index
-                blank=matches(empty[survey],truth,cuts[survey],c)
                 trials.append(dict(field=field_id,trial=trial,survey=survey,arm=label,
                                    D_kpc=distance,rh_pc=size,N_latent=n,N_in_valid_area=int(in_area.sum()),
                                    N_used=int(index.sum()),
-                                   blank_spatial=blank['spatial'],cutoff=cuts[survey],**counts,**last))
-    out=Path('results/matched_response')
+                                   blank_spatial=blank['spatial'],cutoff=cuts[survey],
+                                   **(dict(expected_MV_proxy=normalization,N_expected_near_limits=expected) if physical else {}),
+                                   **counts,**last))
+    out=output or Path('results/v9/physical_trials' if physical else 'results/matched_response')
     out.mkdir(exist_ok=True,parents=True)
     write_csv(out/f'{field_id}.csv',trials)
     write_csv(out/f'{field_id}-ls-response.csv',ls_bins)
@@ -132,7 +156,10 @@ def run(field_id,version,archive):
     write_json(out/f'{field_id}.json',dict(status='complete',job=os.environ.get('SLURM_JOB_ID'),seed=seed,
                model='Common latent rows and sky positions, common standardized gr noise and morphology draws. '
                'Proxy shape response conditional on observed counterpart; unsupported bins use unity. '
-               'Catalog entry and image completeness are unmeasured.'))
+               'Catalog entry and image completeness are unmeasured.',
+               **(dict(physical_plan=physical,search_dm_branch='main',luminosity_definition='expected IMF-integrated V proxy, '
+                       'V=g-0.59(g-r)-0.01 in DECam AB; truncated injection draws near either sample limit')
+                  if physical else {})))
 
 
 if __name__=='__main__':
@@ -140,5 +167,7 @@ if __name__=='__main__':
     p.add_argument('field')
     p.add_argument('--version',choices=('v3','v4'),required=True)
     p.add_argument('--archive',type=Path,required=True)
+    p.add_argument('--physical-plan',type=Path)
+    p.add_argument('--output',type=Path)
     a=p.parse_args()
-    run(a.field,a.version,a.archive)
+    run(a.field,a.version,a.archive,a.physical_plan,a.output)

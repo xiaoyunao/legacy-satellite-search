@@ -1,5 +1,9 @@
 # 公开新颖性审计
 
+## 2026-11-17 · Euclid DR1
+
+Gatto 等公布的 Ursa Minor II、Fornax 7 和 Eridanus V 与 expand_03、survey_14、survey_63 的九个两两距离均超过 52°。Euclid DR1 Wide 官方 MOC 在三个发表中心均给出覆盖，在 survey_63 中心无覆盖。[论文表 2](https://arxiv.org/html/2611.16025#S4.T2) · [位置交叉表](../results/v9/archive/euclid_novelty.csv) · [发布覆盖](../results/v9/archive/euclid_moc_probes.csv)
+
 ## 2026-11-17 · survey_14 与 survey_63
 
 用两个已冻结的 C 中心分别执行实时核查，查询日为 2026-11-17 UTC。5′ 和 30′ 的 SIMBAD 查询保留对象类型和标识。Hunt & Reffert 2024、VizieR 星团及矮星系表、UCC 260615 和固定 LVDB/DELVE 公开中心均按球面角距计算。两处的 30′ 锥内均未找到目标类型的公开同位置系统。[survey_14 逐库核查](../results/v8/survey14/novelty/novelty_catalog_checks.csv) · [survey_63 逐库核查](../results/v8/survey63/novelty/novelty_catalog_checks.csv)

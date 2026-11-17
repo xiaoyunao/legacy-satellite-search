@@ -2,6 +2,15 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Ninth-round archive and conditional recovery experiments
+
+The [ninth science report](ninth_science_report.md) records the blinded review, calibrated partial NOIRLab g coverage, Euclid footprint, and physical-luminosity pilot. Archive image files, DQ planes and weight maps stay in the Perlmutter scratch directory.
+
+On the v7 NERSC revision, use the archived v4 matched backgrounds and matched group thresholds. Set `LS_SAT_VERSION=v5 LS_SAT_PROFILE=response_v4` when invoking `scripts/v6.sh response_trials`. Pass `--version v4 --archive ../holdout-v4/results/matched --physical-plan configs/v9/physical_trials.yaml` and the field `fresh_05` or `fresh_09`. Run the pair summary with `.venv/bin/python scripts/summarize_physical_trials.py results/v9/physical_trials`.
+
+The optional published census reference uses the pinned author PS1 model, r<22 density map and v2.1 mask. `ls_satsearch.census_reference` uses `xgboost-cpu==2.1.4` in a separate scratch package directory, added to `PYTHONPATH` alongside `src`. Set the same matched profile as `response_trials`. The released model uses the original census thresholds.
+The Euclid overlap uses the official Wide and Deep NUNIQ MOCs with the previously measured DR11 masks. Run `remaining_footprint --rollout results/v8/rollout --output results/v9/footprint --moc PATH_WIDE --moc PATH_DEEP` under `LS_SAT_VERSION=v7`. The released MOC download URLs and hashes are in [the probe table](results/v9/archive/euclid_moc_probes.csv).
+
 ## Eighth-round candidate and footprint audit
 
 The [eighth science report](eighth_science_report.md) records the completed frozen-policy search, targeted candidate tests and effective-area accounting. See [work log](WORKLOG.md), [plan](PLAN.md) and [scientific direction](docs/PROJECT_MEMORY.md).

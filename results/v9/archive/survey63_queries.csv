@@ -1,0 +1,8 @@
+archive,selection,status,detail,source,response_sha256,utc_date
+SMOKA,survey_63; HSC-g Frame 2.1 arcmin; imaging OBJECT,no_match,Public search returned no matching frames,https://smoka.nao.ac.jp/HSCsearch.jsp,94cd9fdea0261f8a198ae0b0de07e305142e90175f095e3bbafe6e98f82e0567,2026-11-17
+SMOKA,survey_63; HSC-g Shot 52 arcmin; imaging OBJECT,neighbouring_pointings,29 returned shot centers; nearest 69.5 arcmin; nominal HSC radius ~45 arcmin,https://smoka.nao.ac.jp/HSCsearch.jsp,d69b69b173ae3e5b7bd62ef6bc6d3cdb4a25eb70e5b325736d1ab951a5f3b909,2026-11-17
+HSCLA,image cutout and hscMap,authentication_required,Both HTTP 401. No authenticated browser available from this session.,https://hscla.mtk.nao.ac.jp/doc/data-access/,,2026-11-17
+CADC / UNIONS,2.1 arcmin native Meta/Plane metadata,r_only_in_gr,"Four public calibrated MegaCam r exposures, all previously WCS-confirmed. No verified released g.",https://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/en/community/unions/,,2026-11-17
+Euclid IRSA,official DR1 Wide and Deep MOC,no_release_coverage,Frozen center outside both release footprints,https://euclid.caltech.edu/page/euclid-dr1-foundation,,2026-11-17
+NOIRLab Native SIA,0.06 deg HDU search,wcs_followup,105 product rows; g includes three visits after de-duplicating product types and CCDs,"https://astroarchive.noirlab.edu/api/sia/vohdu?POS=356.63691,27.95930&SIZE=0.06&VERB=3&format=json",9000e9dbf4f06c93767e9c7d62e67c40e15b7fb7a48ab913bc035d5aa2f40443,2026-11-17
+Rubin EDP2,published release documentation,footprint_unresolved,Authoritative machine-readable search mask not verified. EDP2 image collection available to data rights holders.,https://dp2.lsst.io/products/index.html,,2026-11-17

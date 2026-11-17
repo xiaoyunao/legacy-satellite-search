@@ -1,0 +1,47 @@
+{
+  "job": "61454570",
+  "expnum": 562858,
+  "aperture_radius_pixels": 4,
+  "core_usable_fraction": 0.5171407731582787,
+  "annulus_usable_fraction": 0.7424366872005476,
+  "center_usable": false,
+  "measurements": [
+    {
+      "ccd": "N1",
+      "status": "calibrated",
+      "calibrators": 5,
+      "holdout": 4,
+      "holdout_median_mag": -0.034299290561303764,
+      "holdout_sigma_mag": 0.04747483647846411,
+      "zeropoint_ps1_g": 29.45282122367778,
+      "blank_apertures": 503,
+      "g5_ps1_equiv": 23.215344946945635,
+      "g0_5_ps1_equiv": 22.99728627278897,
+      "core_fraction": 0.0700218818380744,
+      "file_sha256": {
+        "image": "0271467b30c5361e50ed2ff324c11feb257d11d52c8ff31b576cc12f869f0d1f",
+        "weight": "870cd63ab134b0865ec252a57738b1dcd0a528126536bb292b44e031628a69f0",
+        "dq": "9ac273555ba949912a8be33356b4242236f6d786840abfd2948cd8a4a360a278"
+      }
+    },
+    {
+      "ccd": "N2",
+      "status": "calibrated",
+      "calibrators": 9,
+      "holdout": 5,
+      "holdout_median_mag": 0.014868617234434112,
+      "holdout_sigma_mag": 0.05869640040493111,
+      "zeropoint_ps1_g": 29.39362464181795,
+      "blank_apertures": 581,
+      "g5_ps1_equiv": 23.15796690682499,
+      "g0_5_ps1_equiv": 22.939908232668323,
+      "core_fraction": 0.4471188913202042,
+      "file_sha256": {
+        "image": "ac0b2d38c79ff59b40090e8e7c75c6cc71ce9caee10ab3bc25d69685e6e1a804",
+        "weight": "178f0e1e8fb709dbeaaf7f92fe565ebe1c9755284b7ee52f66ffb79306558320",
+        "dq": "2f5872e4b128b89a8e65d6c95ac6add7df7cb6e65deb04bc390903dd5b96dbb3"
+      }
+    }
+  ],
+  "scope": "Positive weight and zero DQ, complete aperture and numerically valid margins. Empirical PS1 g calibration and local blank-aperture noise. Completeness remains unmeasured."
+}

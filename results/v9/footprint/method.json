@@ -1,0 +1,10 @@
+{
+  "job": "61452821",
+  "nside": 256,
+  "pixel_area_deg2": 0.052455852825697924,
+  "prior_centers": 86,
+  "mask": "DELVE census accepted plus LS south positive gr brick depth, EBV<0.10 and absolute b>=25",
+  "new_completed_fields": 195,
+  "new_effective_native_area_deg2": 935.2128954475306,
+  "scope": "Brick-centre eligibility proxy. New deductions sample the executed core masks; legacy cohorts use nominal core bounds."
+}

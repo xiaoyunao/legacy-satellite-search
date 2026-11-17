@@ -1,0 +1,10 @@
+candidate,object,ra_deg,dec_deg,separation_arcmin,within_30arcmin,reference
+expand_03-A_base-0.3-003,Ursa Minor II,196.1542,75.5724,3163.99480419056,False,https://arxiv.org/html/2611.16025#S4.T2
+expand_03-A_base-0.3-003,Fornax 7,38.8244,-33.9567,8824.680772646101,False,https://arxiv.org/html/2611.16025#S4.T2
+expand_03-A_base-0.3-003,Eridanus V,28.8623,-47.7105,8373.33120972528,False,https://arxiv.org/html/2611.16025#S4.T2
+survey_14-A_base-0.3-001,Ursa Minor II,196.1542,75.5724,3407.6070832996966,False,https://arxiv.org/html/2611.16025#S4.T2
+survey_14-A_base-0.3-001,Fornax 7,38.8244,-33.9567,8669.627344174203,False,https://arxiv.org/html/2611.16025#S4.T2
+survey_14-A_base-0.3-001,Eridanus V,28.8623,-47.7105,8660.039277457992,False,https://arxiv.org/html/2611.16025#S4.T2
+survey_63-A_base-0.3-001,Ursa Minor II,196.1542,75.5724,4543.3137907513965,False,https://arxiv.org/html/2611.16025#S4.T2
+survey_63-A_base-0.3-001,Fornax 7,38.8244,-33.9567,4420.897710767316,False,https://arxiv.org/html/2611.16025#S4.T2
+survey_63-A_base-0.3-001,Eridanus V,28.8623,-47.7105,4861.665708493946,False,https://arxiv.org/html/2611.16025#S4.T2

@@ -1,0 +1,9 @@
+target,product,covered,file_sha256,utc_date,source
+survey_63,euclid_dr1_deep.moc.moc.fits,False,5346133c848fb67948d32dc138dc710b49b5b5bd2135535a3419d7392c0d730e,2026-11-17,https://nasa-irsa-euclid-dr1.s3.amazonaws.com/dr1/MOC/euclid_dr1_deep.moc.moc.fits
+Ursa Minor II,euclid_dr1_deep.moc.moc.fits,False,5346133c848fb67948d32dc138dc710b49b5b5bd2135535a3419d7392c0d730e,2026-11-17,https://nasa-irsa-euclid-dr1.s3.amazonaws.com/dr1/MOC/euclid_dr1_deep.moc.moc.fits
+Fornax 7,euclid_dr1_deep.moc.moc.fits,False,5346133c848fb67948d32dc138dc710b49b5b5bd2135535a3419d7392c0d730e,2026-11-17,https://nasa-irsa-euclid-dr1.s3.amazonaws.com/dr1/MOC/euclid_dr1_deep.moc.moc.fits
+Eridanus V,euclid_dr1_deep.moc.moc.fits,False,5346133c848fb67948d32dc138dc710b49b5b5bd2135535a3419d7392c0d730e,2026-11-17,https://nasa-irsa-euclid-dr1.s3.amazonaws.com/dr1/MOC/euclid_dr1_deep.moc.moc.fits
+survey_63,euclid_dr1_wide.moc.moc.fits,False,bb89812addb7987df1bf00d78ecaf486842e429fb59af7cc128c7025f9eecd22,2026-11-17,https://nasa-irsa-euclid-dr1.s3.amazonaws.com/dr1/MOC/euclid_dr1_wide.moc.moc.fits
+Ursa Minor II,euclid_dr1_wide.moc.moc.fits,True,bb89812addb7987df1bf00d78ecaf486842e429fb59af7cc128c7025f9eecd22,2026-11-17,https://nasa-irsa-euclid-dr1.s3.amazonaws.com/dr1/MOC/euclid_dr1_wide.moc.moc.fits
+Fornax 7,euclid_dr1_wide.moc.moc.fits,True,bb89812addb7987df1bf00d78ecaf486842e429fb59af7cc128c7025f9eecd22,2026-11-17,https://nasa-irsa-euclid-dr1.s3.amazonaws.com/dr1/MOC/euclid_dr1_wide.moc.moc.fits
+Eridanus V,euclid_dr1_wide.moc.moc.fits,True,bb89812addb7987df1bf00d78ecaf486842e429fb59af7cc128c7025f9eecd22,2026-11-17,https://nasa-irsa-euclid-dr1.s3.amazonaws.com/dr1/MOC/euclid_dr1_wide.moc.moc.fits

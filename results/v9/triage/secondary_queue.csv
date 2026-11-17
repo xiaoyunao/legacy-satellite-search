@@ -1,0 +1,6 @@
+group_id,reason,TS,TS_without_top3
+gap_28-A_base-0.3-001,Compact PSF contrast but few CMD stars across a wide range and visible depth structure.,2.7687147721929284,0.0
+gap_57-A_base-0.3-001,Sharp PSF core and clean brightest images but the faint CMD has weak continuity.,6.768125032973314,0.0
+wide_06-A_base-0.3-006,Several faint CMD stars and a sharp spot with clean stamps but very few core objects.,9.452085878229582,0.0
+survey_20-A_base-0.3-001,Pointlike stamps and a possible core with a strong depth step in the outer field.,9.572850081663113,0.0
+survey_19-A_base-0.3-002,Pointlike sources near the locus but a central non-PSF spike and a weak PSF core.,3.0145786094557803,0.0

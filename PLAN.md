@@ -45,11 +45,17 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - Tested survey_14 at both frozen distances with shared Gaia and secure DESI QSO vetoes. Completed one bounded HSC g plus CFHT r calibration sensitivity check for expand_03.
 - Across the rollout, survey_63 is the leading new compact L0. PS1 local spatial support and mobility constraints are measured. Survey_51 remains secondary after the full Gaia shortlist fails a common proper-motion fit.
 
+## Ninth-round verification
+
+- Completed blinded review of 24 low-priority groups and three weak survey controls that entered the baseline queue. DELVE 7 informs the upstream detection boundary.
+- Audited public archive coverage for survey_63. Downloaded and measured a partial independent DECam g exposure. Only 51.7% of the core is usable, and measured dereddened five-sigma depth is approximately 23.
+- Applied official Euclid DR1 imaging MOCs to the remainder and evaluated the published PS1 DR1 census classifier at the two matched physical-pilot backgrounds. See the ninth science report for the measured comparison and its limits.
+
 ## Next work
 
-1. Prioritize survey_63 for calibrated independent g/r that samples the lower main sequence and resolves the distance modes. Use the existing CFHT r footprint check and search for an appropriate g data set.
-2. Keep survey_14 and expand_03 in the L0 archive and revisit when the requisite member or deeper colour evidence becomes available. Review survey_51 as a secondary photometric grouping with foreground evidence.
-3. Use the measured residual eligible PS1 area and the association-adjusted review load to choose the next footprint only after reviewing historical search masks. DELVE/DES and the northern filter system are separate scientific strata.
+1. Locate full-core independent g for survey_63 and pair it with the existing r images. Aim for g₀≈26–26.5 to test the main sequence in the farther modes. Keep all distance modes distinct pending evidence.
+2. Keep the ambiguous compact queue available for second-pass review. Use actual weak benchmarks, paired luminosity cases and detection or classification calibration to decide on any depth or angular-grid change.
+3. Reconcile the ranked PS1 cells with exact HSC, UNIONS and Rubin historical search coverage when available. Choose the next frozen A cohort based on the measured incremental sensitivity.
 
 ## Validation criteria
 

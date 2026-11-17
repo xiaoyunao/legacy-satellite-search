@@ -1,0 +1,2 @@
+file,sha256,expnum,date_obs,filter,exptime,ccd,x_at_center,y_at_center,nx,ny,core_geometric,annulus_geometric
+image-32.fits,d952ff98fc7796a5afd6e67f8e87166a6b1933a014e35bfdc619e2fd6dc24562,680146,2017-09-22T04:16:25.793962,g DECam SDSS c0001 4720.0 1520.0,200.0,N1,766.2060794804022,7813.213119675188,2046,4094,0.0,0.0
