@@ -1,0 +1,15 @@
+test_moduli: [18.75, 20.0]
+half_light_arcmin: 0.35
+g_limit: 24.05
+r_limit: 23.85
+min_snr: 5.0
+two_visit_mask: true
+minimum_projected_core_fraction: 0.8
+minimum_projected_annulus_fraction: 0.75
+aperture_arcsec: 1.02
+reference_inner_arcmin: 2.2
+reference_outer_arcmin: 3.2
+morph_inner_fraction_range: [0.56, 0.99]
+cross_filter_uncertainty_mag: 0.06
+report_faint_g0_interval: [23.5, 24.05]
+seed: 481719
