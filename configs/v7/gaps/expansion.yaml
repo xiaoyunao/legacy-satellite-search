@@ -1,0 +1,85 @@
+seed: 481718
+batches: 24
+ps1_fields_per_batch: 10
+deep_control_fields: 0
+width_deg: 2.0
+minimum_center_separation_deg: 4.55
+minimum_proxy_coverage: 0.45
+max_ebv: 0.1
+candidate_rationale:
+  search: Disjoint southern PS1 census search cores, including partially usable fields;
+    the unchanged scan applies the actual area mask
+  deep_control: Known deeper DES census coverage for context
+previous_fields:
+- ../configs/fields.yaml
+- ../configs/v4/fields.yaml
+- ../configs/v5/weak/fields.yaml
+- ../results/v5/registration/fields.yaml
+- ../results/v6/registration/fields.yaml
+- ../results/registration/fields.yaml
+- ../wide_rollout/results/registration/fields.yaml
+overlap_sources:
+  hsc: https://hsc-release.mtk.nao.ac.jp/doc/index.php/survey-depth/
+  kids: https://kids.strw.leidenuniv.nl/DR5/
+  rubin_dp1: https://dp1.lsst.io/overview/observations.html
+overlap_regions:
+  hsc_coarse:
+  - - 0
+    - 50
+    - -9
+    - 9
+  - - 126
+    - 225
+    - -9
+    - 9
+  - - 222
+    - 258
+    - 40
+    - 48
+  - - 315
+    - 360
+    - -9
+    - 9
+  kids_coarse:
+  - - 126
+    - 225
+    - -7
+    - 7
+  - - 325
+    - 54
+    - -42
+    - -24
+  rubin_dp1_coarse:
+  - - 0
+    - 12
+    - -74
+    - -70
+  - - 35
+    - 41
+    - 4
+    - 10
+  - - 37
+    - 43
+    - -37
+    - -32
+  - - 50
+    - 57
+    - -31
+    - -25
+  - - 55
+    - 63
+    - -51
+    - -46
+  - - 91
+    - 99
+    - -28
+    - -22
+  - - 103
+    - 110
+    - -14
+    - -7
+max_abs_dec: 54
+id_prefix: gap
+batch_config_dir: ../configs/v7/gaps
+allow_partial: true
+nonoverlapping_cores: true

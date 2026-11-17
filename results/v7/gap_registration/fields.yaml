@@ -1,0 +1,2468 @@
+seed: 481718
+selection_sha256: 63589a06c7aa6f9594143e208b66003d6648a62196801e4d88ade83f0eaa3a4b
+census_sha256: 74a9fcbbf429e5506b15d45bb24a79ec87814b3b5330cdccb2b7ae52b5c64365
+fields:
+- id: gap_01
+  role: pilot_eval
+  batch: 1
+  layer: shallower
+  survey: 3
+  ra: 349.72543352601156
+  dec: -16.25
+  width: 2.0
+  proxy_area_deg2: 1.8049886621315192
+  proxy_coverage: 0.4512471655328798
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.253637313842773
+  center_r_depth: 23.84391975402832
+- id: gap_02
+  role: pilot_eval
+  batch: 1
+  layer: shallower
+  survey: 3
+  ra: 353.6865671641791
+  dec: 21.75
+  width: 2.0
+  proxy_area_deg2: 3.800453514739229
+  proxy_coverage: 0.9501133786848073
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.69864845275879
+  center_r_depth: 24.11691665649414
+- id: gap_03
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 194.95341614906832
+  dec: 26.75
+  width: 2.0
+  proxy_area_deg2: 2.077097505668934
+  proxy_coverage: 0.5192743764172335
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.751604080200195
+  center_r_depth: 24.06914710998535
+- id: gap_04
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 251.25619834710744
+  dec: 33.0
+  width: 2.0
+  proxy_area_deg2: 3.945578231292517
+  proxy_coverage: 0.9863945578231292
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.816150665283203
+  center_r_depth: 24.05685806274414
+- id: gap_05
+  role: pilot_eval
+  batch: 1
+  layer: deep
+  survey: 3
+  ra: 199.73125884016974
+  dec: -11.25
+  width: 2.0
+  proxy_area_deg2: 2.3492063492063493
+  proxy_coverage: 0.5873015873015873
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.99468231201172
+  center_r_depth: 24.356679916381836
+- id: gap_06
+  role: pilot_eval
+  batch: 1
+  layer: shallower
+  survey: 3
+  ra: 198.47161572052403
+  dec: 17.75
+  width: 2.0
+  proxy_area_deg2: 1.9410430839002268
+  proxy_coverage: 0.4852607709750567
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.628013610839844
+  center_r_depth: 24.065689086914062
+- id: gap_07
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 224.0735294117647
+  dec: 19.5
+  width: 2.0
+  proxy_area_deg2: 3.8820861678004537
+  proxy_coverage: 0.9705215419501134
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.86402702331543
+  center_r_depth: 24.189260482788086
+- id: gap_08
+  role: pilot_eval
+  batch: 1
+  layer: shallower
+  survey: 3
+  ra: 6.903039073806078
+  dec: -16.5
+  width: 2.0
+  proxy_area_deg2: 2.5759637188208617
+  proxy_coverage: 0.6439909297052154
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.43730926513672
+  center_r_depth: 24.381977081298828
+- id: gap_09
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 6.8405365126676605
+  dec: 21.5
+  width: 2.0
+  proxy_area_deg2: 3.927437641723356
+  proxy_coverage: 0.981859410430839
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.76791763305664
+  center_r_depth: 24.18305206298828
+- id: gap_10
+  role: pilot_eval
+  batch: 1
+  layer: ordinary
+  survey: 3
+  ra: 158.89380530973452
+  dec: 20.0
+  width: 2.0
+  proxy_area_deg2: 2.1859410430839
+  proxy_coverage: 0.546485260770975
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.664020538330078
+  center_r_depth: 24.287677764892578
+- id: gap_11
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 340.1585014409222
+  dec: -15.75
+  width: 2.0
+  proxy_area_deg2: 2.2766439909297054
+  proxy_coverage: 0.5691609977324263
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 23.9974308013916
+  center_r_depth: 23.841135025024414
+- id: gap_12
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 238.20097244732577
+  dec: 31.25
+  width: 2.0
+  proxy_area_deg2: 3.981859410430839
+  proxy_coverage: 0.9954648526077098
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.747493743896484
+  center_r_depth: 24.010698318481445
+- id: gap_13
+  role: pilot_eval
+  batch: 2
+  layer: ordinary
+  survey: 3
+  ra: 9.782608695652174
+  dec: 16.75
+  width: 2.0
+  proxy_area_deg2: 3.909297052154195
+  proxy_coverage: 0.9773242630385488
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.838115692138672
+  center_r_depth: 24.197072982788086
+- id: gap_14
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 252.90273556231003
+  dec: 24.25
+  width: 2.0
+  proxy_area_deg2: 3.891156462585034
+  proxy_coverage: 0.9727891156462585
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.54965591430664
+  center_r_depth: 24.24236297607422
+- id: gap_15
+  role: pilot_eval
+  batch: 2
+  layer: ordinary
+  survey: 3
+  ra: 29.824817518248175
+  dec: 18.25
+  width: 2.0
+  proxy_area_deg2: 3.727891156462585
+  proxy_coverage: 0.9319727891156463
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.755558013916016
+  center_r_depth: 24.18667221069336
+- id: gap_16
+  role: pilot_eval
+  batch: 2
+  layer: ordinary
+  survey: 3
+  ra: 209.48757763975155
+  dec: 26.75
+  width: 2.0
+  proxy_area_deg2: 3.873015873015873
+  proxy_coverage: 0.9682539682539683
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.752193450927734
+  center_r_depth: 24.252796173095703
+- id: gap_17
+  role: pilot_eval
+  batch: 2
+  layer: deep
+  survey: 3
+  ra: 220.19033674963396
+  dec: 18.75
+  width: 2.0
+  proxy_area_deg2: 3.510204081632653
+  proxy_coverage: 0.8775510204081632
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.775217056274414
+  center_r_depth: 24.33971405029297
+- id: gap_18
+  role: pilot_eval
+  batch: 2
+  layer: ordinary
+  survey: 3
+  ra: 227.78637770897834
+  dec: 26.5
+  width: 2.0
+  proxy_area_deg2: 3.9546485260770976
+  proxy_coverage: 0.9886621315192744
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.788026809692383
+  center_r_depth: 24.127376556396484
+- id: gap_19
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 211.00151745068285
+  dec: 24.0
+  width: 2.0
+  proxy_area_deg2: 3.9909297052154193
+  proxy_coverage: 0.9977324263038548
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.761146545410156
+  center_r_depth: 24.059659957885742
+- id: gap_20
+  role: pilot_eval
+  batch: 2
+  layer: shallower
+  survey: 3
+  ra: 337.46781115879827
+  dec: 14.0
+  width: 2.0
+  proxy_area_deg2: 4.0
+  proxy_coverage: 1.0
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.949962615966797
+  center_r_depth: 23.877866744995117
+- id: gap_21
+  role: pilot_eval
+  batch: 3
+  layer: shallower
+  survey: 3
+  ra: 144.13138686131387
+  dec: 18.25
+  width: 2.0
+  proxy_area_deg2: 2.0226757369614514
+  proxy_coverage: 0.5056689342403629
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.706266403198242
+  center_r_depth: 24.014986038208008
+- id: gap_22
+  role: pilot_eval
+  batch: 3
+  layer: deep
+  survey: 3
+  ra: 243.94736842105263
+  dec: 26.5
+  width: 2.0
+  proxy_area_deg2: 3.8639455782312924
+  proxy_coverage: 0.9659863945578231
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.997529983520508
+  center_r_depth: 24.40608787536621
+- id: gap_23
+  role: pilot_eval
+  batch: 3
+  layer: deep
+  survey: 3
+  ra: 359.35897435897436
+  dec: 13.25
+  width: 2.0
+  proxy_area_deg2: 3.9183673469387754
+  proxy_coverage: 0.9795918367346939
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.984464645385742
+  center_r_depth: 24.444477081298828
+- id: gap_24
+  role: pilot_eval
+  batch: 3
+  layer: deep
+  survey: 3
+  ra: 214.14668547249647
+  dec: -10.25
+  width: 2.0
+  proxy_area_deg2: 2.049886621315193
+  proxy_coverage: 0.5124716553287982
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.89925765991211
+  center_r_depth: 24.464426040649414
+- id: gap_25
+  role: pilot_eval
+  batch: 3
+  layer: shallower
+  survey: 3
+  ra: 237.45
+  dec: 33.75
+  width: 2.0
+  proxy_area_deg2: 3.365079365079365
+  proxy_coverage: 0.8412698412698413
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.363800048828125
+  center_r_depth: 23.85248374938965
+- id: gap_26
+  role: pilot_eval
+  batch: 3
+  layer: shallower
+  survey: 3
+  ra: 156.00883652430045
+  dec: 19.75
+  width: 2.0
+  proxy_area_deg2: 2.0226757369614514
+  proxy_coverage: 0.5056689342403629
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.528749465942383
+  center_r_depth: 24.037487030029297
+- id: gap_27
+  role: pilot_eval
+  batch: 3
+  layer: deep
+  survey: 3
+  ra: 171.97730956239872
+  dec: 31.25
+  width: 2.0
+  proxy_area_deg2: 3.963718820861678
+  proxy_coverage: 0.9909297052154195
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.86415672302246
+  center_r_depth: 24.231449127197266
+- id: gap_28
+  role: pilot_eval
+  batch: 3
+  layer: shallower
+  survey: 3
+  ra: 25.404255319148938
+  dec: 12.0
+  width: 2.0
+  proxy_area_deg2: 2.8480725623582765
+  proxy_coverage: 0.7120181405895691
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.67691421508789
+  center_r_depth: 24.25743865966797
+- id: gap_29
+  role: pilot_eval
+  batch: 3
+  layer: ordinary
+  survey: 3
+  ra: 168.16838995568685
+  dec: 20.25
+  width: 2.0
+  proxy_area_deg2: 2.2222222222222223
+  proxy_coverage: 0.5555555555555556
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.639263153076172
+  center_r_depth: 24.12604331970215
+- id: gap_30
+  role: pilot_eval
+  batch: 3
+  layer: shallower
+  survey: 3
+  ra: 213.55263157894737
+  dec: 18.5
+  width: 2.0
+  proxy_area_deg2: 2.993197278911565
+  proxy_coverage: 0.7482993197278912
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.723892211914062
+  center_r_depth: 24.0346736907959
+- id: gap_31
+  role: pilot_eval
+  batch: 4
+  layer: shallower
+  survey: 3
+  ra: 351.6666666666667
+  dec: 13.0
+  width: 2.0
+  proxy_area_deg2: 3.7823129251700682
+  proxy_coverage: 0.9455782312925171
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.78660774230957
+  center_r_depth: 24.15103530883789
+- id: gap_32
+  role: pilot_eval
+  batch: 4
+  layer: ordinary
+  survey: 3
+  ra: 25.107296137339056
+  dec: 14.0
+  width: 2.0
+  proxy_area_deg2: 3.764172335600907
+  proxy_coverage: 0.9410430839002267
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.684741973876953
+  center_r_depth: 24.313791275024414
+- id: gap_33
+  role: pilot_eval
+  batch: 4
+  layer: shallower
+  survey: 3
+  ra: 344.2857142857143
+  dec: 16.0
+  width: 2.0
+  proxy_area_deg2: 3.7732426303854876
+  proxy_coverage: 0.9433106575963719
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.792991638183594
+  center_r_depth: 24.15392303466797
+- id: gap_34
+  role: pilot_eval
+  batch: 4
+  layer: deep
+  survey: 3
+  ra: 224.38167938931298
+  dec: 24.75
+  width: 2.0
+  proxy_area_deg2: 3.891156462585034
+  proxy_coverage: 0.9727891156462585
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.71422004699707
+  center_r_depth: 24.30239486694336
+- id: gap_35
+  role: pilot_eval
+  batch: 4
+  layer: shallower
+  survey: 3
+  ra: 134.62057335581787
+  dec: 34.75
+  width: 2.0
+  proxy_area_deg2: 3.8458049886621315
+  proxy_coverage: 0.9614512471655329
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 23.88361167907715
+  center_r_depth: 23.40153694152832
+- id: gap_36
+  role: pilot_eval
+  batch: 4
+  layer: shallower
+  survey: 3
+  ra: 248.84615384615384
+  dec: 13.25
+  width: 2.0
+  proxy_area_deg2: 3.963718820861678
+  proxy_coverage: 0.9909297052154195
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.57758903503418
+  center_r_depth: 24.038909912109375
+- id: gap_37
+  role: pilot_eval
+  batch: 4
+  layer: deep
+  survey: 3
+  ra: 225.43548387096774
+  dec: 30.75
+  width: 2.0
+  proxy_area_deg2: 3.945578231292517
+  proxy_coverage: 0.9863945578231292
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.718942642211914
+  center_r_depth: 24.265483856201172
+- id: gap_38
+  role: pilot_eval
+  batch: 4
+  layer: shallower
+  survey: 3
+  ra: 250.47548291233284
+  dec: 21.0
+  width: 2.0
+  proxy_area_deg2: 4.0
+  proxy_coverage: 1.0
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.73923683166504
+  center_r_depth: 23.966350555419922
+- id: gap_39
+  role: pilot_eval
+  batch: 4
+  layer: shallower
+  survey: 3
+  ra: 145.41800643086816
+  dec: 30.5
+  width: 2.0
+  proxy_area_deg2: 2.5396825396825395
+  proxy_coverage: 0.6349206349206349
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.708040237426758
+  center_r_depth: 24.00779914855957
+- id: gap_40
+  role: pilot_eval
+  batch: 4
+  layer: shallower
+  survey: 3
+  ra: 236.5174825174825
+  dec: 7.5
+  width: 2.0
+  proxy_area_deg2: 2.0136054421768708
+  proxy_coverage: 0.5034013605442177
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.445045471191406
+  center_r_depth: 24.059926986694336
+- id: gap_41
+  role: pilot_eval
+  batch: 5
+  layer: ordinary
+  survey: 3
+  ra: 344.1802067946824
+  dec: -20.25
+  width: 2.0
+  proxy_area_deg2: 1.8594104308390023
+  proxy_coverage: 0.46485260770975056
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.74835968017578
+  center_r_depth: 24.36086654663086
+- id: gap_42
+  role: pilot_eval
+  batch: 5
+  layer: ordinary
+  survey: 3
+  ra: 8.12320916905444
+  dec: 14.5
+  width: 2.0
+  proxy_area_deg2: 3.9727891156462585
+  proxy_coverage: 0.9931972789115646
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.696378707885742
+  center_r_depth: 24.26407241821289
+- id: gap_43
+  role: pilot_eval
+  batch: 5
+  layer: ordinary
+  survey: 3
+  ra: 224.7391304347826
+  dec: 16.75
+  width: 2.0
+  proxy_area_deg2: 3.873015873015873
+  proxy_coverage: 0.9682539682539683
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.78034782409668
+  center_r_depth: 24.123411178588867
+- id: gap_44
+  role: pilot_eval
+  batch: 5
+  layer: ordinary
+  survey: 3
+  ra: 9.495412844036696
+  dec: 25.0
+  width: 2.0
+  proxy_area_deg2: 3.8276643990929706
+  proxy_coverage: 0.9569160997732427
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.823339462280273
+  center_r_depth: 24.21413803100586
+- id: gap_45
+  role: pilot_eval
+  batch: 5
+  layer: ordinary
+  survey: 3
+  ra: 246.05381165919283
+  dec: 22.0
+  width: 2.0
+  proxy_area_deg2: 3.963718820861678
+  proxy_coverage: 0.9909297052154195
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.747037887573242
+  center_r_depth: 24.137189865112305
+- id: gap_46
+  role: pilot_eval
+  batch: 5
+  layer: deep
+  survey: 3
+  ra: 11.200585651537335
+  dec: 18.75
+  width: 2.0
+  proxy_area_deg2: 3.9002267573696145
+  proxy_coverage: 0.9750566893424036
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.576902389526367
+  center_r_depth: 24.404420852661133
+- id: gap_47
+  role: pilot_eval
+  batch: 5
+  layer: shallower
+  survey: 3
+  ra: 153.5820895522388
+  dec: 33.25
+  width: 2.0
+  proxy_area_deg2: 3.9909297052154193
+  proxy_coverage: 0.9977324263038548
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.722122192382812
+  center_r_depth: 24.163204193115234
+- id: gap_48
+  role: pilot_eval
+  batch: 5
+  layer: ordinary
+  survey: 3
+  ra: 230.33236994219652
+  dec: 16.25
+  width: 2.0
+  proxy_area_deg2: 3.945578231292517
+  proxy_coverage: 0.9863945578231292
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.71297836303711
+  center_r_depth: 24.32745361328125
+- id: gap_49
+  role: pilot_eval
+  batch: 5
+  layer: ordinary
+  survey: 3
+  ra: 215.03076923076924
+  dec: 25.75
+  width: 2.0
+  proxy_area_deg2: 3.746031746031746
+  proxy_coverage: 0.9365079365079365
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.710514068603516
+  center_r_depth: 24.177133560180664
+- id: gap_50
+  role: pilot_eval
+  batch: 5
+  layer: deep
+  survey: 3
+  ra: 341.0043668122271
+  dec: 17.75
+  width: 2.0
+  proxy_area_deg2: 3.9909297052154193
+  proxy_coverage: 0.9977324263038548
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.97503662109375
+  center_r_depth: 24.35894203186035
+- id: gap_51
+  role: pilot_eval
+  batch: 6
+  layer: ordinary
+  survey: 3
+  ra: 258.3042789223455
+  dec: 29.0
+  width: 2.0
+  proxy_area_deg2: 3.9365079365079363
+  proxy_coverage: 0.9841269841269841
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.71538734436035
+  center_r_depth: 24.20487403869629
+- id: gap_52
+  role: pilot_eval
+  batch: 6
+  layer: ordinary
+  survey: 3
+  ra: 343.24046920821115
+  dec: 19.0
+  width: 2.0
+  proxy_area_deg2: 3.9365079365079363
+  proxy_coverage: 0.9841269841269841
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.902870178222656
+  center_r_depth: 24.11962127685547
+- id: gap_53
+  role: pilot_eval
+  batch: 6
+  layer: ordinary
+  survey: 3
+  ra: 154.04829545454547
+  dec: 12.25
+  width: 2.0
+  proxy_area_deg2: 1.8775510204081634
+  proxy_coverage: 0.46938775510204084
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.775800704956055
+  center_r_depth: 24.15574836730957
+- id: gap_54
+  role: pilot_eval
+  batch: 6
+  layer: deep
+  survey: 3
+  ra: 354.3171806167401
+  dec: 19.25
+  width: 2.0
+  proxy_area_deg2: 3.945578231292517
+  proxy_coverage: 0.9863945578231292
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.96860694885254
+  center_r_depth: 24.263927459716797
+- id: gap_55
+  role: pilot_eval
+  batch: 6
+  layer: ordinary
+  survey: 3
+  ra: 165.27272727272728
+  dec: 33.0
+  width: 2.0
+  proxy_area_deg2: 3.9909297052154193
+  proxy_coverage: 0.9977324263038548
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.79874610900879
+  center_r_depth: 24.23097801208496
+- id: gap_56
+  role: pilot_eval
+  batch: 6
+  layer: shallower
+  survey: 3
+  ra: 238.3079268292683
+  dec: 24.5
+  width: 2.0
+  proxy_area_deg2: 3.963718820861678
+  proxy_coverage: 0.9909297052154195
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.722517013549805
+  center_r_depth: 24.125324249267578
+- id: gap_57
+  role: pilot_eval
+  batch: 6
+  layer: deep
+  survey: 3
+  ra: 351.7489421720733
+  dec: 10.25
+  width: 2.0
+  proxy_area_deg2: 3.945578231292517
+  proxy_coverage: 0.9863945578231292
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 25.048843383789062
+  center_r_depth: 24.023149490356445
+- id: gap_58
+  role: pilot_eval
+  batch: 6
+  layer: deep
+  survey: 3
+  ra: 2.2801788375558867
+  dec: 21.5
+  width: 2.0
+  proxy_area_deg2: 3.854875283446712
+  proxy_coverage: 0.963718820861678
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.926244735717773
+  center_r_depth: 24.210121154785156
+- id: gap_59
+  role: pilot_eval
+  batch: 6
+  layer: ordinary
+  survey: 3
+  ra: 245.71646341463415
+  dec: 24.5
+  width: 2.0
+  proxy_area_deg2: 3.963718820861678
+  proxy_coverage: 0.9909297052154195
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.854812622070312
+  center_r_depth: 24.242952346801758
+- id: gap_60
+  role: pilot_eval
+  batch: 6
+  layer: deep
+  survey: 3
+  ra: 236.33284241531663
+  dec: 19.75
+  width: 2.0
+  proxy_area_deg2: 3.9002267573696145
+  proxy_coverage: 0.9750566893424036
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.833168029785156
+  center_r_depth: 24.28778648376465
+- id: gap_61
+  role: pilot_eval
+  batch: 7
+  layer: shallower
+  survey: 3
+  ra: 232.7287319422151
+  dec: 30.25
+  width: 2.0
+  proxy_area_deg2: 3.9183673469387754
+  proxy_coverage: 0.9795918367346939
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.671310424804688
+  center_r_depth: 24.095558166503906
+- id: gap_62
+  role: pilot_eval
+  batch: 7
+  layer: deep
+  survey: 3
+  ra: 209.08695652173913
+  dec: 16.75
+  width: 2.0
+  proxy_area_deg2: 1.8594104308390023
+  proxy_coverage: 0.46485260770975056
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.86199951171875
+  center_r_depth: 24.220829010009766
+- id: gap_63
+  role: pilot_eval
+  batch: 7
+  layer: shallower
+  survey: 3
+  ra: 350.9186746987952
+  dec: 23.0
+  width: 2.0
+  proxy_area_deg2: 3.8095238095238093
+  proxy_coverage: 0.9523809523809523
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.685394287109375
+  center_r_depth: 24.03110122680664
+- id: gap_64
+  role: pilot_eval
+  batch: 7
+  layer: shallower
+  survey: 3
+  ra: 194.66772151898735
+  dec: 28.75
+  width: 2.0
+  proxy_area_deg2: 2.068027210884354
+  proxy_coverage: 0.5170068027210885
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.670764923095703
+  center_r_depth: 24.033309936523438
+- id: gap_65
+  role: pilot_eval
+  batch: 7
+  layer: ordinary
+  survey: 3
+  ra: 218.1259842519685
+  dec: 28.25
+  width: 2.0
+  proxy_area_deg2: 3.764172335600907
+  proxy_coverage: 0.9410430839002267
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.767253875732422
+  center_r_depth: 24.09115982055664
+- id: gap_66
+  role: pilot_eval
+  batch: 7
+  layer: shallower
+  survey: 3
+  ra: 254.19303797468353
+  dec: 28.75
+  width: 2.0
+  proxy_area_deg2: 3.746031746031746
+  proxy_coverage: 0.9365079365079365
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.582700729370117
+  center_r_depth: 23.976253509521484
+- id: gap_67
+  role: pilot_eval
+  batch: 7
+  layer: ordinary
+  survey: 3
+  ra: 173.77941176470588
+  dec: 19.5
+  width: 2.0
+  proxy_area_deg2: 2.1405895691609977
+  proxy_coverage: 0.5351473922902494
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.690982818603516
+  center_r_depth: 24.10618019104004
+- id: gap_68
+  role: pilot_eval
+  batch: 7
+  layer: shallower
+  survey: 3
+  ra: 329.9153737658674
+  dec: 10.5
+  width: 2.0
+  proxy_area_deg2: 3.81859410430839
+  proxy_coverage: 0.9546485260770975
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.572723388671875
+  center_r_depth: 24.349119186401367
+- id: gap_69
+  role: pilot_eval
+  batch: 7
+  layer: deep
+  survey: 3
+  ra: 17.148997134670488
+  dec: 14.5
+  width: 2.0
+  proxy_area_deg2: 2.693877551020408
+  proxy_coverage: 0.673469387755102
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.8117733001709
+  center_r_depth: 24.272342681884766
+- id: gap_70
+  role: pilot_eval
+  batch: 7
+  layer: shallower
+  survey: 3
+  ra: 340.4704097116844
+  dec: 24.0
+  width: 2.0
+  proxy_area_deg2: 3.8639455782312924
+  proxy_coverage: 0.9659863945578231
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.78000831604004
+  center_r_depth: 24.123258590698242
+- id: gap_71
+  role: pilot_eval
+  batch: 8
+  layer: deep
+  survey: 3
+  ra: 182.22383720930233
+  dec: 17.5
+  width: 2.0
+  proxy_area_deg2: 1.9138321995464853
+  proxy_coverage: 0.47845804988662133
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.89884376525879
+  center_r_depth: 24.396703720092773
+- id: gap_72
+  role: pilot_eval
+  batch: 8
+  layer: shallower
+  survey: 3
+  ra: 234.30555555555554
+  dec: 26.0
+  width: 2.0
+  proxy_area_deg2: 3.8639455782312924
+  proxy_coverage: 0.9659863945578231
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.708778381347656
+  center_r_depth: 24.08074951171875
+- id: gap_73
+  role: pilot_eval
+  batch: 8
+  layer: ordinary
+  survey: 3
+  ra: 252.17821782178217
+  dec: 11.25
+  width: 2.0
+  proxy_area_deg2: 2.122448979591837
+  proxy_coverage: 0.5306122448979592
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.806917190551758
+  center_r_depth: 24.339387893676758
+- id: gap_74
+  role: pilot_eval
+  batch: 8
+  layer: shallower
+  survey: 3
+  ra: 3.863275039745628
+  dec: 29.25
+  width: 2.0
+  proxy_area_deg2: 3.764172335600907
+  proxy_coverage: 0.9410430839002267
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.674449920654297
+  center_r_depth: 24.186676025390625
+- id: gap_75
+  role: pilot_eval
+  batch: 8
+  layer: deep
+  survey: 3
+  ra: 0.6474820143884892
+  dec: -15.5
+  width: 2.0
+  proxy_area_deg2: 1.8594104308390023
+  proxy_coverage: 0.46485260770975056
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.581327438354492
+  center_r_depth: 24.599760055541992
+- id: gap_76
+  role: pilot_eval
+  batch: 8
+  layer: shallower
+  survey: 3
+  ra: 221.81102362204723
+  dec: 28.25
+  width: 2.0
+  proxy_area_deg2: 3.8458049886621315
+  proxy_coverage: 0.9614512471655329
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.64952278137207
+  center_r_depth: 23.988697052001953
+- id: gap_77
+  role: pilot_eval
+  batch: 8
+  layer: ordinary
+  survey: 3
+  ra: 146.38081395348837
+  dec: 17.5
+  width: 2.0
+  proxy_area_deg2: 1.8684807256235827
+  proxy_coverage: 0.4671201814058957
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.824947357177734
+  center_r_depth: 24.198362350463867
+- id: gap_78
+  role: pilot_eval
+  batch: 8
+  layer: shallower
+  survey: 3
+  ra: 188.34738617200674
+  dec: 34.75
+  width: 2.0
+  proxy_area_deg2: 3.945578231292517
+  proxy_coverage: 0.9863945578231292
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 23.860729217529297
+  center_r_depth: 23.347408294677734
+- id: gap_79
+  role: pilot_eval
+  batch: 8
+  layer: shallower
+  survey: 3
+  ra: 23.323572474377745
+  dec: 18.75
+  width: 2.0
+  proxy_area_deg2: 3.891156462585034
+  proxy_coverage: 0.9727891156462585
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.735702514648438
+  center_r_depth: 24.139297485351562
+- id: gap_80
+  role: pilot_eval
+  batch: 8
+  layer: shallower
+  survey: 3
+  ra: 206.25585023400936
+  dec: 27.25
+  width: 2.0
+  proxy_area_deg2: 3.6553287981859413
+  proxy_coverage: 0.9138321995464853
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.659435272216797
+  center_r_depth: 24.04888916015625
+- id: gap_81
+  role: pilot_eval
+  batch: 9
+  layer: ordinary
+  survey: 3
+  ra: 219.52173913043478
+  dec: 16.75
+  width: 2.0
+  proxy_area_deg2: 3.7369614512471654
+  proxy_coverage: 0.9342403628117913
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.728065490722656
+  center_r_depth: 24.1878719329834
+- id: gap_82
+  role: pilot_eval
+  batch: 9
+  layer: ordinary
+  survey: 3
+  ra: 157.66140602582496
+  dec: 14.75
+  width: 2.0
+  proxy_area_deg2: 2.0136054421768708
+  proxy_coverage: 0.5034013605442177
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.71680450439453
+  center_r_depth: 24.256818771362305
+- id: gap_83
+  role: pilot_eval
+  batch: 9
+  layer: ordinary
+  survey: 3
+  ra: 254.63726884779516
+  dec: 12.75
+  width: 2.0
+  proxy_area_deg2: 3.5374149659863945
+  proxy_coverage: 0.8843537414965986
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.896381378173828
+  center_r_depth: 24.14045524597168
+- id: gap_84
+  role: pilot_eval
+  batch: 9
+  layer: ordinary
+  survey: 3
+  ra: 15.972222222222221
+  dec: 26.0
+  width: 2.0
+  proxy_area_deg2: 3.963718820861678
+  proxy_coverage: 0.9909297052154195
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.821231842041016
+  center_r_depth: 24.164419174194336
+- id: gap_85
+  role: pilot_eval
+  batch: 9
+  layer: deep
+  survey: 3
+  ra: 244.59677419354838
+  dec: 30.75
+  width: 2.0
+  proxy_area_deg2: 3.9002267573696145
+  proxy_coverage: 0.9750566893424036
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.860591888427734
+  center_r_depth: 24.257644653320312
+- id: gap_86
+  role: pilot_eval
+  batch: 9
+  layer: deep
+  survey: 3
+  ra: 181.19293078055964
+  dec: 19.75
+  width: 2.0
+  proxy_area_deg2: 1.9863945578231292
+  proxy_coverage: 0.4965986394557823
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.797409057617188
+  center_r_depth: 24.30508041381836
+- id: gap_87
+  role: pilot_eval
+  batch: 9
+  layer: ordinary
+  survey: 3
+  ra: 216.3884892086331
+  dec: 15.5
+  width: 2.0
+  proxy_area_deg2: 1.8594104308390023
+  proxy_coverage: 0.46485260770975056
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.667984008789062
+  center_r_depth: 24.241222381591797
+- id: gap_88
+  role: pilot_eval
+  batch: 9
+  layer: ordinary
+  survey: 3
+  ra: 165.33870967741936
+  dec: 30.75
+  width: 2.0
+  proxy_area_deg2: 3.2290249433106575
+  proxy_coverage: 0.8072562358276644
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.96725082397461
+  center_r_depth: 24.10662841796875
+- id: gap_89
+  role: pilot_eval
+  batch: 9
+  layer: ordinary
+  survey: 3
+  ra: 17.65988372093023
+  dec: 17.5
+  width: 2.0
+  proxy_area_deg2: 3.927437641723356
+  proxy_coverage: 0.981859410430839
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.769479751586914
+  center_r_depth: 24.259723663330078
+- id: gap_90
+  role: pilot_eval
+  batch: 9
+  layer: shallower
+  survey: 3
+  ra: 243.49042709867453
+  dec: 19.75
+  width: 2.0
+  proxy_area_deg2: 3.909297052154195
+  proxy_coverage: 0.9773242630385488
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.653160095214844
+  center_r_depth: 24.145824432373047
+- id: gap_91
+  role: pilot_eval
+  batch: 10
+  layer: shallower
+  survey: 3
+  ra: 245.93930635838151
+  dec: 16.25
+  width: 2.0
+  proxy_area_deg2: 3.963718820861678
+  proxy_coverage: 0.9909297052154195
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.688594818115234
+  center_r_depth: 23.953697204589844
+- id: gap_92
+  role: pilot_eval
+  batch: 10
+  layer: shallower
+  survey: 3
+  ra: 158.15112540192925
+  dec: 30.5
+  width: 2.0
+  proxy_area_deg2: 2.748299319727891
+  proxy_coverage: 0.6870748299319728
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.74325180053711
+  center_r_depth: 24.06820297241211
+- id: gap_93
+  role: pilot_eval
+  batch: 10
+  layer: deep
+  survey: 3
+  ra: 181.9508670520231
+  dec: -16.25
+  width: 2.0
+  proxy_area_deg2: 1.8684807256235827
+  proxy_coverage: 0.4671201814058957
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.551956176757812
+  center_r_depth: 24.54773712158203
+- id: gap_94
+  role: pilot_eval
+  batch: 10
+  layer: ordinary
+  survey: 3
+  ra: 195.3857791225416
+  dec: 23.5
+  width: 2.0
+  proxy_area_deg2: 1.8866213151927438
+  proxy_coverage: 0.47165532879818595
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.700090408325195
+  center_r_depth: 24.044950485229492
+- id: gap_95
+  role: pilot_eval
+  batch: 10
+  layer: ordinary
+  survey: 3
+  ra: 255.32751091703057
+  dec: 17.75
+  width: 2.0
+  proxy_area_deg2: 4.0
+  proxy_coverage: 1.0
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.826129913330078
+  center_r_depth: 24.268381118774414
+- id: gap_96
+  role: pilot_eval
+  batch: 10
+  layer: deep
+  survey: 3
+  ra: 343.6480686695279
+  dec: 14.0
+  width: 2.0
+  proxy_area_deg2: 3.891156462585034
+  proxy_coverage: 0.9727891156462585
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 25.0213623046875
+  center_r_depth: 24.323528289794922
+- id: gap_97
+  role: pilot_eval
+  batch: 10
+  layer: deep
+  survey: 3
+  ra: 22.678288431061805
+  dec: 29.0
+  width: 2.0
+  proxy_area_deg2: 3.9727891156462585
+  proxy_coverage: 0.9931972789115646
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.917814254760742
+  center_r_depth: 24.37406349182129
+- id: gap_98
+  role: pilot_eval
+  batch: 10
+  layer: shallower
+  survey: 3
+  ra: 222.82258064516128
+  dec: 30.75
+  width: 2.0
+  proxy_area_deg2: 3.873015873015873
+  proxy_coverage: 0.9682539682539683
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.685073852539062
+  center_r_depth: 24.090789794921875
+- id: gap_99
+  role: pilot_eval
+  batch: 10
+  layer: shallower
+  survey: 3
+  ra: 232.86614173228347
+  dec: 28.25
+  width: 2.0
+  proxy_area_deg2: 3.854875283446712
+  proxy_coverage: 0.963718820861678
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.60061264038086
+  center_r_depth: 24.031673431396484
+- id: gap_100
+  role: pilot_eval
+  batch: 10
+  layer: deep
+  survey: 3
+  ra: 26.536661466458657
+  dec: 27.25
+  width: 2.0
+  proxy_area_deg2: 3.764172335600907
+  proxy_coverage: 0.9410430839002267
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.956443786621094
+  center_r_depth: 24.340038299560547
+- id: gap_101
+  role: pilot_eval
+  batch: 11
+  layer: ordinary
+  survey: 3
+  ra: 248.80057803468208
+  dec: 16.25
+  width: 2.0
+  proxy_area_deg2: 3.9183673469387754
+  proxy_coverage: 0.9795918367346939
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.854591369628906
+  center_r_depth: 24.15810775756836
+- id: gap_102
+  role: pilot_eval
+  batch: 11
+  layer: deep
+  survey: 3
+  ra: 171.49709302325581
+  dec: 17.5
+  width: 2.0
+  proxy_area_deg2: 1.9229024943310657
+  proxy_coverage: 0.48072562358276644
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.80571937561035
+  center_r_depth: 24.362842559814453
+- id: gap_103
+  role: pilot_eval
+  batch: 11
+  layer: ordinary
+  survey: 3
+  ra: 250.34321372854913
+  dec: 27.25
+  width: 2.0
+  proxy_area_deg2: 3.9546485260770976
+  proxy_coverage: 0.9886621315192744
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.855897903442383
+  center_r_depth: 24.113758087158203
+- id: gap_104
+  role: pilot_eval
+  batch: 11
+  layer: ordinary
+  survey: 3
+  ra: 3.9836065573770494
+  dec: 32.25
+  width: 2.0
+  proxy_area_deg2: 3.8458049886621315
+  proxy_coverage: 0.9614512471655329
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.729583740234375
+  center_r_depth: 24.248191833496094
+- id: gap_105
+  role: pilot_eval
+  batch: 11
+  layer: deep
+  survey: 3
+  ra: 238.65325077399382
+  dec: 26.5
+  width: 2.0
+  proxy_area_deg2: 3.909297052154195
+  proxy_coverage: 0.9773242630385488
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: false
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.89374351501465
+  center_r_depth: 24.404346466064453
+- id: gap_106
+  role: pilot_eval
+  batch: 11
+  layer: deep
+  survey: 3
+  ra: 319.56884561891513
+  dec: 3.25
+  width: 2.0
+  proxy_area_deg2: 2.857142857142857
+  proxy_coverage: 0.7142857142857143
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: true
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.927026748657227
+  center_r_depth: 24.303712844848633
+- id: gap_107
+  role: pilot_eval
+  batch: 11
+  layer: ordinary
+  survey: 3
+  ra: 347.9915730337079
+  dec: 9.0
+  width: 2.0
+  proxy_area_deg2: 3.8095238095238093
+  proxy_coverage: 0.9523809523809523
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: true
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 25.02422523498535
+  center_r_depth: 24.016921997070312
+- id: gap_108
+  role: pilot_eval
+  batch: 11
+  layer: shallower
+  survey: 3
+  ra: 200.6824512534819
+  dec: -4.75
+  width: 2.0
+  proxy_area_deg2: 1.8049886621315192
+  proxy_coverage: 0.4512471655328798
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: true
+    kids_coarse: true
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.574670791625977
+  center_r_depth: 24.20044708251953
+- id: gap_109
+  role: pilot_eval
+  batch: 11
+  layer: deep
+  survey: 3
+  ra: 356.87065368567454
+  dec: 3.5
+  width: 2.0
+  proxy_area_deg2: 2.0408163265306123
+  proxy_coverage: 0.5102040816326531
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: true
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.990890502929688
+  center_r_depth: 24.252206802368164
+- id: gap_110
+  role: pilot_eval
+  batch: 11
+  layer: deep
+  survey: 3
+  ra: 335.56962025316454
+  dec: 9.5
+  width: 2.0
+  proxy_area_deg2: 3.981859410430839
+  proxy_coverage: 0.9954648526077098
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: true
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.92828369140625
+  center_r_depth: 24.432952880859375
+- id: gap_111
+  role: pilot_eval
+  batch: 12
+  layer: deep
+  survey: 3
+  ra: 10.181564245810057
+  dec: 6.5
+  width: 2.0
+  proxy_area_deg2: 1.8049886621315192
+  proxy_coverage: 0.4512471655328798
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: true
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.90707015991211
+  center_r_depth: 24.375919342041016
+- id: gap_112
+  role: pilot_eval
+  batch: 12
+  layer: shallower
+  survey: 3
+  ra: 343.03072625698326
+  dec: 6.25
+  width: 2.0
+  proxy_area_deg2: 3.9546485260770976
+  proxy_coverage: 0.9886621315192744
+  phase: discovery
+  rationale: Disjoint southern PS1 census search cores, including partially usable
+    fields; the unchanged scan applies the actual area mask
+  overlap_proxy:
+    hsc_coarse: true
+    kids_coarse: false
+    rubin_dp1_coarse: false
+  prior_search_mask: unknown
+  unions_overlap: unknown_exact
+  rubin_later_releases: unknown
+  center_g_depth: 24.75760269165039
+  center_r_depth: 24.131505966186523
