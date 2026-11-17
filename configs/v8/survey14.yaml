@@ -1,0 +1,10 @@
+candidate: survey_14-A_base-0.3-001
+followup: configs/v7/survey_14_followup.yaml
+fixed_dm: [16.75, 18.75]
+half_light_arcmin: 0.5
+gaia_match_arcsec: 0.8
+foreground_ruwe_max: 1.4
+foreground_min_parallax_mas: 0.15
+foreground_min_parallax_snr: 3
+gaia_parallax_zero_point_mas: [0, -0.017]
+gaia_parallax_floor_mas: 0.02
