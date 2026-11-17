@@ -1,0 +1,80 @@
+{
+  "job": "61449857",
+  "endpoint": "https://gea.esac.esa.int/tap-server/tap/sync",
+  "input_sha256": "ea660db0937150906b1abc188b3d0446e34cfb44d402bec0f41e90e301278337",
+  "shortlist": 7,
+  "cone_rows": 17,
+  "matched": 2,
+  "qualified": 1,
+  "foreground": 0,
+  "common_motion": {
+    "n": 1
+  },
+  "all_qualified_motion": {
+    "n": 1
+  },
+  "radial_velocities": 0,
+  "distances": [
+    {
+      "dm": 16.75,
+      "expected_mas": 0.0446683592150963,
+      "zero_point_sensitivity_mas": 0,
+      "n": 1,
+      "within_3sigma": 1,
+      "chi2": 0.004469012670322207
+    },
+    {
+      "dm": 16.75,
+      "expected_mas": 0.0446683592150963,
+      "zero_point_sensitivity_mas": -0.017,
+      "n": 1,
+      "within_3sigma": 1,
+      "chi2": 0.0008747687603534828
+    },
+    {
+      "dm": 18.75,
+      "expected_mas": 0.01778279410038923,
+      "zero_point_sensitivity_mas": 0,
+      "n": 1,
+      "within_3sigma": 1,
+      "chi2": 6.243226386761179e-05
+    },
+    {
+      "dm": 18.75,
+      "expected_mas": 0.01778279410038923,
+      "zero_point_sensitivity_mas": -0.017,
+      "n": 1,
+      "within_3sigma": 1,
+      "chi2": 0.0008627599373806894
+    }
+  ],
+  "desi": {
+    "status": "complete",
+    "release": "DESI DR2 loa",
+    "healpix": [
+      28073
+    ],
+    "files_scanned": 3,
+    "files": [
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/backup/280/28073/redrock-main-backup-28073.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/bright/280/28073/redrock-main-bright-28073.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/dark/280/28073/redrock-main-dark-28073.fits"
+    ],
+    "cone_spectroscopic_targets": 15,
+    "member_matches": 1,
+    "match_arcsec": 0.8,
+    "matched_redrock_solutions": [
+      [
+        {
+          "program": "dark",
+          "spectral_class": "QSO",
+          "redshift": 2.195617969852069,
+          "redshift_error": 0.00030752157823759046,
+          "zwarn": 0,
+          "delta_chi2": 72.18153028935194
+        }
+      ]
+    ],
+    "qso_veto_count": 1
+  }
+}

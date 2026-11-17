@@ -1,0 +1,91 @@
+{
+  "job": "61449945",
+  "endpoint": "https://gea.esac.esa.int/tap-server/tap/sync",
+  "input_sha256": "9e80d1f837d2c48c461a9c9928a4d64c40115131366cf428ae97b5403d9fca52",
+  "shortlist": 11,
+  "cone_rows": 25,
+  "matched": 5,
+  "qualified": 4,
+  "foreground": 0,
+  "common_motion": {
+    "n": 4,
+    "mean_masyr": [
+      -6.699712436898264,
+      -4.718654519589291
+    ],
+    "covariance": [
+      [
+        0.019948380360951146,
+        -0.0020367144723181753
+      ],
+      [
+        -0.0020367144723181757,
+        0.019073369329889466
+      ]
+    ],
+    "chi2": 2314.678459825942,
+    "dof": 6,
+    "tail": 0.0
+  },
+  "all_qualified_motion": {
+    "n": 4,
+    "mean_masyr": [
+      -6.699712436898264,
+      -4.718654519589291
+    ],
+    "covariance": [
+      [
+        0.019948380360951146,
+        -0.0020367144723181753
+      ],
+      [
+        -0.0020367144723181757,
+        0.019073369329889466
+      ]
+    ],
+    "chi2": 2314.678459825942,
+    "dof": 6,
+    "tail": 0.0
+  },
+  "radial_velocities": 0,
+  "distances": [
+    {
+      "dm": 20.25,
+      "expected_mas": 0.008912509381337459,
+      "zero_point_sensitivity_mas": 0,
+      "n": 4,
+      "within_3sigma": 4,
+      "chi2": 7.8486646757052565
+    },
+    {
+      "dm": 20.25,
+      "expected_mas": 0.008912509381337459,
+      "zero_point_sensitivity_mas": -0.017,
+      "n": 4,
+      "within_3sigma": 4,
+      "chi2": 8.196663202648898
+    }
+  ],
+  "desi": {
+    "status": "complete",
+    "release": "DESI DR2 loa",
+    "healpix": [
+      8815,
+      8826
+    ],
+    "files_scanned": 6,
+    "files": [
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/backup/88/8815/redrock-main-backup-8815.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/bright/88/8815/redrock-main-bright-8815.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/dark/88/8815/redrock-main-dark-8815.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/backup/88/8826/redrock-main-backup-8826.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/bright/88/8826/redrock-main-bright-8826.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/dark/88/8826/redrock-main-dark-8826.fits"
+    ],
+    "cone_spectroscopic_targets": 13,
+    "member_matches": 0,
+    "match_arcsec": 0.8,
+    "matched_redrock_solutions": [],
+    "qso_veto_count": 0
+  }
+}

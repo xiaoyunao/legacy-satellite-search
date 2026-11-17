@@ -43,9 +43,9 @@ def parse(data, separator=','):
     return list(reader)
 
 
-def write(path, rows):
+def write(path, rows, fieldnames=None):
     with path.open('w',newline='') as stream:
-        w=csv.DictWriter(stream,list(rows[0]),lineterminator='\n')
+        w=csv.DictWriter(stream,fieldnames or list(rows[0]),lineterminator='\n')
         w.writeheader()
         w.writerows(rows)
 
@@ -76,8 +76,8 @@ def ordinal_summary(center, data, ra, dec, name, **metadata):
                 nearest_arcmin=float(d[i]))
 
 
-def run(out, hunt_cross_response=None):
-    target=yaml.safe_load(Path('configs/v6/followup.yaml').read_text())
+def run(out, hunt_cross_response=None, plan=Path('configs/v6/followup.yaml')):
+    target=yaml.safe_load(plan.read_text())
     ra,dec=target['ra_deg'],target['dec_deg']
     center=SkyCoord(ra,dec,unit='deg')
     when=datetime.now(timezone.utc).isoformat(timespec='seconds')
@@ -145,7 +145,8 @@ def run(out, hunt_cross_response=None):
         for i,r in enumerate(sim)
     ]
     nearby.sort(key=lambda r:r['distance_arcmin'])
-    write(out/'novelty_simbad_5arcmin.csv',[r for r in nearby if r['distance_arcmin']<=5])
+    write(out/'novelty_simbad_5arcmin.csv',[r for r in nearby if r['distance_arcmin']<=5],
+          list(nearby[0]))
     write(out/'novelty_simbad_30arcmin.csv',nearby)
     write(out/'novelty_catalog_checks.csv',order)
 
@@ -154,5 +155,6 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,default=Path('results/summary'))
     parser.add_argument('--hunt-cross-response',type=Path,help='Previously downloaded response to the documented cross-ID query')
+    parser.add_argument('--plan',type=Path,default=Path('configs/v6/followup.yaml'))
     args=parser.parse_args()
-    run(args.output,args.hunt_cross_response)
+    run(args.output,args.hunt_cross_response,args.plan)

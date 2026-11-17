@@ -1,0 +1,9 @@
+audit,flag,fields,field_area_deg2,main_groups
+historical_satellite_search_mask,unknown,195,935.2128954475306,271
+hsc_nominal_intersection,False,177,830.8739158950616,242
+hsc_nominal_intersection,True,18,104.33897955246911,29
+kids_nominal_intersection,False,194,933.3221547067899,271
+kids_nominal_intersection,True,1,1.8907407407407404,0
+rubin_dp1_nominal_intersection,False,195,935.2128954475306,271
+unions_nominal_core_dec_overlap,False,150,714.6065624999999,186
+unions_nominal_core_dec_overlap,True,45,220.60633294753083,85

@@ -1,0 +1,54 @@
+{
+  "job": "61449945",
+  "endpoint": "https://gea.esac.esa.int/tap-server/tap/sync",
+  "input_sha256": "9b65c0b7e7752574087db01bc71adcdf4da1e40143fd84b94b42cbaf5fa6ba6c",
+  "shortlist": 15,
+  "cone_rows": 36,
+  "matched": 1,
+  "qualified": 1,
+  "foreground": 0,
+  "common_motion": {
+    "n": 1
+  },
+  "all_qualified_motion": {
+    "n": 1
+  },
+  "radial_velocities": 0,
+  "distances": [
+    {
+      "dm": 18.75,
+      "expected_mas": 0.01778279410038923,
+      "zero_point_sensitivity_mas": 0,
+      "n": 1,
+      "within_3sigma": 1,
+      "chi2": 0.0024806432295423364
+    },
+    {
+      "dm": 18.75,
+      "expected_mas": 0.01778279410038923,
+      "zero_point_sensitivity_mas": -0.017,
+      "n": 1,
+      "within_3sigma": 1,
+      "chi2": 0.0004541316032990553
+    }
+  ],
+  "desi": {
+    "status": "complete",
+    "release": "DESI DR2 loa",
+    "healpix": [
+      20368
+    ],
+    "files_scanned": 4,
+    "files": [
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/backup/203/20368/redrock-main-backup-20368.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/bright/203/20368/redrock-main-bright-20368.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/main/dark/203/20368/redrock-main-dark-20368.fits",
+      "/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/healpix/sv1/bright/203/20368/redrock-sv1-bright-20368.fits"
+    ],
+    "cone_spectroscopic_targets": 18,
+    "member_matches": 0,
+    "match_arcsec": 0.8,
+    "matched_redrock_solutions": [],
+    "qso_veto_count": 0
+  }
+}

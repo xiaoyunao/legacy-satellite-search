@@ -1,0 +1,20 @@
+{
+  "job": "61451195",
+  "registered": 195,
+  "completed": 195,
+  "missing": [],
+  "unfinished_by_wave": {},
+  "c_modes_attempted": 619,
+  "c_modes_fit": 619,
+  "automated_review_status": {
+    "awaiting_visual_review": 271
+  },
+  "published_track_sha256": "b475bb0729ab07e07a5e63a54469add57615b857df8f5a2bddef760841e90461",
+  "visual_review": {
+    "status": "completed for prioritized groups",
+    "manual_groups": 24,
+    "prioritized_groups_reviewed": 15,
+    "additional_context_reviewed": 9,
+    "promoted_to_L1": 0
+  }
+}

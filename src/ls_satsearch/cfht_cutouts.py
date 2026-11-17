@@ -4,6 +4,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
 import os
+from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
@@ -67,11 +68,11 @@ def fetch(product,center,cache,grid,radius=.026):
         return dict(product=product,query=query,status='unavailable',error=str(err)),None
 
 
-def run(background_ring=False):
-    plan,_,data,_,sources,_=setup()
-    cache=data/'resources/v6'/plan['candidate']/('cfht_wide' if background_ring else 'cfht')
+def run(background_ring=False, policy=None, exposures=EXPOSURES, output=OUT):
+    plan,_,data,_,sources,_=setup(policy)
+    cache=data/'resources'/plan.get('scratch_revision','v6')/plan['candidate']/('cfht_wide' if background_ring else 'cfht')
     cache.mkdir(exist_ok=True,parents=True)
-    OUT.mkdir(exist_ok=True,parents=True)
+    output.mkdir(exist_ok=True,parents=True)
     center=SkyCoord(plan['ra_deg'],plan['dec_deg'],unit='deg')
     pos=frozen_positions(plan,data,sources)
     east,north=center.spherical_offsets_to(pos)
@@ -82,12 +83,12 @@ def run(background_ring=False):
     dx,dy=np.meshgrid(axis,axis)
     sky=center.spherical_offsets_by(dx*u.arcsec,dy*u.arcsec)
     with ThreadPoolExecutor(max_workers=3) as pool:
-        results=list(pool.map(lambda p: fetch(p,center,cache,sky,radius), EXPOSURES))
+        results=list(pool.map(lambda p: fetch(p,center,cache,sky,radius), exposures))
     rows=[r for r,_ in results]
-    write_csv(OUT/'cfht_exposure_status.csv',rows)
+    write_csv(output/'cfht_exposure_status.csv',rows)
     stamps=[a for r,a in results if r['status']=='covered']
     metrics=dict(job=os.environ.get('SLURM_JOB_ID'),band='MegaCam r.MP9602',
-                 covering_exposures=len(stamps),requested=len(EXPOSURES),catalogue_members=len(pos))
+                 covering_exposures=len(stamps),requested=len(exposures),catalogue_members=len(pos))
     if stamps:
         stack=np.asarray(stamps)
         count=np.isfinite(stack).sum(axis=0)
@@ -101,7 +102,7 @@ def run(background_ring=False):
         axes[1].set_title('Exposure count')
         for ax in axes:
             ax.set(xlabel='East (arcsec)',ylabel='North (arcsec)')
-        fig.savefig(OUT/'cfht_r_independent_image.png',dpi=160)
+        fig.savefig(output/'cfht_r_independent_image.png',dpi=160)
         plt.close(fig)
         metrics.update(central_exposures=int(count[len(axis)//2,len(axis)//2]),
                        fraction_with_two_exposures=float((count>=2).mean()))
@@ -109,10 +110,14 @@ def run(background_ring=False):
             distance=np.hypot(dx,dy)/60
             for name,region in (('core',distance<=.525),('annulus',(distance>1.225)&(distance<=2.1))):
                 metrics[f'{name}_two_exposure_fraction']=float((count[region]>=2).mean())
-    write_json(OUT/'cfht_r_summary.json',metrics)
+    write_json(output/'cfht_r_summary.json',metrics)
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--background-ring',action='store_true')
-    run(p.parse_args().background_ring)
+    p.add_argument('--plan',type=Path)
+    p.add_argument('--exposure',action='append')
+    p.add_argument('--output',type=Path,default=OUT)
+    args=p.parse_args()
+    run(args.background_ring,args.plan,args.exposure or EXPOSURES,args.output)

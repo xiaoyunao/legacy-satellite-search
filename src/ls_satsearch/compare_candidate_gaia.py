@@ -1,5 +1,6 @@
 """Same-centre LS and PS1 CMD tests before and after a common Gaia veto."""
 
+import argparse
 import csv
 import json
 import os
@@ -34,6 +35,8 @@ def coords(rows):
 
 
 def separation_mask(sample, field, rows, radius):
+    if not rows:
+        return np.zeros(len(sample),dtype=bool)
     sky = SkyCoord(*field.sky(*sample[:,:2].T),unit='deg')
     return sky.match_to_catalog_sky(coords(rows))[1].arcsec <= radius
 
@@ -49,10 +52,9 @@ def fixed_case(sample, model, field, mask, cfg, dm, rh):
                 C_TS=fit['ts'] if fit else None,C_richness=fit['richness'] if fit else None)
 
 
-def run():
-    policy = Path('configs/v7/candidate.yaml')
+def run(policy):
     rule = yaml.safe_load(policy.read_text())
-    plan,ls_config,data,old,sources,old_mask = setup()
+    plan,ls_config,data,old,sources,old_mask = setup(Path(rule['followup']) if 'followup' in rule else None)
     if plan['candidate'] != rule['candidate']:
         raise ValueError('Candidate differs from frozen evidence')
     field = Field(plan['ra_deg'],plan['dec_deg'],plan['ps1_scan_width_deg'],
@@ -68,7 +70,7 @@ def run():
     xx,yy = field.xy(sources['RA'],sources['DEC'])
     keep = np.hypot(xx,yy) < 60*plan['ps1_radius_deg']
     ls, *_ = select(sources[keep],field,mask,ls_config)
-    cache = data/'resources/v6'/plan['candidate']
+    cache = data/'resources'/plan.get('scratch_revision','v6')/plan['candidate']
     ps1, ps_input = ps1_sample(plan,field,mask,cache)
     ps_cfg = dict(ls_config,g_max=plan['ps1_magnitude_caps'][0],r_max=plan['ps1_magnitude_caps'][1])
     inputs = data/'resources'
@@ -86,30 +88,51 @@ def run():
     matched = [astrometry[i] for i in sorted(set(idx[sep.arcsec<=radius]))]
     reliable, identified = known_foreground(matched,rule)
     discrepant = [r for r in reliable if r not in identified and r['pmra'] and r['pmdec']]
-    if len(discrepant)!=2:
+    if 'followup' in rule:
+        discrepant = []
+        qso_path = cache/'desi-qso-veto.json'
+        qso = json.loads(qso_path.read_text())
+    elif len(discrepant)!=2:
         raise ValueError('Expected the two previously identified discrepant bright stars')
+    else:
+        qso_path, qso = None, []
 
     rows = []
     for survey,sample,cfg in (('LS',ls,ls_config),('PS1',ps1,ps_cfg)):
         veto = separation_mask(sample,field,foreground,radius)
         exclude_pair = separation_mask(sample,field,discrepant,radius)
-        for label, retained in (('original',np.ones(len(sample),dtype=bool)),
-                                ('uniform_foreground_veto',~veto),
-                                ('also_exclude_discrepant_pair',~(veto | exclude_pair))):
+        selections = [('original',np.ones(len(sample),dtype=bool)),('uniform_foreground_veto',~veto)]
+        if discrepant:
+            selections.append(('also_exclude_discrepant_pair',~(veto | exclude_pair)))
+        if qso:
+            excluded_qso = separation_mask(sample,field,qso,radius)
+            selections.append(('also_exclude_secure_desi_qso',~(veto | excluded_qso)))
+        brightening = rule.get('sensitivity_brightening_mag')
+        if brightening is not None:
+            brighter = np.all(sample[:,2:4]<=np.array([cfg['g_max'],cfg['r_max']])-brightening,axis=1)
+            selections.append(('gaia_veto_brighter_caps', ~veto & brighter))
+        obs = dict(matched_desi_qso=int(excluded_qso.sum())) if qso else {}
+        for label, retained in selections:
             for dm in rule['fixed_dm']:
+                cfg_at_cut = dict(cfg,g_max=cfg['g_max']-brightening,r_max=cfg['r_max']-brightening
+                                  ) if label=='gaia_veto_brighter_caps' else cfg
                 rows.append(dict(survey=survey,selection=label,dm=dm,
                                  selected=int(retained.sum()),matched_foreground=int(veto.sum()),
-                                 discrepant_pair_matches=int(exclude_pair.sum()),
-                                 **fixed_case(sample[retained],models[survey],field,mask,cfg,dm,
+                                 discrepant_pair_matches=int(exclude_pair.sum()),**obs,
+                                 **fixed_case(sample[retained],models[survey],field,mask,cfg_at_cut,dm,
                                               rule['half_light_arcmin'])))
-    out = Path('results/verification')
+    default_output = 'results/v8/survey14' if 'followup' in rule else 'results/verification'
+    out = Path(rule.get('output',default_output))
     out.mkdir(parents=True,exist_ok=True)
     write_csv(out/'ls_ps1_same_gaia_veto.csv',rows)
     write_json(out/'ls_ps1_same_gaia_veto.json',dict(job=os.environ.get('SLURM_JOB_ID'),
                config=sha(policy),wide_gaia_sha256=sha(cache/'gaia-wide.csv'),
                pair_gaia_sha256=sha(cache/'gaia-astrometry.csv'),ps1=ps_input,
+               desi_qso_veto_sha256=sha(qso_path) if qso_path else None,
                joint_area_deg2=float(mask.sum()*(field.step/subdivision/60)**2)))
 
 
 if __name__=='__main__':
-    run()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--policy',type=Path,default=Path('configs/v7/candidate.yaml'))
+    run(parser.parse_args().policy)

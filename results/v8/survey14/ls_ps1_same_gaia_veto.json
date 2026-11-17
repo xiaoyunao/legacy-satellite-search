@@ -1,0 +1,14 @@
+{
+  "job": "61450106",
+  "config": "45315de783d1e142314e1b29516f485a29dacefb0231ce825a4c29a5a429476d",
+  "wide_gaia_sha256": "c6c38d83da26182f9fb9a1cbfd57cfdc013699327a8cbaab6140ac39ec695d9e",
+  "pair_gaia_sha256": "ea660db0937150906b1abc188b3d0446e34cfb44d402bec0f41e90e301278337",
+  "ps1": {
+    "query": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=182.37929508666625&dec=19.243487426605633&radius=0.28&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&pagesize=25000&sort_by=objID.asc",
+    "sha256": "0dcd23d7efe21f820dba9ff5243885e4c31e50bec83af7d81a620d28214063ca",
+    "unique_primary": 9886,
+    "selected": 1000
+  },
+  "desi_qso_veto_sha256": "fa4706ee1574ea8024d02c648a7bdbc42ce0cdb6799e9a02e8b469d3363007f0",
+  "joint_area_deg2": 0.22914351851851847
+}

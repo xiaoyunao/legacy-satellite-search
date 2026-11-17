@@ -1,0 +1,21 @@
+wave,context,groups,named_systems,manual_priority
+first,direct_position_and_dm,4,Canes Venatici I|Pisces II,0
+first,extended_sky_context,3,Canes Venatici I,0
+first,compact_sky_context,1,Pisces II,0
+first,published_stream_context,0,,0
+first,untagged,22,,0
+rollout,direct_position_and_dm,4,Bootes V,0
+rollout,extended_sky_context,19,Leo I,0
+rollout,compact_sky_context,0,,0
+rollout,published_stream_context,9,Palomar 5 tidal stream,0
+rollout,untagged,115,,9
+gaps,direct_position_and_dm,5,Bootes III|Hercules,0
+gaps,extended_sky_context,3,Bootes III|Hercules,0
+gaps,compact_sky_context,0,,0
+gaps,published_stream_context,0,,0
+gaps,untagged,86,,6
+all,direct_position_and_dm,13,Bootes III|Bootes V|Canes Venatici I|Hercules|Pisces II,0
+all,extended_sky_context,25,Bootes III|Canes Venatici I|Hercules|Leo I,0
+all,compact_sky_context,1,Pisces II,0
+all,published_stream_context,9,Palomar 5 tidal stream,0
+all,untagged,223,,15

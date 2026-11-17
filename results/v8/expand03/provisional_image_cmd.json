@@ -1,0 +1,134 @@
+{
+  "job": "61449743",
+  "config_sha256": "bb0180da75438e27df4cc80cd7a27a29789ddc603eded866b06bf77f9bbf5de7",
+  "core_fraction": 0.9759036144578314,
+  "annulus_fraction": 0.9212104689203926,
+  "g_detected": 364,
+  "two_band_snr5": 108,
+  "compact_shape": 107,
+  "gaia_removed": 7,
+  "ls_shortlist_number": 9,
+  "ls_shortlist_by_stage": {
+    "g_detection": 9,
+    "two_band_snr5": 8,
+    "compact_aperture": 8,
+    "test_sample": 8,
+    "after_gaia": 7
+  },
+  "image_minus_ls_magnitude_differences": {
+    "LS_high_weight": {
+      "n": 8,
+      "g": {
+        "median": -0.0178547178375581,
+        "robust_sigma": 0.0326623314366074
+      },
+      "r": {
+        "median": -0.09742826405084593,
+        "robust_sigma": 0.12733273139145704
+      },
+      "g_minus_r": {
+        "median": 0.057948189883560985,
+        "robust_sigma": 0.09844317762324586
+      }
+    },
+    "annulus_controls": {
+      "n": 21,
+      "g": {
+        "median": -0.005348857546806585,
+        "robust_sigma": 0.05875461493133389
+      },
+      "r": {
+        "median": 0.13114040335089783,
+        "robust_sigma": 0.0888022015020522
+      },
+      "g_minus_r": {
+        "median": -0.12618612748898173,
+        "robust_sigma": 0.12945985414818476
+      }
+    }
+  },
+  "g5_ps1_equivalent": 23.743182446321804,
+  "r5_ps1_equivalent": 24.184826595049497,
+  "cfht_calibration": [
+    {
+      "visit": "2159099p",
+      "sha256": "e06c0d2849b642b8149eb598e2565c998dbba990038a25cc22cbc4e3481c53e7",
+      "calibrated_extensions": 1,
+      "anchors": 13,
+      "scatter_mag": 0.059338393294800854
+    },
+    {
+      "visit": "2159100p",
+      "sha256": "d5fb60e29fe3ec6ae4476d0863910ed070e2570c6394eb2b19154bb1ceb8945d",
+      "calibrated_extensions": 0
+    },
+    {
+      "visit": "2159103p",
+      "sha256": "03b04827e2a0ecfc243238226b79ab9ed42b8ae116d16565ee577393db049fa5",
+      "calibrated_extensions": 1,
+      "anchors": 9,
+      "scatter_mag": 0.04699912159566505
+    },
+    {
+      "visit": "2160132p",
+      "sha256": "81d5915411689243628f4056585c400a41791051d946dacbb1dff49bb2e82f73",
+      "calibrated_extensions": 1,
+      "anchors": 23,
+      "scatter_mag": 0.030975178082127693
+    },
+    {
+      "visit": "2161338p",
+      "sha256": "eb270f22ad45dbf0305506959787b7ca246ab19c71e0b1205726dfcbf0087158",
+      "calibrated_extensions": 2,
+      "anchors": 7,
+      "scatter_mag": 0.019313028018909082
+    }
+  ],
+  "stack_photometry_validation": {
+    "g": {
+      "training_n": 14,
+      "held_out_n": 7,
+      "correction_mag": -0.6613286870490693,
+      "held_out_median_mag": -0.053737579642758604,
+      "held_out_robust_sigma_mag": 0.060412245862339634
+    },
+    "r": {
+      "training_n": 12,
+      "held_out_n": 7,
+      "correction_mag": -0.03105859704834124,
+      "held_out_median_mag": -0.03247611475497614,
+      "held_out_robust_sigma_mag": 0.19457482148414812
+    }
+  },
+  "calibration_sensitivity": {
+    "g": {
+      "training": 14,
+      "held_out": 7,
+      "scalar_rms_mag": 0.08631320834248526,
+      "color_position_rms_mag": 0.08794725372458548,
+      "color_mag_per_mag": -0.06991245270613496,
+      "east_mag_per_arcmin": -0.02364392705465909,
+      "north_mag_per_arcmin": -0.07233285047758999,
+      "correction_applied": false,
+      "median_aperture_1p02_to_1p45_mag": 0.07275192344043911,
+      "aperture_error_magnitude_floor": 0.08631320834248526
+    },
+    "r": {
+      "training": 14,
+      "held_out": 7,
+      "scalar_rms_mag": 0.19889601852114383,
+      "color_position_rms_mag": 0.11345243656916966,
+      "color_mag_per_mag": 0.11323290301104132,
+      "east_mag_per_arcmin": -0.07398960315868086,
+      "north_mag_per_arcmin": 0.07831907972722384,
+      "correction_applied": true,
+      "median_aperture_1p02_to_1p45_mag": 0.13818792961121618,
+      "aperture_error_magnitude_floor": 0.11345243656916966
+    }
+  },
+  "limitations": [
+    "provisional HSC calibration",
+    "PS1 reference system",
+    "point-source completeness unmeasured"
+  ]
+}

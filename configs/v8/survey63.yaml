@@ -12,3 +12,5 @@ gaia_parallax_zero_point_mas:
 - -0.017
 gaia_parallax_floor_mas: 0.02
 output: results/v8/survey63
+
+sensitivity_brightening_mag: 0.3

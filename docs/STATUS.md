@@ -1,5 +1,13 @@
 # Status
 
+## 第八轮 · 2026-11-17
+
+- Perlmutter CPU 完成冻结 A 搜索全部 195 场，实测有效 935.213 deg²。初始数组子任务超时后，保留扫描结果并由 61449552_1 完成 C。61446745 全部补隙任务完成。
+- 61451195 完成严格汇总、逐场扫描清单和真实覆盖栅格扣除。271 个主档组，619 个模式均完成 C 拟合，24 个重点组人工审图。剩余合格 PS1 足迹约 1,765.716 代理 deg²。
+- 61449606/61450106 完成 survey_14 Gaia、DESI QSO 和两个冻结距离对比。61449743 完成 expand_03 的一次性浅栈定标。61449945、61450917 和 61450711 完成新优先 L0 survey_63 的 PS1、Gaia、DESI 查询及四帧 CFHT r 实测覆盖。
+- NERSC 项目为 `$HOME/projects/legacy-satellite-search/revisions/verification-v7`，FITS 和逐源结果保存在 scratch。聚合报告、配置、审查表、附带校验的公开目录来源及图像同步到项目。
+- [第八轮科学报告](../eighth_science_report.md) · [Slurm 记录](../results/v8/slurm_jobs.csv) · [实测汇总](../results/v8/rollout/)
+
 ## 第七轮 · 2026-11-17
 
 - NERSC 工作目录为 `$HOME/projects/legacy-satellite-search/revisions/verification-v7`。三帧 HSC 原始 FITS 与三个包只在 `$PSCRATCH/legacy-satellite-search/external/smoka/`。档案 MD5、FITS 内部校验均通过。逐源与像素产品位于 scratch。首批及头四批已实扫 49 场、341.739 有效 deg²。

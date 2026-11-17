@@ -2,6 +2,21 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Eighth-round candidate and footprint audit
+
+The [eighth science report](eighth_science_report.md) records the completed frozen-policy search, targeted candidate tests and effective-area accounting. See [work log](WORKLOG.md), [plan](PLAN.md) and [scientific direction](docs/PROJECT_MEMORY.md).
+
+From the existing NERSC v7 revision, run the follow-up on a CPU compute node. Use the archived PS1 and Gaia responses or the acquisition step in `verify_candidate` for a new frozen policy.
+
+```bash
+bash scripts/v6.sh verify_candidate --gaia-veto --plan configs/v8/survey63_followup.yaml
+bash scripts/v6.sh survey14_astrometry --policy configs/v8/survey63.yaml
+bash scripts/v6.sh compare_candidate_gaia --policy configs/v8/survey63.yaml
+bash scripts/v6.sh image_cmd --calibration-sensitivity
+```
+
+For a strict rollout audit, use `summarize_rollout --pal5-track references/published_tracks/pal5.ecsv --output results/v8/rollout`. Then use `LS_SAT_VERSION=v7 bash scripts/v6.sh remaining_footprint --rollout results/v8/rollout`. The [published track](https://github.com/cmateu/galstreams/blob/6a304c05bea7f774390a11082ea127719e99b70a/galstreams/tracks/track.st.Pal5.ibata2021.ecsv) is pinned to SHA-256 `b475bb0729ab07e07a5e63a54469add57615b857df8f5a2bddef760841e90461`. The round fixes the review and association procedure after scanning while retaining the complete frozen search counts.
+
 ## Seventh-round archive and expansion
 
 The [seventh science report](seventh_science_report.md) records the bounded HSC and CFHT experiment and the frozen A-baseline expansion. The [novelty audit](docs/novelty_audit.md) documents the public coordinate checks.

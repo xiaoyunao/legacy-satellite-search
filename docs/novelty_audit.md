@@ -1,5 +1,16 @@
 # 公开新颖性审计
 
+## 2026-11-17 · survey_14 与 survey_63
+
+用两个已冻结的 C 中心分别执行实时核查，查询日为 2026-11-17 UTC。5′ 和 30′ 的 SIMBAD 查询保留对象类型和标识。Hunt & Reffert 2024、VizieR 星团及矮星系表、UCC 260615 和固定 LVDB/DELVE 公开中心均按球面角距计算。两处的 30′ 锥内均未找到目标类型的公开同位置系统。[survey_14 逐库核查](../results/v8/survey14/novelty/novelty_catalog_checks.csv) · [survey_63 逐库核查](../results/v8/survey63/novelty/novelty_catalog_checks.csv)
+
+| 冻结中心 ICRS | SIMBAD 5′ / 30′ | 最近的 Hunt 星团 | 最近的已核近期论文对象 |
+| --- | ---: | --- | --- |
+| survey_14 · 182.37930°, +19.24349° | 4 / 386 | NGC 4147 · 42.91′ | UMa III / UNIONS 1 · 822.64′ |
+| survey_63 · 356.63691°, +27.95930° | 5 / 236 | HSC_778 · 395.88′ | Pegasus VII · 631.24′ |
+
+重新核对 HSC-SSP 最终候选表、UNIONS 的 UMa III 与 Pegasus VII、Gemini I、Aquarius IV、DELVE 7 和 Andromeda XXXVI 的公开中心，使用精确坐标与十进制度数组合检索 arXiv 索引。最近的已核文献系统均远离两个位置。HSC 或 UNIONS 成像覆盖由各自发布和档案确定，真实公开卫星搜索掩膜依然未知。UNIONS 综述里的未公布坐标对象仍无法排除。这里记录公开资料的检索范围与匹配结果，候选分级使用独立观测证据。[survey_14 文献交叉表](../results/v8/survey14/novelty/novelty_published_candidates.csv) · [survey_63 文献交叉表](../results/v8/survey63/novelty/novelty_published_candidates.csv) · [UNIONS 综述](https://arxiv.org/abs/2503.13783)
+
 ## 2026-11-17 · expand_03-A_base-0.3-003
 
 以 ICRS `258.077557°, +31.464058°` 作为固定中心。使用球面角距离，主匹配半径为 5′ 和 30′。所有查询的 UTC 时间、版本、完整请求、输入 SHA-256 和最近对象距离保存在匹配表。**截至本轮查询，在下列公开的银河系卫星和星团资料中未找到同位置的已发表对象。候选继续按其独立证据分级。** [逐目录实测](../results/summary/novelty_catalog_checks.csv)

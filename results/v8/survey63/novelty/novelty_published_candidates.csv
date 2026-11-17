@@ -1,0 +1,13 @@
+object,ra_deg,dec_deg,separation_arcmin,source,coordinate_definition,checked_utc
+Pegasus VII,345.4554166666666,32.09777777777778,631.2445537130037,https://arxiv.org/html/2502.09792,UNIONS discovery Table 1,2026-11-17T05:18:18+00:00
+Andromeda XXXVI,19.168,47.656,1581.1687909792759,https://arxiv.org/html/2603.28492,Discovery Table 1,2026-11-17T05:18:18+00:00
+HSC 1,334.325,3.475,1945.6800362236058,https://arxiv.org/html/2311.05439,HSC-SSP Table 3 search position,2026-11-17T05:18:18+00:00
+Aquarius IV,330.474,-2.575,2373.810124773159,https://arxiv.org/abs/2608.02601,Project benchmark from published centre,2026-11-17T05:18:18+00:00
+Cetus III,31.331,-4.27,2785.4618115421035,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T05:18:18+00:00
+DELVE 7,304.107,-50.33,5461.41996947103,https://arxiv.org/abs/2510.11684,Project benchmark from published centre,2026-11-17T05:18:18+00:00
+Boötes IV,233.689,43.726,5479.382965529209,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T05:18:18+00:00
+Gemini I / DELVE 8,118.386,15.99,6511.244436314641,https://arxiv.org/abs/2606.09975,Project benchmark from published centre,2026-11-17T05:18:18+00:00
+Ursa Major III / UNIONS 1,174.70745,31.07833,7256.022982447822,https://arxiv.org/html/2311.10147,Published centre via project benchmark,2026-11-17T05:18:18+00:00
+Virgo III,186.348,4.441,8776.465910669458,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T05:18:18+00:00
+Sextans II,156.437,-0.631,8791.12524162766,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T05:18:18+00:00
+Virgo I,180.038,-0.681,9151.671666640948,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T05:18:18+00:00

@@ -83,11 +83,13 @@ def gaia(pos, center, cache):
     return result
 
 
-def desi(pos,center):
+def desi(pos,center,veto_output=None):
     pixels=HEALPix(nside=64,order='nested',frame='icrs').cone_search_skycoord(center,.04*u.deg)
     files=[]
     targets=set()
     near=set()
+    solutions={}
+    coordinates={}
     for pix in pixels:
         for p in DESI.glob(f'*/*/{pix//100}/{pix}/redrock-*.fits'):
             f=fitsio.read(p,ext='FIBERMAP',columns=['TARGETID','TARGET_RA','TARGET_DEC'])
@@ -95,15 +97,36 @@ def desi(pos,center):
             sky=SkyCoord(f['TARGET_RA'][usable],f['TARGET_DEC'][usable],unit='deg')
             if len(sky):
                 ids,sep,_=pos.match_to_catalog_sky(sky)
-                targets.update(int(x) for x in f['TARGETID'][usable][ids[sep.arcsec<=.8]])
+                matched=set(int(x) for x in f['TARGETID'][usable][ids[sep.arcsec<=.8]])
+                targets.update(matched)
+                if veto_output is not None and matched:
+                    for ident,j in zip(f['TARGETID'][usable][ids[sep.arcsec<=.8]],ids[sep.arcsec<=.8]):
+                        coordinates[int(ident)]=dict(ra=float(sky[j].ra.deg),dec=float(sky[j].dec.deg))
+                    estimates=fitsio.read(p,ext='REDSHIFTS',
+                                          columns=['TARGETID','SPECTYPE','Z','ZERR','ZWARN','DELTACHI2'])
+                    for row in estimates[np.isin(estimates['TARGETID'],list(matched))]:
+                        kind=row['SPECTYPE']
+                        if isinstance(kind,bytes):
+                            kind=kind.decode()
+                        solutions.setdefault(int(row['TARGETID']),[]).append(dict(
+                            program=p.parent.parent.parent.name,spectral_class=kind.strip(),
+                            redshift=float(row['Z']),redshift_error=float(row['ZERR']),
+                            zwarn=int(row['ZWARN']),delta_chi2=float(row['DELTACHI2'])))
                 near.update(int(x) for x in f['TARGETID'][usable][sky.separation(center).arcmin<=2.4])
             files.append(str(p))
-    return dict(status='complete',release='DESI DR2 loa',healpix=pixels.tolist(),files_scanned=len(files),
+    result=dict(status='complete',release='DESI DR2 loa',healpix=pixels.tolist(),files_scanned=len(files),
                 files=files,cone_spectroscopic_targets=len(near),member_matches=len(targets),match_arcsec=.8)
+    if veto_output is not None:
+        result['matched_redrock_solutions']=list(solutions.values())
+        checks=[coordinates[i] for i,records in solutions.items()
+                if records and all(r['spectral_class']=='QSO' and r['zwarn']==0 for r in records)]
+        write_json(veto_output, checks)
+        result['qso_veto_count']=len(checks)
+    return result
 
 
 def frozen_positions(plan,data,sources):
-    with np.load(data/'runs/v5'/f"{plan['field']}-base"/f"membership-main-A-{plan['membership_rank']}.npz",
+    with np.load(data/'runs'/plan.get('scratch_revision','v5')/f"{plan['field']}-base"/f"membership-main-A-{plan['membership_rank']}.npz",
                  allow_pickle=False) as h:
         ids={tuple(r) for r in h['source_ids'][h['probability']>=.5]}
     qa=np.isin(sources['BRICKID'],[i[1] for i in ids])&np.isin(sources['OBJID'],[i[2] for i in ids])

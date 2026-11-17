@@ -2,6 +2,16 @@
 
 ## 2026-11-17
 
+### 第八轮候选复核与扩面验收
+
+- 完整读取 GPT Pro 最新评审。冻结 `survey14.yaml` 的双距离检验及 `survey63`、`survey51` 的独立目录条件。保持生产 A 搜索、掩膜与阈值冻结。
+- 61449606 完成 survey_14 Gaia 与共享掩膜测光。61449743 的 DESI 交叉匹配识别 QSO。61449857 第二步提前中止，61450106 完成双目录统一剔除检验。
+- 61449743 完成 expand_03 HSC/CFHT 颜色、孔径和空间项测试。两个固定距离的 C TS 为零。CADC TAP 返回标定 r 曝光，限定仪器中心锥未见匹配的标定 g。
+- 61449945 完成 survey_63 和 survey_51 的 PS1、Gaia 与 DESI。61450917 完成 survey_63 亮切选与 PS1 局部 C 多模式。61450711 下载四个 CFHT r 小切图，全部覆盖冻结中心。SIMBAD、VizieR、UCC 及文献中心结果见 `docs/novelty_audit.md`。
+- 61446693_1 的 A 产物完整、初次 C 超时；61449552_1 重新完成该批 C。61450142 的预览验证了覆盖栅格扣除。61451195 完成严格汇总、逐场 A manifest 与 C 模式核对。195 场 935.213 有效 deg²，619 个 C 模式，24 个重点图像审查。
+- 验证用 `.venv/bin/python -m compileall -q src scripts/novelty_audit.py`、`.venv/bin/python -m unittest discover -s tests` 与 `bash -n scripts/v6.sh scripts/v7_rollout.sh`。同步限于版本配置、聚合论文/搜索结果与诊断图。
+- 后续优先核实 survey_63 独立双色星族与距离，并按已审查负担决定下一次登记范围。
+
 ### 第七轮档案取数与扩面执行
 
 - 完整读取 GPT Pro 最新评审。通过 NERSC DTN 取得三个 SMOKA 包，原始 FITS 和校验文件位于 scratch。三帧 CHECKSUM/DATASUM 通过。

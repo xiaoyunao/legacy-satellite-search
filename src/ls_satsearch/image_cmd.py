@@ -1,5 +1,6 @@
 """Exploratory independent g-detected HSC+CFHT aperture CMD on a common area."""
 
+import argparse
 import csv
 import json
 import os
@@ -11,6 +12,7 @@ import astropy.units as u
 from astropy.wcs import WCS
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.spatial import cKDTree
 import yaml
 
 from .candidate_archives import frozen_positions
@@ -87,7 +89,6 @@ def stack_zero_point(image, band, plan, path, center, pixel_scale, blue_position
                      plan['stack_reference_outer_arcmin'],band=band,r_max=plan['stack_reference_r_max'],annular=True)
     east,north=center.spherical_offsets_to(sky)
     xy=np.column_stack((east.arcsec,north.arcsec))/pixel_scale+(len(image)-1)/2
-    from scipy.spatial import cKDTree
     sep,nearest=cKDTree(blue_positions).query(xy)
     flux=np.array([aperture(image,p,plan['aperture_arcsec']/pixel_scale)[0]
                    for p in blue_positions[nearest]])
@@ -111,6 +112,64 @@ def stack_zero_point(image, band, plan, path, center, pixel_scale, blue_position
     if abs(result['held_out_median_mag'])>.14 or result['held_out_robust_sigma_mag']>.2:
         raise ValueError(f'{band}: poor held-out stack zero point {result}')
     return 10**(-.4*correction),result
+
+
+def calibration_sensitivity(images, pos, center, scale, plan, path):
+    """Check one joint colour and position correction on off-centre held-out stars."""
+    args=(path,center,plan['stack_reference_inner_arcmin'],plan['stack_reference_outer_arcmin'])
+    sky,g_ref=ps1_refs(*args,band='g',r_max=plan['stack_reference_r_max'],annular=True)
+    _,r_ref=ps1_refs(*args,band='r',r_max=plan['stack_reference_r_max'],annular=True)
+    east,north=center.spherical_offsets_to(sky)
+    xy=np.column_stack((east.arcsec,north.arcsec))/scale+(len(images[0])-1)/2
+    sep,index=cKDTree(pos).query(xy)
+    small=plan['aperture_arcsec']/scale
+    large=1.45/scale
+    def fluxes(positions,radius):
+        return np.array([[aperture(im,p,radius)[0] for p in positions] for im in images]).T
+    all_flux=fluxes(pos,small)
+    measured=all_flux[index]
+    valid=(sep*scale<.8)&np.all(np.isfinite(measured)&(measured>0),axis=1)
+    index=index[valid]
+    measured=measured[valid]
+    m=25-2.5*np.log10(measured)
+    target=np.column_stack((g_ref,r_ref))[valid]-m
+    held=np.zeros(len(target),dtype=bool)
+    held[np.argsort(sky.ra.deg[valid])[::3]]=True
+    if (~held).sum()<9 or held.sum()<4:
+        raise ValueError('Too few joint references for a held-out three-term comparison')
+    xy=(pos-(len(images[0])-1)/2)*scale/60
+    color=np.full(len(pos),np.nan)
+    positive=np.all(np.isfinite(all_flux)&(all_flux>0),axis=1)
+    color[positive]=-2.5*np.log10(all_flux[positive,0]/all_flux[positive,1])
+    center_color=float(np.median(color[index[~held]]))
+    design=np.column_stack((np.ones(len(pos)),color-center_color,xy))
+    ref_design=design[index]
+    training=ref_design[~held]
+    flux_large=fluxes(pos[index],large)
+    gain=np.full(flux_large.shape,np.nan)
+    aperture_valid=np.isfinite(flux_large)&(flux_large>0)
+    gain[aperture_valid]=2.5*np.log10(flux_large[aperture_valid]/measured[aperture_valid])
+    offsets=np.zeros_like(all_flux)
+    floors,report=[],{}
+    for j,band in enumerate('gr'):
+        y=target[:,j]
+        beta=np.linalg.solve(training.T@training+np.diag([0,.5,.5,.5]),training.T@y[~held])
+        base=y[held]-np.median(y[~held])
+        alt=y[held]-ref_design[held]@beta
+        errors=[float(np.sqrt(np.mean(v*v))) for v in (base,alt)]
+        use=errors[1]<.9*errors[0]
+        if use:
+            supported=positive&(color>=color[index[~held]].min())&(color<=color[index[~held]].max())
+            offsets[supported,j]=design[supported]@beta-np.median(y[~held])
+        floor=max(plan['cross_filter_uncertainty_mag'],errors[int(use)])
+        floors.append(floor)
+        report[band]=dict(training=int((~held).sum()),held_out=int(held.sum()),
+                          scalar_rms_mag=errors[0],color_position_rms_mag=errors[1],
+                          color_mag_per_mag=float(beta[1]),east_mag_per_arcmin=float(beta[2]),
+                          north_mag_per_arcmin=float(beta[3]),correction_applied=bool(use),
+                          median_aperture_1p02_to_1p45_mag=float(np.nanmedian(gain[:,j])),
+                          aperture_error_magnitude_floor=floor)
+    return offsets,np.asarray(floors),report
 
 
 def comparison_to_ls(sample, sample_sky, shortlist, sources, center):
@@ -141,7 +200,7 @@ def comparison_to_ls(sample, sample_sky, shortlist, sources, center):
     return rows
 
 
-def run():
+def run(audit=False):
     plan=yaml.safe_load(Path('configs/v7/image_cmd.yaml').read_text())
     frozen=yaml.safe_load(Path('configs/v6/followup.yaml').read_text())
     ext=Path(os.environ['LS_SAT_DATA'])/'resources'
@@ -164,6 +223,9 @@ def run():
         factor,metrics=stack_zero_point(img,band,plan,before/'ps1.csv',center,scale,pos)
         img*=factor
         final_calibration[band]=metrics
+    offsets,floor,calibration_test=(0.,plan['cross_filter_uncertainty_mag'],None)
+    if audit:
+        offsets,floor,calibration_test=calibration_sensitivity((blue,red),pos,center,scale,plan,before/'ps1.csv')
     field=Field(center.ra.deg,center.dec.deg,.074,.05,buffer=0)
     h=(np.arange(field.n)+.5)*field.step-field.limit
     yy,xx=np.meshgrid(h,h,indexing='ij')
@@ -198,7 +260,9 @@ def run():
     sky=center.spherical_offsets_by(xy[:,0]*u.arcmin,xy[:,1]*u.arcmin)
     ebv=reddening(sky.ra.deg,sky.dec.deg)
     dered=25-2.5*np.log10(np.column_stack((g,r))[compact])-ebv[:,None]*np.array([3.172,2.271])
-    err=np.hypot(2.5/np.log(10)/snr[compact],plan['cross_filter_uncertainty_mag'])
+    if audit:
+        dered+=offsets[compact]
+    err=np.hypot(2.5/np.log(10)/snr[compact],floor)
     cfg=yaml.safe_load(Path('configs/v6/search.yaml').read_text())
     cfg.update(g_max=plan['g_limit'],r_max=plan['r_limit'])
     keep=(dered<=np.array([cfg['g_max'],cfg['r_max']])).all(axis=1)
@@ -227,7 +291,8 @@ def run():
                             ('compact_aperture',sky),('test_sample',sky[keep]),('after_gaia',sky[keep][~veto])):
         stage[label]=int((shortlist.match_to_catalog_sky(stage_sky)[1].arcsec<=.8).sum()) if len(stage_sky) else 0
     photometric_offsets=comparison_to_ls(sample,sky[keep],shortlist,ls_sources,center)
-    out=Path('results/verification')
+    out=Path('results/v8/expand03' if audit else 'results/verification')
+    out.mkdir(exist_ok=True,parents=True)
     write_csv(out/'provisional_image_fixed_cmd.csv',rows)
     write_json(out/'provisional_image_cmd.json',dict(job=os.environ.get('SLURM_JOB_ID'),
        config_sha256=sha(Path('configs/v7/image_cmd.yaml')),core_fraction=core,annulus_fraction=off,
@@ -236,6 +301,7 @@ def run():
        ls_shortlist_by_stage=stage,image_minus_ls_magnitude_differences=photometric_offsets,g5_ps1_equivalent=float(25-2.5*np.log10(5*noise[0])),
        r5_ps1_equivalent=float(25-2.5*np.log10(5*noise[1])),cfht_calibration=calibration,
        stack_photometry_validation=final_calibration,
+       calibration_sensitivity=calibration_test,
        limitations=['provisional HSC calibration','PS1 reference system','point-source completeness unmeasured']))
     z=np.hypot(*sample[:,:2].T)
     fig,axes=plt.subplots(1,2,sharey=True,figsize=(7,4),layout='constrained')
@@ -252,4 +318,6 @@ def run():
 
 
 if __name__=='__main__':
-    run()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--calibration-sensitivity',action='store_true')
+    run(parser.parse_args().calibration_sensitivity)
