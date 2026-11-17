@@ -1,0 +1,15 @@
+version: v13
+seed: 483420
+check_brick_geometry: true
+max_ebv: 0.10
+min_abs_b: 25
+south_ps1:
+  count: 1200
+  development: 0
+  region: south
+  survey: 3
+  passes:
+  - {width: 3, minimum: 0.60, nside: 64}
+  - {width: 2, minimum: 0.58, nside: 128}
+  - {width: 1.5, minimum: 0.50, nside: 128}
+  - {width: 1, minimum: 0.55, nside: 256}

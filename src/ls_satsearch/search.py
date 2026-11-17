@@ -86,14 +86,16 @@ class CMD:
                 density /= density.sum()
                 self.background[ids] = map_coordinates(density, self.coords[:, ids], order=1, mode='nearest')
 
+    @staticmethod
+    def top_hat(mags, err, dm, locus):
+        # Nearest candidates in Euclidean g,r, with a model-width floor.
+        distance, ids = cKDTree(locus).query(mags - dm, k=16, distance_upper_bound=.52)
+        residual = (mags - dm)[:, None, :] - locus[np.minimum(ids, len(locus) - 1)]
+        chi2 = np.sum(residual**2 / (err[:, None, :]**2 + .045**2), axis=2)
+        return np.any((chi2 <= 2.5**2) & np.isfinite(distance), axis=1) & (mags >= 7).all(axis=1)
+
     def weights(self, dm):
-        # Nearest candidates in Euclidean g,r; evaluate with source errors
-        # independently in each band and allow a small model-width floor.
-        delta = self.mags - dm
-        distance, ids = cKDTree(self.locus).query(delta, k=16, distance_upper_bound=.52)
-        residual = delta[:, None, :] - self.locus[np.minimum(ids, len(self.locus) - 1)]
-        chi2 = np.sum(residual**2 / (self.err[:, None, :]**2 + .045**2), axis=2)
-        on_locus = np.any((chi2 <= 2.5**2) & np.isfinite(distance), axis=1) & self.valid_cmd
+        on_locus = self.top_hat(self.mags, self.err, dm, self.locus)
 
         # Use an extended model grid before convolving. This includes
         # photometric scattering across both faint selection boundaries.

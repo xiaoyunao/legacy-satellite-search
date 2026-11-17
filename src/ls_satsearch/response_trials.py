@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 
 import numpy as np
+from scipy.spatial import cKDTree
 import yaml
 
 from .data import sample_pixels
@@ -14,7 +15,7 @@ from .inject import choose_sites
 from .matched import PS1_MODEL,SURVEYS,reddening
 from .ps1_tiles import design
 from .run import config_path,read_csv,settings,sha,write_csv,write_json
-from .search import load_isochrone,scan
+from .search import CMD, binomial_tail_score, exact_onoff, load_isochrone, scan
 from . import selection_response as sr
 
 
@@ -38,10 +39,29 @@ def audit_errors(field_id,pool,point):
     return rows
 
 
+def stage_counts(sample, tree, field, area, pos, rh, dm, model, cfg, xy, mags, err, exposed, selected, gr):
+    radius = min(cfg['radii_arcmin'], key=lambda r: abs(np.log(r/rh)))
+    distance = np.linalg.norm(xy-pos, axis=1)
+    local = sample[tree.query_ball_point(pos, 6*radius)]
+    window = CMD.top_hat(local[:,2:4], local[:,4:6], dm, model[2])
+    on, off, a_on, a_off = exact_onoff(field, *pos, radius, cKDTree(local[:,:2]), area, window)
+    inside_cmd = np.zeros(len(xy), dtype=bool)
+    inside_cmd[selected] = CMD.top_hat(mags[selected],err[selected],dm,model[2])
+    plus_on = int((inside_cmd & (distance<=1.5*radius)).sum())
+    plus_off = int((inside_cmd & (distance>=3.5*radius) & (distance<=6*radius)).sum())
+    p = a_on/(a_on+a_off) if a_on and a_off else None
+    return dict(N_valid_gr=int((exposed & gr).sum()), N_CMD=int(inside_cmd.sum()),
+                N_CMD_on=plus_on, N_CMD_off=plus_off, nearest_kernel_arcmin=radius,
+                background_CMD_on=on, background_CMD_off=off,
+                area_on_arcmin2=a_on, area_off_arcmin2=a_off,
+                truth_center_score_blank=binomial_tail_score(on,on+off,p) if p else None,
+                truth_center_score_injected=binomial_tail_score(on+plus_on,on+off+plus_on+plus_off,p) if p else None)
+
+
 def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=None):
     _,data,cfg=settings()
     matched=yaml.safe_load(config_path('matched.yaml').read_text())
-    spec=next(s for s in matched['fields'] if s['id']==field_id and s['role']=='pilot_dev')
+    spec=next(s for s in matched['fields'] if s['id']==field_id and s['role'] in ('pilot_dev', 'pilot_eval'))
     field,_=design(spec,matched)
     samples,configs,cuts,empty={}, {}, {}, {}
     masks=[]
@@ -85,6 +105,16 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
     population_ls=load_isochrone(population_paths[0]) if injected else model_ls
     population_ps1=(load_isochrone(population_paths[1],bands=('gP1','rP1'))
                     if injected else model_ps1)
+    shared_templates = physical.get('shared_sampling_templates', {}) if physical else {}
+    if shared_templates:
+        template_paths = [resources/shared_templates[k] for k in ('north','south','ps1')]
+        for path in template_paths:
+            if not np.array_equal(signatures[0], np.loadtxt(path,usecols=(0,1,2,3,4,5,6,7,14,15))):
+                raise ValueError('Shared population row identities differ')
+        sampling_models = [load_isochrone(path, bands=('gP1','rP1') if j==2 else ('g','r'))
+                           for j,path in enumerate(template_paths)]
+    else:
+        sampling_models = [population_ls,population_ps1]
     with population_paths[1].open() as f:
         headers=next(line[1:].split() for line in f if line.startswith('#') and 'iP1' in line)
     model_i=np.loadtxt(population_paths[1],usecols=headers.index('iP1'))
@@ -112,13 +142,20 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
     v_proxy=g_abs-.59*(g_abs-r_abs)-.01
     v_flux=10**(-.4*v_proxy)
     trials=[]
+    diagnostics = physical and physical.get('stage_diagnostics')
+    trees = {arm: cKDTree(rows[:, :2]) for arm, rows in samples.items()} if diagnostics else {}
+    shared = physical.get('shared_realizations', {}).get(field_id) if physical else None
     faint_rng=np.random.default_rng(np.random.SeedSequence(seed+[14]))
     for trial,(pos,(distance,size,normalization)) in enumerate(zip(positions,conditions)):
+        if shared is not None:
+            rng = np.random.default_rng([physical['seed'], shared, trial])
+            faint_rng = np.random.default_rng([physical['seed'], shared, trial, 14])
         dm=5*np.log10(distance)+10
         rh=np.degrees(np.arctan(size/(1000*distance)))*60
         margin=.8 if physical else .4
         valid_model=np.any([np.all(model[0]+dm<=[c['g_max']+margin,c['r_max']+margin],axis=1)
-                            for model,c in ((population_ls,configs['ls_deep']),(population_ps1,configs['ps1']))],axis=0)
+                            for model,c in zip(sampling_models,
+                                [configs['ls_deep']]*(len(sampling_models)-1)+[configs['ps1']])],axis=0)
         weights=population_ls[1]*valid_model
         if physical:
             total_lum=10**(-.4*normalization)
@@ -183,6 +220,9 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
                     resolution = dict(offset_per_rh=offset/rh,
                                       within_true_rh=offset<=rh,
                                       radius_below_grid=rh<min(c['radii_arcmin']))
+                if diagnostics:
+                    counts.update(stage_counts(samples[survey],trees[survey],field,area,pos,rh,dm,model,c,
+                                               xy,g,r,in_area,index,conditional))
                 trials.append(dict(field=field_id,trial=trial,survey=survey,arm=label,
                                    D_kpc=distance,rh_pc=size,N_latent=n,N_in_valid_area=int(in_area.sum()),
                                    N_used=int(index.sum()),
@@ -210,7 +250,7 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('field')
-    p.add_argument('--version',choices=('v3','v4','v12'),required=True)
+    p.add_argument('--version',choices=('v3','v4','v12','v13'),required=True)
     p.add_argument('--archive',type=Path,required=True)
     p.add_argument('--policy-archive',type=Path)
     p.add_argument('--physical-plan',type=Path)

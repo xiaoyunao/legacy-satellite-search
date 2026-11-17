@@ -1,0 +1,4 @@
+field,region,background,ra_deg,dec_deg,size_px
+south_sharp,south,v13_select_v12g_south_ps1_007,330.46875,12.63562509302112,1152
+south_broad,south,v13_select_v11_south_ps1_16,355.78125,32.0899512562803,1152
+north_match,north,v13_select_v12_north_010,122.34374999999999,41.01449966573052,1152

@@ -1,0 +1,4 @@
+name,ra_deg,dec_deg,context_arcmin,source,interpretation
+M33,23.46208,30.65994,60.0,https://doi.org/10.1093/MNRAS/STW1657,Nearby resolved galaxy and extended substructure
+Palomar 14,242.7458333,14.9616667,6.69,https://doi.org/10.1088/0004-637X/726/1/47,Three published Wilson half-light radii around the catalog center
+Hercules,247.7722,12.7852,8.0,https://arxiv.org/html/2509.12313v2,Known Milky Way dwarf recovery context

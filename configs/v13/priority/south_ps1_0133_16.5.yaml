@@ -1,0 +1,35 @@
+candidate: v13_south_ps1_0133-A_base-0.3-001
+field: v13_south_ps1_0133
+ra_deg: 242.65193601008886
+dec_deg: 14.975298993756208
+dm: 16.5
+rh_arcmin: 1.0
+membership_rank: 10
+ps1_radius_deg: 0.23
+ps1_magnitude_caps:
+- 24.0
+- 23.5
+ps1_min_snr: 5
+ps1_ikron_delta: 0.05
+center_aperture_arcmin: 1.5
+control_radius_arcmin:
+- 4
+- 11
+control_draws: 4096
+control_neighbors: 256
+mask_draws: 768
+mask_neighbors: 48
+ps1_scan_radii:
+- 0.5
+- 1
+- 2
+ps1_scan_dm:
+- 13.5
+- 22.5
+- 0.25
+ps1_scan_width_deg: 0.26
+ps1_scan_buffer_arcmin: 7
+seed: 483424
+output_prefix: v13_0133_mu16.5_
+scratch_revision: v13
+field_manifest: regional_v13_south_ps1/results/summary/v13_south_ps1_0133-base/manifest.json

@@ -13,10 +13,10 @@ from ls_satsearch.review import review_sky_groups
 from ls_satsearch.run import read_csv, write_csv
 
 
-def run(cohort, version, priority):
+def run(cohort, version, priority, output_root=Path("results/v12/discovery")):
     workspace=Path(f'regional_{version}_{cohort}')
     config=Path(f'configs/{version}/cohorts/{cohort}')
-    output=Path('results/v12/discovery')/version/cohort
+    output=output_root/version/cohort
     frozen=Path('configs/v7/production.json') if cohort=='south_ps1' else Path(
         f'results/v11/{cohort}/main/calibration/sky_group_policy.json')
     combine(workspace/'results/summary',config/'fields.yaml',output,policy=frozen)
@@ -57,4 +57,5 @@ if __name__=='__main__':
     p.add_argument('cohort')
     p.add_argument('--version',default='v12')
     p.add_argument('--priority',type=int,default=3)
+    p.add_argument('--output-root',type=Path,default=Path('results/v12/discovery'))
     run(**vars(p.parse_args()))

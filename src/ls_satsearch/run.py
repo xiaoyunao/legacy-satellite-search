@@ -192,7 +192,21 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
     for path in (summary, figures, work):
         path.mkdir(exist_ok=True, parents=True)
     sample, cutflow, valid, mags, chosen = select(sources, field, area, cfg)
-    effective_area, frac = coverage_metrics(field, area, cfg)
+    owned = spec.get('ownership')
+    area_for_count = area
+    if owned:
+        from .data import ownership, regional_primary
+        area_for_count = area.copy()
+        cell = field.step / cfg['coverage_subdivision']
+        axis = (np.arange(len(area)) + .5)*cell - field.limit
+        rows = np.flatnonzero(abs(axis) < field.width*30)
+        core = area_for_count[np.ix_(rows,rows)]
+        iy,ix = np.nonzero(core)
+        ra,dec = field.sky(axis[rows[ix]],axis[rows[iy]])
+        keep = ownership(ra,dec,owned) & regional_primary(ra,dec,'south')
+        core[iy,ix] &= keep
+        area_for_count[np.ix_(rows,rows)] = core
+    effective_area, frac = coverage_metrics(field, area_for_count, cfg)
     x, y = field.xy(sources['RA'], sources['DEC'])
     inner = (abs(x) < field.width * 30) & (abs(y) < field.width * 30)
     co = {b: {} for b in 'GR'}
@@ -238,6 +252,13 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
         write_json(summary / 'manifest.json', manifest)
         return
     raw, peaks, seconds, cmd = scan(sample, field, area, template, cfg)
+    if owned and raw:
+        from .search import deduplicate
+        ra = np.array([p['ra_deg'] for p in raw])
+        dec = np.array([p['dec_deg'] for p in raw])
+        keep = ownership(ra,dec,owned) & regional_primary(ra,dec,'south')
+        raw = [p for p,use in zip(raw,keep) if use]
+        peaks = deduplicate(raw,cfg.get('main_dm_max',20.75))
     write_csv(work / 'all_template_peaks.csv', raw)
     write_csv(summary / 'deduplicated_peaks.csv', peaks)
     if spec.get('truth'):

@@ -1,0 +1,4 @@
+policy,branch,budget,field,role,area_deg2,kept_sky_groups,passing_hypotheses,cutoff
+A_base,main,0.3,v13_select_v11_north_14,pilot_eval,3.060586419753086,2,2,5.675038082823366
+A_base,main,0.3,v13_select_v12_north_003,pilot_eval,3.104461805555555,1,1,5.675038082823366
+A_base,main,0.3,v13_select_v12_north_010,pilot_eval,3.1835146604938265,3,5,5.675038082823366

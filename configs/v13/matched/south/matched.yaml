@@ -1,0 +1,49 @@
+width_deg: 1.8
+buffer_arcmin: 26
+radii_arcmin:
+- 0.5
+- 1
+- 2
+- 4
+review_budgets_deg2:
+- 0.3
+dm:
+- 16.5
+- 22.5
+- 0.25
+fields:
+- id: v13_select_v12g_south_ps1_018
+  role: pilot_eval
+  survey: 3
+  ra: 7.03125
+  dec: 33.510056066253014
+- id: v13_select_v12_south_ps1_005
+  role: pilot_eval
+  survey: 3
+  ra: 36.5625
+  dec: 30.69158768492234
+- id: v13_select_v12g_south_ps1_006
+  role: pilot_eval
+  survey: 3
+  ra: 27.421875
+  dec: 32.797168295823646
+- id: v13_select_v12g_south_ps1_020
+  role: pilot_eval
+  survey: 3
+  ra: 241.17187500000003
+  dec: 25.94447977237001
+- id: v13_select_v11_south_ps1_16
+  role: pilot_eval
+  survey: 3
+  ra: 355.78125
+  dec: 32.0899512562803
+- id: v13_select_v12g_south_ps1_007
+  role: pilot_eval
+  survey: 3
+  ra: 330.46875
+  dec: 12.63562509302112
+- id: v13_select_v12g_south_ps1_021
+  role: pilot_eval
+  survey: 3
+  ra: 331.171875
+  dec: 18.20995686428301

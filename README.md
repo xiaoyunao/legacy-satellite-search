@@ -1,6 +1,12 @@
 # Legacy Satellite Search
 
-A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
+This project searches the North BASS and South DECam photometric catalogs of DESI Legacy Imaging Surveys DR11 for faint Milky Way stellar systems. It measures how often the deeper photometry adds recoveries to PS1 at a comparable review cost. The main science sample spans 20–150 kpc and circularized half-light radii of 3–30 pc. South PS1 is the discovery priority. South DELVE and DES overlap fields provide deeper comparison samples. Nearby and distant search branches have their own calibration.
+
+## Current search and selection experiments
+
+The [project memory](docs/PROJECT_MEMORY.md) records the science questions and scope. The [work plan](PLAN.md) defines current tests and acceptance criteria. The [run status](docs/STATUS.md) records completed runs and Slurm IDs. The [thirteenth science report](thirteenth_science_report.md) describes the South PS1 rollout, new matched recovery measurements and the native CCD experiment.
+
+Round 13 uses frozen South PS1 production cuts in `configs/v7/production.json`. Its independent compact-system experiment uses the fixed common-sky costs in `results/v12/matched/` and the observing strata in `configs/v13/matched/strata.csv`. On NERSC, read PS1 inputs through `scripts/v12_ps1_download.sh` with `LS_SAT_VERSION=v13` on a data-transfer node, using the scratch path verified on Perlmutter. Use `scripts/v13_submit.py` on a login node to submit ready fields. The native CCD pilot uses LegacyPipe DR11.1.0 through Shifter in a CPU job. The image trial configuration is `configs/v13/image_trials.yaml`, and `scripts/v13_image_trials.py` prepares and measures injections. Native CCD images, Tractor products and individual source tables stay on NERSC.
 
 ## Regional North and South trials
 

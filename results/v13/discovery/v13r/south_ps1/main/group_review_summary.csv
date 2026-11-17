@@ -1,0 +1,29 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v13r_south_ps1_0310-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,20.0,11.2,0.0,DELVE 1,689.9700732630943,L0
+v13r_south_ps1_0372-A_base-0.3-001,awaiting_visual_review,5,5,5,1,0.0,16.25,11.2,0.0,Pegasus III,121.40200483646069,L0
+v13r_south_ps1_0372-A_base-0.3-002,awaiting_visual_review,1,1,1,4,0.0,17.0,11.2,0.0,Pegasus III,103.91367415060616,L0
+v13r_south_ps1_0467-A_base-0.3-001,awaiting_visual_review,5,5,4,2,90.15968672715582,20.75,2.8,63.025745497195715,Hercules,1.2217172103794212,L0
+v13r_south_ps1_0467-A_base-0.3-002,awaiting_visual_review,2,2,2,5,0.0,19.5,11.2,0.0,Hercules,7.824002620488242,L0
+v13r_south_ps1_0477-A_base-0.3-001,awaiting_visual_review,6,6,5,1,0.0,20.5,11.2,0.0,Pisces II,281.48593309294677,L0
+v13r_south_ps1_0477-A_base-0.3-002,awaiting_visual_review,3,3,3,2,0.0,16.25,11.2,0.0,Pisces II,266.3609012579109,L0
+v13r_south_ps1_0477-A_base-0.3-003,awaiting_visual_review,1,1,1,3,0.11620044074835256,20.25,11.2,0.0,Pisces II,259.33953070605713,L0
+v13r_south_ps1_0477-A_base-0.3-004,awaiting_visual_review,1,1,1,6,0.0,16.5,11.2,0.0,Pisces II,274.2622701710884,L0
+v13r_south_ps1_0519-A_base-0.3-001,awaiting_visual_review,2,2,2,3,11.40045054128083,18.25,1.4,3.122485379684475,Hercules,325.50584366665373,L0
+v13r_south_ps1_0538-A_base-0.3-001,awaiting_visual_review,2,2,1,1,0.0,16.25,11.2,0.0,Segue 2,1239.8426390233315,L0
+v13r_south_ps1_0544-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,20.5,11.2,0.0,Segue 2,321.1012314825059,L0
+v13r_south_ps1_0593-A_base-0.3-001,awaiting_visual_review,4,4,3,1,1.8894840186573703,16.25,11.2,0.13111290575347212,Segue 2,666.7014785780119,L0
+v13r_south_ps1_0647-A_base-0.3-001,awaiting_visual_review,7,7,6,1,0.0,20.5,11.2,0.0,Segue 2,540.0747125341633,L0
+v13r_south_ps1_0647-A_base-0.3-002,awaiting_visual_review,7,7,5,8,0.0,20.0,11.2,0.0,Triangulum II,483.1892414559395,L0
+v13r_south_ps1_0647-A_base-0.3-003,awaiting_visual_review,5,5,5,20,1.055367988270831,16.75,5.6,0.0,Segue 2,557.4493394809074,L0
+v13r_south_ps1_0647-A_base-0.3-004,awaiting_visual_review,5,5,5,19,0.9185870027879854,16.25,8.0,0.0,Segue 2,544.2122198012706,L0
+v13r_south_ps1_0688-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,17.75,11.2,0.0,Triangulum II,1637.8068436540048,L0
+v13r_south_ps1_0692-A_base-0.3-001,awaiting_visual_review,16,16,9,1,458.132077589653,21.0,4.0,427.48815474386714,Triangulum II,620.7097988279882,L0
+v13r_south_ps1_0692-A_base-0.3-002,awaiting_visual_review,6,6,6,7,327.9566213367478,21.0,2.8,299.73930078447535,Triangulum II,621.0292953452309,L0
+v13r_south_ps1_0692-A_base-0.3-003,awaiting_visual_review,6,6,6,21,43.90332645829889,20.75,11.2,29.544151021692585,Triangulum II,629.9329082372669,L0
+v13r_south_ps1_0692-A_base-0.3-004,awaiting_visual_review,4,4,4,27,79.1319076750907,20.75,1.4,57.24420157021878,Triangulum II,620.3992704984651,L0
+v13r_south_ps1_0692-A_base-0.3-005,awaiting_visual_review,6,6,6,30,71.98003609154969,21.0,1.4,52.96933493379878,Triangulum II,621.6609945576873,L0
+v13r_south_ps1_0692-A_base-0.3-006,awaiting_visual_review,4,4,2,37,41.89044505741205,20.75,1.4,25.713484628505938,Triangulum II,618.8004771718346,L0
+v13r_south_ps1_0692-A_base-0.3-007,awaiting_visual_review,1,1,1,38,38.28034345421365,19.0,1.4,26.051570361219753,Triangulum II,619.1302254600918,L0
+v13r_south_ps1_0693-A_base-0.3-001,awaiting_visual_review,4,4,4,1,248.91582219017698,21.0,11.2,221.93823789289831,Triangulum II,556.1708397118175,L0
+v13r_south_ps1_0693-A_base-0.3-002,awaiting_visual_review,6,6,6,5,99.84883742088607,20.75,8.0,82.06352903475877,Triangulum II,618.5433575901112,L0
+v13r_south_ps1_0730-A_base-0.3-001,awaiting_visual_review,4,4,4,1,0.0,20.5,11.2,0.0,Pegasus IV,1103.79823063923,L0

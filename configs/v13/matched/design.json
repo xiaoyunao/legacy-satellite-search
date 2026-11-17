@@ -1,0 +1,24 @@
+{
+  "source_hashes": {
+    "configs/v12/cohorts/north/fields.yaml": "5f67cd6903a442faf126f7620cc2ba37d789430c5aab696d39e599a375d1c125",
+    "configs/v11/cohorts/north/fields.yaml": "16dff032bc8fbefcee2ed92ef797476cd3cd8d8a6a14ba20dbbac3886838d4fe",
+    "results/v12/discovery/v12/north/field_metrics.csv": "2e37c2803813154844c766310eb26f0fc441466f632ed0d61ad05df4cc20ddfd",
+    "results/v11/north/field_metrics.csv": "691eda961f9a13a7547ed9c6448bfe0e396278760850c686c28407efa3d42c3d",
+    "configs/v12/matched/north/matched.yaml": "097166714ff5f360118fd0aa82bdaf61ce3e1b9b742fe4d51e73212df7d1a061",
+    "configs/v12/cohorts/south_ps1/fields.yaml": "3b943e441ae7284f94c61e44fec46a6bae138322f908cfd5e57898dcd6fe0ffc",
+    "configs/v12g/cohorts/south_ps1/fields.yaml": "2e15c33e6436538a8132aa2b6ac640cf7d795c2f2bf94b2e6531ca96b83dfbff",
+    "configs/v11/cohorts/south_ps1/fields.yaml": "cfcb1a62817cfd90fbd61fba346828e4d9d09ea8365330176b7946e194fe2079",
+    "results/v12/discovery/v12/south_ps1/field_metrics.csv": "b77fa929d23544038ad752d896bf61dc506c66bd88514ace789d765dff000030",
+    "results/v12/discovery/v12g/south_ps1/field_metrics.csv": "3b7aa36c2757d8de40fb4c0766aa726ec9818ce90618d7f640585f972b8dd147",
+    "results/v11/south_ps1/field_metrics.csv": "99444b3b42cf6f1b9bda9e40d871be139fa4772e2eca01dbb54dd7782047b2e1",
+    "configs/v12/matched/south/matched.yaml": "e21f91179e5336da1f3ea4aa00b6240647e588354f3ec6713a7bd07bc31e6500"
+  },
+  "matching_scales": [
+    0.2,
+    0.2,
+    0.17,
+    0.25
+  ],
+  "minimum_production_area_fraction": 0.78,
+  "minimum_separation_from_round12_matched_deg": 2.4
+}

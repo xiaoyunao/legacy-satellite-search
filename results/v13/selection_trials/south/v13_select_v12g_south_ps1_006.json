@@ -1,0 +1,176 @@
+{
+  "status": "complete",
+  "job": "61466637",
+  "seed": [
+    481705,
+    27421,
+    483421
+  ],
+  "threshold_policies": {
+    "ls_base": {
+      "sha256": "e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594",
+      "path": "results/v12/matched/south/ls_base/groups/sky_group_policy.json"
+    },
+    "ls_deep": {
+      "sha256": "47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6",
+      "path": "results/v12/matched/south/ls_deep/groups/sky_group_policy.json"
+    },
+    "ps1": {
+      "sha256": "04485c6416653749aec04447fd8a758dd8f3311aef2d4cb95a97f9d4d7a8acfd",
+      "path": "results/v12/matched/south/ps1/groups/sky_group_policy.json"
+    }
+  },
+  "synthetic_models": {
+    "LS": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+    "PS1": "4fa53e8a963933310941ae5c43da4391e782a3760320fa61bd5c940e4ffb201b"
+  },
+  "fixed_search_models": {
+    "LS": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+    "PS1": "4fa53e8a963933310941ae5c43da4391e782a3760320fa61bd5c940e4ffb201b"
+  },
+  "model": "Common latent rows and sky positions, common standardized gr noise and morphology draws. Proxy shape response conditional on observed counterpart; unsupported bins use unity. Catalog entry and image completeness are unmeasured.",
+  "physical_plan": {
+    "seed": 483421,
+    "independent_full_imf": true,
+    "stage_diagnostics": true,
+    "shared_realizations": {
+      "v13_select_v12_north_003": 1,
+      "v13_select_v12_north_010": 2,
+      "v13_select_v11_north_14": 3,
+      "v13_select_v12g_south_ps1_018": 1,
+      "v13_select_v12_south_ps1_005": 2,
+      "v13_select_v12g_south_ps1_006": 3
+    },
+    "conditions": [
+      [
+        100,
+        3,
+        -3.0
+      ],
+      [
+        100,
+        3,
+        -1.5
+      ],
+      [
+        100,
+        10,
+        -3.0
+      ],
+      [
+        100,
+        10,
+        -1.5
+      ],
+      [
+        100,
+        30,
+        -3.0
+      ],
+      [
+        100,
+        30,
+        -1.5
+      ],
+      [
+        150,
+        3,
+        -3.0
+      ],
+      [
+        150,
+        3,
+        -1.5
+      ],
+      [
+        150,
+        10,
+        -3.0
+      ],
+      [
+        150,
+        10,
+        -1.5
+      ],
+      [
+        150,
+        30,
+        -3.0
+      ],
+      [
+        150,
+        30,
+        -1.5
+      ],
+      [
+        100,
+        3,
+        -3.0
+      ],
+      [
+        100,
+        3,
+        -1.5
+      ],
+      [
+        100,
+        10,
+        -3.0
+      ],
+      [
+        100,
+        10,
+        -1.5
+      ],
+      [
+        100,
+        30,
+        -3.0
+      ],
+      [
+        100,
+        30,
+        -1.5
+      ],
+      [
+        150,
+        3,
+        -3.0
+      ],
+      [
+        150,
+        3,
+        -1.5
+      ],
+      [
+        150,
+        10,
+        -3.0
+      ],
+      [
+        150,
+        10,
+        -1.5
+      ],
+      [
+        150,
+        30,
+        -3.0
+      ],
+      [
+        150,
+        30,
+        -1.5
+      ]
+    ],
+    "shared_sampling_templates": {
+      "north": "isochrones/bass/ps1_projected12_z0.00010.dat",
+      "south": "isochrones/des/bressan2012/iso_a12.0_z0.00010.dat",
+      "ps1": "isochrones/ps1/bressan2012/iso_a12.0_z0.00010.dat"
+    }
+  },
+  "physical_plan_sha256": "68a0537e3172205764eb18224f76ffbf8ac424e7e2348ad5b3b17e15f9b7af6c",
+  "search_dm_branch": "main",
+  "luminosity_definition": "expected IMF-integrated V proxy, V=g-0.59(g-r)-0.01 in DECam AB; injection draws near either sample limit",
+  "full_population_luminosity_draw": true
+}

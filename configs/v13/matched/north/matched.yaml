@@ -1,0 +1,29 @@
+width_deg: 1.8
+buffer_arcmin: 26
+radii_arcmin:
+- 0.5
+- 1
+- 2
+- 4
+review_budgets_deg2:
+- 0.3
+dm:
+- 16.5
+- 22.5
+- 0.25
+fields:
+- id: v13_select_v12_north_003
+  role: pilot_eval
+  survey: 3
+  ra: 237.41379310344828
+  dec: 68.67919198537577
+- id: v13_select_v12_north_010
+  role: pilot_eval
+  survey: 3
+  ra: 122.34374999999999
+  dec: 41.01449966573052
+- id: v13_select_v11_north_14
+  role: pilot_eval
+  survey: 3
+  ra: 268.84615384615387
+  dec: 61.189776278717034

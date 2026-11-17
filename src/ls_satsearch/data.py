@@ -236,6 +236,19 @@ def select(data, field, coverage, config):
     return sample, steps, valid_gr, np.column_stack(mags), ok
 
 
+def ownership(ra, dec, plan):
+    """Assign peak centers to a partition, preserving exposure outside its edges."""
+    p = plan['partition']
+    keep = ((ra >= p['ra_lo']) & (ra < p['ra_hi']) &
+            (dec >= p['dec_lo']) & (dec < p['dec_hi']))
+    for old_ra, half, low, high in plan['previous_cores']:
+        keep &= ~((abs((ra-old_ra+180) % 360-180) < half) & (dec >= low) & (dec < high))
+    if keep.any():
+        from astropy.coordinates import SkyCoord
+        keep[keep] &= abs(SkyCoord(ra[keep],dec[keep],unit='deg').galactic.b.deg) >= plan['min_abs_b']
+    return keep
+
+
 def sample_pixels(field, coverage, x, y):
     sub = coverage.shape[0] // field.n
     cell = field.step / sub

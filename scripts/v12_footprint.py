@@ -14,7 +14,7 @@ from matplotlib.lines import Line2D
 import numpy as np
 from scipy.spatial import cKDTree
 
-from ls_satsearch.data import Field, load_bricks, regional_primary, sample_pixels
+from ls_satsearch.data import Field, load_bricks, ownership, regional_primary, sample_pixels
 from ls_satsearch.expansion import unit
 from ls_satsearch.fields import Census
 from ls_satsearch.regional_pilot import brick_covered
@@ -29,7 +29,7 @@ HISTORY_ROOTS = (Path('first_batch'),Path('wide_gaps'),Path('wide_rollout'),
                  Path('../group-v3'),Path('../branch-v2'))
 
 
-def observed(data, ra, dec):
+def observed(data, ra, dec, latest="v12", census_at_query=None):
     # Each raster is visited once per distinct field/census geometry. In the
     # cumulative layer, apply the common native region convention to legacy runs.
     all_scanned = np.zeros(len(ra),dtype=bool)
@@ -56,7 +56,7 @@ def observed(data, ra, dec):
                 continue
             region=m['config'].get('region','south')
             geometry=o['geometry']
-            identity=(*geometry[:3],region,o['census'])
+            identity=(*geometry[:3],region,o['census'],bool(f.get("ownership")))
             if identity in unique:
                 continue
             unique.add(identity)
@@ -66,11 +66,18 @@ def observed(data, ra, dec):
             field=Field(*geometry)
             x,y=field.xy(ra,dec)
             core=(abs(x)<field.width*30)&(abs(y)<field.width*30)&native[region]
-            new=folder.name.startswith('regional_v12')
+            if census_at_query is not None and o['census'] is not None:
+                # The cached raster samples nearest pixels. Apply the exact
+                # census assignment at the display coordinate on layer edges.
+                core &= census_at_query[int(o['census'])]
+            if f.get('ownership'):
+                active = np.flatnonzero(core)
+                core[active] &= ownership(ra[active],dec[active], f['ownership'])
+            new=folder.name.startswith(f'regional_{latest}')
             catalog.append(dict(field=f['id'],ra_deg=f['ra'],dec_deg=f['dec'],region=region,
-                       cohort=f.get('layer'),width=f['width'],round12=new,usable_raster=cache.is_file(),
+                       cohort=f.get('layer'),width=f['width'],usable_raster=cache.is_file(),
                        native_manifest_area_deg2=m['area_deg2'],manifest_sha256=sha(path),
-                       job=m.get('slurm_job_id')))
+                       job=m.get('slurm_job_id'),**{('round12' if latest=='v12' else 'recent'): new}))
             if cache.is_file():
                 raster=np.load(cache,mmap_mode='r',allow_pickle=False)
                 ii=np.flatnonzero(core)
@@ -90,7 +97,7 @@ def save(fig, stem):
     plt.close(fig)
 
 
-def plot(output, ra, dec, eligible, recent, searched, depths, density, purity, external, candidates):
+def plot(output, ra, dec, eligible, recent, searched, depths, density, purity, external, candidates, latest):
     x, y = np.deg2rad(180-ra), np.deg2rad(dec)
     fig,axes=plt.subplots(3,2,figsize=(12,12.3),layout='constrained',
                          subplot_kw=dict(projection='mollweide'))
@@ -103,13 +110,13 @@ def plot(output, ra, dec, eligible, recent, searched, depths, density, purity, e
     inside=np.logical_or.reduce(eligible)
     for mask,color,label in ((inside & ~searched,'#d9dce0','Eligible proxy, not scanned'),
                              (searched & ~recent,'#98a5be','Prior measured cores'),
-                             (recent,'#254775','Round 12 measured cores')):
+                             (recent,'#254775',f'Round {latest.removeprefix("v")} measured cores')):
         ax.scatter(x[mask],y[mask],s=1,c=color,edgecolors='none',rasterized=True,label=label)
     if external.any():
         use=external&inside
         ax.scatter(x[use],y[use],marker='.',s=2,c='#bf7970',alpha=.45,rasterized=True,label='Euclid imaging coverage')
     candidate_legend=[]
-    for code,shape,c in (('L0','o','#cc630c'),('known','^','#325328'),('Tan Table 8','D','#6c528e'),('known background','s','#5c496e')):
+    for code,shape,c in (('L0','o','#cc630c'),('known','^','#325328'),('Tan Table 8','D','#6c528e'),('known background','s','#5c496e'),('extended-galaxy context','s','#677a89')):
         sub=[r for r in candidates if r['plot_level']==code]
         if sub:
             ax.scatter(np.deg2rad([180-float(r['ra_deg']) for r in sub]),
@@ -120,7 +127,7 @@ def plot(output, ra, dec, eligible, recent, searched, depths, density, purity, e
     use=regional_primary(seam_ra,seam_dec,'north')
     ax.plot(np.deg2rad(180-seam_ra),np.where(use,np.deg2rad(seam_dec),np.nan),
             c='black',lw=.6,ls=':',label='Native boundary (declination segment)')
-    ax.set_title('Observed search masks and round 12 groups')
+    ax.set_title('Observed search masks and grouped peaks')
     ax.legend(handles=ax.get_legend_handles_labels()[0]+candidate_legend,fontsize=7,
               bbox_to_anchor=(.5,-.14),loc='upper center',frameon=False,ncol=2)
     for ax,values,title,cm,limits in (
@@ -141,7 +148,7 @@ def plot(output, ra, dec, eligible, recent, searched, depths, density, purity, e
     save(fig,output/'dr11_search_atlas')
 
 
-def run(output):
+def run(output, latest="v12"):
     root,data,_=settings()
     output.mkdir(exist_ok=True,parents=True)
     grid=HEALPix(nside=256,order='ring')
@@ -169,12 +176,13 @@ def run(output):
             depths[j,ids]=bricks[f'PSFDEPTH_{k}'][index]
         depths[depths<=0]=np.nan
     layers = [eligibility['north']]+[eligibility['south']&census[k] for k in (3,2,1)]
-    recent, searched, catalog=observed(data,ra,dec)
+    recent, searched, catalog=observed(data,ra,dec,latest,census)
     mocs=sorted((data/'resources/v9/mocs').glob('*.fits'))
     external=[(p.name,moc_contains(p,ra,dec)) for p in mocs]
     union=np.logical_or.reduce([r[1] for r in external]) if external else np.zeros(len(ra),dtype=bool)
     metrics, candidates = {}, []
-    for path in sorted(Path('results/v12/discovery').glob('*/*/field_metrics.csv')):
+    stages = ('v12',) if latest=='v12' else ('v12',latest)
+    for path in sorted(p for v in stages for p in Path(f'results/{v}/discovery').glob('*/*/field_metrics.csv')):
         metrics.update({r['field']: r for r in read_csv(path)})
         good_ref=path.parent/'main/group_review_summary.csv'
         checked={r['group_id']:r for r in read_csv(good_ref)} if good_ref.exists() else {}
@@ -219,6 +227,18 @@ def run(output):
                 group['plot_level']='known'
             elif context_row['triage'].startswith(('known','Magellanic','broad response')):
                 group['plot_level']='known background'
+    environment=Path(f'results/{latest}/discovery/candidate_context.csv')
+    annotated={r['group_id']:r for r in read_csv(environment) if r['budget']=='0.3'} if environment.is_file() else {}
+    for group in candidates:
+        if row:=annotated.get(group['group_id']):
+            group.update(extended_galaxy_context=row.get('largest_ellipse_context'),
+                         known_environment=row.get('known_environment'),
+                         review_group_id=row['review_group_id'])
+            if group['plot_level']=='L0':
+                if row.get('known_environment'):
+                    group['plot_level']='known background'
+                elif row.get('largest_ellipse_context'):
+                    group['plot_level']='extended-galaxy context'
     # Approximate display of the per-field source diagnostics. The actual field
     # denominators are the manifest area rather than the HEALPix rendering.
     density=np.full(len(ra),np.nan); purity=density.copy()
@@ -226,6 +246,8 @@ def run(output):
         if meta['field'] not in metrics:
             continue
         m=metrics[meta['field']]
+        if m.get('source_metadata_scope')=='full core before ownership':
+            continue
         f=Field(meta['ra_deg'],meta['dec_deg'],meta['width'],1/6,buffer=0)
         x,y=f.xy(ra,dec)
         here=(abs(x)<f.width*30)&(abs(y)<f.width*30)&recent
@@ -238,8 +260,8 @@ def run(output):
     write_csv(output/'sky_area.csv',[dict(layer=l,eligible_brick_proxy_deg2=p.sum()*cell,
                 scanned_in_eligible_proxy_deg2=(p&searched).sum()*cell,
                 remaining_brick_proxy_deg2=(p&~searched).sum()*cell,
-                round12_raster_sample_deg2=(p&recent).sum()*cell,
-                euclid_public_imaging_proxy_deg2=(p&union).sum()*cell) for l,p in zip(LAYERS,layers)])
+                euclid_public_imaging_proxy_deg2=(p&union).sum()*cell,
+                **{('round12_raster_sample_deg2' if latest=='v12' else 'recent_raster_sample_deg2'): (p&recent).sum()*cell}) for l,p in zip(LAYERS,layers)])
     write_csv(output/'geometry.csv',[dict(region=r,brick_geometric_proxy_deg2=raw[r].sum()*cell,
                     region_owned_gr_proxy_deg2=owned[r].sum()*cell,
                     high_b_low_ebv_gr_proxy_deg2=eligibility[r].sum()*cell)
@@ -247,7 +269,7 @@ def run(output):
     write_json(output/'manifest.json',dict(nside=grid.nside,frame='ICRS',job=os.getenv('SLURM_JOB_ID'),
                measured_field_count=sum(r['usable_raster'] for r in catalog),
                mocs={p.name:sha(p) for p in mocs},
-               area_notes='Brick geometric footprint is a metadata proxy. Round 12 native areas are in the field tables. '
+               area_notes='Brick geometric footprint is a metadata proxy. Native areas are in the field tables. '
                   'The cumulative raster union uses only available cached search masks; missing rasters are flagged. '
                   'Euclid is public imaging coverage, not a published satellite search mask. Two-arcminute catalog proximity '
                   'is a visual overlay and not a confirmed identity.'))
@@ -255,10 +277,11 @@ def run(output):
         table8={r['key'] for r in read_csv(Path('configs/v12/table8/benchmarks.csv'))}
         known=[dict(ra_deg=r['ra'],dec_deg=r['dec'],plot_level='Tan Table 8') for r in read_csv(Path(
             'references/codex_benchmark_sources/offical_delve_census_refgalaxy_list.csv')) if r['key'] in table8]
-        plot(output,ra,dec,layers,recent,searched,depths,density,purity,union,candidates+known)
+        plot(output,ra,dec,layers,recent,searched,depths,density,purity,union,candidates+known,latest)
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('output',type=Path)
-    run(p.parse_args().output)
+    p.add_argument("--latest",default="v12")
+    run(**vars(p.parse_args()))

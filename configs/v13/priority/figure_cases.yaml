@@ -1,0 +1,11 @@
+targets:
+- id: south_ps1_0133_l0
+  label: v13 South PS1 0133 · L0
+  manifest: regional_v13_south_ps1/results/summary/v13_south_ps1_0133-base/manifest.json
+  ra_deg: 242.65193601008886
+  dec_deg: 14.975298993756208
+  dm: 16.5
+  rh: 1.0
+  panels:
+  - {width: 0.80, sigma: 1.0}
+  - {width: 0.30, sigma: 0.5, suffix: -core}

@@ -1,0 +1,11 @@
+{
+  "nside": 256,
+  "frame": "ICRS",
+  "job": "61468590",
+  "measured_field_count": 1484,
+  "mocs": {
+    "euclid_dr1_deep.moc.moc.fits": "5346133c848fb67948d32dc138dc710b49b5b5bd2135535a3419d7392c0d730e",
+    "euclid_dr1_wide.moc.moc.fits": "bb89812addb7987df1bf00d78ecaf486842e429fb59af7cc128c7025f9eecd22"
+  },
+  "area_notes": "Brick geometric footprint is a metadata proxy. Native areas are in the field tables. The cumulative raster union uses only available cached search masks; missing rasters are flagged. Euclid is public imaging coverage, not a published satellite search mask. Two-arcminute catalog proximity is a visual overlay and not a confirmed identity."
+}

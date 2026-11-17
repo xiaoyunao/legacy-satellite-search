@@ -4,6 +4,20 @@
 
 Find Galactic faint stellar systems at 20–150 kpc with circularized half-light radii of 3–30 pc, prioritizing 3–15 pc. Measure the DR11 increment over census PS1 at matched search-review cost across actual North and South backgrounds. See [current scientific direction](docs/PROJECT_MEMORY.md).
 
+## Completed Round 13 acceptance criteria
+
+- Repeat fixed 100 and 150 kpc trials across seven South PS1 backgrounds. Measure paired differences and field variation at the frozen matched-sky costs. Record spatial recovery, the surviving correct distance mode and the distance of the highest peak.
+- Measure detection, point-source assignment and hard selection in two South PS1 stamps and one North stamp using the native optical pipeline on calibrated exposures. Compare blank runs with published Tractor and feed the selected samples through A. Keep single-band coadd detection and released-catalog results identifiable.
+- Apply the frozen production A strategy to the remaining South PS1 strata. Run disjoint square cores and partition the fragmented remainder. Account for previous geometry, actual pixel area, near-boundary grouping, candidate review and residual usable sky.
+- Pair three North and South backgrounds in real depth, seeing and density. Use the same sampled population in each pair. Trace reductions at gr selection, shape response, CMD and on/off score. Consider smaller angular scales if the stage measurements implicate the kernel.
+- Assess compact_deep cost on held-out real fields against the frozen review policies. Choose the next discovery and selection sample using consistency across fields and actual classification response. Record the result in the scientific report, project memory and run status.
+
+## Next science decision
+
+- Extend native image-to-catalog response sampling in the South PS1 backgrounds that support the 100 kpc excess. Measure crowding, PSF assignment and magnitude errors jointly. Compare the resulting blind response with PS1 and with the catalog-only proxy at fixed review cost.
+- Retain the deeper sample as a separate evaluation channel. Use fresh backgrounds to measure its proposed workload. The 150 kpc and North inferences remain limited by between-field variation and the real source-response sample.
+- Continue independent follow-up on candidates with compatible sky, stellar-population and archive evidence. Keep Palomar 14 and M33 environmental responses accounted for in review statistics.
+
 ## Completed milestones
 
 - Completed v1/v2 real-data pilots, ordinary processing audit, paired depth injections and five PS1 catalog probes.

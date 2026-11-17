@@ -1,0 +1,66 @@
+{
+  "job": "61467622",
+  "inputs": [
+    {
+      "field": "v13_select_v12_north_003",
+      "trial_manifest_sha256": "04d6b4036b87261e069ebad33e189698fc8fea9b11b951bd07aab59d5733effa",
+      "job": "61465349",
+      "rows_sha256": "b270e4655a3bcb277c99a9442e54646d0a4c2e43bbb5065d683c1b4a7c1653fd"
+    },
+    {
+      "field": "v13_select_v12_north_010",
+      "trial_manifest_sha256": "49a31519eb667e05f849ad2d40483bd33191ae411cc6a786f9a029d97bbb644b",
+      "job": "61465830",
+      "rows_sha256": "3645b38868b1139b58f8acbe15db83043fa73e004d753a12491f564ffa94be8a"
+    },
+    {
+      "field": "v13_select_v11_north_14",
+      "trial_manifest_sha256": "ae9aa418a6c51fafc5e7f0326751788198398b858e9f02bb781968d8d04536fb",
+      "job": "61465917",
+      "rows_sha256": "cc9a33c7d21d10fad0016a53348e00042272626cf40e4b5c39d2f8fb3d8b8d4d"
+    },
+    {
+      "field": "v13_select_v12g_south_ps1_018",
+      "trial_manifest_sha256": "1f4e089c4e1deb0eef3494069a05c8684499ab61acdc9e784b8060438760b09a",
+      "job": "61465351",
+      "rows_sha256": "42ed21083b694ada2d8e9ec07a1c387ea22db4e8cb89a671ec8a5c7ec8541171"
+    },
+    {
+      "field": "v13_select_v12_south_ps1_005",
+      "trial_manifest_sha256": "bd1a567a9dfa883f78a17c6b9e5fce7bad7fa7ce4ac2e3d99ff1dbda96d98af2",
+      "job": "61465919",
+      "rows_sha256": "308238cb9911e1620961d27873b9630a14fc28bf7841d93492b80f1d0ca28ecd"
+    },
+    {
+      "field": "v13_select_v12g_south_ps1_006",
+      "trial_manifest_sha256": "e84966ced2c23d12d7c7f3d261f7a6abab58211bcb96065ac34b7c16370d46c9",
+      "job": "61466637",
+      "rows_sha256": "f2dbb6755259d5898e28aaf90cfaac8833afc23523f436d15c20686da0315f5a"
+    },
+    {
+      "field": "v13_select_v12g_south_ps1_020",
+      "trial_manifest_sha256": "764f8a15ee46025829d018559f739272718dfe11ab1f15c14931c0b910247927",
+      "job": "61466602",
+      "rows_sha256": "258d38b2183f91724cecffb84bcc572b9986fdad79d1a1afb2879cf215621092"
+    },
+    {
+      "field": "v13_select_v11_south_ps1_16",
+      "trial_manifest_sha256": "caa0e5bdbad6488cb295397aba482c9a33057885b2939465ee5d9b58c11f8b74",
+      "job": "61465921",
+      "rows_sha256": "ed93f04ab72d0cce8d18225eac2841a4c63139f1548b1128f9bd3787f8b7fa1a"
+    },
+    {
+      "field": "v13_select_v12g_south_ps1_007",
+      "trial_manifest_sha256": "6f02aa8a9cb046bc9ecf6128366ed13ff044c5545d3b7f7421f3122369864a39",
+      "job": "61465581",
+      "rows_sha256": "fdbd9506ba43fea186af8e56875186b91649a2b6e81d2b1edb27d9aa3c9cfca6"
+    },
+    {
+      "field": "v13_select_v12g_south_ps1_021",
+      "trial_manifest_sha256": "119be9f2dca242fe7de94ca5825b837049925ee97baae68057caee376b55b887",
+      "job": "61466335",
+      "rows_sha256": "519a18289109f278cf1601cccd585ea63acb4075d4e08221b1389d59ae324987"
+    }
+  ],
+  "scope": "Paired exact binomial bounds are conditional on sampled backgrounds; field stability is reported separately. Joint DR11 source-entry response remains a separate image-based experiment."
+}

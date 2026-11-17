@@ -98,9 +98,9 @@ def probe(row,catalogs,published):
     return records+simbad(group,target)
 
 
-def run(output):
+def run(output, discovery=Path("results/v12/discovery")):
     cases=[]
-    for f in sorted(Path('results/v12/discovery').glob('*/*/main/priority_modes.csv')):
+    for f in sorted(discovery.glob('*/*/main/priority_modes.csv')):
         cases.extend(r for r in read_csv(f) if r['representative']=='True')
     public=read_csv(Path('results/summary/novelty_published_candidates.csv'))
     public+=read_csv(Path('configs/v12/recent_public_sources.csv'))
@@ -118,4 +118,5 @@ def run(output):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('output',type=Path)
-    run(p.parse_args().output)
+    p.add_argument("--discovery",type=Path,default=Path("results/v12/discovery"))
+    run(**vars(p.parse_args()))

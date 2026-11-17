@@ -1,0 +1,7 @@
+region,survey,policy_sha256,policy,branch,budget,cutoff,dev_area_deg2,eval_area_deg2,evaluation_kind,target_dev_sky_groups,dev_sky_groups,evaluation_sky_groups,benchmark_n,spatial_n,correct_mode_n,blind_correct_n
+north,ls_base,f73cbda7f50216e54ebd4123b57d165bda4d5f511a3e3ada43b94131a91ecaa2,A_base,main,0.3,5.675038082823366,0,9.348562885802467,fresh_frozen,3,0,6,0,0,0,0
+north,ls_deep,89c80cc7b5ea1b6fce76c954976c5e0b86d68179c2c538894a5ee0a1db8b0d9d,A_base,main,0.3,6.199893910347283,0,9.348562885802467,fresh_frozen,3,0,3,0,0,0,0
+north,ps1,4cf12451f7f1e240d7f70f90451c7f92452062f33b0f38d48c2c50765ee16650,A_base,main,0.3,6.05401895815681,0,9.348562885802467,fresh_frozen,3,0,4,0,0,0,0
+south,ls_base,e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594,A_base,main,0.3,5.7890987854427625,0,21.117581018518514,fresh_frozen,3,0,2,0,0,0,0
+south,ls_deep,47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6,A_base,main,0.3,6.02890805457013,0,21.117581018518514,fresh_frozen,3,0,3,0,0,0,0
+south,ps1,04485c6416653749aec04447fd8a758dd8f3311aef2d4cb95a97f9d4d7a8acfd,A_base,main,0.3,6.216881700978023,0,21.117581018518514,fresh_frozen,3,0,2,0,0,0,0

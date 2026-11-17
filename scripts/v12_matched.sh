@@ -2,8 +2,8 @@
 set -euo pipefail
 region=$1
 shift
-export LS_SAT_WORKSPACE="$PWD" LS_SAT_VERSION=v12 LS_SAT_PROFILE="matched/$region"
-work="$PWD/matched_v12_$region"
+export LS_SAT_WORKSPACE="$PWD" LS_SAT_VERSION="${LS_SAT_VERSION:-v12}" LS_SAT_PROFILE="matched/$region"
+work="$PWD/matched_${LS_SAT_VERSION}_$region"
 mkdir -p "$work/logs"
 cd "$work"
 pids=()

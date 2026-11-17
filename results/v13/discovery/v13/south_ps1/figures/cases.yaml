@@ -1,0 +1,21 @@
+targets:
+- id: v13_south_ps1_0332-A_base-0.3-001
+  label: "v13_south_ps1_0332-A_base-0.3-001 \xB7 L0"
+  manifest: regional_v13_south_ps1/results/summary/v13_south_ps1_0332-base/manifest.json
+  ra_deg: 23.748779654004814
+  dec_deg: 31.191322675577236
+  dm: 20.75
+  rh: 8.0
+  panels:
+  - width: 1.5
+    sigma: 1.62
+- id: v13_south_ps1_0332-A_base-0.3-002
+  label: "v13_south_ps1_0332-A_base-0.3-002 \xB7 L0"
+  manifest: regional_v13_south_ps1/results/summary/v13_south_ps1_0332-base/manifest.json
+  ra_deg: 23.657837211670678
+  dec_deg: 31.180214825801112
+  dm: 20.75
+  rh: 4.0
+  panels:
+  - width: 1.5
+    sigma: 1.62

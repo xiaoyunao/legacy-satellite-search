@@ -1,0 +1,9 @@
+{
+  "job": "61465403",
+  "fields_sha256": "9357612e6ab202593f9ff8763e4bb1c6e7b46cd9fdc9d864cd8c6ed51ad1ba27",
+  "count": 738,
+  "planning_nside": 512,
+  "unpartitioned_proxy_deg2": 0.0,
+  "below_minimum_proxy_deg2": 4.432519563771475,
+  "planned_proxy_deg2": 945.2544679190765
+}

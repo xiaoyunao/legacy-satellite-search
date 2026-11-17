@@ -1,0 +1,26 @@
+{
+  "job": "61468590",
+  "nside": 256,
+  "prior_geometry_hashes": {
+    "configs/v4/fields.yaml": "83e74dd32c4791a1430e1874d20ad2eae056ca47f06c1a78e6210af8674c77b9",
+    "configs/v5/weak/fields.yaml": "7ed9bb7aa297807c5fac9d62c340eb97e54268f0d45756f0ceed44dcd45496f5",
+    "results/v7/gap_registration/fields.yaml": "fd2a5022d36af9c049dcc688d15f810de292d90c613d1ea6d75be8233f44a57c",
+    "results/v7/rollout_registration/fields.yaml": "3412afe9befaca56095aff498f3e7eaae99b6829265f4a9ae595af44a9d4bafc",
+    "results/v5/registration/fields.yaml": "f78f98410ca8178ee1fa261d5a7345a0bb672535010142b68c1c84625c5483e9",
+    "results/v6/registration/fields.yaml": "36f1f0a14a89cdc3fc9ca187f0e9ece472d91aabeeebcdf88fd065cd4f33a2d5",
+    "results/v7/registration/fields.yaml": "12a3f09201714edad436e2432afe10dc9d838c47250bc07bcddb336a08b6e5a0",
+    "configs/v11/north/controls.yaml": "a7faf29876fa00c85d1a6b6435cdf5d6936d1746dfa38a9decae79a9580203ad",
+    "configs/v11/cohorts/north/fields.yaml": "16dff032bc8fbefcee2ed92ef797476cd3cd8d8a6a14ba20dbbac3886838d4fe",
+    "configs/v11/cohorts/south_delve/fields.yaml": "142e64c38835792e0c6ada5d5928b0e4054d61be3970bfb250224774d5107931",
+    "configs/v11/cohorts/south_des/fields.yaml": "187700eb076871c394974450dff7597498c09474c8b74d9a28f92e22ad16d51c",
+    "configs/v11/cohorts/south_ps1/fields.yaml": "cfcb1a62817cfd90fbd61fba346828e4d9d09ea8365330176b7946e194fe2079",
+    "configs/v12/cohorts/north/fields.yaml": "5f67cd6903a442faf126f7620cc2ba37d789430c5aab696d39e599a375d1c125",
+    "configs/v12/cohorts/south_delve/fields.yaml": "51e1d73e6efc83502d552f92e624c084d9a2e5d86e270015f4aeafee052f04d3",
+    "configs/v12/cohorts/south_des/fields.yaml": "69f6daf08bdab1bbb987c3c3ae08580024129ff1d458bf316ccf2b2abbe12b8e",
+    "configs/v12/cohorts/south_ps1/fields.yaml": "3b943e441ae7284f94c61e44fec46a6bae138322f908cfd5e57898dcd6fe0ffc",
+    "configs/v12g/cohorts/south_ps1/fields.yaml": "2e15c33e6436538a8132aa2b6ac640cf7d795c2f2bf94b2e6531ca96b83dfbff",
+    "configs/v13/cohorts/south_ps1/fields.yaml": "ac619eb6faf571f7ee767cc054a0a323f6a0b8b579db1aeb69acfa86eabec2d4"
+  },
+  "residual_geometry_sha256": "9357612e6ab202593f9ff8763e4bb1c6e7b46cd9fdc9d864cd8c6ed51ad1ba27",
+  "scope": "The geometry classes distinguish missing valid search raster from absences in registration. The earlier registration set includes known fields and alternate census layers; its pixels may lack South PS1 coverage after their original masks."
+}

@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "v13_south_ps1_0332-A_base-0.3-002",
+    "label": "v13_south_ps1_0332-A_base-0.3-002 \u00b7 L0",
+    "manifest": "regional_v13_south_ps1/results/summary/v13_south_ps1_0332-base/manifest.json",
+    "ra_deg": 23.657837211670678,
+    "dec_deg": 31.180214825801112,
+    "dm": 20.75,
+    "rh": 4.0,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      }
+    ]
+  },
+  "manifest_sha256": "72a699925252601bd5cdf96e748d08896c105d790203379ab3aa2e4487607db8",
+  "job": "61465404",
+  "figures": [
+    {
+      "id": "v13_south_ps1_0332-A_base-0.3-002",
+      "area_on_arcmin2": 86.62499999999996,
+      "area_off_arcmin2": 757.597222222222,
+      "core_cmd_star_count": 755,
+      "fixed_C_TS": 827.3546742278302,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

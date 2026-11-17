@@ -1,0 +1,35 @@
+{
+  "job": "61464521",
+  "passes": [
+    {
+      "width": 3,
+      "minimum": 0.6,
+      "nside": 64,
+      "cores": 2,
+      "proxy_deg2": 11.211072664359861
+    },
+    {
+      "width": 2,
+      "minimum": 0.58,
+      "nside": 128,
+      "cores": 23,
+      "proxy_deg2": 67.4878892733564
+    },
+    {
+      "width": 1.5,
+      "minimum": 0.5,
+      "nside": 128,
+      "cores": 84,
+      "proxy_deg2": 144.77076124567475
+    },
+    {
+      "width": 1,
+      "minimum": 0.55,
+      "nside": 256,
+      "cores": 230,
+      "proxy_deg2": 188.32525951557093
+    }
+  ],
+  "plan_sha256": "a8239c21311f107bacb508c1acff226d979b6327c4cdb926880bd5261df32650",
+  "fields_sha256": "ac619eb6faf571f7ee767cc054a0a323f6a0b8b579db1aeb69acfa86eabec2d4"
+}

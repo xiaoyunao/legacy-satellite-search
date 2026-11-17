@@ -185,7 +185,9 @@ def combine(summary, fields_path, output, controls=None, policy=None):
     manifests = {}
     for path in summary.glob('*/manifest.json'):
         m = json.loads(path.read_text())
-        if m['status']=='complete' and m['field']==expected.get(m['field']['id']):
+        usable = m['status']=='complete'
+        unusable = m['status']=='no_usable_gr' and bool(m['field'].get('ownership'))
+        if (usable or unusable) and m['field']==expected.get(m['field']['id']):
             manifests[m['field']['id']] = path
     if manifests.keys()!=expected.keys():
         raise ValueError(f'Missing completed fields: {sorted(expected.keys()-manifests.keys())}')
@@ -195,6 +197,7 @@ def combine(summary, fields_path, output, controls=None, policy=None):
         m = json.loads(path.read_text())
         cond = m['observing_conditions_source_sample']
         rows.append(dict(field=field,role=m['field']['role'],area_deg2=m['area_deg2'],
+                         source_metadata_scope=('full core before ownership' if m['field'].get('ownership') else 'core'),
                          proxy_area_deg2=m['field']['proxy_area_deg2'],job=m['slurm_job_id'],
                          inner_psf=m['cutflow']['inner_psf'],inner_non_psf=m['cutflow']['inner_other'],
                          inner_psf_faint=m['cutflow']['inner_psf_faint'],
@@ -202,7 +205,7 @@ def combine(summary, fields_path, output, controls=None, policy=None):
                          g_depth=(cond['G']['depth5_dered'] or [None]*3)[1],
                          r_depth=(cond['R']['depth5_dered'] or [None]*3)[1],
                          g_seeing=(cond['G']['seeing'] or [None]*3)[1],
-                         wall_seconds=m['wall_seconds'],model_sha256=m['model_sha256'],
+                         wall_seconds=m.get('wall_seconds'),model_sha256=m['model_sha256'],
                          fields_sha256=m['fields_sha256'],manifest_sha256=sha(path)))
     write_csv(output/'field_metrics.csv',rows)
     branches = ('main',) if policy or controls is None else ('main','near','far')

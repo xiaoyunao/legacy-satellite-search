@@ -1,0 +1,12 @@
+{
+  "job": "61467823",
+  "sga_input": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/masking/SGA2025-ellipse-v1.6-dr11-south.kd.fits",
+  "sga_sha256": "32d5fb305d40dda2213ccbf7ccc8a5573b55062e030b4ba43faecbdaaee4e99e",
+  "sga_rows": 395435,
+  "candidate_inputs": {
+    "results/v13/discovery/v13/south_ps1/main/sky_group_candidates.csv": "9e145c6351e99e400a55d158c726d75937e131128b97154bae2f58c99b243d23",
+    "results/v13/discovery/v13r/south_ps1/main/sky_group_candidates.csv": "431811541992c35cf4cdb81cd25d09ff795a8a89287e79a35140181927f02dec"
+  },
+  "context_catalog_sha256": "7061157bcc3b7345c58b84a474573f98f141b9d0dbda89dcb38b3de35678f165",
+  "meaning": "Elliptical separation uses DIAM/2, PA N through E, and BA. The 3x outline is a background annotation, without changing any frozen threshold or mask."
+}
