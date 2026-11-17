@@ -13,3 +13,5 @@ morph_inner_fraction_range: [0.56, 0.99]
 cross_filter_uncertainty_mag: 0.06
 report_faint_g0_interval: [23.5, 24.05]
 seed: 481719
+stack_reference_inner_arcmin: 1.0
+stack_reference_outer_arcmin: 2.05
