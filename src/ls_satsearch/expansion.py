@@ -25,6 +25,22 @@ def overlaps(ra,dec,regions):
     return False
 
 
+def field_bounds(field):
+    """Return the rectangular search core, in angular RA and Dec coordinates."""
+    half = field.width*30
+    dra = half/(60*np.cos(np.radians(field.dec)))
+    _, lo = field.sky(0,-half)
+    _, hi = field.sky(0,half)
+    return (field.ra,dra,lo,hi)
+
+
+def core_disjoint(bounds, others):
+    ra,half,lo,hi = bounds
+    old_ra,old_half,old_lo,old_hi = np.asarray(others).T
+    ra_sep = abs((ra-old_ra+180)%360-180)
+    return not np.any((ra_sep<half+old_half)&(lo<old_hi)&(old_lo<hi))
+
+
 def register_batches(registration, destination=Path('configs/v5')):
     """Materialize per-batch cohort hashes and array order before catalog reads."""
     fields = yaml.safe_load((registration/'fields.yaml').read_text())
@@ -63,6 +79,8 @@ def choose():
                 yaml.safe_load(Path(f).read_text())['fields']]
     visited = [xyz for xyz in unit([f['ra'] for f in previous],[f['dec'] for f in previous])]
     minimum = np.cos(np.deg2rad(plan['minimum_center_separation_deg']))
+    rectangular = bool(plan.get('nonoverlapping_cores',False))
+    bounds = [field_bounds(Field(p['ra'],p['dec'],p['width'],1/6,buffer=0)) for p in previous]
     rng = np.random.default_rng(plan['seed'])
     width = plan['width_deg']
     grid = np.meshgrid(*[np.linspace(-width*30,width*30,21)]*2)
@@ -76,10 +94,13 @@ def choose():
         best = None
         while queue[survey]:
             j = queue[survey].pop()
-            if np.max(np.asarray(visited)@uv[j])>minimum:
-                continue
             b=bricks[j]
             f=Field(float(b['RA']),float(b['DEC']),width,1/6,buffer=0)
+            if rectangular:
+                if not core_disjoint(field_bounds(f),bounds):
+                    continue
+            elif np.max(np.asarray(visited)@uv[j])>minimum:
+                continue
             ra,dec = f.sky(*grid)
             cls = {k:overlaps(ra,dec,boxes) for k,boxes in plan['overlap_regions'].items()}
             q = tree.query(unit(ra.ravel(),dec.ravel()),k=1)[1]
@@ -95,7 +116,9 @@ def choose():
             break
         if best is None:
             if survey==3:
-                best=next((p for p in deferred if np.max(np.asarray(visited)@uv[p[0]])<=minimum),None)
+                best=next((p for p in deferred if (
+                    core_disjoint(field_bounds(p[2]),bounds) if rectangular
+                    else np.max(np.asarray(visited)@uv[p[0]])<=minimum)),None)
             if best is None:
                 if fields and plan.get('allow_partial',False):
                     print(f'Registering {len(fields)} eligible fields from {len(requests)} requested',flush=True)
@@ -103,6 +126,7 @@ def choose():
                 raise RuntimeError(f'Insufficient distinct controls for survey {survey} after {len(fields)} fields')
         j,b,f,proxy,cls=best
         visited.append(uv[j])
+        bounds.append(field_bounds(f))
         layer = 'shallower' if metric[j]<lower else 'deep' if metric[j]>=upper else 'ordinary'
         ident=f"{plan.get('id_prefix','expand')}_{len(fields)+1:02d}"
         fields.append(dict(id=ident,role='pilot_eval',batch=batch,layer=layer,survey=survey,
