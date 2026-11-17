@@ -2,6 +2,23 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Tenth-round independent imaging and compact-system tests
+
+The [tenth science report](tenth_science_report.md) records target-specific archive coverage, the calibrated r depth and the additional matched injection results. The [observing design](docs/survey63_observation.md) documents the photometric limits and instrument ETC. Re-run the public archive metadata audit locally with `PYTHONPATH=src .venv/bin/python scripts/audit_survey63_archives.py configs/v8/survey63_followup.yaml results/v10/imaging/archive_probes.json`.
+
+In the NERSC v7 revision, write the four calibrated CADC CFHT cutouts to `$PSCRATCH/legacy-satellite-search/resources/v10/survey63/cfht/`. The CADC cutout endpoint is `https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/caom2ops/sync` with product `id=cadc:CFHT/<visit>.fits.fz` and `CIRCLE=356.6369074244 27.95929984997 0.077`. The visit IDs and filenames are in the imaging configuration. The r diagnostic also uses the previously downloaded PS1 calibration cone. Run these commands on Slurm compute nodes:
+
+```bash
+bash scripts/v6.sh cfht_depth configs/v10/survey63_imaging.yaml results/v10/imaging/cfht_r_depth.json
+bash scripts/v10_compact_trials.sh fresh_01
+bash scripts/v10_compact_trials.sh fresh_03
+# In a one-node allocation of five tasks with two CPUs per task:
+bash scripts/v10_secondary.sh
+```
+
+Run the compact-trial summary with `PYTHONPATH=src .venv/bin/python scripts/summarize_physical_trials.py results/v10/compact_trials --fields fresh_01 fresh_03 --compare-depth`. Source catalogs and image pixels are stored on scratch.
+
+
 ## Ninth-round archive and conditional recovery experiments
 
 The [ninth science report](ninth_science_report.md) records the blinded review, calibrated partial NOIRLab g coverage, Euclid footprint, and physical-luminosity pilot. Archive image files, DQ planes and weight maps stay in the Perlmutter scratch directory.

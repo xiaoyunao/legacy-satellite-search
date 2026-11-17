@@ -1,0 +1,39 @@
+{
+  "target": "survey_63",
+  "ebv": 0.06874485313892365,
+  "scope": "MegaCam natural-band ETC. Nominal SNR 5, point-source PSF fitting, dark sky, 0.8 arcsec, airmass 1.2, transparency 1.0. Approximate PS1 broadband extinction coefficients. ETC exposure is on-source and uses its single-integration noise model. Realized depths are unmeasured.",
+  "results": [
+    {
+      "band": "g",
+      "target_dereddened_mag": 26.0,
+      "approx_extinction_mag": 0.2180586741566658,
+      "query": "https://etc.cfht.hawaii.edu/cgi-bin/mp/mp.py?compval=etime&sourcetype=pointsource&etime=&snr=5&filter=g&aperture=optimalaperture&skybackground=dark&skyentry=&airmass=1.2&trans=1&seeing=0.8&compute=compute&magnitude=26.218&fluxormag=magAB&photometry=psf",
+      "seconds": 1228.3,
+      "sha256": "8cf853e17fa100be824709b755877989ac6269842ef9639acff35734f55d9f7d"
+    },
+    {
+      "band": "g",
+      "target_dereddened_mag": 26.5,
+      "approx_extinction_mag": 0.2180586741566658,
+      "query": "https://etc.cfht.hawaii.edu/cgi-bin/mp/mp.py?compval=etime&sourcetype=pointsource&etime=&snr=5&filter=g&aperture=optimalaperture&skybackground=dark&skyentry=&airmass=1.2&trans=1&seeing=0.8&compute=compute&magnitude=26.718&fluxormag=magAB&photometry=psf",
+      "seconds": 3058.46,
+      "sha256": "97fc77d52d832b03dd45bc68b69bb07d87dcb63e09d038e98c8aacfdd1a157e6"
+    },
+    {
+      "band": "r",
+      "target_dereddened_mag": 25.8,
+      "approx_extinction_mag": 0.1561195614784956,
+      "query": "https://etc.cfht.hawaii.edu/cgi-bin/mp/mp.py?compval=etime&sourcetype=pointsource&etime=&snr=5&filter=r&aperture=optimalaperture&skybackground=dark&skyentry=&airmass=1.2&trans=1&seeing=0.8&compute=compute&magnitude=25.956&fluxormag=magAB&photometry=psf",
+      "seconds": 1996.77,
+      "sha256": "e292137e3dafd745a3a4482e7bb4ba37d8dc8da2a751eaa4a53d04e8d8158ae4"
+    },
+    {
+      "band": "r",
+      "target_dereddened_mag": 26.2,
+      "approx_extinction_mag": 0.1561195614784956,
+      "query": "https://etc.cfht.hawaii.edu/cgi-bin/mp/mp.py?compval=etime&sourcetype=pointsource&etime=&snr=5&filter=r&aperture=optimalaperture&skybackground=dark&skyentry=&airmass=1.2&trans=1&seeing=0.8&compute=compute&magnitude=26.356&fluxormag=magAB&photometry=psf",
+      "seconds": 4153.81,
+      "sha256": "8a5cbcf33e2cbd986bda403fdfe9185029738719ffac829de379bc2160ccc334"
+    }
+  ]
+}

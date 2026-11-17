@@ -1,0 +1,237 @@
+{
+  "ra_dec_deg": [
+    356.63690742440576,
+    27.959299849968268
+  ],
+  "core_radius_arcmin": 1.05,
+  "hsc_ssp": {
+    "DUD-COSMOS": {
+      "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-COSMOS.txt",
+      "sha256": "b31b142f642ef0d76295004c49e1e94945a28e8aaa40664176406f7bb5ae26aa",
+      "tracts": 10,
+      "possible_core_tracts": [],
+      "closest_bound_tract": "10054",
+      "closest_tract_bound_arcmin": 8237.546229987607
+    },
+    "DUD-DEEP2-3": {
+      "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-DEEP2-3.txt",
+      "sha256": "e117ef5e2ea68f4b9fda07418f7ecee2680095c3763a24435f1e0c2bed221ad6",
+      "tracts": 11,
+      "possible_core_tracts": [],
+      "closest_bound_tract": "9708",
+      "closest_tract_bound_arcmin": 1568.2904053419795
+    },
+    "DUD-ELAIS-N1": {
+      "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-ELAIS-N1.txt",
+      "sha256": "f4a92960be0542b7ffa0d3387e949ffbc92fda07e44eec993d67e4f2334734df",
+      "tracts": 10,
+      "possible_core_tracts": [],
+      "closest_bound_tract": "17407",
+      "closest_tract_bound_arcmin": 4586.274173704358
+    },
+    "DUD-XMM-LSS": {
+      "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-XMM-LSS.txt",
+      "sha256": "3c2f1cd328d09db1f85a583909d0b0f13444d081d633b5fed644ede1803e0210",
+      "tracts": 9,
+      "possible_core_tracts": [],
+      "closest_bound_tract": "8765",
+      "closest_tract_bound_arcmin": 2813.3277856135787
+    },
+    "W-AEGIS": {
+      "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_W-AEGIS.txt",
+      "sha256": "87548315fd1f5007a55f997f65841ac8d46c9e965207995bab127a74bd06af2c",
+      "tracts": 4,
+      "possible_core_tracts": [],
+      "closest_bound_tract": "16973",
+      "closest_tract_bound_arcmin": 5483.289752512314
+    },
+    "W-hectomap": {
+      "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_W-hectomap.txt",
+      "sha256": "52b8905e0543245d4eda653d99108009f918be6d233797edf4c0d48aa18feb87",
+      "tracts": 109,
+      "possible_core_tracts": [],
+      "closest_bound_tract": "16186",
+      "closest_tract_bound_arcmin": 4800.627505879385
+    },
+    "W-autumn": {
+      "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_W-autumn.txt",
+      "sha256": "a1a5e36af74bc0b3bc220167d78be6893279afcf0e348751eec4b467731dc78d",
+      "tracts": 600,
+      "possible_core_tracts": [],
+      "closest_bound_tract": "10917",
+      "closest_tract_bound_arcmin": 1115.5596755410468
+    },
+    "W-spring": {
+      "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_W-spring.txt",
+      "sha256": "6ba75ea706ffc8c2caecfd44f007f3132117dff7014d652dba6fae6adb6de504",
+      "tracts": 416,
+      "possible_core_tracts": [],
+      "closest_bound_tract": "10349",
+      "closest_tract_bound_arcmin": 7174.2717579284845
+    }
+  },
+  "hsc_cosmos_control": {
+    "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-COSMOS.txt",
+    "sha256": "b31b142f642ef0d76295004c49e1e94945a28e8aaa40664176406f7bb5ae26aa",
+    "tracts": 10,
+    "possible_core_tracts": [
+      "9813"
+    ],
+    "closest_bound_tract": "9813",
+    "closest_tract_bound_arcmin": -62.199880728684
+  },
+  "gemini_n": {
+    "url": "https://archive.gemini.edu/jsonsummary/ra=356.63690742440576/dec=27.959299849968268/sr=600/GMOS-N/imaging",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "image_metadata_rows": 0
+  },
+  "gemini_s": {
+    "url": "https://archive.gemini.edu/jsonsummary/ra=356.63690742440576/dec=27.959299849968268/sr=600/GMOS-S/imaging",
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "image_metadata_rows": 0
+  },
+  "mast": {
+    "url": "https://mast.stsci.edu/api/v0/invoke",
+    "service": "Mast.Caom.Filtered.Position",
+    "params": {
+      "position": "356.63690742440576, 27.959299849968268, 0.105",
+      "columns": "COUNT_BIG(*)",
+      "filters": [
+        {
+          "paramName": "obs_collection",
+          "values": [
+            "HST",
+            "JWST"
+          ]
+        },
+        {
+          "paramName": "dataproduct_type",
+          "values": [
+            "image"
+          ]
+        }
+      ]
+    },
+    "sha256": "e6dfb0fcc3e191247b109128d1e53528ea119365b2b31b12cc89112c1c24a7b6",
+    "space_telescope_imaging_rows": 0
+  },
+  "noirlab_expanded": {
+    "url": "https://astroarchive.noirlab.edu/api/sia/vohdu?POS=356.63691%2C27.95930&SIZE=.15&VERB=3&format=json",
+    "sha256": "d7336534ddd4b9b0e2b1db86a56de25c9aab6c7d488038016288cee504b6247d",
+    "rows": 196,
+    "instruments": [
+      "decam"
+    ],
+    "g_visits": [
+      {
+        "utc": "2016-08-11 07:33:53.600744+00",
+        "band": "g DECam SDSS c0001 4720.0 1520.0",
+        "seconds": 175.0,
+        "instrument": "decam",
+        "product_hdu_rows": 21,
+        "original_filename": "DECam_00562858.fits.fz"
+      },
+      {
+        "utc": "2017-09-22 04:18:05.793962+00",
+        "band": "g DECam SDSS c0001 4720.0 1520.0",
+        "seconds": 200.0,
+        "instrument": "decam",
+        "product_hdu_rows": 28,
+        "original_filename": "DECam_006"
+      },
+      {
+        "utc": "2018-08-11 06:32:19.265921+00",
+        "band": "g DECam SDSS c0001 4720.0 1520.0",
+        "seconds": 124.0,
+        "instrument": "decam",
+        "product_hdu_rows": 14,
+        "original_filename": "DECam_00764217.fits.fz"
+      }
+    ]
+  },
+  "smoka_shot": {
+    "url": "https://smoka.nao.ac.jp/HSCsearch",
+    "query": {
+      "action": "Search",
+      "obs_mod": "IMAG",
+      "data_typ": "OBJECT",
+      "band": "HSC-g",
+      "bandwidth_type": "FILTER",
+      "instruments": "HSC",
+      "asciitable": "Ascii",
+      "coordsys": "Equatorial",
+      "equinox": "J2000",
+      "output_equinox": "J2000",
+      "RadOrRec": "radius",
+      "fieldofview": "auto",
+      "resolver": "NONE",
+      "calib_typ": "ALL",
+      "frameorshot": "Shot",
+      "longitudeC": "23:46:32.85778186",
+      "latitudeC": "+27:57:33.47945989",
+      "radius": 52
+    },
+    "sha256": "e60c7bf2f7b0782888719fea8f67ca9941b769c4850d4b36b5341e586c90640b",
+    "parsed_rows": 29,
+    "g_rows": 29,
+    "nearest_g_center_arcmin": 69.52502044721415
+  },
+  "smoka_recent_shot": {
+    "url": "https://smoka.nao.ac.jp/HSCsearch",
+    "query": {
+      "action": "Search",
+      "obs_mod": "IMAG",
+      "data_typ": "OBJECT",
+      "band": "HSC-g",
+      "bandwidth_type": "FILTER",
+      "instruments": "HSC",
+      "asciitable": "Ascii",
+      "coordsys": "Equatorial",
+      "equinox": "J2000",
+      "output_equinox": "J2000",
+      "RadOrRec": "radius",
+      "fieldofview": "auto",
+      "resolver": "NONE",
+      "calib_typ": "ALL",
+      "frameorshot": "Shot",
+      "longitudeC": "23:46:32.85778186",
+      "latitudeC": "+27:57:33.47945989",
+      "radius": 52,
+      "date_obs": "2024-08-01..2026-11-17"
+    },
+    "sha256": "d9e1a61b6117fccef91f6f5b490ee65c57d66ba9c92bbf244cc8c8b59e3d157b",
+    "parsed_rows": 0,
+    "g_rows": 0,
+    "nearest_g_center_arcmin": null
+  },
+  "gemini_goods_s_control": {
+    "url": "https://archive.gemini.edu/jsonsummary/ra=53.1625/dec=-27.7914/sr=600/GMOS-N/imaging",
+    "sha256": "5fd75887cce205209a33148782c0ca178b7b09baf50ea241913026a2abc8a70e",
+    "image_metadata_rows": 36
+  },
+  "mast_goods_s_control": {
+    "url": "https://mast.stsci.edu/api/v0/invoke",
+    "service": "Mast.Caom.Filtered.Position",
+    "params": {
+      "position": "53.1625, -27.7914, 0.012",
+      "columns": "COUNT_BIG(*)",
+      "filters": [
+        {
+          "paramName": "obs_collection",
+          "values": [
+            "HST",
+            "JWST"
+          ]
+        },
+        {
+          "paramName": "dataproduct_type",
+          "values": [
+            "image"
+          ]
+        }
+      ]
+    },
+    "sha256": "c50aabcc8b1c98086962acb1f770eda305a8ba533ebf217a396574d253ea5d29",
+    "space_telescope_imaging_rows": 4667
+  }
+}

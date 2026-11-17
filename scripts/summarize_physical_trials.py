@@ -29,8 +29,8 @@ def check_pairs(rows):
     return pairs
 
 
-def run(directory):
-    paths=[directory/f'{name}.csv' for name in ('fresh_05','fresh_09')]
+def run(directory, fields=('fresh_05','fresh_09'), compare_depth=False):
+    paths=[directory/f'{name}.csv' for name in fields]
     rows=[r for p in paths for r in read_csv(p)]
     pairs=check_pairs(rows)
     groups=defaultdict(list)
@@ -40,6 +40,9 @@ def run(directory):
         groups[(seed['D_kpc'],'all','all')].append(arms)
         groups[tuple(seed[k] for k in ('D_kpc','rh_pc','expected_MV_proxy'))].append(arms)
     table=[]
+    comparisons=[('ls_base','ps1'),('ls_deep','ps1')]
+    if compare_depth:
+        comparisons.append(('ls_deep','ls_base'))
     for (distance,radius,luminosity),batch in groups.items():
         for subset in ('all','without_preexisting_spatial_match'):
             cells=[arms for arms in batch if subset=='all' or not any(
@@ -47,18 +50,27 @@ def run(directory):
             if not cells:
                 continue
             for criterion in ('spatial','correct_mode_exists','blind_correct'):
-                ref=np.array([arms['ps1'][criterion]=='True' for arms in cells])
-                for arm in ('ls_base','ls_deep'):
+                for arm,reference in comparisons:
+                    ref=np.array([arms[reference][criterion]=='True' for arms in cells])
                     ls=np.array([arms[arm][criterion]=='True' for arms in cells])
-                    table.append(dict(D_kpc=distance,rh_pc=radius,expected_MV_proxy=luminosity,
-                                      subset=subset,criterion=criterion,ls_arm=arm,n_pairs=len(cells),
-                                      ls_detected=int(ls.sum()),ps1_detected=int(ref.sum()),
-                                      ls_only=int((ls&~ref).sum()),ps1_only=int((~ls&ref).sum()),
-                                      delta_p=float(ls.mean()-ref.mean())))
+                    row=dict(D_kpc=distance,rh_pc=radius,expected_MV_proxy=luminosity,
+                             subset=subset,criterion=criterion,ls_arm=arm,n_pairs=len(cells),
+                             ls_detected=int(ls.sum()))
+                    reference_fields=(dict(reference=reference,reference_detected=int(ref.sum()),
+                                           reference_only=int((~ls&ref).sum())) if compare_depth
+                                      else dict(ps1_detected=int(ref.sum())))
+                    row.update(reference_fields,ls_only=int((ls&~ref).sum()))
+                    if not compare_depth:
+                        row['ps1_only']=int((~ls&ref).sum())
+                    row['delta_p']=float(ls.mean()-ref.mean())
+                    table.append(row)
     write_csv(directory/'paired_summary.csv',table)
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('directory',type=Path)
-    run(p.parse_args().directory)
+    p.add_argument('--fields',nargs='+',default=('fresh_05','fresh_09'))
+    p.add_argument('--compare-depth',action='store_true')
+    args=p.parse_args()
+    run(args.directory,args.fields,args.compare_depth)

@@ -1,0 +1,35 @@
+candidate: gap_28-A_base-0.3-001
+field: gap_28
+ra_deg: 25.100392975675163
+dec_deg: 11.964169045765573
+dm: 16.75
+rh_arcmin: 0.7
+membership_rank: 1
+ps1_radius_deg: 0.28
+ps1_magnitude_caps:
+- 24.0
+- 23.5
+ps1_min_snr: 5
+ps1_ikron_delta: 0.05
+center_aperture_arcmin: 1.0499999999999998
+control_radius_arcmin:
+- 4.199999999999999
+- 14
+control_draws: 4096
+control_neighbors: 256
+mask_draws: 768
+mask_neighbors: 48
+ps1_scan_radii:
+- 0.5
+- 1
+- 2
+ps1_scan_dm:
+- 16.5
+- 20.75
+- 0.25
+ps1_scan_width_deg: 0.3
+ps1_scan_buffer_arcmin: 7
+seed: 486287
+output_prefix: gap_28_v10_
+scratch_revision: v10
+field_manifest: wide_gaps/batch3/results/summary/gap_28-base/manifest.json

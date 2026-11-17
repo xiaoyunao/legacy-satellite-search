@@ -1,0 +1,12 @@
+# 100–150 kpc, projected Plummer radius 10 or 30 pc, expected integrated V proxy -3.
+# Additional physical realizations on two already scanned matched development backgrounds.
+seed: 486283
+conditions:
+- [100, 10, -3]
+- [150, 30, -3]
+- [150, 10, -3]
+- [100, 30, -3]
+- [100, 30, -3]
+- [150, 10, -3]
+- [150, 30, -3]
+- [100, 10, -3]

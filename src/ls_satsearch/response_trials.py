@@ -13,7 +13,7 @@ from .group_budget import groups,matches
 from .inject import choose_sites
 from .matched import PS1_MODEL,SURVEYS,reddening
 from .ps1_tiles import design
-from .run import config_path,read_csv,settings,write_csv,write_json
+from .run import config_path,read_csv,settings,sha,write_csv,write_json
 from .search import load_isochrone,scan
 from . import selection_response as sr
 
@@ -38,20 +38,28 @@ def audit_errors(field_id,pool,point):
     return rows
 
 
-def run(field_id,version,archive,physical_plan=None,output=None):
+def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=None):
     _,data,cfg=settings()
     matched=yaml.safe_load(config_path('matched.yaml').read_text())
     spec=next(s for s in matched['fields'] if s['id']==field_id and s['role']=='pilot_dev')
     field,_=design(spec,matched)
     samples,configs,cuts,empty={}, {}, {}, {}
     masks=[]
+    policies={}
     for survey in SURVEYS:
         work=data/'runs'/version/'matched'/survey/field_id
         samples[survey]=np.load(work/'sample.npy',allow_pickle=False)
         masks.append(np.load(work/'coverage.npy',allow_pickle=False))
         summary=archive/survey/'summary'/f'{field_id}-base'
         configs[survey]=json.loads((summary/'manifest.json').read_text())['config']
-        policy=json.loads((archive/survey/'groups/sky_group_policy.json').read_text())
+        policy_path=(policy_archive or archive)/survey/'groups/sky_group_policy.json'
+        policy=json.loads(policy_path.read_text())
+        if policy_archive and (policy['branch']!='main' or any(
+                configs[survey].get(k)!=value
+                for group in (policy['recipe'],policy['limits']['base'])
+                for k,value in group.items())):
+            raise ValueError(f'{survey}: calibration policy and background search recipe differ')
+        policies[survey]=dict(sha256=sha(policy_path),path=str(policy_path))
         cuts[survey]=next(r['cutoff'] for r in policy['thresholds'] if r['budget']==.3)
         blank=[dict({k:float(r[k]) for k in ('x','y','ra_deg','dec_deg','rh_arcmin','dm','score')},
                    channel='A_base',ranking=float(r['score']))
@@ -153,11 +161,11 @@ def run(field_id,version,archive,physical_plan=None,output=None):
     write_csv(out/f'{field_id}-ls-response.csv',ls_bins)
     write_csv(out/f'{field_id}-ps1-response.csv',ps1_bins)
     write_csv(out/f'{field_id}-ls-error-by-type.csv',audit_errors(field_id,ls,is_point))
-    write_json(out/f'{field_id}.json',dict(status='complete',job=os.environ.get('SLURM_JOB_ID'),seed=seed,
+    write_json(out/f'{field_id}.json',dict(status='complete',job=os.environ.get('SLURM_JOB_ID'),seed=seed,threshold_policies=policies,
                model='Common latent rows and sky positions, common standardized gr noise and morphology draws. '
                'Proxy shape response conditional on observed counterpart; unsupported bins use unity. '
                'Catalog entry and image completeness are unmeasured.',
-               **(dict(physical_plan=physical,search_dm_branch='main',luminosity_definition='expected IMF-integrated V proxy, '
+               **(dict(physical_plan=physical,physical_plan_sha256=sha(physical_plan),search_dm_branch='main',luminosity_definition='expected IMF-integrated V proxy, '
                        'V=g-0.59(g-r)-0.01 in DECam AB; truncated injection draws near either sample limit')
                   if physical else {})))
 
@@ -167,7 +175,8 @@ if __name__=='__main__':
     p.add_argument('field')
     p.add_argument('--version',choices=('v3','v4'),required=True)
     p.add_argument('--archive',type=Path,required=True)
+    p.add_argument('--policy-archive',type=Path)
     p.add_argument('--physical-plan',type=Path)
     p.add_argument('--output',type=Path)
     a=p.parse_args()
-    run(a.field,a.version,a.archive,a.physical_plan,a.output)
+    run(a.field,a.version,a.archive,a.physical_plan,a.output,a.policy_archive)

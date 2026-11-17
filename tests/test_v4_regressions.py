@@ -57,5 +57,14 @@ class HoldoutTest(unittest.TestCase):
         self.assertEqual(stages['N_gr_i_snr'],1)
 
 
+    def test_ps1_response_accepts_zero_generated_stars(self):
+        empty=np.empty((0,3))
+        response=(np.array([0,30]),np.array([-np.inf,np.inf]),{})
+        selected, stages=ps1_select(empty,empty,dict(g_max=24,r_max=23.5,min_snr=5),
+                                    response,np.random.default_rng(1))
+        self.assertEqual(selected.shape,(0,))
+        self.assertEqual(set(stages.values()),{0})
+
+
 if __name__=='__main__':
     unittest.main()

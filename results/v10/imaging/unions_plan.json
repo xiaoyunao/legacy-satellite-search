@@ -1,0 +1,14 @@
+{
+  "job": "61458992",
+  "source": "https://www.skysurvey.cc/survey/",
+  "file_sha256": "45f7d3c3cb0c7554c7a8e9662b1fe64757da083dbfb2fe4629cfd69568aa34f7",
+  "center_pixel": 20857509,
+  "nside": 2048,
+  "order": "NESTED",
+  "center_value": 0.0,
+  "core_pixels": 4,
+  "core_map_values": [
+    0.0
+  ],
+  "survey_plan_not_imaging_or_search_mask": true
+}

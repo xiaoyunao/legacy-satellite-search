@@ -129,7 +129,7 @@ def ps1_select(phot,err,cfg,response,rng, *, uniforms=None):
     ci = np.searchsorted(c_edges,phot[:,0]-phot[:,1],side='right')-1
     # Unsupported bins use the optimistic response and remain explicitly counted.
     rates = [bins.get((g,c)) for g,c in zip(gi,ci)]
-    pi,pm = np.asarray([rate if rate is not None else (1.,1.) for rate in rates]).T
+    pi,pm = np.asarray([rate if rate is not None else (1.,1.) for rate in rates]).reshape(-1,2).T
     gr = gr_accept(phot[:,:2],err[:,:2],cfg)
     ui, um = uniforms if uniforms is not None else rng.random((2,len(phot)))
     i_valid = (np.isfinite(phot[:,2]+err[:,2]) & (phot[:,2]>0) & (err[:,2]>0) &

@@ -1,0 +1,12 @@
+target: configs/v8/survey63_followup.yaml
+cfht_visits: [2507037p, 2507038p, 2507040p, 2507042p]
+cfht_cutout_radius_deg: 0.077
+r_aperture_arcsec: 1.02
+stack_pixel_arcsec: 0.3
+reference_arcmin: [1.05, 4.25]
+stack_reference_inner_arcmin: 1.05
+stack_reference_outer_arcmin: 4.25
+stack_reference_r_max: 21.5
+annulus_arcmin: [2.45, 4.2]
+seed: 486281
+target_g0_5sigma: [26.0, 26.5]

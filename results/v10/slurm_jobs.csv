@@ -1,0 +1,10 @@
+JobID,JobName,Partition,State,Elapsed,ExitCode,NCPUS
+61458390,survey63-r,shared_urgent_milan_ss11,COMPLETED,00:01:12,0:0,6
+61458469,v10-fresh_01,shared_urgent_milan_ss11,FAILED,00:00:43,1:0,6
+61458470,v10-fresh_03,shared_urgent_milan_ss11,FAILED,00:00:42,1:0,6
+61458572,v10-fresh_01,shared_urgent_milan_ss11,COMPLETED,00:06:53,0:0,6
+61458618,v10-fresh_03,shared_urgent_milan_ss11,COMPLETED,00:07:46,0:0,6
+61458659_[2-4%2],v10-ps1-secondary,shared_milan_ss11,CANCELLED,00:00:00,0:0,0
+61458731,v10-unions,shared_milan_ss11,CANCELLED,00:00:00,0:0,0
+61458979,v10-secondary,shared_urgent_milan_ss11,COMPLETED,00:03:23,0:0,10
+61458992,v10-unions,shared_urgent_milan_ss11,COMPLETED,00:00:14,0:0,4

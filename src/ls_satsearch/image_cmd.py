@@ -39,9 +39,9 @@ def ps1_refs(path,center,inner,outer,band='r',r_max=21.5,annular=False):
     return sky[selected],(r if band=='r' else g)[good][selected]
 
 
-def red_stack(indir,ref,mag,grid,side,pixel_scale,aperture_arcsec):
+def red_stack(indir,ref,mag,grid,side,pixel_scale,aperture_arcsec,visits=EXPOSURES):
     stamps,records=[],[]
-    for visit in EXPOSURES:
+    for visit in visits:
         path=indir/f'{visit}.fits'
         if not path.exists():
             continue

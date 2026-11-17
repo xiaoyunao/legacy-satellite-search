@@ -1,0 +1,66 @@
+{
+  "job": "61458390",
+  "candidate": "survey_63-A_base-0.3-001",
+  "config_sha256": "45f739698c2bfadd296c6901addf3453f3e1fc7505dcb277c210b06b2d6a10fd",
+  "target_config_sha256": "187e4644d3c3c1ed49f01c306665f86afb54a6c0fcd89754a60ef6996366124c",
+  "reference_sha256": "4d7473c23a04fcde04bf6b295d09f1a587804a30780b24c73b6dcb328d4e2a93",
+  "ebv": 0.06874485313892365,
+  "center_usable": true,
+  "visits": [
+    {
+      "visit": "2507037p",
+      "sha256": "56c0fc5acce89d6dc704539f3ad60e9dbf1a3aa74878f9e2e851f894586b19da",
+      "calibrated_extensions": 1,
+      "anchors": 17,
+      "scatter_mag": 0.02972835667952051
+    },
+    {
+      "visit": "2507038p",
+      "sha256": "66008c4bd2084ace737da3bb4c56b5704e5ff4abec856ee8112e17e64714cb5e",
+      "calibrated_extensions": 2,
+      "anchors": 9,
+      "scatter_mag": 0.03700498839703377
+    },
+    {
+      "visit": "2507040p",
+      "sha256": "7016e51824e6bd6bd462ebaf18e4bbbc19adf4562e35dbd383765a0aec3ba45b",
+      "calibrated_extensions": 1,
+      "anchors": 19,
+      "scatter_mag": 0.09795737746902089
+    },
+    {
+      "visit": "2507042p",
+      "sha256": "e776910aa7a341a5987801ff2d76f6ef54de8fce597368c8704350bc771d9a5b",
+      "calibrated_extensions": 1,
+      "anchors": 7,
+      "scatter_mag": 0.04674585867485545
+    }
+  ],
+  "calibration": {
+    "training_n": 32,
+    "held_out_n": 19,
+    "correction_mag": 0.04232944251909743,
+    "held_out_median_mag": 0.005976443413302945,
+    "held_out_robust_sigma_mag": 0.04390085951168675
+  },
+  "regions": {
+    "core": {
+      "two_visit_full_aperture_fraction": 1.0,
+      "blank_apertures": 3156,
+      "r5_ps1_equiv": 24.31783967458056,
+      "r0_5_ps1_equiv": 24.161720113102067
+    },
+    "control_annulus": {
+      "two_visit_full_aperture_fraction": 0.9693850896339695,
+      "blank_apertures": 3343,
+      "r5_ps1_equiv": 24.49656089720086,
+      "r0_5_ps1_equiv": 24.340441335722367
+    }
+  },
+  "bright_ps1_point_proxy": {
+    "n": 25,
+    "concentration_median_mag": 0.48174722238658957,
+    "concentration_robust_sigma_mag": 0.09210671117655536
+  },
+  "scope": "Finite calibrated CFHT science pixels. No separate CADC DQ/weight planes used. Depth is local aperture noise on a PS1 r scale. Bright-star morphology is a repeatability diagnostic; faint completeness and classification remain unmeasured."
+}

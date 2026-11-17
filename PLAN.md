@@ -51,11 +51,17 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - Audited public archive coverage for survey_63. Downloaded and measured a partial independent DECam g exposure. Only 51.7% of the core is usable, and measured dereddened five-sigma depth is approximately 23.
 - Applied official Euclid DR1 imaging MOCs to the remainder and evaluated the published PS1 DR1 census classifier at the two matched physical-pilot backgrounds. See the ninth science report for the measured comparison and its limits.
 
+## Tenth-round priority
+
+- Expanded the survey_63 public imaging audit and calibrated four wider CFHT r cutouts. Archive checks and exposure calculator results are in the [tenth science report](tenth_science_report.md).
+- Completed 16 realizations on two additional matched development backgrounds at 100–150 kpc, 10–30 pc and expected integrated V proxy −3. The spatial counts were 7/12/11 for LS baseline, deeper LS and PS1 DR2.
+- Finished fixed-centre and local blind PS1 diagnostics for the five ambiguous groups. All retain L0. Continue to track DELVE 4/7 as downstream review and upstream detection controls.
+
 ## Next work
 
-1. Locate full-core independent g for survey_63 and pair it with the existing r images. Aim for g₀≈26–26.5 to test the main sequence in the farther modes. Keep all distance modes distinct pending evidence.
-2. Keep the ambiguous compact queue available for second-pass review. Use actual weak benchmarks, paired luminosity cases and detection or classification calibration to decide on any depth or angular-grid change.
-3. Reconcile the ranked PS1 cells with exact HSC, UNIONS and Rubin historical search coverage when available. Choose the next frozen A cohort based on the measured incremental sensitivity.
+1. Ask WHIGS for the actual g visit/usable-pixel footprint through an authorized channel, and prioritize a full-core deep two-band observation with the specified background annulus. Keep the three distance hypotheses distinct pending matched-mask CMD evidence.
+2. Measure faint detection and morphology response on a small image-injection set with original catalog settings. Use the additional real backgrounds and exact native templates to identify where extending the physical grid will change the incremental LS constraint.
+3. Reconcile the ranked PS1 cells with exact HSC, UNIONS and Rubin historical search coverage when available. Choose the next frozen A cohort based on measured incremental sensitivity.
 
 ## Validation criteria
 
