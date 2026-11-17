@@ -1,0 +1,7 @@
+policy,budget,name,field,covered,spatial,blind_dm,blind_dm_error,blind_correct,correct_mode_exists,correct_mode_dm,wide_mode_exists,offset_arcmin,representative_channel
+A_base,0.1,Bootes_V,north_boo5,True,True,19.75,-0.29300085880958804,False,False,,True,0.5461641568488874,A_base
+A_base,0.1,Draco_II,north_dra2,True,True,16.5,-0.1700000000000017,True,True,16.5,True,1.9084443106848203,A_base
+A_base,0.1,Ursa_Major_II,north_uma2,True,True,17.75,0.05000000000000071,True,True,17.75,True,2.7509111608256696,A_base
+A_base,0.3,Bootes_V,north_boo5,True,True,19.75,-0.29300085880958804,False,True,20.0,True,0.5461641568488874,A_base
+A_base,0.3,Draco_II,north_dra2,True,True,16.5,-0.1700000000000017,True,True,16.5,True,1.9084443106848203,A_base
+A_base,0.3,Ursa_Major_II,north_uma2,True,True,17.75,0.05000000000000071,True,True,17.75,True,2.7509111608256696,A_base

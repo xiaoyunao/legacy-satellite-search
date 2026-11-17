@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "depth_control",
+    "label": "Depth-structure control \u00b7 survey_20",
+    "manifest": "wide_rollout/batch2/results/summary/survey_20-base/manifest.json",
+    "ra_deg": 203.00501660922745,
+    "dec_deg": 25.332013296486824,
+    "dm": 17.0,
+    "rh": 1.4,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      }
+    ]
+  },
+  "manifest_sha256": "c537aaceda1ffa1b49115bde56f005337259d4e4c7fda419d8951eca37b4bc2e",
+  "job": "61459604",
+  "figures": [
+    {
+      "id": "depth_control",
+      "area_on_arcmin2": 13.701388888888888,
+      "area_off_arcmin2": 117.64583333333333,
+      "core_cmd_star_count": 13,
+      "fixed_C_TS": 9.57285008166357,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

@@ -2,6 +2,14 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Regional North and South trials
+
+The [eleventh science report](eleventh_science_report.md) describes the regional footprints, North controls, search budgets, and DES-style diagnostic panels. The registered trial cohorts are in `configs/v11/cohorts/`. The North pilot projects a matching PARSEC PS1 model into Bok BASS g and r with the Legacy Surveys colour terms. The two bright-star validation matches and the original template transformation are recorded separately.
+
+On the NERSC v7 revision, use `scripts/v11_regional.sh <cohort> <zero-based start> <count>` within a CPU allocation of one task per concurrent field with four CPUs per task. Preserve the registered `fields.yaml` when resuming. Run `bash scripts/v11_combine.sh <cohort>` after the cohort is complete. Development and evaluation are processed separately for each new survey stratum. Summarize the South PS1 wave using its inherited cut.
+
+Run `bash scripts/v6.sh paper_diagnostic configs/v11/figure_cases.yaml survey63 results/v11/figures` for the archived six-panel example. For a new completed and calibrated cohort, run `scripts/v11_priority_figures.py` in a compute job with the project environment and the named cohort to draw the highest-ranked evaluation groups. PNG, PDF and SVG carry the same diagnostic content.
+
 ## Tenth-round independent imaging and compact-system tests
 
 The [tenth science report](tenth_science_report.md) records target-specific archive coverage, the calibrated r depth and the additional matched injection results. The [observing design](docs/survey63_observation.md) documents the photometric limits and instrument ETC. Re-run the public archive metadata audit locally with `PYTHONPATH=src .venv/bin/python scripts/audit_survey63_archives.py configs/v8/survey63_followup.yaml results/v10/imaging/archive_probes.json`.

@@ -1,0 +1,21 @@
+targets:
+- id: v11_north_11-A_base-0.3-001
+  label: "v11_north_11-A_base-0.3-001 \xB7 L0"
+  manifest: regional_north/results/summary/v11_north_11-base/manifest.json
+  ra_deg: 218.93032683568842
+  dec_deg: 71.87103750829729
+  dm: 18.0
+  rh: 16.0
+  panels:
+  - width: 1.5
+    sigma: 1.62
+- id: v11_north_11-A_base-0.3-002
+  label: "v11_north_11-A_base-0.3-002 \xB7 L0"
+  manifest: regional_north/results/summary/v11_north_11-base/manifest.json
+  ra_deg: 231.06967316431152
+  dec_deg: 71.16473650990582
+  dm: 20.75
+  rh: 16.0
+  panels:
+  - width: 1.5
+    sigma: 1.62

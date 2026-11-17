@@ -1,0 +1,2 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+Draco_II,main,A,base,True,0.9984417056240261,0.9899117445562376,True,16.67,False,23.98207748091189,2,16.5,1.9084443106848203,2,23.98207748091189,16.5,4,1.9084443106848155,0.7249580459558599,-0.1700000000000017,-1.6248209418378927

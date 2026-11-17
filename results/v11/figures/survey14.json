@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "survey14",
+    "label": "survey_14 \u00b7 L0",
+    "manifest": "wide_rollout/batch2/results/summary/survey_14-base/manifest.json",
+    "ra_deg": 182.37929508666625,
+    "dec_deg": 19.243487426605633,
+    "dm": 16.75,
+    "rh": 0.5,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      },
+      {
+        "width": 0.5,
+        "sigma": 0.5,
+        "suffix": "_core"
+      }
+    ]
+  },
+  "manifest_sha256": "4cb839f0509b0d4ba1d42cebad8b68ccb004c666d6736f2c9a439fdda64424ea",
+  "job": "61459604",
+  "figures": [
+    {
+      "id": "survey14",
+      "area_on_arcmin2": 1.7777777777777777,
+      "area_off_arcmin2": 18.5,
+      "core_cmd_star_count": 7,
+      "fixed_C_TS": 23.425541240638545,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "survey14_core",
+      "area_on_arcmin2": 1.7777777777777777,
+      "area_off_arcmin2": 18.5,
+      "core_cmd_star_count": 7,
+      "fixed_C_TS": 23.425541240638545,
+      "width_deg": 0.5,
+      "sigma_arcmin": 0.5,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

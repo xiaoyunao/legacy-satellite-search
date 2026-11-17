@@ -66,9 +66,18 @@ def read_table(path, cols):
         return f[1].read(columns=list(cols), upper=True)
 
 
-def sweeps(root, field):
+def regional_primary(ra, dec, region):
+    """ICRS dec/Galactic latitude split used for the combined LS catalog."""
+    a, d = np.deg2rad(ra), np.deg2rad(dec)
+    pole_a, pole_d = np.deg2rad([192.85948, 27.12825])
+    b_positive = np.sin(d) * np.sin(pole_d) + np.cos(d) * np.cos(pole_d) * np.cos(a-pole_a) >= 0
+    north = (np.asarray(dec) >= 32.375) & b_positive
+    return north if region == 'north' else ~north
+
+
+def sweeps(root, field, region='south'):
     parts, files, options, headers = [], [], [], []
-    for path in sorted((root / 'south/sweep/11.0').glob('sweep-*.fits')):
+    for path in sorted((root / region / 'sweep/11.0').glob('sweep-*.fits')):
         m = re.fullmatch(r'sweep-(\d{3})([mp])(\d{3})-(\d{3})([mp])(\d{3})\.fits', path.name)
         if not m:
             continue
@@ -93,7 +102,7 @@ def sweeps(root, field):
                 parts.append(hdu.read(columns=[cols[k] for k in (*REQUIRED, *sorted(options[-1]))],
                                       rows=rows, upper=True))
     if not parts:
-        raise ValueError('No south sweep rows intersect the padded field')
+        raise ValueError(f'No {region} sweep rows intersect the padded field')
     shared = set.intersection(*(set(p.dtype.names) for p in parts))
     names = [k for k in (*REQUIRED, *OPTIONAL) if k in shared]
     data = np.empty(sum(map(len, parts)), dtype=[(k, parts[0].dtype[k]) for k in names])
@@ -109,8 +118,8 @@ def sweeps(root, field):
     return data[np.sort(keep)], info
 
 
-def load_bricks(root):
-    path = root / 'south/survey-bricks-dr11-south.fits.gz'
+def load_bricks(root, region='south'):
+    path = root / region / f'survey-bricks-dr11-{region}.fits.gz'
     cols = ['BRICKNAME', 'RA', 'DEC', 'RA1', 'RA2', 'DEC1', 'DEC2', 'NOBS_G', 'NOBS_R',
             'PSFDEPTH_G', 'PSFDEPTH_R', 'PSFSIZE_G', 'PSFSIZE_R', 'EBV']
     with fitsio.FITS(path) as f:
@@ -122,8 +131,8 @@ def load_bricks(root):
 
 
 def _sample_brick(task):
-    root, name, ix, iy, ras, decs, maskbits = task
-    prefix = root / 'south/coadd' / name[:3] / name / f'legacysurvey-{name}'
+    root, name, ix, iy, ras, decs, maskbits, region = task
+    prefix = root / region / 'coadd' / name[:3] / name / f'legacysurvey-{name}'
     paths = [f'{prefix}-{kind}.fits.fz' for kind in ('maskbits', 'nexp-g', 'nexp-r')]
     if not all(Path(p).is_file() for p in paths):
         return name, ix, iy, None
@@ -144,7 +153,8 @@ def _sample_brick(task):
     return name, ix, iy, local
 
 
-def make_area(root, field, bricks, maskbits, subsample, census=None, survey=None):
+def make_area(root, field, bricks, maskbits, subsample, census=None, survey=None, *,
+              region='south', primary=False):
     """Sample g/r exposure and maskbits using primary brick boundaries and image WCS."""
     size = field.n * subsample
     cell = field.step / subsample
@@ -160,7 +170,7 @@ def make_area(root, field, bricks, maskbits, subsample, census=None, survey=None
         ix = np.flatnonzero(dra < (b['RA2'] - b['RA1']) % 360)
         iy = np.flatnonzero((decfull >= b['DEC1']) & (decfull < b['DEC2']))
         if ix.size and iy.size:
-            tasks.append((root, name, ix, iy, rafull[ix], decfull[iy], maskbits))
+            tasks.append((root, name, ix, iy, rafull[ix], decfull[iy], maskbits, region))
     absent = []
     seen = 0
     ncpu = min(len(tasks), int(os.getenv('SLURM_CPUS_PER_TASK', '1')))
@@ -170,8 +180,12 @@ def make_area(root, field, bricks, maskbits, subsample, census=None, survey=None
             if local is None:
                 absent.append(name)
                 continue
-            if census is not None:
-                local &= census.accept(*np.meshgrid(rafull[ix], decfull[iy]), survey)
+            if primary or census is not None:
+                ra, dec = np.meshgrid(rafull[ix], decfull[iy])
+                if primary:
+                    local &= regional_primary(ra, dec, region)
+                if census is not None:
+                    local &= census.accept(ra, dec, survey)
             good[np.ix_(iy, ix)] = local
             seen += 1
     return good, {'area_bricks_read': seen, 'area_bricks_missing_products': absent,

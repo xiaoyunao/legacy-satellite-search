@@ -1,0 +1,33 @@
+{
+  "field": "north_uma2",
+  "job": "61459729",
+  "public_query": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=132.48&dec=63.46&radius=0.22&primaryDetection=1&pagesize=25000&columns=%5BobjID%2CraStack%2CdecStack%2CgPSFMag%2CrPSFMag%2CiPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMagErr%5D",
+  "ps1_sha256": "36cc583200b2f3481f4e933ad69e32236e7424bed400bd9314277aef93dec60e",
+  "matches": 280,
+  "bands": {
+    "g": {
+      "raw_bok_minus_ps1_p16_p50_p84": [
+        0.01585472106933594,
+        0.08524703979492188,
+        0.14394386291503905
+      ],
+      "corrected_p16_p50_p84": [
+        -0.07405099317233682,
+        -0.01228682438269093,
+        0.03229637711730105
+      ]
+    },
+    "r": {
+      "raw_bok_minus_ps1_p16_p50_p84": [
+        -0.1614629364013672,
+        -0.09686899185180664,
+        -0.02841232299804689
+      ],
+      "corrected_p16_p50_p84": [
+        -0.07532405244333076,
+        -0.025892895465582384,
+        0.036594060798481064
+      ]
+    }
+  }
+}

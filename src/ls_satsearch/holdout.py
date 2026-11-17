@@ -49,7 +49,7 @@ def main():
                  layer=fields[r['field']]['layer']) for r in rows])
         return
     spec = fields[requested]
-    run.execute(spec,root,data,cfg,load_bricks(root),
+    run.execute(spec,root,data,cfg,load_bricks(root,cfg['region']),
                 load_isochrone(data/'resources'/cfg['isochrone']),'base','')
 
 

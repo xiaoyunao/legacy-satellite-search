@@ -1,0 +1,2 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+Bootes_V,main,A,base,True,1.0,0.9850436227669298,True,20.043000858809588,False,9.83212423843275,1,19.75,0.5461641568488874,1,9.83212423843275,19.75,1,0.5461641568489678,0.8151703833566684,-0.29300085880958804,-12.874906186625452

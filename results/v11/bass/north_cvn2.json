@@ -1,0 +1,33 @@
+{
+  "field": "north_cvn2",
+  "job": "61459729",
+  "public_query": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=194.06&dec=34.82&radius=0.22&primaryDetection=1&pagesize=25000&columns=%5BobjID%2CraStack%2CdecStack%2CgPSFMag%2CrPSFMag%2CiPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMagErr%5D",
+  "ps1_sha256": "3e91f1e5d16e89f1c7b537833b122a93ebcd95ce3e67858f905280d6540720da",
+  "matches": 140,
+  "bands": {
+    "g": {
+      "raw_bok_minus_ps1_p16_p50_p84": [
+        -0.03266746520996093,
+        0.060782432556152344,
+        0.1337947845458984
+      ],
+      "corrected_p16_p50_p84": [
+        -0.09819998690440747,
+        -0.026722144487182672,
+        0.018314384880781742
+      ]
+    },
+    "r": {
+      "raw_bok_minus_ps1_p16_p50_p84": [
+        -0.16915748596191404,
+        -0.09815788269042969,
+        -0.04592041015625
+      ],
+      "corrected_p16_p50_p84": [
+        -0.08033530411019218,
+        -0.029525756192646226,
+        0.018210913389936446
+      ]
+    }
+  }
+}

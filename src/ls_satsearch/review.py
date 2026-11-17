@@ -120,7 +120,7 @@ def coadd_stamp(files, field, x, y, radius, pixel_scale):
     return stamp, [-edge,edge,-edge,edge]
 
 
-def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=False):
+def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=False, region='south'):
     x,y = peak['x'],peak['y']
     bx,by = field.xy(bricks['RA'],bricks['DEC'])
     fig,axes = plt.subplots(2,4,figsize=(12,6),layout='constrained')
@@ -141,7 +141,7 @@ def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=F
             files = []
             for i in ids[np.argsort(distance[ids])]:
                 name = bricks['BRICKNAME'][i].strip()
-                file = root/'south/coadd'/name[:3]/name/f'legacysurvey-{name}-image-{band}.fits.fz'
+                file = root/region/'coadd'/name[:3]/name/f'legacysurvey-{name}-image-{band}.fits.fz'
                 if file.is_file():
                     files.append(file)
             stamp,extent = coadd_stamp(files,field,cx,cy,size,pixel_scale)
@@ -185,7 +185,7 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
     scan_summary = (archived_run/'summary'/out.name) if archived_run else out
     manifest = json.loads((scan_summary/'manifest.json').read_text())
     spec = manifest['field']
-    bricks = load_bricks(root)
+    bricks = load_bricks(root, cfg.get('region','south'))
     source = read_csv(Path('results/summary/pilot_candidate_summary.csv')) if group_rows is None else group_rows
     fields = [r for r in source if r['field_id'] == field_id and r['depth'] == depth]
     if group_limit:
@@ -249,7 +249,7 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
         metadata = observing_page(figure_dir/f'candidate-{label}-environment.png',
                                   root, bricks, data, valid, field, fit_peak, row)
         images = image_cutouts(figure_dir/f'candidate-{label}-images.png', root, bricks, field,
-                               fit_peak,sample[idx,:2],prob,details=True)
+                               fit_peak,sample[idx,:2],prob,details=True,region=cfg.get('region','south'))
         np.savez_compressed(work/f'membership-{label}.npz', source_ids=data[
             ['RELEASE', 'BRICKID', 'OBJID']][chosen][idx], probability=prob)
         summary.append(dict(field=field_id, depth=depth, branch=peak['branch'], method=peak['method'], rank=peak['rank'],
@@ -337,7 +337,7 @@ def refresh_image(field_id, depth, label):
     spec = json.loads((base/'manifest.json').read_text())['field']
     row = next(r for r in read_csv(base/'review.csv')
                if f"{r['branch']}-{r['method']}-{r['rank']}"==label)
-    bricks = load_bricks(root)
+    bricks = load_bricks(root, cfg.get('region','south'))
     field,data,_,_ = field_cache(root,data_root,spec,cfg,bricks)
     x,y = field.xy(float(row['fit_ra_deg']),float(row['fit_dec_deg']))
     rh = float(row['fit_rh_arcmin'])
@@ -351,7 +351,7 @@ def refresh_image(field_id, depth, label):
     prob = np.array([p for _,p in members])
     path = Path('results/figures')/run/f'candidate-{label}-images.png'
     if not image_cutouts(path,root,bricks,field,dict(x=x,y=y,rh_arcmin=rh),
-                         np.column_stack((sx[idx],sy[idx])),prob):
+                         np.column_stack((sx[idx],sy[idx])),prob,region=cfg.get('region','south')):
         raise RuntimeError(f'Incomplete g/r image mosaic for {run} {label}')
 
 

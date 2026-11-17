@@ -1,0 +1,92 @@
+{
+  "case": {
+    "id": "survey63",
+    "label": "survey_63 \u00b7 L0",
+    "manifest": "wide_rollout/batch7/results/summary/survey_63-base/manifest.json",
+    "ra_deg": 356.63690742440576,
+    "dec_deg": 27.959299849968268,
+    "dm": 18.75,
+    "rh": 0.7,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      },
+      {
+        "width": 0.5,
+        "sigma": 0.5,
+        "suffix": "_core"
+      },
+      {
+        "width": 0.5,
+        "sigma": 0.3,
+        "suffix": "_sigma0p3"
+      },
+      {
+        "width": 0.5,
+        "sigma": 1,
+        "suffix": "_sigma1"
+      },
+      {
+        "width": 0.5,
+        "sigma": 2,
+        "suffix": "_sigma2"
+      }
+    ]
+  },
+  "manifest_sha256": "b27b945d1c486ed6ad4139cd98bdfd33ffb8ed895dfb512d288ed3845e096652",
+  "job": "61459604",
+  "figures": [
+    {
+      "id": "survey63",
+      "area_on_arcmin2": 3.472222222222222,
+      "area_off_arcmin2": 35.43055555555556,
+      "core_cmd_star_count": 15,
+      "fixed_C_TS": 45.32367029594687,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "survey63_core",
+      "area_on_arcmin2": 3.472222222222222,
+      "area_off_arcmin2": 35.43055555555556,
+      "core_cmd_star_count": 15,
+      "fixed_C_TS": 45.32367029594687,
+      "width_deg": 0.5,
+      "sigma_arcmin": 0.5,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "survey63_sigma0p3",
+      "area_on_arcmin2": 3.472222222222222,
+      "area_off_arcmin2": 35.43055555555556,
+      "core_cmd_star_count": 15,
+      "fixed_C_TS": 45.32367029594687,
+      "width_deg": 0.5,
+      "sigma_arcmin": 0.3,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "survey63_sigma1",
+      "area_on_arcmin2": 3.472222222222222,
+      "area_off_arcmin2": 35.43055555555556,
+      "core_cmd_star_count": 15,
+      "fixed_C_TS": 45.32367029594687,
+      "width_deg": 0.5,
+      "sigma_arcmin": 1,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "survey63_sigma2",
+      "area_on_arcmin2": 3.472222222222222,
+      "area_off_arcmin2": 35.43055555555556,
+      "core_cmd_star_count": 15,
+      "fixed_C_TS": 45.32367029594687,
+      "width_deg": 0.5,
+      "sigma_arcmin": 2,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

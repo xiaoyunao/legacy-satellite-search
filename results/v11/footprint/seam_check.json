@@ -1,0 +1,24 @@
+{
+  "job": "61459831",
+  "center": [
+    214.14,
+    32.375
+  ],
+  "width_deg": 1.5,
+  "before_split_overlap_deg2": 2.2322222222222217,
+  "after_split_overlap_deg2": 0.0,
+  "effective_primary_union_deg2": 2.2340084876543207,
+  "by_region": {
+    "north": {
+      "native_core_deg2": 2.2342245370370364,
+      "primary_core_deg2": 1.1182947530864196,
+      "missing_brick_products": 0
+    },
+    "south": {
+      "native_core_deg2": 2.234828317901234,
+      "primary_core_deg2": 1.115713734567901,
+      "missing_brick_products": 0
+    }
+  },
+  "scope": "Coadd exposure and mask seam test. This region is a geometry control."
+}

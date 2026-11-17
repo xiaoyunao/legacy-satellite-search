@@ -1,0 +1,2 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+Ursa_Major_II,main,A,base,True,0.9933862588974753,0.990328499990003,True,17.7,False,103.2820886647455,1,17.75,2.7509111608256696,1,103.2820886647455,17.75,16,2.7509111608256243,0.3005184503313444,0.05000000000000071,0.8076538781043823

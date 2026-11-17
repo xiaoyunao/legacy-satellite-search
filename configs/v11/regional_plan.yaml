@@ -1,0 +1,30 @@
+seed: 481731
+max_ebv: 0.10
+min_abs_b: 25
+north:
+  width: 4
+  count: 16
+  development: 8
+  minimum: 0.85
+  region: north
+south_ps1:
+  width: 3
+  count: 24
+  development: 0
+  minimum: 0.40
+  region: south
+  survey: 3
+south_delve:
+  width: 3
+  count: 8
+  development: 4
+  minimum: 0.75
+  region: south
+  survey: 2
+south_des:
+  width: 3
+  count: 8
+  development: 4
+  minimum: 0.75
+  region: south
+  survey: 1

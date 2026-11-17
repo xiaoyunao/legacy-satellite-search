@@ -147,9 +147,13 @@ def field_cache(root, data_root, spec, cfg, bricks):
 
     field = Field(spec['ra'], spec['dec'], spec['width'], min(cfg['radii_arcmin']) / 3,
                   buffer=spec.get('buffer_arcmin',102))
+    region = cfg.get('region', 'south')
+    primary = cfg.get('regional_primary', region == 'north')
     key = dict(geometry=[field.ra, field.dec, field.width, field.step, field.buffer],
                mask=cfg['reject_maskbits'], subdivision=cfg['coverage_subdivision'],
                census=spec.get('survey'), root=str(root))
+    if region != 'south' or primary:
+        key.update(region=region, regional_primary=primary)
     cache = data_root / 'cache' / f"{spec['id']}-{hashlib.sha256(json.dumps(key).encode()).hexdigest()[:12]}"
     cache.mkdir(exist_ok=True, parents=True)
     xs = cache / 'catalog.npy'
@@ -159,11 +163,17 @@ def field_cache(root, data_root, spec, cfg, bricks):
         fcntl.flock(lock, fcntl.LOCK_EX)
         if info_path.exists() and xs.exists() and ar.exists():
             return field, np.load(xs, allow_pickle=False), np.load(ar, allow_pickle=False), json.loads(info_path.read_text())
-        sources, provenance = sweeps(root, field)
+        sources, provenance = sweeps(root, field, region)
+        if primary:
+            from .data import regional_primary
+            sources = sources[regional_primary(sources['RA'], sources['DEC'], region)]
+        if bricks is None:
+            bricks = load_bricks(root, region)
         survey = spec.get('survey')
         coverage, mask_info = make_area(root, field, bricks, sum(1 << bit for bit in cfg['reject_maskbits']),
                                        cfg['coverage_subdivision'],
-                                       Census(data_root) if survey else None, survey)
+                                       Census(data_root) if survey else None, survey,
+                                       region=region, primary=primary)
         info = {**provenance, **mask_info, **key}
         np.save(xs, sources, allow_pickle=False)
         np.save(ar, coverage, allow_pickle=False)
@@ -200,7 +210,9 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
     cutflow['inner_psf_faint'] = int((chosen & inner & (mags[:, 0] > 22.5)).sum())
     cutflow['inner_other_faint'] = int((valid & ~chosen & inner & (mags[:, 0] > 22.5)).sum())
     print(f"{name}: area={effective_area:.3f} deg2; selected={len(sample)}; scanning", flush=True)
-    manifest = dict(field=spec, bandpass='DECam g,r', release='DR11 south',
+    region = cfg.get('region','south')
+    manifest = dict(field=spec, bandpass='BASS g,r' if region == 'north' else 'DECam g,r',
+                    release=f'DR11 {region}',
                     source_release_codes=np.unique(sources['RELEASE']).tolist(),
                     config=cfg, config_hash=hashlib.sha256(json.dumps(cfg, sort_keys=True).encode()).hexdigest(),
                     fields_sha256=sha(config_path('fields.yaml')), seed=cfg['seed'], depth=depth,
@@ -256,14 +268,14 @@ def main():
     if not os.environ.get('LS_SAT_V2_WORKSPACE'):
         p.error('Use an isolated v2 workspace and set LS_SAT_V2_WORKSPACE=1')
     root, data_root, cfg = settings()
-    if cfg['region'] != 'south':
-        p.error('Only south DECam gr is available in this release')
+    if cfg['region'] not in ('south', 'north'):
+        p.error('Choose an explicit north or south region')
     if args.depth == 'deep':
         for band in 'gr':
             cfg[f'{band}_max'] += .5
     fields = {s['id']: s for s in yaml.safe_load(config_path('fields.yaml').read_text())['fields']}
     model = load_isochrone(data_root / 'resources' / cfg['isochrone'])
-    bricks = load_bricks(root)
+    bricks = load_bricks(root, cfg['region'])
     for name in args.fields:
         spec = fields[name]
         field_cfg = dict(cfg, methods=cfg.get('method_fields', {}).get(name, cfg.get('methods', ['A','B'])))

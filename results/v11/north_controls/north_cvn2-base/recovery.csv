@@ -1,0 +1,2 @@
+name,branch,method,depth,covered,core_valid_fraction,off_valid_fraction,entered_peak_table,truth_dm,scale_below_grid,spatial_score,spatial_rank,spatial_dm,spatial_offset_arcmin,rank,score,recovered_dm,recovered_rh_arcmin,offset_arcmin,offset_over_rh,delta_dm,distance_error_kpc
+Canes_Venatici_II,far,A,base,True,1.0,0.9997929034930277,True,21.01999996115429,False,21.281885167640056,1,21.0,0.6114746838349218,1,21.281885167640056,21.0,2,0.6114746838348744,0.526502452952819,-0.019999961154290702,-1.4664807538885896

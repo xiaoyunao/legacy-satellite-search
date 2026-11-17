@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "hercules",
+    "label": "Hercules",
+    "manifest": "../holdout-v4/results/summary/fresh_06-base/manifest.json",
+    "ra_deg": 247.77671996132668,
+    "dec_deg": 12.778848290933665,
+    "dm": 20.75,
+    "rh": 2.8,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      }
+    ]
+  },
+  "manifest_sha256": "8cf4bba703d716be0723ad34fde15379348588f0b870cdd766a234b9049ccf92",
+  "job": "61459604",
+  "figures": [
+    {
+      "id": "hercules",
+      "area_on_arcmin2": 55.08333333333333,
+      "area_off_arcmin2": 580.0277777777777,
+      "core_cmd_star_count": 140,
+      "fixed_C_TS": 91.01973725969657,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

@@ -1,0 +1,6 @@
+{
+  "job": "61459712",
+  "nside": 256,
+  "overlapping_raw_gr_proxy_deg2": 657.796394434252,
+  "scope": "Nearest DR11 brick metadata, not effective search pixels. Census codes after its BADBITS; raw visit sharing and historical search methods are separate questions."
+}

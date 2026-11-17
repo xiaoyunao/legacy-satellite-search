@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "blank_control",
+    "label": "Blank field control \u00b7 wide_01",
+    "manifest": "first_batch/results/summary/wide_01-base/manifest.json",
+    "ra_deg": 194.25106990014265,
+    "dec_deg": 13.5,
+    "dm": 18.75,
+    "rh": 0.7,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      }
+    ]
+  },
+  "manifest_sha256": "d14a29f9e11fc896e32e38947f79578f999a72707c532106b64ea991fea38cf3",
+  "job": "61459604",
+  "figures": [
+    {
+      "id": "blank_control",
+      "area_on_arcmin2": 3.472222222222222,
+      "area_off_arcmin2": 36.58333333333333,
+      "core_cmd_star_count": 2,
+      "fixed_C_TS": 0.0,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

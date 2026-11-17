@@ -1,0 +1,9 @@
+candidate,cohort,rh_arcmin,dm,fixed_C_TS,core_cmd_stars,nearest_named_ref,offset_arcmin,level,context,known_dm
+v11_north_11-A_base-0.3-001,north,16.0,18.0,0.0,974,Munoz 1,324.29008477595676,L0,unassociated_in_reference_check,
+v11_north_11-A_base-0.3-002,north,16.0,20.75,0.0,1087,Ursa Minor,250.1109815403266,L0,unassociated_in_reference_check,
+v11_south_delve_05-A_base-0.3-001,south_delve,16.0,16.5,0.0,2461,Aquarius IV,1066.1215587433937,L0,unassociated_in_reference_check,
+v11_south_delve_05-A_base-0.3-002,south_delve,1.0,17.0,1.5486997243642104,26,Aquarius IV,946.8097292803608,L0,unassociated_in_reference_check,
+v11_south_des_06-A_base-0.3-001,south_des,1.0,19.25,100.46158152130533,27,Tucana V,0.22014508486491086,L0,known_response,18.7
+v11_south_des_06-A_base-0.3-002,south_des,1.0,18.75,86.38694906863864,23,Tucana V,0.9801758150388938,L0,known_response,18.7
+v11_south_ps1_09-A_base-0.3-001,south_ps1,16.0,17.25,0.0,1094,Triangulum II,215.68305065011265,L0,unassociated_in_reference_check,
+v11_south_ps1_19-A_base-0.3-001,south_ps1,16.0,20.25,0.0,2251,Laevens 3,408.61853851952327,L0,unassociated_in_reference_check,

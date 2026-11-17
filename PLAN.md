@@ -51,17 +51,25 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - Audited public archive coverage for survey_63. Downloaded and measured a partial independent DECam g exposure. Only 51.7% of the core is usable, and measured dereddened five-sigma depth is approximately 23.
 - Applied official Euclid DR1 imaging MOCs to the remainder and evaluated the published PS1 DR1 census classifier at the two matched physical-pilot backgrounds. See the ninth science report for the measured comparison and its limits.
 
-## Tenth-round priority
+## Tenth-round results
 
 - Expanded the survey_63 public imaging audit and calibrated four wider CFHT r cutouts. Archive checks and exposure calculator results are in the [tenth science report](tenth_science_report.md).
 - Completed 16 realizations on two additional matched development backgrounds at 100–150 kpc, 10–30 pc and expected integrated V proxy −3. The spatial counts were 7/12/11 for LS baseline, deeper LS and PS1 DR2.
 - Finished fixed-centre and local blind PS1 diagnostics for the five ambiguous groups. All retain L0. Continue to track DELVE 4/7 as downstream review and upstream detection controls.
 
+## Eleventh-round results
+
+- Completed all 56 newly registered cores (574.044 effective deg²). North calibrations and held-out fields total 253.026 deg². The frozen South PS1 policy covered another 185.468 deg².
+- Recovered four North controls at their branch-specific published cuts. The strict North cut yields 0.119 groups per held-out deg² and the primary cut yields 0.420. The South DELVE holdout requires a review of field-dependent contamination before expanding that stratum.
+- Ran the exposure-mask seam check, found that the sampled seam has zero duplicate area after regional assignment, and measured the census deep-survey overlap.
+- Produced 20 DES-style diagnostic sets including eight high-ranked groups. The two strongest DES responses match Tucana V.
+
 ## Next work
 
-1. Ask WHIGS for the actual g visit/usable-pixel footprint through an authorized channel, and prioritize a full-core deep two-band observation with the specified background annulus. Keep the three distance hypotheses distinct pending matched-mask CMD evidence.
-2. Measure faint detection and morphology response on a small image-injection set with original catalog settings. Use the additional real backgrounds and exact native templates to identify where extending the physical grid will change the incremental LS constraint.
-3. Reconcile the ranked PS1 cells with exact HSC, UNIONS and Rubin historical search coverage when available. Choose the next frozen A cohort based on measured incremental sensitivity.
+1. Apply the frozen South baseline to the remaining PS1-assigned area in disjoint waves. Use the native masks to determine the newly searched area.
+2. Extend the North BASS trial after representative blind recoveries and independent review-budget and seam checks. Keep separate South DES and DELVE calibration and evaluation strata for historical comparisons.
+3. Use the DES-style diagnostics to review new peaks and archive existing L0 candidates with their public-data evidence. Targeted telescope follow-up and proposal preparation are deferred.
+4. Continue measuring image-to-catalog response and compact-system depth benefits where the data support it.
 
 ## Validation criteria
 

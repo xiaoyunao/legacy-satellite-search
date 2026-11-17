@@ -1,0 +1,3 @@
+policy,budget,name,field,covered,spatial,blind_dm,blind_dm_error,blind_correct,correct_mode_exists,correct_mode_dm,wide_mode_exists,offset_arcmin,representative_channel
+A_base,0.1,Canes_Venatici_II,north_cvn2,True,True,21.0,-0.019999961154290702,True,True,21.0,True,0.6114746838349218,A_base
+A_base,0.3,Canes_Venatici_II,north_cvn2,True,True,21.0,-0.019999961154290702,True,True,21.0,True,0.6114746838349218,A_base

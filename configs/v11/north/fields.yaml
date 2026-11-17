@@ -1,0 +1,5 @@
+fields:
+- {id: north_cvn2, role: recovery, truth: Canes_Venatici_II, ra: 194.06, dec: 34.82, width: 3.0}
+- {id: north_boo5, role: recovery, truth: Bootes_V, ra: 214.14, dec: 33.31, width: 3.0}
+- {id: north_dra2, role: recovery, truth: Draco_II, ra: 238.55, dec: 64.41, width: 3.0}
+- {id: north_uma2, role: recovery, truth: Ursa_Major_II, ra: 132.48, dec: 63.46, width: 3.0}

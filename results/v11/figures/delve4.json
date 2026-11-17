@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "delve4",
+    "label": "DELVE 4",
+    "manifest": "../discovery-v5/weak/results/summary/weak_02-base/manifest.json",
+    "ra_deg": 230.77892696203807,
+    "dec_deg": 27.40332745308384,
+    "dm": 17.75,
+    "rh": 0.7,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      }
+    ]
+  },
+  "manifest_sha256": "3d2844c773b394623f6ad1048a290352e6159d196b6f3176ece093e5b651f8d4",
+  "job": "61459604",
+  "figures": [
+    {
+      "id": "delve4",
+      "area_on_arcmin2": 3.472222222222222,
+      "area_off_arcmin2": 36.55555555555555,
+      "core_cmd_star_count": 12,
+      "fixed_C_TS": 29.34713837624302,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

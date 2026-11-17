@@ -1,0 +1,86 @@
+targets:
+- id: survey63
+  label: "survey_63 \xB7 L0"
+  manifest: wide_rollout/batch7/results/summary/survey_63-base/manifest.json
+  ra_deg: 356.63690742440576
+  dec_deg: 27.959299849968268
+  dm: 18.75
+  rh: 0.7
+  panels:
+  - width: 1.5
+    sigma: 1.62
+  - width: 0.5
+    sigma: 0.5
+    suffix: _core
+  - width: 0.5
+    sigma: 0.3
+    suffix: _sigma0p3
+  - width: 0.5
+    sigma: 1
+    suffix: _sigma1
+  - width: 0.5
+    sigma: 2
+    suffix: _sigma2
+- id: survey14
+  label: "survey_14 \xB7 L0"
+  manifest: wide_rollout/batch2/results/summary/survey_14-base/manifest.json
+  ra_deg: 182.37929508666625
+  dec_deg: 19.243487426605633
+  dm: 16.75
+  rh: 0.5
+  panels:
+  - width: 1.5
+    sigma: 1.62
+  - width: 0.5
+    sigma: 0.5
+    suffix: _core
+- id: depth_control
+  label: "Depth-structure control \xB7 survey_20"
+  manifest: wide_rollout/batch2/results/summary/survey_20-base/manifest.json
+  ra_deg: 203.00501660922745
+  dec_deg: 25.332013296486824
+  dm: 17.0
+  rh: 1.4
+  panels:
+  - width: 1.5
+    sigma: 1.62
+- id: delve4
+  label: DELVE 4
+  manifest: ../discovery-v5/weak/results/summary/weak_02-base/manifest.json
+  ra_deg: 230.77892696203807
+  dec_deg: 27.40332745308384
+  dm: 17.75
+  rh: 0.7
+  panels:
+  - width: 1.5
+    sigma: 1.62
+- id: delve5
+  label: DELVE 5
+  manifest: ../discovery-v5/weak/results/summary/weak_03-base/manifest.json
+  ra_deg: 222.09750486304966
+  dec_deg: 17.480700395980723
+  dm: 18.0
+  rh: 1.0
+  panels:
+  - width: 1.5
+    sigma: 1.62
+- id: hercules
+  label: Hercules
+  manifest: ../holdout-v4/results/summary/fresh_06-base/manifest.json
+  ra_deg: 247.77671996132668
+  dec_deg: 12.778848290933665
+  dm: 20.75
+  rh: 2.8
+  panels:
+  - width: 1.5
+    sigma: 1.62
+- id: blank_control
+  label: "Blank field control \xB7 wide_01"
+  manifest: first_batch/results/summary/wide_01-base/manifest.json
+  ra_deg: 194.25106990014265
+  dec_deg: 13.5
+  dm: 18.75
+  rh: 0.7
+  panels:
+  - width: 1.5
+    sigma: 1.62
