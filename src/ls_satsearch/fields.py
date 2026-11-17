@@ -33,7 +33,10 @@ class Census:
         ipix = self.grid.lonlat_to_healpix(ra * u.deg, dec * u.deg)
         bits = self.bits[ipix]
         in_survey = (bits & 3) == survey
-        return in_survey & ((bits & self.bad) == 0)
+        good = (bits & self.bad) == 0
+        if survey == 0:
+            return ~good | ((bits & 3) == 0)
+        return in_survey & good
 
 
 def choose(root, data_root, cfg, output, expansion=False):

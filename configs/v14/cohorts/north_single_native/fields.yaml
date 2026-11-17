@@ -1,0 +1,120 @@
+fields:
+- id: v14_north_single_native_001
+  ra: 100.62992125984252
+  dec: 28.75
+  width: 2.55
+  role: pilot_eval
+  layer: north_single_native
+  region: north
+  native_primary: false
+  proxy_area_deg2: 0.1311396320642448
+  ownership:
+    partition:
+      ra_lo: 99.21259842519684
+      ra_hi: 102.04724409448818
+      dec_lo: 27.5
+      dec_hi: 30.0
+    quality: extension
+    single_native: true
+- id: v14_north_single_native_002
+  ra: 103.46456692913385
+  dec: 28.75
+  width: 2.55
+  role: pilot_eval
+  layer: north_single_native
+  region: north
+  native_primary: false
+  proxy_area_deg2: 0.8917494980368649
+  ownership:
+    partition:
+      ra_lo: 102.04724409448818
+      ra_hi: 104.88188976377953
+      dec_lo: 27.5
+      dec_hi: 30.0
+    quality: extension
+    single_native: true
+- id: v14_north_single_native_003
+  ra: 100.16129032258065
+  dec: 31.25
+  width: 2.55
+  role: pilot_eval
+  layer: north_single_native
+  region: north
+  native_primary: false
+  proxy_area_deg2: 0.4327607858120079
+  ownership:
+    partition:
+      ra_lo: 98.70967741935485
+      ra_hi: 101.61290322580645
+      dec_lo: 30.0
+      dec_hi: 32.5
+    quality: extension
+    single_native: true
+- id: v14_north_single_native_004
+  ra: 103.06451612903226
+  dec: 31.25
+  width: 2.55
+  role: pilot_eval
+  layer: north_single_native
+  region: north
+  native_primary: false
+  proxy_area_deg2: 4.668570901487116
+  ownership:
+    partition:
+      ra_lo: 101.61290322580645
+      ra_hi: 104.51612903225806
+      dec_lo: 30.0
+      dec_hi: 32.5
+    quality: extension
+    single_native: true
+- id: v14_north_single_native_005
+  ra: 105.96774193548387
+  dec: 31.25
+  width: 2.55
+  role: pilot_dev
+  layer: north_single_native
+  region: north
+  native_primary: false
+  proxy_area_deg2: 1.2327125414039013
+  ownership:
+    partition:
+      ra_lo: 104.51612903225806
+      ra_hi: 107.41935483870968
+      dec_lo: 30.0
+      dec_hi: 32.5
+    quality: extension
+    single_native: true
+- id: v14_north_single_native_006
+  ra: 277.258064516129
+  dec: 31.25
+  width: 2.55
+  role: pilot_eval
+  layer: north_single_native
+  region: north
+  native_primary: false
+  proxy_area_deg2: 1.8621827753122764
+  ownership:
+    partition:
+      ra_lo: 275.80645161290323
+      ra_hi: 278.7096774193549
+      dec_lo: 30.0
+      dec_hi: 32.5
+    quality: extension
+    single_native: true
+- id: v14_north_single_native_007
+  ra: 280.16129032258067
+  dec: 31.25
+  width: 2.55
+  role: pilot_dev
+  layer: north_single_native
+  region: north
+  native_primary: false
+  proxy_area_deg2: 0.5639004178762527
+  ownership:
+    partition:
+      ra_lo: 278.7096774193549
+      ra_hi: 281.61290322580646
+      dec_lo: 30.0
+      dec_hi: 32.5
+    quality: extension
+    single_native: true

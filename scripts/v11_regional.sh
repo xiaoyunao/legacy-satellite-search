@@ -10,6 +10,9 @@ work="$LS_SAT_WORKSPACE/regional_$cohort"
 if [[ "$LS_SAT_VERSION" != v11 ]]; then
     work="$LS_SAT_WORKSPACE/regional_${LS_SAT_VERSION}_$cohort"
 fi
+if [[ "$LS_SAT_VERSION" == v14 && -s "$LS_SAT_WORKSPACE/results/v14/footprint/coadd_cache_validation.json" ]]; then
+    export LS_SAT_COADD_CACHE="$PSCRATCH/legacy-satellite-search/cache/v14_packed_masks"
+fi
 mkdir -p "$work/logs"
 ln -sfn ../references "$work/references"
 cd "$work"
@@ -28,6 +31,9 @@ for ((i=start;i<start+length;i++)); do
     field=${names[i]}
     manifest="results/summary/$field-base/manifest.json"
     if test -f "$manifest" && grep -q '"status": "complete"' "$manifest"; then
+        continue
+    fi
+    if [[ "${LS_SAT_SKIP_EMPTY:-0}" == 1 ]] && test -f "$manifest" && grep -q '"status": "no_usable_gr"' "$manifest"; then
         continue
     fi
     srun -N1 -n1 -c4 --mem="${LS_SAT_STEP_MEM:-5500M}" --exact -o "logs/$field-%j.log" \

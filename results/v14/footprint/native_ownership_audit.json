@@ -1,0 +1,5 @@
+{
+  "job": "61470317",
+  "nside": 512,
+  "note": "The footprint proxy uses bounded gr brick magnitude and exact native assignment. It identifies planning gaps; shared or single usable WCS pixels require exposure and bad-pixel masks."
+}

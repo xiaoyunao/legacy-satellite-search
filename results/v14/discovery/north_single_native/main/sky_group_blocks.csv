@@ -1,0 +1,13 @@
+policy,branch,budget,field,role,area_deg2,kept_sky_groups,passing_hypotheses,cutoff
+A_base,main,0.1,v14_north_single_native_002,pilot_eval,0.6809818672839505,0,0,
+A_base,main,0.1,v14_north_single_native_003,pilot_eval,0.152974537037037,0,0,
+A_base,main,0.1,v14_north_single_native_004,pilot_eval,3.859837962962962,0,0,
+A_base,main,0.1,v14_north_single_native_005,pilot_dev,1.2051408179012344,0,0,
+A_base,main,0.1,v14_north_single_native_006,pilot_eval,1.4956153549382714,0,0,
+A_base,main,0.1,v14_north_single_native_007,pilot_dev,0.45070216049382705,0,0,
+A_base,main,0.3,v14_north_single_native_002,pilot_eval,0.6809818672839505,0,0,
+A_base,main,0.3,v14_north_single_native_003,pilot_eval,0.152974537037037,0,0,
+A_base,main,0.3,v14_north_single_native_004,pilot_eval,3.859837962962962,0,0,
+A_base,main,0.3,v14_north_single_native_005,pilot_dev,1.2051408179012344,0,0,
+A_base,main,0.3,v14_north_single_native_006,pilot_eval,1.4956153549382714,0,0,
+A_base,main,0.3,v14_north_single_native_007,pilot_dev,0.45070216049382705,0,0,

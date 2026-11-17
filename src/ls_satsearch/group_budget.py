@@ -101,14 +101,21 @@ def load_runs(summary, branch):
                 continue
             channel = f"{row['method']}_{depth}"
             values = {k: float(row[k]) for k in ('x','y','ra_deg','dec_deg','dm','rh_arcmin','score')}
+            for key in ('raw_peak_id', 'n_on', 'n_off', 'area_on_arcmin2', 'area_off_arcmin2'):
+                if row.get(key):
+                    values[key] = float(row[key])
             field['channels'][channel].append(dict(values, channel=channel,
                                                    peak_rank=int(row['rank'])))
     return fields
 
 
 def evaluate(summary, output, branch='main', archive=False, apply=None, expected_dev=None,
-             channels_only=None):
+             channels_only=None, analysis_roles=None):
     fields = load_runs(summary, branch)
+    if analysis_roles:
+        for name, field in fields.items():
+            if name in analysis_roles:
+                field['spec'] = dict(field['spec'], role=analysis_roles[name])
     if not fields:
         raise ValueError('No completed runs')
     if expected_dev is not None:

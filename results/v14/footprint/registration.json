@@ -1,0 +1,7 @@
+{
+  "job": "61469764",
+  "nside": 512,
+  "archive_inventory": "92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d",
+  "prior_measured_rasters": 1484,
+  "plan_sha256": "158b53071ce619536620e3ea9d4b74ad85fb47a172512e220eedb52f886a3484"
+}

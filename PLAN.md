@@ -2,7 +2,16 @@
 
 ## Current objective
 
-Find Galactic faint stellar systems at 20–150 kpc with circularized half-light radii of 3–30 pc, prioritizing 3–15 pc. Measure the DR11 increment over census PS1 at matched search-review cost across actual North and South backgrounds. See [current scientific direction](docs/PROJECT_MEMORY.md).
+Search the effective DR11 gr footprint in all four observing strata, maintain one survey candidate catalogue and measure region-dependent efficiency. The primary population is old metal-poor systems at 20–150 kpc with circularized half-light radii of 3–30 pc, emphasizing radii below 15 pc.
+
+## Round 14 milestones
+
+- Reconcile completed WCS search masks against the native North/South footprint and exact census assignment. Freeze a mutually exclusive residual grid and track added native effective area separately from the HEALPix proxy.
+- Exhaust the South PS1 residual, then process North BASS, South DELVE and South DES with their own frozen A thresholds. Scan low-latitude, high-extinction and census-excluded fields on independently calibrated development/evaluation splits.
+- Compare the two native catalogues on common exposure and mask coverage before applying the final seam assignment. Track shared observations in South comparisons.
+- Maintain one candidate index with source records, distance alternatives, 5 arcmin association edges, 30 arcmin environment checks and review status. Complete multimode C and public image vetting for priority and compact groups; retain the stratified, identity-blind lower-priority audit.
+- Use CCD reprocessing to measure detection, morphology, hard selection, blind A recovery, distance solutions and C stability. Preserve the matched internal PS1 DR2 and author PS1 DR1 experiments as separate evidence.
+- Publish each completed batch's actual area, thresholds, review cost and known-system controls. Fit a population model only where selection and review probabilities support its inference.
 
 ## Completed Round 13 acceptance criteria
 

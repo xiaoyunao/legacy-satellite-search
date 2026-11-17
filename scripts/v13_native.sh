@@ -4,11 +4,13 @@ set -euo pipefail
 id=$1
 phase=$2
 workspace=$PWD
-row=$(awk -F, -v id="$id" '$1==id {print $2, $4, $5, $6}' configs/v13/image_fields.csv)
+version=${LS_SAT_IMAGE_VERSION:-v13}
+row=$(awk -F, -v id="$id" 'NR==1 {for (i=1;i<=NF;i++) col[$i]=i; next}
+    $1==id {print $(col["region"]), $(col["ra_deg"]), $(col["dec_deg"]), $(col["size_px"])}' "configs/$version/image_fields.csv")
 read -r region ra dec size <<< "$row"
 test -n "$size"
 survey=/global/cfs/cdirs/cosmo/work/legacysurvey/dr11
-output="$PSCRATCH/legacy-satellite-search/image-v13/$id/$phase"
+output="$PSCRATCH/legacy-satellite-search/image-$version/$id/$phase"
 mkdir -p "$output"
 export GAIA_CAT_DIR=/global/cfs/cdirs/cosmo/data/gaia/dr3/healpix GAIA_CAT_VER=3 GAIA_CAT_PREFIX=healpix GAIA_CAT_SCHEME="${LS13_GAIA_SCHEME:-nested}"
 export TYCHO2_KD_DIR=/global/cfs/cdirs/cosmo/staging/tycho2

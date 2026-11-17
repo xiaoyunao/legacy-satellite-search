@@ -1,0 +1,5 @@
+policy,branch,budget,field,role,area_deg2,kept_sky_groups,passing_hypotheses,cutoff
+A_base,main,0.1,v14_north_single_native_005,pilot_dev,1.2051408179012344,0,0,
+A_base,main,0.1,v14_north_single_native_007,pilot_dev,0.45070216049382705,0,0,
+A_base,main,0.3,v14_north_single_native_005,pilot_dev,1.2051408179012344,0,0,
+A_base,main,0.3,v14_north_single_native_007,pilot_dev,0.45070216049382705,0,0,

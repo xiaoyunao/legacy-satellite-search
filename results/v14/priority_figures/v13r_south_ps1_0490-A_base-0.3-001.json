@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "v13r_south_ps1_0490-A_base-0.3-001",
+    "label": "PS1 0490 \u00b7 L0",
+    "manifest": "regional_v13r_south_ps1/results/summary/v13r_south_ps1_0490-base/manifest.json",
+    "ra_deg": 39.85791947387404,
+    "dec_deg": 14.207372445061052,
+    "dm": 19.5,
+    "rh": 0.35,
+    "panels": [
+      {
+        "width": 1.0,
+        "sigma": 1.62
+      },
+      {
+        "width": 0.18,
+        "sigma": 0.5,
+        "suffix": "-core"
+      }
+    ]
+  },
+  "manifest_sha256": "137cf71eab0da56c5aac004d203225a99ca7f9517503331a6aff72874be6036c",
+  "job": "61470735",
+  "figures": [
+    {
+      "id": "v13r_south_ps1_0490-A_base-0.3-001",
+      "area_on_arcmin2": 0.8333333333333333,
+      "area_off_arcmin2": 9.11111111111111,
+      "core_cmd_star_count": 7,
+      "fixed_C_TS": 22.420698881898648,
+      "width_deg": 1.0,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "v13r_south_ps1_0490-A_base-0.3-001-core",
+      "area_on_arcmin2": 0.8333333333333333,
+      "area_off_arcmin2": 9.11111111111111,
+      "core_cmd_star_count": 7,
+      "fixed_C_TS": 22.420698881898648,
+      "width_deg": 0.18,
+      "sigma_arcmin": 0.5,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

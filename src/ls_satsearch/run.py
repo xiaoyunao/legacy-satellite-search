@@ -148,7 +148,7 @@ def field_cache(root, data_root, spec, cfg, bricks):
     field = Field(spec['ra'], spec['dec'], spec['width'], min(cfg['radii_arcmin']) / 3,
                   buffer=spec.get('buffer_arcmin',102))
     region = cfg.get('region', 'south')
-    primary = cfg.get('regional_primary', region == 'north')
+    primary = spec.get('native_primary', cfg.get('regional_primary', region == 'north'))
     key = dict(geometry=[field.ra, field.dec, field.width, field.step, field.buffer],
                mask=cfg['reject_maskbits'], subdivision=cfg['coverage_subdivision'],
                census=spec.get('survey'), root=str(root))
@@ -172,7 +172,7 @@ def field_cache(root, data_root, spec, cfg, bricks):
         survey = spec.get('survey')
         coverage, mask_info = make_area(root, field, bricks, sum(1 << bit for bit in cfg['reject_maskbits']),
                                        cfg['coverage_subdivision'],
-                                       Census(data_root) if survey else None, survey,
+                                       Census(data_root) if survey is not None else None, survey,
                                        region=region, primary=primary)
         info = {**provenance, **mask_info, **key}
         np.save(xs, sources, allow_pickle=False)
@@ -194,8 +194,31 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
     sample, cutflow, valid, mags, chosen = select(sources, field, area, cfg)
     owned = spec.get('ownership')
     area_for_count = area
+    region = cfg.get('region', 'south')
     if owned:
         from .data import ownership, regional_primary
+
+        if 'quality' in owned:
+            from .coverage_history import residual_ownership
+            from .fields import Census
+
+            census = Census(data_root) if region == 'south' else None
+            opposite = None
+            if owned.get('single_native'):
+                opposite = load_bricks(root,'south' if region=='north' else 'north')
+                close = field.overlap(opposite['RA1'],opposite['RA2'],opposite['DEC1'],opposite['DEC2'])
+                # Nearest-brick coverage needs enough neighbours near thin footprint edges.
+                if close.sum() >= 4:
+                    opposite = opposite[close]
+
+            def own(ra, dec):
+                return residual_ownership(ra, dec, spec, data_root, region, bricks, field, census,
+                                          opposite_bricks=opposite)
+        else:
+            def own(ra, dec):
+                return ownership(ra, dec, owned) & regional_primary(ra, dec, region)
+
+    if owned:
         area_for_count = area.copy()
         cell = field.step / cfg['coverage_subdivision']
         axis = (np.arange(len(area)) + .5)*cell - field.limit
@@ -203,7 +226,7 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
         core = area_for_count[np.ix_(rows,rows)]
         iy,ix = np.nonzero(core)
         ra,dec = field.sky(axis[rows[ix]],axis[rows[iy]])
-        keep = ownership(ra,dec,owned) & regional_primary(ra,dec,'south')
+        keep = own(ra, dec)
         core[iy,ix] &= keep
         area_for_count[np.ix_(rows,rows)] = core
     effective_area, frac = coverage_metrics(field, area_for_count, cfg)
@@ -237,6 +260,13 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
                     slurm_job_id=os.environ.get('SLURM_JOB_ID'), area_deg2=effective_area,
                     area_fraction=frac, inputs=info, observing_conditions_source_sample=co,
                     cutflow=cutflow, io_seconds=io_time, status='prepared')
+    if owned and 'quality' in owned:
+        raster_path = work / 'owned_coverage.npy'
+        stage = raster_path.with_suffix('.tmp.npy')
+        np.save(stage, area_for_count, allow_pickle=False)
+        stage.replace(raster_path)
+        manifest['owned_coverage_path'] = str(raster_path.relative_to(data_root))
+        manifest['background_core_deg2'] = coverage_metrics(field, area, cfg)[0]
     write_json(summary / 'manifest.json', manifest)
     from .plots import overview
 
@@ -256,7 +286,7 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
         from .search import deduplicate
         ra = np.array([p['ra_deg'] for p in raw])
         dec = np.array([p['dec_deg'] for p in raw])
-        keep = ownership(ra,dec,owned) & regional_primary(ra,dec,'south')
+        keep = own(ra, dec)
         raw = [p for p,use in zip(raw,keep) if use]
         peaks = deduplicate(raw,cfg.get('main_dm_max',20.75))
     write_csv(work / 'all_template_peaks.csv', raw)

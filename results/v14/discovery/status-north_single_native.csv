@@ -1,0 +1,2 @@
+cohort,registered,completed,no_usable,prepared,missing,planned_proxy_deg2,searched_deg2,valid_unsearched_mask_deg2,raw_peaks,dedup_peaks,primary_cut,primary_eval,primary_dev,threshold_source
+north_single_native,7,6,1,0,0,9.783016551992663,7.845252700617282,0,226079,66184,,0,0,results/v14/discovery/north_single_native/calibration/sky_group_policy.json

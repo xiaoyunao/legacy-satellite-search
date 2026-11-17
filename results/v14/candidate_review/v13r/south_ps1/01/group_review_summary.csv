@@ -1,0 +1,15 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v13r_south_ps1_0128-A_base-0.3-001,awaiting_visual_review,1,1,1,1,12.066836377474909,18.75,0.5,0.6646676959815858,,,L0
+v13r_south_ps1_0149-A_base-0.3-001,awaiting_visual_review,1,1,1,1,1.5346454810484853,19.0,1.4,0.0,,,L0
+v13r_south_ps1_0431-A_base-0.3-002,awaiting_visual_review,1,1,1,2,18.389584152150228,16.5,0.5,2.613542168989216,,,L0
+v13r_south_ps1_0437-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.12355623039822583,19.75,1.4,0.0,,,L0
+v13r_south_ps1_0473-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.8449658456530642,19.75,2.8,0.0,,,L0
+v13r_south_ps1_0477-A_base-0.3-006,awaiting_visual_review,1,1,1,12,0.0,17.0,0.7,0.0,,,L0
+v13r_south_ps1_0477-A_base-0.3-008,awaiting_visual_review,1,1,1,15,0.1061422636030902,17.0,1.0,0.0,,,L0
+v13r_south_ps1_0486-A_base-0.3-001,awaiting_visual_review,1,1,1,1,1.5231176736850953,20.5,1.4,0.0,,,L0
+v13r_south_ps1_0486-A_base-0.3-002,awaiting_visual_review,1,1,1,2,5.955309627338082,18.5,1.4,0.0,,,L0
+v13r_south_ps1_0570-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.983076262268547,19.5,1.0,0.26241701590713973,,,L0
+v13r_south_ps1_0570-A_base-0.3-002,awaiting_visual_review,1,1,1,2,3.799911092528763,19.5,1.0,0.0,,,L0
+v13r_south_ps1_0581-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.8346229362714315,17.5,2.8,0.0,,,L0
+v13r_south_ps1_0581-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.0,19.75,0.7,0.0,,,L0
+v13r_south_ps1_0715-A_base-0.3-001,awaiting_visual_review,1,1,1,1,9.256764835091834,19.25,1.0,0.0,,,L0

@@ -1,0 +1,14 @@
+version: v14
+seed: 487140
+nside: 512
+width_deg: 3.5
+min_abs_b: 25
+max_ebv: 0.10
+# Keep every occupied planning cell. Registration resolution is recorded separately
+# from the native WCS search raster (5 arcsec at the frozen spatial grid).
+layers:
+  south_ps1: {region: south, census: 3}
+  north: {region: north}
+  south_delve: {region: south, census: 2}
+  south_des: {region: south, census: 1}
+  south_outside_census: {region: south, census: 0}

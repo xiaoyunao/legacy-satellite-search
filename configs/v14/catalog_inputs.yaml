@@ -1,0 +1,28 @@
+# Include regular discovery and archived development results. External surveys,
+# synthetic injections and benchmark-only searches are tracked separately.
+modes:
+- results/summary/pilot_candidate_summary.csv
+- results/v2/summary/pilot_candidate_summary.csv
+- results/v3/archive/sky_group_candidates.csv
+- results/v3/development_groups/*/sky_group_candidates.csv
+- results/v4/holdout/sky_group_candidates.csv
+- results/v5/batches/*/results/holdout/sky_group_candidates.csv
+- results/v6/batches/*/results/holdout/sky_group_candidates.csv
+- results/v7/first_batch/results/holdout/sky_group_candidates.csv
+- results/v7/rollout/*/results/holdout/sky_group_candidates.csv
+- wide_rollout/*/results/holdout/sky_group_candidates.csv
+- wide_gaps/*/results/holdout/sky_group_candidates.csv
+- results/v8/rollout/candidate_index.csv
+- results/v11/*/*/sky_group_candidates.csv
+- results/v12/discovery/*/*/main/sky_group_candidates.csv
+- results/v13/discovery/*/*/main/sky_group_candidates.csv
+- results/v14/discovery/*/main/sky_group_candidates.csv
+known:
+- references/codex_benchmark_sources/offical_delve_census_refgalaxy_list.csv
+- references/codex_benchmark_sources/offical_delve_census_refambigous_list.csv
+- references/known_globular_centres.csv
+priority_groups:
+- survey_63-A_base-0.3-001
+- survey_14-A_base-0.3-001
+- survey_51-A_base-0.3-001
+- expand_03-A_base-0.3-003

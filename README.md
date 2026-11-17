@@ -2,6 +2,22 @@
 
 This project searches the North BASS and South DECam photometric catalogs of DESI Legacy Imaging Surveys DR11 for faint Milky Way stellar systems. It measures how often the deeper photometry adds recoveries to PS1 at a comparable review cost. The main science sample spans 20–150 kpc and circularized half-light radii of 3–30 pc. South PS1 is the discovery priority. South DELVE and DES overlap fields provide deeper comparison samples. Nearby and distant search branches have their own calibration.
 
+
+## DR11 whole-footprint runs
+
+The [current science report](fourteenth_science_report.md) links the freeze hashes, measured footprint, unified candidate index and selection trials. North BASS and South DECam have native gr models. South uses separate PS1, DELVE and DES thresholds, with independently calibrated extension and census-excluded strata.
+
+Run these commands from the home-directory project revision on NERSC. The dispatchers use the already registered field files and submit Slurm data tasks. The `--resume` option fills incomplete array chunks after all prior tasks in the cohort exit.
+
+```sh
+export PYTHONPATH=src
+.venv/bin/python scripts/v14_dispatch.py south_ps1 --limit 4
+.venv/bin/python scripts/v14_dispatch.py south_ps1 --limit 4 --resume
+.venv/bin/python scripts/v14_after_scan.py
+```
+
+The snapshot can be submitted on a CPU allocation with `scripts/v14_finalize.sh snapshot`. Released field areas include only completed optical search masks. The HEALPix atlas and planning table carry the sampled footprint proxy separately. FITS, caches and per-star measurements remain in scratch.
+
 ## Current search and selection experiments
 
 The [project memory](docs/PROJECT_MEMORY.md) records the science questions and scope. The [work plan](PLAN.md) defines current tests and acceptance criteria. The [run status](docs/STATUS.md) records completed runs and Slurm IDs. The [thirteenth science report](thirteenth_science_report.md) describes the South PS1 rollout, new matched recovery measurements and the native CCD experiment.

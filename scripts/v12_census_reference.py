@@ -20,7 +20,8 @@ def run(inputs, output):
     mask_path=data/'resources/ps1/ps1d_mask_v2.1.fits'
     bits=yaml.safe_load((resources/'read_config.yaml').read_text())['maskbits']
     bad=sum(bits[k] for k in ('ASSOC','STAR','EBV','DENSITY','FOOT'))
-    rows=[r for p in inputs for r in read_csv(p) if r['survey']=='ps1']
+    trial_paths = [p for p in inputs if not p.stem.endswith(('-response','-by-type'))]
+    rows=[r for p in trial_paths for r in read_csv(p) if r['survey']=='ps1']
     if not rows:
         raise ValueError('No PS1 comparison trials')
     ra,dec,distance,radius,luminosity=np.array([[float(r[k]) for k in

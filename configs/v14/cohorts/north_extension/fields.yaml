@@ -1,0 +1,2996 @@
+seed: 487140
+plan_sha256: 158b53071ce619536620e3ea9d4b74ad85fb47a172512e220eedb52f886a3484
+prior_raster_inventory: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+fields:
+- id: v14_north_extension_0001
+  ra: 100.22727272727272
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.2818295979178598
+  ownership:
+    partition:
+      ra_lo: 98.18181818181819
+      ra_hi: 102.27272727272727
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0002
+  ra: 104.31818181818181
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.9997587779594665
+  ownership:
+    partition:
+      ra_lo: 102.27272727272727
+      ra_hi: 106.36363636363636
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0003
+  ra: 108.4090909090909
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.9210749987209197
+  ownership:
+    partition:
+      ra_lo: 106.36363636363636
+      ra_hi: 110.45454545454545
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0004
+  ra: 112.5
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.012872741165891
+  ownership:
+    partition:
+      ra_lo: 110.45454545454545
+      ra_hi: 114.54545454545455
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0005
+  ra: 116.5909090909091
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.7441571064544559
+  ownership:
+    partition:
+      ra_lo: 114.54545454545455
+      ra_hi: 118.63636363636364
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0006
+  ra: 267.9545454545455
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.5901283442891017
+  ownership:
+    partition:
+      ra_lo: 265.90909090909093
+      ra_hi: 270.0
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0007
+  ra: 272.0454545454545
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.9997587779594665
+  ownership:
+    partition:
+      ra_lo: 270.0
+      ra_hi: 274.09090909090907
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0008
+  ra: 276.1363636363636
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.012872741165891
+  ownership:
+    partition:
+      ra_lo: 274.09090909090907
+      ra_hi: 278.1818181818182
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0009
+  ra: 280.22727272727275
+  dec: 31.747881822852055
+  width: 3.548212453692078
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.1375760026471906
+  ownership:
+    partition:
+      ra_lo: 278.1818181818182
+      ra_hi: 282.27272727272725
+      dec_lo: 30.0
+      dec_hi: 33.529411764705884
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0010
+  ra: 96.42857142857143
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.2720544310231747
+  ownership:
+    partition:
+      ra_lo: 94.28571428571429
+      ra_hi: 98.57142857142857
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0011
+  ra: 100.71428571428572
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.051732186704099
+  ownership:
+    partition:
+      ra_lo: 98.57142857142857
+      ra_hi: 102.85714285714286
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0012
+  ra: 105.0
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.209099745181192
+  ownership:
+    partition:
+      ra_lo: 102.85714285714286
+      ra_hi: 107.14285714285714
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0013
+  ra: 109.28571428571428
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.959934444259126
+  ownership:
+    partition:
+      ra_lo: 107.14285714285714
+      ra_hi: 111.42857142857143
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0014
+  ra: 113.57142857142857
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.461603842414997
+  ownership:
+    partition:
+      ra_lo: 111.42857142857143
+      ra_hi: 115.71428571428571
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0015
+  ra: 117.85714285714286
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.5114445650505548
+  ownership:
+    partition:
+      ra_lo: 115.71428571428571
+      ra_hi: 120.0
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0016
+  ra: 267.8571428571429
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.17048152168351827
+  ownership:
+    partition:
+      ra_lo: 265.7142857142857
+      ra_hi: 270.0
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0017
+  ra: 272.1428571428571
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.3566921367636
+  ownership:
+    partition:
+      ra_lo: 270.0
+      ra_hi: 274.2857142857143
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0018
+  ra: 276.42857142857144
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.209099745181192
+  ownership:
+    partition:
+      ra_lo: 274.2857142857143
+      ra_hi: 278.57142857142856
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0019
+  ra: 280.71428571428567
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 8.327366636079546
+  ownership:
+    partition:
+      ra_lo: 278.57142857142856
+      ra_hi: 282.85714285714283
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0020
+  ra: 285.0
+  dec: 35.27488367255752
+  width: 3.5480155911626325
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.1967094480963672
+  ownership:
+    partition:
+      ra_lo: 282.85714285714283
+      ra_hi: 287.14285714285717
+      dec_lo: 33.529411764705884
+      dec_hi: 37.05882352941177
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0021
+  ra: 95.55555555555554
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.6523593640094847
+  ownership:
+    partition:
+      ra_lo: 93.33333333333333
+      ra_hi: 97.77777777777777
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0022
+  ra: 100.0
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.209099745181192
+  ownership:
+    partition:
+      ra_lo: 97.77777777777777
+      ra_hi: 102.22222222222223
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0023
+  ra: 104.44444444444446
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.130415965942644
+  ownership:
+    partition:
+      ra_lo: 102.22222222222223
+      ra_hi: 106.66666666666667
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0024
+  ra: 108.88888888888889
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.37958126686471
+  ownership:
+    partition:
+      ra_lo: 106.66666666666667
+      ra_hi: 111.11111111111111
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0025
+  ra: 113.33333333333334
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 8.57653193700161
+  ownership:
+    partition:
+      ra_lo: 111.11111111111111
+      ra_hi: 115.55555555555556
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0026
+  ra: 117.77777777777777
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.013113963206424481
+  ownership:
+    partition:
+      ra_lo: 115.55555555555556
+      ra_hi: 120.0
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 65
+- id: v14_north_extension_0027
+  ra: 268.8888888888889
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.07868377923854689
+  ownership:
+    partition:
+      ra_lo: 266.6666666666667
+      ra_hi: 271.1111111111111
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0028
+  ra: 273.3333333333333
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.26489439431863
+  ownership:
+    partition:
+      ra_lo: 271.1111111111111
+      ra_hi: 275.55555555555554
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0029
+  ra: 277.77777777777777
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.130415965942644
+  ownership:
+    partition:
+      ra_lo: 275.55555555555554
+      ra_hi: 280.0
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0030
+  ra: 282.22222222222223
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.369806099970026
+  ownership:
+    partition:
+      ra_lo: 280.0
+      ra_hi: 284.44444444444446
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0031
+  ra: 286.6666666666667
+  dec: 38.80166572339742
+  width: 3.5477707650508647
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.4589887122248568
+  ownership:
+    partition:
+      ra_lo: 284.44444444444446
+      ra_hi: 288.8888888888889
+      dec_lo: 37.05882352941177
+      dec_hi: 40.58823529411765
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0032
+  ra: 95.84415584415585
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 6.478297823973693
+  ownership:
+    partition:
+      ra_lo: 93.50649350649351
+      ra_hi: 98.18181818181819
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0033
+  ra: 100.51948051948052
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.35335334045186
+  ownership:
+    partition:
+      ra_lo: 98.18181818181819
+      ra_hi: 102.85714285714286
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0034
+  ra: 105.1948051948052
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.35335334045186
+  ownership:
+    partition:
+      ra_lo: 102.85714285714286
+      ra_hi: 107.53246753246754
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0035
+  ra: 109.87012987012987
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.35335334045186
+  ownership:
+    partition:
+      ra_lo: 107.53246753246754
+      ra_hi: 112.20779220779221
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0036
+  ra: 114.54545454545455
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.0064363705829455
+  ownership:
+    partition:
+      ra_lo: 112.20779220779221
+      ra_hi: 116.88311688311688
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0037
+  ra: 273.5064935064935
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 8.183113040808877
+  ownership:
+    partition:
+      ra_lo: 271.16883116883116
+      ra_hi: 275.84415584415586
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0038
+  ra: 278.1818181818182
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.35335334045186
+  ownership:
+    partition:
+      ra_lo: 275.84415584415586
+      ra_hi: 280.5194805194805
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0039
+  ra: 282.8571428571429
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.35335334045186
+  ownership:
+    partition:
+      ra_lo: 280.5194805194805
+      ra_hi: 285.1948051948052
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0040
+  ra: 287.53246753246754
+  dec: 42.32817344581208
+  width: 3.5474640184625463
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.39985526677568
+  ownership:
+    partition:
+      ra_lo: 285.1948051948052
+      ra_hi: 289.87012987012986
+      dec_lo: 40.58823529411765
+      dec_hi: 44.117647058823536
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0041
+  ra: 92.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.504766972427076
+  ownership:
+    partition:
+      ra_lo: 90.0
+      ra_hi: 95.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0042
+  ra: 97.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.02550426029125
+  ownership:
+    partition:
+      ra_lo: 95.0
+      ra_hi: 100.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0043
+  ra: 102.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.973048407465551
+  ownership:
+    partition:
+      ra_lo: 100.0
+      ra_hi: 105.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0044
+  ra: 107.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.038618223497673
+  ownership:
+    partition:
+      ra_lo: 105.0
+      ra_hi: 110.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0045
+  ra: 112.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 6.452069897560845
+  ownership:
+    partition:
+      ra_lo: 110.0
+      ra_hi: 115.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0046
+  ra: 122.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.11802566885782033
+  ownership:
+    partition:
+      ra_lo: 120.0
+      ra_hi: 125.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0047
+  ra: 127.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.07868377923854689
+  ownership:
+    partition:
+      ra_lo: 125.0
+      ra_hi: 130.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 60
+- id: v14_north_extension_0048
+  ra: 272.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.3342854507435575
+  ownership:
+    partition:
+      ra_lo: 270.0
+      ra_hi: 275.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 56
+- id: v14_north_extension_0049
+  ra: 277.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.02550426029125
+  ownership:
+    partition:
+      ra_lo: 275.0
+      ra_hi: 280.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0050
+  ra: 282.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.973048407465551
+  ownership:
+    partition:
+      ra_lo: 280.0
+      ra_hi: 285.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0051
+  ra: 287.5
+  dec: 45.85433562148696
+  width: 3.5470755151114743
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 6.609437456037939
+  ownership:
+    partition:
+      ra_lo: 285.0
+      ra_hi: 290.0
+      dec_lo: 44.117647058823536
+      dec_hi: 47.64705882352942
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0052
+  ra: 94.02985074626866
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 6.871716720166428
+  ownership:
+    partition:
+      ra_lo: 91.34328358208955
+      ra_hi: 96.71641791044776
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0053
+  ra: 99.40298507462686
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.602518641373926
+  ownership:
+    partition:
+      ra_lo: 96.71641791044776
+      ra_hi: 102.08955223880596
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0054
+  ra: 104.77611940298507
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.602518641373926
+  ownership:
+    partition:
+      ra_lo: 102.08955223880596
+      ra_hi: 107.46268656716418
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0055
+  ra: 110.1492537313433
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 7.7765801814097175
+  ownership:
+    partition:
+      ra_lo: 107.46268656716418
+      ra_hi: 112.83582089552239
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0056
+  ra: 115.52238805970148
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.7868377923854688
+  ownership:
+    partition:
+      ra_lo: 112.83582089552239
+      ra_hi: 118.2089552238806
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0057
+  ra: 276.7164179104478
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 9.691218809547692
+  ownership:
+    partition:
+      ra_lo: 274.02985074626866
+      ra_hi: 279.4029850746269
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0058
+  ra: 282.089552238806
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.5894046781675
+  ownership:
+    partition:
+      ra_lo: 279.4029850746269
+      ra_hi: 284.7761194029851
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0059
+  ra: 287.46268656716416
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.946820481052702
+  ownership:
+    partition:
+      ra_lo: 284.7761194029851
+      ra_hi: 290.14925373134326
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0060
+  ra: 292.8358208955224
+  dec: 49.38005701484942
+  width: 3.546576369717653
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.7737238291790444
+  ownership:
+    partition:
+      ra_lo: 290.14925373134326
+      ra_hi: 295.5223880597015
+      dec_lo: 47.64705882352942
+      dec_hi: 51.176470588235304
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0061
+  ra: 94.28571428571428
+  dec: 52.90520688536592
+  width: 3.5459232761868305
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 9.638762956721994
+  ownership:
+    partition:
+      ra_lo: 91.42857142857143
+      ra_hi: 97.14285714285714
+      dec_lo: 51.176470588235304
+      dec_hi: 54.70588235294116
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0062
+  ra: 100.0
+  dec: 52.90520688536592
+  width: 3.5459232761868305
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.933706517846277
+  ownership:
+    partition:
+      ra_lo: 97.14285714285714
+      ra_hi: 102.85714285714286
+      dec_lo: 51.176470588235304
+      dec_hi: 54.70588235294116
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0063
+  ra: 105.71428571428572
+  dec: 52.90520688536592
+  width: 3.5459232761868305
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.946820481052702
+  ownership:
+    partition:
+      ra_lo: 102.85714285714286
+      ra_hi: 108.57142857142857
+      dec_lo: 51.176470588235304
+      dec_hi: 54.70588235294116
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0064
+  ra: 111.42857142857143
+  dec: 52.90520688536592
+  width: 3.5459232761868305
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.2064846149910522
+  ownership:
+    partition:
+      ra_lo: 108.57142857142857
+      ra_hi: 114.28571428571429
+      dec_lo: 51.176470588235304
+      dec_hi: 54.70588235294116
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 14
+- id: v14_north_extension_0065
+  ra: 277.1428571428571
+  dec: 52.90520688536592
+  width: 3.5459232761868305
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 7.186451837120615
+  ownership:
+    partition:
+      ra_lo: 274.2857142857143
+      ra_hi: 280.0
+      dec_lo: 51.176470588235304
+      dec_hi: 54.70588235294116
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 0
+- id: v14_north_extension_0066
+  ra: 282.8571428571429
+  dec: 52.90520688536592
+  width: 3.5459232761868305
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.946820481052702
+  ownership:
+    partition:
+      ra_lo: 280.0
+      ra_hi: 285.7142857142857
+      dec_lo: 51.176470588235304
+      dec_hi: 54.70588235294116
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0067
+  ra: 288.57142857142856
+  dec: 52.90520688536592
+  width: 3.5459232761868305
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.946820481052702
+  ownership:
+    partition:
+      ra_lo: 285.7142857142857
+      ra_hi: 291.42857142857144
+      dec_lo: 51.176470588235304
+      dec_hi: 54.70588235294116
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0068
+  ra: 294.28571428571433
+  dec: 52.90520688536592
+  width: 3.5459232761868305
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.003097574271206
+  ownership:
+    partition:
+      ra_lo: 291.42857142857144
+      ra_hi: 297.14285714285717
+      dec_lo: 51.176470588235304
+      dec_hi: 54.70588235294116
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0069
+  ra: 85.26315789473685
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.026227926412848962
+  ownership:
+    partition:
+      ra_lo: 82.10526315789474
+      ra_hi: 88.42105263157895
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0070
+  ra: 91.57894736842105
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 9.992839963295454
+  ownership:
+    partition:
+      ra_lo: 88.42105263157895
+      ra_hi: 94.73684210526316
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0071
+  ra: 97.89473684210526
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.314011450832588
+  ownership:
+    partition:
+      ra_lo: 94.73684210526316
+      ra_hi: 101.05263157894737
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0072
+  ra: 104.21052631578948
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.314011450832588
+  ownership:
+    partition:
+      ra_lo: 101.05263157894737
+      ra_hi: 107.36842105263158
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0073
+  ra: 110.52631578947368
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.9442053508625626
+  ownership:
+    partition:
+      ra_lo: 107.36842105263158
+      ra_hi: 113.6842105263158
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 14
+- id: v14_north_extension_0074
+  ra: 123.15789473684211
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.18359548488994273
+  ownership:
+    partition:
+      ra_lo: 120.0
+      ra_hi: 126.3157894736842
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0075
+  ra: 129.4736842105263
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.9966612036882605
+  ownership:
+    partition:
+      ra_lo: 126.3157894736842
+      ra_hi: 132.6315789473684
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0076
+  ra: 274.7368421052631
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.32784908016061204
+  ownership:
+    partition:
+      ra_lo: 271.57894736842104
+      ra_hi: 277.89473684210526
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 0
+- id: v14_north_extension_0077
+  ra: 281.0526315789474
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.012390297084824
+  ownership:
+    partition:
+      ra_lo: 277.89473684210526
+      ra_hi: 284.2105263157895
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0078
+  ra: 287.36842105263156
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.327125414039012
+  ownership:
+    partition:
+      ra_lo: 284.2105263157895
+      ra_hi: 290.5263157894737
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0079
+  ra: 293.68421052631584
+  dec: 56.4296002860256
+  width: 3.5450489990052256
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 8.510962120969488
+  ownership:
+    partition:
+      ra_lo: 290.5263157894737
+      ra_hi: 296.8421052631579
+      dec_lo: 54.70588235294116
+      dec_hi: 58.235294117647044
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0080
+  ra: 86.53846153846155
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.2293737450921616
+  ownership:
+    partition:
+      ra_lo: 83.07692307692308
+      ra_hi: 90.0
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0081
+  ra: 93.46153846153845
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.418923156483984
+  ownership:
+    partition:
+      ra_lo: 90.0
+      ra_hi: 96.92307692307692
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0082
+  ra: 100.38461538461539
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.432037119690408
+  ownership:
+    partition:
+      ra_lo: 96.92307692307692
+      ra_hi: 103.84615384615384
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0083
+  ra: 107.3076923076923
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.6554569382806905
+  ownership:
+    partition:
+      ra_lo: 103.84615384615384
+      ra_hi: 110.76923076923077
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0084
+  ra: 121.15384615384616
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.708154013146922
+  ownership:
+    partition:
+      ra_lo: 117.6923076923077
+      ra_hi: 124.61538461538461
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0085
+  ra: 128.0769230769231
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.7966129592801539
+  ownership:
+    partition:
+      ra_lo: 124.61538461538461
+      ra_hi: 131.53846153846155
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0086
+  ra: 252.69230769230768
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.1967094480963672
+  ownership:
+    partition:
+      ra_lo: 249.23076923076923
+      ra_hi: 256.15384615384613
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0087
+  ra: 280.38461538461536
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 8.183113040808877
+  ownership:
+    partition:
+      ra_lo: 276.9230769230769
+      ra_hi: 283.84615384615387
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0088
+  ra: 287.3076923076923
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.445151082896832
+  ownership:
+    partition:
+      ra_lo: 283.84615384615387
+      ra_hi: 290.7692307692308
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0089
+  ra: 294.2307692307692
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.222213708387617
+  ownership:
+    partition:
+      ra_lo: 290.7692307692308
+      ra_hi: 297.6923076923077
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0090
+  ra: 301.1538461538462
+  dec: 59.952966234950864
+  width: 3.543844649307977
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.0491170565139585
+  ownership:
+    partition:
+      ra_lo: 297.6923076923077
+      ra_hi: 304.61538461538464
+      dec_lo: 58.235294117647044
+      dec_hi: 61.76470588235293
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0091
+  ra: 90.0
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.8817331091016465
+  ownership:
+    partition:
+      ra_lo: 86.08695652173913
+      ra_hi: 93.91304347826087
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0092
+  ra: 97.82608695652175
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.973048407465551
+  ownership:
+    partition:
+      ra_lo: 93.91304347826087
+      ra_hi: 101.73913043478261
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0093
+  ra: 105.65217391304347
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.970192055234878
+  ownership:
+    partition:
+      ra_lo: 101.73913043478261
+      ra_hi: 109.56521739130434
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0094
+  ra: 129.1304347826087
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.907961035514495
+  ownership:
+    partition:
+      ra_lo: 125.21739130434783
+      ra_hi: 133.04347826086956
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 59
+- id: v14_north_extension_0095
+  ra: 136.95652173913044
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.2064846149910522
+  ownership:
+    partition:
+      ra_lo: 133.04347826086956
+      ra_hi: 140.8695652173913
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0096
+  ra: 144.7826086956522
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.2753932273349141
+  ownership:
+    partition:
+      ra_lo: 140.8695652173913
+      ra_hi: 148.69565217391303
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0097
+  ra: 152.6086956521739
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.03934188961927344
+  ownership:
+    partition:
+      ra_lo: 148.69565217391303
+      ra_hi: 156.52173913043478
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 70
+- id: v14_north_extension_0098
+  ra: 277.82608695652175
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.665473327215909
+  ownership:
+    partition:
+      ra_lo: 273.9130434782609
+      ra_hi: 281.7391304347826
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0099
+  ra: 285.6521739130435
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.104188039529795
+  ownership:
+    partition:
+      ra_lo: 281.7391304347826
+      ra_hi: 289.5652173913044
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0100
+  ra: 293.47826086956525
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 12.11730200273622
+  ownership:
+    partition:
+      ra_lo: 289.5652173913044
+      ra_hi: 297.39130434782606
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0101
+  ra: 301.30434782608694
+  dec: 63.47489058365672
+  width: 3.5421245209510768
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.366949747739352
+  ownership:
+    partition:
+      ra_lo: 297.39130434782606
+      ra_hi: 305.2173913043478
+      dec_lo: 61.76470588235293
+      dec_hi: 65.29411764705881
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0102
+  ra: 92.1951219512195
+  dec: 66.99470655099124
+  width: 3.53955075630283
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 8.760127421891553
+  ownership:
+    partition:
+      ra_lo: 87.8048780487805
+      ra_hi: 96.58536585365853
+      dec_lo: 65.29411764705881
+      dec_hi: 68.8235294117647
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0103
+  ra: 100.97560975609755
+  dec: 66.99470655099124
+  width: 3.53955075630283
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 9.297799913354957
+  ownership:
+    partition:
+      ra_lo: 96.58536585365853
+      ra_hi: 105.36585365853658
+      dec_lo: 65.29411764705881
+      dec_hi: 68.8235294117647
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0104
+  ra: 136.09756097560978
+  dec: 66.99470655099124
+  width: 3.53955075630283
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.65879573459243
+  ownership:
+    partition:
+      ra_lo: 131.70731707317074
+      ra_hi: 140.4878048780488
+      dec_lo: 65.29411764705881
+      dec_hi: 68.8235294117647
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0105
+  ra: 144.8780487804878
+  dec: 66.99470655099124
+  width: 3.53955075630283
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 6.347158191909449
+  ownership:
+    partition:
+      ra_lo: 140.4878048780488
+      ra_hi: 149.26829268292684
+      dec_lo: 65.29411764705881
+      dec_hi: 68.8235294117647
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0106
+  ra: 153.65853658536588
+  dec: 66.99470655099124
+  width: 3.53955075630283
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.1967094480963672
+  ownership:
+    partition:
+      ra_lo: 149.26829268292684
+      ra_hi: 158.0487804878049
+      dec_lo: 65.29411764705881
+      dec_hi: 68.8235294117647
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0107
+  ra: 285.3658536585366
+  dec: 66.99470655099124
+  width: 3.53955075630283
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 10.36003093307534
+  ownership:
+    partition:
+      ra_lo: 280.9756097560976
+      ra_hi: 289.7560975609756
+      dec_lo: 65.29411764705881
+      dec_hi: 68.8235294117647
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0108
+  ra: 294.1463414634146
+  dec: 66.99470655099124
+  width: 3.53955075630283
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 11.868136701814155
+  ownership:
+    partition:
+      ra_lo: 289.7560975609756
+      ra_hi: 298.5365853658537
+      dec_lo: 65.29411764705881
+      dec_hi: 68.8235294117647
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0109
+  ra: 302.9268292682927
+  dec: 66.99470655099124
+  width: 3.53955075630283
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.1278008357525053
+  ownership:
+    partition:
+      ra_lo: 298.5365853658537
+      ra_hi: 307.3170731707317
+      dec_lo: 65.29411764705881
+      dec_hi: 68.8235294117647
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0110
+  ra: 87.42857142857143
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.6688121235276485
+  ownership:
+    partition:
+      ra_lo: 82.28571428571429
+      ra_hi: 92.57142857142857
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0111
+  ra: 97.71428571428572
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 9.507623324657748
+  ownership:
+    partition:
+      ra_lo: 92.57142857142857
+      ra_hi: 102.85714285714286
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0112
+  ra: 108.0
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.5212197319452399
+  ownership:
+    partition:
+      ra_lo: 102.85714285714286
+      ra_hi: 113.14285714285714
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0113
+  ra: 128.57142857142858
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.1311396320642448
+  ownership:
+    partition:
+      ra_lo: 123.42857142857143
+      ra_hi: 133.71428571428572
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0114
+  ra: 138.85714285714286
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.550545232629295
+  ownership:
+    partition:
+      ra_lo: 133.71428571428572
+      ra_hi: 144.0
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0115
+  ra: 149.14285714285714
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.6227926412848963
+  ownership:
+    partition:
+      ra_lo: 144.0
+      ra_hi: 154.28571428571428
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0116
+  ra: 159.42857142857144
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.4852166386377058
+  ownership:
+    partition:
+      ra_lo: 154.28571428571428
+      ra_hi: 164.57142857142858
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0117
+  ra: 282.8571428571429
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.406291637358626
+  ownership:
+    partition:
+      ra_lo: 277.7142857142857
+      ra_hi: 288.0
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0118
+  ra: 293.1428571428571
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 8.34048059928597
+  ownership:
+    partition:
+      ra_lo: 288.0
+      ra_hi: 298.2857142857143
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0119
+  ra: 303.42857142857144
+  dec: 70.5112670315695
+  width: 3.5354555048362046
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.013113963206424481
+  ownership:
+    partition:
+      ra_lo: 298.2857142857143
+      ra_hi: 308.57142857142856
+      dec_lo: 68.8235294117647
+      dec_hi: 72.35294117647058
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0120
+  ra: 93.10344827586206
+  dec: 74.02241754684982
+  width: 3.528364287699364
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.8130657187983178
+  ownership:
+    partition:
+      ra_lo: 86.89655172413794
+      ra_hi: 99.3103448275862
+      dec_lo: 72.35294117647058
+      dec_hi: 75.88235294117646
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0121
+  ra: 105.51724137931035
+  dec: 74.02241754684982
+  width: 3.528364287699364
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.8030493298630996
+  ownership:
+    partition:
+      ra_lo: 99.3103448275862
+      ra_hi: 111.72413793103448
+      dec_lo: 72.35294117647058
+      dec_hi: 75.88235294117646
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0122
+  ra: 130.34482758620692
+  dec: 74.02241754684982
+  width: 3.528364287699364
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.4589887122248568
+  ownership:
+    partition:
+      ra_lo: 124.13793103448276
+      ra_hi: 136.55172413793105
+      dec_lo: 72.35294117647058
+      dec_hi: 75.88235294117646
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0123
+  ra: 155.17241379310343
+  dec: 74.02241754684982
+  width: 3.528364287699364
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.5999035111837867
+  ownership:
+    partition:
+      ra_lo: 148.9655172413793
+      ra_hi: 161.3793103448276
+      dec_lo: 72.35294117647058
+      dec_hi: 75.88235294117646
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0124
+  ra: 167.58620689655174
+  dec: 74.02241754684982
+  width: 3.528364287699364
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.7606098659726199
+  ownership:
+    partition:
+      ra_lo: 161.3793103448276
+      ra_hi: 173.79310344827587
+      dec_lo: 72.35294117647058
+      dec_hi: 75.88235294117646
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0125
+  ra: 279.3103448275862
+  dec: 74.02241754684982
+  width: 3.528364287699364
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.117784446817287
+  ownership:
+    partition:
+      ra_lo: 273.1034482758621
+      ra_hi: 285.51724137931035
+      dec_lo: 72.35294117647058
+      dec_hi: 75.88235294117646
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0126
+  ra: 291.7241379310345
+  dec: 74.02241754684982
+  width: 3.528364287699364
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.685023661005279
+  ownership:
+    partition:
+      ra_lo: 285.51724137931035
+      ra_hi: 297.9310344827586
+      dec_lo: 72.35294117647058
+      dec_hi: 75.88235294117646
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0127
+  ra: 86.08695652173913
+  dec: 77.52358477183341
+  width: 3.5144757041622707
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.9966612036882605
+  ownership:
+    partition:
+      ra_lo: 78.26086956521739
+      ra_hi: 93.91304347826087
+      dec_lo: 75.88235294117646
+      dec_hi: 79.41176470588235
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0128
+  ra: 101.73913043478261
+  dec: 77.52358477183341
+  width: 3.5144757041622707
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.0064363705829455
+  ownership:
+    partition:
+      ra_lo: 93.91304347826087
+      ra_hi: 109.56521739130434
+      dec_lo: 75.88235294117646
+      dec_hi: 79.41176470588235
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0129
+  ra: 180.0
+  dec: 77.52358477183341
+  width: 3.5144757041622707
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.4721026754312813
+  ownership:
+    partition:
+      ra_lo: 172.17391304347825
+      ra_hi: 187.82608695652175
+      dec_lo: 75.88235294117646
+      dec_hi: 79.41176470588235
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0130
+  ra: 195.6521739130435
+  dec: 77.52358477183341
+  width: 3.5144757041622707
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.4065328593991589
+  ownership:
+    partition:
+      ra_lo: 187.82608695652175
+      ra_hi: 203.47826086956522
+      dec_lo: 75.88235294117646
+      dec_hi: 79.41176470588235
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0131
+  ra: 273.9130434782609
+  dec: 77.52358477183341
+  width: 3.5144757041622707
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.8261796820047423
+  ownership:
+    partition:
+      ra_lo: 266.0869565217391
+      ra_hi: 281.7391304347826
+      dec_lo: 75.88235294117646
+      dec_hi: 79.41176470588235
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids:
+    - 61
+- id: v14_north_extension_0132
+  ra: 289.5652173913044
+  dec: 77.52358477183341
+  width: 3.5144757041622707
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.8655215716240158
+  ownership:
+    partition:
+      ra_lo: 281.7391304347826
+      ra_hi: 297.39130434782606
+      dec_lo: 75.88235294117646
+      dec_hi: 79.41176470588235
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0133
+  ra: 95.29411764705881
+  dec: 81.00310058964952
+  width: 3.4813966259883378
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.4589887122248568
+  ownership:
+    partition:
+      ra_lo: 84.70588235294117
+      ra_hi: 105.88235294117646
+      dec_lo: 79.41176470588235
+      dec_hi: 82.94117647058823
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0134
+  ra: 180.0
+  dec: 81.00310058964952
+  width: 3.4813966259883378
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 4.012872741165891
+  ownership:
+    partition:
+      ra_lo: 169.41176470588235
+      ra_hi: 190.58823529411765
+      dec_lo: 79.41176470588235
+      dec_hi: 82.94117647058823
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0135
+  ra: 201.1764705882353
+  dec: 81.00310058964952
+  width: 3.4813966259883378
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.062231019720383
+  ownership:
+    partition:
+      ra_lo: 190.58823529411765
+      ra_hi: 211.76470588235293
+      dec_lo: 79.41176470588235
+      dec_hi: 82.94117647058823
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0136
+  ra: 243.52941176470588
+  dec: 81.00310058964952
+  width: 3.4813966259883378
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.2622792641284896
+  ownership:
+    partition:
+      ra_lo: 232.94117647058823
+      ra_hi: 254.11764705882354
+      dec_lo: 79.41176470588235
+      dec_hi: 82.94117647058823
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0137
+  ra: 264.7058823529412
+  dec: 81.00310058964952
+  width: 3.4813966259883378
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.8490688121058518
+  ownership:
+    partition:
+      ra_lo: 254.11764705882354
+      ra_hi: 275.29411764705884
+      dec_lo: 79.41176470588235
+      dec_hi: 82.94117647058823
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0138
+  ra: 285.88235294117646
+  dec: 81.00310058964952
+  width: 3.4813966259883378
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 0.18359548488994273
+  ownership:
+    partition:
+      ra_lo: 275.29411764705884
+      ra_hi: 296.47058823529414
+      dec_lo: 79.41176470588235
+      dec_hi: 82.94117647058823
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0139
+  ra: 147.27272727272725
+  dec: 84.42030464821758
+  width: 3.368769635999593
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 1.8097269224865784
+  ownership:
+    partition:
+      ra_lo: 130.9090909090909
+      ra_hi: 163.63636363636363
+      dec_lo: 82.94117647058823
+      dec_hi: 86.47058823529412
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0140
+  ra: 180.0
+  dec: 84.42030464821758
+  width: 3.368769635999593
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 6.242246486258053
+  ownership:
+    partition:
+      ra_lo: 163.63636363636363
+      ra_hi: 196.36363636363637
+      dec_lo: 82.94117647058823
+      dec_hi: 86.47058823529412
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0141
+  ra: 212.72727272727275
+  dec: 84.42030464821758
+  width: 3.368769635999593
+  role: pilot_dev
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 3.003097574271206
+  ownership:
+    partition:
+      ra_lo: 196.36363636363637
+      ra_hi: 229.0909090909091
+      dec_lo: 82.94117647058823
+      dec_hi: 86.47058823529412
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []
+- id: v14_north_extension_0142
+  ra: 245.45454545454544
+  dec: 84.42030464821758
+  width: 3.368769635999593
+  role: pilot_eval
+  layer: north
+  region: north
+  survey: null
+  proxy_area_deg2: 2.858843979000537
+  ownership:
+    partition:
+      ra_lo: 229.0909090909091
+      ra_hi: 261.8181818181818
+      dec_lo: 82.94117647058823
+      dec_hi: 86.47058823529412
+    quality: extension
+    abs_b: 25
+    ebv: 0.1
+    history_version: v14
+    history_id: 92bb491ac7f209d9414a96c974a01dcc0031d91c270f7cb4b6c9f4d86d7fd70d
+    history_ids: []

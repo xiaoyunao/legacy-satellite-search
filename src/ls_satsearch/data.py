@@ -1,5 +1,8 @@
 """Read bounded DR11 products and construct an independent effective-area raster."""
 
+import fcntl
+import hashlib
+import json
 import os
 import re
 from concurrent.futures import ProcessPoolExecutor
@@ -130,6 +133,37 @@ def load_bricks(root, region='south'):
         return f[1].read(columns=[actual[k] for k in cols], upper=True)
 
 
+def _coadd_good_pixels(paths, maskbits):
+    with fitsio.FITS(paths[0]) as f:
+        image = f[1].read()
+        header = dict(f[1].read_header())
+    wcs_keys = ('CTYPE', 'CUNIT', 'CRPIX', 'CRVAL', 'CDELT', 'CD1_', 'CD2_', 'PC1_', 'PC2_', 'PV')
+    header = {k: v for k, v in header.items() if k.startswith(wcs_keys)}
+    good = (image.astype(np.int64) & (maskbits | 1)) == 0
+    for path in paths[1:]:
+        good &= fitsio.read(path, ext=1) > 0
+    return good, header
+
+
+def _packed_coadd(paths, maskbits, cache, region, name):
+    metadata = [Path(p).stat() for p in paths]
+    fingerprints = [(p, f.st_size, f.st_mtime_ns) for p, f in zip(paths, metadata)]
+    digest = hashlib.sha256(json.dumps([maskbits, fingerprints]).encode()).hexdigest()[:16]
+    folder = Path(cache) / region / name[:3]
+    folder.mkdir(exist_ok=True, parents=True)
+    entry = folder / f'{name}-{digest}.npz'
+    if not entry.is_file():
+        with entry.with_suffix('.lock').open('a') as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            if not entry.is_file():
+                good, header = _coadd_good_pixels(paths, maskbits)
+                tmp = entry.with_suffix('.tmp.npz')
+                np.savez(tmp, data=np.packbits(good, axis=1), shape=good.shape, wcs=json.dumps(header))
+                tmp.replace(entry)
+    with np.load(entry, allow_pickle=False) as archive:
+        return archive['data'], tuple(archive['shape']), json.loads(archive['wcs'].item())
+
+
 def _sample_brick(task):
     root, name, ix, iy, ras, decs, maskbits, region = task
     prefix = root / region / 'coadd' / name[:3] / name / f'legacysurvey-{name}'
@@ -137,20 +171,23 @@ def _sample_brick(task):
     if not all(Path(p).is_file() for p in paths):
         return name, ix, iy, None
     ra, dec = np.meshgrid(ras, decs)
-    with fitsio.FITS(paths[0]) as f:
-        image = f[1].read()
-        header = dict(f[1].read_header())
-    wcs_keys = ('CTYPE', 'CUNIT', 'CRPIX', 'CRVAL', 'CDELT', 'CD1_', 'CD2_', 'PC1_', 'PC2_', 'PV')
-    wcs = WCS({k: v for k, v in header.items() if k.startswith(wcs_keys)}, naxis=2)
+    cache = os.getenv('LS_SAT_COADD_CACHE')
+    if cache:
+        pixels, shape, header = _packed_coadd(paths, maskbits, cache, region, name)
+    else:
+        pixels, header = _coadd_good_pixels(paths, maskbits)
+        shape = pixels.shape
+    wcs = WCS(header, naxis=2)
     xx, yy = wcs.world_to_pixel_values(ra, dec)
     xx, yy = np.rint(xx).astype(int), np.rint(yy).astype(int)
-    inside = (xx >= 0) & (yy >= 0) & (xx < image.shape[1]) & (yy < image.shape[0])
-    xx = np.clip(xx, 0, image.shape[1] - 1)
-    yy = np.clip(yy, 0, image.shape[0] - 1)
-    local = inside & ((image[yy, xx].astype(np.int64) & (maskbits | 1)) == 0)
-    for path in paths[1:]:
-        local &= fitsio.read(path, ext=1)[yy, xx] > 0
-    return name, ix, iy, local
+    inside = (xx >= 0) & (yy >= 0) & (xx < shape[1]) & (yy < shape[0])
+    xx = np.clip(xx, 0, shape[1] - 1)
+    yy = np.clip(yy, 0, shape[0] - 1)
+    if cache:
+        good = ((pixels[yy, xx // 8] >> (7 - (xx % 8))) & 1) != 0
+    else:
+        good = pixels[yy, xx]
+    return name, ix, iy, inside & good
 
 
 def make_area(root, field, bricks, maskbits, subsample, census=None, survey=None, *,
@@ -241,9 +278,9 @@ def ownership(ra, dec, plan):
     p = plan['partition']
     keep = ((ra >= p['ra_lo']) & (ra < p['ra_hi']) &
             (dec >= p['dec_lo']) & (dec < p['dec_hi']))
-    for old_ra, half, low, high in plan['previous_cores']:
+    for old_ra, half, low, high in plan.get('previous_cores', ()):
         keep &= ~((abs((ra-old_ra+180) % 360-180) < half) & (dec >= low) & (dec < high))
-    if keep.any():
+    if 'min_abs_b' in plan and keep.any():
         from astropy.coordinates import SkyCoord
         keep[keep] &= abs(SkyCoord(ra[keep],dec[keep],unit='deg').galactic.b.deg) >= plan['min_abs_b']
     return keep
