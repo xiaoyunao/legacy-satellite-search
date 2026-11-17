@@ -6,11 +6,13 @@
 #SBATCH --time=00:30:00
 #SBATCH --output=logs/%x-%j.log
 set -euo pipefail
-export LS_SAT_RUN_VERSION=v6 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg
+version=${LS_SAT_VERSION:-v6}
+profile=${LS_SAT_PROFILE:-${LS_SAT_V6_PROFILE:-}}
+export LS_SAT_RUN_VERSION="$version" OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg
 export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11
 export LS_SAT_DATA="$PSCRATCH/legacy-satellite-search"
 workspace="${LS_SAT_WORKSPACE:-$PWD}"
-export LS_SAT_CONFIG_DIR="$workspace/configs/v6${LS_SAT_V6_PROFILE:+/$LS_SAT_V6_PROFILE}"
+export LS_SAT_CONFIG_DIR="$workspace/configs/$version${profile:+/$profile}"
 export PYTHONPATH="$workspace/src"
 export LS_SAT_V5="$workspace/../discovery-v5"
 module=$1

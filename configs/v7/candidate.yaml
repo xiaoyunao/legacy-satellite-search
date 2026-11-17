@@ -1,0 +1,9 @@
+candidate: expand_03-A_base-0.3-003
+fixed_dm: [18.75, 20.0]
+half_light_arcmin: 0.35
+gaia_match_arcsec: 0.8
+foreground_ruwe_max: 1.4
+foreground_min_parallax_mas: 0.15
+foreground_min_parallax_snr: 3
+hsc_frame_ids: [HSCA26120409, HSCA26120720, HSCA26125520]
+hsc_calibration_required: [bias, flat, photometric_zero_point, astrometric_residuals]
