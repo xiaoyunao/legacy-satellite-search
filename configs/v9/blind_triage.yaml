@@ -1,0 +1,13 @@
+seed: 486179
+compact_cut_arcmin: 1.5
+mask_context_arcmin: 2.0
+ts_strata: 3
+per_stratum: 2
+low_priority_count: 24
+weak_controls: [DELVE_3, DELVE_4, DELVE_5, DELVE_7]
+# Fixed before reviewing shuffled, anonymized panels. Keep the residual score hidden.
+decisions:
+  targeted: centered PSF excess, a plausible old-population locus over several magnitude bins, and mostly clean images
+  ambiguous: a possible system where very few stars, blending, or an observing gradient prevents a confident ranking
+  low: field-star fluctuation, visibly blended or extended sources, or a clear mask or spatial-background explanation
+control_policy: Use baseline selected groups if a control entered the queue. Report upstream misses as missed before visual triage.
