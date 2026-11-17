@@ -109,7 +109,7 @@ def plot(output, ra, dec, eligible, recent, searched, depths, density, purity, e
         use=external&inside
         ax.scatter(x[use],y[use],marker='.',s=2,c='#bf7970',alpha=.45,rasterized=True,label='Euclid imaging coverage')
     candidate_legend=[]
-    for code,shape,c in (('L0','o','#cc630c'),('known','^','#325328'),('Tan Table 8','D','#6c528e')):
+    for code,shape,c in (('L0','o','#cc630c'),('known','^','#325328'),('Tan Table 8','D','#6c528e'),('known background','s','#5c496e')):
         sub=[r for r in candidates if r['plot_level']==code]
         if sub:
             ax.scatter(np.deg2rad([180-float(r['ra_deg']) for r in sub]),
@@ -136,7 +136,7 @@ def plot(output, ra, dec, eligible, recent, searched, depths, density, purity, e
         ax.set_title(title)
     for ax in axes.flat:
         ax.grid(alpha=.25)
-        ax.set_xticklabels([])
+        ax.set_xticks(np.deg2rad(np.arange(-120,121,60)),['20h','16h','12h','8h','4h'])
         ax.tick_params(labelsize=7)
     save(fig,output/'dr11_search_atlas')
 
@@ -187,6 +187,38 @@ def run(output):
             candidates.append({**r,**fit,'layer':path.parent.name,'evidence_level':'L0',
                                'plot_level':'known' if possible_known else 'L0',
                                'near_known_catalog_position':possible_known})
+    known_ref=[r for r in read_csv(Path(
+        'references/codex_benchmark_sources/offical_delve_census_refgalaxy_list.csv'))
+        if r.get('ra') and r.get('dec') and r.get('distance_modulus')]
+    known_sky=SkyCoord([float(r['ra']) for r in known_ref],
+                       [float(r['dec']) for r in known_ref],unit='deg')
+    for group in candidates:
+        pos=SkyCoord(float(group['ra_deg']),float(group['dec_deg']),unit='deg')
+        sep=pos.separation(known_sky).arcmin
+        nearest=int(np.argmin(sep))
+        ref=known_ref[nearest]
+        dm=float(group.get('best_dm') or group['dm'])
+        delta=dm-float(ref['distance_modulus'])
+        identified=sep[nearest]<=2 and abs(delta)<=.75
+        group.update(nearest_census_name=ref['name'],nearest_census_arcmin=sep[nearest],
+                     nearest_census_dm_difference=delta)
+        if identified:
+            group.update(plot_level='known',triage='known census position and distance')
+        elif group.get('best_ts') is None or group['best_ts']=='':
+            group['triage']='C unavailable or not yet run'
+        elif float(group.get('best_ts_without_top3') or 0)<1:
+            group['triage']='weak or dominated by few sources in C'
+        else:
+            group['triage']='retained L0, public context requires review'
+    context=Path('results/v12/discovery/visual_context.csv')
+    contextual={r['group_id']:r for r in read_csv(context)} if context.exists() else {}
+    for group in candidates:
+        if context_row:=contextual.get(group['group_id']):
+            group.update(public_context=context_row['known_context'],triage=context_row['triage'])
+            if context_row['triage']=='known census position and distance':
+                group['plot_level']='known'
+            elif context_row['triage'].startswith(('known','Magellanic','broad response')):
+                group['plot_level']='known background'
     # Approximate display of the per-field source diagnostics. The actual field
     # denominators are the manifest area rather than the HEALPix rendering.
     density=np.full(len(ra),np.nan); purity=density.copy()

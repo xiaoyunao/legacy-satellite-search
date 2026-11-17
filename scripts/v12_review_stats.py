@@ -4,6 +4,8 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
+from astropy.coordinates import SkyCoord
+import yaml
 
 from ls_satsearch.run import read_csv, write_csv
 from v12_selection_stats import interval
@@ -63,6 +65,28 @@ def discovery(root, output):
     save(fig,output,'discovery_review_load')
 
 
+def observing_summary(root,output):
+    by_layer={name:[] for name in LAYER.values()}
+    for path in sorted((root/'discovery').glob('*/*/field_metrics.csv')):
+        by_layer[LAYER[path.parent.name]].extend(read_csv(path))
+    rows=[]
+    for name,fields in by_layer.items():
+        if not fields:
+            continue
+        def values(key):
+            return np.array([float(r[key]) for r in fields if r.get(key)])
+        source_psf=np.array([int(r['inner_psf']) for r in fields])
+        source_other=np.array([int(r['inner_non_psf']) for r in fields])
+        psf_fraction=source_psf/np.maximum(1,source_psf+source_other)
+        rows.append(dict(layer=name,fields=len(fields),median_corrected_g5=np.median(values('g_depth')),
+                         median_corrected_r5=np.median(values('r_depth')),
+                         median_g_seeing_arcsec=np.median(values('g_seeing')),
+                         median_psf_fraction=np.median(psf_fraction),
+                         scope='Medians of field medians over selected sources'))
+    if rows:
+        write_csv(output/'observing_conditions.csv',rows)
+
+
 def controls(root,output):
     rows=read_csv(root/'table8/tan_table8_ls.csv')
     targets=list(dict.fromkeys(r['name'] for r in rows))
@@ -112,11 +136,39 @@ def image(root,output):
     write_csv(output/'coadd_detection_response.csv',table)
 
 
+def visual_context(root):
+    checks=yaml.safe_load(Path('configs/v12/visual_context.yaml').read_text())
+    results=[]
+    seen=set()
+    for check in checks:
+        center=SkyCoord(check['ra'],check['dec'],unit='deg')
+        table=root/'discovery/v12'/check['layer']/'main/sky_group_candidates.csv'
+        if not table.exists():
+            continue
+        for row in read_csv(table):
+            if (row['representative']!='True' or row['budget']!='0.3' or row['field']!=check['field']
+                    or row['group_id'] in seen or
+                    float(row['rh_arcmin'])<check.get('min_rh_arcmin',0) or
+                    row['group_id']!=check.get('group',row['group_id'])):
+                continue
+            pos=SkyCoord(float(row['ra_deg']),float(row['dec_deg']),unit='deg')
+            separation=center.separation(pos).arcmin
+            if separation<=check['radius_arcmin']:
+                seen.add(row['group_id'])
+                results.append(dict(group_id=row['group_id'],known_context=check['name'],
+                    center_separation_arcmin=separation,contextual_radius_arcmin=check['radius_arcmin'],
+                    **{k:check[k] for k in ('triage','reason','source')}))
+    if results:
+        write_csv(root/'discovery/visual_context.csv',results)
+
+
 if __name__=='__main__':
     root=Path('results/v12')
     out=root/'figures'
     out.mkdir(exist_ok=True,parents=True)
+    visual_context(root)
     with plt.rc_context({'font.family':'serif','svg.fonttype':'none','pdf.fonttype':42}):
         discovery(root,out)
+        observing_summary(root,out)
         controls(root,out)
         image(root,out)

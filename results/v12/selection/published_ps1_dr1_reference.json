@@ -1,0 +1,9 @@
+{
+  "job": "61464044",
+  "source_commit": "1a02f50d25cac74c02ddba8401a5af20aa2db4fe",
+  "model_sha256": "25b6ff3696b3abf2f31e15ac6a95e6c5d3d8f4f99e4d047c9897ff8ba8e9786f",
+  "density_sha256": "8b1dda006c4f73bbbedbbb7981d87649a1198f202b608e12cfcda325dd2ac63c",
+  "mask_sha256": "0b0ad4afee6aaba57972f2a6dfa47221295521e2b1178e231dc0094ca99524c9",
+  "xgboost": "2.1.4",
+  "scope": "Published PS1 DR1 thresholds only. Survey predictions use requested/realized V proxy; they have no matched-review-cost interpretation relative to internal PS1 DR2."
+}

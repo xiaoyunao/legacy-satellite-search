@@ -1,0 +1,29 @@
+{
+  "expnum": 792757,
+  "query_sha256": "83136ed7bf760e53fea09a635496c914af0e5344e2351499c78d0f5844fa172a",
+  "source_query": "https://astroarchive.noirlab.edu/api/sia/vohdu?POS=346.59235%2C31.19115&SIZE=.15&VERB=3&format=json",
+  "products": [
+    {
+      "filename": "weight-49.fits",
+      "sha256": "43b3e22cc832b3cbbf632cac0a5a623646b2e83db346d4df1aa5dea189cda970",
+      "bytes": 5302080,
+      "url": "https://astroarchive.noirlab.edu/api/retrieve/17d4ee5e14e9ef54967471157da51fe2/?hdus=0,49",
+      "archive_full_product_md5": "17d4ee5e14e9ef54967471157da51fe2"
+    },
+    {
+      "filename": "dq-49.fits",
+      "sha256": "e039c948a6ff7113c42b854efe3557224ff41b193f738cfb19d56a48d66c9614",
+      "bytes": 178560,
+      "url": "https://astroarchive.noirlab.edu/api/retrieve/6f020f8c851df2e3dd1dd766606162bd/?hdus=0,49",
+      "archive_full_product_md5": "6f020f8c851df2e3dd1dd766606162bd"
+    },
+    {
+      "filename": "image-49.fits",
+      "sha256": "d394e2844c7bf42ddd0fa5c0ae5d6a18f72d6dcf1a88153f26d731fefc569081",
+      "bytes": 5290560,
+      "url": "https://astroarchive.noirlab.edu/api/retrieve/9723ded3f4e1a490a2189711a2413e83/?hdus=0,49",
+      "archive_full_product_md5": "9723ded3f4e1a490a2189711a2413e83"
+    }
+  ],
+  "scope": "Only selected HDU bytes were retrieved."
+}

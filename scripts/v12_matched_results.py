@@ -11,12 +11,12 @@ from ls_satsearch.group_budget import evaluate
 from ls_satsearch.hypotheses import truth_branch
 from ls_satsearch.matched import SURVEYS
 from ls_satsearch.ps1_tiles import design
-from ls_satsearch.run import config_path, read_csv, recovery, settings, sha, write_csv
+from ls_satsearch.run import config_path, read_csv, settings, sha, write_csv
 from ls_satsearch.search import CMD, exact_onoff, load_isochrone
 from scipy.spatial import cKDTree
 import yaml
 
-from v12_table8 import compare, cutoff, read_peaks
+from v12_table8 import aperture_coverage, compare, cutoff, read_peaks
 
 
 def run(region, output):
@@ -68,9 +68,12 @@ def run(region, output):
             run_path=data/'runs/v12/matched'/survey/s['id']
             area=np.load(run_path/'coverage.npy',allow_pickle=False)
             sample=np.load(run_path/'sample.npy',allow_pickle=False)
-            details = recovery([],dict(name=target['name'],ra_deg=ra,dec_deg=dec,
-                                       D_kpc=dist,theta_h_arcmin=rh),field,area,cfg,survey)[0]
-            row.update({k:details[k] for k in ('covered','core_valid_fraction','off_valid_fraction')})
+            radius=max(.5,min(rh,max(cfg['radii_arcmin'])))
+            x,y=field.xy(ra,dec)
+            row.update(aperture_coverage(field,area,x,y,radius,cfg),
+                       scale_above_grid=rh>max(cfg['radii_arcmin']))
+            full_scale=aperture_coverage(field,area,x,y,max(.5,rh),cfg)
+            row.update({f'true_scale_{k}':v for k,v in full_scale.items()})
             branch=truth_branch(dist)
             if branch=='far' and dm<=cfg['main_dm_max']:
                 branch='main'
@@ -79,8 +82,6 @@ def run(region, output):
             pos=SkyCoord(ra,dec,unit='deg')
             rows=read_peaks(p.parent/'deduplicated_peaks.csv',branch)
             row.update(compare(rows,pos,dm,rh,cut,cfg),cutoff=cut,branch=branch)
-            radius=max(.5,min(rh,max(cfg['radii_arcmin'])))
-            x,y=field.xy(ra,dec)
             model_path = (data/'resources/isochrones/ps1/bressan2012/iso_a12.0_z0.00010.dat'
                           if survey=='ps1' else data/'resources'/cfg['isochrone'])
             model=load_isochrone(model_path,bands=tuple(m['bands']))
@@ -89,6 +90,16 @@ def run(region, output):
             in_core=np.hypot(sample[:,0]-x,sample[:,1]-y)<=1.5*radius
             row.update(analysis_rh_arcmin=radius,photometric_point_sources=in_core.sum(),cmd_on=on,
                        cmd_off=off,area_on_arcmin2=area_on,area_off_arcmin2=area_off)
+            if in_core.any():
+                mags=sample[in_core,2:4]
+                snr=2.5/np.log(10)/sample[in_core,4:6]
+                g5,r5=np.median(mags+2.5*np.log10(snr/5),axis=0)
+                row.update(core_selected_g5_noise_proxy=g5,core_selected_r5_noise_proxy=r5)
+            if survey=='ps1':
+                parent=m['cutflow']['area']
+                selected=m['cutflow']['area_psf']
+                row.update(field_quality_gri_sources=parent,field_morphology_pointlike=selected,
+                           field_morphology_other=parent-selected)
             audits.append(row)
     write_csv(output/'common_mask_comparison.csv',stats)
     write_csv(output/'tan_table8_common_mask.csv',audits)

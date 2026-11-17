@@ -1,0 +1,11 @@
+seed: 483326
+independent_full_imf: true
+population_templates:
+  north: v12/reference_models/isochrones/bass/ps1_projected10_z0.00020.dat
+  south: v12/reference_models/isochrones/des/bressan2012/iso_a10.0_z0.00020.dat
+  ps1: v12/reference_models/isochrones/ps1/bressan2012/iso_a10.0_z0.00020.dat
+conditions:
+- [50, 10, -1.5]
+- [100, 3, -3.0]
+- [100, 10, -1.5]
+- [150, 10, -3.0]

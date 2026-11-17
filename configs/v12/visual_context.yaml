@@ -1,0 +1,75 @@
+# Post-scan interpretation. Radii select rows to inspect and never change the candidate cut.
+- layer: north
+  field: v12_north_013
+  name: M 106
+  ra: 184.7400833333333
+  dec: 47.30371944444444
+  radius_arcmin: 12
+  triage: known extended galaxy response
+  reason: Elongated point- and extended-source excess crosses the M 106 centre.
+  source: https://simbad.cds.unistra.fr/simbad/sim-id?Ident=NGC+4258
+- layer: north
+  field: v12_north_011
+  name: NGC 3184
+  ra: 154.57077083333337
+  dec: 41.42438055555555
+  radius_arcmin: 5
+  triage: known galaxy environment
+  reason: Four compact hypotheses cluster about the SIMBAD position returned for NGC 3184.
+  source: https://simbad.harvard.edu/simbad/sim-id?Ident=NGC%203184
+- layer: south_des
+  field: v12_south_des_004
+  name: LMC
+  ra: 80.89416666666666
+  dec: -69.75611111111111
+  radius_arcmin: 690
+  triage: Magellanic outskirts context
+  reason: Field-wide gradient toward the LMC, maximal discovery scale and rising radial density.
+  source: https://academic.oup.com/mnras/article/459/1/239/2608797
+- layer: south_des
+  field: v12_south_des_003
+  group: v12_south_des_003-A_base-0.3-001
+  name: NGC 300
+  ra: 13.72269401596
+  dec: -37.68421344511
+  radius_arcmin: 40
+  triage: unresolved broad response near a known galaxy
+  reason: Catalogued galaxy nearby, while the candidate fit uses a 22.4 arcmin radius.
+  source: https://simbad.harvard.edu/simbad/sim-id?Ident=NGC%20300
+- layer: north
+  field: v12_north_013
+  name: M 106
+  ra: 184.7400833333333
+  dec: 47.30371944444444
+  radius_arcmin: 30
+  min_rh_arcmin: 16
+  triage: broad response in known galaxy field
+  reason: Large discovery aperture or background annulus samples the M 106 environment.
+  source: https://simbad.cds.unistra.fr/simbad/sim-id?Ident=NGC+4258
+- layer: north
+  field: v12_north_013
+  name: NGC 4346
+  ra: 185.86650939064998
+  dec: 46.99378946511
+  radius_arcmin: 4
+  triage: known galaxy environment
+  reason: Compact sky modes lie near the catalogue centre of an extended galaxy.
+  source: https://simbad.harvard.edu/simbad/sim-id?Ident=NGC%204346
+- layer: north
+  field: v12_north_013
+  name: NGC 4242
+  ra: 184.37576462644998
+  dec: 45.61930803895
+  radius_arcmin: 3
+  triage: known galaxy environment
+  reason: Highest remaining compact modes are centred within 1 arcmin of the galaxy.
+  source: https://simbad.harvard.edu/simbad/sim-id?Ident=NGC%204242
+- layer: south_delve
+  field: v12_south_delve_008
+  name: Hydra II
+  ra: 185.4286
+  dec: -31.9728
+  radius_arcmin: 4
+  triage: known census position and distance
+  reason: Local broad and compact modes closely follow the known satellite overdensity.
+  source: https://arxiv.org/html/2509.12313v2

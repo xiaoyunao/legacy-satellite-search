@@ -1,0 +1,5 @@
+layer,fields,median_corrected_g5,median_corrected_r5,median_g_seeing_arcsec,median_psf_fraction,scope
+North BASS,24,24.19219207763672,23.671607971191406,1.925542414188385,0.23112639431613102,Medians of field medians over selected sources
+South PS1,38,24.557292938232422,24.035422801971436,1.652681827545166,0.37851385061808873,Medians of field medians over selected sources
+South DELVE,8,24.58432102203369,24.19115400314331,1.5117552876472473,0.3900505575749943,Medians of field medians over selected sources
+South DES,8,25.248562335968018,25.128127098083496,1.430397391319275,0.21610176304676948,Medians of field medians over selected sources

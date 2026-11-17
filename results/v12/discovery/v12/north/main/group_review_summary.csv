@@ -1,0 +1,35 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v12_north_004-A_base-0.3-001,awaiting_visual_review,6,6,6,3,0.05991544142261085,21.0,5.6,0.0,Ursa Major II,216.3035874005736,L0
+v12_north_004-A_base-0.3-002,awaiting_visual_review,6,6,6,5,3.1022617399886556,20.75,11.2,0.0,Ursa Major II,204.6680628363833,L0
+v12_north_009-A_base-0.3-001,awaiting_visual_review,10,10,8,1,0.0,20.5,11.2,0.0,Willman 1,521.6394556356213,L0
+v12_north_009-A_base-0.3-002,awaiting_visual_review,9,9,6,3,0.0,20.5,11.2,0.0,Willman 1,527.8836651236361,L0
+v12_north_009-A_base-0.3-003,awaiting_visual_review,5,5,5,12,0.0,19.75,11.2,0.0,Willman 1,513.6016678953072,L0
+v12_north_009-A_base-0.3-004,awaiting_visual_review,3,3,3,13,0.0,19.75,11.2,0.0,Willman 1,522.953164441866,L0
+v12_north_009-A_base-0.3-005,awaiting_visual_review,5,5,5,14,0.0,19.75,11.2,0.0,Willman 1,623.0117757423794,L0
+v12_north_009-A_base-0.3-006,awaiting_visual_review,1,1,1,15,0.0,18.25,11.2,0.0,Willman 1,541.1421971134203,L0
+v12_north_009-A_base-0.3-007,awaiting_visual_review,5,5,4,21,0.0,20.5,5.6,0.0,Willman 1,504.4267741946042,L0
+v12_north_011-A_base-0.3-001,awaiting_visual_review,14,14,7,23,47.41476521269035,17.75,1.4,25.045936387320367,Ursa Major I,653.8799119276313,L0
+v12_north_011-A_base-0.3-002,awaiting_visual_review,9,9,8,15,34.90308406350559,17.75,2.8,19.65448372779221,Ursa Major I,654.8063840353054,L0
+v12_north_011-A_base-0.3-003,awaiting_visual_review,7,7,7,16,44.60978057358528,18.75,1.0,22.650242351569197,Ursa Major I,653.3922186422028,L0
+v12_north_011-A_base-0.3-004,awaiting_visual_review,6,6,6,20,42.79854531512593,18.75,1.4,22.279669999285673,Ursa Major I,653.7522595568635,L0
+v12_north_011-A_base-0.3-005,awaiting_visual_review,3,3,3,25,0.0,20.5,5.6,0.0,Ursa Major I,667.3581532643203,L0
+v12_north_011-A_base-0.3-006,awaiting_visual_review,3,3,3,26,0.7332008663179943,20.75,11.2,0.0,Ursa Major I,812.7241659992632,L0
+v12_north_011-A_base-0.3-007,awaiting_visual_review,6,6,6,28,0.0,17.0,11.2,0.0,Willman 1,779.3632364672662,L0
+v12_north_013-A_base-0.3-001,awaiting_visual_review,24,24,11,1,2310.7114893607827,16.25,2.8,2266.902761041663,Canes Venatici II,888.404892049031,L0
+v12_north_013-A_base-0.3-002,awaiting_visual_review,12,12,7,11,863.0216704286688,16.25,8.0,835.3322156377537,Canes Venatici II,891.7069517059925,L0
+v12_north_013-A_base-0.3-003,awaiting_visual_review,7,7,6,15,494.84886960793483,17.0,8.0,468.8751378449049,Canes Venatici II,890.6898271347825,L0
+v12_north_013-A_base-0.3-004,awaiting_visual_review,9,9,6,26,1837.056917557179,16.25,1.4,1793.115706398848,Canes Venatici II,891.8807108731845,L0
+v12_north_013-A_base-0.3-005,awaiting_visual_review,3,3,3,24,13.575371416792763,16.25,22.4,5.707702102777517,Canes Venatici II,884.3975002813089,L0
+v12_north_013-A_base-0.3-006,awaiting_visual_review,3,3,3,31,18.65514609563712,16.75,16.0,5.277565292147571,Willman 1,883.3484219523092,L0
+v12_north_013-A_base-0.3-007,awaiting_visual_review,1,1,1,44,84.11812311516059,20.5,11.2,68.12759650609232,Canes Venatici II,877.1715046336614,L0
+v12_north_013-A_base-0.3-008,awaiting_visual_review,3,3,3,46,809.8768086117736,16.25,0.7,773.3348384757969,Canes Venatici II,892.507101876487,L0
+v12_north_013-A_base-0.3-009,awaiting_visual_review,1,1,1,58,196.71970126236755,17.25,1.4,173.4272219644639,Canes Venatici II,885.9281211026993,L0
+v12_north_013-A_base-0.3-010,awaiting_visual_review,10,10,9,67,37.71400442829741,21.0,1.4,16.18824330779634,Canes Venatici II,850.2665397852065,L0
+v12_north_013-A_base-0.3-011,awaiting_visual_review,5,5,4,78,316.56068871981915,20.5,0.7,284.84304608199176,Canes Venatici II,890.410685959665,L0
+v12_north_013-A_base-0.3-012,awaiting_visual_review,5,5,3,72,19.389949768789265,20.0,1.4,5.827080782493976,Canes Venatici II,850.7049015856425,L0
+v12_north_013-A_base-0.3-013,awaiting_visual_review,6,6,4,69,27.302164022808416,20.5,1.0,9.146611841407992,Canes Venatici II,814.7400880529246,L0
+v12_north_014-A_base-0.3-001,awaiting_visual_review,4,4,4,1,1.156907730721251,20.75,11.2,0.0,Draco,537.2825625134004,L0
+v12_north_020-A_base-0.3-001,awaiting_visual_review,7,7,5,1,0.0,19.75,11.2,0.0,Willman 1,577.4230497144113,L0
+v12_north_020-A_base-0.3-002,awaiting_visual_review,4,4,4,3,0.0,16.5,11.2,0.0,Willman 1,637.8663658179603,L0
+v12_north_020-A_base-0.3-003,awaiting_visual_review,3,3,3,4,0.0,16.25,11.2,0.0,Willman 1,562.2788496548491,L0
+v12_north_024-A_base-0.3-001,awaiting_visual_review,2,2,2,1,0.0,20.5,5.6,0.0,Ursa Major I,683.2533991481479,L0

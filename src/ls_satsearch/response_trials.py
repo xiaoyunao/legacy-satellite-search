@@ -71,16 +71,23 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
     area=masks[0]
     ls,_,ps1_response,ps1_bins,ls_point,ps1_point,ls_response,ls_bins,is_point=sr.models(
         field,area,spec,matched,configs['ps1'],ls_config=configs['ls_deep'])
-    paths=[data/'resources'/cfg['isochrone'],data/'resources'/PS1_MODEL]
-    signatures=[np.loadtxt(p,usecols=(0,1,2,3,4,5,6,7,14,15)) for p in paths]
+    physical = yaml.safe_load(physical_plan.read_text()) if physical_plan else None
+    resources = data/'resources'
+    paths=[resources/cfg['isochrone'],resources/PS1_MODEL]
+    injected = physical.get('population_templates', {}) if physical else {}
+    population_paths = ([resources/injected[cfg['region']],resources/injected['ps1']]
+                        if injected else paths)
+    signatures=[np.loadtxt(p,usecols=(0,1,2,3,4,5,6,7,14,15)) for p in population_paths]
     if not np.array_equal(*signatures):
         raise ValueError('PARSEC population rows differ')
     model_ls=load_isochrone(paths[0])
     model_ps1=load_isochrone(paths[1],bands=('gP1','rP1'))
-    with paths[1].open() as f:
+    population_ls=load_isochrone(population_paths[0]) if injected else model_ls
+    population_ps1=(load_isochrone(population_paths[1],bands=('gP1','rP1'))
+                    if injected else model_ps1)
+    with population_paths[1].open() as f:
         headers=next(line[1:].split() for line in f if line.startswith('#') and 'iP1' in line)
-    model_i=np.loadtxt(paths[1],usecols=headers.index('iP1'))
-    physical = yaml.safe_load(physical_plan.read_text()) if physical_plan else None
+    model_i=np.loadtxt(population_paths[1],usecols=headers.index('iP1'))
     seed=[cfg['seed'],int(spec['ra']*1000),physical['seed'] if physical else 55]
     rng=np.random.default_rng(np.random.SeedSequence(seed))
     conditions = physical['conditions'] if physical else [(50,10,28),(100,15,40)]*3
@@ -96,7 +103,8 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
     luminosity_model = model_ls
     if independent:
         # One luminosity convention across both optical regions and the PS1 arm.
-        decam_path = data/'resources/isochrones/des/bressan2012/iso_a12.0_z0.00010.dat'
+        decam_path = (resources/injected['south'] if injected else
+                      resources/'isochrones/des/bressan2012/iso_a12.0_z0.00010.dat')
         if not np.array_equal(signatures[0],np.loadtxt(decam_path,usecols=(0,1,2,3,4,5,6,7,14,15))):
             raise ValueError('DECam and native population row identities differ')
         luminosity_model = load_isochrone(decam_path)
@@ -110,8 +118,8 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
         rh=np.degrees(np.arctan(size/(1000*distance)))*60
         margin=.8 if physical else .4
         valid_model=np.any([np.all(model[0]+dm<=[c['g_max']+margin,c['r_max']+margin],axis=1)
-                            for model,c in ((model_ls,configs['ls_deep']),(model_ps1,configs['ps1']))],axis=0)
-        weights=model_ls[1]*valid_model
+                            for model,c in ((population_ls,configs['ls_deep']),(population_ps1,configs['ps1']))],axis=0)
+        weights=population_ls[1]*valid_model
         if physical:
             total_lum=10**(-.4*normalization)
             scale = total_lum/np.dot(luminosity_model[1],v_flux)
@@ -123,7 +131,7 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
         truth_ra,truth_dec=field.sky(*pos)
         truth_light = {}
         if independent:
-            omitted = faint_rng.poisson(scale*model_ls[1]*(~valid_model))
+            omitted = faint_rng.poisson(scale*population_ls[1]*(~valid_model))
             light = np.sum(v_flux[draw])+np.dot(omitted,v_flux)
             truth_light = dict(actual_MV_proxy=-2.5*np.log10(light) if light>0 else None,
                                N_imf_drawn=n+int(omitted.sum()),
@@ -135,13 +143,13 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
         truth=dict(ra_deg=truth_ra,dec_deg=truth_dec,D_kpc=distance,theta_h_arcmin=rh)
         noise=rng.normal(size=(n,3))
         uniforms=rng.random((2,n))
-        ls_obs=sr.perturb(model_ls[0][draw]+dm,ls_point,pos,rng,standard_noise=noise[:,:2])
+        ls_obs=sr.perturb(population_ls[0][draw]+dm,ls_point,pos,rng,standard_noise=noise[:,:2])
         for survey in SURVEYS:
             c=configs[survey]
             if physical:
                 c=dict(c,dm=[16.5,c.get('main_dm_max',20.75),c['dm'][2]])
             if survey=='ps1':
-                intrinsic=np.column_stack([model_ps1[0][draw]+dm,model_i[draw]+dm+1.682*reddening(ra,dec)])
+                intrinsic=np.column_stack([population_ps1[0][draw]+dm,model_i[draw]+dm+1.682*reddening(ra,dec)])
                 phot,err=sr.perturb(intrinsic,ps1_point,pos,rng,standard_noise=noise)
                 grade,counts=sr.ps1_select(phot,err,c,ps1_response,rng,uniforms=uniforms)
                 model=model_ps1
@@ -188,6 +196,8 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
     write_csv(out/f'{field_id}-ps1-response.csv',ps1_bins)
     write_csv(out/f'{field_id}-ls-error-by-type.csv',audit_errors(field_id,ls,is_point))
     write_json(out/f'{field_id}.json',dict(status='complete',job=os.environ.get('SLURM_JOB_ID'),seed=seed,threshold_policies=policies,
+               synthetic_models={k:sha(p) for k,p in zip(('LS','PS1'),population_paths)},
+               fixed_search_models={k:sha(p) for k,p in zip(('LS','PS1'),paths)},
                model='Common latent rows and sky positions, common standardized gr noise and morphology draws. '
                'Proxy shape response conditional on observed counterpart; unsupported bins use unity. '
                'Catalog entry and image completeness are unmeasured.',

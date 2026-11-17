@@ -1,0 +1,6 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v12_south_des_003-A_base-0.3-001,awaiting_visual_review,6,6,6,1,87.6976330463425,18.5,22.4,76.91051707332008,Sculptor,244.1201917407982,L0
+v12_south_des_004-A_base-0.3-001,awaiting_visual_review,7,7,7,3,9099.737703941413,17.75,22.4,9076.22475275283,OGLE-CL LMC 874,153.5885781292647,L0
+v12_south_des_004-A_base-0.3-002,awaiting_visual_review,2,2,2,8,6233.881009918738,17.75,22.4,6214.09358337638,OGLE-CL LMC 874,171.24857175712737,L0
+v12_south_des_004-A_base-0.3-003,awaiting_visual_review,6,6,6,11,5452.674592353744,17.75,22.4,5430.461582037622,OGLE-CL LMC 874,181.24172786952835,L0
+v12_south_des_004-A_base-0.3-004,awaiting_visual_review,2,2,2,16,4726.780503250318,17.75,22.4,4710.694000125306,OGLE-CL LMC 874,202.97979604146744,L0

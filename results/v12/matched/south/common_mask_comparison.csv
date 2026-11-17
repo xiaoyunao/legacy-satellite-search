@@ -1,0 +1,7 @@
+region,survey,policy,branch,budget,cutoff,dev_area_deg2,eval_area_deg2,evaluation_kind,target_dev_sky_groups,dev_sky_groups,evaluation_sky_groups,benchmark_n,spatial_n,correct_mode_n,blind_correct_n
+south,ls_base,A_base,main,0.3,5.7890987854427625,12.381576003086417,6.05131172839506,development,3,3,0,0,0,0,0
+south,ls_base,A_base,far,0.3,5.177008396761303,12.381576003086417,6.05131172839506,development,3,3,4,0,0,0,0
+south,ls_deep,A_base,main,0.3,6.02890805457013,12.381576003086417,6.05131172839506,development,3,3,14,0,0,0,0
+south,ls_deep,A_base,far,0.3,5.5155816030611104,12.381576003086417,6.05131172839506,development,3,3,13,0,0,0,0
+south,ps1,A_base,main,0.3,6.216881700978023,12.381576003086417,6.05131172839506,development,3,3,1,0,0,0,0
+south,ps1,A_base,far,0.3,6.037123743359074,12.381576003086417,6.05131172839506,development,3,3,2,0,0,0,0

@@ -196,6 +196,16 @@
     "HSC SSP W-spring": {
       "status": "query_failed",
       "reason": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>"
+    },
+    "HSCLA calibrated cutout": {
+      "status": "http_error",
+      "http_status": 405,
+      "url": "https://hscla.mtk.nao.ac.jp/das_cutout/la2014/"
+    },
+    "HSCLA map": {
+      "status": "http_error",
+      "http_status": 405,
+      "url": "https://hscla.mtk.nao.ac.jp/hscMap/"
     }
   },
   "scope": "Metadata geometry only. Overlap, product access and depth require actual calibrated pixels."

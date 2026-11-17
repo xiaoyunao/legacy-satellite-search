@@ -1,0 +1,119 @@
+{
+  "status": "complete",
+  "job": "61462728",
+  "seed": [
+    481705,
+    244903,
+    483320
+  ],
+  "threshold_policies": {
+    "ls_base": {
+      "sha256": "f73cbda7f50216e54ebd4123b57d165bda4d5f511a3e3ada43b94131a91ecaa2",
+      "path": "results/v12/matched/north/ls_base/groups/sky_group_policy.json"
+    },
+    "ls_deep": {
+      "sha256": "89c80cc7b5ea1b6fce76c954976c5e0b86d68179c2c538894a5ee0a1db8b0d9d",
+      "path": "results/v12/matched/north/ls_deep/groups/sky_group_policy.json"
+    },
+    "ps1": {
+      "sha256": "4cf12451f7f1e240d7f70f90451c7f92452062f33b0f38d48c2c50765ee16650",
+      "path": "results/v12/matched/north/ps1/groups/sky_group_policy.json"
+    }
+  },
+  "model": "Common latent rows and sky positions, common standardized gr noise and morphology draws. Proxy shape response conditional on observed counterpart; unsupported bins use unity. Catalog entry and image completeness are unmeasured.",
+  "physical_plan": {
+    "seed": 483320,
+    "independent_full_imf": true,
+    "conditions": [
+      [
+        50,
+        3,
+        -1.5
+      ],
+      [
+        50,
+        10,
+        -1.5
+      ],
+      [
+        50,
+        30,
+        -3.0
+      ],
+      [
+        50,
+        30,
+        -1.5
+      ],
+      [
+        100,
+        3,
+        -3.0
+      ],
+      [
+        100,
+        3,
+        -1.5
+      ],
+      [
+        100,
+        10,
+        -3.0
+      ],
+      [
+        100,
+        10,
+        -1.5
+      ],
+      [
+        100,
+        30,
+        -3.0
+      ],
+      [
+        100,
+        30,
+        -1.5
+      ],
+      [
+        150,
+        3,
+        -3.0
+      ],
+      [
+        150,
+        3,
+        -1.5
+      ],
+      [
+        150,
+        10,
+        -3.0
+      ],
+      [
+        150,
+        10,
+        -1.5
+      ],
+      [
+        150,
+        30,
+        -3.0
+      ],
+      [
+        150,
+        30,
+        -1.5
+      ],
+      [
+        100,
+        80,
+        -3.0
+      ]
+    ]
+  },
+  "physical_plan_sha256": "7432ffa16ad17eaaecfecf9cf421974361ef5cdabe11085600a3213ca364b8ee",
+  "search_dm_branch": "main",
+  "luminosity_definition": "expected IMF-integrated V proxy, V=g-0.59(g-r)-0.01 in DECam AB; injection draws near either sample limit",
+  "full_population_luminosity_draw": true
+}

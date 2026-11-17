@@ -1,0 +1,7 @@
+{
+  "job_id": "61462655",
+  "main_dm_max": 21.0,
+  "method": "full raw-template replay before distance-branch dedup",
+  "validation": "fresh frozen evaluation",
+  "policy_sha256": "41417b16a3bf7186b3ad2dee5fdb7dab23bcf5310b3afba11f58e6cb72f6c2ec"
+}

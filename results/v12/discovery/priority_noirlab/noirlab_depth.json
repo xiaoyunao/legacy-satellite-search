@@ -1,0 +1,17 @@
+{
+  "job": "61462707",
+  "expnum": 792757,
+  "aperture_radius_pixels": 4,
+  "core_usable_fraction": 0.0,
+  "annulus_usable_fraction": 0.0,
+  "center_usable": false,
+  "measurements": [
+    {
+      "ccd": "N18",
+      "status": "insufficient PS1 calibrators",
+      "calibrators": 0,
+      "core_fraction": 0.0
+    }
+  ],
+  "scope": "Positive weight and zero DQ, complete aperture and numerically valid margins. Empirical PS1 g calibration and local blank-aperture noise. Completeness remains unmeasured."
+}

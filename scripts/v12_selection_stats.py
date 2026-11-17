@@ -62,13 +62,23 @@ def summarize(trials, output):
     return recovery,paired
 
 
+def display_versions(rows):
+    # Keep a re-used background with its own search and cutoff version.
+    latest={}
+    for region in sorted({r['region'] for r in rows}):
+        versions={r['version'] for r in rows if r['region']==region}
+        latest[region]=next(v for v in ('v12','v12-south-archive','v10','v9') if v in versions)
+    return latest
+
+
 def figure(output, recovery, paired):
     # A gridded display only; avoid interpolating the sparse cells into a
     # claimed continuous selection function.
-    version='v12' if any(r['version']=='v12' for r in recovery) else 'v10'
-    regions=sorted({r['region'] for r in recovery if r['version']==version})
+    versions=display_versions(recovery)
+    regions=list(versions)
     fig,axs=plt.subplots(2,len(regions),figsize=(6.1*len(regions),7.7),squeeze=False,layout='constrained')
     for j,region in enumerate(regions):
+        version=versions[region]
         rows=[r for r in recovery if r['version']==version and r['region']==region and r['metric']=='spatial']
         cells=sorted({(r['D_kpc'],r['rh_pc'],r['expected_MV_proxy']) for r in rows})
         index={cell:i for i,cell in enumerate(cells)}
@@ -109,6 +119,99 @@ def figure(output, recovery, paired):
     plt.close(fig)
 
 
+def paired_heatmap(output, paired):
+    versions=display_versions(paired)
+    shown=[r for r in paired if r['version']==versions[r['region']] and r['metric']=='spatial'
+           and r['second']=='ps1' and r['first']=='ls_deep']
+    if not shown:
+        return
+    regions=sorted({r['region'] for r in shown})
+    distances=sorted({r['D_kpc'] for r in shown})
+    radii=sorted({r['rh_pc'] for r in shown})
+    light=sorted({r['expected_MV_proxy'] for r in shown})
+    fig,axs=plt.subplots(len(regions),len(distances),figsize=(3.4*len(distances),3.2*len(regions)),
+                         squeeze=False,layout='constrained')
+    for row,region in enumerate(regions):
+        for col,dist in enumerate(distances):
+            axis=axs[row,col]
+            data=np.full((len(radii),len(light)),np.nan)
+            d={(r['rh_pc'],r['expected_MV_proxy']):r for r in shown
+               if (r['region'],r['D_kpc'])==(region,dist)}
+            for y,rh in enumerate(radii):
+                for x,mv in enumerate(light):
+                    point=d.get((rh,mv))
+                    if point is None:
+                        continue
+                    data[y,x]=point['difference']
+                    string=f"{point['wins']-point['losses']:+d}/{point['N']}"
+                    axis.text(x,y,string,ha='center',va='center',fontsize=9,
+                              color='white' if abs(point['difference'])>.6 else 'black')
+            c=axis.imshow(data,cmap='RdBu_r',vmin=-1,vmax=1,origin='lower',aspect='auto')
+            axis.set_facecolor('#e7e7e7')
+            axis.set_title(f'{region.title()} · {dist:g} kpc')
+            axis.set_xticks(range(len(light)),[f'{v:g}' for v in light])
+            axis.set_yticks(range(len(radii)),[f'{v:g}' for v in radii])
+            if col==0:
+                axis.set_ylabel('Half-light radius (pc)')
+            if row==len(regions)-1:
+                axis.set_xlabel('Expected integrated V proxy (mag)')
+    fig.colorbar(c,ax=axs,label='Paired efficiency difference (deeper LS − PS1 DR2)',shrink=.8)
+    for ext in ('png','pdf','svg'):
+        dest=output/f'paired_difference_heatmap.{ext}'
+        fig.savefig(dest,dpi=200)
+        if ext=='svg':
+            dest.write_text('\n'.join(line.rstrip() for line in dest.read_text().splitlines())+'\n')
+    plt.close(fig)
+
+
+def background_summary(files, output):
+    rows=[]
+    for file in files:
+        trials=read_csv(file)
+        if not trials:
+            continue
+        errors=read_csv(file.with_name(file.stem+'-ls-error-by-type.csv'))
+        g_sigma=next((r['sigma_p50'] for r in errors if r['band']=='g'
+                      and r['morphology']=='point' and r['bin_center']=='23.0'),None)
+        for s in SURVEYS:
+            arm=[r for r in trials if r['survey']==s]
+            if not arm:
+                continue
+            n=len(arm)
+            recovered=sum(r['spatial']=='True' for r in arm)
+            lo,hi=interval(recovered,n)
+            rows.append(dict(field=arm[0]['field'],region=arm[0].get('region'),
+                             survey=s,ls_g23_point_error=g_sigma,N=n,recovered=recovered,
+                             fraction=recovered/n,lower=lo,upper=hi,
+                             correct_distance=sum(r['correct_mode_exists']=='True' for r in arm),
+                             blank_spatial=sum(r['blank_spatial']=='True' for r in arm),
+                             latent=sum(int(r['N_latent']) for r in arm),
+                             selected=sum(int(r['N_used']) for r in arm),
+                             unsupported=sum(int(r['N_response_unsupported']) for r in arm)))
+    if not rows:
+        return
+    write_csv(output/'background_efficiency.csv',rows)
+    fig,ax=plt.subplots(figsize=(6.5,4.1),layout='constrained')
+    for survey,label,color in zip(SURVEYS,LABELS,COLORS):
+        selected=[r for r in rows if r['survey']==survey and r['ls_g23_point_error']]
+        if selected:
+            p=np.array([r['fraction'] for r in selected])
+            ax.errorbar([float(r['ls_g23_point_error']) for r in selected],p,
+                        yerr=np.maximum(0,[p-np.array([r['lower'] for r in selected]),
+                                           np.array([r['upper'] for r in selected])-p]),
+                        label=label,c=color,fmt='o',ms=4,capsize=2,lw=.7)
+    ax.set_ylabel('Recovery across the sampled physical grid')
+    ax.set_xlabel('Local LS g=23 point-source median error (mag)')
+    ax.set_ylim(-.03,1.03)
+    ax.legend(frameon=False,fontsize=8)
+    for ext in ('png','pdf','svg'):
+        dest=output/f'background_efficiency.{ext}'
+        fig.savefig(dest,dpi=200)
+        if ext=='svg':
+            dest.write_text('\n'.join(line.rstrip() for line in dest.read_text().splitlines())+'\n')
+    plt.close(fig)
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('output',type=Path)
@@ -119,6 +222,10 @@ if __name__=='__main__':
         for f in sorted((Path('results')/version/folder).glob('fresh_??.csv')):
             all_rows.extend(dict(r,version=version) for r in read_csv(f))
     for f in a.fresh:
-        all_rows.extend(dict(r,version='v12') for r in read_csv(f))
+        version='v12-south-archive' if f.parent.name=='south_archive' else 'v12'
+        all_rows.extend(dict(r,version=version) for r in read_csv(f))
     with plt.rc_context({'font.family':'serif','svg.fonttype':'none','pdf.fonttype':42}):
-        figure(a.output,*summarize(all_rows,a.output))
+        recovery,paired=summarize(all_rows,a.output)
+        figure(a.output,recovery,paired)
+        paired_heatmap(a.output,paired)
+        background_summary(a.fresh,a.output)

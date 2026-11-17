@@ -1,0 +1,63 @@
+{
+  "job": "61462985",
+  "query": "SELECT TOP 10000 ra,dec,pmra,pmdec,pmra_error,pmdec_error,parallax,parallax_error,ruwe,phot_g_mean_mag FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(ra,dec),CIRCLE(346.59235093280114,31.191150517657945,0.20))",
+  "service": "https://gea.esac.esa.int/tap-server/tap/sync",
+  "input_sha256": "34053b00aebec6afd63ff6f6bdfc76d8c18f99afb3f1105a2f00febf6dbef438",
+  "raw_gaia_rows": 1268,
+  "ls_fixed_TS": 59.03256928413554,
+  "groups": [
+    {
+      "probability_min": 0.2,
+      "ls_sources": 23,
+      "gaia_good": 5,
+      "bright_gaia": 1,
+      "expected_parallax_mas": 0.07943282347242821,
+      "parallax_3sigma_foreground": 0,
+      "mean_pmra_pmdec": [
+        0.976962251652515,
+        -1.3192209428485042
+      ],
+      "chi2": 30.744153622031586,
+      "dof": 8,
+      "shared_motion_tail": 0.0001560203753996044,
+      "control_status": "complete",
+      "n_random_groups": 4096,
+      "n_at_least_as_coherent": 1274,
+      "empirical_tail": 0.3112033195020747,
+      "control_pool_sizes": [
+        23,
+        14,
+        11,
+        11,
+        17
+      ]
+    },
+    {
+      "probability_min": 0.5,
+      "ls_sources": 19,
+      "gaia_good": 4,
+      "bright_gaia": 0,
+      "expected_parallax_mas": 0.07943282347242821,
+      "parallax_3sigma_foreground": 0,
+      "mean_pmra_pmdec": [
+        -0.5914316249383391,
+        -0.5070950379985362
+      ],
+      "chi2": 5.074479509901522,
+      "dof": 6,
+      "shared_motion_tail": 0.5342967198127395,
+      "control_status": "complete",
+      "n_random_groups": 4096,
+      "n_at_least_as_coherent": 220,
+      "empirical_tail": 0.05394190871369295,
+      "control_pool_sizes": [
+        23,
+        14,
+        11,
+        11
+      ]
+    }
+  ],
+  "control_gaia_cmd_count": 120,
+  "scope": "Gaia test of LS-conditioned fixed membership. Shared proper motion tail is conditional on the photometric sample, with 0.15 mas/yr variance allowance. Control groups match the fitted sample magnitude within 0.6 mag in the 5\u201311 arcmin LS CMD annulus. The tail applies only to the now-fixed near mode."
+}

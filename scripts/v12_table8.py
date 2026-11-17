@@ -11,7 +11,7 @@ from scipy.spatial import cKDTree
 from ls_satsearch.data import select
 from ls_satsearch.group_budget import groups
 from ls_satsearch.hypotheses import truth_branch
-from ls_satsearch.run import field_cache, read_csv, recovery, settings, sha, write_csv
+from ls_satsearch.run import field_cache, read_csv, settings, sha, write_csv
 from ls_satsearch.search import CMD, exact_onoff, load_isochrone
 
 
@@ -58,6 +58,22 @@ def read_peaks(path, branch):
     return [dict({k:float(row[k]) for k in ('x','y','ra_deg','dec_deg','dm','rh_arcmin','score')},
                  rank=row.get('rank'),raw_peak_id=row.get('raw_peak_id'))
             for row in read_csv(path) if row['method']=='A' and row['branch']==branch]
+
+
+def aperture_coverage(field, area, x, y, rh, cfg):
+    cell=2*field.limit/len(area)
+    axis=(np.arange(len(area))+.5)*cell-field.limit
+    iy,ix=(np.flatnonzero(abs(axis-q)<=6*rh) for q in (y,x))
+    rr=np.hypot(axis[ix][None,:]-x,axis[iy][:,None]-y)
+    valid=area[np.ix_(iy,ix)]
+    fractions=[]
+    for on,outer,inner in ((True,1.5,0),(False,6.,3.5)):
+        annulus=(rr<=outer*rh)&((rr>=inner*rh) if not on else True)
+        measured=(valid&annulus).sum()*cell**2
+        fractions.append(min(1.,measured/(np.pi*rh**2*(outer**2-inner**2))))
+    core,bg=fractions
+    return dict(core_valid_fraction=core,off_valid_fraction=bg,
+                covered=core>=cfg['min_on_fraction'] and bg>=cfg['min_off_fraction'])
 
 
 def cmd_audit(field, area, sources, cfg, template, target, dm, rh):
@@ -118,9 +134,13 @@ def audit(output):
             cfg=m['config']
             field,sources,area,_ = field_cache(root,data,m['field'],cfg,None)
             model = load_isochrone(data/'resources'/cfg['isochrone'])
-            details = recovery([],dict(name=truth['name'],ra_deg=target.ra.deg,dec_deg=target.dec.deg,
-                                   D_kpc=distance,theta_h_arcmin=rh),field,area,cfg,depth)[0]
-            row.update({k:details[k] for k in ('covered','core_valid_fraction','off_valid_fraction','scale_below_grid')})
+            x,y=field.xy(target.ra.deg,target.dec.deg)
+            search_radius=max(.5,min(rh,max(cfg['radii_arcmin'])))
+            row.update(aperture_coverage(field,area,x,y,search_radius,cfg),
+                       scale_below_grid=rh<min(cfg['radii_arcmin']),
+                       scale_above_grid=rh>max(cfg['radii_arcmin']))
+            source_geometry=aperture_coverage(field,area,x,y,max(.5,rh),cfg)
+            row.update({f'true_scale_{k}':v for k,v in source_geometry.items()})
             row.update(cmd_audit(field,area,sources,cfg,model,target,dm,rh))
             if m['status']=='complete':
                 if depth=='base' and region=='north':

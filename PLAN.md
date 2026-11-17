@@ -72,6 +72,12 @@ Find Galactic faint stellar systems at 20–150 kpc with circularized half-light
 4. Use repeated physical injections and real coadd PSF recovery to constrain sensitivity to distance, light and angular scale. Preserve exact sparse-bin intervals, dependence on background, and the separate published census PS1 DR1 reference.
 5. Publish the ICRS atlas, diagnostics, reviewed candidate and control tables, quantified area and scientific report. Continue eligible expansion in stages after assessing candidate load and measured increment.
 
+## Next scientific experiment
+
+- Repeat the South PS1 compact experiment around 100 kpc across matched seeing and depth strata. Preserve physical magnitude, common area and blinded review cost. The current new South trial showed 14/28 deeper LS recoveries and 8/28 PS1 recoveries at 100 kpc.
+- Test joint two-band source extraction and star classification with limited image injection, or a genuinely deeper independent catalogue. The coadd single-band response and existing matched counterpart measures calibrate parts of this loss chain.
+- Use measured gains, observing conditions and candidate burden to decide the next South PS1 area. Continue to record remaining eligible footprints and known galaxy or broad-background cases. Keep the expanded distance branch experimental pending further validation.
+
 ## Validation criteria
 
 - Each completed job records input, configuration, effective area, method and timings. Candidate budget calibration checks the entire planned development cohort.
