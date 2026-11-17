@@ -2,6 +2,23 @@
 
 A south-only DECam gr pilot using DESI Legacy Imaging Surveys DR11 photometry. It tests whether the released catalog can recover known faint stellar systems and how often equally sensitive searches flag reviewable peaks where the DELVE census uses PS1. It keeps the near/compact branch separate from the main 20–150 kpc experiment.
 
+## Seventh-round archive and expansion
+
+The [seventh science report](seventh_science_report.md) records the bounded HSC and CFHT experiment and the frozen A-baseline expansion. The [novelty audit](docs/novelty_audit.md) documents the public coordinate checks.
+
+The Slurm jobs in `revisions/verification-v7` use the v6 dependencies and the archived v5 candidate inputs. Original SMOKA FITS files and transfer hashes remain in `$PSCRATCH/legacy-satellite-search/external/smoka/`. The verified CFHT cutouts and provisional image stack also remain in scratch.
+
+```bash
+mkdir -p logs
+sbatch -A desi -q shared scripts/v6.sh compare_candidate_gaia
+sbatch -A desi -q shared scripts/v6.sh cfht_cutouts --background-ring
+sbatch -A desi -q shared scripts/v6.sh hsc_depth_audit --write-stack
+# Submit after both imaging preparations complete.
+sbatch -A desi -q shared scripts/v6.sh image_cmd
+```
+
+Before submitting any production batch, rebuild its per-batch settings from the corresponding registered fields with `register_batches`, using `configs/v7/rollout` or `configs/v7/gaps` as the destination and configuration root. The actual v7 revision already contains the frozen batch settings. From that revision root, use `scripts/v7_rollout.sh` on Slurm and set the array bounds to the registered profile directories. See [execution status](docs/STATUS.md) for submitted jobs and the report for achieved effective area.
+
 ## Candidate verification
 
 The [sixth science report](sixth_science_report.md) records independent PS1 photometry, CFHT imagery, Gaia and DESI follow-up, fixed-policy expansion, and additional compact depth controls. The [registered fields](results/v6/registration) were frozen before opening the new scans.

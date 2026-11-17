@@ -1,0 +1,31 @@
+group_id,image_checked,review_status,evidence_level,notes
+wide_02-A_base-0.3-001,True,Canes_Venatici_I_context,L0,"Dense resolved point-source field, strong residual and proximity within 9 arcmin of Canes Venatici I. Linked as known-system context."
+wide_02-A_base-0.3-002,True,Canes_Venatici_I_context,L0,"Dense resolved point-source field, strong residual and proximity within 9 arcmin of Canes Venatici I. Linked as known-system context."
+wide_02-A_base-0.3-003,True,Canes_Venatici_I_context,L0,"Dense resolved point-source field, strong residual and proximity within 9 arcmin of Canes Venatici I. Linked as known-system context."
+wide_02-A_base-0.3-004,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_02-A_base-0.3-005,True,Canes_Venatici_I_context,L0,"Dense resolved point-source field, strong residual and proximity within 9 arcmin of Canes Venatici I. Linked as known-system context."
+wide_02-A_base-0.3-006,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_03-A_base-0.3-001,True,linear_image_artifact,L0,"Long linear image feature at the candidate scale, low post-removal response."
+wide_03-A_base-0.3-002,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_03-A_base-0.3-003,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_03-A_base-0.3-004,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_05-A_base-0.3-001,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_05-A_base-0.3-002,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_05-A_base-0.3-003,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_05-A_base-0.3-004,True,blended_light,L0,Bright elongated light and blended centroids in both bands.
+wide_05-A_base-0.3-005,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_06-A_base-0.3-001,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_06-A_base-0.3-002,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_06-A_base-0.3-003,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_06-A_base-0.3-004,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_06-A_base-0.3-005,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_06-A_base-0.3-006,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_07-A_base-0.3-001,True,Pisces_II_context,L0,"Fit within 2.1 arcmin of Pisces II, with multiple scales or distance modes from the same neighborhood."
+wide_07-A_base-0.3-002,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_07-A_base-0.3-003,True,Pisces_II_context,L0,"Fit within 2.1 arcmin of Pisces II, with multiple scales or distance modes from the same neighborhood."
+wide_07-A_base-0.3-004,True,Pisces_II_context,L0,"Fit within 2.1 arcmin of Pisces II, with multiple scales or distance modes from the same neighborhood."
+wide_07-A_base-0.3-005,True,Pisces_II_context,L0,"Fit within 2.1 arcmin of Pisces II, with multiple scales or distance modes from the same neighborhood."
+wide_07-A_base-0.3-006,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_07-A_base-0.3-007,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_08-A_base-0.3-001,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.
+wide_09-A_base-0.3-001,True,L0_retained,L0,Checked g and r cutouts and available source thumbnails. C residual below 2 after removing three sources.

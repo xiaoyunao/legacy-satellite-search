@@ -22,6 +22,26 @@ mkdir -p "$batch/logs"
 ln -sfn ../../references "$batch/references"
 cd "$batch"
 launcher="$LS_SAT_WORKSPACE/scripts/v6.sh"
-srun -n "$count" -c 8 --exact -o 'logs/scan-%j-%t.log' bash "$launcher" scan-list "$fields"
+pending="$batch/logs/scan-list-$SLURM_JOB_ID.txt"
+"$LS_SAT_WORKSPACE/.venv/bin/python" - "$fields" > "$pending" <<'PYEOF'
+import json
+from pathlib import Path
+import sys
+
+for name in Path(sys.argv[1]).read_text().splitlines():
+    manifest = Path('results/summary')/f'{name}-base'/'manifest.json'
+    if manifest.exists():
+        try:
+            record = json.loads(manifest.read_text())
+            if record['status']=='complete' and record['field']['id']==name:
+                continue
+        except (KeyError,ValueError):
+            pass
+    print(name)
+PYEOF
+needed=$(wc -l < "$pending")
+if (( needed )); then
+    srun -n "$needed" -c 8 --exact -o 'logs/scan-%j-%t.log' bash "$launcher" scan-list "$pending"
+fi
 srun -n 1 -c 8 --exact -o 'logs/combine-%j.log' bash "$launcher" holdout combine
 srun -n 1 -c 8 --exact -o 'logs/review-%j.log' bash "$launcher" expansion_review

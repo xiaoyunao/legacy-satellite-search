@@ -3,6 +3,7 @@
 import argparse
 import csv
 from concurrent.futures import ProcessPoolExecutor
+from functools import lru_cache
 import json
 from multiprocessing import get_context
 import os
@@ -28,11 +29,12 @@ def convert_peak(p):
     return p
 
 
-def fit_at_peak(peak, sample, field, area, cmd):
+def fit_at_peak(peak, sample, field, area, cmd, *, weights=None):
+    weights = cmd.weights if weights is None else weights
     best = None
     for d in (-.25, 0, .25):
         trial = dict(peak, dm=peak['dm'] + d)
-        _, ratio = cmd.weights(trial['dm'])
+        _, ratio = weights(trial['dm'])
         for r in (.7, 1., 1.4):
             trial['rh_arcmin'] = r * peak['rh_arcmin']
             fit, idx, prob = point_fit(sample, cmd, field, area, trial, ratio=ratio)
@@ -199,6 +201,7 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
     sample, _, valid, mags, chosen = select(data, field, area, cfg)
     model = load_isochrone(data_root/'resources'/cfg['isochrone'])
     cmd = CMD(sample, model, cfg)
+    weights = lru_cache(maxsize=48)(cmd.weights)
     tree = cKDTree(sample[:, :2])
     work = runs_path(data_root)/f'{field_id}-{depth}'
     figure_dir = products/'figures'/out.name
@@ -212,7 +215,7 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
     raw_tree = cKDTree(raw_xy)
     for row in fields:
         peak = convert_peak(row)
-        best = fit_at_peak(peak, sample, field, area, cmd)
+        best = fit_at_peak(peak, sample, field, area, cmd, weights=weights)
         if best is None:
             if group_rows is not None:
                 summary.append(dict(field=field_id,depth=depth,rank=peak['rank'],
@@ -226,7 +229,7 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
             keep[idx[ranking[:n]]] = False
             reduced, _, _ = point_fit(sample[keep], cmd, field, area, fit_peak, ratio=ratio[keep])
             fit[f'C_refit_TS_without_top{n}'] = reduced['ts'] if reduced else None
-        locus, _ = cmd.weights(peak['dm'])
+        locus, _ = weights(peak['dm'])
         test = {}
         for threshold in (5, 7):
             use = locus & np.all(sample[:, 4:6] <= 2.5/np.log(10)/threshold, axis=1)

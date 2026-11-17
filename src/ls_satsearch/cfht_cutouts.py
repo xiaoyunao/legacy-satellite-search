@@ -1,5 +1,6 @@
 """Check public CFHT exposures against the LS shortlist using small WCS cutouts."""
 
+import argparse
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
 import os
@@ -23,9 +24,9 @@ CADC = 'https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/caom2ops/sync'
 EXPOSURES = ('2159099p','2159100p','2159103p','2160132p','2161338p')
 
 
-def fetch(product,center,cache,grid):
+def fetch(product,center,cache,grid,radius=.026):
     query=CADC+'?'+urlencode(dict(id=f'cadc:CFHT/{product}.fits.fz',
-                                   CIRCLE=f'{center.ra.deg} {center.dec.deg} 0.026'))
+                                   CIRCLE=f'{center.ra.deg} {center.dec.deg} {radius}'))
     path=cache/f'{product}.fits'
     try:
         if path.exists():
@@ -66,20 +67,22 @@ def fetch(product,center,cache,grid):
         return dict(product=product,query=query,status='unavailable',error=str(err)),None
 
 
-def run():
+def run(background_ring=False):
     plan,_,data,_,sources,_=setup()
-    cache=data/'resources/v6'/plan['candidate']/'cfht'
+    cache=data/'resources/v6'/plan['candidate']/('cfht_wide' if background_ring else 'cfht')
     cache.mkdir(exist_ok=True,parents=True)
     OUT.mkdir(exist_ok=True,parents=True)
     center=SkyCoord(plan['ra_deg'],plan['dec_deg'],unit='deg')
     pos=frozen_positions(plan,data,sources)
     east,north=center.spherical_offsets_to(pos)
     d=.3
-    axis=np.arange(-265,266)*d
+    half=540 if background_ring else 265
+    radius=.055 if background_ring else .026
+    axis=np.arange(-half,half+1)*d
     dx,dy=np.meshgrid(axis,axis)
     sky=center.spherical_offsets_by(dx*u.arcsec,dy*u.arcsec)
     with ThreadPoolExecutor(max_workers=3) as pool:
-        results=list(pool.map(lambda p: fetch(p,center,cache,sky), EXPOSURES))
+        results=list(pool.map(lambda p: fetch(p,center,cache,sky,radius), EXPOSURES))
     rows=[r for r,_ in results]
     write_csv(OUT/'cfht_exposure_status.csv',rows)
     stamps=[a for r,a in results if r['status']=='covered']
@@ -102,8 +105,14 @@ def run():
         plt.close(fig)
         metrics.update(central_exposures=int(count[len(axis)//2,len(axis)//2]),
                        fraction_with_two_exposures=float((count>=2).mean()))
+        if background_ring:
+            distance=np.hypot(dx,dy)/60
+            for name,region in (('core',distance<=.525),('annulus',(distance>1.225)&(distance<=2.1))):
+                metrics[f'{name}_two_exposure_fraction']=float((count[region]>=2).mean())
     write_json(OUT/'cfht_r_summary.json',metrics)
 
 
 if __name__=='__main__':
-    run()
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--background-ring',action='store_true')
+    run(p.parse_args().background_ring)

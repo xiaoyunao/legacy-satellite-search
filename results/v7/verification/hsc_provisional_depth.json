@@ -1,0 +1,29 @@
+{
+  "job": "61446817",
+  "eligible_visits": 2,
+  "config_sha256": "ea632d2001a9e767694be4896f855f293dbc961fb2f824cc0059ad0ac8ed34bd",
+  "reference_sha256": "ebd3e433b93e366a81dc0d7645dfdf160afa1cbd00891c327b2f7f8586487b7d",
+  "aperture_arcsec": 1.02,
+  "ebv": 0.032825879752635956,
+  "calibration": "Overscan, nominal amplifier gains, local PS1-band astrometry and aperture zero points",
+  "missing_calibration": [
+    "master bias",
+    "flat field",
+    "deep source classification"
+  ],
+  "depth_definition": "5 sigma from MAD of random off-centre aperture fluxes; includes unresolved confusion",
+  "at_least_1_visits": {
+    "blank_positions": 2700,
+    "g5_ps1_calibrated_aperture": 24.352326416131753,
+    "g5_dereddened": 24.248202725556393,
+    "core_fraction": 1.0,
+    "annulus_fraction": 1.0
+  },
+  "at_least_2_visits": {
+    "blank_positions": 2332,
+    "g5_ps1_calibrated_aperture": 24.397862457915355,
+    "g5_dereddened": 24.293738767339995,
+    "core_fraction": 0.9691146190803019,
+    "annulus_fraction": 0.9170371338912134
+  }
+}

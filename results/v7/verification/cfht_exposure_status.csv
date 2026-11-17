@@ -1,0 +1,6 @@
+product,query,sha256,status,usable_fraction
+2159099p,https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/caom2ops/sync?id=cadc%3ACFHT%2F2159099p.fits.fz&CIRCLE=258.0775572867658+31.464058460463264+0.055,e06c0d2849b642b8149eb598e2565c998dbba990038a25cc22cbc4e3481c53e7,covered,0.6093588610265104
+2159100p,https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/caom2ops/sync?id=cadc%3ACFHT%2F2159100p.fits.fz&CIRCLE=258.0775572867658+31.464058460463264+0.055,d5fb60e29fe3ec6ae4476d0863910ed070e2570c6394eb2b19154bb1ceb8945d,covered,0.18041334598707298
+2159103p,https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/caom2ops/sync?id=cadc%3ACFHT%2F2159103p.fits.fz&CIRCLE=258.0775572867658+31.464058460463264+0.055,03b04827e2a0ecfc243238226b79ab9ed42b8ae116d16565ee577393db049fa5,covered,0.4982649600662695
+2160132p,https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/caom2ops/sync?id=cadc%3ACFHT%2F2160132p.fits.fz&CIRCLE=258.0775572867658+31.464058460463264+0.055,81d5915411689243628f4056585c400a41791051d946dacbb1dff49bb2e82f73,covered,1.0
+2161338p,https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/caom2ops/sync?id=cadc%3ACFHT%2F2161338p.fits.fz&CIRCLE=258.0775572867658+31.464058460463264+0.055,eb270f22ad45dbf0305506959787b7ca246ab19c71e0b1205726dfcbf0087158,covered,0.9961234372873988

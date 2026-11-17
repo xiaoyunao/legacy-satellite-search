@@ -1,5 +1,13 @@
 # Status
 
+## 第七轮 · 2026-11-17
+
+- NERSC 工作目录为 `$HOME/projects/legacy-satellite-search/revisions/verification-v7`。三帧 HSC 原始 FITS 与三个包只在 `$PSCRATCH/legacy-satellite-search/external/smoka/`。档案 MD5、FITS 内部校验均通过。逐源与像素产品位于 scratch。首批及头四批已实扫 49 场、341.739 有效 deg²。
+- 61445922 完成 LS/PS1 同一 Gaia 切选，61446174 和 61446676 完成 HSC 深度及局部图像准备，61446586 完成 CFHT 背景环，61446817 检查通量重采样，61447140 完成中心外零点和留出验证后的双色试验。
+- 61445835 与 61445946 完成首批九场登记和搜索，61446805 完成冻结汇总及 C 复核。61446055 完成 PS1/DELVE/DES 剩余面积代理。61446606 与 61446637 完成后续登记。
+- 74 个 3° 场由 `61446693` 执行，112 个 2° 场由 `61446745` 执行，汇总 `61446828`。已完成的 49 场中，68 个组的 149 个模式已复核。后续状态见 [当前同步快照](../results/v7/slurm_active_at_sync.csv) 和 [本轮报告](../seventh_science_report.md)。
+- [候选公开目录审计](novelty_audit.md)
+
 ## 第六轮 · 2026-11-17
 
 - Perlmutter 登录与 LS DR11 数据访问通过。项目为 `$HOME/projects/legacy-satellite-search/revisions/verification-v6`。原始文件、逐源、FITS 和峰链位于 NERSC scratch，研究结果按允许名单同步。

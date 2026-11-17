@@ -1,0 +1,11 @@
+{
+  "job": "61446586",
+  "band": "MegaCam r.MP9602",
+  "covering_exposures": 5,
+  "requested": 5,
+  "catalogue_members": 9,
+  "central_exposures": 3,
+  "fraction_with_two_exposures": 1.0,
+  "core_two_exposure_fraction": 1.0,
+  "annulus_two_exposure_fraction": 1.0
+}

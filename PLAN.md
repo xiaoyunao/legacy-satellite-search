@@ -33,11 +33,17 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - Matched random locations explain much of the mask proximity. The next 20 frozen fields cover 168.204 effective deg² and yield 39 primary groups. All 48 C modes and 39 representative images were inspected.
 - In eight paired compact injections, baseline and deeper LS recovered 3 and 5 positions. The DELVE 7 deeper peak recovered position alone.
 
+## Seventh-round verification and expansion
+
+- Three raw HSC CCDs passed archive and FITS checks. Two visits support provisional local calibration. The fixed HSC+CFHT image test gives limited common-population evidence for both distances.
+- In the matched Gaia cuts, the stronger 100 kpc response remains specific to LS. The candidate stays L0. The public novelty audit is updated.
+- Three nonoverlapping registries contain 195 fields and about 989 deg² of metadata proxy area under the frozen A recipe. The scheduler and measured completed area are tracked separately.
+
 ## Next work
 
-1. Obtain calibrated Subaru g imaging or source measurements for the verified CCDs and match CFHT r photometry. Check effective area and turnoff completeness before running the frozen-position test.
-2. Compare the two-phase candidate load and the new field-level prior imaging context when registering the next fixed-policy expansion.
-3. Continue compact-depth and paired LS–PS1 response experiments in independent conditions. Promotion to a production arm requires a gain at comparable review load and consistent results on ordinary faint references.
+1. Finish the controlled expansion and inspect prioritized C fits with their image and mask context. Measure achieved area and review load by field and programme.
+2. At the L0 position, seek calibrated deeper g/r data with measured completeness where the older turnoff may be visible. Use the same fixed sky geometry and two distances.
+3. Use the area and review-load measurements to register the next PS1-assigned fields, then select DELVE/DES strata. Treat the northern filter system and low latitude as separate calibration problems.
 
 ## Validation criteria
 

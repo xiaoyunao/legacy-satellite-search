@@ -1,0 +1,20 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+survey_11-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.0588728552051876,18.5,0.35,0.0,Pisces II,1235.3331076132888,L0
+survey_12-A_base-0.3-001,awaiting_visual_review,1,1,1,1,3.5086233979717765,16.25,2.0,0.0,Bootes III,188.48026759448416,L0
+survey_12-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.0,17.0,5.6,0.0,Bootes III,177.95056123582614,L0
+survey_12-A_base-0.3-003,awaiting_visual_review,1,1,1,3,2.0587190186780795,19.5,1.4,0.0,Bootes III,162.63353550235968,L0
+survey_12-A_base-0.3-004,awaiting_visual_review,1,1,1,4,3.3423039287869454,18.25,2.8,0.0,Bootes III,189.346473814856,L0
+survey_14-A_base-0.3-001,awaiting_visual_review,1,1,1,1,23.425541240638836,16.75,0.5,5.183510291754131,Coma Berenices,370.92504651239705,L0
+survey_14-A_base-0.3-002,awaiting_visual_review,1,1,1,2,17.776358624745818,17.5,1.0,3.314493982828969,Coma Berenices,268.4013376896865,L0
+survey_15-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.3727629096124465,16.5,1.0,0.0,DELVE 5,321.3523528106409,L0
+survey_16-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.995486965296186,17.25,0.7,0.0,Hercules,783.0182307218242,L0
+survey_17-A_base-0.3-001,awaiting_visual_review,1,1,1,1,6.444702829695321,16.75,0.5,0.0,Hercules,547.4645112993506,L0
+survey_18-A_base-0.3-001,awaiting_visual_review,12,12,8,7,43.46237148688698,20.0,0.7,22.127355984728855,Bootes V,0.28320405385700287,L0
+survey_18-A_base-0.3-002,awaiting_visual_review,5,5,3,17,32.08600170079636,20.0,1.0,14.107424114150774,Bootes V,1.0961803004128352,L0
+survey_18-A_base-0.3-003,awaiting_visual_review,2,2,2,20,28.029601895278894,20.0,1.4,8.417621964490998,Bootes V,0.9902506223451423,L0
+survey_18-A_base-0.3-004,awaiting_visual_review,1,1,1,13,6.770286984124276,19.5,1.4,0.4196073201116395,Bootes V,2.7987243828438633,L0
+survey_18-A_base-0.3-005,awaiting_visual_review,1,1,1,19,10.936156861284989,20.25,1.4,1.9132982717347655,Bootes V,1.9990696748202739,L0
+survey_19-A_base-0.3-001,awaiting_visual_review,1,1,1,1,3.2860114877205078,18.5,1.0,0.0,Hercules,1059.0402329377653,L0
+survey_19-A_base-0.3-002,awaiting_visual_review,1,1,1,2,3.0145786094557803,17.25,0.5,0.0,Hercules,960.2881936167181,L0
+survey_19-A_base-0.3-003,awaiting_visual_review,1,1,1,3,3.1457765921114946,17.0,0.7,0.0,Hercules,1085.741922671153,L0
+survey_20-A_base-0.3-001,awaiting_visual_review,1,1,1,1,9.572850081663113,17.0,1.4,0.0,Bootes III,351.1477926089684,L0

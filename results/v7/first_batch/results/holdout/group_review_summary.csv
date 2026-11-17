@@ -1,0 +1,31 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+wide_02-A_base-0.3-001,awaiting_visual_review,8,8,8,2,350.4898189772857,20.0,5.6,333.5066499741538,Canes Venatici I,4.243806408102293,L0
+wide_02-A_base-0.3-002,awaiting_visual_review,6,6,6,9,121.45178302299416,16.25,11.2,106.58063680277525,Canes Venatici I,8.540119475930188,L0
+wide_02-A_base-0.3-003,awaiting_visual_review,3,3,3,14,271.0000717434152,16.5,2.8,250.2691748959728,Canes Venatici I,3.996002609231736,L0
+wide_02-A_base-0.3-004,awaiting_visual_review,3,3,3,18,0.0,16.5,5.6,0.0,Canes Venatici I,80.36548803114212,L0
+wide_02-A_base-0.3-005,awaiting_visual_review,1,1,1,20,65.5563058500276,16.25,1.4,49.61987832796342,Canes Venatici I,3.9530026964047944,L0
+wide_02-A_base-0.3-006,awaiting_visual_review,1,1,1,22,0.0,20.5,11.2,0.0,Canes Venatici I,138.5622725801565,L0
+wide_03-A_base-0.3-001,awaiting_visual_review,4,4,4,1,0.0,20.5,11.2,0.0,Bootes IV,999.7686594144566,L0
+wide_03-A_base-0.3-002,awaiting_visual_review,3,3,2,8,4.850821298764262,20.25,5.6,0.0,Bootes IV,1089.5765443096313,L0
+wide_03-A_base-0.3-003,awaiting_visual_review,2,2,2,4,0.0,19.5,11.2,0.0,Bootes IV,1018.1823843102858,L0
+wide_03-A_base-0.3-004,awaiting_visual_review,1,1,1,7,1.6719829498112615,20.25,11.2,0.0,Bootes IV,1092.843758638172,L0
+wide_05-A_base-0.3-001,awaiting_visual_review,6,6,5,1,9.466822761217664,16.75,16.0,1.7789389486991318,DELVE 5,276.2832663370022,L0
+wide_05-A_base-0.3-002,awaiting_visual_review,4,4,4,4,1.3289110528720407,20.75,22.4,0.0,DELVE 5,269.4204938645326,L0
+wide_05-A_base-0.3-003,awaiting_visual_review,1,1,1,11,7.832114636461313,20.5,16.0,1.7824604293370356,DELVE 5,284.6334742781571,L0
+wide_05-A_base-0.3-004,awaiting_visual_review,1,1,1,12,5.722863969277358,17.75,0.5,0.0,DELVE 5,275.1089973775708,L0
+wide_05-A_base-0.3-005,awaiting_visual_review,1,1,1,13,0.0,16.5,11.2,0.0,DELVE 5,246.02110101303813,L0
+wide_06-A_base-0.3-001,awaiting_visual_review,10,10,7,1,0.0,20.5,11.2,0.0,Pisces II,506.3873757903978,L0
+wide_06-A_base-0.3-002,awaiting_visual_review,1,1,1,5,0.0,17.25,11.2,0.0,Pisces II,495.89266447500523,L0
+wide_06-A_base-0.3-003,awaiting_visual_review,5,5,5,9,0.0,16.5,11.2,0.0,Pisces II,482.1676062304265,L0
+wide_06-A_base-0.3-004,awaiting_visual_review,1,1,1,12,0.0,16.25,11.2,0.0,Pisces II,492.0458098031576,L0
+wide_06-A_base-0.3-005,awaiting_visual_review,1,1,1,15,22.980906481656397,16.25,0.7,1.7325782599954267,Pisces II,470.94457852230204,L0
+wide_06-A_base-0.3-006,awaiting_visual_review,1,1,1,19,9.452085878229582,16.25,0.35,0.0,Aquarius III,535.3861755444443,L0
+wide_07-A_base-0.3-001,awaiting_visual_review,2,2,2,1,35.516212485575075,21.0,2.8,14.20154318812331,Pisces II,1.6170941925175124,L0
+wide_07-A_base-0.3-002,awaiting_visual_review,2,2,2,2,0.8208380036910303,17.75,0.5,0.0,Pisces II,163.47620814786234,L0
+wide_07-A_base-0.3-003,awaiting_visual_review,2,2,2,3,32.976895095898875,21.0,2.8,12.574056339953543,Pisces II,2.0928652718628977,L0
+wide_07-A_base-0.3-004,awaiting_visual_review,1,1,1,5,10.471734554325803,16.5,1.4,1.9428931841359063,Pisces II,0.31892794013474896,L0
+wide_07-A_base-0.3-005,awaiting_visual_review,2,2,2,7,34.80737335348378,21.0,2.0,13.636654831268238,Pisces II,1.812857582657832,L0
+wide_07-A_base-0.3-006,awaiting_visual_review,1,1,1,9,0.7460732653699367,16.25,16.0,0.0,Pisces II,9.936091587708573,L0
+wide_07-A_base-0.3-007,awaiting_visual_review,1,1,1,10,0.10351711113853712,20.5,11.2,0.0,Pisces II,12.44205603450491,L0
+wide_08-A_base-0.3-001,awaiting_visual_review,2,2,2,1,0.0,16.5,11.2,0.0,Kim 1,305.07758628887774,L0
+wide_09-A_base-0.3-001,awaiting_visual_review,2,2,2,1,1.8384648430095076,21.0,8.0,0.0,Aquarius III,589.8930822418965,L0

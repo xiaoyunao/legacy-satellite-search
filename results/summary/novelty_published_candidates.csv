@@ -1,0 +1,8 @@
+object,ra_deg,dec_deg,separation_arcmin,source,coordinate_definition,checked_utc
+Virgo I,180.038,-0.681,4810.813247201299,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T03:44:55+00:00
+Cetus III,31.331,-4.27,7706.500303386589,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T03:44:55+00:00
+Boötes IV,233.689,43.726,1365.1588789859936,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T03:44:55+00:00
+Sextans II,156.437,-0.631,6014.646076406516,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T03:44:55+00:00
+Virgo III,186.348,4.441,4327.209821851188,https://arxiv.org/html/2311.05439,HSC-SSP Table 1,2026-11-17T03:44:55+00:00
+HSC 1,334.325,3.475,4587.896365013786,https://arxiv.org/html/2311.05439,HSC-SSP Table 3 search position,2026-11-17T03:44:55+00:00
+Ursa Major III / UNIONS 1,174.70745,31.07833,4156.853752012058,https://arxiv.org/html/2311.10147,Published centre via project benchmark,2026-11-17T03:44:55+00:00

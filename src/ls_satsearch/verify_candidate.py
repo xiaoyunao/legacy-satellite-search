@@ -27,11 +27,12 @@ from .search import CMD, exact_onoff, load_isochrone, point_fit, scan
 OUT = Path('results/verification')
 
 
-def setup():
+def setup(policy=None):
     root, data, cfg = settings()
-    plan = yaml.safe_load(config_path('followup.yaml').read_text())
+    plan = yaml.safe_load((policy or config_path('followup.yaml')).read_text())
     prior = Path(os.environ['LS_SAT_V5'])
-    m = prior/'batches/batch1/results/summary'/f"{plan['field']}-base/manifest.json"
+    m = Path(plan['field_manifest']) if 'field_manifest' in plan else (
+        prior/'batches/batch1/results/summary'/f"{plan['field']}-base/manifest.json")
     spec = json.loads(m.read_text())['field']
     field, sources, area, _ = field_cache(root,data,spec,cfg,None)
     return plan, cfg, data, field, sources, area
@@ -128,8 +129,9 @@ def review_local_peaks(sample, cmd, field, area, peaks, prefix):
                modes_attempted=len(rows), modes_fit=sum('C_TS' in row for row in rows)))
 
 
-def run(gaia_veto=False, local_review=False):
-    plan,cfg,data,old,sources,old_area = setup()
+def run(gaia_veto=False, local_review=False, policy=None):
+    policy = policy or config_path('followup.yaml')
+    plan,cfg,data,old,sources,old_area = setup(policy)
     radii=plan['ps1_scan_radii']
     cfg.update(radii_arcmin=radii,dm=plan['ps1_scan_dm'],methods=['A'],coverage_subdivision=2,
                g_max=plan['ps1_magnitude_caps'][0], r_max=plan['ps1_magnitude_caps'][1])
@@ -142,12 +144,13 @@ def run(gaia_veto=False, local_review=False):
     area=old_area[sample_pixels(old,old_area,x,y)]
     area &= np.hypot(*np.meshgrid(axis,axis))<60*plan['ps1_radius_deg']
     area=joint_coverage(field,area,data/'resources/ps1/ps1d_mask_v2.1.fits')
-    cache=data/'resources/v6'/plan['candidate']
+    cache=data/'resources'/plan.get('scratch_revision','v6')/plan['candidate']
     cache.mkdir(parents=True,exist_ok=True)
     OUT.mkdir(parents=True,exist_ok=True)
     sample,inputs=ps1_sample(plan,field,area,cache)
     parent_tree=cKDTree(sample[:,:2])
     prefix='ps1_gaia_veto' if gaia_veto else 'ps1'
+    prefix=plan.get('output_prefix','')+prefix
     if gaia_veto:
         sample,veto=without_foreground(sample,field,cache)
         inputs.update(veto)
@@ -193,7 +196,7 @@ def run(gaia_veto=False, local_review=False):
         write_csv(OUT/f'{prefix}_fixed_and_controls.csv',rows)
     target=rows[0]
     control=[r for r in rows[1:] if r['C_TS'] is not None]
-    result=dict(target,inputs=inputs,config_sha256=sha(config_path('followup.yaml')),
+    result=dict(target,inputs=inputs,config_sha256=sha(policy),
                 job=os.environ.get('SLURM_JOB_ID'),control_n=len(rows)-1,
                 at_least_as_small_tail=sum(r['onoff_tail']<=target['onoff_tail'] for r in rows[1:]),
                 control_C_n=len(control))
@@ -229,5 +232,6 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--gaia-veto',action='store_true')
     parser.add_argument('--review-local', action='store_true')
+    parser.add_argument('--plan',type=Path)
     args = parser.parse_args()
-    run(args.gaia_veto, args.review_local)
+    run(args.gaia_veto, args.review_local, args.plan)

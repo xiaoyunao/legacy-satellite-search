@@ -1,0 +1,10 @@
+field,phase,census_survey,proxy_area_deg2,hsc_nominal_intersection,kids_nominal_intersection,rubin_dp1_nominal_intersection,rubin_proxy_changed,unions_nominal_core_dec_overlap,prior_satellite_search_mask,unions,rubin_post_dp1
+wide_01,discovery,3,8.0,False,False,False,False,False,unknown,unknown_exact,unknown
+wide_02,discovery,3,8.73469387755102,False,False,False,False,True,unknown,unknown_exact,unknown
+wide_03,discovery,3,8.408163265306122,False,False,False,False,True,unknown,unknown_exact,unknown
+wide_04,discovery,3,9.0,False,False,False,False,True,unknown,unknown_exact,unknown
+wide_05,discovery,3,8.918367346938775,False,False,False,False,False,unknown,unknown_exact,unknown
+wide_06,discovery,3,8.142857142857142,True,False,False,False,False,unknown,unknown_exact,unknown
+wide_07,discovery,3,8.714285714285714,True,False,False,False,False,unknown,unknown_exact,unknown
+wide_08,discovery,3,8.73469387755102,True,False,False,False,False,unknown,unknown_exact,unknown
+wide_09,discovery,3,8.10204081632653,True,False,False,False,False,unknown,unknown_exact,unknown
