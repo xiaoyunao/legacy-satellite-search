@@ -5,11 +5,11 @@ import numpy as np
 BRANCHES = ('near', 'main', 'far')
 
 
-def template_branch(dm):
-    """Assign grid nodes from mu=16.50 through 20.75 to the main search."""
+def template_branch(dm, main_dm_max=20.75):
+    """Use the historical main distance interval unless explicitly overridden."""
     if dm < 16.5:
         return 'near'
-    if dm <= 20.75:
+    if dm <= main_dm_max:
         return 'main'
     return 'far'
 

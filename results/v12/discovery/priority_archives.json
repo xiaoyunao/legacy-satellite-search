@@ -1,0 +1,202 @@
+{
+  "center_ra_dec": [
+    346.59235093280114,
+    31.191150517657945
+  ],
+  "core_radius_arcmin": 1.05,
+  "archives": {
+    "NOIRLab g": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://astroarchive.noirlab.edu/api/sia/vohdu?POS=346.59235%2C31.19115&SIZE=.15&VERB=3&format=json",
+        "sha256": "943599f3358638f017db13a7016d11220599ec551b4efd7d910ff41cb25dd330",
+        "rows": 252,
+        "instruments": [
+          "decam"
+        ],
+        "g_visits": [
+          {
+            "utc": "2018-10-03 02:12:53.937971+00",
+            "band": "g DECam SDSS c0001 4720.0 1520.0",
+            "seconds": 200.0,
+            "instrument": "decam",
+            "product_hdu_rows": 14,
+            "original_filename": "DECam_00780164.fits.fz"
+          },
+          {
+            "utc": "2018-10-03 03:06:10.76891+00",
+            "band": "g DECam SDSS c0001 4720.0 1520.0",
+            "seconds": 200.0,
+            "instrument": "decam",
+            "product_hdu_rows": 21,
+            "original_filename": "DECam_00780179.fits.fz"
+          },
+          {
+            "utc": "2018-11-04 01:27:11.236309+00",
+            "band": "g DECam SDSS c0001 4720.0 1520.0",
+            "seconds": 200.0,
+            "instrument": "decam",
+            "product_hdu_rows": 21,
+            "original_filename": "DECam_00790517.fits.fz"
+          },
+          {
+            "utc": "2018-11-10 01:24:34.598585+00",
+            "band": "g DECam SDSS c0001 4720.0 1520.0",
+            "seconds": 200.0,
+            "instrument": "decam",
+            "product_hdu_rows": 7,
+            "original_filename": "DECam_00792757.fits.fz"
+          }
+        ]
+      }
+    },
+    "Gemini North": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://archive.gemini.edu/jsonsummary/ra=346.59235093280114/dec=31.191150517657945/sr=600/GMOS-N/imaging",
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "image_metadata_rows": 0
+      }
+    },
+    "HST and JWST": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://mast.stsci.edu/api/v0/invoke",
+        "service": "Mast.Caom.Filtered.Position",
+        "params": {
+          "position": "346.59235093280114, 31.191150517657945, 0.105",
+          "columns": "COUNT_BIG(*)",
+          "filters": [
+            {
+              "paramName": "obs_collection",
+              "values": [
+                "HST",
+                "JWST"
+              ]
+            },
+            {
+              "paramName": "dataproduct_type",
+              "values": [
+                "image"
+              ]
+            }
+          ]
+        },
+        "sha256": "e6dfb0fcc3e191247b109128d1e53528ea119365b2b31b12cc89112c1c24a7b6",
+        "space_telescope_imaging_rows": 0
+      }
+    },
+    "SMOKA HSC-g": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://smoka.nao.ac.jp/HSCsearch",
+        "query": {
+          "action": "Search",
+          "obs_mod": "IMAG",
+          "data_typ": "OBJECT",
+          "band": "HSC-g",
+          "bandwidth_type": "FILTER",
+          "instruments": "HSC",
+          "asciitable": "Ascii",
+          "coordsys": "Equatorial",
+          "equinox": "J2000",
+          "output_equinox": "J2000",
+          "RadOrRec": "radius",
+          "fieldofview": "auto",
+          "resolver": "NONE",
+          "calib_typ": "ALL",
+          "frameorshot": "Shot",
+          "longitudeC": "23:06:22.16422387",
+          "latitudeC": "+31:11:28.14186357",
+          "radius": 55
+        },
+        "sha256": "912f9acc3183a978261c9f8d67a3b72d45ade452eef5555deedc7784dda12984",
+        "parsed_rows": 16,
+        "g_rows": 16,
+        "nearest_g_center_arcmin": 24.564357879249865
+      }
+    },
+    "HSC SSP DUD-COSMOS": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-COSMOS.txt",
+        "sha256": "b31b142f642ef0d76295004c49e1e94945a28e8aaa40664176406f7bb5ae26aa",
+        "tracts": 10,
+        "possible_core_tracts": [],
+        "closest_bound_tract": "10054",
+        "closest_tract_bound_arcmin": 8399.098045891213
+      }
+    },
+    "HSC SSP DUD-DEEP2-3": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-DEEP2-3.txt",
+        "sha256": "e117ef5e2ea68f4b9fda07418f7ecee2680095c3763a24435f1e0c2bed221ad6",
+        "tracts": 11,
+        "possible_core_tracts": [],
+        "closest_bound_tract": "9705",
+        "closest_tract_bound_arcmin": 1763.708267978806
+      }
+    },
+    "HSC SSP DUD-ELAIS-N1": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-ELAIS-N1.txt",
+        "sha256": "f4a92960be0542b7ffa0d3387e949ffbc92fda07e44eec993d67e4f2334734df",
+        "tracts": 10,
+        "possible_core_tracts": [],
+        "closest_bound_tract": "17272",
+        "closest_tract_bound_arcmin": 4135.386271202336
+      }
+    },
+    "HSC SSP DUD-XMM-LSS": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_DUD-XMM-LSS.txt",
+        "sha256": "3c2f1cd328d09db1f85a583909d0b0f13444d081d633b5fed644ede1803e0210",
+        "tracts": 9,
+        "possible_core_tracts": [],
+        "closest_bound_tract": "8765",
+        "closest_tract_bound_arcmin": 3360.4664038509954
+      }
+    },
+    "HSC SSP W-AEGIS": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_W-AEGIS.txt",
+        "sha256": "87548315fd1f5007a55f997f65841ac8d46c9e965207995bab127a74bd06af2c",
+        "tracts": 4,
+        "possible_core_tracts": [],
+        "closest_bound_tract": "16973",
+        "closest_tract_bound_arcmin": 5089.460083371167
+      }
+    },
+    "HSC SSP W-hectomap": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_W-hectomap.txt",
+        "sha256": "52b8905e0543245d4eda653d99108009f918be6d233797edf4c0d48aa18feb87",
+        "tracts": 109,
+        "possible_core_tracts": [],
+        "closest_bound_tract": "16186",
+        "closest_tract_bound_arcmin": 4293.618202188225
+      }
+    },
+    "HSC SSP W-autumn": {
+      "status": "query_complete",
+      "results": {
+        "url": "https://hsc-release.mtk.nao.ac.jp/rsrc/pdr3/tract_patches/info/tracts_patches_W-autumn.txt",
+        "sha256": "a1a5e36af74bc0b3bc220167d78be6893279afcf0e348751eec4b467731dc78d",
+        "tracts": 600,
+        "possible_core_tracts": [],
+        "closest_bound_tract": "10910",
+        "closest_tract_bound_arcmin": 1309.3020695883365
+      }
+    },
+    "HSC SSP W-spring": {
+      "status": "query_failed",
+      "reason": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>"
+    }
+  },
+  "scope": "Metadata geometry only. Overlap, product access and depth require actual calibrated pixels."
+}

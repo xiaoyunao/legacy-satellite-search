@@ -2,7 +2,7 @@
 
 ## Current objective
 
-Use LS DR11 to detect previously missed faint Galactic stellar systems and measure the gain against PS1 in the census PS1 assignment. See [current scientific direction](docs/PROJECT_MEMORY.md).
+Find Galactic faint stellar systems at 20–150 kpc with circularized half-light radii of 3–30 pc, prioritizing 3–15 pc. Measure the DR11 increment over census PS1 at matched search-review cost across actual North and South backgrounds. See [current scientific direction](docs/PROJECT_MEMORY.md).
 
 ## Completed milestones
 
@@ -64,12 +64,13 @@ Use LS DR11 to detect previously missed faint Galactic stellar systems and measu
 - Ran the exposure-mask seam check, found that the sampled seam has zero duplicate area after regional assignment, and measured the census deep-survey overlap.
 - Produced 20 DES-style diagnostic sets including eight high-ranked groups. The two strongest DES responses match Tucana V.
 
-## Next work
+## Twelfth-round execution
 
-1. Apply the frozen South baseline to the remaining PS1-assigned area in disjoint waves. Use the native masks to determine the newly searched area.
-2. Extend the North BASS trial after representative blind recoveries and independent review-budget and seam checks. Keep separate South DES and DELVE calibration and evaluation strata for historical comparisons.
-3. Use the DES-style diagnostics to review new peaks and archive existing L0 candidates with their public-data evidence. Targeted telescope follow-up and proposal preparation are deferred.
-4. Continue measuring image-to-catalog response and compact-system depth benefits where the data support it.
+1. Complete the frozen four-stratum scan and the 2° South PS1 gap supplement. Reconcile native effective masks with the census footprint and estimate remaining area.
+2. Calibrate μ=21.0 separately, validate the alignment with the 150 kpc trial and check the review cost before changing the production branch.
+3. Score the six Tan Table 8 blind controls and run the separate common-area LS baseline, LS deeper and PS1 DR2 comparison. Fit priority groups and use public evidence to classify their status.
+4. Use repeated physical injections and real coadd PSF recovery to constrain sensitivity to distance, light and angular scale. Preserve exact sparse-bin intervals, dependence on background, and the separate published census PS1 DR1 reference.
+5. Publish the ICRS atlas, diagnostics, reviewed candidate and control tables, quantified area and scientific report. Continue eligible expansion in stages after assessing candidate load and measured increment.
 
 ## Validation criteria
 

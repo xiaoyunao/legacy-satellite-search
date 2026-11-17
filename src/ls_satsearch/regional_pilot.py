@@ -67,6 +67,7 @@ def audit_registration(root, data, files, output):
 
 def plan_all(root, data, params, output, cohorts, additional=()):
     spec = yaml.safe_load(params.read_text())
+    version = spec.get('version', 'v11')
     old, inputs = previous_cores(additional)
     atlas = Census(data)
     rng = np.random.default_rng(spec['seed'])
@@ -119,7 +120,7 @@ def plan_all(root, data, params, output, cohorts, additional=()):
                 if fraction < rule['minimum']:
                     continue
                 i = len(block)
-                block.append(dict(id=f'v11_{name}_{i+1:02d}',ra=f.ra,dec=f.dec,width=width,
+                block.append(dict(id=f'{version}_{name}_{i+1:03d}' if version != 'v11' else f'v11_{name}_{i+1:02d}',ra=f.ra,dec=f.dec,width=width,
                                   role='pilot_dev' if i<rule['development'] else 'pilot_eval',
                                   layer=name,region=region,proxy_area_deg2=width**2*fraction,
                                   proxy_coverage=fraction,proxy_census_fractions={k:float(v.mean()) for k,v in census.items()},

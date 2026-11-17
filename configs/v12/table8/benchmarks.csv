@@ -1,0 +1,7 @@
+field,key,region,tan_ps1_sqrt_ts,tan_ps1_sig,tan_ps1_m_v_apparent,tan_ps1_p_det,tan_passed
+table8_boo3,bootes_3,south,4.0,4.3,12.6,0.01,false
+table8_boo4,bootes_4,north,5.4,4.7,16.3,0.01,false
+table8_boo5,bootes_5,north,6.4,5.1,16.8,0.06,false
+table8_peg3,pegasus_3,south,4.8,3.7,17.5,0.00,false
+table8_peg4,pegasus_4,south,6.7,3.9,15.5,0.03,false
+table8_pis2,pisces_2,south,6.2,4.4,17.0,0.04,false

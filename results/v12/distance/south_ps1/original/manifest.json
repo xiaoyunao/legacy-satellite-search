@@ -1,0 +1,6 @@
+{
+  "job_id": "61461689",
+  "main_dm_max": 20.75,
+  "method": "full raw-template replay before distance-branch dedup",
+  "validation": "archived fields used as regression, South split by field ID"
+}

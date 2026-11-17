@@ -4,12 +4,16 @@ set -euo pipefail
 cohort=$1
 start=$2
 length=$3
-export LS_SAT_WORKSPACE="$PWD" LS_SAT_VERSION=v11 LS_SAT_PROFILE="cohorts/$cohort" LS_SAT_V2_WORKSPACE=1
+export LS_SAT_VERSION="${LS_SAT_VERSION:-v11}"
+export LS_SAT_WORKSPACE="$PWD" LS_SAT_PROFILE="cohorts/$cohort" LS_SAT_V2_WORKSPACE=1
 work="$LS_SAT_WORKSPACE/regional_$cohort"
+if [[ "$LS_SAT_VERSION" != v11 ]]; then
+    work="$LS_SAT_WORKSPACE/regional_${LS_SAT_VERSION}_$cohort"
+fi
 mkdir -p "$work/logs"
 ln -sfn ../references "$work/references"
 cd "$work"
-fields="$LS_SAT_WORKSPACE/configs/v11/cohorts/$cohort/fields.yaml"
+fields="$LS_SAT_WORKSPACE/configs/$LS_SAT_VERSION/cohorts/$cohort/fields.yaml"
 mapfile -t names < <("$LS_SAT_WORKSPACE/.venv/bin/python" - "$fields" <<'PY'
 import sys,yaml
 for f in yaml.safe_load(open(sys.argv[1]))['fields']:
@@ -26,7 +30,7 @@ for ((i=start;i<start+length;i++)); do
     if test -f "$manifest" && grep -q '"status": "complete"' "$manifest"; then
         continue
     fi
-    srun -N1 -n1 -c4 --mem=5500M --exact -o "logs/$field-%j.log" \
+    srun -N1 -n1 -c4 --mem="${LS_SAT_STEP_MEM:-5500M}" --exact -o "logs/$field-%j.log" \
          bash "$LS_SAT_WORKSPACE/scripts/v6.sh" run "$field" &
     pids+=("$!")
 done

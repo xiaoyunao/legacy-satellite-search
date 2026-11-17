@@ -44,7 +44,7 @@ def gr_accept(phot,err,cfg):
 def models(field,area,spec,matched,cfg, *, ls_config=None):
     root,data,_ = settings()
     spec = dict(spec,width=matched['width_deg'],buffer_arcmin=matched['buffer_arcmin'])
-    _,ls,_,_ = field_cache(root,data,spec,cfg,load_bricks(root))
+    _,ls,_,_ = field_cache(root,data,spec,cfg,load_bricks(root,cfg['region']))
     xy = np.column_stack(field.xy(ls['RA'],ls['DEC']))
     masked = (ls['MASKBITS'] & sum(1<<b for b in cfg['reject_maskbits'])) == 0
     masked &= area[sample_pixels(field,area,*xy.T)]

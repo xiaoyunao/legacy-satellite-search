@@ -84,15 +84,27 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
     seed=[cfg['seed'],int(spec['ra']*1000),physical['seed'] if physical else 55]
     rng=np.random.default_rng(np.random.SeedSequence(seed))
     conditions = physical['conditions'] if physical else [(50,10,28),(100,15,40)]*3
-    positions=choose_sites(field,area,cfg,len(conditions),rng)
+    independent = physical and physical.get('independent_full_imf', False)
+    if independent:
+        positions = [choose_sites(field,area,cfg,1,rng)[0] for _ in conditions]
+    else:
+        positions = choose_sites(field,area,cfg,len(conditions),rng)
     if physical and len(positions)!=len(conditions):
         raise ValueError('Physical pilot is missing eligible injection sites')
     # The archived native templates lack Johnson V. Use a fixed SDSS-like
     # colour transformation as a luminosity proxy for the entire IMF.
-    g_abs,r_abs=model_ls[0].T
+    luminosity_model = model_ls
+    if independent:
+        # One luminosity convention across both optical regions and the PS1 arm.
+        decam_path = data/'resources/isochrones/des/bressan2012/iso_a12.0_z0.00010.dat'
+        if not np.array_equal(signatures[0],np.loadtxt(decam_path,usecols=(0,1,2,3,4,5,6,7,14,15))):
+            raise ValueError('DECam and native population row identities differ')
+        luminosity_model = load_isochrone(decam_path)
+    g_abs,r_abs=luminosity_model[0].T
     v_proxy=g_abs-.59*(g_abs-r_abs)-.01
     v_flux=10**(-.4*v_proxy)
     trials=[]
+    faint_rng=np.random.default_rng(np.random.SeedSequence(seed+[14]))
     for trial,(pos,(distance,size,normalization)) in enumerate(zip(positions,conditions)):
         dm=5*np.log10(distance)+10
         rh=np.degrees(np.arctan(size/(1000*distance)))*60
@@ -102,16 +114,24 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
         weights=model_ls[1]*valid_model
         if physical:
             total_lum=10**(-.4*normalization)
-            expected=weights.sum()*total_lum/np.dot(model_ls[1],v_flux)
+            scale = total_lum/np.dot(luminosity_model[1],v_flux)
+            expected=weights.sum()*scale
             n=rng.poisson(expected)
         else:
             n=normalization
         draw=rng.choice(len(weights),n,p=weights/weights.sum())
+        truth_ra,truth_dec=field.sky(*pos)
+        truth_light = {}
+        if independent:
+            omitted = faint_rng.poisson(scale*model_ls[1]*(~valid_model))
+            light = np.sum(v_flux[draw])+np.dot(omitted,v_flux)
+            truth_light = dict(actual_MV_proxy=-2.5*np.log10(light) if light>0 else None,
+                               N_imf_drawn=n+int(omitted.sum()),
+                               region=cfg['region'],truth_ra_deg=truth_ra,truth_dec_deg=truth_dec)
         q=rng.uniform(0,1 if physical else .9,n); t=rng.uniform(0,2*np.pi,n)
         xy=pos+rh*np.sqrt(q/(1-q))[:,None]*np.column_stack([np.cos(t),np.sin(t)])
         in_area=area[sample_pixels(field,area,*xy.T)]&np.all(np.abs(xy)<field.limit,axis=1)
         ra,dec=field.sky(*xy.T)
-        truth_ra,truth_dec=field.sky(*pos)
         truth=dict(ra_deg=truth_ra,dec_deg=truth_dec,D_kpc=distance,theta_h_arcmin=rh)
         noise=rng.normal(size=(n,3))
         uniforms=rng.random((2,n))
@@ -119,7 +139,7 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
         for survey in SURVEYS:
             c=configs[survey]
             if physical:
-                c=dict(c,dm=[16.5,20.75,c['dm'][2]])
+                c=dict(c,dm=[16.5,c.get('main_dm_max',20.75),c['dm'][2]])
             if survey=='ps1':
                 intrinsic=np.column_stack([model_ps1[0][draw]+dm,model_i[draw]+dm+1.682*reddening(ra,dec)])
                 phot,err=sr.perturb(intrinsic,ps1_point,pos,rng,standard_noise=noise)
@@ -149,12 +169,18 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
                                   p['score']>=cuts[survey] and (not physical or p['branch']=='main')]
                         last=matches(groups(eligible),truth,cuts[survey],c)
                 last_selection=index
+                resolution = {}
+                if independent and last.get('spatial'):
+                    offset = last['offset_arcmin']
+                    resolution = dict(offset_per_rh=offset/rh,
+                                      within_true_rh=offset<=rh,
+                                      radius_below_grid=rh<min(c['radii_arcmin']))
                 trials.append(dict(field=field_id,trial=trial,survey=survey,arm=label,
                                    D_kpc=distance,rh_pc=size,N_latent=n,N_in_valid_area=int(in_area.sum()),
                                    N_used=int(index.sum()),
                                    blank_spatial=blank['spatial'],cutoff=cuts[survey],
                                    **(dict(expected_MV_proxy=normalization,N_expected_near_limits=expected) if physical else {}),
-                                   **counts,**last))
+                                   **truth_light,**counts,**last,**resolution))
     out=output or Path('results/v9/physical_trials' if physical else 'results/matched_response')
     out.mkdir(exist_ok=True,parents=True)
     write_csv(out/f'{field_id}.csv',trials)
@@ -166,14 +192,15 @@ def run(field_id,version,archive,physical_plan=None,output=None,policy_archive=N
                'Proxy shape response conditional on observed counterpart; unsupported bins use unity. '
                'Catalog entry and image completeness are unmeasured.',
                **(dict(physical_plan=physical,physical_plan_sha256=sha(physical_plan),search_dm_branch='main',luminosity_definition='expected IMF-integrated V proxy, '
-                       'V=g-0.59(g-r)-0.01 in DECam AB; truncated injection draws near either sample limit')
+                       'V=g-0.59(g-r)-0.01 in DECam AB; injection draws near either sample limit',
+                       full_population_luminosity_draw=bool(independent))
                   if physical else {})))
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('field')
-    p.add_argument('--version',choices=('v3','v4'),required=True)
+    p.add_argument('--version',choices=('v3','v4','v12'),required=True)
     p.add_argument('--archive',type=Path,required=True)
     p.add_argument('--policy-archive',type=Path)
     p.add_argument('--physical-plan',type=Path)

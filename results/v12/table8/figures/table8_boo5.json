@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "table8_boo5",
+    "label": "Bootes V \u00b7 literature centre",
+    "manifest": "table8_v12_north/results/summary/table8_boo5-base/manifest.json",
+    "ra_deg": 213.909,
+    "dec_deg": 32.914,
+    "dm": 20.04,
+    "rh": 0.6725244434881437,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      },
+      {
+        "width": 0.3,
+        "sigma": 0.5,
+        "suffix": "-compact"
+      }
+    ]
+  },
+  "manifest_sha256": "eaf05962f30f32f6280f1c87baab6bfc747e554b04c736e1b5cbedfb451f7835",
+  "job": "61462345",
+  "figures": [
+    {
+      "id": "table8_boo5",
+      "area_on_arcmin2": 3.194444444444444,
+      "area_off_arcmin2": 33.28472222222222,
+      "core_cmd_star_count": 14,
+      "fixed_C_TS": 29.858597392721837,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "table8_boo5-compact",
+      "area_on_arcmin2": 3.194444444444444,
+      "area_off_arcmin2": 33.28472222222222,
+      "core_cmd_star_count": 14,
+      "fixed_C_TS": 29.858597392721837,
+      "width_deg": 0.3,
+      "sigma_arcmin": 0.5,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

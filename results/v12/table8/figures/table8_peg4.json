@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "table8_peg4",
+    "label": "Pegasus IV \u00b7 literature centre",
+    "manifest": "table8_v12_south/results/summary/table8_peg4-base/manifest.json",
+    "ra_deg": 328.539,
+    "dec_deg": 26.62,
+    "dm": 19.77,
+    "rh": 1.5911107607329127,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      },
+      {
+        "width": 0.3,
+        "sigma": 0.5,
+        "suffix": "-compact"
+      }
+    ]
+  },
+  "manifest_sha256": "751509e7476d2be42120182b77a92ecf85f2e4b2f399641dd1c19319d4667d44",
+  "job": "61462345",
+  "figures": [
+    {
+      "id": "table8_peg4",
+      "area_on_arcmin2": 17.854166666666664,
+      "area_off_arcmin2": 188.30555555555554,
+      "core_cmd_star_count": 65,
+      "fixed_C_TS": 180.46875504458885,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "table8_peg4-compact",
+      "area_on_arcmin2": 17.854166666666664,
+      "area_off_arcmin2": 188.30555555555554,
+      "core_cmd_star_count": 65,
+      "fixed_C_TS": 180.46875504458885,
+      "width_deg": 0.3,
+      "sigma_arcmin": 0.5,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

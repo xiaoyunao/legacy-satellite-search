@@ -1,0 +1,31 @@
+targets:
+- id: south_ps1_001_mu16.5
+  label: "South PS1 001 \xB7 C distance mode"
+  manifest: regional_v12_south_ps1/results/summary/v12_south_ps1_001-base/manifest.json
+  ra_deg: 346.59235093280114
+  dec_deg: 31.191150517657945
+  dm: 16.5
+  rh: 0.7
+  panels:
+  - width: 0.3
+    sigma: 0.5
+- id: south_ps1_001_mu20.25
+  label: "South PS1 001 \xB7 C distance mode"
+  manifest: regional_v12_south_ps1/results/summary/v12_south_ps1_001-base/manifest.json
+  ra_deg: 346.5907239483859
+  dec_deg: 31.186715455609356
+  dm: 20.25
+  rh: 0.7
+  panels:
+  - width: 0.3
+    sigma: 0.5
+- id: south_ps1_001_mu20.75
+  label: "South PS1 001 \xB7 C distance mode"
+  manifest: regional_v12_south_ps1/results/summary/v12_south_ps1_001-base/manifest.json
+  ra_deg: 346.5858429951403
+  dec_deg: 31.196417423804743
+  dm: 20.75
+  rh: 0.7
+  panels:
+  - width: 0.3
+    sigma: 0.5

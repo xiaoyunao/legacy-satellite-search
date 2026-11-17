@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "table8_boo3",
+    "label": "Bootes III \u00b7 literature centre",
+    "manifest": "table8_v12_south/results/summary/table8_boo3-base/manifest.json",
+    "ra_deg": 209.3,
+    "dec_deg": 26.8,
+    "dm": 18.34,
+    "rh": 16.0,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      }
+    ]
+  },
+  "manifest_sha256": "f3411c1ae956eb15674570c631a76aa599494098c1103dcff1554f0c6dca1dac",
+  "job": "61462345",
+  "figures": [
+    {
+      "id": "table8_boo3",
+      "area_on_arcmin2": 1800.9027777777776,
+      "area_off_arcmin2": 18985.270833333332,
+      "core_cmd_star_count": 767,
+      "fixed_C_TS": 0.0,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

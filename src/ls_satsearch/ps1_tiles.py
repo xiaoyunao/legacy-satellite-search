@@ -3,7 +3,9 @@
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import csv
+import fcntl
 import io
+import json
 from itertools import product
 import math
 from pathlib import Path
@@ -60,6 +62,18 @@ def acquire(field_id, workers=1):
     field,tiles=design(spec,matched)
     out=data/'resources/ps1/tiles-v3'/field_id
     out.mkdir(exist_ok=True,parents=True)
+    with (out / 'acquire.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        manifest_path=out/'manifest.json'
+        if manifest_path.is_file():
+            prior=json.loads(manifest_path.read_text())
+            if (prior.get('matched_config_sha256')==sha(config_path('matched.yaml'))
+                    and prior.get('field')==spec and all((out/page['path']).is_file() for page in prior['pages'])):
+                return
+        acquire_field(field_id, workers, spec, field, tiles, out)
+
+
+def acquire_field(field_id, workers, spec, field, tiles, out):
     def acquire_tile(task):
         i,(ra,dec) = task
         result = []

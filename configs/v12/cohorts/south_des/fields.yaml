@@ -1,0 +1,128 @@
+seed: 483317
+plan_sha256: 7629d8e3b0049c6b7f35813ff256c8513b9eb973c7e52ac9f7ef5366762374fe
+previous_fields_sha256:
+  configs/v4/fields.yaml: 83e74dd32c4791a1430e1874d20ad2eae056ca47f06c1a78e6210af8674c77b9
+  configs/v5/weak/fields.yaml: 7ed9bb7aa297807c5fac9d62c340eb97e54268f0d45756f0ceed44dcd45496f5
+  results/v7/gap_registration/fields.yaml: fd2a5022d36af9c049dcc688d15f810de292d90c613d1ea6d75be8233f44a57c
+  results/v7/rollout_registration/fields.yaml: 3412afe9befaca56095aff498f3e7eaae99b6829265f4a9ae595af44a9d4bafc
+  results/v5/registration/fields.yaml: f78f98410ca8178ee1fa261d5a7345a0bb672535010142b68c1c84625c5483e9
+  results/v6/registration/fields.yaml: 36f1f0a14a89cdc3fc9ca187f0e9ece472d91aabeeebcdf88fd065cd4f33a2d5
+  results/v7/registration/fields.yaml: 12a3f09201714edad436e2432afe10dc9d838c47250bc07bcddb336a08b6e5a0
+  configs/v11/north/controls.yaml: a7faf29876fa00c85d1a6b6435cdf5d6936d1746dfa38a9decae79a9580203ad
+  configs/v11/cohorts/north/fields.yaml: 16dff032bc8fbefcee2ed92ef797476cd3cd8d8a6a14ba20dbbac3886838d4fe
+  configs/v11/cohorts/south_ps1/fields.yaml: cfcb1a62817cfd90fbd61fba346828e4d9d09ea8365330176b7946e194fe2079
+  configs/v11/cohorts/south_delve/fields.yaml: 142e64c38835792e0c6ada5d5928b0e4054d61be3970bfb250224774d5107931
+  configs/v11/cohorts/south_des/fields.yaml: 187700eb076871c394974450dff7597498c09474c8b74d9a28f92e22ad16d51c
+fields:
+- id: v12_south_des_001
+  ra: 82.265625
+  dec: -40.228184728061095
+  width: 3
+  role: pilot_eval
+  layer: south_des
+  region: south
+  proxy_area_deg2: 8.83673469387755
+  proxy_coverage: 0.981859410430839
+  proxy_census_fractions:
+    1: 0.981859410430839
+    2: 0.0
+    3: 0.0
+  survey: 1
+- id: v12_south_des_002
+  ra: 35.85937500000001
+  dec: 1.1937484371410785
+  width: 3
+  role: pilot_eval
+  layer: south_des
+  region: south
+  proxy_area_deg2: 8.306122448979592
+  proxy_coverage: 0.9229024943310657
+  proxy_census_fractions:
+    1: 0.9229024943310657
+    2: 0.0
+    3: 0.036281179138321996
+  survey: 1
+- id: v12_south_des_003
+  ra: 16.171875
+  dec: -37.16889965599945
+  width: 3
+  role: pilot_eval
+  layer: south_des
+  region: south
+  proxy_area_deg2: 8.693877551020408
+  proxy_coverage: 0.9659863945578231
+  proxy_census_fractions:
+    1: 0.9659863945578231
+    2: 0.0
+    3: 0.0
+  survey: 1
+- id: v12_south_des_004
+  ra: 71.78571428571429
+  dec: -58.91977535280316
+  width: 3
+  role: pilot_eval
+  layer: south_des
+  region: south
+  proxy_area_deg2: 8.387755102040817
+  proxy_coverage: 0.9319727891156463
+  proxy_census_fractions:
+    1: 0.9319727891156463
+    2: 0.0
+    3: 0.0
+  survey: 1
+- id: v12_south_des_005
+  ra: 35.15625
+  dec: -13.861949672048636
+  width: 3
+  role: pilot_eval
+  layer: south_des
+  region: south
+  proxy_area_deg2: 8.63265306122449
+  proxy_coverage: 0.9591836734693877
+  proxy_census_fractions:
+    1: 0.9591836734693877
+    2: 0.0
+    3: 0.02040816326530612
+  survey: 1
+- id: v12_south_des_006
+  ra: 28.828124999999996
+  dec: -4.780191847199159
+  width: 3
+  role: pilot_eval
+  layer: south_des
+  region: south
+  proxy_area_deg2: 8.653061224489797
+  proxy_coverage: 0.9614512471655329
+  proxy_census_fractions:
+    1: 0.9614512471655329
+    2: 0.0
+    3: 0.018140589569160998
+  survey: 1
+- id: v12_south_des_007
+  ra: 28.828124999999996
+  dec: -34.22886632781258
+  width: 3
+  role: pilot_eval
+  layer: south_des
+  region: south
+  proxy_area_deg2: 8.510204081632654
+  proxy_coverage: 0.9455782312925171
+  proxy_census_fractions:
+    1: 0.9455782312925171
+    2: 0.0
+    3: 0.0
+  survey: 1
+- id: v12_south_des_008
+  ra: 69.609375
+  dec: -34.22886632781258
+  width: 3
+  role: pilot_eval
+  layer: south_des
+  region: south
+  proxy_area_deg2: 8.551020408163266
+  proxy_coverage: 0.9501133786848073
+  proxy_census_fractions:
+    1: 0.9501133786848073
+    2: 0.0
+    3: 0.0
+  survey: 1

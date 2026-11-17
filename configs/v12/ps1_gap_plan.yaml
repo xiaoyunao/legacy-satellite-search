@@ -1,0 +1,12 @@
+version: v12g
+seed: 483319
+check_brick_geometry: true
+max_ebv: 0.10
+min_abs_b: 25
+south_ps1:
+  width: 2
+  count: 40
+  development: 0
+  minimum: 0.72
+  region: south
+  survey: 3

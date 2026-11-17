@@ -1,0 +1,27 @@
+targets:
+- id: v12_south_delve_008-A_base-0.3-001
+  label: "v12_south_delve_008-A_base-0.3-001 \xB7 L0"
+  manifest: regional_v12_south_delve/results/summary/v12_south_delve_008-base/manifest.json
+  ra_deg: 185.44399294894174
+  dec_deg: -31.962170486146995
+  dm: 20.75
+  rh: 2.0
+  panels:
+  - width: 1.5
+    sigma: 1.62
+  - width: 0.3
+    sigma: 0.5
+    suffix: -core
+- id: v12_south_delve_008-A_base-0.3-002
+  label: "v12_south_delve_008-A_base-0.3-002 \xB7 L0"
+  manifest: regional_v12_south_delve/results/summary/v12_south_delve_008-base/manifest.json
+  ra_deg: 185.404338421174
+  dec_deg: -31.984190926868962
+  dm: 20.75
+  rh: 2.0
+  panels:
+  - width: 1.5
+    sigma: 1.62
+  - width: 0.3
+    sigma: 0.5
+    suffix: -core

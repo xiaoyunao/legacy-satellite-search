@@ -1,0 +1,4 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v12g_south_ps1_018-A_base-0.3-001,awaiting_visual_review,10,10,8,1,0.0,16.5,11.2,0.0,Triangulum II,1283.3445728688735,L0
+v12g_south_ps1_018-A_base-0.3-002,awaiting_visual_review,2,2,2,2,0.0,20.0,11.2,0.0,Triangulum II,1296.2359652846717,L0
+v12g_south_ps1_018-A_base-0.3-003,awaiting_visual_review,5,5,3,4,0.0,16.5,11.2,0.0,Triangulum II,1266.5479673267944,L0

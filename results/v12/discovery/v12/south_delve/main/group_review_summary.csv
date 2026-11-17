@@ -1,0 +1,6 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v12_south_delve_008-A_base-0.3-001,awaiting_visual_review,8,8,5,1,203.86498604375777,20.75,2.8,170.82293144160428,Hydra II,1.0102711611429298,L0
+v12_south_delve_008-A_base-0.3-002,awaiting_visual_review,3,3,3,2,206.1976761000652,20.75,2.8,174.4473016895584,Hydra II,1.4113165488640522,L0
+v12_south_delve_008-A_base-0.3-003,awaiting_visual_review,3,3,3,7,141.88901521378887,20.25,5.6,120.60985173776777,Hydra II,3.297614879903959,L0
+v12_south_delve_008-A_base-0.3-004,awaiting_visual_review,1,1,1,9,133.65848840531004,20.0,5.6,113.79791486009529,Hydra II,3.4514903055979786,L0
+v12_south_delve_008-A_base-0.3-005,awaiting_visual_review,1,1,1,10,183.87038001342893,20.75,5.6,156.65840561763355,Hydra II,2.7729276569345953,L0

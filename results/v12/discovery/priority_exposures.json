@@ -1,0 +1,58 @@
+{
+  "job": "61462589",
+  "center_ra_dec": [
+    346.59235093280114,
+    31.191150517657945
+  ],
+  "brick": "3467p312",
+  "ccd_file": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/346/3467p312/legacysurvey-3467p312-ccds.fits",
+  "input_sha256": "0c299e6ae3adbb74e0c8338c4d53c359daebfec8c30fa7b227b7adcf8a71d226",
+  "dr11_g_exposures": [
+    780164,
+    780179,
+    790517
+  ],
+  "noirlab_visits": [
+    {
+      "utc": "2018-10-03 02:12:53.937971+00",
+      "band": "g DECam SDSS c0001 4720.0 1520.0",
+      "seconds": 200.0,
+      "instrument": "decam",
+      "product_hdu_rows": 14,
+      "original_filename": "DECam_00780164.fits.fz",
+      "expnum": 780164,
+      "in_primary_dr11_brick": true
+    },
+    {
+      "utc": "2018-10-03 03:06:10.76891+00",
+      "band": "g DECam SDSS c0001 4720.0 1520.0",
+      "seconds": 200.0,
+      "instrument": "decam",
+      "product_hdu_rows": 21,
+      "original_filename": "DECam_00780179.fits.fz",
+      "expnum": 780179,
+      "in_primary_dr11_brick": true
+    },
+    {
+      "utc": "2018-11-04 01:27:11.236309+00",
+      "band": "g DECam SDSS c0001 4720.0 1520.0",
+      "seconds": 200.0,
+      "instrument": "decam",
+      "product_hdu_rows": 21,
+      "original_filename": "DECam_00790517.fits.fz",
+      "expnum": 790517,
+      "in_primary_dr11_brick": true
+    },
+    {
+      "utc": "2018-11-10 01:24:34.598585+00",
+      "band": "g DECam SDSS c0001 4720.0 1520.0",
+      "seconds": 200.0,
+      "instrument": "decam",
+      "product_hdu_rows": 7,
+      "original_filename": "DECam_00792757.fits.fz",
+      "expnum": 792757,
+      "in_primary_dr11_brick": false
+    }
+  ],
+  "scope": "The coadd CCD table applies to the primary brick. A nonmatching visit still needs a detector-level footprint, product availability and depth check."
+}

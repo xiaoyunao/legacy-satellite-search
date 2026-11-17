@@ -1,0 +1,60 @@
+width_deg: 1.8
+buffer_arcmin: 26
+radii_arcmin:
+- 0.5
+- 1
+- 2
+- 4
+review_budgets_deg2:
+- 0.3
+dm:
+- 16.5
+- 22.5
+- 0.25
+fields:
+- id: v12_match_south_01
+  role: pilot_dev
+  survey: 3
+  ra: 344.53125
+  dec: 30.69158768492234
+- id: v12_match_south_05
+  role: pilot_dev
+  survey: 3
+  ra: 315.703125
+  dec: 2.388015463268777
+- id: v12_match_south_10
+  role: pilot_dev
+  survey: 3
+  ra: 262.96875
+  dec: 17.58277600842541
+- id: v12_match_south_13
+  role: pilot_dev
+  survey: 3
+  ra: 336.796875
+  dec: 27.279612735978095
+- id: v12_match_south_15
+  role: pilot_eval
+  survey: 3
+  ra: 31.640625
+  dec: 23.31795706533424
+- id: v12_match_south_21
+  role: pilot_eval
+  survey: 3
+  ra: 35.15625
+  dec: 23.96948231775968
+- id: table8_boo3
+  role: table8
+  ra: 209.78
+  dec: 27.22
+- id: table8_peg3
+  role: table8
+  ra: 336.44
+  dec: 5.02
+- id: table8_peg4
+  role: table8
+  ra: 328.22
+  dec: 26.91
+- id: table8_pis2
+  role: table8
+  ra: 344.88
+  dec: 6.2

@@ -1,0 +1,7 @@
+{
+  "job": "61462628",
+  "plan_sha256": "e4e052d71ef2705741880bb77798aae2e45b07a0d5161439a152cb3dbe6a1752",
+  "manifest_sha256": "efde9e099e412610249824a0398fc42c4888922d05cc962424f4bd7ff9e10241",
+  "radius_arcmin": 0.7,
+  "scope": "Fixed-centre response. Dotted curves remove the top three contributions per distance."
+}

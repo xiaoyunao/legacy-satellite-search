@@ -224,3 +224,11 @@ python3 -m venv .venv
 Program, rules and reproducibility docs are in `src/`, `scripts/`, `configs/`, `docs/` and `references/`. `results/summary/` records manifests, cuts, known recovery, matched review costs and candidate statistics. `results/figures/` contains static diagnostics. Slurm stdout stays under `logs/` on Perlmutter. Raw LS measurements, catalogs, coverage caches, full template peaks and candidate-member tables stay on NERSC. Sync only the approved summary tables and figures to the Mac.
 
 Read the [first science report](first_science_report.md) for measured recovery, candidate review and the next experiment. [Slurm accounting](results/summary/slurm_jobs.csv) records control, pilot, review and injection job outcomes.
+
+### Round 12 regional and matched experiments
+
+Keep the existing v7 and v11 production policies. The four-stratum registration uses the plan in `configs/v12/regional_plan.yaml`. The narrower South PS1 supplement uses `configs/v12/ps1_gap_plan.yaml` and the version `v12g`. Each registry records the historical field inputs and hash. Use the saved registries to rerun the exact blocks.
+
+From the NERSC project revision, submit the CPU array with an appropriate Slurm account and launch `scripts/v12_batches.sh <region> <field-count>`. Its index selects eight disjoint fields and skips completed manifests. Use `LS_SAT_VERSION=v12g` for the supplement. After each successful array, use `scripts/v12_discovery.py` on a compute node to apply the frozen candidate policies and review priority groups.
+
+Run `scripts/v12_ps1_download.sh <north|south> <Perlmutter scratch>` from a data transfer node to acquire and checksum the common-area PS1 DR2 catalog pages. The actual Perlmutter scratch path is reported by the login environment. From the project revision on a Perlmutter login node, `PYTHONPATH=src .venv/bin/python scripts/v12_matched_submit.py <north|south>` submits only ready fields. It records submitted job IDs and starts calibration and physical trials when the required inputs become available. Compute steps remain on Slurm. The small selection and paper-figure tables are described in the [round 12 report](twelfth_science_report.md).

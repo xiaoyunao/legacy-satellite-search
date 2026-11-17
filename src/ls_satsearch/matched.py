@@ -111,16 +111,29 @@ def run(field_id):
     matched = yaml.safe_load(config_path('matched.yaml').read_text())
     spec = next(s for s in matched['fields'] if s['id']==field_id)
     spec = dict(spec, width=matched['width_deg'], buffer_arcmin=matched['buffer_arcmin'])
-    cfg.update(dm=[16.5,20.75,.25], radii_arcmin=matched['radii_arcmin'], methods=['A'],
+    cfg.update(dm=matched.get('dm', [16.5,20.75,.25]), radii_arcmin=matched['radii_arcmin'], methods=['A'],
                review_budgets_deg2=matched['review_budgets_deg2'])
-    field, sources, ls_area, info = field_cache(root,data_root,spec,cfg,load_bricks(root))
+    field, sources, ls_area, info = field_cache(root,data_root,spec,cfg,load_bricks(root,cfg['region']))
     ps1_root = data_root/'resources/ps1'
     area = joint_coverage(field,ls_area,ps1_root/'ps1d_mask_v2.1.fits')
     effective,fraction = coverage_metrics(field,area,cfg)
     ls_effective,_ = coverage_metrics(field,ls_area,cfg)
     if effective <= 0:
-        raise RuntimeError(f'No usable joint area for {field_id}')
+        if 'main_dm_max' not in cfg:
+            raise RuntimeError(f'No usable joint area for {field_id}')
+        out = DEST/'coverage'
+        out.mkdir(exist_ok=True, parents=True)
+        write_json(out/f'{field_id}.json', dict(field=spec, area_deg2=effective,
+                   ls_area_deg2=ls_effective, status='no_joint_area',
+                   slurm_job_id=os.getenv('SLURM_JOB_ID')))
+        return
     # The survey-specific catalogs never require a counterpart.
+    if 'main_dm_max' in cfg:
+        out = DEST/'coverage'
+        out.mkdir(exist_ok=True,parents=True)
+        write_json(out/f'{field_id}.json', dict(field=spec, area_deg2=effective,
+                   ls_area_deg2=ls_effective, status='joint_area',
+                   slurm_job_id=os.getenv('SLURM_JOB_ID')))
     for survey in SURVEYS:
         begin = monotonic()
         survey_cfg = cfg.copy()
@@ -147,7 +160,7 @@ def run(field_id):
         for path in (summary,work):
             path.mkdir(exist_ok=True,parents=True)
         manifest = dict(field=spec,survey=survey,depth='base',config=survey_cfg, bands=bands,
-                        release='PS1 DR2 stack' if survey=='ps1' else 'LS DR11 south',
+                        release='PS1 DR2 stack' if survey=='ps1' else f"LS DR11 {cfg['region']}",
                         area_deg2=effective, area_fraction=fraction,ls_area_deg2=ls_effective,
                         cutflow=cuts, inputs=inputs, model_sha256=sha(model_path),
                         matched_config_sha256=sha(config_path('matched.yaml')),

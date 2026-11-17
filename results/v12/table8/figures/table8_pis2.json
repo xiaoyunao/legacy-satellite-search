@@ -1,0 +1,47 @@
+{
+  "case": {
+    "id": "table8_pis2",
+    "label": "Pisces II \u00b7 literature centre",
+    "manifest": "table8_v12_south/results/summary/table8_pis2-base/manifest.json",
+    "ra_deg": 344.6364583,
+    "dec_deg": 5.9555444,
+    "dm": 21.31,
+    "rh": 1.0589428920917692,
+    "panels": [
+      {
+        "width": 1.5,
+        "sigma": 1.62
+      },
+      {
+        "width": 0.3,
+        "sigma": 0.5,
+        "suffix": "-compact"
+      }
+    ]
+  },
+  "manifest_sha256": "ec7d34e3fe07a32f4a23f3137d04661da7aab24dca536bee804e4b239088ca70",
+  "job": "61462345",
+  "figures": [
+    {
+      "id": "table8_pis2",
+      "area_on_arcmin2": 7.9375,
+      "area_off_arcmin2": 83.18055555555556,
+      "core_cmd_star_count": 24,
+      "fixed_C_TS": 60.161813131645744,
+      "width_deg": 1.5,
+      "sigma_arcmin": 1.62,
+      "map_pixel_arcmin": 0.25
+    },
+    {
+      "id": "table8_pis2-compact",
+      "area_on_arcmin2": 7.9375,
+      "area_off_arcmin2": 83.18055555555556,
+      "core_cmd_star_count": 24,
+      "fixed_C_TS": 60.161813131645744,
+      "width_deg": 0.3,
+      "sigma_arcmin": 0.5,
+      "map_pixel_arcmin": 0.25
+    }
+  ],
+  "scope": "Fixed-centre C and local diagnostic on-off tails without trials correction."
+}

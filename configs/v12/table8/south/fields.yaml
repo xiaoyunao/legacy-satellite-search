@@ -1,0 +1,5 @@
+fields:
+- {id: table8_boo3, role: table8, ra: 209.78, dec: 27.22, width: 3.4}
+- {id: table8_peg3, role: table8, ra: 336.44, dec: 5.02, width: 2.3}
+- {id: table8_peg4, role: table8, ra: 328.22, dec: 26.91, width: 2.3}
+- {id: table8_pis2, role: table8, ra: 344.88, dec: 6.20, width: 2.3}

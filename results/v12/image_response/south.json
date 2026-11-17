@@ -1,0 +1,23 @@
+{
+  "inputs": [
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/344/3444p307/legacysurvey-3444p307-image-g.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/344/3444p307/legacysurvey-3444p307-invvar-g.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/344/3444p307/legacysurvey-3444p307-image-r.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/344/3444p307/legacysurvey-3444p307-invvar-r.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/344/3444p307/legacysurvey-3444p307-maskbits.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/315/3156p025/legacysurvey-3156p025-image-g.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/315/3156p025/legacysurvey-3156p025-invvar-g.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/315/3156p025/legacysurvey-3156p025-image-r.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/315/3156p025/legacysurvey-3156p025-invvar-r.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/315/3156p025/legacysurvey-3156p025-maskbits.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/263/2630p175/legacysurvey-2630p175-image-g.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/263/2630p175/legacysurvey-2630p175-invvar-g.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/263/2630p175/legacysurvey-2630p175-image-r.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/263/2630p175/legacysurvey-2630p175-invvar-r.fits.fz",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/coadd/263/2630p175/legacysurvey-2630p175-maskbits.fits.fz"
+  ],
+  "job": "61461739",
+  "config_sha256": "e21f91179e5336da1f3ea4aa00b6240647e588354f3ec6713a7bd07bc31e6500",
+  "seed": 483318,
+  "scope": "Independent g/r coadd detection at 5 blank-corrected sigma with Gaussian PSFs. Local maxima are proxies for source extraction. Tractor joint detection, deblending and TYPE are not replayed."
+}

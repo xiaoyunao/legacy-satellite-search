@@ -1,0 +1,17 @@
+policy,branch,budget,field,role,area_deg2,kept_sky_groups,passing_hypotheses,cutoff
+A_base,main,0.1,v12_south_delve_001,pilot_eval,7.594347993827159,6,7,6.457227455089624
+A_base,main,0.1,v12_south_delve_002,pilot_eval,8.679193672839505,1,1,6.457227455089624
+A_base,main,0.1,v12_south_delve_003,pilot_eval,8.403300540123455,0,0,6.457227455089624
+A_base,main,0.1,v12_south_delve_004,pilot_eval,8.516327160493825,2,2,6.457227455089624
+A_base,main,0.1,v12_south_delve_005,pilot_eval,7.807625385802468,1,2,6.457227455089624
+A_base,main,0.1,v12_south_delve_006,pilot_eval,8.830283564814813,0,0,6.457227455089624
+A_base,main,0.1,v12_south_delve_007,pilot_eval,8.389247685185184,4,4,6.457227455089624
+A_base,main,0.1,v12_south_delve_008,pilot_eval,8.475856481481479,9,19,6.457227455089624
+A_base,main,0.3,v12_south_delve_001,pilot_eval,7.594347993827159,6,11,5.73753452328614
+A_base,main,0.3,v12_south_delve_002,pilot_eval,8.679193672839505,7,8,5.73753452328614
+A_base,main,0.3,v12_south_delve_003,pilot_eval,8.403300540123455,2,3,5.73753452328614
+A_base,main,0.3,v12_south_delve_004,pilot_eval,8.516327160493825,6,8,5.73753452328614
+A_base,main,0.3,v12_south_delve_005,pilot_eval,7.807625385802468,3,4,5.73753452328614
+A_base,main,0.3,v12_south_delve_006,pilot_eval,8.830283564814813,3,3,5.73753452328614
+A_base,main,0.3,v12_south_delve_007,pilot_eval,8.389247685185184,6,7,5.73753452328614
+A_base,main,0.3,v12_south_delve_008,pilot_eval,8.475856481481479,15,26,5.73753452328614

@@ -24,7 +24,7 @@ def plane(path):
         return h.data.copy(),h.header
 
 
-def run(config, folder, output):
+def run(config, folder, output, expnum=562858, ccd_ids=(31,32)):
     target=yaml.safe_load(config.read_text())
     data=Path(os.environ['LS_SAT_DATA'])
     ps1=data/'resources'/target['scratch_revision']/target['candidate']/'ps1.csv'
@@ -41,7 +41,7 @@ def run(config, folder, output):
     trial=random.choice(np.flatnonzero(off),size=1500,replace=False)
     joint=np.zeros_like(core)
     chip_reports=[]
-    for cid in (31,32):
+    for cid in ccd_ids:
         files={k:folder/f'{k}-{cid}.fits' for k in ('image','weight','dq')}
         image,h=plane(files['image'])
         weight,w=plane(files['weight'])
@@ -88,7 +88,7 @@ def run(config, folder, output):
           g5_ps1_equiv=limit,g0_5_ps1_equiv=limit-3.172*ebv,core_fraction=float(coverage[core].mean()),
           file_sha256={k:sha(p) for k,p in files.items()}))
     index=np.unravel_index(coords.separation(centre).argmin(),coords.shape)
-    write_json(output,dict(job=os.environ.get('SLURM_JOB_ID'),expnum=562858,aperture_radius_pixels=4,
+    write_json(output,dict(job=os.environ.get('SLURM_JOB_ID'),expnum=expnum,aperture_radius_pixels=4,
                core_usable_fraction=float(joint[core].mean()),annulus_usable_fraction=float(joint[off].mean()),
                center_usable=bool(joint[index]),measurements=chip_reports,
                scope='Positive weight and zero DQ, complete aperture and numerically valid margins. '
@@ -100,5 +100,7 @@ if __name__=='__main__':
     p.add_argument('config',type=Path)
     p.add_argument('folder',type=Path)
     p.add_argument('output',type=Path)
+    p.add_argument('--expnum',type=int,default=562858)
+    p.add_argument('--ccd-ids',nargs='+',type=int,default=(31,32))
     a=p.parse_args()
-    run(a.config,a.folder,a.output)
+    run(**vars(a))

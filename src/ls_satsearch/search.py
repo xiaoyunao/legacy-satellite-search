@@ -254,7 +254,7 @@ def scan(sample, field, coverage, model, cfg):
     for i, peak in enumerate(peaks):
         peak['raw_peak_id'] = i + 1
         peak['ra_deg'], peak['dec_deg'] = field.sky(peak['x'], peak['y'])
-    return peaks, deduplicate(peaks), seconds, cmd
+    return peaks, deduplicate(peaks, cfg.get('main_dm_max', 20.75)), seconds, cmd
 
 
 def maxima(score, ok, floor):
@@ -263,11 +263,11 @@ def maxima(score, ok, floor):
     return np.argwhere(selected & (image == maximum_filter(image, size=3, mode='constant', cval=-np.inf)))
 
 
-def deduplicate(peaks):
+def deduplicate(peaks, main_dm_max=20.75):
     """Collapse compatible templates within each method and distance branch."""
     grouped = {(method, branch): [] for method in ('A','B') for branch in BRANCHES}
     for peak in peaks:
-        peak['branch'] = template_branch(peak['dm'])
+        peak['branch'] = template_branch(peak['dm'], main_dm_max)
         grouped[peak['method'], peak['branch']].append(peak)
     result = []
     for rows in grouped.values():

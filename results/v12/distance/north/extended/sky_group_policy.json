@@ -1,0 +1,71 @@
+{
+  "branch": "main",
+  "scales": {
+    "A_base": 6.234256137007003
+  },
+  "thresholds": [
+    {
+      "policy": "A_base",
+      "channels": [
+        "A_base"
+      ],
+      "budget": 0.1,
+      "cutoff": 6.954957629191632,
+      "target": 12
+    },
+    {
+      "policy": "A_base",
+      "channels": [
+        "A_base"
+      ],
+      "budget": 0.3,
+      "cutoff": 6.234256137007003,
+      "target": 38
+    }
+  ],
+  "recipe": {
+    "seed": 481705,
+    "region": "north",
+    "dm": [
+      13.5,
+      22.5,
+      0.25
+    ],
+    "radii_arcmin": [
+      0.5,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "min_snr": 5,
+    "reject_maskbits": [
+      1,
+      5,
+      6,
+      10,
+      19
+    ],
+    "coverage_subdivision": 2,
+    "min_on_fraction": 0.75,
+    "min_off_fraction": 0.6,
+    "peak_seed_floor": 2.0,
+    "background_tile_arcmin": 120,
+    "match_min_arcmin": 2,
+    "match_rh_factor": 1,
+    "match_dm_tolerance": 0.75,
+    "review_budgets_deg2": [
+      0.1,
+      0.3
+    ],
+    "isochrone": "isochrones/bass/ps1_projected12_z0.00010.dat",
+    "main_dm_max": 21.0
+  },
+  "limits": {
+    "base": {
+      "g_max": 23.5,
+      "r_max": 23.0
+    }
+  }
+}
