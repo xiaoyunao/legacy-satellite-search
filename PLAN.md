@@ -17,7 +17,7 @@ Search the effective DR11 gr footprint in all four observing strata, maintain on
 
 - All seven CCD sites have eight measured physical realizations. Native-image response sampling for this registered cohort is complete. Use the measured pipeline losses and sky-to-sky variation to plan the next physical completeness grid.
 - Finish the remaining registered South DELVE, South DES and extension arrays. Retry only the 13 manifest-incomplete fields in terminal OOM tasks. Retain the production cuts and record review completion for the 1,685 North and 22 South PS1 primary within-field groups.
-- Synchronize measured results and a fresh cumulative catalogue/atlas after the corrected scratch-lock aggregation completes. Retain each native WCS area and hash.
+- Completed masks, CCD trials and review shards are synchronized. The debug aggregation 61510733 timed out after 30:26; regular fallback 61511922 has a four-hour limit and awaits dispatch. Synchronize its cumulative catalogue/atlas only after successful completion, retaining each native WCS area and hash.
 - The frozen 0706 PS1, SDSS and independent i measurements show full core coverage but inadequate depth for the faint sequence. PS1 and BASS have weak fixed-population support. Retain L0; retry CADC availability before prioritizing further pixel work. Treat CADC service failure as unresolved coverage.
 
 
