@@ -1,0 +1,21 @@
+{
+  "inputs": {
+    "results/v14/image_response/v14_south_response_1-stages.csv": "efa749fc74ef82ee2fdc5760510053811350cca4726474f5c9f0fc671a3bd4ac",
+    "results/v14/image_response/v14_south_response_1-blind.csv": "aeb9b4ce2ab20c4206613f010f87da7ed11d1f9dc966db28878d7fcdd589a74a",
+    "results/v14/image_response/v14_south_response_2-stages.csv": "b563e00328bd584b54fc23b6c34a07f03cc49870cba519a97a44f384374a5f12",
+    "results/v14/image_response/v14_south_response_2-blind.csv": "8756e51f1ca9df0104d542caf118990cb25c0a2804a9199453bfd44935ea4aaf",
+    "results/v14/image_response/v14_south_response_3-stages.csv": "15e34ee52c6aeebea244ee06df1af55f3a242e5312b909e35f58cc1fd1cd8e81",
+    "results/v14/image_response/v14_south_response_3-blind.csv": "a44e91ef95e3ae2267875ecd732da8ecf7244ae9fb451f8ed1acdf0ff5704c8f",
+    "results/v14/image_response/v14_north_response_1-stages.csv": "4cc2484886c0022d7c6c996adf803d346b2bf03ceb75fe2aa308861729550c00",
+    "results/v14/image_response/v14_north_response_1-blind.csv": "db8c23f3699b6bcb193f3ba93ec0acf4f18801f761671de65e04a07e6f57689b",
+    "results/v14/image_response/v14_north_response_2-stages.csv": "69f5b28d95efa7bdd71b5029a02373b348988461135034c7a1677de1e2a28199",
+    "results/v14/image_response/v14_north_response_2-blind.csv": "1d98282bd7f5235f44078b04eec376eb3aa64d0274436fb9c436037a2d5d56b0",
+    "results/v14/image_response/v14_south_delve_response-stages.csv": "acbe64c3cbcd7602af8bf1da56ba96fc0e6a8af37a17899b133d6ffeb4fba81c",
+    "results/v14/image_response/v14_south_delve_response-blind.csv": "d2bdcbdeaaac16fcdfee0a7cf29778181c4b61f328c1b2678afaa0e1adfc8ed0",
+    "results/v14/image_response/v14_south_des_response-stages.csv": "0ff37d7b2bd739d980c1d1477ec1b26c51699706983db6932717250e8f472736",
+    "results/v14/image_response/v14_south_des_response-blind.csv": "9288de8fb1180d86c42fabd36c4ae1c660212b53ff5f4635f902b1d24e7dfb4a"
+  },
+  "physical_realizations": 56,
+  "arm_records": 96,
+  "scope": "Eight physical realizations per real CCD background. Conditional stage probabilities and sampled-background recovery. Paired depth intervals are conservative trial-level bounds and do not model field variation. C stability is a diagnostic proxy; independent confirmation and population completeness require further evidence."
+}

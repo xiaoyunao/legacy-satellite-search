@@ -1,0 +1,2 @@
+cohort,registered,completed,no_usable,prepared,missing,planned_proxy_deg2,searched_deg2,valid_unsearched_mask_deg2,raw_peaks,dedup_peaks,primary_cut,primary_eval,primary_dev,threshold_source
+north_extension,142,140,2,0,0,815.3213204698228,779.7811265432097,0,22636388,6425346,6.405633379405386,296,46,results/v14/discovery/north_extension/calibration/sky_group_policy.json

@@ -27,6 +27,7 @@ if (( start + length > ${#names[@]} )); then
     exit 2
 fi
 pids=()
+status=0
 for ((i=start;i<start+length;i++)); do
     field=${names[i]}
     manifest="results/summary/$field-base/manifest.json"
@@ -39,8 +40,13 @@ for ((i=start;i<start+length;i++)); do
     srun -N1 -n1 -c4 --mem="${LS_SAT_STEP_MEM:-5500M}" --exact -o "logs/$field-%j.log" \
          bash "$LS_SAT_WORKSPACE/scripts/v6.sh" run "$field" &
     pids+=("$!")
+    if (( ${#pids[@]} >= ${LS_SAT_FIELD_WORKERS:-8} )); then
+        for pid in "${pids[@]}"; do
+            wait "$pid" || status=1
+        done
+        pids=()
+    fi
 done
-status=0
 for pid in "${pids[@]}"; do
     wait "$pid" || status=1
 done

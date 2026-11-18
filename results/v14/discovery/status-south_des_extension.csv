@@ -1,0 +1,2 @@
+cohort,registered,completed,no_usable,prepared,missing,planned_proxy_deg2,searched_deg2,valid_unsearched_mask_deg2,raw_peaks,dedup_peaks,primary_cut,primary_eval,primary_dev,threshold_source
+south_des_extension,68,68,0,0,0,113.93411233741588,113.48958912037035,0,2911585,830351,6.256213786895604,20,6,results/v14/discovery/south_des_extension/calibration/sky_group_policy.json

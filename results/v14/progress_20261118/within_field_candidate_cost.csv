@@ -1,0 +1,15 @@
+cohort,role,budget,cutoff,effective_deg2,within_field_groups,groups_per_deg2,source
+north,evaluation,0.1,6.874364001040076,3642.638418209876,1025,0.28138944422151074,results/v14/discovery/north/main/sky_group_comparison.csv
+north,evaluation,0.3,6.220669272502449,3642.638418209876,1685,0.4625767936714591,results/v14/discovery/north/main/sky_group_comparison.csv
+south_ps1,evaluation,0.1,6.9232059661508565,17.982685185185183,12,0.6673085735764342,results/v14/discovery/south_ps1/main/sky_group_comparison.csv
+south_ps1,evaluation,0.3,6.137901371660258,17.982685185185183,22,1.223399051556796,results/v14/discovery/south_ps1/main/sky_group_comparison.csv
+south_delve,evaluation,0.1,6.457227455089624,3005.425104166666,1082,0.36001562590927155,results/v14/discovery/south_delve/main/sky_group_comparison.csv
+south_delve,evaluation,0.3,5.73753452328614,3005.425104166666,2240,0.7453188558565326,results/v14/discovery/south_delve/main/sky_group_comparison.csv
+north_extension,dev,0.1,7.461067993950646,155.53153163580242,15,0.09644346610772456,results/v14/discovery/north_extension/main/sky_group_comparison.csv
+north_extension,evaluation,0.1,7.461067993950646,624.2495949074073,135,0.2162596517503933,results/v14/discovery/north_extension/main/sky_group_comparison.csv
+north_extension,dev,0.3,6.405633379405386,155.53153163580242,46,0.2957599627303553,results/v14/discovery/north_extension/main/sky_group_comparison.csv
+north_extension,evaluation,0.3,6.405633379405386,624.2495949074073,296,0.47416931050456607,results/v14/discovery/north_extension/main/sky_group_comparison.csv
+south_des_extension,dev,0.1,6.561308535211798,20.299724151234564,2,0.09852350628510223,results/v14/discovery/south_des_extension/main/sky_group_comparison.csv
+south_des_extension,evaluation,0.1,6.561308535211798,93.18986496913578,13,0.13950014847972536,results/v14/discovery/south_des_extension/main/sky_group_comparison.csv
+south_des_extension,dev,0.3,6.256213786895604,20.299724151234564,6,0.29557051885530666,results/v14/discovery/south_des_extension/main/sky_group_comparison.csv
+south_des_extension,evaluation,0.3,6.256213786895604,93.18986496913578,20,0.21461561304573135,results/v14/discovery/south_des_extension/main/sky_group_comparison.csv

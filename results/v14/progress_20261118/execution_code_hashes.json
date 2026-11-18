@@ -1,0 +1,19 @@
+{
+  "git_parent": "abd47db4e776e4951022153f71922fff7e0c2346",
+  "scope": "Checkpoint worktree after repairs. Original scientific runs retain their own manifests and frozen inputs.",
+  "files": {
+    "configs/v14/0706/followup.yaml": "cc6727010583b12177e40acd7a2ad4bdb7506bca45f1f8e720c130c27ccb1f47",
+    "scripts/v11_regional.sh": "95827eeff5aa4ed6049f9e6b6fa231b451ca97c60aba17fb6cb32dd886e86b17",
+    "scripts/v14_0706_catalogues.py": "9669f315fc98fd6912e547500b1ed7734b046648a9d1f909f6f1e02680fa7f80",
+    "scripts/v14_after_scan.py": "9dc36099f40e174bf726ef05d253ed35a5c7213891175e5ed61f083ecd8c394d",
+    "scripts/v14_archive0706.py": "12268f679a8568dc394a91abc8c41fb6215404a1f8e6d71a7a871c93bf5a5b14",
+    "scripts/v14_batches.sh": "c0e6d0ce970e903440c0c1a82f5f2c3fe042235fbf3de8302710f1833f242a79",
+    "scripts/v14_download0706.py": "b5f94e06294443906971ac920905f894257e00cdb8e2a4c5f14d0f70e142f04c",
+    "scripts/v14_finalize.sh": "5b9762f35e12a5d9988aef00ff0252e20579d48287d704f917e81aabb9f0040e",
+    "scripts/v14_image0706.py": "0277326024cd636cbb167d24d098e7f545b1dd08da6f2010aa9da5ead4cb55ab",
+    "scripts/v14_manifest_audit.py": "cb396f6adc7fb0dff9c22f2e1320297c497e4e22685aade20cb53f30a370108b",
+    "scripts/v14_native_summary.py": "2eabc194ccb019e412caa1b291488d9f3aa71a1c00880b87efea9c3d4b227553",
+    "scripts/v14_retry_manifest.sh": "99b1a497d815ca92defe7600290c48d67ad208b32d9374feb328e141e7649079",
+    "scripts/v14_snapshot_retry.sh": "f725baf600403aad8ba48cda9c5dd7e518f554b062d7c8dcb37a4a73121e6f88"
+  }
+}

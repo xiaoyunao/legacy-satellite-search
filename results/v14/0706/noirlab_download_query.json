@@ -1,0 +1,9 @@
+{
+  "archives": {
+    "NOIRLab g": {
+      "results": {
+        "url": "https://astroarchive.noirlab.edu/api/sia/vohdu?POS=165.61216974832084%2C31.892121971411218&SIZE=.13&VERB=3&format=json"
+      }
+    }
+  }
+}

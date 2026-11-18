@@ -1,0 +1,40 @@
+{
+  "target": true,
+  "ps1_cmd_n_on": 4,
+  "ps1_cmd_n_off": 9,
+  "on_area_arcmin2": 1.7777777777777777,
+  "off_area_arcmin2": 18.5,
+  "onoff_tail": 0.022148586970191363,
+  "C_TS": 0.0,
+  "match_distance": 0.0,
+  "local_depth_proxy": 4.134125232696533,
+  "seeing": 1.5045124292373657,
+  "ebv": 0.029289206489920616,
+  "ps1_annulus_count": 17,
+  "inputs": {
+    "query": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=165.61216974832084&dec=31.892121971411218&radius=0.23&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&pagesize=25000&sort_by=objID.asc",
+    "sha256": "d5b002775518bbdd43c25096cf273b85a2c982fe28989526dabf9711d4002ff5",
+    "unique_primary": 7401,
+    "selected": 640
+  },
+  "config_sha256": "cc6727010583b12177e40acd7a2ad4bdb7506bca45f1f8e720c130c27ccb1f47",
+  "job": "61510609",
+  "control_n": 256,
+  "at_least_as_small_tail": 0,
+  "control_C_n": 256,
+  "C_TS_at_least_as_high": 256,
+  "blind_peaks_within_1p5arcmin": 32,
+  "ps1_scan_seconds": {
+    "A": 0.4843903703149408,
+    "B": 0.0,
+    "cmd": 0.18567210680339485,
+    "shared": 0.005460818996652961
+  },
+  "blind_total_peaks": 440,
+  "strongest_blind_peak": {
+    "score": 4.20411470199746,
+    "dm": 14.75,
+    "rh_arcmin": 1,
+    "offset_arcmin": 5.522680508593631
+  }
+}

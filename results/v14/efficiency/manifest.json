@@ -10,7 +10,13 @@
     "results/v13/selection_trials/north/v13_select_v11_north_14.csv": "cc9a33c7d21d10fad0016a53348e00042272626cf40e4b5c39d2f8fb3d8b8d4d",
     "results/v13/selection_trials/north/v13_select_v12_north_003.csv": "b270e4655a3bcb277c99a9442e54646d0a4c2e43bbb5065d683c1b4a7c1653fd",
     "results/v13/selection_trials/north/v13_select_v12_north_010.csv": "3645b38868b1139b58f8acbe15db83043fa73e004d753a12491f564ffa94be8a",
-    "results/v14/image_response/v14_south_response_1-blind.csv": "6f279f85dd4b82df03d7f0fab8304fbe02ceddb374d7997c5a8be5f453ebfdf4",
+    "results/v14/image_response/v14_north_response_1-blind.csv": "db8c23f3699b6bcb193f3ba93ec0acf4f18801f761671de65e04a07e6f57689b",
+    "results/v14/image_response/v14_north_response_2-blind.csv": "1d98282bd7f5235f44078b04eec376eb3aa64d0274436fb9c436037a2d5d56b0",
+    "results/v14/image_response/v14_south_delve_response-blind.csv": "d2bdcbdeaaac16fcdfee0a7cf29778181c4b61f328c1b2678afaa0e1adfc8ed0",
+    "results/v14/image_response/v14_south_des_response-blind.csv": "9288de8fb1180d86c42fabd36c4ae1c660212b53ff5f4635f902b1d24e7dfb4a",
+    "results/v14/image_response/v14_south_response_1-blind.csv": "aeb9b4ce2ab20c4206613f010f87da7ed11d1f9dc966db28878d7fcdd589a74a",
+    "results/v14/image_response/v14_south_response_2-blind.csv": "8756e51f1ca9df0104d542caf118990cb25c0a2804a9199453bfd44935ea4aaf",
+    "results/v14/image_response/v14_south_response_3-blind.csv": "a44e91ef95e3ae2267875ecd732da8ecf7244ae9fb451f8ed1acdf0ff5704c8f",
     "results/v12/matched/north/tan_table8_common_mask.csv": "8cae6f0f5f1caa1c864914efd68248cd5e03c6ef61683254a964c119b8afdd44",
     "results/v12/matched/south/tan_table8_common_mask.csv": "9cc94d462d07a7223d0de00490619bce34861771ffd8782d6a1e3b372d01cfd8",
     "results/v12/table8/tan_table8_ls.csv": "7e249b42eaf30566a267eba8c9fa35158ba15ae04d22f38f82de249f5a352767",
@@ -19,6 +25,6 @@
     "results/v6/verification/depth_DELVE_7.csv": "0c9a52c979fe14a66882d08c68f2682a81d022885782a8fded1c74d9e6974c23",
     "results/v4/matched/matched_survey_recovery.csv": "676ec141be7f089109ef3f4f7b60db3776c1cbb0926483e071fbddcd947806b3"
   },
-  "native_stamps_completed": 1,
+  "native_stamps_completed": 7,
   "definitions": "Catalogue experiments condition on empirical surrogate detection/shape response. Native CCD experiments are reported separately by deployment background and threshold. Binomial intervals are conditional on the sampled sites; the paired table resamples sites. Published PS1 DR1 and PS1 DR2 matched review comparisons have distinct denominators."
 }

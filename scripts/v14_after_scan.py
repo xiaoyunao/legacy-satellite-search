@@ -6,9 +6,10 @@ import subprocess
 from ls_satsearch.run import write_json
 
 
-def submit(options):
+def submit(options, *, summary=False):
     base = ['sbatch','--parsable','-A','desi','-q','regular','-C','cpu','-N1',
-            '-n1','-c8','--mem=18G','-t','01:30:00','-o','logs/%x-%j.log']
+            '-n1','-c8', '--mem=100G' if summary else '--mem=18G',
+            '-t','04:00:00' if summary else '01:30:00','-o','logs/%x-%j.log']
     return subprocess.check_output(base+options,text=True).strip().split(';')[0]
 
 
@@ -21,7 +22,7 @@ if __name__ == '__main__':
         if jobs.get(cohort,{}).get('scan') == latest:
             continue
         aggregate = submit(['-J','ls14-sum-'+cohort,'--dependency=afterany:'+latest,
-                            'scripts/v14_finalize.sh','regional',cohort])
+                            'scripts/v14_finalize.sh','regional',cohort], summary=True)
         review = submit(['-J','ls14-c-'+cohort,'--dependency=afterok:'+aggregate,
                          '--array=0-7%2','scripts/v14_review.sh','v14',cohort,'8'])
         jobs[cohort] = dict(scan=latest, aggregate=aggregate, review=review)
@@ -31,7 +32,7 @@ if __name__ == '__main__':
     final = jobs.get('release', {})
     if final.get('depends') != dependency:
         release = submit(['-J','ls14-release','--dependency=afterany:'+dependency,
-                          'scripts/v14_finalize.sh','snapshot'])
+                          'scripts/v14_finalize.sh','snapshot'], summary=True)
         jobs['release'] = dict(depends=dependency, job=release)
         write_json(key,jobs)
         print('release',release,flush=True)

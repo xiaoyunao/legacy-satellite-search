@@ -11,5 +11,9 @@ fi
 if (( remaining < size )); then
     size=$remaining
 fi
-export LS_SAT_VERSION=v14 LS_SAT_STEP_MEM=12500M LS_SAT_SKIP_EMPTY=1
+export LS_SAT_VERSION=v14 LS_SAT_SKIP_EMPTY=1
+export LS_SAT_STEP_MEM=24000M LS_SAT_FIELD_WORKERS=4
+if [[ "$cohort" == *outside_census* || "$cohort" == *_extension ]]; then
+    export LS_SAT_STEP_MEM=44000M LS_SAT_FIELD_WORKERS=2
+fi
 exec bash scripts/v11_regional.sh "$cohort" "$start" "$size"

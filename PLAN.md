@@ -13,6 +13,14 @@ Search the effective DR11 gr footprint in all four observing strata, maintain on
 - Use CCD reprocessing to measure detection, morphology, hard selection, blind A recovery, distance solutions and C stability. Preserve the matched internal PS1 DR2 and author PS1 DR1 experiments as separate evidence.
 - Publish each completed batch's actual area, thresholds, review cost and known-system controls. Fit a population model only where selection and review probabilities support its inference.
 
+## 2026-11-18 execution checkpoint
+
+- All seven CCD sites have eight measured physical realizations. Native-image response sampling for this registered cohort is complete. Use the measured pipeline losses and sky-to-sky variation to plan the next physical completeness grid.
+- Finish the remaining registered South DELVE, South DES and extension arrays. Retry only the 13 manifest-incomplete fields in terminal OOM tasks. Retain the production cuts and record review completion for the 1,685 North and 22 South PS1 primary within-field groups.
+- Synchronize measured results and a fresh cumulative catalogue/atlas after the corrected scratch-lock aggregation completes. Retain each native WCS area and hash.
+- The frozen 0706 PS1, SDSS and independent i measurements show full core coverage but inadequate depth for the faint sequence. PS1 and BASS have weak fixed-population support. Retain L0; retry CADC availability before prioritizing further pixel work. Treat CADC service failure as unresolved coverage.
+
+
 ## Completed Round 13 acceptance criteria
 
 - Repeat fixed 100 and 150 kpc trials across seven South PS1 backgrounds. Measure paired differences and field variation at the frozen matched-sky costs. Record spatial recovery, the surviving correct distance mode and the distance of the highest peak.

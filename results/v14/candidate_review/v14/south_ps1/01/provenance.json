@@ -1,0 +1,8 @@
+{
+  "job": "61474207",
+  "input": "results/v14/discovery/south_ps1/main/sky_group_candidates.csv",
+  "count": 8,
+  "index": 1,
+  "visual_review_pending": true,
+  "blinded_cross_id": true
+}

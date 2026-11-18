@@ -1,0 +1,2 @@
+group_id,field,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,raw_peak_id,n_on,n_off,area_on_arcmin2,area_off_arcmin2,channel,peak_rank,ranking,role,policy,budget,representative,passes_group_cut,audit_priority
+v14_south_ps1_0752-A_base-0.3-001,v14_south_ps1_0752,-68.83333333333334,5.5,29.70527454447727,17.730104309760737,17.0,1.0,6.5580291461153815,90757.0,10.0,8.0,6.513888888888888,74.27777777777777,A_base,1,6.5580291461153815,pilot_eval,A_base,0.3,True,True,compact_or_high_score

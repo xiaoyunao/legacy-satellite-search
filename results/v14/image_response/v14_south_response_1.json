@@ -1,5 +1,5 @@
 {
-  "job": "61470535",
+  "job": "61472465",
   "native_version": "DR11.1.0",
   "blank_sha256": "c946728b15f7c632ce96d5e2783b19add5d017ff4a987f824c1f884150d317ac",
   "plan_sha256": "8c601a094fb94cb307f3cf1db5035118d5b93a3743f0e6dc6fd2c644f7241034",
@@ -210,6 +210,18 @@
       "policy_sha256": "e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594"
     },
     {
+      "trial": "6",
+      "arm": "ls_base",
+      "tractor_sha256": "ca1f13e01c1d3ae699bfda11b4bfa916adcbc34b2856a00bddb4652cec206a8b",
+      "policy_sha256": "e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594"
+    },
+    {
+      "trial": "7",
+      "arm": "ls_base",
+      "tractor_sha256": "c9847d1bb40abc4bdea17ef819381b60f1a3847961d0398d32c7ecdd2015154f",
+      "policy_sha256": "e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594"
+    },
+    {
       "trial": "0",
       "arm": "ls_deep",
       "tractor_sha256": "55c8ff290003eebd18912d522d6dd2665c6e047950ccfdd249c623fad7538c7b",
@@ -244,9 +256,21 @@
       "arm": "ls_deep",
       "tractor_sha256": "c48f7230c6cdca222bf651743fde9a4ebf5f84d993cde10da3fa7f9d021da9b2",
       "policy_sha256": "47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6"
+    },
+    {
+      "trial": "6",
+      "arm": "ls_deep",
+      "tractor_sha256": "ca1f13e01c1d3ae699bfda11b4bfa916adcbc34b2856a00bddb4652cec206a8b",
+      "policy_sha256": "47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6"
+    },
+    {
+      "trial": "7",
+      "arm": "ls_deep",
+      "tractor_sha256": "c9847d1bb40abc4bdea17ef819381b60f1a3847961d0398d32c7ecdd2015154f",
+      "policy_sha256": "47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6"
     }
   ],
   "requested_trials": 8,
-  "measured_trials": 6,
+  "measured_trials": 8,
   "scope": "Rerun on real calibrated CCDs; released mask and preserved outer background. Unique 0.8 arcsec matching, counting existing sources present in the blank as blends. Image experiments assess conditional response in selected stamps."
 }

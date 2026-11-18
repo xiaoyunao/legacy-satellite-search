@@ -1,0 +1,18 @@
+survey,band,status,path,sha256,pixel_arcsec,asinh_decoded,calibration_n,heldout_n,heldout_median_mag,heldout_scatter_mag,full_aperture_core_coverage,full_aperture_background_coverage,aperture5_mag,blank_apertures,reason,visit
+ps1,g,measured,ps1_g.fits,3ccf1aa651821dcb298194df448808a3b1b51e18c817b5421f7540b3b9963001,0.25000000605359557,False,7,3,0.008612918386145196,0.013646455839838189,1.0,0.9911093931194433,22.223019030677357,1784,,
+ps1,r,measured,ps1_r.fits,46440083bbe2eace7c75f65df04c11b4a900a6c8b5cf3d51da11d9397ee604b8,0.25000000605359557,False,6,2,0.06099603755899352,0.011760758629635075,1.0,1.0,22.66476791662412,1790,,
+sdss,g,measured,frame-g-004623-6-0061.fits.bz2,17f5f09b8534a40ea5444ea60c4d39eca73bc053427052d213355fa8f9f41050,0.39591598012759543,False,7,3,0.17329940789372245,0.1716293444817756,1.0,0.877174333204484,22.543892757594993,1786,,
+sdss,g,unusable,frame-g-004623-6-0062.fits.bz2,,,,,,,,,,,,frame-g-004623-6-0062.fits.bz2 has 0 off-core calibration stars,
+sdss,g,unusable,frame-g-004632-5-0158.fits.bz2,,,,,,,,,,,,frame-g-004632-5-0158.fits.bz2 has 0 off-core calibration stars,
+sdss,g,unusable,frame-g-004632-5-0159.fits.bz2,,,,,,,,,,,,frame-g-004632-5-0159.fits.bz2 has 0 off-core calibration stars,
+sdss,r,measured,frame-r-004623-6-0061.fits.bz2,20120a48f830d9c62903ca153f88f50ff1dcdb3355eed4981807c76212fb5413,0.39599285117292593,False,6,2,0.09610790246970247,0.009884515862140456,1.0,0.8982412060301508,22.208173055388595,1789,,
+sdss,r,unusable,frame-r-004623-6-0062.fits.bz2,,,,,,,,,,,,frame-r-004623-6-0062.fits.bz2 has 0 off-core calibration stars,
+sdss,r,unusable,frame-r-004632-5-0158.fits.bz2,,,,,,,,,,,,frame-r-004632-5-0158.fits.bz2 has 0 off-core calibration stars,
+sdss,r,unusable,frame-r-004632-5-0159.fits.bz2,,,,,,,,,,,,frame-r-004632-5-0159.fits.bz2 has 0 off-core calibration stars,
+independent_decam,i,unusable,image-16.fits,,,,,,,,,,,,image-16.fits has 0 off-core calibration stars,1087959
+independent_decam,i,unusable,image-17.fits,,,,,,,,,,,,image-17.fits has 2 off-core calibration stars,1087959
+independent_decam,i,unusable,image-22.fits,,,,,,,,,,,,image-22.fits has 0 off-core calibration stars,1087959
+independent_decam,i,unusable,image-23.fits,,,,,,,,,,,,image-23.fits has 0 off-core calibration stars,1087959
+independent_decam,i,unusable,image-0.fits,,,,,,,,,,,,,1392876
+independent_decam,i,unusable,image-26.fits,,,,,,,,,,,,image-26.fits has 0 off-core calibration stars,1392877
+independent_decam,i,measured,image-27.fits,cfe88828aaa61713066d2338c00d405342eed735600c00dcc51bf97b3f3852a6,0.26235601263072994,False,5,2,-0.04409933199495164,0.022819322263545046,1.0,0.6691148047931967,22.346562263973812,1786,,1392877

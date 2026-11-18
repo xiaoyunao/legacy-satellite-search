@@ -1,0 +1,156 @@
+{
+  "download_manifest.json": {
+    "products": [
+      {
+        "status": "downloaded",
+        "name": "frame-g-004632-5-0158.fits.bz2",
+        "bytes": 2783293,
+        "sha256": "ffb1ff3daaf2a86348f99799dfec37c0c5a152f9b2dda471986463f26d023ed2",
+        "url": "https://dr18.sdss.org/sas/dr18/prior-surveys/sdss4-dr17-eboss/photoObj/frames/301/4632/5/frame-g-004632-5-0158.fits.bz2"
+      },
+      {
+        "status": "downloaded",
+        "name": "frame-r-004632-5-0158.fits.bz2",
+        "bytes": 3021528,
+        "sha256": "4d4a2c1926ec6c6b64bee4561ce1af4c8cbccaad685cc6a969d8a39c0c319ff1",
+        "url": "https://dr18.sdss.org/sas/dr18/prior-surveys/sdss4-dr17-eboss/photoObj/frames/301/4632/5/frame-r-004632-5-0158.fits.bz2"
+      },
+      {
+        "status": "downloaded",
+        "name": "frame-g-004623-6-0061.fits.bz2",
+        "bytes": 2927702,
+        "sha256": "17f5f09b8534a40ea5444ea60c4d39eca73bc053427052d213355fa8f9f41050",
+        "url": "https://dr18.sdss.org/sas/dr18/prior-surveys/sdss4-dr17-eboss/photoObj/frames/301/4623/6/frame-g-004623-6-0061.fits.bz2"
+      },
+      {
+        "status": "downloaded",
+        "name": "frame-r-004623-6-0061.fits.bz2",
+        "bytes": 3400858,
+        "sha256": "20120a48f830d9c62903ca153f88f50ff1dcdb3355eed4981807c76212fb5413",
+        "url": "https://dr18.sdss.org/sas/dr18/prior-surveys/sdss4-dr17-eboss/photoObj/frames/301/4623/6/frame-r-004623-6-0061.fits.bz2"
+      },
+      {
+        "status": "downloaded",
+        "name": "frame-g-004623-6-0062.fits.bz2",
+        "bytes": 2909687,
+        "sha256": "bc7fef9dd0ffd73365be4d501eb6261d94ec70003c0f1238e0359913cbe86770",
+        "url": "https://dr18.sdss.org/sas/dr18/prior-surveys/sdss4-dr17-eboss/photoObj/frames/301/4623/6/frame-g-004623-6-0062.fits.bz2"
+      },
+      {
+        "status": "downloaded",
+        "name": "ps1_r.fits",
+        "bytes": 8317440,
+        "sha256": "46440083bbe2eace7c75f65df04c11b4a900a6c8b5cf3d51da11d9397ee604b8",
+        "url": "https://ps1images.stsci.edu/cgi-bin/fitscut.cgi?ra=165.61216974832084&dec=31.892121971411218&size=1440&format=fits&red=%2Frings.v3.skycell%2F1966%2F091%2Frings.v3.skycell.1966.091.stk.r.unconv.fits"
+      },
+      {
+        "status": "downloaded",
+        "name": "frame-r-004623-6-0062.fits.bz2",
+        "bytes": 3345339,
+        "sha256": "d493859557e47341ac3a4346f178702ebd03827d8d68569bf3cee1beaac6d605",
+        "url": "https://dr18.sdss.org/sas/dr18/prior-surveys/sdss4-dr17-eboss/photoObj/frames/301/4623/6/frame-r-004623-6-0062.fits.bz2"
+      },
+      {
+        "status": "downloaded",
+        "name": "frame-g-004632-5-0159.fits.bz2",
+        "bytes": 2797983,
+        "sha256": "8112bf27f4fe7a036f6b5ad0bbda08a9ab22d0e003b99afd4f06998f01071dc8",
+        "url": "https://dr18.sdss.org/sas/dr18/prior-surveys/sdss4-dr17-eboss/photoObj/frames/301/4632/5/frame-g-004632-5-0159.fits.bz2"
+      },
+      {
+        "status": "downloaded",
+        "name": "frame-r-004632-5-0159.fits.bz2",
+        "bytes": 3030645,
+        "sha256": "e68e641f39903c6d061ea343d085b2dfc3bd5e5a1ef39ec7fd6bcd8525a04c4c",
+        "url": "https://dr18.sdss.org/sas/dr18/prior-surveys/sdss4-dr17-eboss/photoObj/frames/301/4632/5/frame-r-004632-5-0159.fits.bz2"
+      },
+      {
+        "status": "downloaded",
+        "name": "ps1_g.fits",
+        "bytes": 8308800,
+        "sha256": "3ccf1aa651821dcb298194df448808a3b1b51e18c817b5421f7540b3b9963001",
+        "url": "https://ps1images.stsci.edu/cgi-bin/fitscut.cgi?ra=165.61216974832084&dec=31.892121971411218&size=1440&format=fits&red=%2Frings.v3.skycell%2F1966%2F091%2Frings.v3.skycell.1966.091.stk.g.unconv.fits"
+      },
+      {
+        "status": "downloaded",
+        "name": "ps1.csv",
+        "bytes": 1278655,
+        "sha256": "d5b002775518bbdd43c25096cf273b85a2c982fe28989526dabf9711d4002ff5",
+        "url": "https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv?ra=165.61216974832084&dec=31.892121971411218&radius=0.23&primaryDetection=1&columns=%5BobjID%2CraStack%2CdecStack%2CprimaryDetection%2CgPSFMag%2CrPSFMag%2CgPSFMagErr%2CrPSFMagErr%2CiPSFMag%2CiKronMag%2CiPSFMagErr%5D&pagesize=25000&sort_by=objID.asc"
+      }
+    ]
+  },
+  "decam_i/1087959/manifest.json": {
+    "expnum": 1087959,
+    "query_sha256": "ef3901f0d7e3129a981e9c82c6e38d1a85c62da71ab39fbd3699b3ea753aa8ec",
+    "source_query": "https://astroarchive.noirlab.edu/api/sia/vohdu?POS=165.61216974832084%2C31.892121971411218&SIZE=.13&VERB=3&format=json",
+    "products": [
+      {
+        "filename": "image-16.fits",
+        "sha256": "373322f74b33b669fb9b6c6062dc6ad9488ddd099a52d7b684bc5d07dea7ff3f",
+        "bytes": 5218560,
+        "url": "https://astroarchive.noirlab.edu/api/retrieve/f771ba8c012e3d41d35b719b96accacc/?hdus=0,16",
+        "archive_full_product_md5": "f771ba8c012e3d41d35b719b96accacc"
+      },
+      {
+        "filename": "image-17.fits",
+        "sha256": "16457f54d67cbc29b659a25cd1d4637b9d52e36f74a64b6642ae02b030d09362",
+        "bytes": 5227200,
+        "url": "https://astroarchive.noirlab.edu/api/retrieve/f771ba8c012e3d41d35b719b96accacc/?hdus=0,17",
+        "archive_full_product_md5": "f771ba8c012e3d41d35b719b96accacc"
+      },
+      {
+        "filename": "image-22.fits",
+        "sha256": "e60c19c20d7a87f22ca850177a42d201032e050cbb1ab5a08d2825944e9d47a0",
+        "bytes": 5224320,
+        "url": "https://astroarchive.noirlab.edu/api/retrieve/f771ba8c012e3d41d35b719b96accacc/?hdus=0,22",
+        "archive_full_product_md5": "f771ba8c012e3d41d35b719b96accacc"
+      },
+      {
+        "filename": "image-23.fits",
+        "sha256": "9fb6cf163a29952df397690c95a152b34bdc9b8b7fdc8a7d9866ff487a80ee01",
+        "bytes": 5227200,
+        "url": "https://astroarchive.noirlab.edu/api/retrieve/f771ba8c012e3d41d35b719b96accacc/?hdus=0,23",
+        "archive_full_product_md5": "f771ba8c012e3d41d35b719b96accacc"
+      }
+    ],
+    "scope": "Only selected HDU bytes were retrieved."
+  },
+  "decam_i/1392876/manifest.json": {
+    "expnum": 1392876,
+    "query_sha256": "ef3901f0d7e3129a981e9c82c6e38d1a85c62da71ab39fbd3699b3ea753aa8ec",
+    "source_query": "https://astroarchive.noirlab.edu/api/sia/vohdu?POS=165.61216974832084%2C31.892121971411218&SIZE=.13&VERB=3&format=json",
+    "products": [
+      {
+        "filename": "image-0.fits",
+        "sha256": "9ae5b7f5da365d52ca83ac986447ff31c5e06bde7ab788af1e9d75cf641f8109",
+        "bytes": 17280,
+        "url": "https://astroarchive.noirlab.edu/api/retrieve/cd387ea7417cc7d2d88cb5b01e8e09c7/?hdus=0,0",
+        "archive_full_product_md5": "cd387ea7417cc7d2d88cb5b01e8e09c7"
+      }
+    ],
+    "scope": "Only selected HDU bytes were retrieved."
+  },
+  "decam_i/1392877/manifest.json": {
+    "expnum": 1392877,
+    "query_sha256": "ef3901f0d7e3129a981e9c82c6e38d1a85c62da71ab39fbd3699b3ea753aa8ec",
+    "source_query": "https://astroarchive.noirlab.edu/api/sia/vohdu?POS=165.61216974832084%2C31.892121971411218&SIZE=.13&VERB=3&format=json",
+    "products": [
+      {
+        "filename": "image-26.fits",
+        "sha256": "b96eb2f6cc23e842889b371d9fe816779e11d3c4becfb731f7e4ae00e24c6baf",
+        "bytes": 5232960,
+        "url": "https://astroarchive.noirlab.edu/api/retrieve/a607568f890d8a8868407f340f3c64fb/?hdus=0,26",
+        "archive_full_product_md5": "a607568f890d8a8868407f340f3c64fb"
+      },
+      {
+        "filename": "image-27.fits",
+        "sha256": "cfe88828aaa61713066d2338c00d405342eed735600c00dcc51bf97b3f3852a6",
+        "bytes": 5224320,
+        "url": "https://astroarchive.noirlab.edu/api/retrieve/a607568f890d8a8868407f340f3c64fb/?hdus=0,27",
+        "archive_full_product_md5": "a607568f890d8a8868407f340f3c64fb"
+      }
+    ],
+    "scope": "Only selected HDU bytes were retrieved."
+  }
+}

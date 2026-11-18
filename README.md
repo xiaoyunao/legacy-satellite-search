@@ -16,6 +16,8 @@ export PYTHONPATH=src
 .venv/bin/python scripts/v14_after_scan.py
 ```
 
+The seven completed CCD backgrounds are summarized by `scripts/v14_native_summary.py`. `scripts/v14_manifest_audit.py` checks registered hashes and completed manifests without loading survey FITS. The manifest-based retry entry accepts a CSV with `cohort,index` columns and a Slurm array task index; completed fields are skipped. On an allocated CPU node, the frozen 0706 checks run with `scripts/v14_0706_catalogues.py` (local modes), `--ps1-fixed` (fixed hypothesis), and `scripts/v14_image0706.py` (downloaded pixels). `scripts/v14_archive0706.py` and `scripts/v14_download0706.py` query public metadata and transfer bounded products to `$LS_SAT_DATA/resources/v14/`. The aggregate products are in `results/v14/0706/`.
+
 The snapshot can be submitted on a CPU allocation with `scripts/v14_finalize.sh snapshot`. Released field areas include only completed optical search masks. The HEALPix atlas and planning table carry the sampled footprint proxy separately. FITS, caches and per-star measurements remain in scratch.
 
 ## Current search and selection experiments

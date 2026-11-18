@@ -1,5 +1,15 @@
 # Status
 
+## 2026-11-18 当前核查
+
+- 2,922 个场完整，5 个场无有效 owned gr，合计 12,646.511 有效 deg²。North 主层 408/408；South PS1 为 1,038 完成 + 1 无可用；South DELVE 391/993；South DES 372/497。各扩展层详见最新审计表。
+- 七个真实 CCD 背景的 7 个空白和 56 个注入产物及测量 manifest 齐全。South PS1 基线/加深 8/24、9/24，North 10/16、6/16，DELVE/DES 基线 2/8、3/8。
+- 61510268 为 13 个实际缺失场的高内存补跑。debug 数组提交受本站 QOS 限制拒绝，61510994 先以 debug 两个 worker 尝试这 13 场，正式数组等待它结束并跳过已完成场；相关分区汇总依赖已包含正式补跑。后续密集批次改成每节点两场、每场 44 GB，其他批次四场、每场 24 GB。
+- 61510285 的 HOME flock 524 已修复。scratch 锁实测通过，61510733 正在生成后续汇总快照。计算节点的 DVS/IPC 文件 I/O 等待明显，补跑尚未终态，不能记为完成。已提交 100 GB / 4 小时的 61511922 汇总兜底，若 61510733 成功则直接退出；后续分区汇总也已增加资源。
+- 0706 的公开目录任务 61510489、61510609 已完成。独立 BASS 与 PS1 星族支持较弱。61510836 已完成独立像素测量，61510733.0 已完成重导出图像及 i 波段对应源统计；取消重复待运行的 61511117。PS1 / SDSS g₀ 深度约 22.13 / 22.45，独立 i₀ 约 22.30，均覆盖核心但未达到暗主序验证需求。下载到 scratch 的图像包含 PS1 gr、SDSS gr 和未进入 DR11 的 DECam i，CADC 仍服务错误。
+- 已同步 24 个完成 C 分片的 624 组、1,685 个模式，来自 North、North extension、South DES extension 和 South PS1，均保留人工图像审查待办。
+- [逐层实测面积](../results/v14/progress_20261118/area_by_cohort.csv) · [逐场 manifest 审计](../results/v14/progress_20261118/fields.csv) · [七背景 CCD 结果](../results/v14/image_response/seven_background_recovery.csv) · [0706 档案核查](../results/v14/0706/archive_audit.json)
+
 ## 第十四轮全足迹执行
 
 - 61469764 用 1,484 张已完成的搜索掩膜重算全场登记。冻结了 6,884 个残余单元，South PS1 主层有 1,039 个；北区、South DELVE、South DES 主层分别有 408、993、497 个。记录区块空间所有权和旧掩膜来源。
