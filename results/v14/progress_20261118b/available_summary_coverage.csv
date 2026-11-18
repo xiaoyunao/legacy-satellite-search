@@ -1,0 +1,12 @@
+cohort,summary_completed_fields,summary_effective_deg2,candidate_input_listed
+north,408,3642.638418209876,True
+north_extension,140,779.7811265432097,True
+north_single_native,6,7.845252700617282,True
+south_delve,391,3005.425104166666,True
+south_delve_extension,120,638.0073186728393,False
+south_des,368,3660.070524691357,True
+south_des_extension,68,113.48958912037035,True
+south_outside_census,121,182.93185570987652,False
+south_outside_census_extension,114,485.1501929012345,False
+south_ps1,1038,17.982685185185183,True
+south_ps1_extension,0,0,False

@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-18T04:25:14.314512+00:00",
+  "origin": "nersc",
+  "ra_deg": 165.61216974832084,
+  "dec_deg": 31.892121971411218,
+  "attempts": [
+    {
+      "label": "roi_get",
+      "method": "GET",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/argus/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+TOP+300+O.collection%2CO.observationID%2CO.instrument_name%2CP.planeURI%2C%0AP.productID%2CP.calibrationLevel%2CP.energy_bandpassName%2CP.time_exposure%2CP.dataRelease%0AFROM+caom2.Observation+AS+O+JOIN+caom2.Plane+AS+P+ON+O.obsID%3DP.obsID%0AWHERE+INTERSECTS%28CIRCLE%28%27ICRS%27%2C165.61216974832084%2C31.892121971411218%2C0.06%29%2CP.position_bounds%29%3D1%0AAND+P.dataProductType%3D%27image%27%0AAND+O.collection+IN+%28%27CFHT%27%2C%27CFHTMEGAPIPE%27%2C%27CFHTTERAPIX%27%2C%27GEMINI%27%2C%27HST%27%2C%27HSTHLA%27%2C%27SUBARU%27%29",
+      "query": "SELECT TOP 300 O.collection,O.observationID,O.instrument_name,P.planeURI,\nP.productID,P.calibrationLevel,P.energy_bandpassName,P.time_exposure,P.dataRelease\nFROM caom2.Observation AS O JOIN caom2.Plane AS P ON O.obsID=P.obsID\nWHERE INTERSECTS(CIRCLE('ICRS',165.61216974832084,31.892121971411218,0.06),P.position_bounds)=1\nAND P.dataProductType='image'\nAND O.collection IN ('CFHT','CFHTMEGAPIPE','CFHTTERAPIX','GEMINI','HST','HSTHLA','SUBARU')",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "label": "roi_post",
+      "method": "POST",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/argus/sync",
+      "query": "SELECT TOP 300 O.collection,O.observationID,O.instrument_name,P.planeURI,\nP.productID,P.calibrationLevel,P.energy_bandpassName,P.time_exposure,P.dataRelease\nFROM caom2.Observation AS O JOIN caom2.Plane AS P ON O.obsID=P.obsID\nWHERE INTERSECTS(CIRCLE('ICRS',165.61216974832084,31.892121971411218,0.06),P.position_bounds)=1\nAND P.dataProductType='image'\nAND O.collection IN ('CFHT','CFHTMEGAPIPE','CFHTTERAPIX','GEMINI','HST','HSTHLA','SUBARU')",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "label": "service_health",
+      "method": "GET",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/argus/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+TOP+1+collection+FROM+caom2.Observation",
+      "query": "SELECT TOP 1 collection FROM caom2.Observation",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    }
+  ],
+  "coverage_status": "unknown_due_to_service_errors"
+}

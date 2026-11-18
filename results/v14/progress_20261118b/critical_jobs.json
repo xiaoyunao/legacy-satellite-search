@@ -1,0 +1,89 @@
+{
+  "utc": "2026-11-18T05:15:04.832831+00:00",
+  "jobs": [
+    {
+      "JobID": "61510268_[0-12%3]",
+      "JobName": "ls14-manifest-retry",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "Timelimit": "02:00:00",
+      "ReqMem": "56G",
+      "QOS": "regular_1",
+      "Start": "Unknown",
+      "End": "Unknown"
+    },
+    {
+      "JobID": "61510994",
+      "JobName": "ls14-retry-debug",
+      "State": "TIMEOUT",
+      "ExitCode": "0:0",
+      "Elapsed": "00:29:07",
+      "Timelimit": "00:29:00",
+      "ReqMem": "112G",
+      "QOS": "debug",
+      "Start": "2026-11-17T19:38:32",
+      "End": "2026-11-17T20:07:39"
+    },
+    {
+      "JobID": "61511922",
+      "JobName": "ls14-snapshot-fallback",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "Timelimit": "04:00:00",
+      "ReqMem": "100G",
+      "QOS": "regular_1",
+      "Start": "Unknown",
+      "End": "Unknown"
+    },
+    {
+      "JobID": "61513679",
+      "JobName": "ls14-completed-catalogue",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:17:38",
+      "Timelimit": "00:30:00",
+      "ReqMem": "100G",
+      "QOS": "debug",
+      "Start": "2026-11-17T20:24:57",
+      "End": "2026-11-17T20:42:35"
+    },
+    {
+      "JobID": "61514438",
+      "JobName": "ls14-0706-bass-pixels",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:58",
+      "Timelimit": "00:10:00",
+      "ReqMem": "12G",
+      "QOS": "debug",
+      "Start": "2026-11-17T20:40:16",
+      "End": "2026-11-17T20:41:14"
+    },
+    {
+      "JobID": "61514532",
+      "JobName": "ls14-0706-bass-calibrated",
+      "State": "PENDING",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "Timelimit": "00:10:00",
+      "ReqMem": "12G",
+      "QOS": "debug",
+      "Start": "Unknown",
+      "End": "Unknown"
+    },
+    {
+      "JobID": "61514571",
+      "JobName": "interactive",
+      "State": "CANCELLED by 106645",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:00",
+      "Timelimit": "00:10:00",
+      "ReqMem": "12G",
+      "QOS": "shared_interactive",
+      "Start": "None",
+      "End": "2026-11-17T20:51:46"
+    }
+  ]
+}

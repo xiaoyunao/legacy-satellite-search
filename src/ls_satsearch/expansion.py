@@ -28,9 +28,13 @@ def overlaps(ra,dec,regions):
 def field_bounds(field):
     """Return the rectangular search core, in angular RA and Dec coordinates."""
     half = field.width*30
-    dra = half/(60*np.cos(np.radians(field.dec)))
-    _, lo = field.sky(0,-half)
-    _, hi = field.sky(0,half)
+    rad = np.pi/180
+    cos = np.cos(field.dec*rad)
+    dra = half/(60*cos)
+    # Bound the physical part of a polar core. Field.sky deliberately keeps
+    # out-of-sphere pixels invalid; clipping is only for its enclosing box.
+    edge = np.sin(field.dec*rad) + np.array([-half,half])/60*rad*cos
+    lo, hi = np.arcsin(np.clip(edge,-1,1))/rad
     return (field.ra,dra,lo,hi)
 
 

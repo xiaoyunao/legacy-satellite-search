@@ -31,6 +31,19 @@ def read_image(path):
         if 'BSOFTEN' in header:
             image=header.get('BOFFSET',0)+2*header['BSOFTEN']*np.sinh(image*np.log(10)/2.5)
         wcs=WCS(header).celestial
+    if '-image-' in path.name:
+        support=path.with_name(path.name.replace('-image-','-invvar-'))
+        if not support.is_file():
+            raise ValueError('Native coadd image lacks its inverse-variance support')
+        with fits.open(support,memmap=False) as f:
+            weight=next(h.data for h in f if h.data is not None and h.data.ndim==2)
+            image[~np.isfinite(weight)|(weight<=0)]=np.nan
+        maskpath=path.with_name(path.name.split('-image-')[0]+'-maskbits.fits.fz')
+        if not maskpath.is_file():
+            raise ValueError('Native coadd image lacks its optical mask')
+        with fits.open(maskpath,memmap=False) as f:
+            bits=next(h.data for h in f if h.data is not None and h.data.ndim==2)
+            image[(bits & sum(1<<i for i in (1,5,6,10,19)))!=0]=np.nan
     if path.name.startswith('image-'):
         for kind in ('dq','weight'):
             support=path.with_name(path.name.replace('image-',kind+'-'))
@@ -55,7 +68,7 @@ def safe_pixels(image,coords,margin=16):
     return valid
 
 
-def reference(folder,center):
+def reference(folder,center,outer_arcmin=2.6):
     rows=read_csv(folder/'ps1.csv')
     values=np.array([[float(r.get(k) or 'nan') for k in ('raStack','decStack','gPSFMag','rPSFMag','gPSFMagErr','rPSFMagErr','iPSFMag','iKronMag')] for r in rows])
     valid_position=np.isfinite(values[:,:2]).all(axis=1)&(abs(values[:,1])<=90)&(values[:,0]>=0)&(values[:,0]<360)
@@ -65,7 +78,7 @@ def reference(folder,center):
     good&=(values[:,6]>0)&(values[:,7]>0)&(values[:,6]-values[:,7]<.05)
     sky=SkyCoord(values[:,0],values[:,1],unit='deg')
     radius=sky.separation(center).arcmin
-    good&=(radius>1.0)&(radius<2.6)&(values[:,2]-values[:,3]>.0)&(values[:,2]-values[:,3]<1.25)
+    good&=(radius>1.0)&(radius<outer_arcmin)&(values[:,2]-values[:,3]>.0)&(values[:,2]-values[:,3]<1.25)
     return sky[good],values[good,2:4]
 
 

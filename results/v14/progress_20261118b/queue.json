@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-18T04:54:34.420929+00:00",
+  "rows": [
+    "61514532|ls14-0706-bass-calibrated|PENDING|Priority|0:00",
+    "61469848_[18-59%3]|ls14-south_ps1_extension|PENDING|None|0:00",
+    "61469851_[15-123%3]|ls14-south_outside_census_extension|PENDING|None|0:00",
+    "61469850_[15-92%3]|ls14-south_delve_extension|PENDING|None|0:00",
+    "61469845_[16-190%3]|ls14-south_outside_census|PENDING|None|0:00",
+    "61469835_[49-124%6]|ls14-south_delve|PENDING|None|0:00",
+    "61469842_[47-62%6]|ls14-south_des|PENDING|None|0:00",
+    "61470250_[5-7]|ls14-c-north|PENDING|JobArrayTaskLimit|0:00",
+    "61511922|ls14-snapshot-fallback|PENDING|None|0:00",
+    "61510268_[0-12%3]|ls14-manifest-retry|PENDING|None|0:00",
+    "61470508|ls14-release|PENDING|Dependency|0:00",
+    "61470267|ls14-release|PENDING|Dependency|0:00",
+    "61470266_[0-7%2]|ls14-c-south_outside_census_extension|PENDING|Dependency|0:00",
+    "61470265|ls14-sum-south_outside_census_extension|PENDING|Dependency|0:00",
+    "61470264_[0-7%2]|ls14-c-south_delve_extension|PENDING|Dependency|0:00",
+    "61470263|ls14-sum-south_delve_extension|PENDING|Dependency|0:00",
+    "61470260_[0-7%2]|ls14-c-south_ps1_extension|PENDING|Dependency|0:00",
+    "61470259|ls14-sum-south_ps1_extension|PENDING|Dependency|0:00",
+    "61470256_[0-7%2]|ls14-c-south_outside_census|PENDING|Dependency|0:00",
+    "61470255|ls14-sum-south_outside_census|PENDING|Dependency|0:00",
+    "61470254_[0-7%2]|ls14-c-south_des|PENDING|Dependency|0:00",
+    "61470253|ls14-sum-south_des|PENDING|Dependency|0:00",
+    "61470252_[0-7%2]|ls14-c-south_delve|PENDING|Dependency|0:00",
+    "61470251|ls14-sum-south_delve|PENDING|Dependency|0:00"
+  ]
+}

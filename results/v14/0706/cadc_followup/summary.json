@@ -1,0 +1,15 @@
+{
+  "attempts": 6,
+  "roi_successes": 0,
+  "healthy_service_queries": 0,
+  "origins": [
+    "local",
+    "nersc"
+  ],
+  "core_ra_deg": 165.61216974832084,
+  "core_dec_deg": 31.892121971411218,
+  "core_radius_arcmin": 0.75,
+  "coverage": "unknown_due_to_service_errors",
+  "decision": "No new independent deep-g product was obtained. CADC/CFHT coverage remains unresolved; 0706 remains L0.",
+  "official_api_documentation": "https://www4.cadc.hia.nrc.gc.ca/en/doc/tap/"
+}

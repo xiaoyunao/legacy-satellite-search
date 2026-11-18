@@ -1,4 +1,5 @@
 """Audit registered fields and completed CCD products without reading survey FITS."""
+import argparse
 from collections import Counter
 from datetime import datetime, timezone
 import json
@@ -10,8 +11,8 @@ import yaml
 from ls_satsearch.run import read_csv, sha, write_csv, write_json
 
 
-def run():
-    out=Path('results/v14/progress_20261118');out.mkdir(exist_ok=True,parents=True)
+def run(out=Path('results/v14/progress_20261118')):
+    out.mkdir(exist_ok=True,parents=True)
     fields,totals=[],[]
     for folder in sorted(Path('configs/v14/cohorts').iterdir()):
         path=folder/'fields.yaml'
@@ -64,4 +65,6 @@ def run():
 
 
 if __name__=='__main__':
-    run()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,default=Path('results/v14/progress_20261118'))
+    run(parser.parse_args().output)

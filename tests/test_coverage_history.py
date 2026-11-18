@@ -10,6 +10,27 @@ from ls_satsearch.expansion import field_bounds
 
 
 class HistoryRasterTest(unittest.TestCase):
+    def test_polar_bounding_box_retains_valid_sky_without_validating_outside_pixels(self):
+        field=Field(36.,-87.50452633052011,3.154913339498665,1/6,buffer=0)
+        bounds=field_bounds(field)
+        self.assertTrue(np.isfinite(bounds).all())
+        self.assertEqual(bounds[2],-90.)
+        with np.errstate(invalid='ignore'):
+            _,invalid_dec=field.sky(0,-field.width*30)
+        self.assertTrue(np.isnan(invalid_dec))
+        record=dict(geometry=[field.ra,field.dec,field.width,field.step,0],bounds=bounds,
+                    previous=None,survey=0,raster='polar.npy',cache='polar')
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)
+            np.save(path/'polar.npy',np.ones((field.n,field.n),dtype=bool))
+            np.testing.assert_array_equal(covered(path,[record],np.array([36.,200.]),
+                                          np.array([-89.,-89.])),[True,False])
+
+    def test_nonpolar_bounding_box_matches_projection(self):
+        field=Field(165.,32.,3.5,1/6,buffer=0)
+        bounds=field_bounds(field)
+        np.testing.assert_allclose(bounds[2:],[field.sky(0,-105)[1],field.sky(0,105)[1]],rtol=0,atol=1e-13)
+
     def test_geometric_box_does_not_erase_an_unmeasured_hole(self):
         field = Field(359.9, 2., 1., .5, buffer=0)
         ra = np.array([359.91, .03, 12.])

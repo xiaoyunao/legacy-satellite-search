@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-18T04:19:08.151899+00:00",
+  "attempts": [
+    {
+      "status": "failed",
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>"
+    }
+  ],
+  "source_method": "v14_archive0706.cadc",
+  "source_sha256": "12268f679a8568dc394a91abc8c41fb6215404a1f8e6d71a7a871c93bf5a5b14"
+}
