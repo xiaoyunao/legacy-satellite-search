@@ -1,25 +1,28 @@
 {
-  "job": "61514438",
+  "job": "61514532",
   "ra_deg": 165.61216974832084,
   "dec_deg": 31.892121971411218,
+  "frozen_dm": 19.25,
+  "model_sha256": "f6efb6c6653d15ffd4f7101c9886e38bf664dd596da2756984af4dd931dc4316",
+  "brightest_stage1_main_sequence_g0": 22.935096,
   "products": {
     "g": {
       "path": "legacysurvey-1657p320-image-g.fits.fz",
       "sha256": "d884171c63876f3f62702af745b74892cb9430eb0d4fa2e4253e4186bf1c32c3",
       "pixel_arcsec": 0.2620000000000001,
       "asinh_decoded": false,
-      "calibration_n": 4,
-      "heldout_n": 2,
-      "heldout_median_mag": 0.014755260571126527,
-      "heldout_scatter_mag": 0.02800276506081745,
+      "calibration_n": 18,
+      "heldout_n": 6,
+      "heldout_median_mag": 0.04665482418791278,
+      "heldout_scatter_mag": 0.06792802786747937,
       "full_aperture_core_coverage": 1.0,
       "full_aperture_background_coverage": 0.4909161190568226,
-      "aperture5_mag": 23.67793610516565,
+      "aperture5_mag": 23.765860899920888,
       "blank_apertures": 1764,
       "brick": "1657p320",
       "band": "g",
       "extinction_mag": 0.0941379964351654,
-      "aperture0_5_mag": 23.583798108730484,
+      "aperture0_5_mag": 23.671722903485723,
       "formal_brick_psfdepth0_5": 24.119256168603897,
       "calibration_system": "BASS via frozen official PS1-to-90Prime colour polynomials",
       "mask_reject_bits": [
@@ -46,18 +49,18 @@
       "sha256": "4293b719616ef41016abcc28d84fe0fea26094dedfc5cb097b42281cef691639",
       "pixel_arcsec": 0.2620000000000001,
       "asinh_decoded": false,
-      "calibration_n": 5,
-      "heldout_n": 2,
-      "heldout_median_mag": -0.018455476192164255,
-      "heldout_scatter_mag": 0.00607882505333687,
+      "calibration_n": 18,
+      "heldout_n": 6,
+      "heldout_median_mag": 0.008317566618538663,
+      "heldout_scatter_mag": 0.013677252397511129,
       "full_aperture_core_coverage": 1.0,
       "full_aperture_background_coverage": 0.4909161190568226,
-      "aperture5_mag": 23.239530912449954,
+      "aperture5_mag": 23.341910796002256,
       "blank_apertures": 1787,
       "brick": "1657p320",
       "band": "r",
       "extinction_mag": 0.06341279298067093,
-      "aperture0_5_mag": 23.176118119469283,
+      "aperture0_5_mag": 23.278498003021586,
       "formal_brick_psfdepth0_5": 23.715052478015423,
       "calibration_system": "BASS via frozen official PS1-to-90Prime colour polynomials",
       "mask_reject_bits": [
@@ -81,5 +84,9 @@
       "ccd_provenance_sha256": "d75cc877a93d0dd9b65ccb78da4dc3816fde3aac3863240dc4b43a1bf07089ce"
     }
   },
+  "calibration_annulus_arcmin": [
+    1.0,
+    5.0
+  ],
   "scope": "Independent 90Prime exposures; same LS processing family. Native masked aperture depths, not a new population detection or a completeness measurement."
 }

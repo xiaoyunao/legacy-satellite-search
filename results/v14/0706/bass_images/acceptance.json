@@ -1,0 +1,27 @@
+{
+  "accepted_utc": "2026-11-18T05:47:49.206802+00:00",
+  "job": "61514532",
+  "job_state": "COMPLETED",
+  "elapsed": "00:01:11",
+  "git_parent": "8607758c4d6c784680f128151e4d22520ac39b3b",
+  "artifact_sha256": {
+    "results/v14/0706/bass_images/summary.json": "a6781e4eec71f73e2ae1f370d437d54a4ebf70b8699ae521db3cea534e2e805c",
+    "results/v14/0706/bass_images/all_products.csv": "e9af880044c1605975367d7dc3fcb116695ddba624c4dc51860bed76d223e0b5",
+    "results/v14/0706/bass_images/native_bass_core.png": "c7b0a4efc8c3bbcea1a16f892c0e0576356d01cea6abfe11b0469cddf4cdccfa",
+    "results/v14/0706/bass_images/native_bass_core.pdf": "eff23ceed27b5f42e73c5ef12ac66eb3aa447e4c08c2384afb48d0c74b45f11d",
+    "results/v14/0706/bass_images/native_bass_core.svg": "a18a810ca0538db9c902460aa9842cd0310de7b19a525bf34b8579bf1cd06d04"
+  },
+  "preserved_initial_summary_sha256": "0ac101c8ee8e6e1afccdf25339587e6dfdeae2234a51c33d1c38cb944caed1b7",
+  "checks": [
+    "Five allowlisted remote/local SHA256 checks agree",
+    "Selected JSON products match aggregate CSV",
+    "Native core PNG visually inspected; updated depth labels agree",
+    "Full core support and partial background support retained"
+  ],
+  "scope": "Expanded off-core photometric calibration and aperture-noise depth only. No new CMD detection, completeness estimate or evidence promotion; candidate remains L0.",
+  "queue_check": {
+    "61510268": "PENDING",
+    "61510994": "TIMEOUT",
+    "61511922": "PENDING"
+  }
+}
