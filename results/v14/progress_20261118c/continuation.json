@@ -1,0 +1,20 @@
+{
+  "utc": "2026-11-18T05:55:15.405227+00:00",
+  "requested_retry_count": 13,
+  "accepted": 0,
+  "live_covered": 13,
+  "uncovered": 0,
+  "dispatch_sha256": "afce306776e1e84233b59b7ff245e4d4da1b2dd6e7c5b6c6c4182821af9a5bf4",
+  "audit_sha256": "db0a1c575c50eed332b9041b551fd2a3d706a30186f79fb41727005a9d9fbece",
+  "original_retry_sha256": "7e5bc6318287d2f459f56e5964c62956af31b022d4717dcf32c0ca7d1cbeae32",
+  "sacct_command": [
+    "sacct",
+    "-j",
+    "61469829,61469832,61469835,61469842,61469845,61469847,61469848,61469849,61469850,61469851,61470504,61510268,61510994,61511922,61510733,61510268,61510994,61511922,61514532",
+    "-X",
+    "--array",
+    "-P",
+    "--format=JobID,JobName%60,State,ExitCode,Elapsed,ReqMem,QOS,Reason%100,Start,End"
+  ],
+  "note": "Terminal Slurm tasks are intersected with incomplete manifests. Existing queued/running retries are retained."
+}

@@ -1,5 +1,9 @@
 # DR11 search and selection response
 
+## 2026-11-18 05:55 UTC recheck
+
+The new field-by-field audit reproduces checkpoint b: 2,926 complete fields, five no-usable-gr fields, 12,683.750 native owned deg² and seven complete CCD backgrounds. Field, area, CCD and retry tables agree byte-for-byte with that checkpoint. All thirteen missing retry fields remain covered by queued array 61510268; no additional uncovered terminal failure requires a new submission. The full snapshot 61511922 remains pending. This recheck provides a fresh audit clock, without adding searched area, trials or candidate evidence. [Current manifest](results/v14/progress_20261118c/manifest.json) · [Retry reconciliation](results/v14/progress_20261118c/continuation.json)
+
 ## 2026-11-18 follow-up checkpoint
 
 The new manifest check contains 2,926 completed fields and five no-usable-gr fields out of 6,891 registered units. Native newly owned effective area is 12,683.750 deg², an increase of four South DES fields and 37.238 deg² over the preceding checkpoint. The completed main South DES cohort now has 376/497 fields; North and primary South PS1 remain exhausted. The seven completed CCD backgrounds are unchanged. [Fresh field audit](results/v14/progress_20261118b/area_by_cohort.csv) · [Frozen preceding audit](results/v14/progress_20261118/area_by_cohort.csv)
