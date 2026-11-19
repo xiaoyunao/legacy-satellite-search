@@ -1,0 +1,875 @@
+{
+  "input_sha256": "a2f2048748b5c961af128b394aa390c9497b627691d69c13f207fb683f76286f",
+  "code_sha256": "254fdcbd03620bb68e18b9504f2063bb2f5e7994967f4e81f535b9824e18779a",
+  "positions": 7822,
+  "diagnostic_link_arcmin": 5,
+  "close_position_pairs": 3245,
+  "connected_components": 6639,
+  "component_size_counts": {
+    "53": 1,
+    "26": 2,
+    "1": 6290,
+    "18": 1,
+    "10": 4,
+    "6": 19,
+    "9": 8,
+    "11": 1,
+    "2": 197,
+    "38": 1,
+    "4": 32,
+    "87": 1,
+    "13": 4,
+    "3": 40,
+    "15": 2,
+    "5": 20,
+    "12": 2,
+    "7": 5,
+    "14": 1,
+    "82": 1,
+    "8": 6,
+    "20": 1
+  },
+  "largest_components": [
+    {
+      "positions": 87,
+      "center_ra_deg": 21.2980808807182,
+      "center_dec_deg": -70.80709037839038,
+      "max_radius_arcmin": 42.65307336521322,
+      "cohorts": {
+        "south_delve": 87
+      },
+      "position_ids": [
+        "PROD-8d605795e2b3",
+        "PROD-2f52e7cdae3f",
+        "PROD-3a689a543f7d",
+        "PROD-b2811b2d8e7c",
+        "PROD-91f15d8a2489",
+        "PROD-90b03bfaaaee",
+        "PROD-ded8720fa397",
+        "PROD-63fbb0b09ae2",
+        "PROD-433fcdf1618a",
+        "PROD-6f128a1cbbbf",
+        "PROD-d70e28751139",
+        "PROD-fa0f8500d48d",
+        "PROD-fb493cfcc468",
+        "PROD-fb1045f47c4e",
+        "PROD-e408101548b6",
+        "PROD-fce095d315c4",
+        "PROD-fa9f5de5fb04",
+        "PROD-fbccb526a348",
+        "PROD-de0afc077ed1",
+        "PROD-159d26c9875a",
+        "PROD-4986795a4812",
+        "PROD-564a37bf0434",
+        "PROD-7eb716945e57",
+        "PROD-bbd5c7d4c04c",
+        "PROD-c0dd57bd8efd",
+        "PROD-878d68c72f7b",
+        "PROD-a8c231d46245",
+        "PROD-d2bb8db3270d",
+        "PROD-6439212e33ab",
+        "PROD-69b1c41f5e1b",
+        "PROD-e9772addf210",
+        "PROD-a92665436217",
+        "PROD-a09c9e7c9335",
+        "PROD-c216c2cc0f74",
+        "PROD-c5f7ddb34864",
+        "PROD-8e88c51956dd",
+        "PROD-cb3c3302b6f5",
+        "PROD-62d637460e8e",
+        "PROD-2537197e31bc",
+        "PROD-d51b1fe465c8",
+        "PROD-c0dafe1eb77a",
+        "PROD-686fc6962ce8",
+        "PROD-26a62250447a",
+        "PROD-dce2c413f500",
+        "PROD-1a01917ef1b0",
+        "PROD-3f3c137b6268",
+        "PROD-aea7fce4ff5d",
+        "PROD-12918857ee88",
+        "PROD-f868b6b17483",
+        "PROD-c0ab409c350e",
+        "PROD-69ae25e37470",
+        "PROD-9f3e74f534cd",
+        "PROD-8525c95e181d",
+        "PROD-7f05d7fd53f4",
+        "PROD-f6e7e711ae19",
+        "PROD-cf9ee826128f",
+        "PROD-95e98ab2cf62",
+        "PROD-70688c50110f",
+        "PROD-4810cf281538",
+        "PROD-52f77725abef",
+        "PROD-3393561efdb6",
+        "PROD-8a6754951216",
+        "PROD-c3d7dd3ea91e",
+        "PROD-29a41c843db9",
+        "PROD-12f053f32242",
+        "PROD-82aa9fe06a40",
+        "PROD-6418b97dc382",
+        "PROD-5a68088e4f06",
+        "PROD-3a6322280efa",
+        "PROD-37ce9bf12eda",
+        "PROD-f36b0bf99bcb",
+        "PROD-4ba6bf3a0cb2",
+        "PROD-d831c1fca25c",
+        "PROD-b5238c385f21",
+        "PROD-1c2a7b2b564e",
+        "PROD-668b58b95dfa",
+        "PROD-af20c87ffa7b",
+        "PROD-03a28a3b8278",
+        "PROD-0b60054e4b04",
+        "PROD-43f2cf09c5ca",
+        "PROD-fbb65bea2ebb",
+        "PROD-507f5a0a1bd7",
+        "PROD-2981f9e58677",
+        "PROD-8b9bc7424298",
+        "PROD-e07335f16579",
+        "PROD-50907fb48265",
+        "PROD-b313cbf2b4e6"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053799"
+      ]
+    },
+    {
+      "positions": 82,
+      "center_ra_deg": 6.074887938904576,
+      "center_dec_deg": -75.3341214878272,
+      "max_radius_arcmin": 34.214348238635004,
+      "cohorts": {
+        "south_delve": 82
+      },
+      "position_ids": [
+        "PROD-d0509ff9bbeb",
+        "PROD-33a94b90e9e4",
+        "PROD-ed917cefc633",
+        "PROD-0eacf0d2e8ce",
+        "PROD-6ae5bbcb5d9f",
+        "PROD-a7d486f929c9",
+        "PROD-86ddc2943b30",
+        "PROD-1479e6bc87bc",
+        "PROD-996e2e794c2b",
+        "PROD-4caea31d9556",
+        "PROD-07cb1a945f97",
+        "PROD-31de191f4dd4",
+        "PROD-44d55ed40ac6",
+        "PROD-85133c16c86b",
+        "PROD-7152a1a45482",
+        "PROD-67e83040bf0b",
+        "PROD-ef4df462047c",
+        "PROD-64d3009d48bd",
+        "PROD-7f6d290a07a4",
+        "PROD-d5c834e88101",
+        "PROD-aedcb4869265",
+        "PROD-6f1945ced74a",
+        "PROD-7de3d9616a35",
+        "PROD-e6f3522d5536",
+        "PROD-058c139039c7",
+        "PROD-ac51b0e26baf",
+        "PROD-7cf5ac39b873",
+        "PROD-4fe9fd764c95",
+        "PROD-e1e570116751",
+        "PROD-8941bea76c6f",
+        "PROD-57e719cca34b",
+        "PROD-12e1c1d88c96",
+        "PROD-fcb9846e0a79",
+        "PROD-53624209d6c0",
+        "PROD-19bc6aa740e3",
+        "PROD-0742a53a4349",
+        "PROD-c51017fbcb98",
+        "PROD-dc689926f77b",
+        "PROD-596205f63d1e",
+        "PROD-ab7e0778b852",
+        "PROD-701238dd4268",
+        "PROD-056ee9a2382e",
+        "PROD-b72d96dca41b",
+        "PROD-c2d9c1b61598",
+        "PROD-82a912a70805",
+        "PROD-893eac622f6f",
+        "PROD-f1175c0d7d4d",
+        "PROD-815cf7def9ca",
+        "PROD-8569ba45f0d1",
+        "PROD-7bcb060f0f52",
+        "PROD-0e7acdb338ad",
+        "PROD-8a904e81ee86",
+        "PROD-ea007cd11097",
+        "PROD-c80db092e626",
+        "PROD-de2bba70e682",
+        "PROD-b5bc1a050cb7",
+        "PROD-6e4e54e68b1a",
+        "PROD-db665311a47e",
+        "PROD-a5f492c71df1",
+        "PROD-582b0bef1ca5",
+        "PROD-fa1f67d87e64",
+        "PROD-d793acf7d44c",
+        "PROD-3f541b4b0464",
+        "PROD-fa6fc6a922fd",
+        "PROD-9a8a88ee4f11",
+        "PROD-37de8ebd6641",
+        "PROD-b1761ac5013b",
+        "PROD-862c2f9bb6e3",
+        "PROD-d6baf21f085a",
+        "PROD-af5d2c580d3d",
+        "PROD-76e53f078e8e",
+        "PROD-1fc467bbbd53",
+        "PROD-897351a971b8",
+        "PROD-59bf4196fba3",
+        "PROD-540e0e61a9cf",
+        "PROD-116f9bb8b7bd",
+        "PROD-0138d9eb469a",
+        "PROD-213bd5b65129",
+        "PROD-bf1d1320ee4c",
+        "PROD-3bd9263016e9",
+        "PROD-aa9c2cd6ac9b",
+        "PROD-de802057c874"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053799"
+      ]
+    },
+    {
+      "positions": 53,
+      "center_ra_deg": 39.98508000361178,
+      "center_dec_deg": -34.50700121716165,
+      "max_radius_arcmin": 21.608479953440334,
+      "cohorts": {
+        "south_des": 53
+      },
+      "position_ids": [
+        "PROD-20f1c8203540",
+        "PROD-fa2447bd170d",
+        "PROD-fc698c0c68a5",
+        "PROD-af3a08b1c3d6",
+        "PROD-43e66d82baf9",
+        "PROD-0d2eb7c7665d",
+        "PROD-6fc67d244785",
+        "PROD-d258d1c70a85",
+        "PROD-a7b34bf2cb1e",
+        "PROD-ade5b4f4167d",
+        "PROD-6513a9da8231",
+        "PROD-5bf712f1c7e7",
+        "PROD-d69da9d24635",
+        "PROD-9f6f5a6e1bb6",
+        "PROD-8e62f6392275",
+        "PROD-d25691669501",
+        "PROD-3b7edab76ffd",
+        "PROD-b57a297f1daf",
+        "PROD-f30c1705a9f7",
+        "PROD-ec75dd222be4",
+        "PROD-0391ea3293b9",
+        "PROD-a8c074c9b444",
+        "PROD-0c9b2ced6d75",
+        "PROD-c49fdc74b9c6",
+        "PROD-e81035935361",
+        "PROD-7af2cac819ef",
+        "PROD-f52e77a611c1",
+        "PROD-d7a8c03fe13e",
+        "PROD-9352f600c022",
+        "PROD-c07a5a556833",
+        "PROD-b7c5b7a7fde2",
+        "PROD-532f892db06b",
+        "PROD-2bf913c7250f",
+        "PROD-ee6870a74f2c",
+        "PROD-e20d2c9c8e02",
+        "PROD-5f691cdf24d9",
+        "PROD-1c1bad4063f1",
+        "PROD-e01aa8db59bc",
+        "PROD-13277e02014a",
+        "PROD-0835b48ce896",
+        "PROD-b7c091f1e5bb",
+        "PROD-34d8f687be4f",
+        "PROD-a50cbd0ee006",
+        "PROD-56b3b981a307",
+        "PROD-b780a8bf43ea",
+        "PROD-3c5cd3f2ee41",
+        "PROD-a4ef0e2d8cef",
+        "PROD-d37f44e92214",
+        "PROD-e572c5fd54e9",
+        "PROD-7b32d0e4a502",
+        "PROD-61f680e49a9f",
+        "PROD-7f6777d4ed4b",
+        "PROD-33e1552016a0"
+      ],
+      "known_position_contexts": [
+        "Fornax"
+      ],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:4878324",
+        "L4:5053771"
+      ]
+    },
+    {
+      "positions": 38,
+      "center_ra_deg": 210.78810078576097,
+      "center_dec_deg": 54.36174369229195,
+      "max_radius_arcmin": 11.222926786989639,
+      "cohorts": {
+        "north": 38
+      },
+      "position_ids": [
+        "PROD-19d05ca314bf",
+        "PROD-4f266188de61",
+        "PROD-78149196f92f",
+        "PROD-4bd90e2b4049",
+        "PROD-b3edd0420df9",
+        "PROD-6577482987f5",
+        "PROD-3bf764cda2f3",
+        "PROD-aaf616f6fcea",
+        "PROD-96a05ae2006e",
+        "PROD-7680e4ffa36a",
+        "PROD-4da0d4e4e604",
+        "PROD-89552c083bda",
+        "PROD-debcf34ddb5f",
+        "PROD-fb22a5d42749",
+        "PROD-b065a7ac3dcd",
+        "PROD-c6fd0320ce17",
+        "PROD-2278b0955b75",
+        "PROD-04d187c4a8fe",
+        "PROD-11af332b84b0",
+        "PROD-655a19dc76c5",
+        "PROD-d6a04d971fcb",
+        "PROD-d364454522e3",
+        "PROD-09f459eac4c4",
+        "PROD-4a377e6ec8a7",
+        "PROD-849192db1d54",
+        "PROD-1656ba6ef09e",
+        "PROD-3cbba58c67f1",
+        "PROD-f2acb23775e0",
+        "PROD-e9e7afe3edb2",
+        "PROD-c899ae3707c0",
+        "PROD-ed46ed12f945",
+        "PROD-236a0d04a769",
+        "PROD-a13f1efdbbaf",
+        "PROD-12bd9bf26d9f",
+        "PROD-b8b7977161a7",
+        "PROD-89c023b5f0ea",
+        "PROD-7c717ce0a4ed",
+        "PROD-a1bd2d7afde6"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5001572"
+      ]
+    },
+    {
+      "positions": 26,
+      "center_ra_deg": 15.012173280319814,
+      "center_dec_deg": -33.71546511043839,
+      "max_radius_arcmin": 4.633233107071782,
+      "cohorts": {
+        "south_des": 26
+      },
+      "position_ids": [
+        "PROD-27f8bdf0df41",
+        "PROD-eda9c80f2546",
+        "PROD-e7d5b971668d",
+        "PROD-dcb1ee13e790",
+        "PROD-5ef66c6d92b3",
+        "PROD-9185c893698a",
+        "PROD-bea7a1aca7b5",
+        "PROD-f0ee30fe00a6",
+        "PROD-8e6c119bc9c4",
+        "PROD-c2b6045c20d5",
+        "PROD-21fc3240ef41",
+        "PROD-0f6415755aff",
+        "PROD-dd773b7af64b",
+        "PROD-910421fcb3b0",
+        "PROD-3c99382ff7ba",
+        "PROD-ca82e5bd625f",
+        "PROD-2246239ceef0",
+        "PROD-1148716da7b7",
+        "PROD-8ffba55ca7a9",
+        "PROD-200fa1da0ba5",
+        "PROD-0154024f4815",
+        "PROD-8778c67639b2",
+        "PROD-af85220b6efc",
+        "PROD-eebe0a847203",
+        "PROD-fb9ee7dae1de",
+        "PROD-0a4a39c1be06"
+      ],
+      "known_position_contexts": [
+        "Sculptor"
+      ],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053794"
+      ]
+    },
+    {
+      "positions": 26,
+      "center_ra_deg": 250.42003351402911,
+      "center_dec_deg": 36.460101863561,
+      "max_radius_arcmin": 4.249807456419068,
+      "cohorts": {
+        "north": 26
+      },
+      "position_ids": [
+        "PROD-e4579095c302",
+        "PROD-98b535d23699",
+        "PROD-05c3f73917f9",
+        "PROD-267deaefdcb4",
+        "PROD-1afc67a8cf95",
+        "PROD-f23c5a9c8f06",
+        "PROD-26caa0027c4c",
+        "PROD-ce87d4d88826",
+        "PROD-ae1b36757535",
+        "PROD-f9b864262073",
+        "PROD-6a82a6c1aa9e",
+        "PROD-9d22b201c0ad",
+        "PROD-c7a47e0be420",
+        "PROD-96356cbdb2d6",
+        "PROD-7e803b9c8663",
+        "PROD-66b51dd9f142",
+        "PROD-0fc19de4b705",
+        "PROD-eebe877ceae0",
+        "PROD-2607a755be40",
+        "PROD-ea5243f8e05a",
+        "PROD-82de00573ccd",
+        "PROD-bf02833970db",
+        "PROD-538f9510fb0a",
+        "PROD-af41dd1ca77f",
+        "PROD-1f02f6408325",
+        "PROD-8876440c9a82"
+      ],
+      "known_position_contexts": [
+        "NGC 6205"
+      ],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": []
+    },
+    {
+      "positions": 20,
+      "center_ra_deg": 22.11005515775641,
+      "center_dec_deg": -71.3204053328029,
+      "max_radius_arcmin": 6.920748175838879,
+      "cohorts": {
+        "south_delve": 20
+      },
+      "position_ids": [
+        "PROD-0075992bd03d",
+        "PROD-8e1eb6ff23bb",
+        "PROD-4f2f7d511a7a",
+        "PROD-796b6fba843e",
+        "PROD-13baf431709a",
+        "PROD-4ecce445f755",
+        "PROD-65b3d3fab813",
+        "PROD-c85395f1a299",
+        "PROD-7a7e4338dd4d",
+        "PROD-54c06a730b0a",
+        "PROD-1a07c1f5512c",
+        "PROD-b1230b563468",
+        "PROD-415e9d0dc4b2",
+        "PROD-23252b32c5bf",
+        "PROD-82a82264c205",
+        "PROD-449ace6a59da",
+        "PROD-ed465bb097ac",
+        "PROD-42312879a703",
+        "PROD-464f1d3c6c44",
+        "PROD-9feed4dac68d"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053799"
+      ]
+    },
+    {
+      "positions": 18,
+      "center_ra_deg": 152.12478703845852,
+      "center_dec_deg": 12.310924116261235,
+      "max_radius_arcmin": 4.765138311222958,
+      "cohorts": {
+        "results/v7/rollout/batch1/results/holdout|wide_rollout/batch1/results/holdout": 18
+      },
+      "position_ids": [
+        "PROD-8c5879779baf",
+        "PROD-b571b5257f2b",
+        "PROD-3b587ca12fca",
+        "PROD-0fc7ad28f111",
+        "PROD-7b35f953774b",
+        "PROD-043fcf099b2f",
+        "PROD-64f50971f9c0",
+        "PROD-d7b4b5f89a1d",
+        "PROD-890ac3715059",
+        "PROD-6d7da6b64e48",
+        "PROD-c0dc23c1ce7b",
+        "PROD-91896fd72790",
+        "PROD-dd961395f85e",
+        "PROD-0b372640e4e2",
+        "PROD-d6c6ed7cd486",
+        "PROD-85f5c02a280c",
+        "PROD-7df6e3db6d41",
+        "PROD-c0aee4482a68"
+      ],
+      "known_position_contexts": [
+        "Leo I"
+      ],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053779"
+      ]
+    },
+    {
+      "positions": 15,
+      "center_ra_deg": 114.25130341513548,
+      "center_dec_deg": 65.59003768001003,
+      "max_radius_arcmin": 6.7715540503998435,
+      "cohorts": {
+        "north": 15
+      },
+      "position_ids": [
+        "PROD-456e55a2e75a",
+        "PROD-bd22f9442471",
+        "PROD-8a59919c944c",
+        "PROD-53924b0773bd",
+        "PROD-2aa8d3db7adb",
+        "PROD-9186855b3a95",
+        "PROD-269f0d5ca623",
+        "PROD-e94d31d79caf",
+        "PROD-cc685293630c",
+        "PROD-19398f40f4eb",
+        "PROD-d23848b0b5fc",
+        "PROD-6dee21103c98",
+        "PROD-a289baf02fe0",
+        "PROD-e40da10ec4e2",
+        "PROD-f01437858543"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:4809468"
+      ]
+    },
+    {
+      "positions": 15,
+      "center_ra_deg": 148.86851313668933,
+      "center_dec_deg": 69.09062743829405,
+      "max_radius_arcmin": 8.629537706923525,
+      "cohorts": {
+        "north": 15
+      },
+      "position_ids": [
+        "PROD-d6c9e9d071e1",
+        "PROD-54864670af9b",
+        "PROD-810fad9a59a4",
+        "PROD-d9ea737a66a2",
+        "PROD-662ad1288b7f",
+        "PROD-d29f5575a2eb",
+        "PROD-028c695704e2",
+        "PROD-41a8e0dbb4d1",
+        "PROD-ea1baf84e7df",
+        "PROD-eb81ef49f44e",
+        "PROD-89e9410d511d",
+        "PROD-10cff05b2fd6",
+        "PROD-3b5540a762a8",
+        "PROD-f77b87ebcbbc",
+        "PROD-cef0d7f0142a"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5022052"
+      ]
+    },
+    {
+      "positions": 14,
+      "center_ra_deg": 184.1864423312679,
+      "center_dec_deg": 69.45904379371194,
+      "max_radius_arcmin": 6.5599510490063935,
+      "cohorts": {
+        "north": 14
+      },
+      "position_ids": [
+        "PROD-6f6b35b289d5",
+        "PROD-13753fd10ad6",
+        "PROD-aecf2986cb57",
+        "PROD-ec6805f83f8e",
+        "PROD-43aa8b7d22be",
+        "PROD-64512bb0222a",
+        "PROD-25c60e11925d",
+        "PROD-d053c265bb62",
+        "PROD-a8e6ac93e27f",
+        "PROD-d1b357bc60c0",
+        "PROD-0c16db2d2a3e",
+        "PROD-8c9474380430",
+        "PROD-8ff1f78b16e5",
+        "PROD-65d77ae0f378"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5054255"
+      ]
+    },
+    {
+      "positions": 13,
+      "center_ra_deg": 20.64058353992437,
+      "center_dec_deg": -75.36144970965874,
+      "max_radius_arcmin": 9.557348261097832,
+      "cohorts": {
+        "south_delve": 13
+      },
+      "position_ids": [
+        "PROD-01fab398add3",
+        "PROD-b70064ecdaa4",
+        "PROD-2bcd5a88ac7d",
+        "PROD-4199d1c8a541",
+        "PROD-2fd629df27bc",
+        "PROD-a09129f59f48",
+        "PROD-767605cded98",
+        "PROD-ba582dc1d3af",
+        "PROD-c5ce613a0996",
+        "PROD-e0a42ca5d3fa",
+        "PROD-d0ab5834686a",
+        "PROD-02c0e8822c7e",
+        "PROD-bdf0e7cda07f"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053799"
+      ]
+    },
+    {
+      "positions": 13,
+      "center_ra_deg": 53.93733476588657,
+      "center_dec_deg": -54.043682636393065,
+      "max_radius_arcmin": 7.9020538822097794,
+      "cohorts": {
+        "south_des": 13
+      },
+      "position_ids": [
+        "PROD-18ca638dc77a",
+        "PROD-ce7ef49c7b53",
+        "PROD-fd9a0bd8281c",
+        "PROD-6a4a868f918e",
+        "PROD-9270f5a0f356",
+        "PROD-06e64afd004a",
+        "PROD-43886a8759d1",
+        "PROD-9f78953e22e2",
+        "PROD-60e482df882a",
+        "PROD-e24b2e3cb657",
+        "PROD-a17dc0190cf2",
+        "PROD-f4c57731377d",
+        "PROD-ba12d3882bd8"
+      ],
+      "known_position_contexts": [
+        "Reticulum II"
+      ],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053792"
+      ]
+    },
+    {
+      "positions": 13,
+      "center_ra_deg": 23.145294937963037,
+      "center_dec_deg": -71.61532335502515,
+      "max_radius_arcmin": 8.293599067324388,
+      "cohorts": {
+        "south_delve": 13
+      },
+      "position_ids": [
+        "PROD-57b6bfdcf966",
+        "PROD-17edffeeea43",
+        "PROD-4a64c5166d78",
+        "PROD-e7b3e0880aaf",
+        "PROD-b941ec74566a",
+        "PROD-dadae69b302c",
+        "PROD-e69a513104fd",
+        "PROD-7d98ba97a1a1",
+        "PROD-107a97925021",
+        "PROD-aaf3d6aa7816",
+        "PROD-6b954cdc646b",
+        "PROD-c3cdd59006af",
+        "PROD-870cc134c9e6"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:3622810",
+        "L4:5053799"
+      ]
+    },
+    {
+      "positions": 13,
+      "center_ra_deg": 24.137412995664636,
+      "center_dec_deg": -72.61582308780119,
+      "max_radius_arcmin": 9.39548316345109,
+      "cohorts": {
+        "south_delve": 13
+      },
+      "position_ids": [
+        "PROD-e424e6ab9b9e",
+        "PROD-b249ce82961b",
+        "PROD-a727d7aa4122",
+        "PROD-39a3818d98ad",
+        "PROD-f2ed2b6b976a",
+        "PROD-f5377e087ba4",
+        "PROD-f7ef4d9918ef",
+        "PROD-511e98bb15fe",
+        "PROD-2e8ad4e66758",
+        "PROD-d21df5a52127",
+        "PROD-0ce45380df74",
+        "PROD-df4032bfbbc6",
+        "PROD-961017f55cb6"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053799"
+      ]
+    },
+    {
+      "positions": 12,
+      "center_ra_deg": 124.78368355984371,
+      "center_dec_deg": 70.72237159113386,
+      "max_radius_arcmin": 6.614229324653868,
+      "cohorts": {
+        "north": 12
+      },
+      "position_ids": [
+        "PROD-54f2503eb59d",
+        "PROD-9958ea855fb4",
+        "PROD-79239c568035",
+        "PROD-3494fc81ad5d",
+        "PROD-42aaee9fd96e",
+        "PROD-1b3916bbfa59",
+        "PROD-d6038d1cc3ee",
+        "PROD-9b9ec1b23a65",
+        "PROD-8c84d9842663",
+        "PROD-b5b3119a2075",
+        "PROD-033b3c195447",
+        "PROD-b10f3690046d"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5054019"
+      ]
+    },
+    {
+      "positions": 12,
+      "center_ra_deg": 202.4737471207612,
+      "center_dec_deg": 47.204209429163,
+      "max_radius_arcmin": 6.446933588974548,
+      "cohorts": {
+        "north": 12
+      },
+      "position_ids": [
+        "PROD-9ea614ce5ebf",
+        "PROD-232e18c2caf9",
+        "PROD-c2dd34dcc760",
+        "PROD-6817452d5090",
+        "PROD-0caf732e9e15",
+        "PROD-d1210f809c49",
+        "PROD-14dfc0a9f8ce",
+        "PROD-3d082743468c",
+        "PROD-08013087148b",
+        "PROD-abc6de227b38",
+        "PROD-e037aa4e1243",
+        "PROD-0f7461df31e4"
+      ],
+      "known_position_contexts": [],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5054308",
+        "L4:5054311"
+      ]
+    },
+    {
+      "positions": 11,
+      "center_ra_deg": 153.20720472863863,
+      "center_dec_deg": -1.6174859731304956,
+      "max_radius_arcmin": 10.312016746991464,
+      "cohorts": {
+        "south_delve": 11
+      },
+      "position_ids": [
+        "PROD-48ac462c04d7",
+        "PROD-b3ca796616a7",
+        "PROD-7aff681455ed",
+        "PROD-dfc43162967a",
+        "PROD-4926d5fe850f",
+        "PROD-67f6ffac6ea1",
+        "PROD-b2f8e59e63d3",
+        "PROD-6a0538dc6c4d",
+        "PROD-a5b7e3be9675",
+        "PROD-4ba95dfbde69",
+        "PROD-50375cb57918"
+      ],
+      "known_position_contexts": [
+        "Sextans"
+      ],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053797"
+      ]
+    },
+    {
+      "positions": 10,
+      "center_ra_deg": 259.2443704509053,
+      "center_dec_deg": 43.14252748932927,
+      "max_radius_arcmin": 5.480942183003876,
+      "cohorts": {
+        "north": 10
+      },
+      "position_ids": [
+        "PROD-37affeda5a76",
+        "PROD-c4bf009cd2cc",
+        "PROD-e2142e407d1d",
+        "PROD-667f4446622d",
+        "PROD-505dc69fab5a",
+        "PROD-d9920ce43c7e",
+        "PROD-3b0e134cb27a",
+        "PROD-0e2ea5d02ba5",
+        "PROD-85c3e02b32c0",
+        "PROD-6444936b7ca6"
+      ],
+      "known_position_contexts": [
+        "NGC 6341"
+      ],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": []
+    },
+    {
+      "positions": 10,
+      "center_ra_deg": 201.98027054709942,
+      "center_dec_deg": 33.54670266549511,
+      "max_radius_arcmin": 4.235586086737243,
+      "cohorts": {
+        "north": 7,
+        "results/v7/first_batch/results/holdout": 2,
+        "north|results/v7/first_batch/results/holdout": 1
+      },
+      "position_ids": [
+        "PROD-474f594fafde",
+        "PROD-6d54fcefd724",
+        "PROD-9ad72807f3e1",
+        "PROD-680c3f6ded90",
+        "PROD-3322ac1e3f79",
+        "PROD-2895e666b11c",
+        "PROD-888af69e456b",
+        "PROD-cdb4713b9134",
+        "PROD-47f6739d09f7",
+        "PROD-69d2c5805274"
+      ],
+      "known_position_contexts": [
+        "Canes Venatici I"
+      ],
+      "known_environment_contexts": [],
+      "extended_galaxy_contexts": [
+        "L4:5053757"
+      ]
+    }
+  ],
+  "final_review_units_defined": false,
+  "sampling_performed": false,
+  "scope": "Aggregate metadata diagnostic only. Five-arcmin connected components can chain over tens of arcminutes; they are not physical objects or final review units. Retain constituents/environment and define review units before probability sampling; do not discard selected positions afterwards."
+}

@@ -1,0 +1,73 @@
+{
+  "repair_job": "61579696",
+  "collect_job": "61579698",
+  "commands": [
+    [
+      "sbatch",
+      "--parsable",
+      "-A",
+      "desi",
+      "-q",
+      "regular",
+      "-C",
+      "cpu",
+      "-N1",
+      "-n1",
+      "-c4",
+      "--mem=16G",
+      "-t",
+      "01:30:00",
+      "-o",
+      "logs/%x-%A_%a.log",
+      "--array=0-23%4",
+      "--dependency=afterany:61574869,afterok:61579408",
+      "-J",
+      "ls14-area-polygon-repair",
+      "--wrap",
+      "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; $LS_SAT_DATA/envs/area-union-20261119/bin/python -u -m scripts.v14_mask_overlay_repair shard --index $SLURM_ARRAY_TASK_ID"
+    ],
+    [
+      "sbatch",
+      "--parsable",
+      "-A",
+      "desi",
+      "-q",
+      "regular",
+      "-C",
+      "cpu",
+      "-N1",
+      "-n1",
+      "-c2",
+      "--mem=4G",
+      "-t",
+      "00:20:00",
+      "--dependency=afterok:61579696",
+      "-J",
+      "ls14-area-repaired-collect",
+      "-o",
+      "logs/%x-%j.log",
+      "--wrap",
+      "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; $LS_SAT_DATA/envs/area-union-20261119/bin/python -u -m scripts.v14_mask_overlay_repair collect"
+    ]
+  ],
+  "pilot_job": "61579408",
+  "pilot_QA": [
+    {
+      "tile": 1,
+      "projection_area_difference": 0.0,
+      "original_successful_difference": 0.0
+    },
+    {
+      "tile": 26,
+      "projection_area_difference": 0.0,
+      "original_successful_difference": null
+    },
+    {
+      "tile": 73,
+      "projection_area_difference": 0.0,
+      "original_successful_difference": null
+    }
+  ],
+  "state": "submitted_not_complete",
+  "scope": "Original masks/vector proof and successful tiles unchanged; run only missing tiles after original array ends, with zero-area line/point removal. Separate combined-area proof, not final source qualification."
+}

@@ -7,7 +7,7 @@
     "results/v14/catalogue/candidate_catalogue.csv": "fa10912447d359829c03535778e276976209dd0df1afccc896c903f5341925b3",
     "results/v14/shortlist/cases.csv": "e8b6902fd7faf9984e5fca2534e688d44b7a7083e5dfdf0be2971d08e1585d0b"
   },
-  "code_sha256": "ce7231b2bb75277124afe5fc666d0ee112dee0b9c9dc736f830e3f46d7414b41",
+  "code_sha256": "9ae25e6eaa9808e0a0d6ab8fb07fdfadbca3f92fa708fe40f211890615c4844a",
   "qualified_records": 7994,
   "provisional_positions": 7822,
   "records_with_successful_bound_C": 2924,
@@ -17,5 +17,7 @@
     "no_bound_complete_mode": 5070
   },
   "final_production_frozen": false,
+  "records_near_known_positions": 511,
+  "context_scope": "Angular<=30arcmin known-position context is preserved separately from position-and-distance known-system matching. Neither proximity nor a galaxy ellipse proves membership or classification.",
   "scope": "Qualified discovery records only, reconciled with the existing complete-link sky/DM/scale rule. Nearby incompatible hypotheses remain linked in the 5-arcmin table; these are provisional positions, not final human-review units or physical discoveries. C rows inherit the catalogue source/seed binding; a completed available row is not certification that every required seed was run. Historical raster-area union, terminal search completion, seed completeness, source-level image QA and final review-unit freeze remain gates. Frozen 75 identities are retained with empty user grades; never put this identity crosswalk in an anonymous archive."
 }

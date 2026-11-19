@@ -28,3 +28,7 @@ __pycache__/
 
 # Per-tile intermediates remain on NERSC; publish aggregate areas and hashes.
 /results/v14/production_integration/masks/tiled/*/tiles/
+/results/v14/production_integration/masks/tiled/*/tiles_repaired/
+
+# Prospective final blind-review identity keys stay private until sealing.
+/results/v14/human_review/final_private/

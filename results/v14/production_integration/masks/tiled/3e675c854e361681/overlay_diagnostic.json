@@ -1,0 +1,205 @@
+{
+  "job": "61579303",
+  "shapely": "2.2.0",
+  "geos": "3.14.1",
+  "reports": [
+    {
+      "tile": 26,
+      "geometries": [
+        {
+          "type": "MultiPolygon",
+          "valid": true,
+          "reason": "Valid Geometry",
+          "area": 0.14208968295234495,
+          "polygon_only_type": "MultiPolygon",
+          "polygon_only_area": 0.14208968295234495
+        },
+        {
+          "type": "GeometryCollection",
+          "valid": true,
+          "reason": "Valid Geometry",
+          "area": 0.0,
+          "polygon_only_type": "GeometryCollection",
+          "polygon_only_area": 0.0
+        },
+        {
+          "type": "GeometryCollection",
+          "valid": true,
+          "reason": "Valid Geometry",
+          "area": 0.7237107359465754,
+          "polygon_only_type": "MultiPolygon",
+          "polygon_only_area": 0.7237107359465864
+        },
+        {
+          "type": "GeometryCollection",
+          "valid": true,
+          "reason": "Valid Geometry",
+          "area": 0.0,
+          "polygon_only_type": "GeometryCollection",
+          "polygon_only_area": 0.0
+        }
+      ],
+      "pairs": [
+        {
+          "i": 1,
+          "j": 0,
+          "original": {
+            "area": 0.0
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        },
+        {
+          "i": 2,
+          "j": 0,
+          "original": {
+            "area": 2.8469224124820084e-07
+          },
+          "polygon_only": {
+            "area": 2.846922412482008e-07
+          }
+        },
+        {
+          "i": 2,
+          "j": 1,
+          "original": {
+            "error": "AssertionFailedException: Should never reach here: Unable to determine overlay result geometry dimension"
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        },
+        {
+          "i": 3,
+          "j": 0,
+          "original": {
+            "area": 0.0
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        },
+        {
+          "i": 3,
+          "j": 1,
+          "original": {
+            "area": 0.0
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        },
+        {
+          "i": 3,
+          "j": 2,
+          "original": {
+            "error": "AssertionFailedException: Should never reach here: Unable to determine overlay result geometry dimension"
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "tile": 73,
+      "geometries": [
+        {
+          "type": "GeometryCollection",
+          "valid": true,
+          "reason": "Valid Geometry",
+          "area": 0.02451711974566863,
+          "polygon_only_type": "MultiPolygon",
+          "polygon_only_area": 0.024517119745668635
+        },
+        {
+          "type": "GeometryCollection",
+          "valid": true,
+          "reason": "Valid Geometry",
+          "area": 0.9600736859530913,
+          "polygon_only_type": "MultiPolygon",
+          "polygon_only_area": 0.9600736859530898
+        },
+        {
+          "type": "GeometryCollection",
+          "valid": true,
+          "reason": "Valid Geometry",
+          "area": 0.0,
+          "polygon_only_type": "GeometryCollection",
+          "polygon_only_area": 0.0
+        },
+        {
+          "type": "GeometryCollection",
+          "valid": true,
+          "reason": "Valid Geometry",
+          "area": 0.0,
+          "polygon_only_type": "GeometryCollection",
+          "polygon_only_area": 0.0
+        }
+      ],
+      "pairs": [
+        {
+          "i": 1,
+          "j": 0,
+          "original": {
+            "area": 2.100966584867913e-07
+          },
+          "polygon_only": {
+            "area": 2.1009665848679127e-07
+          }
+        },
+        {
+          "i": 2,
+          "j": 0,
+          "original": {
+            "error": "AssertionFailedException: Should never reach here: Unable to determine overlay result geometry dimension"
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        },
+        {
+          "i": 2,
+          "j": 1,
+          "original": {
+            "error": "AssertionFailedException: Should never reach here: Unable to determine overlay result geometry dimension"
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        },
+        {
+          "i": 3,
+          "j": 0,
+          "original": {
+            "error": "AssertionFailedException: Should never reach here: Unable to determine overlay result geometry dimension"
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        },
+        {
+          "i": 3,
+          "j": 1,
+          "original": {
+            "error": "AssertionFailedException: Should never reach here: Unable to determine overlay result geometry dimension"
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        },
+        {
+          "i": 3,
+          "j": 2,
+          "original": {
+            "area": 0.0
+          },
+          "polygon_only": {
+            "area": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

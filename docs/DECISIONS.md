@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-11-19T15:40Z Observed stamp sensitivity and context-preserving production integration
+
+- The30pc bright ceiling guard was insufficient. Select the unique mixed-background30pc draw34 for a registered targeted boundary check, preserving all primary144 products. Its baseline1/3→2/3 response proves that truncation can matter at a boundary;46eligible members remain outside. Report the one-draw effect and residual omission, without a population correction or retrospective grid change.
+- Resolve GEOS mixed-dimension failures with polygon-only area overlays. Remove only zero-area lines/points, no rounding or mask alteration. Preserve original successes and write repaired intermediates separately; require numerical pilot agreement and complete provenance before total area acceptance.
+- Carry angular known-position/environment/galaxy annotations into qualified source and position ledgers independently of DM-consistent matching. Proximity does not establish membership or classification; absence of a distance-compatible match is not absence of known environment.
+- Retry the two actual North C timeout shards with unchanged seeds/model and longer walltime. Do not treat other completed shards or unattempted modes as failures, or rerun a full completed cohort without evidence.
+- New final anonymous-to-position keys stay ignored/private until actual user sealing. Preserve the old75 administrative records and note prior exposure; they do not become a new prospectively blinded probability sample through renaming.
+
 ## 2026-11-19 Preserve legacy experiment and separately test production-policy conformance
 
 - A physical image experiment inherits its actual detector/mask/trial policy. The original144 uses matched-sky mu<=21,0.5–4arcmin kernels and cuts5.7891/6.0289; it cannot certify formal A main<=20.75,0.5–16arcmin,cut6.137901. Retain it unchanged; replay the same registered native catalogues with formal policy,100arcmin context and no extra PS1 catalogue footprint. C and all-sky/edge transfer remain separate.

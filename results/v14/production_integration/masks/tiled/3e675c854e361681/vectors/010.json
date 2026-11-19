@@ -1,0 +1,1574 @@
+{
+  "job": "61577977",
+  "registration_sha256": "da81a7690ed7263bf3a3b8f7fa8d9be1f4420bf674ecba2ae9d53f819911c074",
+  "records": [
+    {
+      "field": "expand_07",
+      "cache_key": "78560d62c7dcd66a06b62636b2c630513dc18bc77831dcd9536f3a49ca354449",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 9.205345293209875,
+      "metadata_sha256": "6ab4350b8301509e988713ad49aa8c5fe4b089dbd3c2fcb055ce47d8856a4c9a",
+      "seconds": 1.7735333660093602
+    },
+    {
+      "field": "fresh_01",
+      "cache_key": "cd6262a3cfe504df6b6ca00c127bc27775e604a1164dce4d02d42163db176934",
+      "classification": "development_calibration",
+      "source_area_deg2": 10.038283179012344,
+      "metadata_sha256": "eefd9b3d2632035fb2f9010a4ae920ec4990b940162e6c389babef3f53aa7f7e",
+      "seconds": 1.448557077004807
+    },
+    {
+      "field": "wide_01",
+      "cache_key": "c8d8cd11dabae3d9af7c7053960fe1d543213650fdbd34c368216bc7f00a5c22",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.029380787037036,
+      "metadata_sha256": "9fe0667143627c3756c074f88bc327933ec5859ba16098b1c9c5bce8dd31403c",
+      "seconds": 1.313829494989477
+    },
+    {
+      "field": "v11_south_delve_08",
+      "cache_key": "ae55ea5aedb56bc328ff8189e47fc9a8b21976c8bb9bc0708788cd61d3997b5c",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.12349537037037,
+      "metadata_sha256": "d81bb4b2e28072322cbb2741960c7a4951643b8a7f131f6ce739ca8e40d81689",
+      "seconds": 1.9927988510025898
+    },
+    {
+      "field": "v11_south_ps1_24",
+      "cache_key": "85fcf1ecfd77b18a978f532ffb1c97bf6474f1754ada58ce40fe6d746cd994b5",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.676375385802467,
+      "metadata_sha256": "ca452da2d81dc17e60c3f7d3a221997faffe498748fcfc08d6a2eeed87b14cb6",
+      "seconds": 1.301211346013588
+    },
+    {
+      "field": "v12_south_delve_008",
+      "cache_key": "c54feba635bc269592a4ab966ac517faf619d8ff2a8efa6a4943a348a4cafaa8",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.475856481481479,
+      "metadata_sha256": "f128964e27848a455b5bfc7ce83bfc6f43d81fd5100cb0ed0eff089227113caf",
+      "seconds": 1.5880808740039356
+    },
+    {
+      "field": "v12g_south_ps1_017",
+      "cache_key": "c8de44d3b9da878c9d7a39fab7b636191318ddaf2c0b625836088c1de526aed7",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 3.7797395833333325,
+      "metadata_sha256": "d6610acf3b659531ff1504e3b99d55599a974721d9497ee02e993107088f1f24",
+      "seconds": 0.5009860610007308
+    },
+    {
+      "field": "v13_south_ps1_0018",
+      "cache_key": "4a65ada9a65badf008a0b442bc191e82ff12e0465da5a6a930260be431a548ab",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 3.9091222993827155,
+      "metadata_sha256": "5a0d006a590ad78739018ebbfbb59bbb789e76f104baa536a305a45fd87189ef",
+      "seconds": 0.4920415509986924
+    },
+    {
+      "field": "v13_south_ps1_0050",
+      "cache_key": "940f3a7737aa48c9ccbddb55827666f7c6cf87bf06fc2522b12222d6b3f38073",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 1.2212461419753085,
+      "metadata_sha256": "6787ef3ab5d8de8090802e4d40cd2b9c8c3dbcda47fff07346c639d3df3263ce",
+      "seconds": 0.47979044599924237
+    },
+    {
+      "field": "v13_south_ps1_0082",
+      "cache_key": "cab1c75195f5eca8eaf060346d2547cf865036e1854349dfa5267327bbdfcbe1",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 2.129137731481481,
+      "metadata_sha256": "3ceeccd65aacb04ffc772e803c70040a0e3ac8c0dadce8d00bc9cd34b1c57a46",
+      "seconds": 0.3279928599949926
+    },
+    {
+      "field": "v13_south_ps1_0114",
+      "cache_key": "cb89bbe1184f6c3b9b4cf5194a08763e4faf5ed689b2925ecbe2765054797b5e",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.6757889660493825,
+      "metadata_sha256": "119364c35b7c9eb3e5c130d3f7eeeb4acfd8c5eb03de74759d830c0745140cda",
+      "seconds": 0.20677566400263458
+    },
+    {
+      "field": "v13_south_ps1_0146",
+      "cache_key": "ce77eb48b661b70d380b053cef0e518b08d8e6362e2ac16bd8376f8e3e9c6197",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.5933641975308641,
+      "metadata_sha256": "efda4f5bf1bf0bf6534f72d5ac58fd962e7840735518f4611861318f03f03c25",
+      "seconds": 0.2183138929976849
+    },
+    {
+      "field": "v13_south_ps1_0178",
+      "cache_key": "51a1cf149f15d8adc1014896aa36c74a865ea61c8ec393967512c7f55c4efbb7",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.6213676697530863,
+      "metadata_sha256": "9967fab9726e6f3fb1d2cfea54dd9651c51ca4bb16641e1febbc4f14938c5ae3",
+      "seconds": 0.23127141199074686
+    },
+    {
+      "field": "v13_south_ps1_0210",
+      "cache_key": "b9a4bcde6c45f2eb2b3d4e6a1351d772f2d9f2a45bc88e440fce547daccbe37e",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.9347665895061726,
+      "metadata_sha256": "77a941f2facebb314c2abc3c70ad2c5443ee285c1c3f69b0326648797a8168b3",
+      "seconds": 0.1640905730018858
+    },
+    {
+      "field": "v13_south_ps1_0242",
+      "cache_key": "56cdd750e33400686eb6b47f2a6e586c5c2c7e32d5aa02176d07591000fc24cb",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.9814699074074072,
+      "metadata_sha256": "d819b9706981f700da48d5e414e67353a4261b215b9d2eb02c9c8561d5534ee7",
+      "seconds": 0.16401677900284994
+    },
+    {
+      "field": "v13_south_ps1_0274",
+      "cache_key": "5438dc8b3c4d707f6c8d6a9c3d8928259ee4a3f59fca7ad4d8b7cbe8b0a56454",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.5916145833333332,
+      "metadata_sha256": "950955b54fb78870dbd1a004abf05b5352f7b79215984400d3b5f4f838ebe461",
+      "seconds": 0.22909712100226898
+    },
+    {
+      "field": "v13_south_ps1_0306",
+      "cache_key": "83127f81bf504142c0998c46d7861bd50040bcadd340f1204bdf51019f3e132b",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.9818383487654319,
+      "metadata_sha256": "87ecede0a4d1a054b007ddd1a8b78752b17b48a1cbc17c8f4778c8c3e44786e7",
+      "seconds": 0.16161085599742364
+    },
+    {
+      "field": "v13_south_ps1_0338",
+      "cache_key": "f87fd65f024332894c31bba29a09c62ffc9b4484a355580a2b07fe8df48e039f",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.5910262345679012,
+      "metadata_sha256": "9795fc895357e004417461fafc640a1d917bff81a6834199663f5e9a30000766",
+      "seconds": 0.2149443340022117
+    },
+    {
+      "field": "v13r_south_ps1_0031",
+      "cache_key": "093c652f9410f802e7b00b881b985e772d288a1a4758306849b704447ca82106",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 1.0532021604938269,
+      "metadata_sha256": "bcef5e3c2b75c6f0d2878b0f10f8420be1bb3d4961239f965197bdaf8c7b0b43",
+      "seconds": 2.852485359995626
+    },
+    {
+      "field": "v13r_south_ps1_0063",
+      "cache_key": "6e6e655d3a73dc3159ccd42ce363c3825975d5951a9615c642ef0f14955ec937",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.31490740740740736,
+      "metadata_sha256": "6d2e8d281134d11103a978b1af9eb0eef92edbe958e9b23242b759e42609795c",
+      "seconds": 1.3524785220070044
+    },
+    {
+      "field": "v13r_south_ps1_0095",
+      "cache_key": "ca6940f63f5e1105e25151c1cb69ed3aafba0dd335f1182bbd46f78c0e44487a",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 2.6586651234567897,
+      "metadata_sha256": "380f1ea62f232d7494ef2e87a3ca4c0a4d503bd7dc68116514f72685dbd10d1d",
+      "seconds": 4.766008298000088
+    },
+    {
+      "field": "v13r_south_ps1_0127",
+      "cache_key": "c02f2cd075c0f52565d082337225362dd5cd8fd8c54accc97651f86e698cb988",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.6623341049382715,
+      "metadata_sha256": "1e6bd3635b36d1f79b45092272b436c4e82a1674eb1f0cd9e1affe858841febc",
+      "seconds": 1.6821655789972283
+    },
+    {
+      "field": "v13r_south_ps1_0159",
+      "cache_key": "ec174b2cd86ba1116704e5423b04dfceee59c680e3767a0d08e3ab12e5736c54",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.22935570987654316,
+      "metadata_sha256": "e98498b70103ac08da47c3883345287f6723f259584f88f463ce185ceff25162",
+      "seconds": 1.0199057069985429
+    },
+    {
+      "field": "v13r_south_ps1_0191",
+      "cache_key": "9f379a1092068ac0101fc579ffd63c22d4dc4e14c3c9496fd5c9fdb6e2ada6ac",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.09127893518518516,
+      "metadata_sha256": "235e3f55794a4c2744e4e009cef77dc67cf7616c1a70d763b60b34334092cede",
+      "seconds": 0.7356779609981459
+    },
+    {
+      "field": "v13r_south_ps1_0223",
+      "cache_key": "b49ad89ec94801c2a69661c7f28c234d1c6497d6bf6403a72a0b27f22705f877",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.22845100308641972,
+      "metadata_sha256": "f572a7733658c4d4d245a548b876aa880495fc866c3aed7d257c9a01bdd021eb",
+      "seconds": 1.1077124730072683
+    },
+    {
+      "field": "v13r_south_ps1_0255",
+      "cache_key": "f1bc8354c4c04a291224a4e86acb7ce208076c84928ded104d0b6ee467333f32",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.3580189043209876,
+      "metadata_sha256": "d703db86e1c96018c141d747e13a9a1d63591514f0141a18e932267ec86da450",
+      "seconds": 0.9822373609931674
+    },
+    {
+      "field": "v13r_south_ps1_0287",
+      "cache_key": "92a42ec8d3ec03e654fd1d410edbdeef37246d200ade68140e10dd7a73baaccd",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.8426292438271603,
+      "metadata_sha256": "f333c51d08ebf37477a6caf0e8997e4fd8319d0697c462f8f627a0d5499b9c8f",
+      "seconds": 1.9818626140040578
+    },
+    {
+      "field": "v13r_south_ps1_0319",
+      "cache_key": "978f5c388b248315a037593608008ed5373c3f64534638cf45ab9a0635be0bc3",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.3353395061728394,
+      "metadata_sha256": "ec4b3ec4067112381743d80937d6c3f49ba1d2f514a9674790de560f94d2f75d",
+      "seconds": 1.27801691100467
+    },
+    {
+      "field": "v13r_south_ps1_0351",
+      "cache_key": "219b256ab2b02995a2d12901ac6c0f98b0c6307152d9b36669499115928d201f",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.09587577160493825,
+      "metadata_sha256": "2d49987c3bbd2806d5767cfb2580ce04621c32d1b75e728fa9489dacde1ba12e",
+      "seconds": 0.7657718459959142
+    },
+    {
+      "field": "v13r_south_ps1_0383",
+      "cache_key": "f32c23c2fe8ad122e5b13ca5831a941558045fd80ebd8679ab284475939256ff",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.5253163580246912,
+      "metadata_sha256": "613cf1152a095340478baf49d409864758806918a67ffa57163391e69ec3e068",
+      "seconds": 1.7466842669964535
+    },
+    {
+      "field": "v13r_south_ps1_0415",
+      "cache_key": "0c5e479eaf3814d1bdc04ed67f1524654b8e740aea82b4d75a3e7833a9162254",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.3988425925925925,
+      "metadata_sha256": "4a94e1d5b2592f596e8ee481df7a2e2ef92a99f8beb7c18670fa07d242e33178",
+      "seconds": 1.6331895229959628
+    },
+    {
+      "field": "v13r_south_ps1_0447",
+      "cache_key": "19423f7352656f0e23d48f0431bee9ae0b98a40a1a0c779112706a72fd84e1af",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.7556886574074072,
+      "metadata_sha256": "add06c4052cceeb0e0f4d8df1b7f68dfe2bc2a8a3fb8deeceba7a2233c14f371",
+      "seconds": 1.5461282679898432
+    },
+    {
+      "field": "v13r_south_ps1_0479",
+      "cache_key": "bc9e2f1252e4bba2a0fcc27b53612ae1a51cd407f6786a19fb78746b6b33c19a",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 3.9301408179012336,
+      "metadata_sha256": "1916bae75b58f2986eded5993023ba945cca31eb6741fd4771f7aa468c7180d0",
+      "seconds": 3.009770667995326
+    },
+    {
+      "field": "v13r_south_ps1_0511",
+      "cache_key": "bd18c316015c573d2b930566a5c37482207ac9937ef9207e2fccc456a4acd7af",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 1.9883005401234564,
+      "metadata_sha256": "fd076a5391b40cad233d15b894fb4df6330114d5fd9cc6db9ec6dbc1364188ca",
+      "seconds": 2.2406212869973388
+    },
+    {
+      "field": "v13r_south_ps1_0543",
+      "cache_key": "988128e4a7272fe4109701b9e9b8fccfc34a0c0be3874148d0e91ae5a771a7ab",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.21126736111111,
+      "metadata_sha256": "847a233dff229cf79ac7396c2b541123ffeea6b3ff0dfed177bc3cf473563341",
+      "seconds": 4.328132403999916
+    },
+    {
+      "field": "v13r_south_ps1_0575",
+      "cache_key": "602183ca7a19afd51c0ac2d41d8d7a839321ef4c434657ba24d57541fbb5f6e8",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 2.799220679012345,
+      "metadata_sha256": "02ca243a728176af35557a87819bbe9830b4985e56b7e40d2d1d1c21ce504d90",
+      "seconds": 2.8355771100032143
+    },
+    {
+      "field": "v13r_south_ps1_0607",
+      "cache_key": "9dce2e3991f0b388f26cb891da4e07917870c717036cd660011b4f2fe438e176",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.6087307098765431,
+      "metadata_sha256": "1dc87457ca48b72b58a621f43e177f311517aa793680a4ee0dafffba80021f75",
+      "seconds": 1.8776540550024947
+    },
+    {
+      "field": "v13r_south_ps1_0639",
+      "cache_key": "6895c570403bb973ad7a1520b9b6e77696860274682c4d222d94f567355d8d25",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 4.440219907407407,
+      "metadata_sha256": "335155c5e1447e1bda6d259544367d779ab092a7170610c8ce7a6dac6666c487",
+      "seconds": 3.538416725001298
+    },
+    {
+      "field": "v13r_south_ps1_0671",
+      "cache_key": "1f7b3f61795b3abff9d489ea1f3b54a4593fe8ba0379fbc49485559fe40703ac",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 3.0664409722222215,
+      "metadata_sha256": "26b51b436060341e52f417be55f6f20a9e05840e51fb360cd935a6000fd30f34",
+      "seconds": 2.8942868820013246
+    },
+    {
+      "field": "v13r_south_ps1_0703",
+      "cache_key": "51e6472b74fa8f4ad014075335235ebf98e685fc5f54a38d79f3b61c4ebcab49",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 1.753207947530864,
+      "metadata_sha256": "e05dc8f6a0e8c0deb95d0c22391a502d8c70864376a0b12f83cbbf175acf1c8c",
+      "seconds": 2.184377024997957
+    },
+    {
+      "field": "v13r_south_ps1_0735",
+      "cache_key": "2913ad7066bf981141bf798581d37181b16bad13cc1e8fa5f8efab4012c5858b",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.05629050925925925,
+      "metadata_sha256": "ab5316fd674ad667fde0f84aa038e8ae092552a441f98ef3a51a89fbbad7cc35",
+      "seconds": 0.5669480279902928
+    },
+    {
+      "field": "v14_north_0029",
+      "cache_key": "9a76cc2fcc54243509fab540ab4233ec151b93329abcb7641b80768d80ab321a",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 3.9173668981481473,
+      "metadata_sha256": "fa7d476e2678c5f20139d274d58793effe062ab8d9090b4554e6cff8b6700ea4",
+      "seconds": 0.8918828860041685
+    },
+    {
+      "field": "v14_north_0061",
+      "cache_key": "23ff292ec7277fea04187895b8e14e4ea24f30ce05e29b06561fc3da55a57c10",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 10.531874999999998,
+      "metadata_sha256": "9dc437484684bb91e2475d011fadd1670c0a67697fa08377437a5eb000d9f35d",
+      "seconds": 1.9396757319918834
+    },
+    {
+      "field": "v14_north_0093",
+      "cache_key": "8cf96fd0bb899f75b63a23ddb905a02ceeb59c4d80357019f6d0093e0a87250b",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 12.122851080246912,
+      "metadata_sha256": "7a3a145f16156a5f2a315c8d47c1f43a8efbd658140efc07341dce3ab2d808d1",
+      "seconds": 1.7206357459945139
+    },
+    {
+      "field": "v14_north_0125",
+      "cache_key": "8e0324d2f9d5fa93496151b93fdd51c8ef6ca94fd0f1bdaffc395d097f2baa4f",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 12.05695408950617,
+      "metadata_sha256": "5f02c906ca3a2f82120eff94917a77a93812f63d6f071432be4fcfb87c8d4f69",
+      "seconds": 1.7532568699971307
+    },
+    {
+      "field": "v14_north_0157",
+      "cache_key": "7b0915337448fd35e74c66f3b78910f8a28237b1ca9f71675ffb0c6d9a264984",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 10.000765817901232,
+      "metadata_sha256": "fd63dc4c2b35f34457f2baf76f8b3c5faaf21e6ae6978b8442aea9832ebcad05",
+      "seconds": 1.8119593969895504
+    },
+    {
+      "field": "v14_north_0189",
+      "cache_key": "dbb169c2b36c2b2c2cefc5faf88a1e3a72e38478f2d8a8bbe7737777ed8826b7",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 6.055007716049381,
+      "metadata_sha256": "0021b6f7a1293a5d28f708ff12b6a868e08a3c0a5f75769d08161311c74b5d2b",
+      "seconds": 1.5021691259898944
+    },
+    {
+      "field": "v14_north_0221",
+      "cache_key": "8241bd021f9e569c72d54b13564d1b2ec5a5ea9e1b4f42930564fb3cf494f4e6",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 7.285057870370369,
+      "metadata_sha256": "473b2a6570a0a08372efdbc636927f99617aabc82228d441125f2bd525587ab2",
+      "seconds": 1.8707908060023328
+    },
+    {
+      "field": "v14_north_0253",
+      "cache_key": "9b4c487d9e082c94bcead0ba675993958dfd7d9b7b5e78f2064c2832df840d10",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 12.200599922839503,
+      "metadata_sha256": "648d9fcb664f0b00f38b2b6a3a29805940474259e2b76d1e48c1d642c8cc2b7e",
+      "seconds": 1.8989605649985606
+    },
+    {
+      "field": "v14_north_0285",
+      "cache_key": "18d33cb7ec80c76b47953c5aad936ae241f7dddba44e94c370fa766649e5b64b",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.826012731481478,
+      "metadata_sha256": "a909dc4aba99274a6b00b6f684efc8cb33c49fae39fb6900cb2578a46474da88",
+      "seconds": 1.7699829850025708
+    },
+    {
+      "field": "v14_north_0317",
+      "cache_key": "015b53ad3af37d9d4a41beef48cacab049c5757309cc4eefb8e61185dfe0e6cb",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 12.188790509259256,
+      "metadata_sha256": "777f79690bdd87a502d121009d4469b2536298a79424c34ac51cd6cd75a65492",
+      "seconds": 1.7513116810005158
+    },
+    {
+      "field": "v14_north_0349",
+      "cache_key": "58774cbd4a116b0e5058564f4ea2a66208e53c4109875d0d84ef3ca2138b7906",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 7.415814043209875,
+      "metadata_sha256": "64f9f806b925c5765d5c3257e506158bbff517ddbbd60e9e1185733d413ffc64",
+      "seconds": 1.3205374590033898
+    },
+    {
+      "field": "v14_north_0381",
+      "cache_key": "1340c86598036215c7b3c249320ac3c40a847603373881dc59850ae8e177d2e0",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.935036651234567,
+      "metadata_sha256": "983cad1170c05b128cad3530011dbd6bb6b9a54cdcc06b966833f53a6fcd6dca",
+      "seconds": 2.1246200330060674
+    },
+    {
+      "field": "v14_north_extension_0005",
+      "cache_key": "1000724937779fdfc4630ca475f559f51ae9eac9fa47e97f787fa5679840b934",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 1.742810570987654,
+      "metadata_sha256": "e3247a29dc0fb808509206f2a9273c931f304f3b092196b08d008dd41624e00d",
+      "seconds": 0.6370085009984905
+    },
+    {
+      "field": "v14_north_extension_0037",
+      "cache_key": "a3297dfe5e0ff1c5c290339c2306cad36a92edd71eae398559f7f9655171de7b",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 7.928005401234566,
+      "metadata_sha256": "2c7edd878db706e576be5282af5cc3512d7c1223c9f00480a77d2afd0096f54a",
+      "seconds": 1.6397731479955837
+    },
+    {
+      "field": "v14_north_extension_0070",
+      "cache_key": "f6bab60573215b73ff081923f1820759907658bac68408fed3972b452dfa26c8",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 9.11107445987654,
+      "metadata_sha256": "96ac29e7c65dce7b3c9a3f3a82d904b0fb90d4ecf790c3d6afa7e613bf8b46e4",
+      "seconds": 2.257345588004682
+    },
+    {
+      "field": "v14_north_extension_0102",
+      "cache_key": "042eaf12445687c2a1587c0bd3ed6e15a11cfd7c3146dd68f52632e998293ae4",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 7.974728009259258,
+      "metadata_sha256": "79e778a2de3cca72f2fedab54958ddba97e9d7421e47afeb8270644918ba2aa5",
+      "seconds": 1.910929795994889
+    },
+    {
+      "field": "v14_north_extension_0135",
+      "cache_key": "d79f6145a2cd7d40c57cf2f920fac7f8f485a40b16fea82f0aa8fa9f1c77a770",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 1.0472935956790121,
+      "metadata_sha256": "713d5e7df31883295f9559b4cbb2b33161c2a203d6bb1c34555e8ede76b19e18",
+      "seconds": 0.5461702739994507
+    },
+    {
+      "field": "v14_south_delve_0019",
+      "cache_key": "15b7ed5bd4dbe0a8658d96d1b13e7bcc53f2db8fe7f3f973fe26ec547ff8c3c0",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.017914737654320983,
+      "metadata_sha256": "414f86de44bb9335e1a729b592246e60fe7b6cd2100d8610d3024a7276756960",
+      "seconds": 0.42280074799782597
+    },
+    {
+      "field": "v14_south_delve_0051",
+      "cache_key": "436e53ca348ee42419ef22656da7552ae9509b220502e24f549d5b0594d03782",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 10.948103780864196,
+      "metadata_sha256": "088bca3a97cdb70f5bb002ad86d1a9231c86473a3081b2da00b13c4e898d7df2",
+      "seconds": 2.433983225011616
+    },
+    {
+      "field": "v14_south_delve_0083",
+      "cache_key": "70a351272872953e924cd5d4ecca9eb662978dc47da4c3f0d6a972e24969a805",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.1697839506172839,
+      "metadata_sha256": "496379adf665e40717200050ffc6c73760f838e67fc4839c98a9b88283125831",
+      "seconds": 0.5334870170045178
+    },
+    {
+      "field": "v14_south_delve_0115",
+      "cache_key": "8a885f7dec0cd36b685538e8bd8a229a77e3672100144797572cb504ab4c7a23",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.002563657407407407,
+      "metadata_sha256": "84d75a29104b84012bac5b25abc02192e2b6cd8ae26297f32bbfe5a6943b6f0d",
+      "seconds": 0.4558760159998201
+    },
+    {
+      "field": "v14_south_delve_0147",
+      "cache_key": "f63756d0559920937d3f14f59d6e8929e8d742f535eb83132c6188551a458482",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 5.499461805555555,
+      "metadata_sha256": "e34bc5e846f1c6016579e5de9c1a200ea9f8b5b336f6b5797fb20c7c74a62468",
+      "seconds": 1.5032662819867255
+    },
+    {
+      "field": "v14_south_delve_0179",
+      "cache_key": "9748960fd583b7faefda8d2224f90b886f5532330d08d7d06fb0a427164269ad",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.838557098765431,
+      "metadata_sha256": "a94b71f478aa672d5d86322b42673b7e9e51fda1b4f2877e3f947445bcb33219",
+      "seconds": 3.4872807990032015
+    },
+    {
+      "field": "v14_south_delve_0211",
+      "cache_key": "cfc8354d5baadc0e8eaf2fa92373b7de5ddbff5097a9bca6498e48b4037bb659",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.433969907407405,
+      "metadata_sha256": "4d467f23bea1069fcff5b153b87d71c17a02495dd882cd1732560b2cbe61deac",
+      "seconds": 3.4787218400015263
+    },
+    {
+      "field": "v14_south_delve_0243",
+      "cache_key": "f3300b83fab0990d57d0315570b28832e6d42328ba01de13d67ea8efe323e3a7",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 7.667671682098764,
+      "metadata_sha256": "37b0f6df17553d1920f4e3fd52463bb3a2076b6988e9ab45f6858910fbd7d1e6",
+      "seconds": 1.5702025860082358
+    },
+    {
+      "field": "v14_south_delve_0275",
+      "cache_key": "b722fa13da74b9ecad2226980ead48673ad5ceac72ea353a67b2af5759408c6b",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.846059027777775,
+      "metadata_sha256": "abe06effe83ce1ddcf802b48dcd790dfdad493418d40348d47fe3196dec15aa6",
+      "seconds": 1.6134090129926335
+    },
+    {
+      "field": "v14_south_delve_0307",
+      "cache_key": "6bfc124447e3a47943c391d71766efe2d291f30e6c2340c6a6610430b4e3e53b",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.762766203703702,
+      "metadata_sha256": "22383f12afd665bee51874780c0f3035088384f07872faa23a36c81441c42338",
+      "seconds": 2.162751951997052
+    },
+    {
+      "field": "v14_south_delve_0339",
+      "cache_key": "3e721ee7516405be0cf89b6be0c648c3c438f7ab9377bdc6fff31382cac1664e",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 9.421066743827158,
+      "metadata_sha256": "87df4e8e5fd3db8803f8e598086d7de7b46a2942bb249fa81fb9f4ee3b1e954e",
+      "seconds": 3.6743502509925747
+    },
+    {
+      "field": "v14_south_delve_0371",
+      "cache_key": "a0dc019b28d5f1c7aafaf84357fa10935207884fb9f87f570c31498a37aed9fe",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 9.698325617283949,
+      "metadata_sha256": "94751c06261b6b546caedb5a87ab495550736f66bf1448e8f2d6da1c85f568d2",
+      "seconds": 2.3194464910047827
+    },
+    {
+      "field": "v14_south_delve_0403",
+      "cache_key": "102a321b7a221ad484a18c3ac9f9d6eff1e651cb4863cfb01a3d204bf1a2fbe2",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.012291666666666664,
+      "metadata_sha256": "ce89decc0b38370961d9b2b416a2a7567c798985ba782229d93b7967cf57a3b5",
+      "seconds": 0.42764088900003117
+    },
+    {
+      "field": "v14_south_delve_0435",
+      "cache_key": "c884d39c52abcbbf9f8bd236cc01f4733515a29af2800c8fb0415904304d5f82",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 10.107625385802468,
+      "metadata_sha256": "591086ad68fb97b4763c35ec6c454981c6859604a44ba326a66028fdfc212d01",
+      "seconds": 1.4761857020057505
+    },
+    {
+      "field": "v14_south_delve_0467",
+      "cache_key": "abfb0dd1644f359e34ffd8d21e6441204e579410d25b38b058813d0f2b00fef1",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 4.576898148148147,
+      "metadata_sha256": "af1da9f2ef9e663b3bd31473aead445157c92cdd7bf84b79be18e55315c3997a",
+      "seconds": 1.4679296529939165
+    },
+    {
+      "field": "v14_south_delve_0499",
+      "cache_key": "d99d38a962d9b81a15423f4433b9ab80f94e24ac44927ae699bedd37f5dc0a70",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.966603009259257,
+      "metadata_sha256": "944252bdf3a507337a1f98ff9c13e79aee942a53be3ac9de179af7c273f3d233",
+      "seconds": 1.904699379010708
+    },
+    {
+      "field": "v14_south_delve_0555",
+      "cache_key": "2b0d986b17de484d0f4899f82e21d8f10726965c198c7665d6afc1f0c72df495",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.176547067901232,
+      "metadata_sha256": "7e7ea192fb492c7a7374191000301d208a28f9c59fab464a5ef0d0d01d8b1f6c",
+      "seconds": 1.972014921993832
+    },
+    {
+      "field": "v14_south_delve_0587",
+      "cache_key": "dcc23350e9c1691ad53a6c4bb09f5107aab9c9d36c5c325b5f3db05a8f2228eb",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.05425154320987653,
+      "metadata_sha256": "c96c9e21df89cba2001ba90dd756870c6147cd686c9d6389abbb33a6ba900f4e",
+      "seconds": 0.420830212009605
+    },
+    {
+      "field": "v14_south_delve_0619",
+      "cache_key": "52b7e58b3ec07a01fa747622fa6df24b02834d7096a5161bb54ad74cdd166dfd",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.746855709876542,
+      "metadata_sha256": "841c8febdc77d6e28d3c32898816e3b595882d7776084ef4728a84705d4f7cd4",
+      "seconds": 1.7959410729963565
+    },
+    {
+      "field": "v14_south_delve_0651",
+      "cache_key": "d04628c24655037ea52d70330c5618760f25611ffbc1f013b86fb7076ba20fe1",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 5.3628221450617275,
+      "metadata_sha256": "62f7c1e9d40be9076da4bfded7fca79405773419f3d26666f75b56021ef5d83a",
+      "seconds": 1.6404092260054313
+    },
+    {
+      "field": "v14_south_delve_0683",
+      "cache_key": "05d180343de0e8eb8de2f17c3da7821ea50a169cb33c4856d7dc9416d5fa3638",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 10.09937885802469,
+      "metadata_sha256": "81ec95667863f23ac671fa8ff18780aaa8e55d4ac0c110e1815fae9cf18dc0af",
+      "seconds": 2.5596497829974396
+    },
+    {
+      "field": "v14_south_delve_0715",
+      "cache_key": "a0968ccf9f22c7f5d4bbd779432021c3cfbf84cb2c08e8798f98e2bec28809be",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.45438271604938,
+      "metadata_sha256": "afc1c7672630bfb017b4766b08a9957fba76fe23e9da23fa5da56feb56bc0b59",
+      "seconds": 1.8723963149968768
+    },
+    {
+      "field": "v14_south_delve_0747",
+      "cache_key": "ad7548172c89b219ce5f5c1b8f1c504a3b1c5a7d532dfbfb511599e15a80841f",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 10.831757330246912,
+      "metadata_sha256": "e99da49b21480b4f01d68dd37a3a05cbc3722e855d0993e478271422070594d7",
+      "seconds": 3.200581869998132
+    },
+    {
+      "field": "v14_south_delve_0779",
+      "cache_key": "4fd7dc2cdb8e97b0c38f1803798c1aebff4c8ce4009833b786d23c529405300d",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 11.2716512345679,
+      "metadata_sha256": "58bb3e027d5892ab9b2ad79b60e505e4bda4c1b1bd06b385a625702b6b2e4601",
+      "seconds": 2.6980682389985304
+    },
+    {
+      "field": "v14_south_delve_0811",
+      "cache_key": "07c9e54cde4b353aa661fe68c8a81cf1c5488d1d9f8997d71202cbe46bbf1a58",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 10.797148919753084,
+      "metadata_sha256": "45acfe6614be719116d00732e332e548a15bf6a44205dea5cfabf710d57661ef",
+      "seconds": 2.2398980879952433
+    },
+    {
+      "field": "v14_south_delve_0843",
+      "cache_key": "269a6784c195611d804e43bef4cc46dabd4c20283f445e4ecbcab585dec029b8",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 5.233269675925925,
+      "metadata_sha256": "b60b7d861e45e064a66032185e84d5d002e87b6b4fbdb5c8e6c94f8a83412e8e",
+      "seconds": 1.850844397005858
+    },
+    {
+      "field": "v14_south_delve_0875",
+      "cache_key": "88fd9b6d9f213d118d24b40a5d205b9d55b7b33602a65035032af3ac3d003efc",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 3.746334876543209,
+      "metadata_sha256": "9246a54b1723b6b15c11fd9233ed5cca27c0da9f1d5db71042709135ad1dfabb",
+      "seconds": 0.9679101859946968
+    },
+    {
+      "field": "v14_south_delve_0907",
+      "cache_key": "41489db1a48f9092c95edfb76aa284161a9f7e502182c5b9529e333a5047c8ab",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 9.338618827160492,
+      "metadata_sha256": "362b7e6a4e94015bc1925ab9444e66715d628b7ef2fb652092df68dd974c7e96",
+      "seconds": 2.5619332369969925
+    },
+    {
+      "field": "v14_south_delve_0939",
+      "cache_key": "7cbbc5d598f2eda4bf4d5fe497528cbb75c3a5bbb5672321e128b55ed64115e3",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 10.751819058641972,
+      "metadata_sha256": "6b9f46bfafccd4ca55402657b8c7a7cdfa699d6cef04562ecf5b130d81914cf0",
+      "seconds": 4.0811985390027985
+    },
+    {
+      "field": "v14_south_delve_0971",
+      "cache_key": "c1f31535169def7b5601a71cc4da1fcca9b0f93fc494f58db56478b69265ceda",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 3.0264236111111105,
+      "metadata_sha256": "60719573893c0aeb730c4aa31bd42bc5d085a0f13336ade0023b8822f4ba2c92",
+      "seconds": 1.6328663949971087
+    },
+    {
+      "field": "v14_south_delve_extension_0010",
+      "cache_key": "58269a0d6d039df3569d46c9989fe7aa10301044421074bc4bbc268e88f5089c",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 7.312123842592591,
+      "metadata_sha256": "dc991c41e0a20118f52486a2a1cc1a432b029c4950501f0a93ff0cafc9d2304c",
+      "seconds": 1.8658042449969798
+    },
+    {
+      "field": "v14_south_delve_extension_0042",
+      "cache_key": "1ae6d31df10b70692e73b124fbfec99a1821bb97bba0c99540a9f17c54e9282f",
+      "classification": "development_calibration",
+      "source_area_deg2": 1.209128086419753,
+      "metadata_sha256": "c55b1f82c3445e56e0b2e8e7714bead7c23b57c61a3b6509f4a63bd68fd0b341",
+      "seconds": 0.6888709850027226
+    },
+    {
+      "field": "v14_south_delve_extension_0074",
+      "cache_key": "ca9b10fa69a7a5092abd41164f3ffbe84c85f80a7d339b0345a1d254747719e1",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 11.091195987654318,
+      "metadata_sha256": "12293aa52ff6063cb61d3a9e2250c5cb3cc05fb4007b2bc12caf6e8d6cce4b7d",
+      "seconds": 3.0407333219918655
+    },
+    {
+      "field": "v14_south_delve_extension_0106",
+      "cache_key": "a7b195b9353ae3c2c7bc487214db688cd24603310cde5ceb2e568eb54c22560f",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.45374421296296286,
+      "metadata_sha256": "1e00ba1bad7a28028cb35c42b1ca5074a4ca8830dd60673a79c9fd172e2c3829",
+      "seconds": 0.4994477540021762
+    },
+    {
+      "field": "v14_south_delve_extension_0138",
+      "cache_key": "baa4eb3a7e3268a7874376836719130e189e8ea3e8562e0e93b303cc1cbe6a0d",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.11530285493827158,
+      "metadata_sha256": "d15d2b4248073346418957cc91ea6f70fa502b3489ae8fa2d483fb3bfed031a4",
+      "seconds": 0.45061027599149384
+    },
+    {
+      "field": "v14_south_delve_extension_0180",
+      "cache_key": "8a7efe7e0e69fcb7a3003d1b5268b80e5d65d1ecc4347d02eb0e208f12ec2ef9",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 10.914479166666665,
+      "metadata_sha256": "2e194fec47339a368be0db90d307adee8da4a6c7bdbaa2da0908e9ccd1a89373",
+      "seconds": 2.918525115994271
+    },
+    {
+      "field": "v14_south_delve_extension_0216",
+      "cache_key": "25311fe633d8fc4c56f63f44ad33addc6515f4d2c5bb57eac2ac3ef88bcf137d",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.7904938271604937,
+      "metadata_sha256": "c0a453e340c7a22f53dfbd3646f5c19f45376040d36e88af3e0e8b3704426690",
+      "seconds": 0.9769100139965303
+    },
+    {
+      "field": "v14_south_delve_extension_0248",
+      "cache_key": "f240323530adf1c23cdc3468b167c6fac32941113c9e1f9823fcc0d1fb3f97c5",
+      "classification": "development_calibration",
+      "source_area_deg2": 7.387108410493826,
+      "metadata_sha256": "5d2f192433cf6903b5864a3819a2843e3621b0596f04d2e4c790617e41e6ddc5",
+      "seconds": 4.4427380679990165
+    },
+    {
+      "field": "v14_south_delve_extension_0280",
+      "cache_key": "3c45aea1f8fde45b07c5c73ac25cd755ccb9fe6c8b5dbf6872d9ab998330573f",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.5369020061728395,
+      "metadata_sha256": "73b09ad7311c896608ee891260504844610963db5c52cd66dd043f3f82e9aa64",
+      "seconds": 0.997531852000975
+    },
+    {
+      "field": "v14_south_delve_extension_0315",
+      "cache_key": "41e705699b274282b485153b60f54de01e7bb80bec0e18a5a62002ddbda85cd9",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 9.3080574845679,
+      "metadata_sha256": "fcd7a16230a9cc8ee3a7273182e5bcb6a46a4979e3fc25b7342dc90bfd95c388",
+      "seconds": 5.605245047991048
+    },
+    {
+      "field": "v14_south_delve_extension_0347",
+      "cache_key": "cc896d074be1680e2eca818fe516d5d755e7f5c9943205a9e3b726f5f7fbc7c2",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 10.261192129629627,
+      "metadata_sha256": "908fbc34829afa18ce2055153d7f85c0470d31c717b55687285f3733588d025e",
+      "seconds": 5.605828371990356
+    },
+    {
+      "field": "v14_south_delve_extension_0379",
+      "cache_key": "de15c0a9b69e36e7eed719f3e8782014d82eb4d223d04a26d5c289159c531ba2",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 11.315117669753084,
+      "metadata_sha256": "aca81a4c25bcbb55054885a24f788445e2a5899cc7a2d2e7de5b02dcc12c0c7b",
+      "seconds": 2.5917295729886973
+    },
+    {
+      "field": "v14_south_des_0001",
+      "cache_key": "6ba6e99eafd5c462d2538b1f2e6b7a8a74da45f4142c9d91acb21157c8093940",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.6996199845679011,
+      "metadata_sha256": "39576dc394a0840ac00e65e1c89ebd937a1351d1640bcbdea7a1fa3cad72d539",
+      "seconds": 0.5574974009941798
+    },
+    {
+      "field": "v14_south_des_0033",
+      "cache_key": "f8b5e584cc0583d28e89868ceefc84acec8f87c70172562ce240abad213822a3",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.643225308641973,
+      "metadata_sha256": "47bef35ed92f75c1880a8f53701f65fbd08911560bd47d0eba6fd9f6f3d0df0f",
+      "seconds": 1.6891150070005096
+    },
+    {
+      "field": "v14_south_des_0065",
+      "cache_key": "988a39a0a2c75b2cdf6683676c4aefc9729e46fb0105ebc19f982ffef3500af9",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.144064429012344,
+      "metadata_sha256": "1387ff799190183c901809fe5c53c06d814df1a3d2c5a2c497ce0325a7e8ed16",
+      "seconds": 2.2378644999989774
+    },
+    {
+      "field": "v14_south_des_0097",
+      "cache_key": "772e617e8f251febc38f1183d091aa0ef86a708eb35b84540ed3af26fa97bcbc",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 2.9653742283950613,
+      "metadata_sha256": "9c0663162d3d6376bc875558434417aeac7b06c56ab6a54814cbb28759db6a05",
+      "seconds": 1.0393879809998907
+    },
+    {
+      "field": "v14_south_des_0129",
+      "cache_key": "608645135f1f4ea8e7f00164513290485f6b48498abc062f2a93369006aea8ec",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.901396604938268,
+      "metadata_sha256": "92f2d4586bd24d08a2550e0535f036b39a87e1b7132462557f7b888326ccc11a",
+      "seconds": 1.964679345008335
+    },
+    {
+      "field": "v14_south_des_0161",
+      "cache_key": "95f834f5724ce4705160ac0c11e473e527da8c4d7ce7a9eb255d04ea86e0d51d",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.629972993827158,
+      "metadata_sha256": "eaf43fb1d8a3d49a02343923641f512bdf087ca51b56bf5a5c3bb1f9f029638d",
+      "seconds": 1.9725299040001119
+    },
+    {
+      "field": "v14_south_des_0193",
+      "cache_key": "f839186bd96de5ec74c6211b45c5182d5ae1c9796e8ee436bad387c5d366b62e",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.393827160493824,
+      "metadata_sha256": "6e8a113c1a5e50c8e49e95d7f48de5c949ebbc5c1f4ce55bd32b2617ba2fb721",
+      "seconds": 1.9248094609938562
+    },
+    {
+      "field": "v14_south_des_0225",
+      "cache_key": "98d2c127e17467ae76aaac0b8daca23ba7a54b0f070f1877d59203280e885e53",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 1.97583912037037,
+      "metadata_sha256": "5f334a99305fce3a90103d089aa2096ad8b922bd9a8f795c940073ad3fe6c4ff",
+      "seconds": 0.7918245129985735
+    },
+    {
+      "field": "v14_south_des_0257",
+      "cache_key": "f87bd2f8d770ba845389a9c58c19fe10fcb64e91d926709cca49c049e13834ea",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.7254726080246913,
+      "metadata_sha256": "8abd009a55beabee621d1b4bd221d477e9a1632a54c6d39baebd330116ceaef6",
+      "seconds": 0.505199128005188
+    },
+    {
+      "field": "v14_south_des_0289",
+      "cache_key": "50a973947dbcf48ae05f18793e63dfbfec02c8ea480af32cf599a81c237e3631",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 9.458231095679011,
+      "metadata_sha256": "ed203e2602bffbae0a1cf862419e48c47e44449d9d3853da346df8a6d05a6d22",
+      "seconds": 1.5814366420090664
+    },
+    {
+      "field": "v14_south_des_0321",
+      "cache_key": "ef9bb5c05d292b84ce0d252173d321263dc89860f9318285eb678545fa453503",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.809301697530861,
+      "metadata_sha256": "2a0527d6ade4b0ebeefff6ad29b379d2cb0343db584d98335f48d53660e45c15",
+      "seconds": 1.6157004430133384
+    },
+    {
+      "field": "v14_south_des_0353",
+      "cache_key": "59c089cf6fd6089afab92c8fb7f19794245d7f274da9934b9e836f27d8186bd0",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.717633101851849,
+      "metadata_sha256": "302349903a00cfe686b13e2ef455d9d17812ca599ee0d9c9405dad6aea716986",
+      "seconds": 1.7468359949998558
+    },
+    {
+      "field": "v14_south_des_0385",
+      "cache_key": "9746117faede0c6ea3ea9694b400281adbf0bbc1ead767b9139d4cd76da40283",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 11.471224922839504,
+      "metadata_sha256": "99bdd5b1a9389bfc2c3b42ebbbebbe904675721675c7e02102449c4b0ff99597",
+      "seconds": 1.7485698289965512
+    },
+    {
+      "field": "v14_south_des_0417",
+      "cache_key": "267362671070df7e6ebe3fd37af05fb6e551b2c82e489a83315009f017eba411",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 7.156959876543208,
+      "metadata_sha256": "2efe7460e28a00fd643edd93de3893bf295ed5dc63cde6e070316a8075d01ed2",
+      "seconds": 1.608524605006096
+    },
+    {
+      "field": "v14_south_des_0481",
+      "cache_key": "29a27ce5ee60d917e5dcf97c631618aa924982e239444f9fb708f7932b288889",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.8470100308641973,
+      "metadata_sha256": "31c0b0bd79843b33c5006b998fa6e582256d0635be4e5044772c00e68540abfe",
+      "seconds": 0.603827757993713
+    },
+    {
+      "field": "v14_south_des_extension_0022",
+      "cache_key": "68785b6116f29e63d3f1600f6c73f4cf811b3998c28bee0e360ee294bffc63c5",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.2002623456790123,
+      "metadata_sha256": "bdbf7d0397320fa2a3bd7c529dddfabbb780920bc03b0534887e374d1ec66d3a",
+      "seconds": 0.5654994159995113
+    },
+    {
+      "field": "v14_south_des_extension_0054",
+      "cache_key": "2c477e007f69aa9643337a1c213cfe0cbcd9601469e55f449cc8ec413756cae5",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 1.060972222222222,
+      "metadata_sha256": "50a2f1ea46667b1d995755c9938756bf8f19cd4186684b8583c9d52dec3dfc55",
+      "seconds": 0.6394372070062673
+    },
+    {
+      "field": "v14_south_outside_census_0018",
+      "cache_key": "dfa971c5908c4cb42d08915c9596b1ac7b7a77bd87ad998f2b0389a5274a8ccc",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.5106539351851851,
+      "metadata_sha256": "329abe5ab744998e7889421e9796e1619976b7dfe645cec5ddd53619248c6dbd",
+      "seconds": 0.7498429620027309
+    },
+    {
+      "field": "v14_south_outside_census_0050",
+      "cache_key": "d5042a0f71dba2a80c884562bb9fc295296569431f2c557e61925e74f90338f7",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.8891917438271604,
+      "metadata_sha256": "752f78148ff486a16d84d52e5affd4aae378e9886ab0ed9b693314ab2c497a75",
+      "seconds": 1.0390568660077406
+    },
+    {
+      "field": "v14_south_outside_census_0082",
+      "cache_key": "8fac95433aa40c74820c384dd15d1739bfb19e11415ea3e37a8f536085d5a810",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.6807581018518517,
+      "metadata_sha256": "e68e40ce5bbde56e92d4dc1765d971e4f9c9d9d74d193d5d9087b64a5ea583fa",
+      "seconds": 1.2655951190099586
+    },
+    {
+      "field": "v14_south_outside_census_0114",
+      "cache_key": "c00f4a237f522546a78a9a64ecf6b89419e042a5517837450721d8b5e88e9806",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.15747299382716046,
+      "metadata_sha256": "053c89f5b6eacffc6c9f3778777a46c90ae4f45c975b69412d5deb14816b9f46",
+      "seconds": 0.54065440800332
+    },
+    {
+      "field": "v14_south_outside_census_0146",
+      "cache_key": "1ec181117e67028ed2ea535ec397af2420f2ecc0feec1313ea4b50416be31448",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.6614544753086419,
+      "metadata_sha256": "8c86c80f02759bc0324c01a6f0d8c0b59348231ab417bc2c74c333714e0fcac1",
+      "seconds": 1.0048487040039618
+    },
+    {
+      "field": "v14_south_outside_census_0178",
+      "cache_key": "6c01984b94fd0d4b82fdd5e5da0432cdb62fa2c33fef3073ff0f93b7465b73b3",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.3368132716049382,
+      "metadata_sha256": "73fb824062670dfdd5927bfb961452193430970f61e4f2b18323fc6d178ee4b0",
+      "seconds": 0.9475058120005997
+    },
+    {
+      "field": "v14_south_outside_census_0228",
+      "cache_key": "3db8fa3462b0dd5203bee4b945d1fbfdc6dc296f6cff6cd36c9a8fc9da2ee007",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.3698167438271604,
+      "metadata_sha256": "0f90c9321359e9fc2a6e2914acc7ea04a003b7e1e50383dc783eecaade89cb7a",
+      "seconds": 0.9104546450107591
+    },
+    {
+      "field": "v14_south_outside_census_0260",
+      "cache_key": "8a7e88373be5347639d35eede4c2621626553eb8b9a63cb9f5bf326d90690f7c",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.2662345679012345,
+      "metadata_sha256": "1ba6d4077d0d105958e1e100703aea5deac37ee10cd5f22d2f7a50a7d5724d7a",
+      "seconds": 0.8753044290060643
+    },
+    {
+      "field": "v14_south_outside_census_0292",
+      "cache_key": "907ffe978c7a5c241e7cf5cbc1f87ce6a866cff8e12c0dfe0931170d52a22357",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.47208333333333324,
+      "metadata_sha256": "0bd8e2a1821d53145870e44a16375bfee9f154459b6e103adbb3ca0792c43336",
+      "seconds": 0.999280074989656
+    },
+    {
+      "field": "v14_south_outside_census_0324",
+      "cache_key": "de8c189d07d4dafcb85819c422e6758632351f4b620bda6095a198ee8ee66c8c",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.32572723765432093,
+      "metadata_sha256": "03aa0a518eea08ec6dc1dbae91bc9242f830a502c8b94121d06d18e7090d6ce2",
+      "seconds": 0.7738583350001136
+    },
+    {
+      "field": "v14_south_outside_census_0356",
+      "cache_key": "d730807eaccb62ccbaf87922f6a21e2866121c073efbfa307984f5cdd35567df",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.44615354938271595,
+      "metadata_sha256": "682f93548b6a66478fdc2e3990dab122d961c4b7d34d6ad6240898127123bf1f",
+      "seconds": 0.8031297490088036
+    },
+    {
+      "field": "v14_south_outside_census_0388",
+      "cache_key": "48802271833ce015648e5a8704d8210372f9610e9746ee328ab5b75d5b927960",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.49255979938271593,
+      "metadata_sha256": "2d6fac7114f20d312280adb6045f384ed7d99f6a0ab1058e7601f948d7c52614",
+      "seconds": 1.0094636459980393
+    },
+    {
+      "field": "v14_south_outside_census_0420",
+      "cache_key": "f666046f60d8fb7542ad26e73c00a6955cfcb6bfbfced33f06c7418b7771db6f",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.5316415895061727,
+      "metadata_sha256": "fffb78a1a149ff3fe6cc3438bf4f797937ede788c32e327fc7087accd59431e9",
+      "seconds": 1.511816894999356
+    },
+    {
+      "field": "v14_south_outside_census_0452",
+      "cache_key": "d65e0a539e165ee69d9224973bb00ff4dfb99a6d647d79f072cc9d8c5e3a8e31",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.5441415895061728,
+      "metadata_sha256": "b85e5be1778608b1952c7ece85289f6b76a4c6fa482d658e65267ae051817846",
+      "seconds": 0.9464916170109063
+    },
+    {
+      "field": "v14_south_outside_census_0484",
+      "cache_key": "94df8898602a2e0bc54e92fa77d84877fd45a01a70d7971b103490be3402442d",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.5496739969135801,
+      "metadata_sha256": "050503c9a7288b4adb103a4c75f5a55f8eb0ddfe8ef5f58ed3cf97d51de16f3b",
+      "seconds": 0.7288118970027426
+    },
+    {
+      "field": "v14_south_outside_census_extension_0012",
+      "cache_key": "b4b069ccbc6397fb0a3b7057493caf0e38c15d87331332209ba7875d5b7eb320",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 2.3752527006172834,
+      "metadata_sha256": "32650bc712a0538279255c70f7a40e12194e64ced6b2d00e43bd2713308355f9",
+      "seconds": 1.6564638549898518
+    },
+    {
+      "field": "v14_south_outside_census_extension_0044",
+      "cache_key": "750ae3ae770f24bbec7fbf31365332ede81bbc060db96cee06c264d2b2b8f129",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 10.663707561728392,
+      "metadata_sha256": "33ddc8bc1ad4faaa03613d7e4b1c5b0c01bda57eb27f343a42b1789f91bfc209",
+      "seconds": 2.6309679050027626
+    },
+    {
+      "field": "v14_south_outside_census_extension_0076",
+      "cache_key": "e726194b27849ed3270ece30a74af057b2d8bdf3c72e9f2d1762c522527760a5",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.0138233024691358,
+      "metadata_sha256": "60d23fc9b91d9e00d6cb1fc2074179d45cb4aee257874c1d506cf8b453c1860b",
+      "seconds": 0.4399843130086083
+    },
+    {
+      "field": "v14_south_outside_census_extension_0108",
+      "cache_key": "17e1b3d3148f50e27e14c16efb76f90721ab07f5e535dc74fc73438548f3428a",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 8.946689814814812,
+      "metadata_sha256": "4a91054e4ef64d39c9e5bae35aa9704dc3e6db6391d80947df0dfb8fc529722c",
+      "seconds": 19.022955996988458
+    },
+    {
+      "field": "v14_south_outside_census_extension_0142",
+      "cache_key": "705d140dc5fd1b93c93053e530bfaaa82fe735ef6261cd3affc8684fdf64b631",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 1.688134645061728,
+      "metadata_sha256": "68b9203527680ca69cfb4ac7b2313db8dca3b1df4fa723c8a5ce56a2bed8ccaa",
+      "seconds": 1.6337704239995219
+    },
+    {
+      "field": "v14_south_outside_census_extension_0195",
+      "cache_key": "46045bc8a2e0740b1ce8b4cb21bb27aa16ae83859d8658decb581665c130be68",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.6131983024691356,
+      "metadata_sha256": "e38edb46fc36f20f6903e8cefb98d2ac524862831e26bdcb87743734456f015a",
+      "seconds": 1.5012527130020317
+    },
+    {
+      "field": "v14_south_outside_census_extension_0232",
+      "cache_key": "f72acac6d5e5f0a48bb620908e34ae2eec5b429f9f32b47698f65a478999e5b4",
+      "classification": "development_calibration",
+      "source_area_deg2": 0.5664081790123455,
+      "metadata_sha256": "9c72bea06ea3e2f01fab10822eaf6971a4fed372ee1f0f73dfa7921df252abf4",
+      "seconds": 0.914125941999373
+    },
+    {
+      "field": "v14_south_outside_census_extension_0267",
+      "cache_key": "f64714b54f428fe7e2340ec1e861871b027df39d5d6a77be25b65179bb72b33d",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.588923611111111,
+      "metadata_sha256": "bd91b4f2f73258e9d5e3012f25e039e5e66fb952ee9c03ea9bc319d1674ca9cc",
+      "seconds": 0.6630710390018066
+    },
+    {
+      "field": "v14_south_outside_census_extension_0302",
+      "cache_key": "e96a93020324aee959f363c6e65e93a51c942bec579424e302be499a88ea48c9",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.27733217592592585,
+      "metadata_sha256": "f5b6e4566cb585d00f72e1d2857821319675ebe5c77f19d41811dfd63ee60e25",
+      "seconds": 0.7017917250050232
+    },
+    {
+      "field": "v14_south_outside_census_extension_0338",
+      "cache_key": "efe878eccaf853fcfcce2d9a92cfeadf084076b55648d7ea768f0960a3b8eabf",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.04987268518518517,
+      "metadata_sha256": "02d8637250de1b23137531ba0b6d1a9df6bed7fc1ac56b34019647664643d340",
+      "seconds": 0.4461920559988357
+    },
+    {
+      "field": "v14_south_outside_census_extension_0372",
+      "cache_key": "59a66869e9bb20374edba8b4d6d5b830396f03df8b8f0c41658b8e10da6987ac",
+      "classification": "development_calibration",
+      "source_area_deg2": 0.03130015432098765,
+      "metadata_sha256": "9bea1f44d4c7f5724c17f9d1ebfa873763c34f25e320b88d23475bdaf1b38892",
+      "seconds": 0.4496177740074927
+    },
+    {
+      "field": "v14_south_ps1_0009",
+      "cache_key": "024b90e817c5284386a6ca08c7b7465d4a83a93e578a80e0db05e2ead2b33986",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.010792824074074073,
+      "metadata_sha256": "11f832b039a9f075ae4318625ea63259271961cb92f2515b6af69ffd7cfbe24b",
+      "seconds": 0.7773850300000049
+    },
+    {
+      "field": "v14_south_ps1_0041",
+      "cache_key": "fa6b9623b7d9a2aa2f27097d86baa032d5b18b958bdc7b2f157ad9bbe72dfab5",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.0019888117283950613,
+      "metadata_sha256": "eaf55277b68626c785e525dc52bd186931e000f8ea0962d50ab2e6ccb8d76cd4",
+      "seconds": 0.5268792949937051
+    },
+    {
+      "field": "v14_south_ps1_0073",
+      "cache_key": "2d1662ca110576045ed48d94b626320b935afcffd03975b74ceb6a79c31e82d7",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.008350694444444444,
+      "metadata_sha256": "19b3cf8c60b229e713bed39c2da7629e09839fd6d60719a322a2494f0963d849",
+      "seconds": 1.037142881003092
+    },
+    {
+      "field": "v14_south_ps1_0105",
+      "cache_key": "879f4e33b9de8607c7c80f29169e443fde15456e7da5cdfafc546c644569a821",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.014440586419753083,
+      "metadata_sha256": "811de2c927d5e67666cfed486cf179c5e64322d1d75772fd41553fcea2a70336",
+      "seconds": 1.4005164900008822
+    },
+    {
+      "field": "v14_south_ps1_0137",
+      "cache_key": "473f04d74fc99f3ff9802e3beb513885f12cff662205b5aca18a4bccd3b235f9",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.004243827160493826,
+      "metadata_sha256": "0041c5b49132e2d4b3a728e27e4884528266bf462f5762884f05cb5c84a66f20",
+      "seconds": 0.6941833450109698
+    },
+    {
+      "field": "v14_south_ps1_0169",
+      "cache_key": "c9c687604e2ab6005c08cfd0f4064737a737162f22b05aca5782e69c9fc89b3c",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.2136824845679012,
+      "metadata_sha256": "1ff021277a197b5b0197f60a6f9ff48b4625fe51d30d637be8103392d26a4db9",
+      "seconds": 1.9831971069943393
+    },
+    {
+      "field": "v14_south_ps1_0201",
+      "cache_key": "03524c7bc8269836ed6bf6fa2cb107881b0c703519185cba90a2dabe8dcf2cbe",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.01953896604938271,
+      "metadata_sha256": "ac7f756f8369b9963d86be49024a55eb0af762072a42af8e8fa567db439ff6a5",
+      "seconds": 2.051900802005548
+    },
+    {
+      "field": "v14_south_ps1_0233",
+      "cache_key": "bf492d25cd8e58f8fc15f44fec0071c6247adc9deb470be61de7e980e2fc48c8",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.03220486111111111,
+      "metadata_sha256": "929d5c9c16f7620efba098fab7530397a0748c24afe7c63f316f2af5d124c993",
+      "seconds": 1.2257686920056585
+    },
+    {
+      "field": "v14_south_ps1_0265",
+      "cache_key": "e1d044d5665ccd6517e68baebaefcee4a8ee340a2089ba616ac50b61bec787a3",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.0033082561728395056,
+      "metadata_sha256": "444596cc27218c72b8c55e60d0394e424cfaeb5f0ee1983d9ef1fcf112937e2b",
+      "seconds": 0.5741044750029687
+    },
+    {
+      "field": "v14_south_ps1_0297",
+      "cache_key": "88816dfed1684cf16158d452597af453fd4a09717fff918b7cc31a6f639fc944",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.030410879629629625,
+      "metadata_sha256": "4a17a34ee08f343e81f0dfc06dcb74b7411cef545ec2b5ba999e82b9140dd3e8",
+      "seconds": 0.663180661998922
+    },
+    {
+      "field": "v14_south_ps1_0329",
+      "cache_key": "f8d81d383813de5776e81273daab34c0eb2e4e4ed85506be18df9b5f3c4fdab6",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.0031809413580246907,
+      "metadata_sha256": "b21c313e2e3187bb5ba24ead3898e1e24a55e83038861b03f4579ddb3e11a4e6",
+      "seconds": 0.5636846529960167
+    },
+    {
+      "field": "v14_south_ps1_0361",
+      "cache_key": "2679af02286e1ea5cc1d6c285b42d2b87884ac92a035db944afc9c5819eae605",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.01928819444444444,
+      "metadata_sha256": "dd9485d8adde5dcb7377dc65c2e8fbe0359cef9b54657f03da0d17a9dc0090ae",
+      "seconds": 1.6573250109941
+    },
+    {
+      "field": "v14_south_ps1_0393",
+      "cache_key": "139138709c44dfe9124b9fe641c95363838522471386c30d20036f40eb1feb02",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.000978009259259259,
+      "metadata_sha256": "70c377093718d6783c61cbfabe1dcc335601d3d439684a88058c4dc00322c8fd",
+      "seconds": 0.4809618919971399
+    },
+    {
+      "field": "v14_south_ps1_0425",
+      "cache_key": "52e335e55b36180ea96fb83c1e391341ecdf463d49f40dd4d5375c147c916565",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.0035937499999999993,
+      "metadata_sha256": "8c412015cf2c39a5437f9f892d74ec6f49d4c83778f7be33d97be82508e94cd9",
+      "seconds": 0.6342458839935716
+    },
+    {
+      "field": "v14_south_ps1_0457",
+      "cache_key": "ced541dcce435ab74dd332cd320956513ed3e4117164d732a012442a1df24ca8",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.01870177469135802,
+      "metadata_sha256": "f1e8d3a3d0969992d0f3de074fde45f4052d4f89a6e1d17a353bda12a4fcc5ef",
+      "seconds": 2.0287682869966375
+    },
+    {
+      "field": "v14_south_ps1_0490",
+      "cache_key": "2df6ad187c7faccba747e9e66a5bbad3cdff65489b6e762279328d353cd60e9c",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.0039602623456790114,
+      "metadata_sha256": "3a15843e4a9f68fa1f915af4ed02a02ab216eeab415e625fa277f7a3c59f5a0e",
+      "seconds": 0.6730084709997755
+    },
+    {
+      "field": "v14_south_ps1_0522",
+      "cache_key": "6a3db970df6ea36f421a1e76fbef6adabd5abccd99e5ea7a54ba9aa4e77b9911",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.005189043209876542,
+      "metadata_sha256": "ddb0cd6afe7aa17dbb74d956456a2f295cf401dc45953e33537bdfbe5bf50828",
+      "seconds": 0.7885738970071543
+    },
+    {
+      "field": "v14_south_ps1_0554",
+      "cache_key": "4af696169db7d2529fb328dd424a934098e01282a0b8e215c80db499897d9844",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.010634645061728393,
+      "metadata_sha256": "b0e48703e498ac2ef38abe326003a1235bf0d2b6bc548f47d07b8270ebdcfb96",
+      "seconds": 0.9971998359978897
+    },
+    {
+      "field": "v14_south_ps1_0586",
+      "cache_key": "6eaa7d4332013793264b770b5e6246946ff1a23be55e5486566008bce231ea83",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.009174382716049381,
+      "metadata_sha256": "2520eb1994664d8e364bedc832c9f7fec03f3517ea2a1da88782ba39fbaa9032",
+      "seconds": 1.150297184009105
+    },
+    {
+      "field": "v14_south_ps1_0618",
+      "cache_key": "586329186282d33467442372002c944809fddf4b1a16ce398c1836d5040cb2b2",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.005976080246913579,
+      "metadata_sha256": "46396ecb650a871a91b552c952c78138e00af1eff835e1a1b92773ed61f1882a",
+      "seconds": 0.6088402940076776
+    },
+    {
+      "field": "v14_south_ps1_0650",
+      "cache_key": "31f3b92cd8b7b2fa68711ade47504d083aedcbc94d4d34ad78150fb26bce7e2f",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.01638310185185185,
+      "metadata_sha256": "5dcebe1e75f229e5685af040453f697ede4ac4a301f4b3be49e4549a7de14c6d",
+      "seconds": 1.3916873340058373
+    },
+    {
+      "field": "v14_south_ps1_0682",
+      "cache_key": "67224530cb67d78e6b319452804ec554230a31950128ceecd265e182ffb703e8",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.010904706790123455,
+      "metadata_sha256": "8f1c3db3bf36936b8ed5129278f09cb7faa7278fa340a0663c076300f8d6f84d",
+      "seconds": 0.9636227410082938
+    },
+    {
+      "field": "v14_south_ps1_0714",
+      "cache_key": "890db1f9c7a177b2445dd036679606358ef7e3d0769f97c51db85cd5d1e6353e",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.027754629629629626,
+      "metadata_sha256": "549bc2568484202aea782d4192e27d01d9ca4152cc08e1b03e4e3f4e5aaf32ec",
+      "seconds": 3.0303933560062433
+    },
+    {
+      "field": "v14_south_ps1_0746",
+      "cache_key": "3cb3517c00bdc2aa754970c880267f140a17c6eb3f1bac604e9a665ce86c73c0",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.01009259259259259,
+      "metadata_sha256": "5b01f2d344fae8e11db9f14730b531ab6e3fa3745d4adee613e6eeadbce67388",
+      "seconds": 0.8057786239951383
+    },
+    {
+      "field": "v14_south_ps1_0778",
+      "cache_key": "2b2740f68be2034f0ab2d2f95fd7634e6dd87073f4a30b829da0d8c1b65f5653",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.013786651234567899,
+      "metadata_sha256": "018a497b58d31ee6adbb94321279b764a55746857e622c4046f98a78954f02c9",
+      "seconds": 1.6708554770011688
+    },
+    {
+      "field": "v14_south_ps1_0810",
+      "cache_key": "148b40796278f04f48ecd668441256ce5a99b7615550cd1df732c12289da811a",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.007131558641975308,
+      "metadata_sha256": "6ff3202c4ef3108443d6cca771369b95f2a8e7750ce231d364f2544c3386ca92",
+      "seconds": 0.751590012005181
+    },
+    {
+      "field": "v14_south_ps1_0842",
+      "cache_key": "a3844e7fbb0d6ad38c7640da125690b29c50391a3c6745acb3399ee5fa3c4639",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.0075019290123456775,
+      "metadata_sha256": "bdd2e94bdaa4248997efaec6bf8ad557c607b5dca5aa0308e3bfaf9bbdd80cf4",
+      "seconds": 0.7599307560012676
+    },
+    {
+      "field": "v14_south_ps1_0874",
+      "cache_key": "5d78564e1cb18466125d1a627272ba4329cbde90453375fd95774264e9dd0dc7",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.006741898148148147,
+      "metadata_sha256": "c06bef93e1601555a4d495b36364f5c37a7b66169b2c1d50cc7acb3844ae6306",
+      "seconds": 0.9758265049895272
+    },
+    {
+      "field": "v14_south_ps1_0906",
+      "cache_key": "91bc7d9d6e052a9471f40d516e6012fb7692fdf5ca81edf763c8a20680de4280",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.011766975308641974,
+      "metadata_sha256": "e6da7a3d9ec55c7b7f67b4e02e5b75142d9c2ca5676ed6129da5b40201a0410a",
+      "seconds": 0.8860567369993078
+    },
+    {
+      "field": "v14_south_ps1_0938",
+      "cache_key": "1fd8e9832f253a5ccf0adf88b5531b80b0e3530873177b24ec93f86c2f90565a",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.03649305555555555,
+      "metadata_sha256": "e65aa15686055941197b38ef6229a7ea5277de822727b49b94a3b0ea646f5271",
+      "seconds": 4.045412394989398
+    },
+    {
+      "field": "v14_south_ps1_0970",
+      "cache_key": "20142db52217f8bad3fc67ea9b4cb681f905e7a4af9af478f24b77e3ae3891d2",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.011822916666666664,
+      "metadata_sha256": "b3a333cd0384ebc1c9d9ab3e129985554ae45281ca508f070ff6501d494d11d1",
+      "seconds": 0.9864204949990381
+    },
+    {
+      "field": "v14_south_ps1_1002",
+      "cache_key": "fb3971cc06dc728b94c0c4fa4e9fe05a6f815659d92d8909beff78098f80100b",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.00730131172839506,
+      "metadata_sha256": "e9979ecc3bf58522c271301e041a5a789df6f1864612f8e358f970f259b23ac1",
+      "seconds": 0.7846774429926882
+    },
+    {
+      "field": "v14_south_ps1_1034",
+      "cache_key": "14fca396f1db4052e55305712d7712cc40f18a2343674ab5ed471ce279dfc1ab",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 0.0008217592592592591,
+      "metadata_sha256": "9cdd388e91475c39785d50aa583ecfff7db4bc1b513ab46d534e51aa80e93b47",
+      "seconds": 0.46246649300155696
+    },
+    {
+      "field": "v14_south_ps1_extension_0027",
+      "cache_key": "f003c04db91c65b869da8818bed5fe45f7ca3635d5319fff2a34bbe10dd7d3ba",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.27335455246913576,
+      "metadata_sha256": "ed428d84cfd4bd13d1779d30d2a277b77339a8aea20507230d6d3c20bf55b75a",
+      "seconds": 0.9816845780005679
+    },
+    {
+      "field": "v14_south_ps1_extension_0059",
+      "cache_key": "5313e40cbf41c03973667c58ba77c84d09bdf08961d8b6940ae94e9e0aca9f6f",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.001118827160493827,
+      "metadata_sha256": "e4395382e744c395d597ce6dde8d0b640c059036af7fbc7f65ec6d584de7ab52",
+      "seconds": 0.46669583600305486
+    },
+    {
+      "field": "v14_south_ps1_extension_0091",
+      "cache_key": "b8783eb08a978c613d2900819c0876f3406b7ca6058c05263f9fb3a1768d0b0b",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.13779899691358022,
+      "metadata_sha256": "ec92c603bcf6933fe994c0b5ee8981907fbac336f9ccc2ce39a74964b11219ab",
+      "seconds": 1.1243298219924327
+    },
+    {
+      "field": "v14_south_ps1_extension_0123",
+      "cache_key": "888961a76618df1caef8449bf050ab8edb294e29ebfb44108aca4bf5dc1bf554",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.2845987654320987,
+      "metadata_sha256": "f5579e4e8efb87f4be741aded642bed3f21ef71c00453c90c11f0214310c4b6e",
+      "seconds": 1.182042303000344
+    },
+    {
+      "field": "v14_south_ps1_extension_0155",
+      "cache_key": "37c1b34bc7ece91f8a967b6329ebeffd714ad05e929b896959652fe9a19cb7dc",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.0089429012345679,
+      "metadata_sha256": "1c5bfce1dd04086fc465a7f118802948a114e49d1ea39759570f2dcee3f9f517",
+      "seconds": 0.418904002988711
+    },
+    {
+      "field": "v14_south_ps1_extension_0187",
+      "cache_key": "54e825b4b2a20522d4f4a8b4b620717c208e55a5b301ff8d07d4caa19e31c32a",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.0015914351851851849,
+      "metadata_sha256": "6d8601b96f9dd48dfe7c21c1242c16e62f6908731ac64647ea0aba96abe40d28",
+      "seconds": 0.517269921998377
+    },
+    {
+      "field": "v14_south_ps1_extension_0231",
+      "cache_key": "270d28867f44ed4ebb4b1ac88fecaaba081fe0ee29f776bce971d09c7e6f3671",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.08745949074074072,
+      "metadata_sha256": "0dc1fabcf51e85029026b7826025e42a2e8e278069767279a1176a02d6906ca0",
+      "seconds": 0.6674642200086964
+    },
+    {
+      "field": "v14_south_ps1_extension_0263",
+      "cache_key": "d476dccc7b9bf336e43b94a1c8db6a68f5b048fe7f7f5872d0e5f80850ca4eed",
+      "classification": "development_calibration",
+      "source_area_deg2": 0.16472029320987652,
+      "metadata_sha256": "5f0d0f3919d2ccad7778ecb969e8cfcf1915f9db3533795508ea451b1ed8d020",
+      "seconds": 0.809002228997997
+    },
+    {
+      "field": "v14_south_ps1_extension_0295",
+      "cache_key": "af6ebf309edf946017a3b12a291429cc49c7a801428dfeeeda6bf09f715f3f1e",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.006523919753086418,
+      "metadata_sha256": "0ce0088df5891b00870754c30df93ac9d3d2adaad54716cca141d71250d6d6cd",
+      "seconds": 0.6745629870129051
+    },
+    {
+      "field": "v14_south_ps1_extension_0327",
+      "cache_key": "eba8cc9d94352be871cc31a994059d4471535477a79be0c28d65b72b3f22fe95",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 1.4008063271604936,
+      "metadata_sha256": "998ba4e5f2d57a92be5c6e17984b9bee40599b7c57403e37dacfa884ea8b49eb",
+      "seconds": 0.81535412199446
+    },
+    {
+      "field": "v14_south_ps1_extension_0359",
+      "cache_key": "cab52b51cd4486a2ee3f0db2225c21278f0703e99defedde7cfba6bbc8c442e8",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.009131944444444443,
+      "metadata_sha256": "9ffef140a8a1ae2a5a0e1acf14a1275220ebcac9d5d6f589f3216b8314fcaeee",
+      "seconds": 0.8441127480036812
+    },
+    {
+      "field": "v14_south_ps1_extension_0391",
+      "cache_key": "b15f5970836f71a86bedb004ecb68357aa27f9f4a3342430edec8bee63dde94b",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 1.5205960648148145,
+      "metadata_sha256": "4138eb2d76da75056778cfdff13774010b292d9fd54d36f4821e16edd12b6357",
+      "seconds": 2.6580500480049523
+    },
+    {
+      "field": "v14_south_ps1_extension_0423",
+      "cache_key": "f6518582a7fb48f0c5aba90ced5d5e76db487736cae09ff0a5a0b924443ff8f0",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 0.0003086419753086419,
+      "metadata_sha256": "6a084f410183cbb5c514cfaf97bed07ae5ca9c14d7b39bb33f89ca2adb25f8a4",
+      "seconds": 0.4273894190118881
+    },
+    {
+      "field": "v14_south_ps1_extension_0455",
+      "cache_key": "a90e3bbd0d1245c1984752ab9022b70bbe4831fee23553e62c47fede3a2a934b",
+      "classification": "complete_not_in_qualified_source_roster",
+      "source_area_deg2": 4.629629629629629e-05,
+      "metadata_sha256": "6714a7c11e7ec972c6fbcdad8e3a1ba054f7bdd7d88ce8aba0c3c9abde61f4aa",
+      "seconds": 0.42331582999031525
+    },
+    {
+      "field": "gap_08",
+      "cache_key": "73b3bf736fea261231de3efb42d5159c864d71f502d5251fd7df3d7a384ca1fb",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 2.581907793209876,
+      "metadata_sha256": "0fd9f6a6a8610c5c104bbc53ab37e393193809af2ca3ce88fa7f9fefae123f33",
+      "seconds": 0.9000004279951099
+    },
+    {
+      "field": "gap_18",
+      "cache_key": "eb9163c6a1e692c7c853d963d86f495c7cbd566b2cf72f633784b7c8a9e83fc8",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 3.9272762345679006,
+      "metadata_sha256": "7fa2c88e247a05a102ccf1dea8361a01b2361b8aba882a0cb1192ea75097e75b",
+      "seconds": 0.5029735959979007
+    },
+    {
+      "field": "gap_50",
+      "cache_key": "92448a583e2923e08a14f4078c1922db9e43d256dfff7639b8b387d0420bd8bd",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 3.9609008487654314,
+      "metadata_sha256": "cafe953dc2f3d1afc5178f17d9ec466d09aa4d1b4f9d49a4f852597580bb11d2",
+      "seconds": 0.5182802180061117
+    },
+    {
+      "field": "gap_82",
+      "cache_key": "926f28610bd8157064a6ce508d44f5d82c0fa3b76e46980ce739d23a14fd4583",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 2.168771219135802,
+      "metadata_sha256": "87c121731b6e905db8a70e5f92e4865fbd376cfc9325bf8a1c9636afb6abfa5f",
+      "seconds": 0.6543953719956335
+    },
+    {
+      "field": "survey_24",
+      "cache_key": "8dc6bea6ec5b5a3b975d8b300a0c7814c20571f27852987306a7474ffdd22b7a",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 4.754083719135801,
+      "metadata_sha256": "1413e6782b1565b55e80f8eee4ef06a9c65dd0d91de6acf8a5c183439f0c650d",
+      "seconds": 2.814559226986603
+    },
+    {
+      "field": "survey_56",
+      "cache_key": "9140d6bf05d6e0580f8773b573be7ff0219c91024b1d0da02e9b2ca759e054f2",
+      "classification": "qualified_discovery",
+      "source_area_deg2": 8.779257330246912,
+      "metadata_sha256": "0369c4eb9f06de95770b528035dce454c45dc11de2237cc2e98c5c4d9b4e2d64",
+      "seconds": 1.1444572569889715
+    }
+  ]
+}

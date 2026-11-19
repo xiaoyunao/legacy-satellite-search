@@ -1,0 +1,26 @@
+{
+  "job": "61579408",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=16G",
+    "-t",
+    "00:20:00",
+    "-J",
+    "ls14-area-polygon-pilot",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; $LS_SAT_DATA/envs/area-union-20261119/bin/python -u -m scripts.v14_mask_overlay_repair pilot"
+  ],
+  "state": "submitted_not_complete"
+}

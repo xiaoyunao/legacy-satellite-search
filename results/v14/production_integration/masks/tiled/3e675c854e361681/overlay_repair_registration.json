@@ -1,0 +1,6 @@
+{
+  "registration_sha256": "da81a7690ed7263bf3a3b8f7fa8d9be1f4420bf674ecba2ae9d53f819911c074",
+  "vector_index_sha256": "d70cca40914d4b50307c068bf3f33f9d4c5f9dbd2bbdee2d22e568560ba28ee4",
+  "code_sha256": "fa0a11e020c574defd83b70a6266a3d589d0153aebaf1ebc33c491fa9277a11b",
+  "scope": "Remove only zero-area lines/points; no snapping. Preserve original successful tiles and immutable masks; separately record numerical QA."
+}

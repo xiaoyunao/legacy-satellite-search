@@ -1,5 +1,16 @@
 # Status
 
+## 2026-11-19T15:40Z — real boundary sensitivity and continued production closure
+
+- k checkpoint:5753/6891 complete,25 terminals with zero valid gr area,23363.8834 summed R14 owned deg².11 explicit OOM fields now covered by61579459; prior4 OOM retries completed. Historical union remains separate.
+- North C original0/2 actually TIMEOUT; six other shards complete. Retry61579635 is running on the same source/selected modes, with longer walltime and strict reuse. Required C is still incomplete.
+- **Accepted:**30pc targeted boundary61579782. Same draw34 across three skies,267→278 rendered, baseline1/3→2/3,deeper3/3→3/3;46/324eligible remain outside. This demonstrates finite-stamp outcome sensitivity, not a corrected population rate.
+- **Accepted:**member-origin61581071; original baseline selected sets unchanged, extra2/1/2come from outer members; rendered true-light proxy19.20587→23.56514. No one-case population correction.
+- **Accepted:**angular-context integration61580295; all7994 records/7822 provisional positions/75 identities and original numerical columns unchanged.511 source records carry known-position proximity independent of distance-mode agreement.
+- Geometry repair pilot61579408 passed original-success and real-failure comparisons;61579696→61579698 awaits the original array. Full area is not accepted yet.
+- Formal-policy replay61579269 is running; its acceptance/statistics61580560 is queued. Existing matched-policy144 acceptance and288 measurements remain preserved. Physical PS1 response is still unvalidated.
+- Final whole-project human release remains false: terminal production, common-clock area/identities, required C, all selected evidence, probability sampling and anonymity/page QA are still needed. No intermediate grading.
+
 ## 2026-11-19T15:10Z — all144 CCD products and288 matched-policy LS arms accepted
 
 - **Completed:** native61572579; full LS owner61576217; acceptance144/288/6048stage rows; statistics61574814; unchanged-numerics figure QA61578492; allfour OOM retries61575366.

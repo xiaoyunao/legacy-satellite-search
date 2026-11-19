@@ -1,0 +1,45 @@
+{
+  "strict_completed_prior_groups": 801,
+  "shards": [
+    {
+      "index": 0,
+      "seeds": 738,
+      "groups": 184
+    },
+    {
+      "index": 1,
+      "seeds": 0,
+      "groups": 0
+    },
+    {
+      "index": 2,
+      "seeds": 936,
+      "groups": 234
+    },
+    {
+      "index": 3,
+      "seeds": 0,
+      "groups": 0
+    },
+    {
+      "index": 4,
+      "seeds": 0,
+      "groups": 0
+    },
+    {
+      "index": 5,
+      "seeds": 0,
+      "groups": 0
+    },
+    {
+      "index": 6,
+      "seeds": 0,
+      "groups": 0
+    },
+    {
+      "index": 7,
+      "seeds": 0,
+      "groups": 0
+    }
+  ]
+}

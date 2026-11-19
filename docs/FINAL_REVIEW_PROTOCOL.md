@@ -16,6 +16,8 @@ Each selected position must have measured-error CMD/background, spatial/radial p
 
 Phase 1 contains only anonymous IDs, relative positions and the permitted CMD/morphology/spatial evidence. Hide identities, absolute coordinates, scores, known environments and processing clues reserved for reveal. Audit PDF text/metadata, image annotations, filenames, ZIP entries and blank forms for leakage. Keep administrative identity keys outside the anonymous ZIP. Grade tables remain blank until the user acts. Seal actual user responses against the released hashes before revealing identities and scientific context.
 
+For newly drawn final audit cases, keep the anonymous-to-position key in ignored `results/v14/human_review/final_private/` on NERSC and locally, outside public GitHub and the stage-one delivery. Reveal it only after actual user responses are sealed. The original75 and their previously published administrative records remain unchanged; record prior exposure separately and do not claim that remapping them creates a new prospectively blinded probability sample.
+
 ## Final release gates
 
 - Full search terminal accounting and historical production reconciliation are complete, with actual mask area and overlap provenance.

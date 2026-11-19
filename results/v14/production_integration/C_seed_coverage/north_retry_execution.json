@@ -1,0 +1,90 @@
+{
+  "job": "61579635",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=18G",
+    "-t",
+    "04:00:00",
+    "--array=0,2%2",
+    "-J",
+    "ls14-c-north-timeout-retry",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "--wrap",
+    "export LS_SAT_REVIEW_TAG=seed_closure_k; bash scripts/v14_review.sh v14 north 8"
+  ],
+  "source": "results/v14/discovery/north/main/sky_group_candidates.csv",
+  "source_sha256": "8359a9fe619a5c89089548b3de9782f6d87c72ab22b3de81638ca11331a6296b",
+  "original_array": "61470250",
+  "original_timeout_shards": [
+    0,
+    2
+  ],
+  "state": "submitted_not_complete",
+  "preflight_counts": {
+    "strict_completed_prior_groups": 801,
+    "shards": [
+      {
+        "index": 0,
+        "seeds": 738,
+        "groups": 184
+      },
+      {
+        "index": 1,
+        "seeds": 0,
+        "groups": 0
+      },
+      {
+        "index": 2,
+        "seeds": 936,
+        "groups": 234
+      },
+      {
+        "index": 3,
+        "seeds": 0,
+        "groups": 0
+      },
+      {
+        "index": 4,
+        "seeds": 0,
+        "groups": 0
+      },
+      {
+        "index": 5,
+        "seeds": 0,
+        "groups": 0
+      },
+      {
+        "index": 6,
+        "seeds": 0,
+        "groups": 0
+      },
+      {
+        "index": 7,
+        "seeds": 0,
+        "groups": 0
+      }
+    ]
+  },
+  "release_dependencies": {
+    "61470267": {
+      "previous": "afterany:61470252_*(unfulfilled),afterany:61470256_*(unfulfilled),afterany:61470260_*(unfulfilled),afterany:61470264_*(unfulfilled),afterany:61470266_*(unfulfilled)",
+      "current": "afterany:61470252,afterany:61470256,afterany:61470260,afterany:61470264,afterany:61470266,afterany:61579635"
+    },
+    "61470508": {
+      "previous": "afterany:61470267(unfulfilled),afterany:61568974_*(unfulfilled)",
+      "current": "afterany:61470267,afterany:61568974,afterany:61579635"
+    }
+  },
+  "scope": "Same production discovery table and C fit seeds; strict prior-complete groups excluded. Retry only two actual timeout shards, with four-hour limit. Not human review or independent evidence."
+}

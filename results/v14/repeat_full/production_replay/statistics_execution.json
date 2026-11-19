@@ -1,0 +1,27 @@
+{
+  "job": "61580560",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c2",
+    "--mem=8G",
+    "-t",
+    "00:15:00",
+    "--dependency=afterok:61579269",
+    "-J",
+    "ls14-production-replay-statistics",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg; .venv/bin/python -u -m scripts.v14_production_replay_statistics"
+  ],
+  "state": "submitted_not_complete"
+}

@@ -1,5 +1,17 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-19T15:40Z actual acceptance update
+
+- [x] Complete144 native/288 matched-policy arms and shared-population statistics; primary files preserved.
+- [x] Informative30pc boundary experiment: draw34 accepted, baseline1/3→2/3 after11outer members; residual46/324omitted. Conditional sensitivity measured; population correction remains unsupported.
+- [x] Member-origin/true-light audit61581071 reproduces selection; extra baseline2/1/2are added outer members, old baseline selections retained. No systematic population-bias estimate inferred.
+- [x] Preserve angular known-position/environment context through integration; all old data columns and75 identities unchanged.
+- [x] Diagnose real GEOS failures and pass three-tile polygon-only numerical QA.
+- [ ] Formal-policy144 replay61579269→61580560; final geometry repair61579696→61579698; all search/C terminal accounting. k5753complete+25zero-area/6891.
+- [ ] North C timeout0/2 retry61579635 and new11-field OOM retry61579459, plus existing regional chains.
+- [ ] Common-clock final source/area freeze, review-unit definition and inclusion probabilities; full selected C/images/evidence and anonymous/page QA. New keys private until sealing; no interim grading.
+- [ ] Physical PS1 faint-blue validation and defensible selection-function scope. No whole-grid truncation correction, physical LS−PS1 increment,50% contour or abundance claim yet.
+
 ## 2026-11-19T15:10Z acceptance update
 
 - [x] All144 frozen native CCD products, shared truth/source proofs,288 matched-policy LS arms and6048 stage rows accepted.

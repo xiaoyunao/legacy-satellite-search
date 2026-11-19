@@ -1,0 +1,7 @@
+site,arm,latent_population_id,realized_MV_proxy,original_N_rendered,extended_N_rendered,original_N_exposed,extended_N_exposed,original_N_final,extended_N_final,original_N_psf,extended_N_psf,original_N_used,extended_N_used,original_spatial,extended_spatial,original_blind_dm,extended_blind_dm,original_blind_correct,extended_blind_correct,original_correct_mode_exists,extended_correct_mode_exists,original_c_ts,extended_c_ts,original_c_after_top3,extended_c_after_top3
+v14_south_response_1,ls_base,34,-3.548545348018485,267,278,267,278,82,85,73,74,16,18,False,True,,20.0,False,True,False,True,,20.831395379543892,,2.306768004761402
+v14_south_response_1,ls_deep,34,-3.548545348018485,267,278,267,278,82,85,73,74,28,29,True,True,20.5,20.5,False,False,False,False,16.122265064404584,16.637051805612455,6.102616750968725,5.589340425900922
+v14_south_response_2,ls_base,34,-3.548545348018485,267,278,267,278,101,107,88,94,19,20,True,True,20.25,20.25,True,True,True,True,27.302187189412347,27.411442398513035,1.9592699494204542,2.733220231619587
+v14_south_response_2,ls_deep,34,-3.548545348018485,267,278,267,278,101,107,88,94,24,27,True,True,20.25,20.25,True,True,True,True,21.813994501817497,24.76818349170064,0.9225324673516839,5.190726275014779
+v14_south_response_3,ls_base,34,-3.548545348018485,267,278,267,278,111,116,93,98,18,20,False,False,,,False,False,False,False,,,,
+v14_south_response_3,ls_deep,34,-3.548545348018485,267,278,267,278,111,116,93,98,28,32,True,True,20.0,20.25,True,True,True,True,26.971942692937287,29.669049329655806,3.9202115495967256,6.14269897852143

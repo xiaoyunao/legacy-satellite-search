@@ -1,5 +1,13 @@
 # 当前科学主线
 
+## 2026-11-19T15:40Z — finite-stamp bias is observed; preserve environmental context
+
+The completed near-threshold30pc draw34 changes baseline recovery from1/3 to2/3 across three backgrounds when11 previously excluded outer members are rendered; deeper remains3/3. Both variants use the same larger splice and original control counts reproduce the primary experiment. Forty-six of324magnitude-eligible members are still omitted. This is one targeted population, not six independent tests or a population correction. Member-origin61581071 confirms that all original baseline selected members survive, while the extra2/1/2are added outer stars; rendered true-light proxy19.20587→23.56514, or73.1%→89.7% of full IMF proxy. Photon-noise/fit coupling is still not an independent systematic-bias measurement. The original144 curves are explicitly conditional on finite rendering/stamps, and their internal depth effect must not be promoted to unbiased physical completeness.
+
+Angular known-object proximity must survive integration even when the blind distance mode is incompatible. It is environmental context, distinct from physical known-system matching. The repaired ledger carries511 such source records, without changing discovery identities or any prior numerical result. Five-arcmin connected components can chain over tens of arcminutes around complex structures; do not equate them with one physical object or silently exclude nearby sampled positions.
+
+Continue the frozen-production replay, actual scan/C retries and geometric union. Final all-project review remains deferred; original75 stay fixed, new anonymous keys stay private until actual sealing, and no machine decision fills human grades or establishes a new system.
+
 ## 2026-11-19 — distinguish physical signal, detector policy and inference scope
 
 The frozen144 CCD experiment is now measured: baseline/deeper spatial40/144 and64/144, with48 underlying IMF realizations shared across three selected backgrounds. This supports a conditional depth effect in this registered mixture, including30pc controls. It does not establish LS−PS1 gain, uniform benefit at3–15pc, a true-V luminosity selection function or an all-sky confidence interval. At target−1.5 the counts are0/72 and6/72.

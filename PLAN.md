@@ -1,5 +1,14 @@
 # Plan
 
+## Current checkpoint — 2026-11-19T15:40Z
+
+- Accepted all144 legacy matched-budget CCD trials/288 LS arms. Keep their exploratory internal depth effect separate from formal-policy transfer and physical LS−PS1 inference.
+- Finish formal baseline replay61579269→statistics61580560, original scans/retries and regional C. Latest k5753complete+25zero-area terminals/6891;11 OOM gaps registered61579459. North C actual timeout0/2 registered61579635; no duplicate completed shards.
+- Finish actual6269-mask overlay repair61579696→61579698 after the original tile array. Pilot numerically passed; no final union yet. Recompute the final inventory at the eventual common production clock.
+- Thirty-pc truncation is now an observed systematic: targeted draw34 baseline1/3→2/3 after adding11members, with46eligible still omitted. Keep primary144 unchanged and label conditional finite-stamp results; do not infer or apply a population correction from this draw.
+- Preserve angular known-position and extended environment separately from distance matching. Final independent review units and probability sampling remain unfrozen; never merge long5arcmin chains into one astrophysical object or remove selected positions post hoc.
+- Complete necessary C/images/evidence/privacy/page QA after final integration; deliver once. New anonymous identity keys remain private until user sealing. Preserve the first75 and blank grades. PS1 physical validation, faint omitted flux and broad-sky transfer remain limits; no manuscript writing or population inference.
+
 ## Current checkpoint — 2026-11-19T15:10Z
 
 1. All144 native trials and288 legacy matched-budget LS measurements are accepted; analyze them conditionally, keeping48 shared populations, realized light and finite-image limits. Preserve prior failed and negative cases.

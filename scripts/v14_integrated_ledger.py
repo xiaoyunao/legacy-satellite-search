@@ -17,7 +17,11 @@ def run():
     registration=root/'manifest.json';saved=json.loads(registration.read_text())
     for path,checksum in saved['source_sha256'].items():
         if sha(Path(path))!=checksum:raise ValueError('Registry source snapshot changed: '+path)
-    catroot=Path('results/v14/catalogue');catalog=json.loads((catroot/'manifest.json').read_text())
+    catroot=Path('results/v14/catalogue')
+    inputs=[registration,root/'eligible_record_inventory.csv',catroot/'manifest.json',catroot/'candidate_modes.csv',
+        catroot/'candidate_catalogue.csv',Path('results/v14/shortlist/cases.csv')]
+    input_hashes={str(p):sha(p) for p in inputs}
+    catalog=json.loads((catroot/'manifest.json').read_text())
     qualified=read_csv(root/'eligible_record_inventory.csv')
     modes=read_csv(catroot/'candidate_modes.csv');by_detection=defaultdict(list)
     for row in modes:by_detection[row['detection_id']].append(row)
@@ -43,6 +47,9 @@ def run():
             C_status='available_modes_complete_required_seed_audit_pending' if fits and len(good)==len(fits)
                      else 'partial_modes' if good else 'no_bound_complete_mode',
             context_from_catalogue=context['grade'],known_system=context['known_system_match'],
+            nearest_known_position=context.get('nearest_within_30arcmin'),
+            nearest_known_position_arcmin=context.get('nearest_arcmin'),
+            known_environment_context=context.get('environments'),
             extended_galaxy_context=context['extended_galaxy_ellipse_3x'])
         records.append(record)
         detected.append(dict(detection_id=key,input=path,group_id=record['group_id'],
@@ -64,6 +71,9 @@ def run():
             retained_dm='|'.join(map(str,sorted({dm for j in indices for dm in detected[j]['modes']}))),
             same_record_C_records=sum(m['successful_same_record_C'] for m in members),
             known_contexts='|'.join(sorted({m['known_system'] for m in members if m['known_system']})),
+            known_position_contexts='|'.join(sorted({m['nearest_known_position'] for m in members if m['nearest_known_position']})),
+            known_environment_contexts='|'.join(sorted({m['known_environment_context'] for m in members if m['known_environment_context']})),
+            extended_galaxy_contexts='|'.join(sorted({m['extended_galaxy_context'] for m in members if m['extended_galaxy_context']})),
             human_grade=None,evidence_level='L0_or_known_context',final_frozen=False))
         for j in indices:
             records[j]['provisional_position_id']=cid;mapping[records[j]['detection_id']]=cid
@@ -85,6 +95,8 @@ def run():
             provisional_position_id=exact['provisional_position_id'] if verified else None,
             nearby_provisional_positions='|'.join(sorted({records[j]['provisional_position_id'] for j in near})),
             certainty_include=True,human_grade=None))
+    for name,checksum in {**saved['source_sha256'],**input_hashes}.items():
+        if sha(Path(name))!=checksum:raise ValueError('Source changed during integrated ledger audit: '+name)
     write_csv(out/'qualified_discovery_records.csv',records)
     write_csv(out/'provisional_positions.csv',associations)
     write_csv(out/'potential_associations.csv',links)
@@ -93,13 +105,13 @@ def run():
         provisional_positions=len({r['provisional_position_id'] for r in v}),
         records_with_successful_bound_C=sum(r['successful_same_record_C'] for r in v),
         all_required_C_complete=None,effective_union_deg2=None,human_adjudicated=None) for k,v in sorted(by_cohort.items())])
-    sources=[registration,root/'eligible_record_inventory.csv',catroot/'manifest.json',catroot/'candidate_modes.csv',
-        catroot/'candidate_catalogue.csv',Path('results/v14/shortlist/cases.csv')]
-    write_json(out/'manifest.json',dict(inputs={str(p):sha(p) for p in sources},code_sha256=sha(Path(__file__)),
+    write_json(out/'manifest.json',dict(inputs=input_hashes,code_sha256=sha(Path(__file__)),
         qualified_records=len(records),provisional_positions=len(associations),
         records_with_successful_bound_C=sum(r['successful_same_record_C'] for r in records),
         frozen75_verified_current_identities=sum(r['current_same_identity'] for r in crosswalk),
         C_states=dict(Counter(r['C_status'] for r in records)),final_production_frozen=False,
+        records_near_known_positions=sum(bool(r['nearest_known_position']) for r in records),
+        context_scope='Angular<=30arcmin known-position context is preserved separately from position-and-distance known-system matching. Neither proximity nor a galaxy ellipse proves membership or classification.',
         scope='Qualified discovery records only, reconciled with the existing complete-link sky/DM/scale rule. Nearby incompatible hypotheses remain linked in the 5-arcmin table; these are provisional positions, not final human-review units or physical discoveries. C rows inherit the catalogue source/seed binding; a completed available row is not certification that every required seed was run. Historical raster-area union, terminal search completion, seed completeness, source-level image QA and final review-unit freeze remain gates. Frozen 75 identities are retained with empty user grades; never put this identity crosswalk in an anonymous archive.'))
     print(dict(records=len(records),positions=len(associations),frozen75=sum(r['current_same_identity'] for r in crosswalk)))
 

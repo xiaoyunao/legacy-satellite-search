@@ -1,5 +1,27 @@
 # DR11 search and selection response
 
+## 2026-11-19T15:40Z — measured near-threshold truncation effect
+
+The previously bright30pc extension was a ceiling case. A new registered test selects the unique completed30pc/target−3 draw with mixed baseline recovery across three skies: original trial34, realizedVproxy−3.54855. It retains the same original stars and adds11magnitude-eligible outer members within the same native1536pixel frames. Both variants use the same3.1arcmin splice; original control stage counts reproduce the primary144 table.
+
+| Quantity | Original | Extended |
+|---|---:|---:|
+|Rendered members per background|267|278|
+|Baseline selected, backgrounds1/2/3|16/19/18|18/20/20|
+|Deeper selected, backgrounds1/2/3|28/24/28|29/27/32|
+|Baseline spatial recovery|1/3|2/3|
+|Deeper spatial recovery|3/3|3/3|
+
+The newly recovered background1 baseline also retains the correct distance mode. The other baseline failure persists. Background1 deeper retains a displaced highest mode atmu20.5 despite true20.0, showing that spatial recovery and distance correctness remain separate outcomes.
+
+Member-origin audit61581071 reproduces all selection counts. All original baseline selections survive in every background; the extra2/1/2selected stars are added outer members, not newly selected original stars. Rendered/exposed true V-proxy light rises19.20587→23.56514 (full IMF26.26746, magnitude-eligible24.45771). Thus the retained true-light fraction changes73.1%→89.7% of the full IMF proxy; finite tails and unrendered faint light still remain.
+
+**Conclusion:** the measured extension changes a near-threshold outcome, with a direct contribution from added available members. Changed photon noise and fit interactions still prevent a one-draw estimate of systematic population bias. Eleven of57omitted magnitude-eligible members were restored;46of324 remain outside the larger circle. This is one outcome-targeted population, with shared source photon seed but not guaranteed identical inner pixel noise, not three independent physical systems or an unbiased recovery-rate correction. Keep the original144 probabilities conditional on generation/stamp limits. Do not apply a one-case correction or claim that the earlier ceiling test cleared truncation bias.
+
+Production accounting at15:09Z reaches5753completed plus25zero-valid-gr fields of6891, with23363.8834summed R14 owned deg²; historical geometric union and physically validated gain area are still distinct. All11new uncovered failures have explicit OOM logs and a registered higher-memory retry. Two actual North C timeout shards are being rerun without changing discovery cuts or fit seeds.
+
+Angular known-position proximity, environmental labels and galaxy ellipses now survive historical source integration separately from DM-compatible system matching. The7994records/7822provisional positions/75frozen identities and prior numerical results are unchanged;511source records have angular known-position context. Large nearby peak complexes must retain their constituents/environment, not be declared one new object or dropped from audit after selection. Formal-production replay and final union/C/material gates remain incomplete; user review remains deferred.
+
 ## 2026-11-19T15:10Z — complete registered CCD experiment, conditional scientific result
 
 All144 native image experiments and288 LS baseline/deeper measurements are accepted (producer61576217;6048 magnitude/environment stage rows). Each of48 potential stellar populations is observed in three selected backgrounds. The original nine proofs and frozen grid are preserved.
