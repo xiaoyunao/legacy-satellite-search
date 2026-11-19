@@ -8,6 +8,7 @@ import json
 from multiprocessing import get_context
 import os
 from pathlib import Path
+import tempfile
 
 import fitsio
 from astropy.wcs import WCS
@@ -18,8 +19,34 @@ from scipy.spatial import cKDTree
 
 from .data import load_bricks, select
 from .plots import candidate
-from .run import field_cache, quantile, read_csv, runs_path, settings, write_csv
+from .run import field_cache, quantile, read_csv, runs_path, settings, sha, write_csv
 from .search import CMD, exact_onoff, load_isochrone, point_fit
+
+
+def save_membership(data_root, legacy, ids, probability):
+    """Bind each fitted row to immutable bytes before replacing the legacy cache."""
+    legacy.parent.mkdir(parents=True,exist_ok=True)
+    with tempfile.NamedTemporaryFile(dir=legacy.parent,suffix='.npz',delete=False) as stream:
+        temporary=Path(stream.name)
+        np.savez_compressed(stream,source_ids=ids,probability=probability)
+    checksum=sha(temporary)
+    relative=Path('runs/review_memberships')/checksum[:2]/(checksum+'.npz')
+    artifact=data_root/relative;artifact.parent.mkdir(parents=True,exist_ok=True)
+    if artifact.exists():
+        if sha(artifact)!=checksum:raise ValueError('Immutable fitted membership changed')
+        temporary.unlink()
+    else:
+        os.replace(temporary,artifact)
+    link=temporary.with_suffix('.link');link.symlink_to(artifact.resolve());os.replace(link,legacy)
+    return dict(membership_data_path=str(relative),membership_sha256=checksum)
+
+
+def membership_path(data_root, row, legacy):
+    if not row.get('membership_data_path'):return legacy
+    path=data_root/row['membership_data_path']
+    if not row.get('membership_sha256') or sha(path)!=row['membership_sha256']:
+        raise ValueError('Fitted row membership artifact is missing or changed')
+    return path
 
 
 def convert_peak(p):
@@ -254,10 +281,10 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
                                   root, bricks, data, valid, field, fit_peak, row)
         images = image_cutouts(figure_dir/f'candidate-{label}-images.png', root, bricks, field,
                                fit_peak,sample[idx,:2],prob,details=True,region=cfg.get('region','south'))
-        np.savez_compressed(work/f'membership-{label}.npz', source_ids=data[
-            ['RELEASE', 'BRICKID', 'OBJID']][chosen][idx], probability=prob)
+        membership=save_membership(data_root,work/f'membership-{label}.npz',
+            data[['RELEASE', 'BRICKID', 'OBJID']][chosen][idx],prob)
         summary.append(dict(field=field_id, depth=depth, branch=peak['branch'], method=peak['method'], rank=peak['rank'],
-                            fit_dm=fit_peak['dm'], fit_rh_arcmin=fit_peak['rh_arcmin'],
+                            fit_dm=fit_peak['dm'], fit_rh_arcmin=fit_peak['rh_arcmin'],**membership,
                             evidence_level='L0', fit_status='complete', **images,
                             seed_dm=peak['dm'], seed_rh_arcmin=peak['rh_arcmin'],
                             candidate_group_id=row['candidate_group_id'], fit_ra_deg=fit_peak['ra_deg'],
@@ -345,7 +372,8 @@ def refresh_image(field_id, depth, label):
     field,data,_,_ = field_cache(root,data_root,spec,cfg,bricks)
     x,y = field.xy(float(row['fit_ra_deg']),float(row['fit_dec_deg']))
     rh = float(row['fit_rh_arcmin'])
-    with np.load(runs_path(data_root)/run/f'membership-{label}.npz',allow_pickle=False) as saved:
+    source=membership_path(data_root,row,runs_path(data_root)/run/f'membership-{label}.npz')
+    with np.load(source,allow_pickle=False) as saved:
         probabilities = {tuple(v):p for v,p in zip(saved['source_ids'],saved['probability'])}
     sx,sy = field.xy(data['RA'],data['DEC'])
     local = np.flatnonzero(np.hypot(sx-x,sy-y)<=3.5*rh)

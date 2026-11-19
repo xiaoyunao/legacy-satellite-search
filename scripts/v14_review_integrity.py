@@ -14,6 +14,7 @@ from pathlib import Path
 import numpy as np
 
 from ls_satsearch.run import read_csv,sha,write_csv,write_json
+from ls_satsearch.review import membership_path
 
 ROOT=Path('results/v14/shortlist')
 
@@ -56,11 +57,24 @@ def run(case_ids,output):
     if case_ids:cases=[r for r in cases if r['case_id'] in case_ids]
     data=Path(os.environ['LS_SAT_DATA']);rows=[];tables={}
     frozen=data/'runs/v14/review_membership_frozen'/sha(ROOT/'manifest.json')[:12]
+    previous_meta=output/'membership_integrity.json';previous_csv=output/'membership_integrity.csv'
+    prior={};prior_tables={}
+    if previous_meta.is_file() and previous_csv.is_file():
+        previous=json.loads(previous_meta.read_text())
+        if (previous.get('shortlist_manifest_sha256')==sha(ROOT/'manifest.json')
+                and previous.get('csv_sha256')==sha(previous_csv)):
+            prior={(r['case_id'],int(r['seed_rank'])):r for r in read_csv(previous_csv)}
+            prior_tables=previous.get('table_hashes',{})
     for case in cases:
         table,modes=mode_table(case);tables[case['case_id']]=sha(table)
         for mode in modes:
             rank=int(float(mode['rank']))
             source=data/'runs/v14'/f'{case["field"]}-base'/f'membership-main-A-{rank}.npz'
+            saved=prior.get((case['case_id'],rank))
+            if not mode.get('membership_data_path') and saved and prior_tables.get(case['case_id'])==sha(table):
+                source=data/saved['frozen_path']
+                if sha(source)!=saved['membership_sha256']:raise ValueError('Previously frozen membership changed')
+            source=membership_path(data,mode,source)
             raw=source.read_bytes();checksum=sha256(raw).hexdigest()
             with np.load(io.BytesIO(raw),allow_pickle=False) as members:
                 proof=verify(mode,members['source_ids'],members['probability'])

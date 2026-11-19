@@ -46,8 +46,9 @@ def run(case_id=None, require_all=False):
         rank=int(float(mode['rank']));cohort=case['cohort'];field_id=case['field']
         output=base/'evidence'/case['case_id'];output.mkdir(parents=True,exist_ok=True)
         snapshot=frozen.get((case['case_id'],rank))
-        membership=(data_root/snapshot['frozen_path'] if snapshot else
-                    data_root/'runs/v14'/f'{field_id}-base'/f'membership-main-A-{rank}.npz')
+        from ls_satsearch.review import membership_path
+        membership=(data_root/snapshot['frozen_path'] if snapshot else membership_path(data_root,mode,
+                    data_root/'runs/v14'/f'{field_id}-base'/f'membership-main-A-{rank}.npz'))
         if snapshot and sha(membership)!=snapshot['membership_sha256']:
             raise ValueError('Frozen membership source changed')
         config=Path('configs/v14/cohorts')/cohort

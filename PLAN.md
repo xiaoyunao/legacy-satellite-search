@@ -1,5 +1,7 @@
 # Plan
 
+New C evidence integrity (61572142,54s): two actual unchanged fits now bind content-addressed, SHA-verified membership arrays; reconstructed TS matches saved TS. Legacy cache aliases remain compatible, while later passes cannot replace the row-bound artifact. Original75 frozen files/grades are unchanged. Final material QA must use these bindings or verified historical frozen copies, never assume a field/rank cache is still the correct fit.
+
 ## 2026-11-19T10:55Z checkpoint: integrated sources and independent images
 
 - Search manifest h: **3977/6891 complete**, 15 no-usable-gr, **17871.851998456787 owned deg²**. These are R14 registered owned-mask areas, not the final historical union or a measured-gain area. Six newly terminal gaps were registered once in **61571922**; the two affected pending summaries now wait for it. Existing 131-field recovery **61568908** remains active.

@@ -2,6 +2,14 @@
 
 ## 2026-11-19
 
+### Prevent cross-pass C membership cache overwrite
+
+- Observed source of earlier integrity repairs: legacy scratch membership filenames encode field/depth/rank and can be reused by another C pass. Fixed `src/ls_satsearch/review.py`: each new fitted row records a portable content-addressed membership path/SHA before atomically updating the compatibility cache. No likelihood, seed, member selection or score changes.
+- Integrity/evidence readers prefer the bound artifact; rerunning old-75 integrity reuses its existing frozen copy only when shortlist, case table and frozen-file hashes match. Preserve original release_v2 and all its hashes.
+- Actual Slurm61572142 COMPLETED/0:0/54s: first ordinary group from previously completed field, both retained modes, same numerical TS/richness/radius/DM/top3 as prior result; new saved arrays reconstruct TS7.374675368021553 and11.242710807950637. Public `results/v14/membership_validation/acceptance.json`; per-source arrays stayNERSC. This is a storage validation, not new discovery or independent evidence.
+- Regression reproduces two successive same-rank writes and verifies the old row still resolves its own array; corrupted artifacts are refused. py_compile plus56unittests pass (2skipped). Next: adopt artifact fields in final all-project C/evidence QA and require explicit proof for legacy fits.
+
+
 ### Interim production integration, independent CFHT images and real faint-light guard
 
 - Slurm 61568667 COMPLETED/0:0/43:15; synchronized explicit aggregate-only directories and 100 source/policy paths. Actual registry input hashes all match locally. R14: 6708/6660/1032 records/associations/successful eligible C; all historical qualified sources:7833 records,7665 provisional positions,1671 available successful same-record C; new `v14_integrated_ledger.py` verifies all75 frozen identities and leaves user grades/final gates blank.
