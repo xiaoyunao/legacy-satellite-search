@@ -1,0 +1,4 @@
+{
+  "input_sha256": "b4bd24d76a48ad7bdae6dbfe83da821043dae46ad081f0728170fb1ac864e6f1",
+  "scope": "Diagnostic aggregation of accepted real CCD stages, target V proxy=-3, baseline. Neighbours are pre-existing blank-catalogue sources, not injected mutual neighbours. Fractions are descriptive, not independent-star confidence intervals or a controlled radius effect. New-match loss includes0.8arcsec unique association/blending. Keep actual IMF light and sky conditions."
+}

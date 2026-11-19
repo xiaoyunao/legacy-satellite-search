@@ -1,5 +1,36 @@
 # DR11 search and selection response
 
+## 2026-11-19T15:10Z — complete registered CCD experiment, conditional scientific result
+
+All144 native image experiments and288 LS baseline/deeper measurements are accepted (producer61576217;6048 magnitude/environment stage rows). Each of48 potential stellar populations is observed in three selected backgrounds. The original nine proofs and frozen grid are preserved.
+
+| Endpoint | Baseline | Deeper |
+|---|---:|---:|
+| Spatial recovery |40/144|64/144|
+| Highest blind distance correct |32/144|52/144|
+| Correct distance retained in best spatial group |38/144|60/144|
+| Correct distance in any matching group |38/144|61/144|
+| Available selected members, summed |1170|1944|
+
+Spatial discordance is25 deeper-only and1 baseline-only. The registered equal-cell average difference is+0.1667; exploratory resampling of three skies and eight shared repetition blocks gives95percentiles[0.0347,0.2917]. Conservative fixed-background finite-MC bounds include zero. These are selected-condition sensitivity summaries, not calibrated all-sky intervals. The planned mixture includes30pc boundary controls, so its positive average is not a uniform3–15pc claim.
+
+| Radius/target V proxy | Baseline spatial | Deeper spatial |
+|---|---:|---:|
+|3pc/−3|5/24|11/24|
+|3pc/−1.5|0/24|1/24|
+|10pc/−3|22/24|24/24|
+|10pc/−1.5|0/24|5/24|
+|30pc/−3|13/24|23/24|
+|30pc/−1.5|0/24|0/24|
+
+Each row has eight unique IMF draws shared across three skies; radius nodes use different draws and realized luminosities. In bright populations away from pre-existing blank neighbours, g0=20–22 sources at3pc have85/100 new matches and43/85 PSF assignments, versus174/174 and171/174 at10pc. Atg0=23–23.5 the corresponding new-match counts are89/211 versus261/275. This is observed extraction/unique0.8arcsec association and shape attrition, not a causal isolated-radius test. Member counts and true-light stage totals remain available, including omitted faint light and finite-stamp losses. Target−1.5 remains mostly undetectable; no defensible complete luminosity range or continuous50% contour follows.
+
+**Policy boundary:** these144 measurements use the original matched-sky grid/radii/cuts, not the final production search policy. A separate SHA-registered baseline replay uses the formal A strategy, all six radii, ordinary distance grid/main<=20.75, cutoff6.137901 and100arcmin buffer, without the additional PS1 catalogue mask. Pilot61577474 completed18 cases; full61579269 is submitted. Native catalogues and populations are unchanged. Its C is neither rerun nor borrowed from the old experiment, and control cores do not calibrate every owned production edge.
+
+**Scientific decision:** preserve formal A baseline and prioritize production-policy transfer plus extraction/classification accounting. Physical LS−PS1 gain remains unresolved because faint-blue PS1 response lacks independent point-source truth. The existing bright30pc extension is a ceiling case and does not quantify near-threshold truncation bias. These limitations must be resolved or explicitly bound before a population selection function or census increment is claimed.
+
+Full-project production and area are still converging:32global vector shards and index passed, but GEOS overlay failures prevent final union certification. The first75 review release remains unchanged. No new system is promoted and no intermediate user review is requested.
+
 ## 2026-11-19T13:37Z — full-seed C audit, tiled-area validation and controlled retries
 
 - Search checkpoint j (13:24:48Z): **4948/6891 complete**,20 no_usable,**21309.497847222217 owned deg²**. Original seven-background56-trial experiment remains complete; the new144-repeat product/measurement clocks are separate. Four newly uncovered fields have explicit44G science-step OOM logs; registered **61575366** retries with128G allocation/120000M step, unchanged detector/configuration. Do not confuse resource failure with no coverage, or completed-step RSS with an allocation-wide safe memory bound.

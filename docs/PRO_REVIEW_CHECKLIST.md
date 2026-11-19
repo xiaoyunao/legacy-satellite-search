@@ -1,5 +1,16 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-19T15:10Z acceptance update
+
+- [x] All144 frozen native CCD products, shared truth/source proofs,288 matched-policy LS arms and6048 stage rows accepted.
+- [x] Paired/shared-population uncertainty, realized-light and stage attrition diagnostics; figure QA preserves numerical results.
+- [x] Detect matched versus production-policy mismatch; preserve original experiment; all18 production-policy pilot measurements completed.
+- [ ] Full144 production-policy replay61579269, its independent acceptance and any required same-policy C.
+- [ ] Finish all6891 search registrations, retry accounting and all-region source-qualified production freeze.
+- [ ] Exact full historical area union:32vector shards/index done, but GEOS tile failures still under diagnosis.
+- [ ] Final review units, necessary C/membership, full images/CMD/context and anonymity/page QA, then one final human delivery. Existing75release remains frozen and blank.
+- [ ] Physical PS1 faint-blue validation and informative30pc truncation sensitivity. No three-arm physical gain claim or population inference yet.
+
 ## 2026-11-19T13:37Z — full-seed C audit, tiled-area validation and controlled retries
 
 - Search checkpoint j (13:24:48Z): **4948/6891 complete**,20 no_usable,**21309.497847222217 owned deg²**. Original seven-background56-trial experiment remains complete; the new144-repeat product/measurement clocks are separate. Four newly uncovered fields have explicit44G science-step OOM logs; registered **61575366** retries with128G allocation/120000M step, unchanged detector/configuration. Do not confuse resource failure with no coverage, or completed-step RSS with an allocation-wide safe memory bound.

@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-11-19 Preserve legacy experiment and separately test production-policy conformance
+
+- A physical image experiment inherits its actual detector/mask/trial policy. The original144 uses matched-sky mu<=21,0.5–4arcmin kernels and cuts5.7891/6.0289; it cannot certify formal A main<=20.75,0.5–16arcmin,cut6.137901. Retain it unchanged; replay the same registered native catalogues with formal policy,100arcmin context and no extra PS1 catalogue footprint. C and all-sky/edge transfer remain separate.
+- Keep48 latent populations shared across skies in uncertainty; resample common repetition blocks and selected skies together. Report descriptive bootstrap sensitivity alongside exact per-cell and conservative finite-MC bounds. A zero bootstrap width for no discordances is not zero uncertainty.
+- Do not select a globally deeper production channel from this small mixture. Its observed gain includes30pc controls and strong luminosity dependence; the formal baseline remains frozen. PS1 physical increment stays unresolved until independent faint-blue response is validated.
+- Preserve failed geometry tiles and Slurm failures. GEOS overlay errors are computational failures, not lost sky. Diagnose/repair area-only operations and quantify any precision effect; never change discovery cuts to hide failures. Dependent launches must verify installer success before execution.
+
 ## 2026-11-19 Exact C seed coverage and conditional physical statistics
 
 - An available C maximum is insufficient: account for every qualified original retained mode, distinguishing missing computation, terminal unavailable likelihood and complete fits. Preserve source/seed/provenance hashes; legacy context never certifies another source. This is separate from image/membership and user judgment.

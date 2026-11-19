@@ -1,0 +1,31 @@
+{
+  "job": "61577474",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=64G",
+    "-t",
+    "01:30:00",
+    "--array=0-2%1",
+    "--dependency=afterok:61576217",
+    "-J",
+    "ls14-production-policy-pilot",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "--wrap",
+    "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=$PSCRATCH/legacy-satellite-search LS_SAT_CONFIG_DIR=configs PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; export LS_SAT_COADD_CACHE=$LS_SAT_DATA/cache/v14_packed_masks; site=v14_south_response_$((SLURM_ARRAY_TASK_ID+1)); .venv/bin/python -u -m scripts.v14_production_replay run --field $site --trials 0 1 2 3 4 5"
+  ],
+  "expected_backgrounds": 3,
+  "expected_trial_measurements": 18,
+  "state": "submitted_not_complete",
+  "scope": "First six frozen populations in all three existing backgrounds under the production baseline policy; not new CCD injections, not an independent sky validation. Full48-per-site replay and its C/human gates remain separate."
+}

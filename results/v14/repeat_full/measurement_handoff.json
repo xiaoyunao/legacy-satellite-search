@@ -1,0 +1,107 @@
+{
+  "owned_job": "61576217",
+  "original_measurement_job": "61568456",
+  "acceptance_job": "61568539",
+  "statistics_job": "61574814",
+  "native_owner": "61572579",
+  "native_guard": "61572628",
+  "state": "full144_producer_proof_verified_original_pending_gates_superseded",
+  "utc": "2026-11-19T13:55:24.349662+00:00",
+  "launch_code_sha256": {
+    "logs/v14_parallel_measure.py": "1e1ee0e568d234e63b9df784a079e8aafc37ed24f1414ba94a2f1535c7734b8c",
+    "logs/v14_measurement_guard.py": "f02a331be06aec26babd4ddb35539e65a3f6fbc4c41963d6a13a7f4300a1f23c",
+    "scripts/v13_image_trials.py": "d9e6cdfacc7a78a449c44850b242c6b3060750cf1d348f52d97ec0c660d58247",
+    "scripts/v14_repeat.py": "95100ee6d84bb919d6df3a8cc0584b39af0bfd3853d4a4c9969e9a114cbe31f5",
+    "scripts/v14_repeat_accept.py": "16ce4d07a67a26efaf377635813d92ca7a4b821006709b978578ed18355aed5d",
+    "src/ls_satsearch/search.py": "45ab165baf8e4249253b26944dc64be487360bd1d24db975bc7bf8260f2383b9",
+    "src/ls_satsearch/review.py": "c9cea89fae191ea71012cb7648ea3836d8dedcffce5e9cc0c0b56a0074673ba9",
+    "src/ls_satsearch/group_budget.py": "92fbea0cf964ff17d7033eeebaa04cc997fa4e228acff968a0f868dc25c24b6a"
+  },
+  "source_commit": "bfee436",
+  "original_dependency": "(null)",
+  "scope": "Three independent background computations of the exact registered144-trial LS estimator in one CPU step. Original pending measurement is a fallback, not canceled until all native/LS acceptance gates pass. No physical PS1 validation or human-review approval implied.",
+  "guard_job": "61577449",
+  "guard_command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c1",
+    "--mem=4G",
+    "-t",
+    "00:05:00",
+    "--dependency=afterany:61576217",
+    "-J",
+    "ls14-full-measure-proof-guard",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export PYTHONPATH=src:.; .venv/bin/python -u logs/v14_measurement_guard_v2.py"
+  ],
+  "node": "nid200004",
+  "step": "0",
+  "start_utc": "2026-11-19T13:55:44.356948+00:00",
+  "cpu_sets": [
+    [
+      0,
+      1,
+      2,
+      16,
+      17,
+      18,
+      32,
+      33
+    ],
+    [
+      48,
+      49,
+      64,
+      65,
+      128,
+      129,
+      130,
+      144
+    ],
+    [
+      145,
+      146,
+      160,
+      161,
+      176,
+      177,
+      192,
+      193
+    ]
+  ],
+  "site_results": [
+    {
+      "site": "v14_south_response_1",
+      "exit_code": 0
+    },
+    {
+      "site": "v14_south_response_2",
+      "exit_code": 0
+    },
+    {
+      "site": "v14_south_response_3",
+      "exit_code": 0
+    }
+  ],
+  "end_utc": "2026-11-19T14:26:58.949079+00:00",
+  "finish_version": 2,
+  "superseded_guard_job": "61576263",
+  "finish_reason": "Owned producer already runs the full acceptance script. Preserve that immutable proof and retire the duplicate pending acceptance gate only after SHA verification; redirect the statistics dependency before canceling old pending gates.",
+  "statistics_dependency": "afterok:61576217",
+  "full_acceptance_sha256": "97b586bc89d3bb1948162bedc6db3fa28f6d9c3dc900785bc981b8fbf2901641",
+  "verification_mode": "manual_metadata_only_SHA_and_completed_job_verification",
+  "verification_job": null,
+  "immutable_producer_acceptance_preserved": true,
+  "verification_utc": "2026-11-19T14:31:35.373334+00:00",
+  "finish_code_sha256": "ab59e79957c918dc0869904b736f49829eaf0317e83b8b6c54dbec047fbc42a6"
+}

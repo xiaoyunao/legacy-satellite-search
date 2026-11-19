@@ -1,7 +1,11 @@
 {
-  "job": "61568227",
-  "state": "deferred_until_full_native_grid",
-  "validated_files": 38,
-  "expected_files": 144,
-  "scope": "Native tranche finished; no partial science measurement performed. The separate complete-grid measurement job remains required."
+  "utc": "2026-11-19T14:31:37.742599+00:00",
+  "state": "all144_native_and_288_matched_policy_LS_measurements_accepted",
+  "validated_native_trials": 144,
+  "full_blind_measured_trials": 144,
+  "arm_measurements": 288,
+  "stage_rows": 6048,
+  "producer": "61576217",
+  "acceptance_sha256": "97b586bc89d3bb1948162bedc6db3fa28f6d9c3dc900785bc981b8fbf2901641",
+  "scope": "Legacy matched-budget policy, not final production strategy or validated physical PS1 response. Original nine tables unchanged. Separate production-policy replay and PS1/reference/stamp validity gates remain."
 }

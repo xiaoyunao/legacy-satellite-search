@@ -1,0 +1,42 @@
+{
+  "observed_implementation_scope": {
+    "matched_distance_grid": [
+      16.5,
+      21.0,
+      0.25
+    ],
+    "matched_main_dm_max": 21.0,
+    "matched_radii_arcmin": [
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "matched_baseline_cut": 5.7890987854427625,
+    "matched_deeper_cut": 6.02890805457013,
+    "production_distance_grid": [
+      13.5,
+      22.5,
+      0.25
+    ],
+    "production_main_dm_max": 20.75,
+    "production_radii_arcmin": [
+      0.5,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "production_baseline_cut": 6.137901371660258
+  },
+  "source_sha256": {
+    "configs/v13/matched/south/search.yaml": "eb9c588281ab080cb383be607e79e68ffd7a2b723f62872bd39a76b39185e7c4",
+    "configs/v13/matched/south/matched.yaml": "422f1a57860d18f67e6a8ac6c185650e38b3df0bafab9f17cc8f8182a51d98d8",
+    "configs/v14/cohorts/south_ps1/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d",
+    "results/v12/matched/south/ls_base/groups/sky_group_policy.json": "e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594",
+    "results/v12/matched/south/ls_deep/groups/sky_group_policy.json": "47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6",
+    "results/v14/discovery/south_ps1/main/sky_group_policy.json": "b9d4479e8eb7b1637ff05f1f842c555ed165574ff8d7d88bf2ce7346a596cf3d"
+  },
+  "decision": "Keep the already registered144 matched-budget measurements unchanged and labeled. Replay the same native catalogues with the frozen production baseline strategy in separately registered control fields; no new image populations, no threshold optimization, no silent mixing of the mu21 experiment with formal main branch. Evaluate true selection/policy effects before reporting a production selection function. A-only replay cannot borrow different-seed C results or certify the human-review stage."
+}

@@ -1,0 +1,32 @@
+{
+  "job": "61579269",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c24",
+    "--mem=192G",
+    "-t",
+    "04:00:00",
+    "--dependency=afterok:61577474",
+    "-J",
+    "ls14-production-policy-full",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=$PSCRATCH/legacy-satellite-search LS_SAT_CONFIG_DIR=configs PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; export LS_SAT_COADD_CACHE=$LS_SAT_DATA/cache/v14_packed_masks; srun -n1 -c24 --mem=180000M .venv/bin/python -u -m scripts.v14_production_replay_batch"
+  ],
+  "state": "submitted_not_complete",
+  "expected_replays": 144,
+  "source_sha256": {
+    "scripts/v14_production_replay.py": "76497905c8f52b7f6682b43a7e2066e02fb44f144d51cf7eb91ab3836feb10d2",
+    "scripts/v14_production_replay_batch.py": "4f624ef32f5ad7aa8dc4ff88377e25905f070e6c5eb9dafb9f8ddff2c8628ef4"
+  }
+}

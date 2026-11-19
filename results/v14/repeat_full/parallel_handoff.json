@@ -5,7 +5,7 @@
   "final_measurement": "61568456",
   "worklist": "configs/v14_repeat/remaining_tasks.csv",
   "worklist_sha256": "86d0498149b4b70a420599a11c530eae8cb28ca939a2caf07b386fda78468f2a",
-  "state": "pending_tasks_held_for_owned_execution",
+  "state": "all144_native_validated_final_measurement_rebound",
   "tasks": [
     29,
     30,
@@ -167,5 +167,11 @@
       204,
       218
     ]
-  ]
+  ],
+  "owned_successes": 106,
+  "owned_attempts": 106,
+  "owned_end_utc": "2026-11-19T13:49:26.823441+00:00",
+  "final_measurement_dependency": "afterok:61572628",
+  "missing_native": [],
+  "guard_utc": "2026-11-19T13:49:43.771522+00:00"
 }

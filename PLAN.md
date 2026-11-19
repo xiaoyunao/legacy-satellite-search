@@ -1,5 +1,14 @@
 # Plan
 
+## Current checkpoint — 2026-11-19T15:10Z
+
+1. All144 native trials and288 legacy matched-budget LS measurements are accepted; analyze them conditionally, keeping48 shared populations, realized light and finite-image limits. Preserve prior failed and negative cases.
+2. Complete production-policy replay61579269 of the same144 catalogues. The old matched grid/cuts are not the production selection function; first18 formal-policy checks passed. Do not change frozen code/configuration while replay is active or reuse its old C fits.
+3. Finish existing DR11 scan/retry/C chains and audit terminal manifests. Four high-memory OOM retries completed. Exact historical working-mask union remains incomplete because GEOS overlays failed; isolate numerical geometry issues without changing observation masks or source eligibility.
+4. Reconcile final production/C/identities and area at a common source clock. Current7994records/7822positions is provisional. Complete all necessary same-record C and image evidence before selecting final independent review units and probability sample.
+5. Keep PS1 physical response unvalidated at faint blue magnitudes; independent CFHT reference data lack adequate point-shape truth. Quantify informative near-threshold30pc truncation before population-level completeness. No unsupported LS−PS1 gain,50% contour, population inference or manuscript writing.
+6. Deliver one final whole-project human package only after production freeze, required C, image/membership/privacy/page QA. Preserve existing75 identities, files and hashes; no interim user grading.
+
 ## 2026-11-19T13:37Z — full-seed C audit, tiled-area validation and controlled retries
 
 - Search checkpoint j (13:24:48Z): **4948/6891 complete**,20 no_usable,**21309.497847222217 owned deg²**. Original seven-background56-trial experiment remains complete; the new144-repeat product/measurement clocks are separate. Four newly uncovered fields have explicit44G science-step OOM logs; registered **61575366** retries with128G allocation/120000M step, unchanged detector/configuration. Do not confuse resource failure with no coverage, or completed-step RSS with an allocation-wide safe memory bound.

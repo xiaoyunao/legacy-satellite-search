@@ -1,5 +1,14 @@
 # Status
 
+## 2026-11-19T15:10Z — all144 CCD products and288 matched-policy LS arms accepted
+
+- **Completed:** native61572579; full LS owner61576217; acceptance144/288/6048stage rows; statistics61574814; unchanged-numerics figure QA61578492; allfour OOM retries61575366.
+- **Actual legacy matched-budget results:** spatial40/144 baseline,64/144 deeper; highest-DM-correct32/144,52/144. These are48 shared populations across three selected skies. Physical PS1 is unvalidated; formal-production completeness is not yet measured by these counts.
+- **Completed pilot / submitted full:** production-policy replay61577474 completed18 checks;61579269 runs the same144 native catalogues under the formal A baseline policy, not new CCD realizations. C replay is separate.
+- **Area incomplete:** all32 vector shards and index complete;61574869 has GEOS overlay failures.61579303 diagnoses the actual failing tiles.61574870 must not be reported complete while tiles are missing.
+- Existing6891-field search, packed retry61575703→61575704 and regional C/release chains continue. Last published search checkpoint remains j until the running k audit finishes; do not combine different candidate/area clocks.
+- Original75 review release is frozen and unfilled. Final all-project review still needs terminal production, common-clock geometry/identity integration, required C and full evidence/privacy/page QA.
+
 ## 2026-11-19T13:37Z — full-seed C audit, tiled-area validation and controlled retries
 
 - Search checkpoint j (13:24:48Z): **4948/6891 complete**,20 no_usable,**21309.497847222217 owned deg²**. Original seven-background56-trial experiment remains complete; the new144-repeat product/measurement clocks are separate. Four newly uncovered fields have explicit44G science-step OOM logs; registered **61575366** retries with128G allocation/120000M step, unchanged detector/configuration. Do not confuse resource failure with no coverage, or completed-step RSS with an allocation-wide safe memory bound.

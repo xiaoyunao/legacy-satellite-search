@@ -1,5 +1,15 @@
 # 当前科学主线
 
+## 2026-11-19 — distinguish physical signal, detector policy and inference scope
+
+The frozen144 CCD experiment is now measured: baseline/deeper spatial40/144 and64/144, with48 underlying IMF realizations shared across three selected backgrounds. This supports a conditional depth effect in this registered mixture, including30pc controls. It does not establish LS−PS1 gain, uniform benefit at3–15pc, a true-V luminosity selection function or an all-sky confidence interval. At target−1.5 the counts are0/72 and6/72.
+
+A newly audited mismatch matters scientifically: matched-sky controls and formal production have different distance/scale trials, masks and cuts. Preserve the original experiment and replay the same native catalogues under the unchanged production policy in a separately registered namespace. Full replay61579269 follows the completed18-case pilot. Never transplant matched-policy C or recovery counts as production certification.
+
+Real stage losses implicate extraction/unique association and PSF classification in the most compact bright populations; CMD cuts add little loss after hard selection in this experiment. Actual IMF luminosities differ across radii. Measure the loss stage and information boundary before adding detector complexity. Three skies and eight draws per cell cannot support a continuous50% contour or population abundance. PS1 faint-blue physical response and informative finite-stamp bias remain unresolved.
+
+User preference is one final whole-project human review. The first75 release remains an immutable initial record, not a request for interim judgments. Full production integration, same-source C, images, review-unit definition, sampling probabilities, anonymity and page QA remain mandatory.
+
 ## 2026-11-19T13:37Z — full-seed C audit, tiled-area validation and controlled retries
 
 - Search checkpoint j (13:24:48Z): **4948/6891 complete**,20 no_usable,**21309.497847222217 owned deg²**. Original seven-background56-trial experiment remains complete; the new144-repeat product/measurement clocks are separate. Four newly uncovered fields have explicit44G science-step OOM logs; registered **61575366** retries with128G allocation/120000M step, unchanged detector/configuration. Do not confuse resource failure with no coverage, or completed-step RSS with an allocation-wide safe memory bound.

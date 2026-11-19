@@ -1,5 +1,16 @@
 # Work log
 
+### Complete144 matched-budget CCD measurements; register production-policy replay
+
+- Native owner61572579 and guarded handoff completed all144 frozen native products. Three disjoint measurement workers in61576217 completed288 LS arms/6048 stage rows; full acceptance14:27Z verifies shared populations, source hashes and monotonic true-light stage bookkeeping. Original nine proofs remain unchanged. Serial pending measurement/acceptance gates were retired only after producer proof validation.
+- Matched-budget spatial recovery baseline40/144, deeper64/144; highest-distance correct32/144 versus52/144, retained-correct-mode38/144 versus60/144. Available members1170/1944. There are48 unique populations shared across three skies, not144 independent draws. Paired spatial difference+0.1667, exploratory background/shared-block bootstrap95%[0.0347,0.2917]; conservative fixed-background finite-MC bounds include zero. Physical PS1 response is still unvalidated.
+- Found a scientific policy mismatch: this frozen experiment uses mu16.5–21, radii0.5–4 and cuts5.7891/6.0289; formal South PS1 A uses main<=20.75, radii0.5–16 and baselinecut6.137901. Preserve old results. New same-catalogue replay scans the full ordinary grid,100arcmin buffer and original production mask/cut, without extra PS1 catalogue mask or borrowed C. Pilot61577474 completed all18 first-six checks; full144 replay61579269 submitted, not complete. Cache binds native/blank/truth/mask/registration hashes.
+- Native blank versus released selected-source agreement is47/49,82/85,57/59 in the three splice circles; high-SNR median gr offsets are below0.001mag. This is same-data consistency, not independent faint-star truth. Target−1.5 has baseline0/72 and deeper6/72. Bright compact3pc new-match and PSF loss precede CMD filtering; varying realized IMF light prevents a causal radius-only claim.
+- Statistics61574814 and plot QA61578492 completed. Numerical paired table is byte-identical after plot/layout QA. Reproducible per-cell/bright-neighbour diagnostics added. Local62tests pass,2skip; new replay runner syntax checks pass. Raw pixels/per-source arrays remainNERSC.
+- Actual geometry vectors61574867 all32 and index61574868 complete; tile array61574869 has GEOS overlay failures, so area collect61574870 is not certified. Diagnostic61579303 isolates failed polygon overlays; successful products retained. Four OOM retries61575366 all completed. Packed113 retry chain remains active.
+- Resource handoff61577933 failed before reading scientific data: launch was attempted after an installer rejected a running pilot. Original pilot was unaffected. Dependent launch now requires explicit prior success; full replay uses a simple separate registered batch, with no takeover.
+- Next: finish actual formal replay, repair only failed area operations with measured numerical QA, reconcile latest search/retry manifests and source-qualified production/C, then final evidence/anonymity/page QA. Final75release unchanged; user review deferred until the whole production sample converges.
+
 ## 2026-11-19
 
 ### Complete-seed provenance, actual union validation and resource retry evidence

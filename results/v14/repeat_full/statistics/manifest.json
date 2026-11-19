@@ -1,0 +1,17 @@
+{
+  "acceptance_sha256": "97b586bc89d3bb1948162bedc6db3fa28f6d9c3dc900785bc981b8fbf2901641",
+  "analysis_sha256": "15573222afb2bab8619e663a47e5f7502bec3fdf36d28c9afb89f347a3458a7b",
+  "code_sha256": "79a447644022aead7f207603c2a6f829c3df78922082c4582e7cd3c38e6305cf",
+  "native_trials": 144,
+  "independent_populations": 48,
+  "backgrounds": 3,
+  "arms": 2,
+  "full_PS1_physical_response_validated": false,
+  "detector_policy_scope": "Frozen legacy matched-sky experiment (effective mu16.5..21.0, radii0.5/1/2/4, baseline/deeper cuts5.7890987854/6.0289080546); this is not the final production selection function. A separate same-catalogue production-policy replay is required.",
+  "versions": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "scope": "Accepted LS CCD measurements only. Target V proxy is not measured V luminosity; each radius has different IMF draws, with realized light retained. Three backgrounds are selected conditions, not a random all-sky sample. Resampling retains common populations across skies/depths; its percentiles are exploratory sky-condition sensitivity. Exact per-cell intervals and simultaneous fixed-background paired bounds retain finite Monte Carlo uncertainty even with zero discordances. Truncation/faint-flux guards and unknown true extraction/classification losses limit population completeness. C/top-three diagnostics do not automatically classify or reject a system. No physical PS1 delta or 50% contour is manufactured."
+}

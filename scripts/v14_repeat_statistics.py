@@ -1,9 +1,12 @@
 """Summarize the accepted 144 CCD trials, retaining shared populations and scope."""
 from collections import defaultdict
+from importlib.metadata import version
 import json
 from pathlib import Path
+import statistics
 
 import matplotlib.pyplot as plt
+from matplotlib.ticker import NullLocator
 import numpy as np
 from scipy.stats import binomtest
 import yaml
@@ -42,6 +45,44 @@ def simultaneous_paired_bound(delta, level=.95):
             loss = interval(int((values == -1).sum()), n_blocks, marginal_level)
             low[site, cell], high[site, cell] = win[0]-loss[1], win[1]-loss[0]
     return low, high
+
+
+def cell_diagnostics(rows, stages, out):
+    cells=[]
+    for rh in (3,10,30):
+        for mv in (-3,-1.5):
+            for arm in ('ls_base','ls_deep'):
+                chosen=[r for r in rows if float(r['rh_pc'])==rh
+                        and float(r['expected_MV_proxy'])==mv and r['arm']==arm]
+                unique={r['latent_population_id']:r for r in chosen}
+                record=dict(rh_pc=rh,target_MV_proxy=mv,arm=arm,backgrounds=3,
+                    unique_populations=len(unique),background_trials=len(chosen),
+                    spatial_detected=sum(r['spatial']=='True' for r in chosen),
+                    highest_DM_correct=sum(r['blind_correct']=='True' for r in chosen))
+                record.update({key+'_mean':statistics.mean(float(r[key]) for r in chosen)
+                    for key in ('N_rendered','N_exposed','N_final','N_psf','N_used','N_cmd_at_truth_dm')})
+                record.update(realized_MV_min=min(float(r['realized_MV_proxy']) for r in unique.values()),
+                    realized_MV_max=max(float(r['realized_MV_proxy']) for r in unique.values()))
+                for a,b in (('detected','exposed'),('PSF','detected'),('hard_selected','PSF')):
+                    ratios=[float(r['L_proxy_'+a])/float(r['L_proxy_'+b]) for r in chosen if float(r['L_proxy_'+b])>0]
+                    record[f'mean_true_light_{a}_given_{b}']=statistics.mean(ratios) if ratios else None
+                cells.append(record)
+    write_csv(out/'physical_cell_summary.csv',cells)
+    grouped=defaultdict(lambda:defaultdict(int))
+    for row in stages:
+        if row['arm']!='ls_base' or float(row['target_MV_proxy'])!=-3 or float(row['g_lo']) not in (20,22,23,23.5):continue
+        key=(row['rh_pc'],row['g_lo'],row['g_hi'],row['environment'])
+        for name in ('exposed','detected','psf','selected'):grouped[key][name]+=int(row[name])
+    neighbour=[]
+    for key,counts in sorted(grouped.items(),key=lambda p:(float(p[0][0]),float(p[0][1]),p[0][3])):
+        record=dict(zip(('rh_pc','g_lo','g_hi','background_neighbour_stratum'),key))
+        record.update(counts,new_match_fraction=counts['detected']/counts['exposed'] if counts['exposed'] else None,
+            PSF_given_new_match=counts['psf']/counts['detected'] if counts['detected'] else None)
+        neighbour.append(record)
+    write_csv(out/'bright_cell_neighbour_diagnostic.csv',neighbour)
+    write_json(out/'bright_cell_neighbour_diagnostic.json',dict(
+        input_sha256=sha(out/'stage_attrition_by_physical_cell.csv'),
+        scope='Diagnostic aggregation of accepted real CCD stages, target V proxy=-3, baseline. Neighbours are pre-existing blank-catalogue sources, not injected mutual neighbours. Fractions are descriptive, not independent-star confidence intervals or a controlled radius effect. New-match loss includes0.8arcsec unique association/blending. Keep actual IMF light and sky conditions.'))
 
 
 def run():
@@ -130,6 +171,7 @@ def run():
             PSF_given_detected=totals['psf']/totals['detected'] if totals['detected'] else None,
             hard_selection_given_PSF=totals['selected']/totals['psf'] if totals['psf'] else None))
     write_csv(out/'stage_attrition_by_physical_cell.csv', stage_summary)
+    cell_diagnostics(rows,stage_summary,out)
     write_csv(out/'all_trial_diagnostics.csv', raw)
     light_summary=[]
     for row in rows:
@@ -142,11 +184,11 @@ def run():
             PSF_over_exposed_true_light=float(row['L_proxy_PSF'])/exposed if exposed else None,
             selected_over_exposed_true_light=float(row['L_proxy_hard_selected'])/exposed if exposed else None))
     write_csv(out/'true_light_attrition.csv',light_summary)
-    fig, axes = plt.subplots(1, 3, figsize=(12, 4), sharey=True, layout='constrained')
+    fig, axes = plt.subplots(1, 3, figsize=(12, 4.5), sharey=True)
     colors = {-3.: '#235e91', -1.5: '#b5542b'}
     for axis, site in zip(axes, sites):
         for mv in (-3., -1.5):
-            for arm, style, offset in (('ls_base','-',.96),('ls_deep','--',1.04)):
+            for arm, marker, offset in (('ls_base','o',.96),('ls_deep','s',1.04)):
                 chosen = [r for r in site_rates if r['site']==site and r['arm']==arm
                           and r['target_MV_proxy']==mv and r['metric']=='spatial']
                 chosen.sort(key=lambda r:r['rh_pc'])
@@ -154,21 +196,25 @@ def run():
                 axis.errorbar(np.array([r['rh_pc'] for r in chosen])*offset, y,
                     yerr=[y-np.array([r['fixed_background_MC_low'] for r in chosen]),
                           np.array([r['fixed_background_MC_high'] for r in chosen])-y],
-                    color=colors[mv], linestyle=style, marker='o', ms=4, capsize=2,
+                    color=colors[mv], linestyle='none', marker=marker, ms=4, capsize=2,
                     label=f'{mv:g} V proxy, '+('baseline' if arm=='ls_base' else 'deeper'))
         axis.set(xscale='log', xticks=[3,10,30], xticklabels=['3','10','30'],
-                 xlabel='Projected circularized radius (pc)', ylim=(-.04,1.04),
+                 xlabel='Sampled circularized radius (pc)', ylim=(-.04,1.04),
                  title=site.removeprefix('v14_south_response_')+' / fixed background')
         axis.grid(alpha=.15)
-    axes[0].set_ylabel('Spatial recovery; 8 shared IMF draws per cell')
-    axes[0].legend(fontsize=7, frameon=False)
-    fig.suptitle('100 kpc CCD trials: conditional on generation/stamp limits; no PS1 gain inference', fontsize=10)
+        axis.xaxis.set_minor_locator(NullLocator())
+    axes[0].set_ylabel('Spatial recovery (8 IMF draws per cell)')
+    fig.legend(*axes[0].get_legend_handles_labels(),loc='lower center',bbox_to_anchor=(.5,.015),ncol=4,fontsize=8,frameon=False)
+    fig.suptitle('Matched-budget100 kpc CCD trials; conditional on generation/stamp limits\n3/10 pc target nodes;30 pc boundary control; realized luminosities vary',fontsize=10)
+    fig.subplots_adjust(left=.065,right=.99,bottom=.23,top=.80,wspace=.08)
     fig.savefig(out/'conditional_physical_recovery.png', dpi=160)
     plt.close(fig)
     write_json(out/'manifest.json', dict(acceptance_sha256=sha(acceptance_path),
         analysis_sha256=sha(ANALYSIS), code_sha256=sha(Path(__file__)),
         native_trials=144, independent_populations=48, backgrounds=3, arms=2,
         full_PS1_physical_response_validated=False,
+        detector_policy_scope=analysis['detector_policy_scope'],
+        versions={name:version(name) for name in ('numpy','scipy','matplotlib')},
         scope='Accepted LS CCD measurements only. Target V proxy is not measured V luminosity; each radius has different IMF draws, with realized light retained. Three backgrounds are selected conditions, not a random all-sky sample. Resampling retains common populations across skies/depths; its percentiles are exploratory sky-condition sensitivity. Exact per-cell intervals and simultaneous fixed-background paired bounds retain finite Monte Carlo uncertainty even with zero discordances. Truncation/faint-flux guards and unknown true extraction/classification losses limit population completeness. C/top-three diagnostics do not automatically classify or reject a system. No physical PS1 delta or 50% contour is manufactured.'))
     print('ACCEPTED_144_LS_STATISTICS', len(site_rates), len(contrasts), flush=True)
 
