@@ -2,7 +2,17 @@
 
 ## Current objective
 
+Use the measured selection function and census increment as the stable paper mainline, while continuing new-system discovery. Prioritize actual detectability near 100 kpc, radii below about 15 pc and luminosity around −3 to −1.5. The fully read GPT Pro requirements and acceptance states are tracked in [PRO_REVIEW_CHECKLIST](docs/PRO_REVIEW_CHECKLIST.md).
+
 Search the effective DR11 gr footprint in all four observing strata, maintain one survey candidate catalogue and measure region-dependent efficiency. The primary population is old metal-poor systems at 20–150 kpc with circularized half-light radii of 3–30 pc, emphasizing radii below 15 pc.
+
+## 2026-11-19 execution checkpoint
+
+- Native conversation reading is restored; the full latest review has been checked. The prior source-access blocker is resolved, without computer use.
+- Latest terminal-manifest audit: 3,078 complete fields, six empty fields and 13,323.228 new owned deg². Snapshot 61511922 completed in 43:41 and its regional summaries, catalogue and redrawn atlases are synchronized. The snapshot's candidate/mask clock precedes the latest field audit.
+- Three original retries completed; ten remain covered by 61510268. Two newly uncovered TIMEOUT fields are registered in retry array 61554330. Its summary dependency is attached to 61470263. The first request using effective internal QOS regular_1 was rejected; the existing user-facing regular policy succeeded. No rejection is reported as a job.
+- Incremental R14 production audit separates evaluation/base/main/primary-budget records: 5,614 discovery records, 5,568 provisional associations, 1,026 records with a successful eligible C fit. Unknown visual grades remain unfilled. Historical production reconciliation and the 30–50-object shortlist remain outstanding.
+- Follow A–E acceptance in the checklist. Finish existing queue/review accounting, then freeze the 3–5-background repeat experiment and its cross-background gain criterion. Preserve μ≤20.75 pending independent boundary validation; do not silently claim the entire 150 kpc target is calibrated.
 
 ## Round 14 milestones
 
@@ -20,7 +30,7 @@ Search the effective DR11 gr footprint in all four observing strata, maintain on
 - Finish the remaining registered South DELVE, South DES and extension arrays. The 29-minute debug attempt timed out; all 13 incomplete OOM fields remain covered by queued array 61510268. Reconcile terminal tasks and live coverage before submitting further retries. Retain the production cuts and record review completion for the 1,685 North and 22 South PS1 primary within-field groups.
 - Completed masks, CCD trials and review shards are synchronized. The debug aggregation 61510733 timed out after 30:26; regular fallback 61511922 has a four-hour limit and awaits dispatch. Bounded catalogue/atlas job 61513679 completed in 17:38 and its available-cohort inputs are synchronized. Retain each native WCS area and hash; full regional summary inputs still require the queued fallback. Atlas QA found thirteen polar bounding boxes with invalid latitude edges; the code is repaired and the queued full snapshot must redraw them. Native mask areas are retained unchanged.
 - The frozen 0706 PS1, SDSS and independent i measurements show full core coverage but inadequate depth for the faint sequence. PS1 and BASS have weak fixed-population support. Retain L0. Expanded-reference BASS job 61514532 completed in 71 seconds: g₀/r₀ aperture depths are 23.67/23.28, with 18 retained references and six held out in each band. Both cores are fully covered; the single-brick background annulus remains only 49.1% supported. The frozen native template's brightest stage-1 main-sequence point has g₀=22.935; depth alone does not demonstrate a coherent population or classification completeness. CADC service failure leaves CFHT coverage unresolved.
-- Latest GPT Pro requirements must be checked against their full source before changing the scientific scope. The linked ChatGPT conversation is unavailable through the current tool set (`read_thread` is absent); its supplied preview is truncated. Browser/computer-use retrieval is disallowed by the user. Continue already authorized manifest follow-up and result synchronization while the full new message remains unavailable.
+- Historical source-access blocker: on 2026-11-18 the linked conversation was unavailable and its preview truncated. This was resolved by native reading on 2026-11-19; computer-use retrieval remains disallowed.
 
 
 ## Completed Round 13 acceptance criteria

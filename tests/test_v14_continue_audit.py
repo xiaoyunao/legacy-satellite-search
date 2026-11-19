@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 import yaml
 
-from ls_satsearch.run import read_csv, write_csv
+from ls_satsearch.run import read_csv, sha, write_csv
 from scripts import v14_continue_audit as audit
 
 
@@ -47,6 +47,28 @@ class ContinuationAuditTest(unittest.TestCase):
 
     def test_unknown_slurm_state_cannot_trigger_a_duplicate_retry(self):
         text='JobID|JobName|State\n616_0|ls14-a|UNRECOGNIZED\n'
-        with self.workspace() as output,patch.object(audit.subprocess,'check_output',return_value=text):
+        with self.workspace() as output,patch.object(audit.subprocess,'check_output',side_effect=[text,'']):
             with self.assertRaisesRegex(ValueError,'Unresolved Slurm state'):
+                audit.run(output)
+
+    def test_live_scheduler_covers_retry_missing_from_accounting(self):
+        accounting='JobID|JobName|State\n616_0|ls14-a|TIMEOUT\n617_0|ls14-b|PENDING\n'
+        queue='61510268_0|ls14-retry|PENDING|Priority|0:00\n'
+        with self.workspace() as output,patch.object(audit.subprocess,'check_output',side_effect=[accounting,queue]),contextlib.redirect_stdout(io.StringIO()):
+            audit.run(output)
+            actions={r['field']:r['action'] for r in read_csv(output/'retry_followup.csv')}
+            self.assertEqual(actions['a1'],'covered_by_live_job')
+            self.assertEqual([r['field'] for r in read_csv(output/'uncovered_retries.csv')],['a2'])
+
+    def test_registered_second_retry_is_not_submitted_again(self):
+        accounting='JobID|JobName|State\n616_0|ls14-a|TIMEOUT\n617_0|ls14-b|PENDING\n'
+        queue='61510268_0|ls14-retry|PENDING|Priority|0:00\n777_0|ls14-retry-new|PENDING|Priority|0:00\n'
+        with self.workspace() as output:
+            path=Path('retry2.csv');write_csv(path,[dict(cohort='a',index=2,field='a2')])
+            Path('logs/v14-retry-jobs.json').write_text(json.dumps({'777':dict(manifest=str(path),sha256=sha(path))}))
+            with patch.object(audit.subprocess,'check_output',side_effect=[accounting,queue]),contextlib.redirect_stdout(io.StringIO()):
+                audit.run(output)
+            self.assertEqual(read_csv(output/'uncovered_retries.csv'),[])
+            path.write_text(path.read_text()+'\n')
+            with self.assertRaisesRegex(ValueError,'changed retry'):
                 audit.run(output)

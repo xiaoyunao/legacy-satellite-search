@@ -20,14 +20,35 @@ def run(output, extra_jobs=()):
     primary={str(item['job']):cohort for cohort,items in scans.items() for item in items}
     old_retry=Path('results/v14/progress_20261118/retry_manifest.csv')
     requested=read_csv(old_retry)
-    job_ids=[*primary,'61510268','61510994','61511922','61510733',*extra_jobs]
+    retry_maps={'61510268':requested}
+    retry_registry=Path('logs/v14-retry-jobs.json')
+    registry=json.loads(retry_registry.read_text()) if retry_registry.is_file() else {}
+    for job,entry in registry.items():
+        path=Path(entry['manifest'])
+        if not job.isdigit() or job in primary or job in retry_maps or sha(path)!=entry['sha256']:
+            raise ValueError('Invalid or changed retry registration')
+        retry_maps[job]=read_csv(path)
+    job_ids=list(dict.fromkeys([*primary,*retry_maps,'61510994','61511922','61510733',*extra_jobs]))
     command=['sacct','-j',','.join(job_ids),'-X','--array','-P',
              '--format=JobID,JobName%60,State,ExitCode,Elapsed,ReqMem,QOS,Reason%100,Start,End']
     tasks=list(csv.DictReader(io.StringIO(subprocess.check_output(command,text=True)),delimiter='|'))
+    # Accounting can omit a pending array task while the live scheduler retains it.
+    # Expand arrays and use both clocks before declaring an uncovered failure.
+    queue=subprocess.check_output(['squeue','-u',getpass.getuser(),'--array','-h','-o','%i|%j|%T|%r|%M'],text=True)
+    live_tasks=[]
+    for line in queue.splitlines():
+        parts=line.split('|')
+        if len(parts)!=5:
+            raise ValueError('Unrecognized expanded squeue row')
+        live_tasks.append(dict(JobID=parts[0],JobName=parts[1],State=parts[2],Reason=parts[3],Elapsed=parts[4]))
     live={};terminal={}
     specs={cohort:yaml.safe_load(Path(f'configs/v14/cohorts/{cohort}/fields.yaml').read_text())['fields']
            for cohort in scans}
-    for task in tasks:
+    for rows in retry_maps.values():
+        for row in rows:
+            if specs[row['cohort']][int(row['index'])]['id']!=row['field']:
+                raise ValueError('Retry manifest disagrees with frozen field registration')
+    for task in [*tasks,*live_tasks]:
         matched=re.fullmatch(r'(\d+)_(\d+)',task['JobID'])
         if not matched:
             continue
@@ -35,10 +56,10 @@ def run(output, extra_jobs=()):
         if parent in primary:
             cohort=primary[parent]
             fields=specs[cohort][index*8:(index+1)*8]
-        elif parent=='61510268':
-            if index>=len(requested):
+        elif parent in retry_maps:
+            if index>=len(retry_maps[parent]):
                 raise ValueError('Unexpected registered retry task index')
-            fields=[dict(id=requested[index]['field'])]
+            fields=[dict(id=retry_maps[parent][index]['field'])]
         else:
             continue
         state=task['State'].split()[0].removesuffix('+')
@@ -51,14 +72,15 @@ def run(output, extra_jobs=()):
         for field in fields:
             target.setdefault(field['id'],[]).append(task['JobID'])
     fields=read_csv(output/'fields.csv')
-    candidates={r['field'] for r in requested}
+    requested_fields={r['field'] for rows in retry_maps.values() for r in rows}
+    candidates=set(requested_fields)
     candidates.update(terminal)
     reports=[];retry=[]
     for row in fields:
         if row['field'] not in candidates:
             continue
         if row['status'] in ('complete','no_usable_gr'):
-            if row['field'] not in {r['field'] for r in requested}:
+            if row['field'] not in requested_fields:
                 continue
             action='accepted_manifest'
         elif row['field'] in live:
@@ -74,15 +96,15 @@ def run(output, extra_jobs=()):
     write_csv(output/'retry_followup.csv',reports)
     write_csv(output/'uncovered_retries.csv',retry,keys=('cohort','index','field','previous_status'))
     write_csv(output/'scan_job_status.csv',tasks)
-    queue=subprocess.check_output(['squeue','-u',getpass.getuser(),'-h','-o','%i|%j|%T|%r|%M'],text=True)
     stamp=datetime.now(timezone.utc).isoformat()
     write_json(output/'queue.json',dict(utc=stamp,rows=[r for r in queue.splitlines() if '|ls14' in r]))
-    write_json(output/'continuation.json',dict(utc=stamp,requested_retry_count=len(requested),
+    write_json(output/'continuation.json',dict(utc=stamp,requested_retry_count=len(requested_fields),
+        original_retry_count=len(requested),retry_jobs=sorted(retry_maps),
         accepted=sum(r['action']=='accepted_manifest' for r in reports),
         live_covered=sum(r['action']=='covered_by_live_job' for r in reports),
         uncovered=len(retry),dispatch_sha256=sha(dispatch),audit_sha256=sha(output/'fields.csv'),
         original_retry_sha256=sha(old_retry),sacct_command=command,
-        note='Terminal Slurm tasks are intersected with incomplete manifests. Existing queued/running retries are retained.'))
+        note='Terminal accounting tasks are intersected with incomplete manifests and expanded live squeue coverage. Registered queued/running retries are retained.'))
     print(dict(original_requests=len(requested),accepted=sum(r['action']=='accepted_manifest' for r in reports),
                covered=sum(r['action']=='covered_by_live_job' for r in reports),new_retries=len(retry)),flush=True)
 

@@ -1,0 +1,38 @@
+{
+  "accepted_utc": "2026-11-19T02:18:35.716983+00:00",
+  "source_snapshot_job": "61511922",
+  "snapshot_state": "COMPLETED",
+  "snapshot_elapsed": "00:43:41",
+  "latest_complete_fields": 3078,
+  "latest_owned_deg2": 13323.227843364195,
+  "atlas_rasters": 2992,
+  "atlas_and_catalogue_hash_match": true,
+  "polar_inputs_verified": 13,
+  "all_atlas_field_hashes_verified": true,
+  "visual_qa": [
+    "ICRS atlas PNG inspected"
+  ],
+  "tests": "29 unittest tests passed; syntax and shell checks passed; production replay and regional counts verified",
+  "artifacts_sha256": {
+    "results/v14/catalogue/manifest.json": "7870165abffb9dcf0fb9cc2e0db76e3056f67ab79a28756e0538ff590454cfde",
+    "results/v14/catalogue/candidate_modes.csv": "03e143e8a50853609979472981da7587f4b122f7a344ef41d8181396d321032b",
+    "results/v14/catalogue/candidate_catalogue.csv": "1352080b30eab0057d33000fe9022f9c6832103f746bb6556a6c9e5556f8424e",
+    "results/v14/atlas/manifest.json": "d0464301174d0dc187f19062aa53ff8ed0c312e916329cb8d33c524428da59bf",
+    "results/v14/atlas/dr11_icrs.png": "c319598a05570f5d6903fce49a69842c21d66d891bdbf002f459050e81fb3d73",
+    "results/v14/atlas/dr11_galactic.png": "2f7ac76ddd7d0b9cf0a3136cb3f8e7701663d7926188227c900c3128e6a9aad8",
+    "results/v14/production/manifest.json": "4192bf130b937b29f0a893a6a8971f846bb70597d7ad77b1a2e7d1228afe48f6",
+    "results/v14/production/candidate_funnel.csv": "0fbc07631d1be642fc287acb73f5a735695575c15b8a8e3d85af6d5156ea5372",
+    "results/v14/production/baseline_records.csv": "520881cf344f304b199f4b304e7eaae8baf374fcefd823d4f2dba682ba191da7",
+    "results/v14/production/mode_eligibility_counts.csv": "dffa1c5d9358ce2926b3665678c18df2dc443da3c1d21103a90b39f6d9f4a503"
+  },
+  "code_sha256": {
+    "scripts/v14_continue_audit.py": "20618c8bb556c29e3f75f4e0a8c69e6fbd3da61f01d505d97b99ab6df414a066",
+    "scripts/v14_production.py": "376f04513cabb22ba18bfde6f1fa3b8ac0431d2829a573acd67cba62959f7abd",
+    "scripts/v14_finalize.sh": "d498ae05e4e719d6f1a4b1700c0ebb1d5472a7b967f0b66563f2d51ee73dbf98",
+    "tests/test_v14_continue_audit.py": "00b7f90b4957f1c9449ded13cb11f8cf9ab4b76056f9c2b7d7193fbde1ecbfdf",
+    "tests/test_v14_production.py": "3041314805a5eff05b44f1538e30bed879c55626f5ba4d70467aa0e9d7d2da43"
+  },
+  "retry_job": "61554330",
+  "retry_state": "PENDING, not completed",
+  "scope": "Incremental R14 production audit only. Historical inventory, candidate, raster and terminal-mask clocks retain distinct scopes. No new image injection or population confirmation in this checkpoint."
+}

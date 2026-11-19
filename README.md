@@ -22,6 +22,8 @@ For a fresh metadata checkpoint on NERSC, run `scripts/v14_manifest_audit.py --o
 
 The snapshot can be submitted on a CPU allocation with `scripts/v14_finalize.sh snapshot`. Released field areas include only completed optical search masks. The HEALPix atlas and planning table carry the sampled footprint proxy separately. FITS, caches and per-star measurements remain in scratch.
 
+The current paper mainline and complete review requirements are tracked in [PRO_REVIEW_CHECKLIST](docs/PRO_REVIEW_CHECKLIST.md). Run `PYTHONPATH=src .venv/bin/python scripts/v14_production.py` to audit the synchronized aggregate R14 baseline/main/evaluation/primary-budget sample. Its funnel and provenance are in `results/v14/production/`; this incremental audit does not replace historical production reconciliation or visual adjudication. Snapshot/catalogue finalization also refreshes it. Register additional retry array IDs with their immutable CSV path and SHA256 in ignored `logs/v14-retry-jobs.json`; continuation checks use expanded live scheduler coverage as well as accounting.
+
 ## Current search and selection experiments
 
 The [project memory](docs/PROJECT_MEMORY.md) records the science questions and scope. The [work plan](PLAN.md) defines current tests and acceptance criteria. The [run status](docs/STATUS.md) records completed runs and Slurm IDs. The [thirteenth science report](thirteenth_science_report.md) describes the South PS1 rollout, new matched recovery measurements and the native CCD experiment.

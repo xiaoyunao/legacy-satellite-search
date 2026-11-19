@@ -1,5 +1,15 @@
 # DR11 search and selection response
 
+## 2026-11-19 review and production checkpoint
+
+The native source-reading interface is restored, and the full latest GPT Pro review has been checked. The stable paper objective is measured compact-system selection and census increment, alongside continued discovery. The adopted requirements and their outstanding acceptance stages are tracked in the [review checklist](docs/PRO_REVIEW_CHECKLIST.md).
+
+The new audit validates 3,078 complete fields, six empty fields and 13,323.228 new owned deg²: 152 more fields and 639.478 deg² beyond the previous checkpoint. Snapshot 61511922 completed in 43:41. Its index contains 11,217 records, 31,846 modes and 7,000 provisional associations; its atlas contains 2,992 new raster inputs, including all thirteen polar fields flagged previously. Every atlas field hash agrees with the later audit. Regional summaries and atlas inputs predate some newly completed fields, so their candidate and mask clocks remain separate. The seven CCD sites remain complete. [Latest field audit](results/v14/progress_20261119/manifest.json)
+
+Three original retries completed. Expanded live scheduler inspection found that accounting had temporarily omitted a still-pending original retry; this was not a new uncovered gap. The audit now combines both clocks and recognizes registered retry worklists. Two genuinely uncovered South DELVE extension fields from TIMEOUT task 61469850_17 were submitted as array 61554330, and its regional summary dependency was extended. Submission is not completion.
+
+The first incremental R14 production audit selects baseline A/main/evaluation/0.3-budget records without historical, development or alternative-policy mixing. It contains 5,614 discovery records in 5,568 provisional associations; 1,026 eligible records have a successful C-mode fit from that same record. Visual/follow-up stages remain unknown and unfilled. Its per-cohort area uses the corresponding candidate-summary clock; full-grid raw/deduplicated peaks are labelled separately from the main-only stages. Cross-version environmental annotations remain context, not new classifications. This is a controlled incremental sample, not the final historical union or a population-completeness estimate. [Production funnel](results/v14/production/candidate_funnel.csv) · [Scope and hashes](results/v14/production/manifest.json)
+
 ## 2026-11-18 05:55 UTC recheck
 
 The new field-by-field audit reproduces checkpoint b: 2,926 complete fields, five no-usable-gr fields, 12,683.750 native owned deg² and seven complete CCD backgrounds. Field, area, CCD and retry tables agree byte-for-byte with that checkpoint. All thirteen missing retry fields remain covered by queued array 61510268; no additional uncovered terminal failure requires a new submission. The full snapshot 61511922 remains pending. This recheck provides a fresh audit clock, without adding searched area, trials or candidate evidence. [Current manifest](results/v14/progress_20261118c/manifest.json) · [Retry reconciliation](results/v14/progress_20261118c/continuation.json)

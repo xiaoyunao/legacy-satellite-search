@@ -1,0 +1,16 @@
+{
+  "job": "61554330",
+  "worklist": "results/v14/progress_20261119/retry_manifest.csv",
+  "worklist_sha256": "6b0fcda13e44f66458a55b706c97955118f53989434edefe2829f6e6f8206b85",
+  "fields": [
+    "v14_south_delve_extension_0142",
+    "v14_south_delve_extension_0143"
+  ],
+  "reason": "TIMEOUT of array task 61469850_17",
+  "nodes_per_task": 1,
+  "memory": "56G",
+  "time_limit": "02:00:00",
+  "array": "0-1%2",
+  "state": "submitted_not_completed",
+  "initial_request_rejection": "Effective internal QOS regular_1 is not a supported submission policy; reused the existing user-facing regular request."
+}

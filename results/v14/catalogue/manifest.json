@@ -1,5 +1,5 @@
 {
-  "job": "61513679",
+  "job": "61511922",
   "config_sha256": "2b6ada73c7679e3e5586983e5bd292ed510adca1c2c4680073d288be8d806a54",
   "inputs": {
     "results/summary/pilot_candidate_summary.csv": "2d8c7254c00b7491c16b6a3340ca8df871f6e8fe48f62deda66713581b527c69",
@@ -42,6 +42,9 @@
     "results/v14/candidate_review/v14/north/01/group_review_modes.csv": "dd02277bbf63fea0ec127f28d616c9fc5fcf2adae87cac9e9e0a4f2a289cdacf",
     "results/v14/candidate_review/v14/north/03/group_review_modes.csv": "c664f60f73552cdaefbb87fde209ad9cbec299b8a1401f585c1e6439480d95a9",
     "results/v14/candidate_review/v14/north/04/group_review_modes.csv": "50d925768cc657706d2b556dcb0f97e8693f76da3e60a9f17b502109d788de44",
+    "results/v14/candidate_review/v14/north/05/group_review_modes.csv": "5f4305571c57f2a905f858944340f48f6d175fd44423d6d43065a62cca49a03b",
+    "results/v14/candidate_review/v14/north/06/group_review_modes.csv": "4f7d51b817ab61a4b8a942fa6ae985a84a395702435116099eccca9c666f7b27",
+    "results/v14/candidate_review/v14/north/07/group_review_modes.csv": "b8c8de94c90abbadec870110bc79339598720a053404b21664fcbcbc25f6985f",
     "results/v14/candidate_review/v14/north_extension/00/group_review_modes.csv": "a5d69dbd4c21b6331d70786509a8e1763ab5e9011a144ee2c0c29b49825ec014",
     "results/v14/candidate_review/v14/north_extension/01/group_review_modes.csv": "2e299fe3a4250f52cfe114200e8ace48cc8da6c6d200e12893eb7c04240230bf",
     "results/v14/candidate_review/v14/north_extension/02/group_review_modes.csv": "e2ce31a247b3710a210ddf7d1aa1b141384dd721c4b305c32ab3f0084956db40",
@@ -66,8 +69,8 @@
     "results/v14/discovery/north/main/sky_group_candidates.csv": "8359a9fe619a5c89089548b3de9782f6d87c72ab22b3de81638ca11331a6296b",
     "results/v14/discovery/north_extension/main/sky_group_candidates.csv": "960c28eadf9fce43026e65900de289229c3e0561a75f1980dbecf91acb63f90b",
     "results/v14/discovery/north_single_native/main/sky_group_candidates.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-    "results/v14/discovery/south_delve/main/sky_group_candidates.csv": "c6fc4436b9bdf35dbc1c9a6c539391b5cabf689797a6fa5daeb75266796596da",
-    "results/v14/discovery/south_des/main/sky_group_candidates.csv": "da3946314e9add1f5236839e00a835e42538c994f258d0634c07f9572057dc61",
+    "results/v14/discovery/south_delve/main/sky_group_candidates.csv": "ae112b66de3c413d9c1ad411830f3b2a3ba515c142aa4d5bcc9d7c24ac2dd89d",
+    "results/v14/discovery/south_des/main/sky_group_candidates.csv": "bfe02fbf4486992b8bb72d394cc63d33ad3a6b0b55c1bee6473a8f60aabd5dd3",
     "results/v14/discovery/south_des_extension/main/sky_group_candidates.csv": "3ec21c938599b263c626197d3eeb709d67e2c5e919180ee058c4837e7409f0ad",
     "results/v14/discovery/south_ps1/main/sky_group_candidates.csv": "67d75a6001bc2fadddf03e2c84cf421873f73665b1460d23fdd502cdf521fbc3",
     "results/v2/summary/pilot_candidate_summary.csv": "de21d8dba9c22b92285218d5e874a784babeafff755192537995d7271c06adef",
@@ -136,9 +139,9 @@
     "wide_rollout/batch8/results/holdout/group_review_modes.csv": "b82a22f724600f4dcba9c775f7f1bdf73f19f4e218cc905d521e0da2840233f5",
     "wide_rollout/batch8/results/holdout/sky_group_candidates.csv": "756e1a0aef9cc870d7af15871e8e469216f87f6ab007f80d500ea15001a6b1b9"
   },
-  "records": 11134,
-  "modes": 30466,
-  "physical_candidate_associations": 6938,
+  "records": 11217,
+  "modes": 31846,
+  "physical_candidate_associations": 7000,
   "sga": {
     "north": {
       "sha256": "7371c306077ac15fa759370686669e80b57121b2497575387d235221bdd11afb",
@@ -151,8 +154,8 @@
   },
   "classifications": {
     "known_system_response": 143,
-    "known_complex_background": 1879,
-    "L0": 4912,
+    "known_complex_background": 1880,
+    "L0": 4973,
     "priority_L0": 4
   },
   "review_note": "Provisional cross-version linkage. Complete-link groups combine sky, scales, and distance modes. Potential 5 arcmin pairs and all surviving input hypotheses are available. No membership or image adjudication is implied by a provisional association."
