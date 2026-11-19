@@ -1,49 +1,21 @@
-# First human review package - not yet released
+# 第一批候选人工审查
 
-The user will review the cohort after the package is complete. Do not treat the old 33 reusable C/image packets as a completed 75-object human-review release. Do not fill scientific grades automatically. Previous assistant triage remains separate from the user's responses.
+固定分母为 **40 个优先位置和 35 个匿名位置**。只有 `package_manifest.json` 的 `ready_for_human_review=true` 才表示资料及版面检查完成。候选等级仍为 L0；这里没有代填人工判断。
 
-The registered denominator is unchanged: **40 priority positions and 35 exploratory anonymous audit positions**. No object is dropped because its fit is weak, its imagery is incomplete or its environment appears unfavorable.
+## 先完成匿名阶段
 
-## Package being prepared
+1. 只打开 `anonymous_phase1_only.zip`。其中包含 `blind_phase1.pdf`、B001–B035 的匿名 PNG 和 `responses_blank.csv`。
+2. 将空白表另存为自己的回答文件，逐个填写 `morphology`、`CMD`、`spatial`、`technical_concern`、`confidence`、`comments`，并填写 `reviewer` 和 `reviewed_utc`。判断可用简短中文；没有问题也请明确写“无”，证据不足请直接记录。保留所有 35 个编号。
+3. 将填好的表交回后，由程序绑定实际 PDF 和回答文件的哈希进行封存，再揭示身份、分数和环境资料。不要先打开 shortlist 的坐标表、身份键、C 表或环境索引。
 
-- `priority_review.pdf`: measured core/background CMDs with marginal errors and member markers; spatial distribution and fitted contour; native gr images and strongest contributors; radial/DM response; depth, seeing and extinction; all retained C modes, source-deletion statistics and known-object context.
-- `blind_phase1.pdf` and `anonymous_phase1_only.zip`: B001-B035 only, with relative spatial coordinates, measured CMDs/errors, usable-area masks and native gr pixels. Field identity, absolute coordinates, regional labels, discovery scores/ranks, C summary scores, known environments, processing-flag labels and earlier decisions stay outside this package. The separate image files have opaque names and stripped metadata.
-- Separate blank response CSVs. Priority decisions use follow-up / suspected contamination / known environment / insufficient evidence plus reasons. Anonymous phase 1 records morphology, CMD, spatial evidence, technical concerns and confidence before identity reveal.
+这部分先判断形态、星族相容性和空间聚集；分数、绝对坐标、已知对象及处理环境标签在阶段一隐藏。抽样有分层和空间排除，目前只支持探索性审查，不能直接当作审查完整度的无偏测量。
 
-The new evidence renderer reuses actual saved C membership and measured photometry on Slurm; it does not refit or change the frozen detection policy. Colour and vertical magnitude errors share g: displayed bars are marginal, not independent. Background CMDs have equal geometric area, so exposure masks must also be inspected. No positive C contributors is an actual outcome, not grounds to insert substitute stars.
+## 再审查优先位置
 
-## Completion and release checks
+打开 `priority_review.pdf`，在另存的 `priority_responses_blank.csv` 中逐项记录判断。建议 `decision` 使用“值得后随 / 疑似背景污染 / 已知系统环境 / 证据不足”，并说明依据。75 个位置均保留，不删除未过审者。
 
-1. Every frozen case has every required retained seed represented in its C table and a complete fit outcome; no silent case omission. Recheck the frozen case/mode/policy hashes.
-2. Every saved membership reproduces its local count, fitted richness normalization and local C likelihood. Verified per-source arrays are frozen on NERSC scratch. All full-mode diagnostic PNGs pass decode/CRC checks and have recorded hashes; supplementary panels use the verified snapshot and match the C table. Context includes discovery and fitted centres.
-3. Both priority and anonymous layouts pass raster inspection; anonymous panel headers and PDF text contain no identity/score/environment leaks. Material image-coverage gaps remain explicitly documented.
-4. The assembled `package_manifest.json` first records `materials_complete=true` and `ready_for_human_review=false`. After all PDF pages have been rasterized and inspected, layout/privacy QA sets the final human-release flag. The PDF builder refuses incomplete assembly. Internal drafts go under ignored `results/work/` and are not handed off for grading.
+每个优先位置包括实际测光的空间/CMD 页、原生 g/r 图像和贡献源小图、距离/径向响应、观测条件，以及全部保留 C 解和已知环境表。发现坐标与 C 拟合坐标分别标注，证据图以所注明的 C 中心绘制。完整模式的原始诊断图另外保存在本地/NERSC 的 shortlist `cases/` 或 `cached_cases/`，不属于匿名阶段资料。
 
-Current scheduler dependencies are recorded in `../priority_execution/jobs.json`. Existing C array 61556312 precedes membership verification 61559510, then full evidence job 61558007; context job 61556642 follows C. Package assembly 61558755 requires evidence, context and integrity. Prototype verification 61559482 checked two actual positions/six modes; its result is not a full-cohort pass. Queue-restoration guards handle failed C or integrity before deferring restoration to the end of evidence work. None of those submission records means full cohort completion.
+`g0/r0` 已去消光；颜色与 g 星等的误差共享 g，不能看成独立误差。`r_h` 是圆化半光角半径，单位角分；DM 为距离模数。C TS 及删去最高贡献源后的 TS 都是局部统计量，不是全搜索显著性。LS 的多个切选或方法不是独立观测确认。
 
-## Commands
-
-On NERSC, inside the allocated Slurm CPU environment:
-
-```sh
-bash scripts/v14_review_evidence.sh --require-all
-```
-
-After allowlisted aggregates and PNGs have been synced locally, use the Codex bundled PDF Python runtime or install the optional `review` extra (`pip install -e '.[review]'`). No PDF dependencies are required for search/CCD jobs.
-
-```sh
-python scripts/v14_review_pdf.py
-python scripts/v14_review_validate.py
-# Inspect every contact sheet and representative full-resolution pages first:
-python scripts/v14_review_validate.py --approve-layout
-# Internal layout QA only; this never marks a cohort released:
-python scripts/v14_review_pdf.py --allow-incomplete
-```
-
-Keep a separate copy of filled response forms; regeneration never overwrites them. After the user has completed all anonymous responses:
-
-```sh
-python scripts/v14_review_seal.py path/to/user_completed_blind_responses.csv
-```
-
-The seal binds actual user responses to the final PDF hash. Only then merge scientific judgments and reveal identity/score/context keys to build the final follow-up shortlist. Exploratory nonuniform audit sampling does not directly measure an unbiased review-completeness probability; reviewer agreement still requires independent human assessments.
+人工回答、匿名封存和后续科学分级是后续步骤；材料生成与技术版面 QA 不代表这些步骤已完成。

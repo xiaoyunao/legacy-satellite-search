@@ -2,6 +2,14 @@
 
 ## 2026-11-19
 
+### 全部 C 复核与 226 模式完整性验收
+
+- 61562188 / nid200010 内四个原冻结分片全部返回 C_SHARD_COMPLETE，随后 ALL_C_SHARDS_COMPLETE；75/75 位置的 C 表及全部原始诊断图完整。
+- 原命令 v14_review_integrity.sh 在计算节点完成：75 位置、226 模式，概率数目/唯一 ID/归一化与重建 TS 全通过；固定数组留 scratch，聚合 proof 已同步。v14_shortlist_context.sh 完成发现与拟合中心环境记录；统一补页和正式 PDF 正在同一分配实际生成，尚不开放人工审查。
+- 原 CCD 61556314 九任务再次确认全 PENDING 后加入退出回退账本并 hold；尚未启动物理 CCD 接管，不计新实现。重新读取原生对话，最新仍为 46d21aad，无后续新增要求。
+- 运行完整 unittest：46 项、44 通过、2 可选 PDF 环境跳过；两个新 hold 回退测试已实际通过。原始星表、图像 FITS 和成员数组未同步本地。
+- 下一步：完成 75 补页、PDF/匿名 ZIP 与全页 QA；在剩余自有分配串行执行首批登记 CCD，验证后再退役对应旧排队步骤，并恢复 bulk Nice。
+
 ### 获得本项目独立 CPU 分配并实际启动 C 接管
 
 - 原队列持续等待；核查 shared CPU 分区实际有 idle/mix 资源，未使用其他项目的分配。以 salloc --immediate=30 -A desi -N1 -n1 -c8 -C cpu -q shared_interactive --mem=64G -t03:00:00，并通过 srun 启动计算节点 shell，实际获批 61562188 / nid200010。节点内回读 SLURM_JOB_ID=61562188、CPUS_PER_TASK=8；sacct RUNNING，sstat 已有实际 CPU 和约 6 GB RSS。
