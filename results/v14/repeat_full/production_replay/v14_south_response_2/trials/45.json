@@ -1,0 +1,37 @@
+{
+  "row": {
+    "site": "v14_south_response_2",
+    "trial": 45,
+    "arm": "production_ls_base",
+    "D_kpc": 100,
+    "rh_pc": 10,
+    "target_MV_proxy": -1.5,
+    "realized_MV_proxy": -1.04208165860906,
+    "latent_population_id": 45,
+    "realization_id": 7,
+    "N_exposed": 82,
+    "N_used": 2,
+    "matched_N_exposed": 82,
+    "matched_N_used": 2,
+    "matched_spatial": "False",
+    "matched_correct_mode_exists": "False",
+    "matched_blind_correct": "False",
+    "matched_correct_mode_in_any_spatial_group": "False",
+    "blank_spatial": false,
+    "C_state": "not_run_for_production_replay_do_not_reuse_matched_C",
+    "spatial": false,
+    "blind_correct": false,
+    "correct_mode_exists": false,
+    "wide_mode_exists": false,
+    "n_spatial_matching_groups": 0,
+    "correct_mode_in_any_spatial_group": false
+  },
+  "input_sha256": {
+    "registration": "46fbb484ab168b4dbe4f770d0e1cc73f66242c605a8c749893d15cdeb1377e70",
+    "accepted": "97b586bc89d3bb1948162bedc6db3fa28f6d9c3dc900785bc981b8fbf2901641",
+    "catalogue": "6788e29c327ab41a769cbc15fa516511f2a8e950fbc44625be081021768b7742",
+    "truth": "5511f46253c5d2785467c2244979c6eac0e9e4dac4b9f62e32683bcbb98926f0",
+    "blank": "e80edaa960a4df5b74d4a1068ae0717282ebfc1eb70cd977ec2c95587961a8a9",
+    "exterior_and_mask": "a457d5705e7075779dce7ef10a54969ebc4eed64f91f71ab24b573c3e3f45cf2"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "utc": "2026-11-19T17:11:35.260715+00:00",
+  "coverage_job": "61584237",
+  "validation_job": "61584300",
+  "validation_command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c2",
+    "--mem=16G",
+    "-t",
+    "00:20:00",
+    "--dependency=afterok:61584237",
+    "-J",
+    "ls14-cosmos-native-validation",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; .venv/bin/python -u -m scripts.v14_cosmos_validate --native-coverage results/v14/repeat_full/cosmos_reference/native_image_coverage/manifest.json"
+  ],
+  "state": "submitted_not_accepted",
+  "source_sha256": {
+    "scripts/v14_cosmos_native_coverage.py": "fd42ba31581586ffbff138c667ac5afe3477925649c73d3ee538a05e4e8e025f",
+    "scripts/v14_cosmos_validate.py": "4ba892cd805252ded27cf815c3ef03a2932b0f90e9241a54a009de5055cc3381",
+    "configs/v14_cosmos_reference/native_coverage.yaml": "098ba3d8c409a09e4cd4e281b5ee2a4170f6daa73c736158bddc99aff6daf42f"
+  },
+  "motivation": "Actual strict-mask diagnostic61583938 finds192898/192929 LS-covered reference positions have census FOOT128. Independent calibration requires native PS1 exposure/mask coverage; do not alter census or production masks.",
+  "scope": "External single-source reference validation; not system Pdet, census membership, background transport or discovery area."
+}

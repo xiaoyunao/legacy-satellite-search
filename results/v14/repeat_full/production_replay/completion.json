@@ -1,0 +1,19 @@
+{
+  "job": "61579269",
+  "native_catalogue_replays": 144,
+  "backgrounds": 3,
+  "all_registered_baseline_replays_complete": true,
+  "registration_sha256": "46fbb484ab168b4dbe4f770d0e1cc73f66242c605a8c749893d15cdeb1377e70",
+  "source_sha256": {
+    "results/v14/repeat_full/production_replay/v14_south_response_1.csv": "c9e3c50813b750428db4189f7c3bfe6961cf49045e821b18bd4a89b01ab9a954",
+    "results/v14/repeat_full/production_replay/v14_south_response_1.json": "cf516485b8f22e646e1620a6840a09369479caceb7588d14533838e201d128f2",
+    "results/v14/repeat_full/production_replay/v14_south_response_2.csv": "b0bae64bea665dd601309a1b0120048b341d5a33f7c621145551424fdf65aa4f",
+    "results/v14/repeat_full/production_replay/v14_south_response_2.json": "53a2d992c8d2597a65fb7fb5261cc6a979043c6ca0ec1b207b7d0e2fd2ae3464",
+    "results/v14/repeat_full/production_replay/v14_south_response_3.csv": "4282a7453b51ab34de4b13ae3d947f0b72d71f13e86b9fe1a0ceb0feb4413aac",
+    "results/v14/repeat_full/production_replay/v14_south_response_3.json": "4cf5e0cf8f4cbd3889492ad7d1821a677a5f9f1ceda1fe0a36b470bfccbfc9a3"
+  },
+  "runner_sha256": "4f624ef32f5ad7aa8dc4ff88377e25905f070e6c5eb9dafb9f8ddff2c8628ef4",
+  "C_replayed": false,
+  "physical_PS1_response_validated": false,
+  "scope": "Production baseline on three existing control skies; no new CCD populations, candidate area, borrowed C fits or all-sky completeness."
+}

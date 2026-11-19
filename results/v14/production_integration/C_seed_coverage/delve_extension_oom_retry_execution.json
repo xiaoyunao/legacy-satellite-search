@@ -1,0 +1,72 @@
+{
+  "utc": "2026-11-19T17:07:48.642483+00:00",
+  "job": "61584021",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=128G",
+    "-t",
+    "04:00:00",
+    "--array=0,1,2,4%2",
+    "--dependency=afterany:61470264",
+    "-J",
+    "ls14-c-delve-ext-oom-retry",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "--wrap",
+    "export LS_SAT_REVIEW_TAG=oom_m; bash scripts/v14_review.sh v14 south_delve_extension 8"
+  ],
+  "source": "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv",
+  "source_sha256": "ca12c32172d971bf2d09c89b3bacebf794bf7797e91cfcf7785075d3497a61e3",
+  "original_array": "61470264",
+  "original_terminal_accounting": "61470264_0|OUT_OF_MEMORY|0:125|00:12:35\n61470264_1|OUT_OF_MEMORY|0:125|00:31:48\n61470264_2|OUT_OF_MEMORY|0:125|00:03:43\n61470264_3|RUNNING|0:0|00:14:09\n61470264_4|OUT_OF_MEMORY|0:125|00:09:16\n61470264_5|RUNNING|0:0|00:03:59\n61470264_[6-7%2]|PENDING|0:0|00:00:00\n",
+  "failed_shards": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "strict_preflight_counts": [
+    {
+      "index": 0,
+      "seeds": 217,
+      "groups": 57
+    },
+    {
+      "index": 1,
+      "seeds": 433,
+      "groups": 118
+    },
+    {
+      "index": 2,
+      "seeds": 98,
+      "groups": 34
+    },
+    {
+      "index": 4,
+      "seeds": 535,
+      "groups": 203
+    }
+  ],
+  "state": "submitted_not_complete",
+  "scope": "Same production records, selected seeds and C implementation; retry actual OOM shards only with larger memory/walltime. Other original shards remain live. No human grading or new discovery threshold.",
+  "release_dependencies": {
+    "61470267": {
+      "previous": "afterany:61470252_*(unfulfilled),afterany:61470256_*(unfulfilled),afterany:61470260_*(unfulfilled),afterany:61470264_*(unfulfilled),afterany:61470266_*(unfulfilled)",
+      "current": "afterany:61470252,afterany:61470256,afterany:61470260,afterany:61470264,afterany:61470266,afterany:61584021"
+    },
+    "61470508": {
+      "previous": "afterany:61470267(unfulfilled)",
+      "current": "afterany:61470267,afterany:61584021"
+    }
+  }
+}

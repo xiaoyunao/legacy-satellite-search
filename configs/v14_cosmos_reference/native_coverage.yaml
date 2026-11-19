@@ -1,0 +1,15 @@
+image_list_service: https://ps1images.stsci.edu/cgi-bin/ps1filenames.py
+image_root: https://ps1images.stsci.edu
+requested_positions:
+- [149.9, 2.0]
+- [149.9, 2.4]
+- [150.3, 2.0]
+- [150.3, 2.4]
+filters: gri
+products: [stack.exp, stack.mask]
+rejected_pixel_flags: [2, 4, 8, 16, 32, 64, 256, 512, 1024, 2048, 4096, 8192]
+coverage_rule: Finite positive native stack exposure time and no listed fatal/contamination pixel bits in each of g,r,i, intersected with actual LS WCS exposure/mask area. Union repeated skycells per band before requiring all three bands. No source density or detected-object requirement defines area. This is central-pixel coverage, not PSF-weighted selection completeness.
+image_documentation: https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812251/PS1+Image+Cutout+Service
+mask_documentation: https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812335/PS1+Pixel+flags+in+Image+Table+Data
+census_mask_role: Preserve the unsuccessful strict census-mask branch separately; bit128 excludes most COSMOS reference positions although actual DR2 primary catalogue exists. Native-image coverage validates an external reference field, not membership in the published census search footprint.
+scope: Targeted external single-source response validation. No new discovery area, primary CCD background, candidate confirmation or validated transport to the three physical backgrounds.

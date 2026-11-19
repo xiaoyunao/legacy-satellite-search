@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-19T15:28:00+00:00",
+  "updated_utc": "2026-11-19T17:10:00+00:00",
   "policy_source": "GPT Pro 437262c6; user next-round prompt 2026-11-19",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -9,9 +9,9 @@
     "package_manifest_sha256": "7900621c7b3974629dce4501deb3393797893c8779cee5aee3b57d8a758b29b8"
   },
   "gates": {
-    "full_search_terminal_accounting": "5753 complete +25 no-valid-gr /6891 at15:09Z; live scans/retries remain",
+    "full_search_terminal_accounting": "6116 complete +28 no-valid-gr /6891 at16:58Z; live scans/retries remain; no uncovered retry gaps",
     "historical_production_and_exact_mask_union": "7994 qualified source records /7822 provisional positions; exact global union has GEOS repair61579696\u219261579698 pending",
-    "same_eligible_record_C_complete": "Exact seed audit incomplete; North timeout0/2 retry61579635 and regional chains still active",
+    "same_eligible_record_C_complete": "North timeout retry61579635 both completed; South DELVE-extension OOM retry61584021 and regional chains still active. Exact final required-seed completeness pending.",
     "all_final_objects_images_and_evidence": "pending",
     "final_sampling_inclusion_probabilities": "Not drawn. Interim5arcmin connected components can chain over>40arcmin; final review units require constituent/environment retention before probability sampling",
     "final_anonymity_and_page_QA": "pending"
@@ -23,11 +23,16 @@
     "legacy_matched_LS_arm_measurements_accepted": 288,
     "physical_PS1_response_validated": false,
     "formal_production_policy_replay_job": "61579269",
-    "formal_replay_state": "running_not_accepted",
+    "formal_replay_state": "accepted_144_baseline_scans_C_not_replayed",
     "targeted_30pc_boundary_chain": [
       "61579773",
       "61579774",
       "61579782"
-    ]
+    ],
+    "formal_replay_acceptance_job": "61582141",
+    "formal_baseline_spatial_recoveries": 39,
+    "formal_baseline_highest_DM_correct": 31,
+    "formal_baseline_retained_DM_correct": 35,
+    "independent_reference_state": "Strict census-mask FOOT128 excludes most references; native-image coverage61584237 and independent validation61584300 submitted, not accepted"
   }
 }

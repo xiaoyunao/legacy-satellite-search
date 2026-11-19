@@ -1,5 +1,14 @@
 # Decisions
 
+## 2026-11-19T17:10Z — accepted formal-policy baseline; retain failed reference scope
+
+- **Evidence:** formal replay61579269 and corrected metadata acceptance61582141 certify144 same-catalogue baseline scans.39/144 spatial,31 highest-correct,35 retained-correct. **Decision:** publish this as the formal policy response in three selected control interiors, separate from legacy matched-budget depth results; no borrowed C, actual-owned-edge transfer or physical PS1 claim.
+- **Evidence:** independent-reference61583502 completes but leaves29 common-mask reference positions/two stars and zero supported bins, despite198942 extracted reference sources. **Decision:** inspect LS versus PS1/census bit losses on compute; preserve the unsuccessful strict-mask run and do not tune stellar truth cuts to manufacture validation.
+- **Evidence:** m has6116 completed fields and six live-covered retry gaps, zero uncovered. Packed113 has accepted product proofs. **Decision:** follow current jobs without redundant submissions; historical union and final review remain unfrozen.
+
+- **Evidence:** actual mask diagnostic61583938 finds192898/192929 LS-covered references carry PS1 census FOOT128; LS itself covers192929 of192970 core references. **Decision:** retain strict-census results, and acquire a separately registered four-position native PS1 exposure/mask control to define the external-reference denominator. Production/census masks stay unchanged. Official PS1 DR1/DR2 are3pi products; Medium Deep stacks are excluded ([MAST archive](https://outerspace.stsci.edu/spaces/PANSTARRS/overview)).
+- **Evidence:** South DELVE-extension C shards0/1/2/4 hit18G OOM, batch RSS~18GiB (18845316KiB). **Decision:** exact-source retry61584021 uses128G/four-hour limits after the original array, with strict completed-source exclusion; both global release dependencies retain this new owner. North retry61579635 both shards completed. No search/selection or scientific threshold change.
+
 ## 2026-11-19T15:40Z Observed stamp sensitivity and context-preserving production integration
 
 - The30pc bright ceiling guard was insufficient. Select the unique mixed-background30pc draw34 for a registered targeted boundary check, preserving all primary144 products. Its baseline1/3→2/3 response proves that truncation can matter at a boundary;46eligible members remain outside. Report the one-draw effect and residual omission, without a population correction or retrospective grid change.

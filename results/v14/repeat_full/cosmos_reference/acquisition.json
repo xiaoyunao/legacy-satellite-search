@@ -1,0 +1,181 @@
+{
+  "job": "61582406",
+  "utc": "2026-11-19T16:33:37.314852+00:00",
+  "config_sha256": "e1543fc321a2951b41a3e4760631b2c72bd2b64ae87ad49cbde7c8ad0b601c5b",
+  "code_sha256": "f877f2cac11ea546513ab6fdeba685cc5cfdf1e62923e6bd8ec178e5d4d55037",
+  "source_url": "https://irsa.ipac.caltech.edu/data/COSMOS/tables/cosmos2020/COSMOS2020_FARMER_R1_v2.2_p3.fits.gz",
+  "version": "COSMOS2020 Farmer v2.2 / UltraVISTA DR4.1.1",
+  "archive_path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/COSMOS2020_FARMER_R1_v2.2_p3.fits.gz",
+  "archive_bytes": 2125875783,
+  "archive_sha256": "5e51cb525b4a857681afac92ce21af82fae80ed77eb1db94977c5268d391061d",
+  "gzip_integrity_checked_during_decompression": true,
+  "source_rows": 964506,
+  "extracted_rows": 198942,
+  "subset_path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/farmer_observed_g17_25p5.npy",
+  "subset_sha256": "4713451bd308cfcb19b5cb502a0b4672818a6074015d029bb4e259eec63bb796",
+  "schema": {
+    "ID": {
+      "original_name": "ID",
+      "unit": ""
+    },
+    "RA": {
+      "original_name": "ALPHA_J2000",
+      "unit": "deg"
+    },
+    "DEC": {
+      "original_name": "DELTA_J2000",
+      "unit": "deg"
+    },
+    "HSC_G_MAG": {
+      "original_name": "HSC_g_MAG",
+      "unit": "mag"
+    },
+    "HSC_R_MAG": {
+      "original_name": "HSC_r_MAG",
+      "unit": "mag"
+    },
+    "HSC_I_MAG": {
+      "original_name": "HSC_i_MAG",
+      "unit": "mag"
+    },
+    "HSC_G_FLUX": {
+      "original_name": "HSC_g_FLUX",
+      "unit": "uJy"
+    },
+    "HSC_G_FLUXERR": {
+      "original_name": "HSC_g_FLUXERR",
+      "unit": "uJy"
+    },
+    "HSC_R_FLUX": {
+      "original_name": "HSC_r_FLUX",
+      "unit": "uJy"
+    },
+    "HSC_R_FLUXERR": {
+      "original_name": "HSC_r_FLUXERR",
+      "unit": "uJy"
+    },
+    "HSC_G_VALID": {
+      "original_name": "HSC_g_VALID",
+      "unit": ""
+    },
+    "HSC_R_VALID": {
+      "original_name": "HSC_r_VALID",
+      "unit": ""
+    },
+    "ACS_MU_CLASS": {
+      "original_name": "ACS_MU_CLASS",
+      "unit": ""
+    },
+    "LP_TYPE": {
+      "original_name": "lp_type",
+      "unit": ""
+    },
+    "FLAG_HSC": {
+      "original_name": "FLAG_HSC",
+      "unit": ""
+    },
+    "EBV_MW": {
+      "original_name": "EBV_MW",
+      "unit": ""
+    },
+    "ID_ACS": {
+      "original_name": "ID_ACS",
+      "unit": ""
+    },
+    "HSC_G_MAGERR": {
+      "original_name": "HSC_g_MAGERR",
+      "unit": "mag"
+    },
+    "HSC_R_MAGERR": {
+      "original_name": "HSC_r_MAGERR",
+      "unit": "mag"
+    },
+    "HSC_I_MAGERR": {
+      "original_name": "HSC_i_MAGERR",
+      "unit": "mag"
+    },
+    "HSC_I_FLUX": {
+      "original_name": "HSC_i_FLUX",
+      "unit": "uJy"
+    },
+    "HSC_I_FLUXERR": {
+      "original_name": "HSC_i_FLUXERR",
+      "unit": "uJy"
+    },
+    "HSC_I_VALID": {
+      "original_name": "HSC_i_VALID",
+      "unit": ""
+    },
+    "ACS_F814W_FLUX": {
+      "original_name": "ACS_F814W_FLUX",
+      "unit": "uJy"
+    },
+    "ACS_F814W_FLUXERR": {
+      "original_name": "ACS_F814W_FLUXERR",
+      "unit": "uJy"
+    },
+    "ACS_FWHM_WORLD": {
+      "original_name": "ACS_FWHM_WORLD",
+      "unit": "deg"
+    },
+    "ACS_A_WORLD": {
+      "original_name": "ACS_A_WORLD",
+      "unit": "deg"
+    },
+    "ACS_B_WORLD": {
+      "original_name": "ACS_B_WORLD",
+      "unit": "deg"
+    },
+    "LP_CHIS": {
+      "original_name": "lp_chis",
+      "unit": ""
+    },
+    "LP_CHIQ": {
+      "original_name": "lp_chiq",
+      "unit": ""
+    },
+    "LP_CHI2_BEST": {
+      "original_name": "lp_chi2_best",
+      "unit": ""
+    },
+    "FLAG_UVISTA": {
+      "original_name": "FLAG_UVISTA",
+      "unit": ""
+    },
+    "FLAG_COMBINED": {
+      "original_name": "FLAG_COMBINED",
+      "unit": ""
+    },
+    "MODEL_FLAG": {
+      "original_name": "MODEL_FLAG",
+      "unit": ""
+    },
+    "SOLUTION_MODEL": {
+      "original_name": "SOLUTION_MODEL",
+      "unit": ""
+    },
+    "N_GROUP": {
+      "original_name": "N_GROUP",
+      "unit": ""
+    }
+  },
+  "optional_missing": [
+    "ACS_CLASS_STAR",
+    "ACS_FLAGS",
+    "VALID_SOURCE"
+  ],
+  "morphology_counts": {
+    "1": 150347,
+    "-99": 39270,
+    "2": 9315,
+    "3": 10
+  },
+  "SED_type_counts": {
+    "0": 187178,
+    "1": 8303,
+    "-99": 1877,
+    "2": 1584
+  },
+  "physical_PS1_transfer_validated": false,
+  "scope": "Independent ACS morphology and deep HSC photometry to assess LS proxy purity and PS1 response estimation in one control field. A stellar reference requires ACS_MU_CLASS=2 and lp_type=1; resolved/SED galaxies and ambiguous labels stay separate. The catalogue is near-infrared detection selected; photometry is observed, not MW-corrected, and quoted errors lack correlated-noise correction. No HSC-to-DECam/PS1 identity is assumed. Agreement is not perfect truth, and neither transfer to the three physical backgrounds nor compact-system mutual crowding is validated by this reference alone. This is not new discovery area or a new primary CCD background."
+}

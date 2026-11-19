@@ -1,0 +1,24 @@
+width_deg: 1.6
+buffer_arcmin: 0
+dm:
+- 16.5
+- 20.75
+- 0.25
+radii_arcmin:
+- 0.5
+- 1
+- 2
+- 4
+review_budgets_deg2:
+- 0.1
+- 0.3
+fields:
+- id: v14_cosmos_reference
+  ra: 150.1
+  dec: 2.2
+  region: south
+  role: external_reference_calibration
+scope: Independent COSMOS reference-data acquisition only. Not a production field,
+  discovery area, detector calibration field, or additional primary CCD background.
+  PS1 DR2 stack primary photometry uses the existing frozen columns, paging and stage
+  definitions.

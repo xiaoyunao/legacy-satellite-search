@@ -1,0 +1,7 @@
+{
+  "job": "61583938",
+  "execution_source": "logs/v14_cosmos_mask_diagnostic.py",
+  "published_identical_source": "scripts/v14_cosmos_mask_diagnostic.py",
+  "code_sha256": "48f0fcce52550f3586932fddb936115a3bcbfc4b8ba7b79bccef4fc8d681d848",
+  "scope": "Metadata/bit-loss diagnosis on compute; no detector or production mask change."
+}

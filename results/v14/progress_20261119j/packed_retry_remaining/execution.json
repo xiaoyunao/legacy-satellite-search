@@ -1,5 +1,5 @@
 {
-  "state": "submitted_not_complete",
+  "state": "packed_fields_accepted",
   "original_pending_holds": [
     "61568908_18",
     "61568908_19",
@@ -198,6 +198,461 @@
       "job": "61568973",
       "previous": "afterany:61568908_*(unfulfilled)",
       "new": "afterany:61568908,afterany:61575704"
+    }
+  ],
+  "guard_job": "61575704",
+  "guard_actions": [
+    {
+      "job": "61568908_18",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_19",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_20",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_21",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_22",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_23",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_24",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_25",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_26",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_27",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_28",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_29",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_30",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_31",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_32",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_33",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_34",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_35",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_36",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_37",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_38",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_39",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_40",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_41",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_42",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_43",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_44",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_45",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_46",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_47",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_48",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_49",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_50",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_51",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_52",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_53",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_54",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_55",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_56",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_57",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_58",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_59",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_60",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_61",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_62",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_63",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_64",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_65",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_66",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_67",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_68",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_69",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_70",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_71",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_72",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_73",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_74",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_75",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_76",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_77",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_78",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_79",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_80",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_81",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_82",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_83",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_84",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_85",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_86",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_87",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_88",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_89",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_90",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_91",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_92",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_93",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_94",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_95",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_96",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_97",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_98",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_99",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_100",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_101",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_102",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_103",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_104",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_105",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_106",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_107",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_108",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_109",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_110",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_111",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_112",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_113",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_114",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_115",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_116",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_117",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_118",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_119",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_120",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_121",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_122",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_123",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_124",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_125",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_126",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_127",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_128",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_129",
+      "action": "superseded_after_real_terminal_manifests"
+    },
+    {
+      "job": "61568908_130",
+      "action": "superseded_after_real_terminal_manifests"
     }
   ]
 }

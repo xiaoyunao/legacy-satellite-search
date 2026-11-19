@@ -1,0 +1,42 @@
+{
+  "row": {
+    "site": "v14_south_response_2",
+    "trial": 28,
+    "arm": "production_ls_base",
+    "D_kpc": 100,
+    "rh_pc": 30,
+    "target_MV_proxy": -3.0,
+    "realized_MV_proxy": -3.196689013775194,
+    "latent_population_id": 28,
+    "realization_id": 4,
+    "N_exposed": 245,
+    "N_used": 21,
+    "matched_N_exposed": 245,
+    "matched_N_used": 21,
+    "matched_spatial": "True",
+    "matched_correct_mode_exists": "True",
+    "matched_blind_correct": "True",
+    "matched_correct_mode_in_any_spatial_group": "True",
+    "blank_spatial": false,
+    "C_state": "not_run_for_production_replay_do_not_reuse_matched_C",
+    "spatial": true,
+    "blind_dm": 20.25,
+    "blind_dm_error": 0.25,
+    "blind_correct": true,
+    "correct_mode_exists": true,
+    "correct_mode_dm": 20.25,
+    "wide_mode_exists": true,
+    "offset_arcmin": 0.1613553102359897,
+    "representative_channel": "A_base",
+    "n_spatial_matching_groups": 1,
+    "correct_mode_in_any_spatial_group": true
+  },
+  "input_sha256": {
+    "registration": "46fbb484ab168b4dbe4f770d0e1cc73f66242c605a8c749893d15cdeb1377e70",
+    "accepted": "97b586bc89d3bb1948162bedc6db3fa28f6d9c3dc900785bc981b8fbf2901641",
+    "catalogue": "27de1768662c1ded6445efe2518ea2f74a9e0f4a29a4dca65c927a89d79b6dce",
+    "truth": "8a590039537d57e427ab6378d57efe3fd8c8d4655e08e7261916d99a0f48b176",
+    "blank": "e80edaa960a4df5b74d4a1068ae0717282ebfc1eb70cd977ec2c95587961a8a9",
+    "exterior_and_mask": "a457d5705e7075779dce7ef10a54969ebc4eed64f91f71ab24b573c3e3f45cf2"
+  }
+}

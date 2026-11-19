@@ -1,0 +1,25 @@
+{
+  "input_sha256": {
+    "results/v14/repeat_full/production_replay/completion.json": "f117042fa7c0517d6c74530db04aab75184835ffcde434b1c54bf686a709c77c",
+    "results/v14/repeat_full/production_replay/registration.json": "46fbb484ab168b4dbe4f770d0e1cc73f66242c605a8c749893d15cdeb1377e70",
+    "results/v14_repeat_full/image_response/v14_south_response_1-blind.csv": "87a79eb5ccc3bf165d03564bd31ea0f79d6f7b6ca458a77c2538689fc92b4fa9",
+    "results/v14_repeat_full/image_response/v14_south_response_2-blind.csv": "1bf7416c4dacc256a5c5255d8fb4db10677e0affdee56bb9bce2f5abc1c02cdc",
+    "results/v14_repeat_full/image_response/v14_south_response_3-blind.csv": "d2cf9224453af96a5523c4ffe1193f3fad7a0d2c57203f0ff76ea97dadf6a097",
+    "results/v14/repeat_full/full_summary.csv": "0ad609e97922f34d6786c45e4da2df0476737ab48b2db1f65b9e8f1ca3cdab7c",
+    "results/v14/repeat_full/full_acceptance.json": "97b586bc89d3bb1948162bedc6db3fa28f6d9c3dc900785bc981b8fbf2901641",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/isochrones/des/bressan2012/iso_a12.0_z0.00010.dat": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+    "results/v14/repeat_full/production_replay/v14_south_response_1.csv": "c9e3c50813b750428db4189f7c3bfe6961cf49045e821b18bd4a89b01ab9a954",
+    "results/v14/repeat_full/production_replay/v14_south_response_1.json": "cf516485b8f22e646e1620a6840a09369479caceb7588d14533838e201d128f2",
+    "results/v14/repeat_full/production_replay/v14_south_response_2.csv": "b0bae64bea665dd601309a1b0120048b341d5a33f7c621145551424fdf65aa4f",
+    "results/v14/repeat_full/production_replay/v14_south_response_2.json": "53a2d992c8d2597a65fb7fb5261cc6a979043c6ca0ec1b207b7d0e2fd2ae3464",
+    "results/v14/repeat_full/production_replay/v14_south_response_3.csv": "4282a7453b51ab34de4b13ae3d947f0b72d71f13e86b9fe1a0ceb0feb4413aac",
+    "results/v14/repeat_full/production_replay/v14_south_response_3.json": "4cf5e0cf8f4cbd3889492ad7d1821a677a5f9f1ceda1fe0a36b470bfccbfc9a3"
+  },
+  "code_sha256": "e53a1c23509848a1d572f28f742a249461b0829655d012c99f6e08e579229e7b",
+  "accepted_formal_baseline_replays": 144,
+  "unique_populations": 48,
+  "backgrounds": 3,
+  "C_replayed": false,
+  "physical_PS1_response_validated": false,
+  "scope": "Frozen production-baseline A in three selected control interiors. Pooled fractions are descriptive; each fixed-background physical cell has eight independent IMF draws with exact marginal Monte Carlo intervals. The matched versus production difference changes grid, spatial trials, mask/context and cut together, not a causal single-setting effect. Shared populations, V-proxy luminosities, finite rendering/stamp, physical PS1 validation, owned-edge transfer and C/human review remain separate. No physical LS\u2212PS1 gain, continuous completeness contour or population inference."
+}

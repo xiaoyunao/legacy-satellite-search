@@ -1,0 +1,56 @@
+{
+  "job": "61579152",
+  "worklist_sha256": "26ec4c635e475d6bfe3aa21bc6aeaf03fb079bd1d15785f14f24cf8fcc2025ea",
+  "node": "nid004257",
+  "results": [
+    {
+      "field": "v14_south_outside_census_extension_0178",
+      "state": "complete",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "field": "v14_south_outside_census_extension_0179",
+      "state": "complete",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "field": "v14_south_outside_census_extension_0180",
+      "state": "complete",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "field": "v14_south_outside_census_extension_0181",
+      "state": "complete",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "field": "v14_south_outside_census_extension_0182",
+      "state": "complete",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "field": "v14_south_outside_census_extension_0183",
+      "state": "complete",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "field": "v14_south_outside_census_extension_0184",
+      "state": "complete",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "field": "v14_south_outside_census_extension_0185",
+      "state": "complete",
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "code_sha256": "c1696dc2e2be61af3a85f6c75354e654866ac7619b66cf00b029dccf1e3bed0a"
+}

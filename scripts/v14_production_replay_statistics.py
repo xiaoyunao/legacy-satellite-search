@@ -18,11 +18,18 @@ def run():
     if done['registration_sha256']!=sha(registration):raise ValueError('Replay policy registration changed')
     sources={str(completion):sha(completion),str(registration):sha(registration)}
     legacy=ROOT.parent/'full_summary.csv';legacy_proof=ROOT.parent/'full_acceptance.json'
-    if sha(legacy)!=json.loads(legacy_proof.read_text())['summary_sha256']:
+    legacy_accepted=json.loads(legacy_proof.read_text())
+    if sha(legacy)!=legacy_accepted['summary_sha256']:
         raise ValueError('Accepted legacy comparison changed')
     from scripts.v13_image_trials import template_paths
     model=template_paths(Path(os.environ['LS_SAT_DATA']),json.loads(registration.read_text())['configuration'])[0]
-    if {r['model_sha256'] for r in read_csv(legacy)}!={sha(model)}:
+    model_checks=set()
+    for name,digest in legacy_accepted['source_sha256'].items():
+        if not name.endswith('-blind.csv'):continue
+        if sha(Path(name))!=digest:raise ValueError('Accepted original measurement changed')
+        model_checks.update(r['model_sha256'] for r in read_csv(Path(name)))
+        sources[name]=digest
+    if model_checks!={sha(model)}:
         raise ValueError('Physical template differs from accepted legacy experiment')
     sources.update({str(p):sha(p) for p in (legacy,legacy_proof,model)})
     for name,digest in done['source_sha256'].items():

@@ -1,0 +1,16 @@
+source_url: https://irsa.ipac.caltech.edu/data/COSMOS/tables/cosmos2020/COSMOS2020_FARMER_R1_v2.2_p3.fits.gz
+expected_archive_bytes: 2125875783
+version: COSMOS2020 Farmer v2.2 / UltraVISTA DR4.1.1
+documentation: https://irsa.ipac.caltech.edu/data/COSMOS/tables/cosmos2020/COSMOS2020_DR4_1_1.pdf
+column_documentation: https://irsa.ipac.caltech.edu/data/COSMOS/gator_docs/cosmos2020f_colDescriptions.html
+reference_paper: https://arxiv.org/abs/2110.13923
+doi: 10.26131/IRSA178
+acknowledgement_source: https://irsa.ipac.caltech.edu/data/COSMOS/tables/cosmos2020/COSMOS2020_DR4_1_1.pdf
+extract_observed_HSC_g: [17, 25.5]
+reference_blue_observed_HSC_gr: [-0.2, 0.6]
+reference_faint_observed_HSC_g: [22.5, 24.5]
+quoted_HSC_gr_min_flux_SNR: 20
+minimum_references_per_supported_bin: 20
+source_ID_holdout_seed: 487489
+holdout_fraction: 0.5
+scope: Independent ACS morphology and deep HSC photometry to assess LS proxy purity and PS1 response estimation in one control field. A stellar reference requires ACS_MU_CLASS=2 and lp_type=1; resolved/SED galaxies and ambiguous labels stay separate. The catalogue is near-infrared detection selected; photometry is observed, not MW-corrected, and quoted errors lack correlated-noise correction. No HSC-to-DECam/PS1 identity is assumed. Agreement is not perfect truth, and neither transfer to the three physical backgrounds nor compact-system mutual crowding is validated by this reference alone. This is not new discovery area or a new primary CCD background.

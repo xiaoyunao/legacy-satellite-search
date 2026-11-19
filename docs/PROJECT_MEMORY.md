@@ -1,5 +1,13 @@
 # 当前科学主线
 
+## 2026-11-19T17:10Z — production policy transfer measured; protect the reference denominator
+
+The same144 native catalogues now pass the frozen formal A-baseline replay:39 spatial recoveries,31 correct highest-distance modes and35 correct retained modes. Available baseline member count1170 is unchanged. The old matched-budget40/64 depth contrast is a different policy experiment; formal-baseline39 versus matched-deeper64 is not a paired depth comparison. No C or human certification is borrowed across these policies.
+
+Independent COSMOS/ACS+HSC reference data and actual PS1 DR2 catalogues are downloaded, but the first LS/census-mask intersection leaves only29 reference positions and two morphology+SED stars. Investigate the actual mask loss before concluding the reference lacks information or applying a response. The actual mask diagnostic identifies FOOT128 on192898/192929 LS-covered references. Preserve this strict-census branch; a separately registered native PS1 exposure/mask branch61584237→61584300 will test the external reference without changing production/census masks. No supported faint-blue PS1 calibration exists at this checkpoint. COSMOS reference labels are independent morphology/SED proxies, not perfect truth; near-IR selection, passbands, quoted uncorrected errors, epoch/matching and transfer to our three physical backgrounds remain separate limits.
+
+Continue real production closure. The final human review remains one whole-project delivery after all gates; preserve original75 identity/history and no machine-filled grades.
+
 ## 2026-11-19T15:40Z — finite-stamp bias is observed; preserve environmental context
 
 The completed near-threshold30pc draw34 changes baseline recovery from1/3 to2/3 across three backgrounds when11 previously excluded outer members are rendered; deeper remains3/3. Both variants use the same larger splice and original control counts reproduce the primary experiment. Forty-six of324magnitude-eligible members are still omitted. This is one targeted population, not six independent tests or a population correction. Member-origin61581071 confirms that all original baseline selected members survive, while the extra2/1/2are added outer stars; rendered true-light proxy19.20587→23.56514, or73.1%→89.7% of full IMF proxy. Photon-noise/fit coupling is still not an independent systematic-bias measurement. The original144 curves are explicitly conditional on finite rendering/stamps, and their internal depth effect must not be promoted to unbiased physical completeness.

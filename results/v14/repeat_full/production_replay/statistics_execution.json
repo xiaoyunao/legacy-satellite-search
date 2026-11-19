@@ -1,5 +1,5 @@
 {
-  "job": "61580560",
+  "job": "61582141",
   "command": [
     "sbatch",
     "--parsable",
@@ -23,5 +23,42 @@
     "--wrap",
     "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg; .venv/bin/python -u -m scripts.v14_production_replay_statistics"
   ],
-  "state": "submitted_not_complete"
+  "state": "statistics_only_retry_submitted_not_complete",
+  "short_validation_QOS_update": {
+    "command": [
+      "scontrol",
+      "update",
+      "JobId=61580560",
+      "QOS=debug",
+      "TimeLimit=00:15:00"
+    ],
+    "returncode": 0,
+    "output": ""
+  },
+  "failed_attempt": {
+    "job": "61580560",
+    "reason": "KeyError:model_sha256 in compact summary; validate template hashes against the three accepted original blind measurement tables instead. No native or blind replays rerun."
+  },
+  "retry_command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c2",
+    "--mem=8G",
+    "-t",
+    "00:15:00",
+    "-J",
+    "ls14-production-replay-statistics-retry",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_SAT_DATA=$PSCRATCH/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg; .venv/bin/python -u -m scripts.v14_production_replay_statistics"
+  ]
 }

@@ -1,0 +1,6 @@
+{
+  "job": "61574870",
+  "state": "canceled_pending_never_satisfiable_dependency",
+  "replacement_collect": "61579698",
+  "reason": "Original tile array has terminal failures; original afterok collector cannot run. Registered repair+new collector preserve actual source/mask proofs."
+}

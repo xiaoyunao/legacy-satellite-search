@@ -1,5 +1,18 @@
 # Work log
 
+## 2026-11-20
+
+### 01:10 CST / 17:10Z previous UTC date — formal replay and reference data
+
+- Manifest m16:58Z: **6116/6891 complete +28 no_usable_gr**, all no-usable masks have zero positive valid area. Summed R14 owned area **24023.278130787032 deg²**; this is not the deduplicated historical union or a measured-gain area.174 registered retry fields:168 accepted,6 live-covered,**zero uncovered**. Do not submit duplicates.
+- Packed113 retry61575703 and guard61575704 accepted all113 fields; original held fallback tasks retired only after per-field product checks. Original bulk outside-census scans and regional C continue.
+- Formal A-baseline same-catalogue replay61579269 **COMPLETED/51:52**; statistics61582141 **COMPLETED/35s** and accepted all144. Spatial39/144, highest-DM correct31/144, retained-correct35/144; selected members1170 unchanged. C was not replayed. Original matched-budget baseline40/deeper64 remains a separate experiment. Never compare formal39 directly with matched-deeper64 as a depth effect.
+- Initial statistics61580560 failed because the compact summary lacks model_sha256; corrected the metadata-only validator to verify the accepted raw blind CSVs and their parent hashes. No native realization or scan was repeated for this repair.
+- Independent COSMOS2020 Farmer v2.2/DR4.1.1 download61582406 completed and checksum/CRC/schema passed:964506 source rows,198942 observed-HSC-g17–25.5 extracted rows remain exclusively on NERSC. PS1 DR2 nine-cone acquisition61582407 completed. Raw Phase3 coordinate aliases ALPHA_J2000/DELTA_J2000 are explicitly normalized; first alias-read failure61582112 is preserved.
+- First reference test61583502 completed, but the common LS/census-PS1 mask leaves only0.00118634 deg²,29 reference positions,2 morphology+SED stars and0 faint-blue stars; **no supported validation bins**. This is not a PS1 calibration or evidence that the full deep reference lacks stars. A compute-node mask diagnostic is investigating the lost denominator before any response use. No physical PS1 transfer or system-level LS−PS1 gain is accepted.
+- North C61579635 shard2 completed; shard0 was still running at17:03Z. Area repair61579696 completed first12 shards; remaining12/collector61579698 were live/pending. These are not final provenance/area closure.
+- Original75 review files/identities/hash records unchanged; all human grades remain blank. Final release is deferred until terminal production, common-clock union/identity/C, complete evidence, probability sampling and anonymous/page QA pass. No interim user grading, new-system promotion or manuscript writing.
+
 ### Complete144 matched-budget CCD measurements; register production-policy replay
 
 - Native owner61572579 and guarded handoff completed all144 frozen native products. Three disjoint measurement workers in61576217 completed288 LS arms/6048 stage rows; full acceptance14:27Z verifies shared populations, source hashes and monotonic true-light stage bookkeeping. Original nine proofs remain unchanged. Serial pending measurement/acceptance gates were retired only after producer proof validation.
@@ -10,6 +23,8 @@
 - Actual geometry vectors61574867 all32 and index61574868 complete; tile array61574869 has GEOS overlay failures, so area collect61574870 is not certified. Diagnostic61579303 isolates failed polygon overlays; successful products retained. Four OOM retries61575366 all completed. Packed113 retry chain remains active.
 - Resource handoff61577933 failed before reading scientific data: launch was attempted after an installer rejected a running pilot. Original pilot was unaffected. Dependent launch now requires explicit prior success; full replay uses a simple separate registered batch, with no takeover.
 - Next: finish actual formal replay, repair only failed area operations with measured numerical QA, reconcile latest search/retry manifests and source-qualified production/C, then final evidence/anonymity/page QA. Final75release unchanged; user review deferred until the whole production sample converges.
+
+- Follow-up: native reference denominator diagnosis61583938 identifies census FOOT128, not absent LS exposure. Native PS1 exposure/mask acquisition61584237→external validation61584300 is registered separately; no production-mask change. South DELVE-extension C OOM0/1/2/4 registered61584021 (128G), global release dependencies extended. North61579635 both shards now COMPLETED.62 local tests pass,2skip; changed Python modules parse.
 
 ## 2026-11-19
 

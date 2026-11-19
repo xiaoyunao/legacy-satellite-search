@@ -1,0 +1,2156 @@
+{
+  "job": "61582406",
+  "rows": 964506,
+  "columns": [
+    {
+      "name": "ID",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "ALPHA_J2000",
+      "format": "D",
+      "unit": "deg"
+    },
+    {
+      "name": "DELTA_J2000",
+      "format": "D",
+      "unit": "deg"
+    },
+    {
+      "name": "X_MODEL",
+      "format": "D",
+      "unit": "pix"
+    },
+    {
+      "name": "Y_MODEL",
+      "format": "D",
+      "unit": "pix"
+    },
+    {
+      "name": "ERRX_MODEL",
+      "format": "D",
+      "unit": "pix"
+    },
+    {
+      "name": "ERRY_MODEL",
+      "format": "D",
+      "unit": "pix"
+    },
+    {
+      "name": "ALPHA_DETECTION",
+      "format": "D",
+      "unit": "deg"
+    },
+    {
+      "name": "DELTA_DETECTION",
+      "format": "D",
+      "unit": "deg"
+    },
+    {
+      "name": "FARMER_ID",
+      "format": "8A",
+      "unit": null
+    },
+    {
+      "name": "GROUP_ID",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "N_GROUP",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "MODEL_FLAG",
+      "format": "I",
+      "unit": null
+    },
+    {
+      "name": "SOLUTION_MODEL",
+      "format": "20A",
+      "unit": null
+    },
+    {
+      "name": "FLAG_HSC",
+      "format": "I",
+      "unit": null
+    },
+    {
+      "name": "FLAG_SUPCAM",
+      "format": "I",
+      "unit": null
+    },
+    {
+      "name": "FLAG_UDEEP",
+      "format": "I",
+      "unit": null
+    },
+    {
+      "name": "FLAG_UVISTA",
+      "format": "I",
+      "unit": null
+    },
+    {
+      "name": "FLAG_COMBINED",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "EBV_MW",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "CFHT_u_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "CFHT_u_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "CFHT_u_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "CFHT_u_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "CFHT_u_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "CFHT_u_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "CFHT_u_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "CFHT_ustar_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "CFHT_ustar_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "CFHT_ustar_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "CFHT_ustar_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "CFHT_ustar_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "CFHT_ustar_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "CFHT_ustar_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "HSC_g_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_g_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_g_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_g_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_g_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "HSC_g_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "HSC_g_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "HSC_r_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_r_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_r_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_r_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_r_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "HSC_r_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "HSC_r_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "HSC_i_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_i_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_i_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_i_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_i_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "HSC_i_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "HSC_i_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "HSC_z_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_z_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_z_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_z_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_z_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "HSC_z_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "HSC_z_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "HSC_y_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_y_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "HSC_y_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_y_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "HSC_y_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "HSC_y_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "HSC_y_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_Y_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_Y_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_Y_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_Y_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_Y_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_Y_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "UVISTA_Y_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_J_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_J_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_J_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_J_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_J_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_J_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "UVISTA_J_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_H_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_H_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_H_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_H_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_H_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_H_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "UVISTA_H_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_Ks_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_Ks_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_Ks_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_Ks_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_Ks_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_Ks_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "UVISTA_Ks_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_NB118_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_NB118_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "UVISTA_NB118_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_NB118_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "UVISTA_NB118_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "UVISTA_NB118_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "UVISTA_NB118_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IB427_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB427_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB427_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB427_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB427_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IB427_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IB427_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IB464_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB464_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB464_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB464_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB464_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IB464_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IB464_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IA484_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA484_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA484_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA484_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA484_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IA484_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IA484_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IB505_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB505_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB505_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB505_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB505_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IB505_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IB505_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IA527_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA527_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA527_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA527_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA527_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IA527_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IA527_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IB574_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB574_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB574_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB574_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB574_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IB574_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IB574_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IA624_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA624_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA624_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA624_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA624_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IA624_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IA624_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IA679_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA679_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA679_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA679_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA679_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IA679_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IA679_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IB709_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB709_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB709_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB709_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB709_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IB709_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IB709_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IA738_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA738_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA738_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA738_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA738_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IA738_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IA738_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IA767_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA767_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IA767_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA767_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IA767_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IA767_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IA767_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_IB827_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB827_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_IB827_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB827_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_IB827_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_IB827_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_IB827_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_NB711_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_NB711_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_NB711_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_NB711_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_NB711_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_NB711_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_NB711_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "SC_NB816_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_NB816_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "SC_NB816_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_NB816_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "SC_NB816_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "SC_NB816_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "SC_NB816_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "IRAC_CH1_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "IRAC_CH1_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "IRAC_CH1_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "IRAC_CH1_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "IRAC_CH1_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "IRAC_CH1_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "IRAC_CH1_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "IRAC_CH2_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "IRAC_CH2_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "IRAC_CH2_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "IRAC_CH2_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "IRAC_CH2_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "IRAC_CH2_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "IRAC_CH2_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "IRAC_CH3_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "IRAC_CH3_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "IRAC_CH3_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "IRAC_CH3_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "IRAC_CH3_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "IRAC_CH3_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "IRAC_CH3_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "IRAC_CH4_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "IRAC_CH4_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "IRAC_CH4_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "IRAC_CH4_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "IRAC_CH4_CHISQ",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "IRAC_CH4_DRIFT",
+      "format": "D",
+      "unit": "arcsec"
+    },
+    {
+      "name": "IRAC_CH4_VALID",
+      "format": "L",
+      "unit": null
+    },
+    {
+      "name": "ID_GALEX",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "GALEX_NUV_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "GALEX_NUV_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "GALEX_NUV_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "GALEX_NUV_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "GALEX_FUV_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "GALEX_FUV_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "GALEX_FUV_MAG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "GALEX_FUV_MAGERR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "ID_COSMOS2015",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "SPLASH_CH1_FLUX",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "SPLASH_CH1_FLUXERR",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "SPLASH_CH1_MAG",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "SPLASH_CH1_MAGERR",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "SPLASH_CH2_FLUX",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "SPLASH_CH2_FLUXERR",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "SPLASH_CH2_MAG",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "SPLASH_CH2_MAGERR",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "SPLASH_CH3_FLUX",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "SPLASH_CH3_FLUXERR",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "SPLASH_CH3_MAG",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "SPLASH_CH3_MAGERR",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "SPLASH_CH4_FLUX",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "SPLASH_CH4_FLUXERR",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "SPLASH_CH4_MAG",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "SPLASH_CH4_MAGERR",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "ID_ACS",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "ACS_F814W_MAG",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "ACS_F814W_MAGERR",
+      "format": "E",
+      "unit": "mag"
+    },
+    {
+      "name": "ACS_F814W_FLUX",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "ACS_F814W_FLUXERR",
+      "format": "D",
+      "unit": "uJy"
+    },
+    {
+      "name": "ACS_A_WORLD",
+      "format": "E",
+      "unit": "deg"
+    },
+    {
+      "name": "ACS_B_WORLD",
+      "format": "E",
+      "unit": "deg"
+    },
+    {
+      "name": "ACS_THETA_WORLD",
+      "format": "E",
+      "unit": "deg"
+    },
+    {
+      "name": "ACS_FWHM_WORLD",
+      "format": "E",
+      "unit": "deg"
+    },
+    {
+      "name": "ACS_MU_MAX",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ACS_MU_CLASS",
+      "format": "I",
+      "unit": null
+    },
+    {
+      "name": "ID_CHANDRA",
+      "format": "9A",
+      "unit": null
+    },
+    {
+      "name": "ID_CLASSIC",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "lp_zBEST",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_type",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "lp_zPDF",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_zPDF_l68",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_zPDF_u68",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_zMinChi2",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_chi2_best",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_zp_2",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_chi2_2",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_NbFilt",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "lp_zq",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_chiq",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_modq",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_mods",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_chis",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_mask",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_model",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "lp_age",
+      "format": "D",
+      "unit": "yr"
+    },
+    {
+      "name": "lp_dust",
+      "format": "D",
+      "unit": null
+    },
+    {
+      "name": "lp_Attenuation",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "lp_MFUV",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MNUV",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MU",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MG",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MR",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MI",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MZ",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MY",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MJ",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MH",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_MK",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "lp_mass_med",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "lp_mass_med_min68",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "lp_mass_med_max68",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "lp_mass_best",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "lp_SFR_med",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "lp_SFR_med_min68",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "lp_SFR_med_max68",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "lp_SFR_best",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "lp_sSFR_med",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "lp_sSFR_med_min68",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "lp_sSFR_med_max68",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "lp_sSFR_best",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "ez_z_phot",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z_phot_chi2",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z_phot_risk",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z_min_risk",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_min_risk",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z_raw_chi2",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_raw_chi2",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z025",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z160",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z500",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z840",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_z975",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_nusefilt",
+      "format": "K",
+      "unit": null
+    },
+    {
+      "name": "ez_lc_min",
+      "format": "D",
+      "unit": "Angstrom"
+    },
+    {
+      "name": "ez_lc_max",
+      "format": "D",
+      "unit": "Angstrom"
+    },
+    {
+      "name": "ez_star_min_chi2",
+      "format": "E",
+      "unit": null
+    },
+    {
+      "name": "ez_star_teff",
+      "format": "K",
+      "unit": "K"
+    },
+    {
+      "name": "ez_restU",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "ez_restU_err",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "ez_restB",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "ez_restB_err",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "ez_restV",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "ez_restV_err",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "ez_restJ",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "ez_restJ_err",
+      "format": "E",
+      "unit": "uJy"
+    },
+    {
+      "name": "ez_dL",
+      "format": "D",
+      "unit": "Mpc"
+    },
+    {
+      "name": "ez_mass",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "ez_sfr",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "ez_ssfr",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "ez_Lv",
+      "format": "D",
+      "unit": "log(solLum)"
+    },
+    {
+      "name": "ez_LIR",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_energy_abs",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lu",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lj",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L1400",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L2800",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHa",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOIII",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHb",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOII",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_MLv",
+      "format": "D",
+      "unit": "solMass/solLum"
+    },
+    {
+      "name": "ez_Av",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "ez_lwAgeV",
+      "format": "D",
+      "unit": "Gyr"
+    },
+    {
+      "name": "ez_mass_p025",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "ez_mass_p160",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "ez_mass_p500",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "ez_mass_p840",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "ez_mass_p975",
+      "format": "D",
+      "unit": "log(solMass)"
+    },
+    {
+      "name": "ez_sfr_p025",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "ez_sfr_p160",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "ez_sfr_p500",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "ez_sfr_p840",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "ez_sfr_p975",
+      "format": "D",
+      "unit": "log(solMass/yr)"
+    },
+    {
+      "name": "ez_Lv_p025",
+      "format": "D",
+      "unit": "log(solLum)"
+    },
+    {
+      "name": "ez_Lv_p160",
+      "format": "D",
+      "unit": "log(solLum)"
+    },
+    {
+      "name": "ez_Lv_p500",
+      "format": "D",
+      "unit": "log(solLum)"
+    },
+    {
+      "name": "ez_Lv_p840",
+      "format": "D",
+      "unit": "log(solLum)"
+    },
+    {
+      "name": "ez_Lv_p975",
+      "format": "D",
+      "unit": "log(solLum)"
+    },
+    {
+      "name": "ez_LIR_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LIR_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LIR_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LIR_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LIR_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_energy_abs_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_energy_abs_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_energy_abs_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_energy_abs_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_energy_abs_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lu_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lu_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lu_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lu_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lu_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lj_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lj_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lj_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lj_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_Lj_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L1400_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L1400_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L1400_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L1400_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L1400_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L2800_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L2800_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L2800_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L2800_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_L2800_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHa_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHa_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHa_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHa_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHa_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOIII_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOIII_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOIII_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOIII_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOIII_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHb_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHb_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHb_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHb_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LHb_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOII_p025",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOII_p160",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOII_p500",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOII_p840",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_LOII_p975",
+      "format": "D",
+      "unit": "solLum"
+    },
+    {
+      "name": "ez_ssfr_p025",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "ez_ssfr_p160",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "ez_ssfr_p500",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "ez_ssfr_p840",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "ez_ssfr_p975",
+      "format": "D",
+      "unit": "log(yr**(-1))"
+    },
+    {
+      "name": "ez_Av_p025",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "ez_Av_p160",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "ez_Av_p500",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "ez_Av_p840",
+      "format": "D",
+      "unit": "mag"
+    },
+    {
+      "name": "ez_Av_p975",
+      "format": "D",
+      "unit": "mag"
+    }
+  ]
+}

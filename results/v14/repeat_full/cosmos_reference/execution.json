@@ -1,0 +1,58 @@
+{
+  "acquisition_retry_job": "61582406",
+  "PS1_job": "61582407",
+  "commands": [
+    [
+      "sbatch",
+      "--parsable",
+      "-A",
+      "desi",
+      "-q",
+      "debug",
+      "-C",
+      "cpu",
+      "-N1",
+      "-n1",
+      "-o",
+      "logs/%x-%j.log",
+      "-c2",
+      "--mem=24G",
+      "-t",
+      "00:15:00",
+      "-J",
+      "ls14-cosmos-extract-retry",
+      "--wrap",
+      "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=$PSCRATCH/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; .venv/bin/python logs/v14_cosmos_header.py && .venv/bin/python -u -m scripts.v14_cosmos_reference acquire"
+    ],
+    [
+      "sbatch",
+      "--parsable",
+      "-A",
+      "desi",
+      "-q",
+      "debug",
+      "-C",
+      "cpu",
+      "-N1",
+      "-n1",
+      "-o",
+      "logs/%x-%j.log",
+      "-c1",
+      "--mem=4G",
+      "-t",
+      "00:20:00",
+      "-J",
+      "ls14-cosmos-ps1-download",
+      "--wrap",
+      "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=$PSCRATCH/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; export LS_SAT_CONFIG_DIR=configs/v14_cosmos_reference; .venv/bin/python -u -m ls_satsearch.ps1_tiles v14_cosmos_reference --workers 2"
+    ]
+  ],
+  "failed_acquisition": {
+    "job": "61582112",
+    "reason": "Official static archive downloaded/CRC decompressed; Phase3 coordinate names ALPHA_J2000/DELTA_J2000 differ from IRSA table-service ra/dec aliases. Normalize documented names, retaining source schema; archive is reused, not redownloaded."
+  },
+  "metadata_service_failure": "IRSA TAP HTTP502 from NERSC; static official corrected v2.2 archive HTTP200/2125875783bytes.",
+  "code_sha256": "f877f2cac11ea546513ab6fdeba685cc5cfdf1e62923e6bd8ec178e5d4d55037",
+  "state": "submitted_not_accepted",
+  "scope": "Reference-estimator validation only; raw catalogue/PS1 pages remain scratch; not 0706 imaging, additional discovery area, or validated physical PS1 transfer."
+}

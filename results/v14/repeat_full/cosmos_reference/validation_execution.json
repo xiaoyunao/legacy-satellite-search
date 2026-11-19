@@ -1,0 +1,35 @@
+{
+  "job": "61583502",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c2",
+    "--mem=16G",
+    "-t",
+    "00:20:00",
+    "-J",
+    "ls14-cosmos-independent-validation",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=$PSCRATCH/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; export LS_SAT_COADD_CACHE=$LS_SAT_DATA/cache/v14_packed_masks; .venv/bin/python -u -m scripts.v14_cosmos_validate"
+  ],
+  "state": "submitted_not_accepted",
+  "completed_parent": "61582407",
+  "PS1_manifest_sha256": "b80de22d11fcaaa3b4f9eac52975cce507b6b22f4bddcd33012754071a588ea0",
+  "source_sha256": {
+    "scripts/v14_cosmos_validate.py": "dab0642bd20fd7d120830b0fdb1fcbbee7fb772e1f0154f6dd07a447d715d2d4",
+    "configs/v14_cosmos_reference/validation.yaml": "267aeb79271d8141a37e2571c52753f9fa24b2b30a2295d9fd0940da1be8134b",
+    "configs/v14_repeat/cosmos_reference.yaml": "e1543fc321a2951b41a3e4760631b2c72bd2b64ae87ad49cbde7c8ad0b601c5b"
+  },
+  "prior_submission_rejected": "No job created: completed parent had aged out of controller, so afterok dependency was rejected. Preflight now verifies terminalCOMPLETED accounting and accepted input manifests; no dependency on retired controller record.",
+  "scope": "Single-source/proxy-estimator validation, not systemPdet, independent-sky transfer or new discovery area."
+}

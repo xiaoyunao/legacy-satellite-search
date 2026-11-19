@@ -1,0 +1,8 @@
+reference_protocol: configs/v14_repeat/cosmos_reference.yaml
+PS1_policy_manifest: results/v14/repeat/ps1_response/manifest.json
+match_radius_arcsec: 0.7
+reference_neighbour_arcsec: 2.0
+LS_proxy_g_edges: [0, 20, 21, 22, 22.5, 23, 23.5, 24, 30]
+LS_proxy_color_edges: [-100, 0.4, 0.8, 100]
+HSC_observed_g_edges: [17, 20, 21, 22, 22.5, 23, 23.5, 24, 24.5, 25.5]
+scope: Compare the existing LS-proxy estimator with independent morphology-supported stellar references on held-out objects in one common-coverage control field. Matched LS and COSMOS counterparts share the same holdout key. Source selection probabilities are not system detection probabilities. No physical background transfer, mutual cluster crowding, independent-sky validation, HSC passband identity, or 0706 confirmation is inferred.
