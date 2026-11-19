@@ -2,6 +2,8 @@
 
 ## Current human-review delivery objective (latest review 46d21aad)
 
+Scheduler resource checkpoint: original arrays remain pending. Based on measured smoke timings and actual shard sizes, their maximum requests remain C 2h / CCD 80min, with TimeMin 45min / 20min now permitted for backfill. These values change only a possible allocated time window. Inspect actual TimeLimit/elapsed and manifests after dispatch; no duplicate tasks or scientific parameter changes. Do not infer completion from the resource update.
+
 Current verification refinement: C output uses shared per-field/per-rank membership paths. Bind all retained rows to probability count, richness normalization and reconstructed TS, freeze the verified arrays on NERSC, then render from those copies. Prototype 61559482 passed two real positions/six modes. Full integrity job 61559510 follows C and precedes evidence 61558007; package 61558755 also requires it. A stale array can no longer pass merely because its filename exists. Guard 61558199 installs an integrity-failure guard after successful C, restoring bulk order on either failure and after evidence on success.
 
 The user is waiting for the **complete** review material before grading. Finish both cohorts: 40 priority PDF packets and a separate 35-position anonymous phase-1 PDF/image ZIP, with blank response forms and immutable input hashes. Preserve the frozen denominator and all retained modes. Do not fill human grades or promote evidence levels; merge the user's judgments only after they respond, and seal anonymous grades before identity/score/environment reveal.

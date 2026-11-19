@@ -1,0 +1,37 @@
+{
+  "utc": "2026-11-19T05:56:11.186904+00:00",
+  "jobs": [
+    {
+      "job": "61556312",
+      "minimum_minutes": 45,
+      "previous_time_min": "N/A",
+      "original_maximum": "02:00:00",
+      "actual_time_min": "00:45:00",
+      "actual_maximum": "02:00:00",
+      "pending_tasks": 4
+    },
+    {
+      "job": "61556314",
+      "minimum_minutes": 20,
+      "previous_time_min": "N/A",
+      "original_maximum": "01:20:00",
+      "actual_time_min": "00:20:00",
+      "actual_maximum": "01:20:00",
+      "pending_tasks": 9
+    }
+  ],
+  "measured_basis": {
+    "C_smoke_job": "61556311",
+    "C_smoke_seconds": 92,
+    "C_smoke_modes": 5,
+    "remaining_C_modes_per_shard": [
+      21,
+      34,
+      15,
+      26
+    ],
+    "CCD_smoke_job": "61556313",
+    "CCD_smoke_seconds": 174
+  },
+  "scope": "Only pending original arrays updated. Installed sbatch/scontrol manuals confirm TimeMin may reduce the allocated walltime for earlier backfill; maximum request retained. Data, seeds, cuts, memory and CPU requests unchanged. Actual completion still requires manifests and outputs."
+}

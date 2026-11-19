@@ -2,6 +2,13 @@
 
 ## 2026-11-19
 
+### 原作业回填时间窗调整
+
+- 当前 goal 前轮为 verified wait；原 C/CCD 句柄均 live PENDING，没有失败或新增结果。调度器 sdiag 仍约每分钟 5 个主循环；不是将观察超时视为任务停止。
+- 依据冻结表扣除 33 个已复用包，四个 C 分片实际为 21/34/15/26 模式、8/14/7/12 个天区；同配置 5 模式 smoke 已实测 92 秒，CCD 单实现 174 秒。原请求 C 2h、CCD 80min 偏宽，允许较短 backfill 窗口有实际资源依据。
+- 官方网页请求超时；读取 NERSC 安装的 man sbatch/scontrol 核实 TimeMin 语义。远端没有 rg，改用 grep。对仍全 PENDING 的原数组 61556312/61556314 设 TimeMin=45/20 分钟；scontrol 回读确认最长请求仍 2h/80min，CPU、内存、种子、输入和科学配置未变。实际分配时限可能被 Slurm 缩短；没有把此操作计作启动或完成。
+- 参数实录保存 priority_execution/backfill_time_min.json。未创建重复科学作业；若实际 TIMEOUT，按完成产物与活跃覆盖继续定位补跑。后续不继续无依据调度调参，等待原作业并核查真实状态/产物。
+
 ### 持续目标：真实补跑验收与逐模式成员绑定
 
 - 以 20282cd 清洁工作树继续；目标未完成。明确核查活跃 C/CCD/材料链，均为 live PENDING，没有将排队当终止或复制任务。61554330_0 COMPLETED 17:55、61469851_19 COMPLETED 13:33；新 d 审计 3151 完成/8 空场/13626.117035108022 owned deg²，6 retry 验收、9 live-covered、0 uncovered。
