@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-19T23:12:03.856122+00:00",
+  "job": "61613306",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-radius-association",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_SAT_IMAGE_VERSION=v14_paired_radius LS_SAT_CONFIG_DIR=configs LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg; .venv/bin/python -u -m scripts.v14_paired_radius_association"
+  ],
+  "state": "submitted_not_complete",
+  "scope": "Existing24native pairs only; measure0.8arcsec greedy versus maximum-cardinality associations and0.4/1.6arcsec sensitivity, fixed blank association/cuts, no new image or detector run."
+}

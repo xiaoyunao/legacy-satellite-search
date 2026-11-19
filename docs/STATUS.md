@@ -1,5 +1,15 @@
 # Status
 
+## 2026-11-19T23:27Z — native24paired stages and association audit accepted
+
+- w23:20Z6545complete+29zero-valid-gr/6891;317remaining;24375.34227237654summedowneddeg²,174scan retries accepted/zero uncovered. Existing remaining scan/regional C owners retained.
+- Paired-radius24native/48depth rows accepted; all61608931packs COMPLETED,collector61610213COMPLETED1:57. Original pending61604174/61604183 retired after registered handoff; no running work interrupted. Full eight-population/three-sky stage and uncertainty tables/figure are local andNERSC.
+- Association61613306COMPLETED26s: exact0.8arcsec stage reproduction; max-cardinality unchanged;1.6arcsec hard counts unchanged. Raw core excess supports real separable-component loss. This is not a new blind recovery experiment.
+- Ctimeout-q03 accepted632/406modes/groups,OOM-m01 accepted433/118. These are source-shard counts, not unique systems or final global C coverage.
+- IPP151700998byte source passes officialMD5; first probe/core dependency failures explicit. CFITSIObuilt; vendor floatFFTW runtime lacks development interface. BundledFFTWbuilds; documented optional-database-disabled compilation reaches missingOhana/kapa.h. No PS1response acceptance.
+- Original75hashes unchanged, grades blank, final human release false. Common-clock production/area/identity/required C/selected diagnostics/sampling/privacy-page QA remain unfinished. No manuscript.
+
+
 ## 2026-11-19T22:25Z — faint-light perturbation measured; production continues
 
 - v22:19Z: **6529/6891 complete +29 zero-valid-gr terminals**, **24361.03503858024 summed R14 owned deg²**,333 fields remain;174scan retries accepted,zero uncovered. These are not final historical union or physical-gain areas. **61592117_2 COMPLETED/13:14**,784retained modes/403source groups pass exact source/seed/membership checks; remaining registered C owners still require acceptance.

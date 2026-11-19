@@ -13,3 +13,5 @@ LS_DR11_R14,CCD_grid_target_V_proxy,-3;-1.5,configs/v14_repeat/protocol.yaml,,re
 LS_DR11_R14,CCD_backgrounds_shared_populations,3;48,configs/v14_repeat/protocol.yaml,,144 native trials are not144 independent populations
 LS_DR11_R14,physical_profile,circular Plummer,scripts/v13_image_trials.py,,tail truncation separate from crowding and point-source classification
 LS_DR11_R14,formal_DM_max,20.75,configs/v14/production_registry.yaml,,mu21.0 boundary experiment remains separate; a template bound is not a sharp true-distance horizon
+LS_DR11_R14,paired_fixed_rendered_population_radii_pc,10 -> 3,configs/v14_paired_radius/protocol.yaml,,"24native pairs;8shared parent populations/3fixed skies;stage response and association bounds only,no new blindPdet"
+LS_DR11_R14,near_boundary_faint_IMF_light_test,draw34;30pc;3skies;95.90%full proxy light inside3.1arcmin,results/v14/faint_light/population_registration.csv,,Original bright members preserved;conditional new faint positions/photon pixels;4.10%outer light remains;not a population correction

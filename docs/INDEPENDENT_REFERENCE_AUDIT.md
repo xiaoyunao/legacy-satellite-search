@@ -1,5 +1,14 @@
 # Independent morphology and PS1 source-response audit
 
+## Official PS1 operator capability check — 2026-11-19T23:25Z
+
+The [official IPP server](https://ipp.ifa.hawaii.edu/) still distributes the20190404source archive. The151700998byte file is downloaded onNERSC; officialMD516021a46323a79c04432bb839e353f34matches, SHA2563a8cf08538b1ed23d130abe8a41a5ac1ccccb52dade488fc355d5f172f1b3cb4. The archive and generated build stay in scratch; only provenance/our wrapper code are public. See references/ps1_ipp_source_manifest.json.
+
+Bounded Slurm probe61613456reached psLib configure but lackedCFITSIO/floatFFTWdevelopment interfaces.61613934built bundledCFITSIO; the helper skipped runtime-only vendorFFTW.61614223forced bundledFFTW3.0.1successfully and reached actualpsLib compilation, which fails on optionalMySQL mysql_com.h. 61614542disables the documented optional database feature and warnings-as-errors through private CONFIG_SITE. It reaches later compilation but requires the bundledOhana/kapa.h plotting dependency. No psphot binary or image reproduction is accepted; no database/Perl suite, shell-profile changes or photometric source patches.
+
+This is a concrete attempt to obtain the original pixel operator, not an accepted PS1response. A standalone stack-level run must first reproduce blank-image detection, PSF photometry and required morphology/quality/mask selection on the same image/catalogue provenance. The2019archive date does not establish identity to DR2processing. Full raw-pipeline/pre-release components and public stack photometry are different scopes; absence of the former does not alone rule out the latter. Keep the condition-mismatched COSMOS transfer unvalidated. [Official pipeline stages](https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812327/PS1%2BImage%2BProcessing%2BPipeline).
+
+
 Scientific question: can the LS PSF proxy used for the empirical PS1 response be treated as a sample of true stars at the relevant faint blue magnitudes? This audit tests that assumption with independent deep photometry and morphology. It does not measure compact-system recovery or replace the 144 native CCD experiments.
 
 ## Inputs and coverage

@@ -1,0 +1,31 @@
+{
+  "utc": "2026-11-19T23:20:01.967851+00:00",
+  "job": "61613934",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-core-deps",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_SAT_IPP_PROBE_NAME=probe_dependency_retry LS_SAT_IPP_FIX_LIBS=1 LS_SAT_IPP_OUTPUT=build_dependency_retry.json; bash scripts/v14_ipp_build_probe.sh"
+  ],
+  "probe_script_sha256": "1226446ec7a550091cd038d1d4c82dccc893c8e1be31323078b0e91ee908d3a1",
+  "state": "submitted_not_complete",
+  "observed_failure": "psLib configure misses cfitsio; official checker also identifies floatFFTW/header dependencies",
+  "specific_fix": "Build only the bundled CFITSIO and floatFFTW dependencies in the isolated prefix, then retry core modules. No full DB/Perl suite install or image-response claim.",
+  "first_attempt_preserved": true
+}

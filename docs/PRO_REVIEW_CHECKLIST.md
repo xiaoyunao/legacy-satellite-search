@@ -1,5 +1,10 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-19T23:27Z — native stage question closed within a bounded scope
+
+Accepted24fixed-population native size cases/48depth rows, with8shared populations/3fixed backgrounds and all original stage counts reproduced. Association61613306excludes greedy/radius artifacts as the explanation of the large member loss. Statistics, per-background/core/neighbor tables and full-raster figure QA are complete; no blindPdet added. The original144/faint-light scope and physicalPS1transfer limitation remain explicit. w6545+29/6891 leaves317fields; final common-clock production/area/C/selected evidence/probability sampling/anonymity gates remain open. Original75 and one final human review policy unchanged.
+
+
 ## 2026-11-19T22:25Z — faint-light perturbation measured; production continues
 
 - v22:19Z: **6529/6891 complete +29 zero-valid-gr terminals**, **24361.03503858024 summed R14 owned deg²**,333 fields remain;174scan retries accepted,zero uncovered. These are not final historical union or physical-gain areas. **61592117_2 COMPLETED/13:14**,784retained modes/403source groups pass exact source/seed/membership checks; remaining registered C owners still require acceptance.

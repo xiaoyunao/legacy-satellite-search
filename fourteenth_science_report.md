@@ -1,5 +1,38 @@
 # DR11 search and selection response
 
+## 2026-11-19T23:27Z — fixed-population size experiment: native source separation is limiting
+
+All **24 native cases /48 paired-depth rows** pass (eight existing bright10pc IMF populations, each shrunk to3pc on three original skies). Intrinsic member identities/light are unchanged; original144products are immutable. Registered source/producer/configuration and native proof hashes pass. Jobs61608931all five packs COMPLETED; stage61610213COMPLETED1:57. This experiment measures catalogue stages, not a new blind-search Pdet.
+
+| Stage, counts across24paired native cases | 10pc parent | Same populations at3pc |
+|---|---:|---:|
+| Rendered input members |7113|7113|
+| Valid gr exposure |7106|7110|
+| Initial novel-source association |1926|778|
+| Final novel-source association |2347|1032|
+| TYPE=PSF |1709|719|
+| Baseline hard selection |384|197|
+| Baseline truth-DM CMD |384|176|
+| Deeper hard selection |616|284|
+| Deeper truth-DM CMD |613|258|
+
+Initial/final are distinct pipeline products; final includes iterative detections. Counts reuse shared populations across backgrounds. Equal-weight realization/background mean final-member fraction drops33.04%→14.49%: paired difference−18.55percentage points, exploratory crossed-bootstrap95%[−20.89,−16.07]. Hard-member mean-fraction differences are−2.63points baseline [−3.13,−1.98] and−4.69deeper [−5.70,−3.75]. These intervals describe eight shared populations/three selected skies, not broad-sky or population completeness.
+
+**Association-artifact check61613306 COMPLETED/26s:** maximum-cardinality association at0.8arcsec reproduces every greedy final/PSF/hard count exactly. At1.6arcsec, final counts become2380/1045, while both arms' hard counts remain384/197and616/284. Independent catalogue-minus-blank counts inside3true half-light radii drop2073→733. The member-neighbor fraction within0.8arcsec grows12.66%→62.91%; blank-neighbor fractions remain around1–3.4% without a consistent increase. Thus matching tolerance/greedy ordering does not explain the loss. Shrinking substantially reduces separable catalogue components before PSF/CMD selection, consistent with blending/source-separation limits. This is an inference from stage and geometry evidence; local coverage/extinction/foreground blends and changed source photon pixels remain part of the treatment.
+
+**Decision:** keep the production detector/threshold/kernel frozen. Further small-kernel or ranking changes cannot recreate individually missing catalogue members. Use this result to delimit the compact catalogue route; do not relabel these finite-rendered-light tests as full spatial/trueV completeness. The separate faint-light draw34 changes one baseline crossing; it is not a universal correction. No15pc/continuous-distance selection function or physicalPS1 gain is established.
+
+![Fixed-population native size response](results/v14/paired_radius/fixed_population_size_response.png)
+
+Sources: results/v14/paired_radius/full_stage_acceptance.json,stage_comparison.csv,association_acceptance.json,association_summary.csv,core_source_summary.csv and figure_manifest.json. Full-raster layout QA passes; all per-star/images remainNERSC.
+
+Production checkpoint **w23:20Z:6545/6891complete+29zero-valid-gr**,317remaining,24375.34227237654summed R14 owneddeg²,174registered retries accepted/zero uncovered. This is not a final historical union or gain area. Newly accepted C shards include timeout-q03 632modes/406source groups and OOM-m01 433/118; both exact source/seed/membership audits pass. Remaining production and common-clock integration gates still apply.
+
+Official PS1 IPP source151700998bytes is acquired and verified (officialMD5 and SHA256 in references/ps1_ipp_source_manifest.json). First core probe61613456reachesconfigure but lacksCFITSIO/floatFFTW development interfaces.61613934builds bundledCFITSIO; runtime-only vendorFFTW still lacks pkg-config/header support. 61614223also builds bundled floatFFTW3.0.1but psLib compilation hits missing optionalMySQL mysql_com.h. 61614542disables the optional database and reaches later compilation, blocked on bundledOhana/kapa.h. No binary/image response is accepted; no database suite is installed. Source availability/build attempts are not PS1 DR2 catalogue reproduction or a validated response. The condition-mismatched COSMOS response remains unsuitable for universal physical transfer. [Official source](https://ipp.ifa.hawaii.edu/),[pipeline stages](https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812327/PS1%2BImage%2BProcessing%2BPipeline).
+
+Final one-time human delivery remains **not ready**: complete full search, qualified historical/common-clock roster/areas/identities, necessary C, selected saved-membership-bound evidence, probability sampling and anonymity/page QA. Original75files and blank grades are preserved; no automatic promotion or manuscript writing.
+
+
 ## 2026-11-19T22:25Z — faint-light perturbation measured; production continues
 
 - v22:19Z: **6529/6891 complete +29 zero-valid-gr terminals**, **24361.03503858024 summed R14 owned deg²**,333 fields remain;174scan retries accepted,zero uncovered. These are not final historical union or physical-gain areas. **61592117_2 COMPLETED/13:14**,784retained modes/403source groups pass exact source/seed/membership checks; remaining registered C owners still require acceptance.

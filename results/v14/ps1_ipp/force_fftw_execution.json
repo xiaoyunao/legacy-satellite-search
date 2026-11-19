@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-19T23:25:23.240451+00:00",
+  "job": "61614223",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-fftw-core",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ipp_force_fftw.sh"
+  ],
+  "script_sha256": "7ab70a84a2738bcc1c6cb4989bd67d2f379d46ec3385b51c83556b99a65b1c47",
+  "state": "submitted_not_complete",
+  "observed_failure": "Bundled CFITSIO now builds. Official checker sees a runtime-only floatFFTW and skips its development files; psLib configure still cannot find fftw3f via pkg-config.",
+  "specific_fix": "Use documented force option only for bundled floatFFTW, then verify pkg-config before core retry. Previous attempts/logs preserved."
+}

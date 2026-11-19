@@ -1,0 +1,14 @@
+{
+  "source_url": "https://ipp.ifa.hawaii.edu/ipp-20190404.tgz",
+  "official_listing": "https://ipp.ifa.hawaii.edu/",
+  "archive": "ipp-20190404.tgz",
+  "bytes": 151700998,
+  "official_md5": "16021a46323a79c04432bb839e353f34",
+  "downloaded_md5_verified": true,
+  "sha256": "3a8cf08538b1ed23d130abe8a41a5ac1ccccb52dade488fc355d5f172f1b3cb4",
+  "cache_relative_to_LS_SAT_DATA": "software/ipp/ipp-20190404.tgz",
+  "pipeline_stage_reference": "https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812327/PS1%2BImage%2BProcessing%2BPipeline",
+  "source_version_date": "2019-04-04",
+  "physical_PS1_response_validated": false,
+  "scope": "Official software source availability and integrity only. Successful core compilation, blank-stack reproduction, PSF/photometric/mask selection equivalence and injection validation remain separate gates; the archive date does not prove identity to DR2 production."
+}

@@ -1,0 +1,12 @@
+{
+  "inputs": {
+    "results/v14/paired_radius/full_stage_pairs.csv": "e3867964e404186542d2c73f0155f897edd04750cc2a06c4cf59715a3401f004",
+    "results/v14/paired_radius/stage_comparison.csv": "2091e4a1894e5bdce89d69146d2ee8a83c91a11f5a422679bf70ef2f3010c80f",
+    "results/v14/paired_radius/association_bounds.csv": "a68e0a8ce768f7b97f398d1141318626f79633cd2aacf9e18f259ff9cd22b4d6",
+    "results/v14/paired_radius/core_source_counts.csv": "883580a8b07d833f75f626b02f469d20144d509be2e26ddfbd4b9c356564bbf5"
+  },
+  "code_sha256": "591e395338b3bf93ce267180b036eb5ed22a0e33ef407866ced4d0922067cc5b",
+  "figure_sha256": "ddb16e5f1c656eebdb4907885c3ee4cc1e1b465c298323ddeda4581f9c317d91",
+  "scope": "Conditional finite rendered populations; mean fractions weight realization/background pairs equally. Differences preserve radius/depth/population pairing. Eight populations and three selected skies do not support broad-sky confidence. Shrinking changes local coverage, dust, foreground blends and source-noise pixels as well as mutual proximity. Neighbor counts are geometry diagnostics, not causal decomposition. Initial/final products need not be nested. No blind-search recovery or calibratedV/full spatial selection function is inferred.",
+  "visual_QA": "Full raster inspected: stage curves, paired intervals, axes/labels and scope footer legible without clipping; added aggregate association tables leave the plotted values unchanged."
+}

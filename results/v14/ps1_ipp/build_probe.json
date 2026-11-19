@@ -1,0 +1,17 @@
+{
+  "job": "61613456",
+  "result": "failed_psLib",
+  "artifacts": {
+    "probe/bootstrap.log": "3bae1deb00d2ab18835a2b66444e27e6e9a2428303b82d8f3ef235999b733b2a",
+    "probe/build_psLib.log": "07a643f54b6df3ac9b588c1210a5c866008cb936bc3dc075fe837b583dee65e4",
+    "probe/libraries.log": "9176a8b6b7a2de4c523183ec7c09732f95712bcdbd7dd97f932245d555c0abd4",
+    "probe/library_check_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "probe/status_psLib.txt": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+  },
+  "archive_sha256": "3a8cf08538b1ed23d130abe8a41a5ac1ccccb52dade488fc355d5f172f1b3cb4",
+  "source": "https://ipp.ifa.hawaii.edu/ipp-20190404.tgz",
+  "isolated_prefix_relative": "software/ipp/install",
+  "shell_startup_files_modified": false,
+  "physical_PS1_response_validated": false,
+  "scope": "Bounded core build only. No external database/Perl suite installation, no image processing or PS1 catalogue equivalence claim. A successful build still needs blank-image PSF/photometry/selection validation before injection response can represent PS1 DR2."
+}

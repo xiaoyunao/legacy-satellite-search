@@ -1,0 +1,34 @@
+{
+  "attempts": [
+    {
+      "job": "61613456",
+      "result": "failed_psLib",
+      "log_sha256": "07a643f54b6df3ac9b588c1210a5c866008cb936bc3dc075fe837b583dee65e4",
+      "failure_lines": [
+        "configure: error: CFITSIO package not found.  Obtain CFITSIO at  http://heasarc.gsfc.nasa.gov/docs/software/fitsio",
+        "problem building psLib : missing makefile: do you need to run the -dev developer build?"
+      ],
+      "raw_log_relative": "probe/build_psLib.log"
+    },
+    {
+      "job": "61613934",
+      "result": "failed_psLib",
+      "log_sha256": "6df9683410ad04b466813fa727dfa9253cb5b3dcdf8c93ae108b552251535b3c",
+      "failure_lines": [
+        "configure: error: FFTW version 3 (--enable-float) library not found.  Obtain it at http://www.fftw.org/"
+      ],
+      "raw_log_relative": "probe_dependency_retry/build_psLib.log"
+    },
+    {
+      "job": "61614223",
+      "result": "failed_psLib",
+      "log_sha256": "133398458615168c68696e471f67067ef7b07af9db765db0d362408224a44cce",
+      "failure_lines": [
+        "psDB.c:46:10: fatal error: mysql_com.h: No such file or directory",
+        "problem building psLib : failure in make"
+      ],
+      "raw_log_relative": "probe_core_fftw/build_psLib.log"
+    }
+  ],
+  "scope": "Preserved actual compiler/configuration failures; Slurm completion is not successful core build or PS1 image validation. Full source/build outputs remain in the isolated scratch prefix."
+}

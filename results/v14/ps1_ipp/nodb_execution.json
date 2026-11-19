@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-19T23:33:29.924994+00:00",
+  "job": "61614542",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-nodb-core",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ipp_nodb_core.sh"
+  ],
+  "script_sha256": "88df6c253e56cbe91c26f6323d034f16e0fca051e9d960fe6611398f9aaaf0c0",
+  "core_probe_sha256": "bde6be057b2fc4bc2187c62579a84c620422bef5134ee59933c6f96ebd25e28a",
+  "state": "submitted_not_complete",
+  "observed_failure": "CFITSIO and bundled floatFFTW now build. Optional MySQL auto-detection enables psDB but system client lacks mysql_com.h.",
+  "specific_fix": "Documented --without-mysql and --enable-debug-build options through private Autoconf CONFIG_SITE; force reconfigure. No database installation, algorithm patch or shell startup changes."
+}

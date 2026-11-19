@@ -1,0 +1,20 @@
+{
+  "job": "61614542",
+  "result": "failed_psLib",
+  "artifacts": {
+    "probe_nodb_core/bootstrap.log": "fa7d8209a7706e3dd6acf5ae32514b9d81e367d931cb97c622be408312046124",
+    "probe_nodb_core/build_psLib.log": "008e1be6ad4169e409cb47ec5e382834203fb3b13806ab118980f3f1f364d3a7",
+    "probe_nodb_core/config.site": "48dd456f30ee96b9477c518642b642b299024046f2285dae01c62e4533215832",
+    "probe_nodb_core/libraries.log": "4d42604bd5ee196513b1f9843308ca9613484a2a7515be76d2c7b1ffeb64474d",
+    "probe_nodb_core/library_check_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "probe_nodb_core/status_psLib.txt": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+  },
+  "probe_script_sha256": "bde6be057b2fc4bc2187c62579a84c620422bef5134ee59933c6f96ebd25e28a",
+  "bundled_c_dependency_fix": false,
+  "archive_sha256": "3a8cf08538b1ed23d130abe8a41a5ac1ccccb52dade488fc355d5f172f1b3cb4",
+  "source": "https://ipp.ifa.hawaii.edu/ipp-20190404.tgz",
+  "isolated_prefix_relative": "software/ipp/install",
+  "shell_startup_files_modified": false,
+  "physical_PS1_response_validated": false,
+  "scope": "Bounded core build only. No external database/Perl suite installation, no image processing or PS1 catalogue equivalence claim. A successful build still needs blank-image PSF/photometry/selection validation before injection response can represent PS1 DR2."
+}

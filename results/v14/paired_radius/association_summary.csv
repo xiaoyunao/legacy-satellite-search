@@ -1,0 +1,13 @@
+arm,variant,radius_arcsec,native_cases,greedy_final_at0p8,maximum_final,greedy_psf_at0p8,maximum_psf,greedy_used_at0p8,maximum_used
+ls_base,parent10,0.4,24,2347,2133,1709,1668,384,384
+ls_base,parent10,0.8,24,2347,2347,1709,1709,384,384
+ls_base,parent10,1.6,24,2347,2380,1709,1720,384,384
+ls_base,paired3,0.4,24,1032,945,719,697,197,197
+ls_base,paired3,0.8,24,1032,1032,719,719,197,197
+ls_base,paired3,1.6,24,1032,1045,719,724,197,197
+ls_deep,parent10,0.4,24,2347,2133,1709,1668,616,616
+ls_deep,parent10,0.8,24,2347,2347,1709,1709,616,616
+ls_deep,parent10,1.6,24,2347,2380,1709,1720,616,616
+ls_deep,paired3,0.4,24,1032,945,719,697,284,284
+ls_deep,paired3,0.8,24,1032,1032,719,719,284,284
+ls_deep,paired3,1.6,24,1032,1045,719,724,284,284

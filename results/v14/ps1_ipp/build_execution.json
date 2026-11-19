@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-19T23:14:58.141066+00:00",
+  "job": "61613456",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-build-probe",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ipp_build_probe.sh"
+  ],
+  "state": "submitted_not_complete",
+  "scope": "Official20190404core-source capability probe under isolated scratch prefix; not a PS1 physical response or catalogue reproduction."
+}

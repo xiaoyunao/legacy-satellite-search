@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "results/v14/paired_radius/full_stage_pairs.csv": "e3867964e404186542d2c73f0155f897edd04750cc2a06c4cf59715a3401f004",
+    "results/v14/paired_radius/full_stage_acceptance.json": "9e5a912c33ea014e9e4bfd756af85d528cbee9f569036971096cb01a0f6ae71a",
+    "results/v14/paired_radius/registration.json": "6628e631fd92c4f17b168b7d20b9b784edcc8502514adff1a6e710664cabd175"
+  },
+  "code_sha256": "762c26c2495481fbc9b5f3f538dcca9529e3f80148c1bafb838648725cbfa055",
+  "populations": [
+    2,
+    8,
+    14,
+    20,
+    26,
+    32,
+    38,
+    44
+  ],
+  "sites": [
+    "v14_south_response_1",
+    "v14_south_response_2",
+    "v14_south_response_3"
+  ],
+  "seed": 487242,
+  "bootstrap_draws": 10000,
+  "resampling": "Eight shared populations and three fixed selected backgrounds, crossed resampling; radii/depths/stages paired throughout.",
+  "denominator": "Rendered input members in each paired realization; equal weight per population/background pair, not pooled-star completeness.",
+  "blind_search_performed": false,
+  "Pdet_measured": false,
+  "scope": "Conditional finite rendered populations at 100 kpc, originally target MV proxy -3. Exposure, source extraction/association, PSF and hard cuts are actual native stages. Initial and final detection are different pipeline products and need not be nested. Intervals are exploratory with only eight populations and three selected skies; not broad-sky confidence or a pure mutual-crowding effect. Same intrinsic input light does not guarantee equal local extinction, exposure, foreground blends or photon pixels. Original 144 outcomes remain unchanged. No PS1 response or physical recovery probability is inferred."
+}

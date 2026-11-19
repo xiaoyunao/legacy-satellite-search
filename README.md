@@ -7,7 +7,7 @@ This project searches the North BASS and South DECam photometric catalogs of DES
 
 The first complete human-review material is available: [40 priority positions and 35 anonymous positions](results/v14/human_review/README.md), with 202/71-page versioned PDFs, an isolated anonymous image bundle and blank forms. Material QA does not constitute scientific grading or a new-system confirmation.
 
-The initial three-background CCD tranche is also complete: [nine trials / eighteen arm measurements](results/v14/repeat/initial_nine_summary.csv), accepted against native-catalogue hashes and the frozen protocol. Run `PYTHONPATH=src .venv/bin/python scripts/v14_repeat_accept.py` against the aggregate result snapshot to verify the tranche. This does not complete the registered 144 trials or physical PS1 response validation; the initial counts are not a population-completeness estimate.
+The frozen three-background CCD grid is complete: [144 native trials /288 matched-policy arm measurements](results/v14/repeat_full/full_acceptance.json), with shared-population statistics in `results/v14/repeat_full/statistics/`. The [initial nine-trial tranche](results/v14/repeat/initial_nine_summary.csv) remains an archived subset. Formal baseline-policy replay is stored separately under `production_replay/`. These finite-rendered-light experiments do not validate physical PS1 transfer or a full spatial/true-V selection function.
 
 ## DR11 whole-footprint runs
 
@@ -33,6 +33,16 @@ The current paper mainline and complete review requirements are tracked in [PRO_
 ## Independent stellar-reference validation
 
 The [independent reference audit](docs/INDEPENDENT_REFERENCE_AUDIT.md) documents the COSMOS/ACS+HSC reference, actual PS1 native exposure/mask coverage, proxy contamination and finite-count holdout tests. Aggregates and reproducible figures are in `results/v14/repeat_full/cosmos_reference/`; source rows and images stay on NERSC. This is a conditional single-source audit, not physical PS1 system completeness or candidate confirmation. Production masks and thresholds are unchanged.
+
+The fixed-population size diagnostic (`results/v14/paired_radius/`) preserves rendered members/light while shrinking10pc populations to3pc. It measures native exposure/extraction/PSF/hard/CMD stages and audits association bounds, without another blind-recovery experiment. The targeted faint-light perturbation (`results/v14/faint_light/`) preserves an existing extended-bright control and adds previously omitted faint members inside its finite footprint. Their source images and individual truth lists remain onNERSC. Reproduce aggregate summaries/figures locally after syncing the accepted CSV/JSON products:
+
+```sh
+PYTHONPATH=src:. .venv/bin/python -m scripts.v14_paired_radius_summary
+MPLBACKEND=Agg PYTHONPATH=src:. .venv/bin/python -m scripts.v14_paired_radius_plot
+MPLBACKEND=Agg PYTHONPATH=src:. .venv/bin/python -m scripts.v14_faint_light_plot
+```
+
+The [official PS1 IPP source manifest](references/ps1_ipp_source_manifest.json) and `results/v14/ps1_ipp/` record the bounded standalone pixel-operator capability probes. Builds run onSlurm in an isolated scratch prefix; shell startup files and production masks are untouched. Compilation is distinct from blank-stack catalogue/PSF/photometric/mask equivalence and physical injection validation.
 
 ## Current search and selection experiments
 

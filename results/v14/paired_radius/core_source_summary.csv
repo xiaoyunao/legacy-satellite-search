@@ -1,0 +1,5 @@
+arm,variant,native_cases,core_radius_in_rh,catalogue_sources,blank_sources,catalogue_minus_blank,novel_sources,novel_PSF,novel_hard
+ls_base,parent10,24,3,4315,2242,2073,2184,1546,355
+ls_base,paired3,24,3,975,242,733,815,520,166
+ls_deep,parent10,24,3,4315,2242,2073,2184,1546,564
+ls_deep,paired3,24,3,975,242,733,815,520,230

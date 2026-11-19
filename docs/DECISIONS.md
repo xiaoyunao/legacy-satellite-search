@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-11-19T23:27Z — distinguish catalogue component loss from association errors
+
+Observed fixed-light size response is robust to optimal0.8arcsec association and doubling tolerance; raw3rh source excess also falls. Treat blending/source separation as the principal observed compact-case bottleneck at100kpc in these finite populations. Keep detector/kernel/cuts frozen, rather than trying to repair missing separable members with search-score changes. Do not extrapolate to faint/15pc/other-distance/all-sky completeness. Source-noise and local geometry are included; this is not a pure-crowding decomposition.
+
+PS1native validation now has an actual official-source route. Try only the specifically missing bundledC dependencies in an isolated prefix; do not install a full DB/Perl stack or infer PS1response from successful compilation. Blank-stack catalogue/PSF/photometry/mask equivalence remains prerequisite to any injection transfer. Preserve failed build attempts and primary144results.
+
+
 ## 2026-11-19T22:25Z — preserve the observed faint-light sensitivity
 
 Adding4975omitted faint members changes one baseline crossing in the outcome-selected draw34 (2/3→1/3), while deep spatial3/3remains. Saved raw/group peaks show the same below-cut score; do not change merging or threshold. Native source-noise and new faint spatial assignment are part of this perturbation, so no pure-light causal effect or global correction is inferred. Preserve144finite-input results, report that physical integrated-light completeness still needs calibrated treatment rather than silently relabeling the old grid.

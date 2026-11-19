@@ -1,5 +1,12 @@
 # 当前科学主线
 
+## 2026-11-19T23:27Z — measured size-response boundary
+
+Same-member/light native24pairs: final matched sources2347→1032after10pc→3pc; baseline hard384→197,deeper616→284. Exposure unchanged at>99.9%;0.8arcsec maximum association equals greedy,1.6arcsec does not restore hard members. Core catalogue-minus-blank2073→733and member-neighbor12.66%→62.91%support blending/source separation before PSF/CMD as the main observed limitation in this selected experiment. Preserve8shared populations/3fixed skies; no new blindPdet or full-light SF claim. Keep A production frozen; do not respond with more threshold/kernel tuning. See [current report](../fourteenth_science_report.md).
+
+w6545complete+29zero-valid-gr/6891;317pending;174retries accepted/zero uncovered. Final common-clock integration/necessary C/selected evidence/sampling/privacy QA remain gates before one review. OfficialIPP source is downloaded, core build is in targeted dependency validation; physicalPS1transfer/gain remains unvalidated. No manuscript.
+
+
 ## 2026-11-19T22:25Z — faint-light perturbation measured; production continues
 
 - v22:19Z: **6529/6891 complete +29 zero-valid-gr terminals**, **24361.03503858024 summed R14 owned deg²**,333 fields remain;174scan retries accepted,zero uncovered. These are not final historical union or physical-gain areas. **61592117_2 COMPLETED/13:14**,784retained modes/403source groups pass exact source/seed/membership checks; remaining registered C owners still require acceptance.

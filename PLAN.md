@@ -1,10 +1,18 @@
 # Plan
 
+## Current checkpoint — 2026-11-19T23:27Z
+
+1. Finish existing317scan fields and regional C; w6545complete+29zero-valid-gr/6891,174retries accepted/zero uncovered. Accept completed shards, then rebuild final common-clock source/area/zero-peak ledger/identities/funnel.
+2. Same-population native24pairs/48depth stages and association audit are complete. Publish the measured component-loss boundary (2347→1032final,384→197/616→284hard), with paired uncertainty and finite-light/three-sky limits. Original144unchanged; do not retune production or extend a parameter grid from this alone.
+3. OfficialIPP source acquired. CFITSIO/floatFFTW now build; optional database was disabled, exposing the bundledOhana/kapa.h prerequisite. Assess that bounded core dependency before further build work. Build success must precede blank-stack/operator equivalence; physicalPS1response and three-armΔPdet remain unvalidated. Stop broad installation/model expansion unsupported by a concrete failure.
+4. Final whole-project human package waits for final production/required C/evidence/probability design/privacy-page QA. Preserve original75and blank responses, no interim grading, automatic promotion, abundance inference or manuscript.
+
+
 ## Current checkpoint — 2026-11-19T22:25Z
 
 1. Follow333remaining scan fields and necessary C (v6529+29/6891;174retries accepted/zero uncovered). Ctimeout-q02 accepted784modes/403groups. Preserve pending owners; refresh common-clock production/areas/identities after convergence.
 2. Faint-light3-site experiment accepted: base2/3→1/3,deep3/3→3/3spatial; bg2matching group drops below unchangedcut, not merging. Treat this as conditional light/noise sensitivity, not a population correction. Current144 remain a finite-rendered-light experiment, not fully calibratedV/full-spatial SF.
-3. Finish paired-radius same-population stages under successor61608931 (exact21remaining cases; old61604174 whollypending and retired). Collector61604183 now follows it. Reuse accepted cases; inspect per-case proofs for bounded-pack timeout recovery. Keep8shared populations/3fixed skies and no new blindsearch/Pdet claim.
+3. Finish paired-radius same-population stages under successor61608931 (exact21remaining cases; old61604174 whollypending and retired). Collector61610213 follows it; pending regular61604183 retired after registered handoff. Reuse accepted cases; inspect per-case proofs for bounded-pack timeout recovery. Keep8shared populations/3fixed skies and no new blindsearch/Pdet claim.
 4. PhysicalPS1 transfer and broad-sky/15pc completeness remain unsupported; report limits. Freeze final production/sampling units, render selected saved-membership-bound diagnostics, complete privacy/page QA and preserve75before one final user review. No interim grading or manuscript.
 
 
