@@ -1,9 +1,7 @@
 {
   "allocation": "61562188",
   "utc": "2026-11-19T06:32:42.508275+00:00",
-  "original_arrays": [
-    "61556314"
-  ],
+  "original_arrays": [],
   "scope": "Own shared CPU allocation on nid200010. Hold original pending arrays before identical frozen work; release held originals if this allocation exits before supersession. No other project allocation reused. Initial nine CCD tasks also checked fully pending and held before serial takeover in the same owned allocation; independent exit fallback releases both original arrays if needed. Original pending review/C/integrity/context/evidence/package chain superseded after equivalent frozen outputs and assembly hashes passed in 61562188. Local presentation QA is separate.",
   "fallback_job": "61562541",
   "original_C_held": false,
@@ -18,7 +16,7 @@
     "61556314_7|PENDING|(Priority)",
     "61556314_8|PENDING|(Priority)"
   ],
-  "original_CCD_held": true,
+  "original_CCD_held": false,
   "C_superseded": true,
   "superseded_review_jobs": [
     "61558199",
@@ -28,5 +26,9 @@
     "61556642",
     "61556312"
   ],
-  "package_materials_complete": true
+  "package_materials_complete": true,
+  "CCD_superseded": true,
+  "initial_nine_accepted": true,
+  "initial_nine_acceptance_sha256": "98fa8501df08d91331bd34a03221fd2b741e1ce7ccc9a8f281b75033f736b6a6",
+  "fallback_cancelled_after_acceptance": true
 }

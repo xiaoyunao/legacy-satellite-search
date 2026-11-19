@@ -1,5 +1,11 @@
 # Status
 
+## 2026-11-19 初批 CCD 已实测验收，计算资源已释放
+
+- 61562188 与主 step 均 COMPLETED/0:0；9 个实现/18 个深度结果/378 阶段行通过完整性验收。原 pending CCD/测量链和退出 guard 已退役，无残留 hold；bulk Nice 实际回读全为 0。
+- [首批验收](../results/v14/repeat/initial_nine_acceptance.json)与[逐项结果](../results/v14/repeat/initial_nine_summary.csv)：基线/加深位置恢复 5/9、6/9，最高距离模式正确均 5/9。仅初始软件/资源样本；实际光度与半径混杂，不作完整度或显著性推断。
+- 75 位置审查包保持 release_v2 原哈希；没有代填用户判断或执行身份揭示。完整 144、物理 PS1 响应、用户科学判读及全足迹收尾仍为后续项目工作。
+
 ## 2026-11-19 正式人工资料已通过技术验收
 
 - [审查入口](../results/v14/human_review/README.md)，正式目录 release_v2。40 优先位置/202 页、35 匿名位置/71 页及独立匿名 ZIP，75/75 实测补页、226/226 成员模式核验通过。

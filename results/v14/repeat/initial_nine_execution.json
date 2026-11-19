@@ -1,0 +1,71 @@
+{
+  "compute_job": "61562188",
+  "requested_task_cpus": 8,
+  "requested_memory": "64G",
+  "trials": [
+    {
+      "index": 0,
+      "site": "v14_south_response_1",
+      "trial": 0,
+      "reused_prior_native_smoke": false,
+      "native_runtime_seconds": 185.5
+    },
+    {
+      "index": 1,
+      "site": "v14_south_response_1",
+      "trial": 2,
+      "reused_prior_native_smoke": true,
+      "native_runtime_seconds": null
+    },
+    {
+      "index": 2,
+      "site": "v14_south_response_1",
+      "trial": 4,
+      "reused_prior_native_smoke": false,
+      "native_runtime_seconds": 195.1
+    },
+    {
+      "index": 3,
+      "site": "v14_south_response_2",
+      "trial": 0,
+      "reused_prior_native_smoke": false,
+      "native_runtime_seconds": 380.5
+    },
+    {
+      "index": 4,
+      "site": "v14_south_response_2",
+      "trial": 2,
+      "reused_prior_native_smoke": false,
+      "native_runtime_seconds": 384.3
+    },
+    {
+      "index": 5,
+      "site": "v14_south_response_2",
+      "trial": 4,
+      "reused_prior_native_smoke": false,
+      "native_runtime_seconds": 385.2
+    },
+    {
+      "index": 6,
+      "site": "v14_south_response_3",
+      "trial": 0,
+      "reused_prior_native_smoke": false,
+      "native_runtime_seconds": 267.0
+    },
+    {
+      "index": 7,
+      "site": "v14_south_response_3",
+      "trial": 2,
+      "reused_prior_native_smoke": false,
+      "native_runtime_seconds": 268.9
+    },
+    {
+      "index": 8,
+      "site": "v14_south_response_3",
+      "trial": 4,
+      "reused_prior_native_smoke": false,
+      "native_runtime_seconds": 246.9
+    }
+  ],
+  "scope": "Measured native run time only. Earlier smoke is reused, not a new run; allocation also included C and review preparation. No recovery-performance stopping rule was applied."
+}

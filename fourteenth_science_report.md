@@ -1,5 +1,21 @@
 # DR11 search and selection response
 
+## 2026-11-19 initial nine physical trials accepted
+
+The complete initial software/resource tranche now contains nine physical CCD realizations across three fixed backgrounds, 18 LS arm measurements and 378 stage-count rows. Eight native runs are new and one prior smoke is reused. The complete-tranche gate binds measured inputs to the validated native catalogues, registered blanks, physical protocol and shared populations. Allocation 61562188 and its science step exited COMPLETED/0:0; its 1:50:54 includes review-material work as well as the CCD stage. All temporary holds and queue-order changes have been resolved.
+
+| Descriptive initial-tranche quantity | LS baseline | LS deeper |
+| --- | ---: | ---: |
+| Physical trial/background pairs | 9 | 9 |
+| Spatial recoveries | 5 | 6 |
+| Correct distance mode retained (±0.25 mag) | 5 | 6 |
+| Highest-ranked distance mode correct (±0.25 mag) | 5 | 5 |
+| Injected counterparts passing hard photometric selection, summed over pairs | 103 | 175 |
+
+Position matching uses the frozen max(2′, theta_h) radius; all three tested radii here are below 2′. The strict distance criterion is ±0.25 mag, distinct from the separately stored ±0.75-mag wide-mode diagnostic. All blank controls have no spatial recovery at the injected truth positions. The selection count is `N_used` after hard selection, not a separately measured CMD-band count. Per-pair source extraction, PSF assignment and selection counts are in the [initial summary](results/v14/repeat/initial_nine_summary.csv); magnitude/neighbor strata are in `results/v14_repeat/image_response/`.
+
+Each radius has only one IMF realization shared across the three backgrounds. Although all target V proxies are −3, realized values for 3/10/30 pc are −2.4023/−2.7519/−3.7700. Radius, stellar-population fluctuation and realized luminosity are therefore confounded. The 3 pc cases leave 1–3 usable baseline counterparts or 4–6 deeper counterparts and are not recovered; this alone does not establish a radius-only completeness boundary. No interim significance test or positive-gain decision is made, and the fixed physical grid/cuts are unchanged. The remaining 135 realizations and validated physical PS1 response are still outstanding; these data do not complete the 144-trial experiment or a three-survey physical selection function.
+
 ## 2026-11-19 first human material release
 
 The complete first cohort is ready for human review: 40 priority positions (202 PDF pages) and 35 anonymous positions (71 pages plus an isolated image/PDF ZIP). All 75 observed supplements and all 226 retained C memberships passed output-integrity checks. All pages were rasterized and inspected; correcting clipped condition-panel labels changed 40 presentation pages, leaving the other 233 raster pages identical. Both response forms remain entirely blank. This is a technical material release, not scientific adjudication, calibrated review completeness or new-system confirmation. See the [review instructions](results/v14/human_review/README.md) and versioned manifest.

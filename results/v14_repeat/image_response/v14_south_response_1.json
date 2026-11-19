@@ -1,5 +1,5 @@
 {
-  "job": "61556503",
+  "job": "61562188",
   "native_version": "DR11.1.0",
   "blank_sha256": "c946728b15f7c632ce96d5e2783b19add5d017ff4a987f824c1f884150d317ac",
   "plan_sha256": "89d27a693f054bbd7e68f5b94387a2c73bee89e4db92503e1e0228bbb93583e5",
@@ -174,19 +174,43 @@
   "ps1_defined_mask_sha256": "0b0ad4afee6aaba57972f2a6dfa47221295521e2b1178e231dc0094ca99524c9",
   "inputs": [
     {
+      "trial": "0",
+      "arm": "ls_base",
+      "tractor_sha256": "bab1e07f66e8d0559b6ee1038239a31a2aeac2cd996f7af6d2e7f6f9f6f3a9cd",
+      "policy_sha256": "e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594"
+    },
+    {
       "trial": "2",
       "arm": "ls_base",
       "tractor_sha256": "853ca44caa00d106dc70a15d068d8075b2f34370ef8f1a852f21e16e05c49afc",
       "policy_sha256": "e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594"
     },
     {
+      "trial": "4",
+      "arm": "ls_base",
+      "tractor_sha256": "ae1a93fe7b41b3cac9d139c34f81b2d304cf7c5cb6c2c23b75ab6e0159474826",
+      "policy_sha256": "e0711a68a0b0e3b5628c413fca8e9fbcfc897df678f650634079f5d18b927594"
+    },
+    {
+      "trial": "0",
+      "arm": "ls_deep",
+      "tractor_sha256": "bab1e07f66e8d0559b6ee1038239a31a2aeac2cd996f7af6d2e7f6f9f6f3a9cd",
+      "policy_sha256": "47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6"
+    },
+    {
       "trial": "2",
       "arm": "ls_deep",
       "tractor_sha256": "853ca44caa00d106dc70a15d068d8075b2f34370ef8f1a852f21e16e05c49afc",
       "policy_sha256": "47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6"
+    },
+    {
+      "trial": "4",
+      "arm": "ls_deep",
+      "tractor_sha256": "ae1a93fe7b41b3cac9d139c34f81b2d304cf7c5cb6c2c23b75ab6e0159474826",
+      "policy_sha256": "47161076f46001ede3c627058fcec67eb2176c78f10db2266ea81b53fc3db1d6"
     }
   ],
   "requested_trials": 48,
-  "measured_trials": 1,
+  "measured_trials": 3,
   "scope": "Rerun on real calibrated CCDs; released mask and preserved outer background. Unique 0.8 arcsec matching, counting existing sources present in the blank as blends. Image experiments assess conditional response in selected stamps."
 }

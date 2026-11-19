@@ -1,0 +1,34 @@
+{
+  "utc": "2026-11-19T08:28:19.597178+00:00",
+  "scope": "Completion audit of the frozen 75-position review material and registered initial nine CCD trials; not the full research project.",
+  "review_positions": 75,
+  "priority_positions": 40,
+  "anonymous_positions": 35,
+  "C_modes": 226,
+  "PDF_pages": 273,
+  "anonymous_image_panels": 70,
+  "blank_human_response_rows": 75,
+  "native_trials": 9,
+  "arm_measurements": 18,
+  "stage_rows": 378,
+  "all_artifact_checks_passed": true,
+  "review_release_commit": "65c60de",
+  "proof_sha256": {
+    "results/v14/human_review/release_v2/package_manifest.json": "7900621c7b3974629dce4501deb3393797893c8779cee5aee3b57d8a758b29b8",
+    "results/v14/human_review/release_v2/artifact_integrity_audit.json": "b3f51182fee9b749b224e0a8f3fd4e750aabcb679bbf5fd67af316646d29c0b6",
+    "results/v14/human_review/release_v2/layout_QA.json": "638e3d574c30fa6f566f46af57772b7457cd788b7d539270d164fedce3cc5177",
+    "results/v14/human_review/release_v2/nersc_sync_verified.json": "e52b10846726064d1bc23ab40a487c48f0b546f83ed530b6891eabfc2402fb0f",
+    "results/v14/human_review/membership_integrity.json": "d5a2ce9a61d1bfe0d49aadd121be2a16ca2b7e2903e814b24941046bc98f6fd6",
+    "results/v14/repeat/initial_nine_acceptance.json": "98fa8501df08d91331bd34a03221fd2b741e1ce7ccc9a8f281b75033f736b6a6",
+    "results/v14/priority_execution/final_source_state.json": "bd286f3a505e5427f7a64922220b66b3f6b39975021ce45dd20d3394ec9a8235",
+    "results/v14/priority_execution/compute_accounting.csv": "9245334727595a3ad93c49427ab78eab338b9a8be07690cc76740287474399b3",
+    "results/v14/priority_execution/CCD_supersession.json": "8590c7e760f227ecd097b0c5d3ff699f76214f94d74b9aca7a74bff7047948a5",
+    "results/v14/priority_execution/restored_order_verified.json": "35a9e702dad4ea1a8d39a516e580391e1d1efa5f976be0c74a5ff5eddefb103c"
+  },
+  "outstanding_project_work": [
+    "User scientific grades, anonymous sealing and identity reveal",
+    "Remaining 135 frozen physical realizations",
+    "Validated physical PS1 response and adequately sampled gain/selection curves",
+    "Remaining whole-footprint scan and historical census reconciliation"
+  ]
+}

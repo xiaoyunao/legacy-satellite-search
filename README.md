@@ -5,6 +5,8 @@ This project searches the North BASS and South DECam photometric catalogs of DES
 
 The first complete human-review material is available: [40 priority positions and 35 anonymous positions](results/v14/human_review/README.md), with 202/71-page versioned PDFs, an isolated anonymous image bundle and blank forms. Begin with the anonymous ZIP; seal those judgments before identity reveal. Material QA does not constitute scientific grading or a new-system confirmation.
 
+The initial three-background CCD tranche is also complete: [nine trials / eighteen arm measurements](results/v14/repeat/initial_nine_summary.csv), accepted against native-catalogue hashes and the frozen protocol. Run `PYTHONPATH=src .venv/bin/python scripts/v14_repeat_accept.py` against the aggregate result snapshot to verify the tranche. This does not complete the registered 144 trials or physical PS1 response validation; the initial counts are not a population-completeness estimate.
+
 ## DR11 whole-footprint runs
 
 The [current science report](fourteenth_science_report.md) links the freeze hashes, measured footprint, unified candidate index and selection trials. North BASS and South DECam have native gr models. South uses separate PS1, DELVE and DES thresholds, with independently calibrated extension and census-excluded strata.

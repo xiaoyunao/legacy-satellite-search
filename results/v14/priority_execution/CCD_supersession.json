@@ -1,0 +1,26 @@
+{
+  "utc": "2026-11-19T08:15:35.604314+00:00",
+  "actual_compute_job": "61562188",
+  "superseded_pending_jobs": [
+    "61556315",
+    "61556314",
+    "61562541"
+  ],
+  "pre_cancel_states": [
+    "61562541|ls14-handoff-fallback|PENDING|(Dependency)",
+    "61556315|ls14-repeat-measure|PENDING|(Dependency)",
+    "61556314_0|ls14-repeat-initial|PENDING|(JobHeldUser)",
+    "61556314_1|ls14-repeat-initial|PENDING|(JobHeldUser)",
+    "61556314_2|ls14-repeat-initial|PENDING|(JobHeldUser)",
+    "61556314_3|ls14-repeat-initial|PENDING|(JobHeldUser)",
+    "61556314_4|ls14-repeat-initial|PENDING|(JobHeldUser)",
+    "61556314_5|ls14-repeat-initial|PENDING|(JobHeldUser)",
+    "61556314_6|ls14-repeat-initial|PENDING|(JobHeldUser)",
+    "61556314_7|ls14-repeat-initial|PENDING|(JobHeldUser)",
+    "61556314_8|ls14-repeat-initial|PENDING|(JobHeldUser)"
+  ],
+  "initial_nine_acceptance_sha256": "98fa8501df08d91331bd34a03221fd2b741e1ce7ccc9a8f281b75033f736b6a6",
+  "all_initial_trials_measured": true,
+  "held_original_arrays_remaining": [],
+  "scope": "Validated real outputs replace only these pending CCD/measurement jobs. Exit fallback is no longer needed. Full 144 repeats and physical PS1 validation remain incomplete."
+}

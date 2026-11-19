@@ -1,0 +1,60 @@
+{
+  "jobs": [
+    {
+      "job": "61469835",
+      "active": true,
+      "actual_nice_values": [
+        0
+      ],
+      "expected_original_nice": 0,
+      "ledger_restored": true
+    },
+    {
+      "job": "61469842",
+      "active": true,
+      "actual_nice_values": [
+        0
+      ],
+      "expected_original_nice": 0,
+      "ledger_restored": true
+    },
+    {
+      "job": "61469845",
+      "active": true,
+      "actual_nice_values": [
+        0
+      ],
+      "expected_original_nice": 0,
+      "ledger_restored": true
+    },
+    {
+      "job": "61469848",
+      "active": true,
+      "actual_nice_values": [
+        0
+      ],
+      "expected_original_nice": 0,
+      "ledger_restored": true
+    },
+    {
+      "job": "61469850",
+      "active": true,
+      "actual_nice_values": [
+        0
+      ],
+      "expected_original_nice": 0,
+      "ledger_restored": true
+    },
+    {
+      "job": "61469851",
+      "active": true,
+      "actual_nice_values": [
+        0
+      ],
+      "expected_original_nice": 0,
+      "ledger_restored": true
+    }
+  ],
+  "all_active_original_nice_verified": true,
+  "scope": "Current scheduler readback after review handoff; completed absent jobs need no Nice mutation."
+}

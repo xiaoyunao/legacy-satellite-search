@@ -1,5 +1,11 @@
 # Decisions
 
+## 2026-11-19 Accept the whole initial CCD tranche without an interim gain decision
+
+- Require all 9 registered trials, both arms, matching native catalogue hashes, shared physical draws and consistent stage denominators before superseding held jobs. An allow_partial measurement exit is insufficient. The new aggregate-only gate passed 18 measurements/378 rows; missing-arm, duplicate-arm and denominator tests pass.
+- Initial spatial counts are 5/9 versus 6/9 and correct highest modes are 5/9 for both. Use them descriptively. Realized luminosity differs by 1.37 mag across the three radius draws, which are shared across backgrounds; do not attribute the response to radius alone or apply the final positive-gain test at this stage.
+- Retire only the now redundant original CCD/measurement/exit-guard jobs, then release the owned allocation normally. All six bulk Nice values are verified restored. Full repeats/PS1 validation and human scientific grading remain separate subsequent milestones.
+
 ## 2026-11-19 Versioned human material release after actual raster QA
 
 - Full C and saved-membership proof pass all 75 positions/226 modes. Complete observed supplements/context support 40 priority/202-page and 35 anonymous/71-page packages, without any user grades.

@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-19T08:24:58.256541+00:00",
+  "frozen_C_arrays_verified": 226,
+  "native_trial_catalogues_verified": 9,
+  "all_hashes_match": true,
+  "superseded_and_compute_jobs_inactive": true,
+  "scope": "Bounded current-state file checksum and queue inspection only; all source/member tables remain on NERSC. Full survey arrays intentionally continue."
+}
