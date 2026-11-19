@@ -84,5 +84,35 @@
     "state": "submitted_not_completed",
     "qos": "debug",
     "scope": "Context annotations for reused completed C packets"
+  },
+  "ls14-evidence-smoke": {
+    "job": "61557934",
+    "qos": "debug",
+    "state": "submitted_not_completed",
+    "scope": "Validate one genuinely anonymous measured review panel"
+  },
+  "ls14-evidence-full": {
+    "job": "61558007",
+    "qos": "regular",
+    "state": "submitted_not_completed",
+    "scope": "All 75 saved-mode evidence packets after the registered C array and smoke; no human grades"
+  },
+  "ls14-review-order-guard": {
+    "job": "61558199",
+    "qos": "debug",
+    "state": "submitted_not_completed",
+    "scope": "Restore project bulk-scan queue order on C failure, or after the evidence job on success"
+  },
+  "ls14-evidence-layout": {
+    "job": "61558097",
+    "qos": "debug",
+    "state": "submitted_not_completed",
+    "scope": "Validate actual priority and anonymous PDF layouts"
+  },
+  "ls14-review-package": {
+    "job": "61558755",
+    "state": "submitted_not_completed",
+    "qos": "regular",
+    "scope": "Assemble both complete PDF/image packages after evidence and fitted-centre context; local render QA required before human release"
   }
 }

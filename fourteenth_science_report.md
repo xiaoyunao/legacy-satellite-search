@@ -1,5 +1,13 @@
 # DR11 search and selection response
 
+## 2026-11-19 human-review material checkpoint
+
+The latest full review (46d21aad) and user instruction put the completed 75-object review package before human grading. The original 40 priority and 35 stratified audit positions stay frozen. Thirty-three retained C/diagnostic packets are available; two actual saved-membership prototypes (P001 and B001) now also have standardized observed-error, member CMD, spatial and native-pixel evidence. No new user science grades have been entered. The full C array and 75-object evidence job remain queued, so **the human-review package is not released**. Internal incomplete PDFs are layout checks only. [Preparation state](results/v14/human_review/preparation_status.json)
+
+The priority PDF presents all retained C modes and environmental context separately from its measured population/image panels. The anonymous phase-1 PDF/image ZIP contains opaque B IDs and relative axes; identity, scores, known environments and processing labels remain outside. User responses are sealed before reveal, then used to form the final follow-up shortlist. An incomplete or mismatched packet cannot be published as ready; previous assistant triage is not substituted for human judgment. Actual prototype pages and anonymous text content passed layout/privacy QA. [Delivery protocol](results/v14/human_review/README.md)
+
+The newer audit validates **3,142 complete fields, eight no-usable-gr fields and 13,623.963586 owned deg²**. Five retry fields are accepted, ten still have live coverage and zero uncovered failures require another submission. This area clock remains distinct from the frozen production candidate clock and measured gain area. The registered nine-trial CCD tranche and its measurement are still pending; there are no additional physical repeat results to turn into a recovery curve. [Audit](results/v14/progress_20261119c/manifest.json)
+
 ## 2026-11-19 latest-review experiment checkpoint
 
 The full latest GPT Pro review (af4ec677) is now implemented as a priority-ordered acceptance checklist, retaining route B as the paper objective and discovery in parallel. The first follow-up queue does not wait for all registered search fields. The newer manifest audit validates **3,117 complete fields, eight no-usable-gr fields and 13,456.908 new owned deg²**. Four retry fields are accepted and eleven remain live-covered; no uncovered terminal gap calls for duplicate submission. This search clock differs from the current 5,614-record production snapshot. [Audit](results/v14/progress_20261119b/manifest.json) · [Continuation](results/v14/progress_20261119b/continuation.json)

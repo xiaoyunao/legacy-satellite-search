@@ -1,5 +1,15 @@
 # Plan
 
+## Current human-review delivery objective (latest review 46d21aad)
+
+The user is waiting for the **complete** review material before grading. Finish both cohorts: 40 priority PDF packets and a separate 35-position anonymous phase-1 PDF/image ZIP, with blank response forms and immutable input hashes. Preserve the frozen denominator and all retained modes. Do not fill human grades or promote evidence levels; merge the user's judgments only after they respond, and seal anonymous grades before identity/score/environment reveal.
+
+Existing C array 61556312 and final context 61556642 remain queued. Full measured evidence job 61558007 follows C and its successful anonymous prototype 61557934; layout prototype 61558097 validates priority plus blind panels. The final PDF builder refuses missing C, diagnostics or mismatched input hashes. Only internal drafts may be incomplete. Keep the initial nine-trial CCD chain 61556314→61556315 running at the registered settings; physical PS1 calibration and repeated recovery curves remain outstanding.
+
+Assembly job 61558755 follows both evidence and context. Sync the completed PDFs/anonymous ZIP and table/PNG allowlist, run v14_review_validate.py locally to rasterize every page, inspect all contact sheets and representative full pages, then explicitly approve layout/privacy. Until that technical QA is complete the manifest keeps ready_for_human_review=false. Preserve the resulting PDF hashes and user response files; the release compiler will verify an already assembled artifact instead of silently regenerating it.
+
+The review chain is temporarily ordered ahead of six queued bulk-scan parents using positive Nice=1000, without cancelling existing allocations, changing retries or touching other projects. Guard 61558199 restores original bulk order on C failure; after C success it schedules restoration after the evidence job. Record any resulting restoration job and verify the ledger before further scheduling changes.
+
 ## 2026-11-19 latest execution priority
 
 Follow the fully read GPT Pro message af4ec677 in the [acceptance checklist](docs/PRO_REVIEW_CHECKLIST.md). Keep route B (measured selection/census increment) as the stable paper objective and discovery in parallel. Do not wait for the full footprint to review current candidates.

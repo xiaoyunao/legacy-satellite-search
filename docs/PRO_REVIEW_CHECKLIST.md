@@ -1,6 +1,16 @@
 # GPT Pro review: requirements and acceptance
 
-The latest full review in “恢复项目进度” was read through the native conversation tool on 2026-11-19 (message af4ec677-2a67-41a0-9c76-b43db667439b; three turns, no older page). The previous review ccd8cf29 remains part of the A–E requirements. Both original texts are retained in ignored local logs. This checklist paraphrases the user-adopted scientific requirements. It is not a record that every stage is complete.
+## Latest human-review delivery request (46d21aad, 2026-11-19)
+
+Fully read through the native tool: four turns, no older page, newest review 5,020 characters. It adopts the existing scientific architecture and makes delivery concrete: complete 40 priority candidate PDF packets plus an independent 35-object anonymous PDF/image bundle, then the user supplies the scientific grades. Preserve failed records and the sample denominator. Keep morphology/CMD/spatial judgments sealed before revealing anonymous scores, environment or original identity; merge user judgments and form the final follow-up shortlist afterward. Blank forms are not completed reviews.
+
+Required standard evidence: spatial sources and fitted contours; core and background CMD with model, candidate members and measured errors; actual native gr pixels and PSF/RESOLVED information; all retained C distance modes and top-three deletion; masks, extinction and nearby known systems/galaxies. Anonymous phase 1 hides identity-bearing processing and environmental labels until reveal. The marginal colour errors share g with the ordinate. The new renderer reads saved memberships on compute nodes and preserves original plots separately.
+
+Acceptance remains **pending**: the complete cohort's fits and evidence are not all produced. B001 and P001 measured prototypes support layout QA; 61558007 is queued behind C. `scripts/v14_review_pdf.py` refuses incomplete public release, and anonymous ZIP creation requires both cohorts complete. Internal incomplete PDFs are not review deliverables. `scripts/v14_review_seal.py` refuses drafts and unfilled user forms and binds completed responses to the released PDF hash. User grades/reviewer agreement are not inferred by code.
+
+Continue the frozen three-background image repeat and physical PS1 response tasks in parallel. Only then produce adequately sampled physical curves/intervals, reconcile the formal distance boundary and decide between independently supported discovery and the stable selection/census paper. No unsupported contours or population inference.
+
+The preceding full review in “恢复项目进度” was read through the native conversation tool on 2026-11-19 (message af4ec677-2a67-41a0-9c76-b43db667439b; three turns, no older page); the newer 46d21aad is recorded above. The previous review ccd8cf29 remains part of the A–E requirements. Original texts are retained in ignored local logs. This checklist paraphrases the user-adopted scientific requirements. It is not a record that every stage is complete.
 
 ## Latest priority order and measured acceptance
 

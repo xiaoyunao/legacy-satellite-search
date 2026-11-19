@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-11-19 Human review is a distinct user stage
+
+- Latest 46d21aad review and the user's explicit handoff condition require a complete 40-position priority PDF and 35-position anonymous PDF/image ZIP before human grading. Standardize actual observed errors, member markers, spatial contours, native images, full C-mode tables, deletions and context. Do not substitute assistant triage for the user's responses.
+- Anonymous phase 1 hides absolute positions, cohort/field identity, score/rank, C summary statistics, previous decisions and identity-bearing processing/environment labels. The image renderer uses explicit opaque labels; the ZIP strips image metadata and excludes keys/provenance paths. Seal user-supplied phase-1 judgments before revealing identity, then assemble the final follow-up shortlist.
+- Final PDF creation refuses missing/mismatched material; incomplete layout drafts stay ignored. Preserve released PDF hashes and any existing response files. Rendering prototypes are real saved C measurements, not simulated review evidence or completed human grades.
+- To implement the requested review priority, temporarily lower six registered bulk-scan parents by positive Nice +1000. Existing allocations/retries/unrelated work remain unchanged. Record original Nice values and register an after-C restoration guard with failure handling. Reversibility is an execution requirement, not a new scientific threshold.
+
 ## 2026-11-19 Shortlist and registered repeat pilot
 
 - Adopt latest af4ec677 review: prioritize a current 30–50-object shortlist ahead of full-footprint completion. Freeze 40 priority plus 35 exploratory stratified audit positions from eligible R14 production, within-region ranking and 5′ separation. Low-score spatial exclusion means no unweighted claim of global review completeness. Preserve the initial alias-contaminated selection and final frozen queue separately.

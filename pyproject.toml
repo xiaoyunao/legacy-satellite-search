@@ -8,5 +8,8 @@ version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = ["numpy", "scipy", "astropy", "astropy-healpix", "fitsio", "matplotlib", "pyyaml"]
 
+[project.optional-dependencies]
+review = ["reportlab>=4", "pypdf>=5", "pillow"]
+
 [tool.setuptools.packages.find]
 where = ["src"]

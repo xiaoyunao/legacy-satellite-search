@@ -1,13 +1,13 @@
 {
-  "utc": "2026-11-19T04:19:07.825874+00:00",
+  "utc": "2026-11-19T05:05:14.193859+00:00",
   "command": [
     "sacct",
     "-X",
     "-j",
-    "61556311,61556312,61556313,61556314,61556315,61556316,61556503,61556641,61556642,61556716,61557017,61557190",
+    "61556311,61556312,61556313,61556314,61556315,61556316,61556503,61556641,61556642,61556716,61557017,61557190,61557934,61558007,61558199,61558097,61558755",
     "--format=JobID,JobName%40,State,Elapsed,ExitCode",
     "-P"
   ],
-  "accounting": "JobID|JobName|State|Elapsed|ExitCode\n61556311|ls14-shortlist-smoke|COMPLETED|00:01:32|0:0\n61556313|ls14-repeat-smoke|COMPLETED|00:02:54|0:0\n61556315|ls14-repeat-measure|PENDING|00:00:00|0:0\n61556316|ls14-ps1-response|COMPLETED|00:00:45|0:0\n61556312_[0-3%2]|ls14-shortlist-review|PENDING|00:00:00|0:0\n61556314_[0-8%2]|ls14-repeat-initial|PENDING|00:00:00|0:0\n61556503|ls14-repeat-smoke-measure|COMPLETED|00:01:40|0:0\n61556641|ls14-shortlist-context|COMPLETED|00:00:33|0:0\n61556642|ls14-shortlist-context-final|PENDING|00:00:00|0:0\n61556716|ls14-ps1-response-local|COMPLETED|00:00:53|0:0\n61557017|ls14-shortlist-reuse|COMPLETED|00:00:26|0:0\n61557190|ls14-cache-context|COMPLETED|00:00:27|0:0\n",
-  "scope": "Actual scheduler snapshot; the jobs registry records submission, not completion."
+  "accounting": "JobID|JobName|State|Elapsed|ExitCode\n61556311|ls14-shortlist-smoke|COMPLETED|00:01:32|0:0\n61556313|ls14-repeat-smoke|COMPLETED|00:02:54|0:0\n61556315|ls14-repeat-measure|PENDING|00:00:00|0:0\n61556316|ls14-ps1-response|COMPLETED|00:00:45|0:0\n61556312_[0-3%2]|ls14-shortlist-review|PENDING|00:00:00|0:0\n61556314_[0-8%2]|ls14-repeat-initial|PENDING|00:00:00|0:0\n61556503|ls14-repeat-smoke-measure|COMPLETED|00:01:40|0:0\n61556641|ls14-shortlist-context|COMPLETED|00:00:33|0:0\n61556642|ls14-shortlist-context-final|PENDING|00:00:00|0:0\n61556716|ls14-ps1-response-local|COMPLETED|00:00:53|0:0\n61557017|ls14-shortlist-reuse|COMPLETED|00:00:26|0:0\n61557190|ls14-cache-context|COMPLETED|00:00:27|0:0\n61557934|ls14-evidence-smoke|COMPLETED|00:00:26|0:0\n61558007|ls14-evidence-full|PENDING|00:00:00|0:0\n61558097|ls14-evidence-layout|COMPLETED|00:00:48|0:0\n61558199|ls14-review-order-guard|PENDING|00:00:00|0:0\n61558755|ls14-review-package|PENDING|00:00:00|0:0\n",
+  "scope": "Actual scheduler checkpoint; submission registry is not completion."
 }

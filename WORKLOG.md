@@ -2,6 +2,19 @@
 
 ## 2026-11-19
 
+### 完整人工审查包准备与队列优先级
+
+- 从 c1c0524 清洁 main 开始；status/branch/fetch/15 历史、WORKLOG、PLAN 和规则已恢复。原生工具完整读取 46d21aad（5,020 字符，4 轮，无后页）。用户等完整材料后亲自审核；不替用户写新等级/判断。已建立持续目标，未以排队或部分包为完成。
+- 使用 PDF skill 和 bundled workspace runtime。新增 v14_review_evidence、v14_review_pdf、v14_review_seal 与定向测试；review.image_cutouts 增加显式匿名标签，默认原调用行为不变。补页从真实保存 membership、选中测光与原生共加图读取：边缘误差含共享 g 协方差说明，核心/等几何背景、成员标记、半光轮廓、质量统计或匿名掩膜。没有正概率成员时明确只画实际中心图。
+- 61557934 完成 B001 实测原型（26s）；61558097 完成 P001/B001 双版式重绘（48s）。哈希绑定 C 表、成员文件、配置和绘图源代码；原始成员/星表仍留 NERSC。61558007 是等待 61556312 和 smoke 成功的全 75 对象证据任务，61556642 随 C 更新拟合中心环境。提交不计完成。
+- PDF 正式发布默认检查全部登记 seed、C 完成、原始各模式图、实测补页和发现/拟合中心环境；不齐拒绝发布。优先包与匿名 phase1 分离，匿名 ZIP 不含身份键/环境/分数/绝对坐标/先前判断，去 PNG 元数据。空白表不覆盖现有人类回答；已发布哈希不可静默重写；封存工具拒绝草稿、未填表或变更 PDF。未执行人的封存/揭示步骤。
+- 内部缺页 PDF 留 ignored results/work；当前 33 旧 C 包、2 新完整补页，75 包未发布。Poppler 实际栅格查看 P001 证据/像素/环境/模式表及 B001 证据/像素页；修复零贡献源图的大面积空白展示，未制造替代星。pypdf 文本检查匿名原型无 field/cohort/candidate ID/known-name/数值分数泄漏。Fontconfig 提示未阻止渲染，实际页面可读。
+- 队列确认 C/CCD 与扩面同优先级。为执行用户审查优先，将本项目六个 bulk parent 的 Nice 从 0 临时改 1000，未取消运行分配、未改补跑、未使用另一个 photdis 项目的交互分配。原 Nice 写 ignored ledger；61558199 afterany C guard 在失败时恢复，成功时登记 afterany 61558007 恢复。恢复失败/完成仍须核对实际状态，不能假定已执行。
+- 新 progress_20261119c：3142 完成、8 空场、13623.963586033948 owned deg²；5 retry 验收、10 live-covered、0 uncovered。初批新 CCD 仍仅 1 已测，9 任务仍排队，无新恢复率填表。
+- NERSC 环境准备安装可选 reportlab 5.1.0/pypdf 7.1.1，pillow 13 已有；pyproject review extra 记录可选依赖。本地 PDF 用 bundled runtime。科学回归 41 项中 39 通过/2 可选 PDF 测试跳过，bundled runtime 实跑完整 5 项新测试通过；Python 编译和 shell 语法检查通过。
+- 独立 CLI 烟测补查 package/脚本两种导入路径：validate 改为按 __package__ 选择相对/同目录导入，避免未安装 scripts namespace 的 bundled Python 无法执行 README 命令。validate/seal 的直接 --help 实跑通过，代码哈希已更新。
+- 更新主线、PLAN、STATUS、DECISIONS、逐项验收和报告。新增组装链 61558755，依赖证据和最终环境任务；组装只置 materials_complete，实际全页栅格/匿名检查通过后才设 ready_for_human_review。保留已组装 PDF 哈希，禁止重生成改变用户所审版本。下一步：跟进 C/证据/环境链，按终态 manifest 补缺并核验调度恢复；75 包齐后组装、逐页检查并同步，再交给用户科学判读。同时继续既定 CCD 初批与后续物理 PS1 响应验证。
+
 ### 最新 GPT Pro 优先级、真实 shortlist 与新 CCD 配对
 
 - 从 1fc30bd 清洁 main/远端同步状态继续。原生 read_thread 完整读取最新 af4ec677（6,831 字符，三轮、无后页）；首次 30,000 超接口上限，改 20,000 成功，原文留 ignored logs。未使用 computer use。认证失效后由用户自行完成 sshproxy，再验证 SSH 可用。

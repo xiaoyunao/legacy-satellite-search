@@ -1,0 +1,35 @@
+{
+  "scope": "Only six registered project bulk-scan parents. Existing running allocations, retries and unrelated jobs are untouched. Positive Nice lowers pending priority without cancelling work.",
+  "jobs": [
+    {
+      "job": "61469835",
+      "original_nice": 0,
+      "applied": true
+    },
+    {
+      "job": "61469842",
+      "original_nice": 0,
+      "applied": true
+    },
+    {
+      "job": "61469845",
+      "original_nice": 0,
+      "applied": true
+    },
+    {
+      "job": "61469848",
+      "original_nice": 0,
+      "applied": true
+    },
+    {
+      "job": "61469850",
+      "original_nice": 0,
+      "applied": true
+    },
+    {
+      "job": "61469851",
+      "original_nice": 0,
+      "applied": true
+    }
+  ]
+}

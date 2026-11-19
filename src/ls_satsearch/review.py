@@ -120,7 +120,7 @@ def coadd_stamp(files, field, x, y, radius, pixel_scale):
     return stamp, [-edge,edge,-edge,edge]
 
 
-def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=False, region='south'):
+def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=False, region='south', anonymous_label=None):
     x,y = peak['x'],peak['y']
     bx,by = field.xy(bricks['RA'],bricks['DEC'])
     fig,axes = plt.subplots(2,4,figsize=(12,6),layout='constrained')
@@ -129,11 +129,15 @@ def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=F
     status = {}
     for band,row in zip('gr',axes):
         sites = [(x,y,min(270,max(30,2*peak['rh_arcmin']*60)),.524,f'{band} · candidate centre')]
-        sites.extend((*member_xy[i],4.,.262,f'{band} · source {j+1}, p={prob[i]:.2f}')
+        sites.extend((*member_xy[i],4.,.262,(f'{band} · contributor {j+1}' if anonymous_label else
+                      f'{band} · source {j+1}, p={prob[i]:.2f}'))
                      for j,i in enumerate(strong))
         for j,ax in enumerate(row):
             if j >= len(sites):
                 ax.set_axis_off()
+                if anonymous_label and j==1:
+                    ax.text(.5,.5,'No positive-probability\ncontributors in this fit',
+                            ha='center',va='center',transform=ax.transAxes)
                 continue
             cx,cy,size,pixel_scale,title = sites[j]
             distance = np.hypot(bx-cx,by-cy)
@@ -162,7 +166,7 @@ def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=F
             ax.set(xlabel='East (arcsec)',ylabel='North (arcsec)',title=title,
                    xlim=(-size,size),ylim=(-size,size))
     ra,dec = field.sky(x,y)
-    fig.suptitle(f'LS DR11 · {ra:.5f}, {dec:+.5f}')
+    fig.suptitle(anonymous_label or f'LS DR11 · {ra:.5f}, {dec:+.5f}')
     centre = all(status[f'{b}_centre']=='available' for b in 'gr')
     if centre or details:
         fig.savefig(path,dpi=140)
