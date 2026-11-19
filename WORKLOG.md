@@ -2,6 +2,14 @@
 
 ## 2026-11-19
 
+### 获得本项目独立 CPU 分配并实际启动 C 接管
+
+- 原队列持续等待；核查 shared CPU 分区实际有 idle/mix 资源，未使用其他项目的分配。以 salloc --immediate=30 -A desi -N1 -n1 -c8 -C cpu -q shared_interactive --mem=64G -t03:00:00，并通过 srun 启动计算节点 shell，实际获批 61562188 / nid200010。节点内回读 SLURM_JOB_ID=61562188、CPUS_PER_TASK=8；sacct RUNNING，sstat 已有实际 CPU 和约 6 GB RSS。
+- 先登记 afterany 61562188 的独立回退 61562541，再确认原 61556312 四任务均 PENDING，hold 并逐项回读 JobHeldUser，防止重复执行。原数组保留，失败时仅释放记录中的 pending user holds；运行或普通排队任务不触碰。两项回退测试通过。ledger 在 ignored logs/v14-interactive-handoff.json。
+- 在自己新计算分配内执行原脚本四个冻结分片，未改变任何科学输入、种子、距离或切选。C_SHARD_START 0 已输出，日志重定向 NERSC 私有 logs/shared-61562188-C-*.log；真实文件检查当前完整 C/图像包 52/75（原 33 加 19 个；06:47 UTC 元数据验收），不是正式全材料验收。
+- 停止只监测旧队列的 observer session 15282；实际 compute 会话为 81979，句柄 locator 存 ignored logs/review_compute_handle.json。活 shell 不等于科学程序仍运行，必须结合完成标记、产物、sstat/accounting。新实际分配尚未完成；旧依赖链保留作回退，只有等价冻结产物核验成功后才取消被替代待运行步骤。
+- 下一步：完成四个 C 分片；在该分配内按原命令做全模式 integrity、环境、补页和组装，再实际全页 QA/同步。CCD 原数组仍独立排队；若接管它，须先确认其仍 PENDING 并加入已登记回退账本，不能并行重复生成同一物理实现。
+
 ### 原作业回填时间窗调整
 
 - 当前 goal 前轮为 verified wait；原 C/CCD 句柄均 live PENDING，没有失败或新增结果。调度器 sdiag 仍约每分钟 5 个主循环；不是将观察超时视为任务停止。

@@ -1,0 +1,10 @@
+{
+  "allocation": "61562188",
+  "utc": "2026-11-19T06:32:42.508275+00:00",
+  "original_arrays": [
+    "61556312"
+  ],
+  "scope": "Own shared CPU allocation on nid200010. Hold original pending arrays before identical frozen work; release held originals if this allocation exits before supersession. No other project allocation reused.",
+  "fallback_job": "61562541",
+  "original_C_held": true
+}

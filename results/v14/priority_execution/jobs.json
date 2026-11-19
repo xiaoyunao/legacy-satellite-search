@@ -126,5 +126,21 @@
     "qos": "regular",
     "state": "submitted_not_completed",
     "scope": "Verify and freeze all retained-mode memberships after C completion; required by package job"
+  },
+  "ls14-shared-review-run": {
+    "job": "61562188",
+    "qos": "shared_interactive",
+    "state": "allocated_and_C_shard0_started",
+    "node": "nid200010",
+    "cpus_per_task": 8,
+    "memory": "64G",
+    "time": "03:00:00",
+    "scope": "Own new CPU allocation; identical frozen review inputs. Original C array intentionally held with an independent exit fallback."
+  },
+  "ls14-handoff-fallback": {
+    "job": "61562541",
+    "qos": "debug",
+    "state": "submitted_not_completed",
+    "scope": "Release only recorded pending original user holds after the new allocation exits"
   }
 }
