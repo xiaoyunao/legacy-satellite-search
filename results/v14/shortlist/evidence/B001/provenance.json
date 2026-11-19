@@ -1,9 +1,9 @@
 {
   "case_id": "B001",
-  "job": "61558097",
+  "job": "61562188",
   "saved_mode_rank": 18,
   "mode_table_sha256": "ae19fa32819cb849c78e1a0b85260fb6e1316c1b20bd22bb40d839c135cf77eb",
-  "renderer_sha256": "fc60f0d3c222e5aba0f0244a3a8cd1168bef74316c92ad43cb5822105cf807fa",
+  "renderer_sha256": "dd2ff78fafc7aab599c996498b708bda4a60885d6d004b5c4b656a8743da11ab",
   "image_renderer_sha256": "e197b45acb20859dc008988b45fc7b94b613fad3a433c116cb82b95bfc556418",
   "source_manifest_sha256": "889aefd85a1bffedc65411353c00dcde898736a4a05f41e4720f57b29b10bda7",
   "membership_sha256": "935eb3568047ab58b541491543874d60975ba1397e8f82b1ceef0fed3e563062",

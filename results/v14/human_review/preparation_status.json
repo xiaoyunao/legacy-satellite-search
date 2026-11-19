@@ -1,10 +1,10 @@
 {
-  "utc": "2026-11-19T05:29:28.966831+00:00",
+  "utc": "2026-11-19T07:33:04.553002+00:00",
   "registered": 75,
-  "retained_C_packets_complete": 33,
-  "observed_supplement_packets_present": 2,
-  "measured_review_ready": 0,
-  "materials_complete": false,
-  "ready_for_human_review": false,
+  "retained_C_packets_complete": 75,
+  "observed_supplement_packets_present": 75,
+  "measured_review_ready": 75,
+  "materials_complete": true,
+  "ready_for_human_review": true,
   "scope": "Preparation only. Full PDFs/anonymous ZIP are released only when both cohorts pass. User grades remain empty."
 }

@@ -1,5 +1,11 @@
 # DR11 search and selection response
 
+## 2026-11-19 first human material release
+
+The complete first cohort is ready for human review: 40 priority positions (202 PDF pages) and 35 anonymous positions (71 pages plus an isolated image/PDF ZIP). All 75 observed supplements and all 226 retained C memberships passed output-integrity checks. All pages were rasterized and inspected; correcting clipped condition-panel labels changed 40 presentation pages, leaving the other 233 raster pages identical. Both response forms remain entirely blank. This is a technical material release, not scientific adjudication, calibrated review completeness or new-system confirmation. See the [review instructions](results/v14/human_review/README.md) and versioned manifest.
+
+Owned CPU allocation 61562188 performed the remaining fits, integrity, context and evidence and is now running the registered initial nine CCD tasks; indices 0–3 have passed native validation, including the existing smoke. Blind measurement and all 144 repeats are not yet complete. The latest e survey clock retains 3151 completed fields, eight empty fields and 13626.117035 owned deg²; all nine incomplete retry cases have live coverage. Area, candidate and physical-response clocks remain separate.
+
 ## 2026-11-19 saved-mode integrity and continued scan
 
 A later bounded manifest audit validates 3,151 completed fields, eight empty fields and 13,626.117035 owned deg². Retry 61554330_0 completed and passed its field manifest; six retry fields are accepted, nine remain live-covered and zero uncovered gaps require duplicate submission. C and the new CCD tranche still await scheduler priority. [Audit d](results/v14/progress_20261119d/manifest.json)

@@ -1,5 +1,11 @@
 # Decisions
 
+## 2026-11-19 Versioned human material release after actual raster QA
+
+- Full C and saved-membership proof pass all 75 positions/226 modes. Complete observed supplements/context support 40 priority/202-page and 35 anonymous/71-page packages, without any user grades.
+- Actual high-resolution QA found that a 7% condition-image crop removed quantity titles. Preserve the unpublished assembly, remove that crop and release a new directory `release_v2`; 233 pages are pixel-identical and only 40 condition pages change. Keep scientific data/cuts/denominators fixed. The wrapper now forwards explicit output-version arguments.
+- Native product indices 0–3 of the initial nine CCD tasks pass in owned allocation 61562188. Keep measurement and the 144-repeat protocol distinct. Supersede only verified pending review steps and restore the six bulk Nice values; retain CCD fallback until equivalent CCD measurement is accepted.
+
 ## 2026-11-19 Human review is a distinct user stage
 
 - Latest 46d21aad review and the user's explicit handoff condition require a complete 40-position priority PDF and 35-position anonymous PDF/image ZIP before human grading. Standardize actual observed errors, member markers, spatial contours, native images, full C-mode tables, deletions and context. Do not substitute assistant triage for the user's responses.

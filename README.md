@@ -3,6 +3,8 @@
 This project searches the North BASS and South DECam photometric catalogs of DESI Legacy Imaging Surveys DR11 for faint Milky Way stellar systems. It measures how often the deeper photometry adds recoveries to PS1 at a comparable review cost. The main science sample spans 20–150 kpc and circularized half-light radii of 3–30 pc. South PS1 is the discovery priority. South DELVE and DES overlap fields provide deeper comparison samples. Nearby and distant search branches have their own calibration.
 
 
+The first complete human-review material is available: [40 priority positions and 35 anonymous positions](results/v14/human_review/README.md), with 202/71-page versioned PDFs, an isolated anonymous image bundle and blank forms. Begin with the anonymous ZIP; seal those judgments before identity reveal. Material QA does not constitute scientific grading or a new-system confirmation.
+
 ## DR11 whole-footprint runs
 
 The [current science report](fourteenth_science_report.md) links the freeze hashes, measured footprint, unified candidate index and selection trials. North BASS and South DECam have native gr models. South uses separate PS1, DELVE and DES thresholds, with independently calibrated extension and census-excluded strata.

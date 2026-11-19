@@ -1,0 +1,28 @@
+{
+  "case_id": "B006",
+  "job": "61562188",
+  "saved_mode_rank": 1,
+  "mode_table_sha256": "11e97f73d03292d465fd4be973a3405463411bad2d9799d7abf470090aaf54f7",
+  "renderer_sha256": "dd2ff78fafc7aab599c996498b708bda4a60885d6d004b5c4b656a8743da11ab",
+  "image_renderer_sha256": "e197b45acb20859dc008988b45fc7b94b613fad3a433c116cb82b95bfc556418",
+  "source_manifest_sha256": "37bdb009d364ddd9fe6a2d73feb8862e1b3e7e4abbab82a378752956de29516b",
+  "membership_sha256": "cd4cb300f6bc48cf9c6b46c42dafa5eac765f386ef92ab345b9ff82ae92a6428",
+  "selection_sha256": "d539a2d143b8557d1d1297cd1476ef716462c4da45e64f0c114bd351b8149627",
+  "selected_core": 569,
+  "background_sources": 426,
+  "flags": {
+    "forced_PSF": 0,
+    "Gaia_pointsource": 257,
+    "CLUSTER": 0,
+    "RESOLVED": 0,
+    "WISE_GAIA": 0
+  },
+  "image_diagnostic_generated": true,
+  "image_centre_complete": true,
+  "image_expected_member_stamps": 0,
+  "image_missed_member_stamps": 0,
+  "image_pending": false,
+  "g_centre": "available",
+  "r_centre": "available",
+  "scope": "Actual saved C membership and selected measured photometry. No new fit, review grade or identity in the rendered panels. Marginal errors only; g-colour covariance is acknowledged. Revealing environment/score belongs to the separate key."
+}

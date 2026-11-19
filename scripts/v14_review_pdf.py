@@ -211,7 +211,7 @@ def build_group(cases,output,blind,require_complete):
                 new_page(pdf,cid+' | observing conditions',
                          'Depth, seeing and extinction at the fitted centre; inspect discontinuities and image artifacts.')
                 path=folder/f'seed-{rank}-environment.png';source_hashes[str(path)]=digest(path)
-                image(pdf,path,(MARGIN,35,W-2*MARGIN,H-92),crop_top=.07)
+                image(pdf,path,(MARGIN,35,W-2*MARGIN,H-92))
                 footer(pdf,cid+' | environmental annotations are context, not physical membership')
                 for start in range(0,len(modes),20):
                     chunk=modes[start:start+20]

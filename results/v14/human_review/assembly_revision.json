@@ -1,0 +1,63 @@
+{
+  "scope": "Unreleased first assembly preserved byte for byte under ignored work directory; presentation QA found cropped condition-panel titles. Only the versioned replacement may be released.",
+  "unreleased_pdf_hashes": {
+    "priority": "04c73b69ad2bff86122dce00783020878489c308544acadac299d6987a6f8e63",
+    "blind_phase1": "457aee653b3942cf5f491aa054836dc5140f0c6ba2f3df9e85b690ff05154e45"
+  },
+  "replacement_directory": "results/v14/human_review/release_v2",
+  "science_inputs_unchanged": true,
+  "human_grades_entered": false,
+  "raster_comparison": {
+    "priority": {
+      "pages": 202,
+      "pixel_identical": 162,
+      "changed_pages": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        55,
+        60,
+        65,
+        70,
+        75,
+        80,
+        85,
+        90,
+        96,
+        101,
+        106,
+        111,
+        116,
+        121,
+        126,
+        131,
+        136,
+        141,
+        146,
+        151,
+        156,
+        161,
+        166,
+        171,
+        176,
+        181,
+        186,
+        191,
+        196,
+        201
+      ]
+    },
+    "blind_phase1": {
+      "pages": 71,
+      "pixel_identical": 71,
+      "changed_pages": []
+    }
+  }
+}

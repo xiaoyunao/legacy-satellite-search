@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-19T07:33:36.438560+00:00",
+  "package_directory": "results/v14/human_review/release_v2",
+  "manifest_sha256": "7900621c7b3974629dce4501deb3393797893c8779cee5aee3b57d8a758b29b8",
+  "materials_complete": true,
+  "ready_for_human_review": true,
+  "priority_positions": 40,
+  "anonymous_positions": 35,
+  "priority_pages": 202,
+  "anonymous_pages": 71,
+  "human_grades_entered": false,
+  "pdf_sha256": {
+    "priority": "87f202fecff74d9d1b7ef9957ff6d2c870631c4f6e89a0f27d62e35d5038b428",
+    "blind_phase1": "43e6f7b17ff7a6bd71a510ade5f67360ce8fb0a2f13b86055458670f9c3aaf0c"
+  }
+}

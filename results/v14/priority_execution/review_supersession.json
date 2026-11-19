@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-19T07:25:50.534841+00:00",
+  "actual_compute_job": "61562188",
+  "superseded_pending_jobs": [
+    "61558199",
+    "61559510",
+    "61558755",
+    "61558007",
+    "61556642",
+    "61556312"
+  ],
+  "pre_cancel_states": [
+    "61558199|ls14-review-order-guard|PENDING|(Dependency)",
+    "61559510|ls14-integrity-full|PENDING|(Dependency)",
+    "61558755|ls14-review-package|PENDING|(Dependency)",
+    "61558007|ls14-evidence-full|PENDING|(Dependency)",
+    "61556642|ls14-shortlist-context-final|PENDING|(Dependency)",
+    "61556312_0|ls14-shortlist-review|PENDING|(JobHeldUser)",
+    "61556312_1|ls14-shortlist-review|PENDING|(JobHeldUser)",
+    "61556312_2|ls14-shortlist-review|PENDING|(JobHeldUser)",
+    "61556312_3|ls14-shortlist-review|PENDING|(JobHeldUser)"
+  ],
+  "assembly_manifest_sha256": "47c2809178670c4740fcce73e1374cfe38c3191c7ce14e33f3ac2fe911ba47ab",
+  "materials_complete": true,
+  "human_release_QA_pending": true,
+  "scope": "Equivalent actual outputs supersede pending jobs. Cancelled scheduler records are not labelled COMPLETED; user grades remain blank."
+}

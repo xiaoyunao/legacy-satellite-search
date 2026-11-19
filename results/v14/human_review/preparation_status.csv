@@ -1,76 +1,76 @@
 case_id,queue,C_modes_complete,measured_review_ready,pending
-P001,priority,5,False,All-mode saved membership integrity verification pending
-P002,priority,5,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P003,priority,0,False,Retained C modes pending/incomplete
-P004,priority,0,False,Retained C modes pending/incomplete
-P005,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P006,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P007,priority,13,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P008,priority,2,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P009,priority,0,False,Retained C modes pending/incomplete
-P010,priority,0,False,Retained C modes pending/incomplete
-P011,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P012,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P013,priority,7,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P014,priority,0,False,Retained C modes pending/incomplete
-P015,priority,0,False,Retained C modes pending/incomplete
-P016,priority,0,False,Retained C modes pending/incomplete
-P017,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P018,priority,22,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P019,priority,0,False,Retained C modes pending/incomplete
-P020,priority,0,False,Retained C modes pending/incomplete
-P021,priority,0,False,Retained C modes pending/incomplete
-P022,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P023,priority,4,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P024,priority,0,False,Retained C modes pending/incomplete
-P025,priority,0,False,Retained C modes pending/incomplete
-P026,priority,0,False,Retained C modes pending/incomplete
-P027,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P028,priority,4,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P029,priority,0,False,Retained C modes pending/incomplete
-P030,priority,0,False,Retained C modes pending/incomplete
-P031,priority,0,False,Retained C modes pending/incomplete
-P032,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P033,priority,2,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P034,priority,0,False,Retained C modes pending/incomplete
-P035,priority,0,False,Retained C modes pending/incomplete
-P036,priority,0,False,Retained C modes pending/incomplete
-P037,priority,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P038,priority,4,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-P039,priority,0,False,Retained C modes pending/incomplete
-P040,priority,0,False,Retained C modes pending/incomplete
-B001,stratified_blind_audit,1,False,All-mode saved membership integrity verification pending
-B002,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B003,stratified_blind_audit,2,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B004,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B005,stratified_blind_audit,12,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B006,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B007,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B008,stratified_blind_audit,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B009,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B010,stratified_blind_audit,2,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B011,stratified_blind_audit,5,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B012,stratified_blind_audit,9,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B013,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B014,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B015,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B016,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B017,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B018,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B019,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B020,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B021,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B022,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B023,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B024,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B025,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B026,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B027,stratified_blind_audit,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B028,stratified_blind_audit,3,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B029,stratified_blind_audit,1,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B030,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B031,stratified_blind_audit,0,False,Retained C modes pending/incomplete
-B032,stratified_blind_audit,5,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B033,stratified_blind_audit,4,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B034,stratified_blind_audit,2,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
-B035,stratified_blind_audit,5,False,Observed anonymous evidence pending: evidence.png | Observed anonymous evidence pending: images.png | Observed anonymous evidence pending: provenance.json | All-mode saved membership integrity verification pending
+P001,priority,5,True,
+P002,priority,5,True,
+P003,priority,2,True,
+P004,priority,2,True,
+P005,priority,1,True,
+P006,priority,1,True,
+P007,priority,13,True,
+P008,priority,2,True,
+P009,priority,4,True,
+P010,priority,3,True,
+P011,priority,1,True,
+P012,priority,1,True,
+P013,priority,7,True,
+P014,priority,1,True,
+P015,priority,3,True,
+P016,priority,1,True,
+P017,priority,1,True,
+P018,priority,22,True,
+P019,priority,1,True,
+P020,priority,4,True,
+P021,priority,1,True,
+P022,priority,1,True,
+P023,priority,4,True,
+P024,priority,1,True,
+P025,priority,1,True,
+P026,priority,3,True,
+P027,priority,1,True,
+P028,priority,4,True,
+P029,priority,1,True,
+P030,priority,4,True,
+P031,priority,1,True,
+P032,priority,1,True,
+P033,priority,2,True,
+P034,priority,1,True,
+P035,priority,3,True,
+P036,priority,3,True,
+P037,priority,1,True,
+P038,priority,4,True,
+P039,priority,1,True,
+P040,priority,2,True,
+B001,stratified_blind_audit,1,True,
+B002,stratified_blind_audit,2,True,
+B003,stratified_blind_audit,2,True,
+B004,stratified_blind_audit,2,True,
+B005,stratified_blind_audit,12,True,
+B006,stratified_blind_audit,7,True,
+B007,stratified_blind_audit,1,True,
+B008,stratified_blind_audit,1,True,
+B009,stratified_blind_audit,1,True,
+B010,stratified_blind_audit,2,True,
+B011,stratified_blind_audit,5,True,
+B012,stratified_blind_audit,9,True,
+B013,stratified_blind_audit,1,True,
+B014,stratified_blind_audit,1,True,
+B015,stratified_blind_audit,2,True,
+B016,stratified_blind_audit,3,True,
+B017,stratified_blind_audit,5,True,
+B018,stratified_blind_audit,5,True,
+B019,stratified_blind_audit,1,True,
+B020,stratified_blind_audit,1,True,
+B021,stratified_blind_audit,1,True,
+B022,stratified_blind_audit,1,True,
+B023,stratified_blind_audit,5,True,
+B024,stratified_blind_audit,8,True,
+B025,stratified_blind_audit,1,True,
+B026,stratified_blind_audit,3,True,
+B027,stratified_blind_audit,1,True,
+B028,stratified_blind_audit,3,True,
+B029,stratified_blind_audit,1,True,
+B030,stratified_blind_audit,1,True,
+B031,stratified_blind_audit,1,True,
+B032,stratified_blind_audit,5,True,
+B033,stratified_blind_audit,4,True,
+B034,stratified_blind_audit,2,True,
+B035,stratified_blind_audit,5,True,

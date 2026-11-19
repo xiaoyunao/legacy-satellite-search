@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-19T07:40:30.452375+00:00",
+  "manifest_sha256": "7900621c7b3974629dce4501deb3393797893c8779cee5aee3b57d8a758b29b8",
+  "pdf_sha256": {
+    "priority": "87f202fecff74d9d1b7ef9957ff6d2c870631c4f6e89a0f27d62e35d5038b428",
+    "blind_phase1": "43e6f7b17ff7a6bd71a510ade5f67360ce8fb0a2f13b86055458670f9c3aaf0c"
+  },
+  "anonymous_zip_sha256": "bf6bc992384dcbac9cd5d16e8b5e61bc011a889c30df9acc7b210d788154ed89",
+  "all_source_hashes_match": true,
+  "verified_source_entries": 903,
+  "compiler_hash_matches": true,
+  "scope": "Verified immutable HOME project copy of technically released material, not scratch-only storage and not human scientific grading."
+}
