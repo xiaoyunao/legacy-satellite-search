@@ -1,5 +1,19 @@
 # DR11 search and selection response
 
+## 2026-11-19T21:55Z — latest Pro review: omitted faint-star light calibration
+
+Follow-up21:58Z: **61605249 COMPLETED/5:24**, native DR11.1.0 processing185.2s; registered native catalogue/truth/exposure/initial-detection hashes pass. Remaining two fixed backgrounds **61606497**, three-site paired blind/stage measurements **61606498** are submitted, not complete. The input contains5253stars (278unchanged bright+4975faint) and95.90%full V-proxy light;4.10%spatial-tail light remains outside. Native completion is not a recovery result.
+
+Fully read the newest Pro assessment68fa1336 (19Nov21:56CST), following437262c6. Its144-trial and area/C counts predate accepted current results; retain newer measured clocks. The additional actionable calibration is unresolved faint IMF light. Existing outer-bright test addresses a different omission.
+
+Register draw34 on all three original skies: preserve all278 accepted extended bright stars/positions, add4975 previously magnitude-ineligible members within the same3.1arcmin native footprint. Their previously unassigned positions use a declared conditional seed. Rendered light rises from23.565137 to25.191107 of fullIMF26.267464 in V-proxy units;1.076357 remains outside (4.10%). Pilot61605249 is running, not accepted. Measure unchanged bright-member associations separately so thousands of faint truth positions cannot steal bright associations; retain all-truth counts with their different denominator. Then compare actual blind outcomes on the same measured-catalogue workflow. This selected one-population experiment is not a global correction, pure diffuse-light effect or calibratedV completeness. Original144 and frozen75 remain unchanged. Current final-production and physicalPS1 gates still apply.
+
+
+## 2026-11-19T21:44Z — South DELVE primary C complete
+
+**61470252_5 COMPLETED/20:01**,1097/1097 retained modes in575source groups pass exact source/seed/membership verification. Its59preserved old fits (52positiveTS) exactly match restarted numerical values and membership hashes. Together with shard04,all311available archived fits match. This closes the original South DELVE4/5 numerical restarts; original2/3 still await registered61592117. Final source-clock integration and selected image evidence remain pending.
+
+
 ## 2026-11-19T21:40Z — native radius pairing registered; further C shards accepted
 
 The u21:33Z audit has **6521/6891 complete +29 zero-valid-gr terminals**, **24357.978722993823 summed R14 owned deg²**;341 fields remain. All174 registered scan retries are accepted,zero uncovered. Existing scan/C owners remain authoritative; queued work is not complete. This area is neither the final historical union nor a measured-gain footprint.

@@ -2,6 +2,21 @@
 
 ## 2026-11-20
 
+### 05:55 CST — latest Pro review and faint IMF light pilot
+
+- Follow-up05:58CST:61605249 COMPLETED/5:24,native185.2s,5253stars/95.90%full proxy light inside footprint. Native proof passes; remaining two cases61606497 and all-site paired measurement61606498 submitted. Search/C owners continue;61592117_2 now running.
+- Fully reread latest68fa1336 via native read_thread (complete5153characters), stored ignored logs/pro_review_20261119_evening_68fa.txt. Prior437262c6 prompt remains;68fa adds explicit faint-light/boundary calibration. Its progress numbers are historical, not current.
+- Registered all three original skies for one selected near-boundary draw34: fixed278extended bright members, add4975previously omitted faint members inside same3.1arcmin frame/splice. New faint positions use conditional declaredseed because original generator never assigned them. Full/rendered-bright/added/residualV-proxy light26.267464/23.565137/1.625970/1.076357. Preserve outer residual and calibratedV limits. Original144 untouched.
+- Native pilot61605249 debug8CPU64G/29min is running; first input registration passes and DR11.1.0 processing is active. No recovery result claimed. Separate measurement helper preserves blind search and fixed-bright-only matching, avoiding truth-association competition from thousands of faint members. Remaining two sites require resource pilot acceptance; no outcome-based site extension.
+- Files: faint-light protocol/producer/wrapper/measurement helper, generated registration configs/aggregate light table, paired-radius summary helper and updated delivery/science/memory/plan. Python parse and shell syntax pass. Next: accept native pilot, measure same-control stages/blind outcomes, run both remaining registered skies; finish existing radius24/search/C owners. No extra parameter grid, interim human review or manuscript.
+
+
+### 05:44 CST — remaining South DELVE primary C accepted
+
+**61470252_5 COMPLETED/20:01**,1097/1097 retained modes in575source groups pass exact source/seed/membership verification. Its59preserved old fits (52positiveTS) exactly match restarted numerical values and membership hashes. Together with shard04,all311available archived fits match. This closes the original South DELVE4/5 numerical restarts; original2/3 still await registered61592117. Final source-clock integration and selected image evidence remain pending.
+
+
+
 ### 05:40 CST — fixed-population radius experiment and additional C acceptance
 
 - Science question: original IMF light differs by radius, so isolate native size response using the same eight existing bright10pc populations shrunk to3pc across the same three skies. No new IMF/D/light/background nodes, blind search or Pdet claim. Producer/input hashes freeze24native cases; true-centre scaling and intrinsic griz/light invariance are verified. SFD is recomputed at changed positions; finite original rendered lists and non-identical photon pixels remain explicit.

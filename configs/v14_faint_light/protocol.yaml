@@ -1,0 +1,14 @@
+question: Does omitted faint IMF light change native extraction/classification and blind recovery at the existing near-boundary draw?
+source_review: GPT Pro 68fa1336-d39f-4677-861e-cd7838c28758
+parent_trial: 34
+D_kpc: 100
+rh_pc: 30
+target_MV_proxy: -3
+new_native_cases: 3
+backgrounds: all three original South PS1 sites
+control: accepted extended-bright population at 3.1 arcmin, same native frame and splice
+added: all previously magnitude-ineligible IMF members inside the same finite footprint
+preserved: original IMF counts, all previously rendered bright-member positions and fluxes, source photon seed, processing and cuts
+faint_positions: independent conditional Plummer draw with seed [original_seed, 34, 5571]; these positions did not exist in the original generator
+limits: selected one near-boundary population, finite spatial footprint, residual omitted outer light, V proxy not calibrated V, changed model pixels do not give identical photon noise
+primary_144_immutable: true

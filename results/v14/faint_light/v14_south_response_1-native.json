@@ -1,0 +1,10 @@
+{
+  "job": "61605249",
+  "inputs": {
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_1/trial00/tractor/cus/tractor-custom-027421p32797.fits": "78ed9e591a684eeea20bb0001e4ccffcdc4757c82c892055dbfbeffef41d009c",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_1/trial00/truth.npy": "5bf8b3d5ab8a1c388615ce87f355a167bc07a5c6aa970931c9271b1d73fc182b",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_1/trial00/truth.json": "9e1f1eb4c62ef57fdb410a87b8e76c77666a8209155c6b40a4c795c49d77b625",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_1/trial00/injected_exposures.npy": "193a49b47ae18ba48812cfe8044edac8a508b90e8eb74a5a14d4aeb1eabb16b7",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_1/trial00/initial_detection.npy": "dc5d66d6fba5e918a3df16f0eec99dc8a7222c18c45a9bdc802c544b40442df6"
+  }
+}

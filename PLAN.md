@@ -1,5 +1,15 @@
 # Plan
 
+## Latest Pro68fa1336 calibration — 2026-11-19T21:55Z
+
+Complete the three-site draw34 faint-IMF-light sensitivity after accepted native resource pilot61605249 (COMPLETED5:24; remaining61606497→measurement61606498); preserve original278bright-star positions and measure their associations separately. Added4975faint stars within same3.1arcmin footprint account for another6.19%full V-proxy light;4.10%outer light remains. Follow existing radius24 owners61604174→61604183 and all full-search/C owners concurrently. These bounded diagnostics address observed IMF/truncation confounds; no physicalPS1 transfer or global completeness is implied. Current final-delivery gates and one-review policy remain unchanged.
+
+
+## 2026-11-19T21:44Z — South DELVE primary C complete
+
+**61470252_5 COMPLETED/20:01**,1097/1097 retained modes in575source groups pass exact source/seed/membership verification. Its59preserved old fits (52positiveTS) exactly match restarted numerical values and membership hashes. Together with shard04,all311available archived fits match. This closes the original South DELVE4/5 numerical restarts; original2/3 still await registered61592117. Final source-clock integration and selected image evidence remain pending.
+
+
 ## Current checkpoint — 2026-11-19T21:40Z
 
 1. Follow existing owners for341remaining scan fields and regional C; u6521complete+29zero-valid-gr/6891,174retries accepted/zero uncovered. Do not duplicate queued work. Accept completed source-bound C and then rebuild common-clock production/zero-peak-inclusive masks/identities/funnel.

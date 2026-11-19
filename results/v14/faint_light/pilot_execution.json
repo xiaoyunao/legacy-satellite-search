@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-19T21:49:59.357372+00:00",
+  "job": "61605249",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=64G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-faint-light-pilot",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "bash scripts/v14_faint_light.sh native --site v14_south_response_1"
+  ],
+  "state": "submitted_not_complete",
+  "site": "v14_south_response_1",
+  "planned_new_native_cases": 3,
+  "scope": "First index/resource pilot of all three prespecified original backgrounds; parent144 and accepted expanded-bright products immutable. Omitted faint IMF light is added only inside the same finite footprint; no independent physical population or global completeness claim."
+}

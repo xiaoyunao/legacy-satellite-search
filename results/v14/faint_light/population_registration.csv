@@ -1,0 +1,4 @@
+site,original_trial,N_imf,N_bright_extended,N_faint_added,N_all_within_footprint,full_IMF_light_proxy,rendered_bright_light_proxy,added_faint_light_proxy,residual_unrendered_light_proxy,N_faint_outside_footprint,faint_position_assignment
+v14_south_response_1,34,5855,278,4975,5253,26.26746360597052,23.565137200070517,1.6259697531727084,1.0763566527272943,556,"New conditional draw, same IMF counts; not a replay of previously nonexistent faint-star positions"
+v14_south_response_2,34,5855,278,4975,5253,26.26746360597052,23.565137200070517,1.6259697531727084,1.0763566527272943,556,"New conditional draw, same IMF counts; not a replay of previously nonexistent faint-star positions"
+v14_south_response_3,34,5855,278,4975,5253,26.26746360597052,23.565137200070517,1.6259697531727084,1.0763566527272943,556,"New conditional draw, same IMF counts; not a replay of previously nonexistent faint-star positions"

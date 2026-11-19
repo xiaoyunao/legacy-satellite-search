@@ -1,0 +1,4 @@
+field,region,cohort,background,ra_deg,dec_deg,size_px,prior_delta,seeing
+v14_south_response_1,south,south_ps1,v13_select_v12g_south_ps1_006,27.421875,32.797168295823646,1536,0.0,1.8715673685073853
+v14_south_response_2,south,south_ps1,v13_select_v12g_south_ps1_021,331.171875,18.20995686428301,1536,0.25,1.8036495447158813
+v14_south_response_3,south,south_ps1,v13_select_v12g_south_ps1_020,241.17187500000003,25.94447977237001,1536,0.125,1.4584263563156128

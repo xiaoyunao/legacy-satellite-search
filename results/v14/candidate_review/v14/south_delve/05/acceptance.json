@@ -1,0 +1,27 @@
+{
+  "job": "61585071",
+  "inputs": {
+    "results/v14/candidate_review/v14/south_delve/05/provenance.json": "10b2a1458fc7faceb4b0855b201acb2d03714e9e8fd47cf77d1ff5573ed830de",
+    "results/v14/discovery/south_delve/main/sky_group_candidates.csv": "18407c12810fdfc2217f5ce8980e986a0376861e48cd1c08b47c8a792bf403e2",
+    "results/v14/candidate_review/v14/south_delve/05/review_modes.csv": "a74631e9585f968e63b81688c34b5fdc04363b8665e13b557860f8331da3c995",
+    "results/v14/candidate_review/v14/south_delve/05/group_review_modes.csv": "a3c1684f136a2e744cb3f152f01cb045735048c3c626f38744b22485d2c4cd93",
+    "results/v14/candidate_review/v14/south_delve/05/group_review_summary.csv": "96738ca005a0a25c659ab50a7db26ea7abab4179c807980b8f9b3a2f1386cc89",
+    "configs/v14/cohorts/south_delve/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "2f84ca82eae60153d6b5fb21a76a63fc64f376684f7e9c9551fa10d9b4a06236",
+  "exact_source_groups": 575,
+  "selected_seeds": 1097,
+  "fit_states": {
+    "complete": 1097
+  },
+  "complete_membership_references": 1097,
+  "unique_membership_artifacts": 1056,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}
