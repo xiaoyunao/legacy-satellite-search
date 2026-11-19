@@ -1,0 +1,15 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+survey_23-A_base-0.3-001,awaiting_visual_review,1,1,1,1,11.882816196388553,20.5,0.5,1.9764131011048622,Sagittarius II,974.2276991617784,L0
+survey_25-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.4658960033750033,20.25,11.2,0.0,Pisces II,890.1949608188434,L0
+survey_25-A_base-0.3-002,awaiting_visual_review,1,1,1,2,15.622974178400018,20.0,0.35,0.9539662317051927,Pisces II,918.3914858341975,L0
+survey_26-A_base-0.3-001,awaiting_visual_review,6,6,6,1,59.52414920778267,16.25,16.0,49.09189900836503,Virgo II,454.1889271134734,L0
+survey_26-A_base-0.3-002,awaiting_visual_review,8,8,4,4,17.732357725619778,16.25,8.0,11.363930865124544,Virgo II,463.5719898832166,L0
+survey_26-A_base-0.3-003,awaiting_visual_review,2,2,2,15,73.52474381480204,16.75,11.2,58.402019865900286,Virgo II,435.93423929166454,L0
+survey_26-A_base-0.3-004,awaiting_visual_review,3,3,2,11,29.82047032346702,16.25,11.2,23.93930439833929,Virgo II,454.60280222827,L0
+survey_26-A_base-0.3-005,awaiting_visual_review,1,1,1,16,0.0,17.75,11.2,0.0,Virgo II,461.7720574438611,L0
+survey_26-A_base-0.3-006,awaiting_visual_review,2,2,2,22,67.24568596321973,16.75,11.2,52.316038658207844,Virgo II,445.07848807157023,L0
+survey_26-A_base-0.3-007,awaiting_visual_review,2,2,2,20,67.43346403335846,17.0,11.2,52.315974338708514,Virgo II,444.8833897808591,L0
+survey_26-A_base-0.3-008,awaiting_visual_review,1,1,1,21,10.757424786630107,17.5,0.35,0.0,Virgo II,421.8690877068994,L0
+survey_26-A_base-0.3-009,awaiting_visual_review,1,1,1,24,2.6776393149186895,16.5,0.7,0.0,Virgo II,497.7891961647649,L0
+survey_26-A_base-0.3-010,awaiting_visual_review,1,1,1,25,4.799203419178337,17.0,0.35,0.0,Virgo II,480.0287054329968,L0
+survey_30-A_base-0.3-001,awaiting_visual_review,1,1,1,1,7.305682995917726,19.75,1.0,0.031097640580714514,Canes Venatici II,220.1455763348873,L0

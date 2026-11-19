@@ -1,0 +1,10 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+gap_14-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.7221010125389613,19.0,0.5,0.0,Hercules,755.8440974264548,L0
+gap_15-A_base-0.3-001,awaiting_visual_review,1,1,1,1,1.4788888756175633,17.0,1.0,0.0,Segue 2,324.96228021688944,L0
+gap_16-A_base-0.3-001,awaiting_visual_review,7,7,6,4,17.293372129300565,18.5,16.0,6.545822205390152,Bootes III,13.713427896283044,L0
+gap_16-A_base-0.3-002,awaiting_visual_review,5,5,5,6,0.0,17.5,11.2,0.0,Bootes III,18.590631999114052,L0
+gap_16-A_base-0.3-003,awaiting_visual_review,1,1,1,9,5.319773291629133,19.25,16.0,0.17046030184468464,Bootes III,18.791678505519393,L0
+gap_16-A_base-0.3-004,awaiting_visual_review,1,1,1,10,5.883768765602916,19.0,11.2,0.23365224170040833,Bootes III,5.586418131996907,L0
+gap_16-A_base-0.3-005,awaiting_visual_review,1,1,1,13,12.180990352855702,18.25,11.2,2.7206292446499596,Bootes III,24.879525613078265,L0
+gap_19-A_base-0.3-001,awaiting_visual_review,1,1,1,1,8.38900534680539,16.75,0.7,0.0,Bootes III,164.9768873674265,L0
+gap_20-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.7911381596401803,19.75,0.5,0.0,Balbinot 1,322.31399742414,L0

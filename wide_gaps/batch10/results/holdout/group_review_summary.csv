@@ -1,0 +1,13 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+gap_100-A_base-0.3-001,awaiting_visual_review,5,5,5,1,0.0,16.75,11.2,0.0,Triangulum II,609.8042519627181,L0
+gap_100-A_base-0.3-002,awaiting_visual_review,1,1,1,3,0.0,16.5,11.2,0.0,Triangulum II,619.8746805859569,L0
+gap_100-A_base-0.3-003,awaiting_visual_review,1,1,1,7,11.789182404859481,19.25,0.5,0.0,Segue 2,590.4886105217649,L0
+gap_92-A_base-0.3-001,awaiting_visual_review,7,7,6,1,0.0,17.5,11.2,0.0,Leo Minor I,327.5490705942825,L0
+gap_95-A_base-0.3-001,awaiting_visual_review,2,2,1,1,0.0,16.5,11.2,0.0,Hercules,500.24740648720626,L0
+gap_95-A_base-0.3-002,awaiting_visual_review,2,2,2,2,0.0,16.25,0.35,0.0,Hercules,551.4393124689278,L0
+gap_97-A_base-0.3-001,awaiting_visual_review,7,7,6,1,13.572040695652916,20.75,11.2,6.366386239219516,Triangulum II,625.2816170196057,L0
+gap_97-A_base-0.3-002,awaiting_visual_review,5,5,5,5,5.741007668484208,16.25,22.4,0.0,Triangulum II,633.6926178978568,L0
+gap_97-A_base-0.3-003,awaiting_visual_review,6,6,6,9,0.1994389118578983,16.25,22.4,0.0,Triangulum II,613.2142214474305,L0
+gap_98-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,16.25,11.2,0.0,DELVE 4,450.97962151377646,L0
+gap_98-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.0,16.5,11.2,0.0,DELVE 4,424.2713225381454,L0
+gap_98-A_base-0.3-003,awaiting_visual_review,1,1,1,3,10.99858449768861,16.25,1.0,0.46674890885166986,DELVE 4,417.08190648754123,L0

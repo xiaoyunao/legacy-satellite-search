@@ -1,0 +1,15 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+gap_31-A_base-0.3-001,awaiting_visual_review,1,1,1,1,7.349443289716072,20.25,1.4,0.0,Pisces II,662.8294807269056,L0
+gap_33-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.172738664467458,17.0,5.6,0.0,Pisces II,562.9077688210275,L0
+gap_34-A_base-0.3-001,awaiting_visual_review,1,1,1,1,19.54925941263385,18.5,0.35,0.0,DELVE 4,357.6825314303022,L0
+gap_36-A_base-0.3-001,awaiting_visual_review,7,7,4,14,75.63621319120163,20.75,2.8,50.96136166629479,Hercules,3.247177493159706,L0
+gap_36-A_base-0.3-002,awaiting_visual_review,5,5,5,4,8.715272322107197,20.75,11.2,3.1781595574754924,Hercules,10.239507244235744,L0
+gap_36-A_base-0.3-003,awaiting_visual_review,2,2,2,12,4.054936919486675,16.25,5.6,0.0,Hercules,8.470932051256867,L0
+gap_36-A_base-0.3-004,awaiting_visual_review,2,2,2,11,0.0,19.5,11.2,0.0,Hercules,12.570794350410694,L0
+gap_36-A_base-0.3-005,awaiting_visual_review,1,1,1,13,9.47313739285118,20.75,0.7,0.0,Hercules,115.97552852130183,L0
+gap_37-A_base-0.3-001,awaiting_visual_review,2,2,2,1,5.708814933925153,19.5,1.4,0.0,DELVE 4,401.00829449237114,L0
+gap_37-A_base-0.3-002,awaiting_visual_review,1,1,1,3,1.8655531640650107,19.75,2.0,0.0,DELVE 4,402.66425921435587,L0
+gap_38-A_base-0.3-001,awaiting_visual_review,1,1,1,1,6.540728091944012,16.25,0.7,0.0,Hercules,493.7504773445817,L0
+gap_38-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.0,19.75,2.8,0.0,Hercules,498.4016228148087,L0
+gap_40-A_base-0.3-001,awaiting_visual_review,2,2,2,1,14.695873735514125,16.75,0.5,0.0,Virgo II,668.8773283096028,L0
+gap_40-A_base-0.3-002,awaiting_visual_review,1,1,1,3,0.424997137181959,19.75,1.0,0.0,Virgo II,692.241658124107,L0

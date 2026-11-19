@@ -111,7 +111,7 @@ def prepare():
         planned_trials=144,initial_trials=9,scope='Preparation and shared latent PS1/native rows; no recovery result implied.'))
 
 
-def measure(full=False, require_complete=False):
+def measure(full=False, require_complete=False, only_field=None):
     from scripts import v13_image_trials as native
     if native.VERSION!='v14_repeat':raise ValueError('Use the v14_repeat.sh environment')
     if full:
@@ -138,6 +138,10 @@ def measure(full=False, require_complete=False):
                 proof=Path('results/v14/repeat/validation')/name
                 if not proof.is_file() or not json.loads(proof.read_text())['native_products_validated']:
                     raise ValueError('Unvalidated registered native trial: '+name)
+    if only_field:
+        if not full or not require_complete:raise ValueError('Per-site measurements require the complete native grid')
+        sites=[site for site in sites if site['field']==only_field]
+        if len(sites)!=1:raise ValueError('Unknown registered physical background')
     for site in sites:
         folder=data/'image-v14_repeat'/site['field']
         ready=[p for p in folder.glob('trial*') if any(p.glob('tractor/*/tractor-*.fits'))]
@@ -146,7 +150,7 @@ def measure(full=False, require_complete=False):
             state='complete_measured' if len(ready)==len(native.context(site['field'])[1]['conditions'])
             else 'partial_measured' if ready else 'not_measured'))
     out=Path('results/v14/repeat_full' if full else 'results/v14/repeat');out.mkdir(parents=True,exist_ok=True)
-    write_json(out/'measurement_status.json',dict(job=os.getenv('SLURM_JOB_ID'),sites=statuses,
+    write_json(out/((only_field+'-measurement_status.json') if only_field else 'measurement_status.json'),dict(job=os.getenv('SLURM_JOB_ID'),sites=statuses,
         scope='Only ready sites measured. Job completion is not completion of all registered trials or PS1 response validation.'))
 
 
@@ -180,7 +184,7 @@ def validate(field, phase):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=('task','prepare','measure','validate','register_remaining','remaining','measure_full','measure_complete'))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=('task','prepare','measure','validate','register_remaining','remaining','measure_full','measure_complete','measure_site'))
     p.add_argument('--field');p.add_argument('--phase')
     p.add_argument('index',type=int,nargs='?');a=p.parse_args()
     if a.mode=='task':print(*task(a.index))
@@ -189,4 +193,7 @@ if __name__=='__main__':
     elif a.mode=='prepare':prepare()
     elif a.mode in ('measure','measure_full','measure_complete'):
         measure(full=a.mode!='measure',require_complete=a.mode=='measure_complete')
+    elif a.mode=='measure_site':
+        if not a.field:p.error('measure_site requires --field')
+        measure(full=True,require_complete=True,only_field=a.field)
     else:validate(a.field,a.phase)

@@ -1,0 +1,99 @@
+{
+  "state": "submitted_not_complete",
+  "original_pending_holds": [
+    "61568908_10",
+    "61568908_11",
+    "61568908_12",
+    "61568908_13",
+    "61568908_14",
+    "61568908_15",
+    "61568908_16",
+    "61568908_17"
+  ],
+  "source_worklist": "results/v14/progress_20261119g/uncovered_retries.csv",
+  "source_worklist_sha256": "7b520572976fc1a89810ab9fe9a393943d7042b01458352a2554270ba5b7c98d",
+  "worklist": "results/v14/progress_20261119i/packed_retry_pilot/tasks.csv",
+  "worklist_sha256": "26658a9ec09b36a85d15f8170771dd252111ec80b22466b6cc4872197b6f78e3",
+  "fields": 8,
+  "job": "61575067",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c16",
+    "--mem=104G",
+    "-t",
+    "00:30:00",
+    "--array=0-0",
+    "-J",
+    "ls14-packed-retry-pilot",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "--wrap",
+    "export PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; srun --exact -N1 -n1 -c16 --mem=100G --cpu-bind=cores --network=no_vni --resv-ports=0 --mpi=none .venv/bin/python -u -m scripts.v14_retry_packed run results/v14/progress_20261119i/packed_retry_pilot/tasks.csv $SLURM_ARRAY_TASK_ID"
+  ],
+  "guard": "61575080",
+  "guard_command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c1",
+    "--mem=4G",
+    "-t",
+    "00:05:00",
+    "--dependency=afterany:61575067",
+    "-J",
+    "ls14-packed-retry-guard",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export PYTHONPATH=src:.; .venv/bin/python -u -m scripts.v14_retry_packed finish results/v14/progress_20261119i/packed_retry_pilot/tasks.csv"
+  ],
+  "initial_guard_submission_failure": "debug QOSMaxSubmitJobPerUserLimit; original pilot retained and fallback guard submitted to regular",
+  "dependency_updates": [
+    {
+      "job": "61470251",
+      "previous": "afterany:61568908_*(unfulfilled)",
+      "new": "afterany:61568908,afterany:61575080"
+    },
+    {
+      "job": "61470255",
+      "previous": "afterany:61469845_*(unfulfilled),afterany:61568908_*(unfulfilled)",
+      "new": "afterany:61469845,afterany:61568908,afterany:61575080"
+    },
+    {
+      "job": "61470259",
+      "previous": "afterany:61568908_*(unfulfilled)",
+      "new": "afterany:61568908,afterany:61575080"
+    },
+    {
+      "job": "61470263",
+      "previous": "afterany:61469850_*(unfulfilled),afterany:61568908_*(unfulfilled),afterany:61574390_*(unfulfilled)",
+      "new": "afterany:61469850,afterany:61568908,afterany:61574390,afterany:61575080"
+    },
+    {
+      "job": "61470265",
+      "previous": "afterany:61469851_*(unfulfilled),afterany:61568908_*(unfulfilled),afterany:61574390_*(unfulfilled)",
+      "new": "afterany:61469851,afterany:61568908,afterany:61574390,afterany:61575080"
+    },
+    {
+      "job": "61568973",
+      "previous": "afterany:61568908_*(unfulfilled)",
+      "new": "afterany:61568908,afterany:61575080"
+    }
+  ]
+}

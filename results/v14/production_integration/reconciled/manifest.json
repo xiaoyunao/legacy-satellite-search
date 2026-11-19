@@ -2,19 +2,19 @@
   "inputs": {
     "results/v14/production_integration/manifest.json": "3c61a4069efe84ceeefb952808b81ec13432db55503d93348250dbad97782fb1",
     "results/v14/production_integration/eligible_record_inventory.csv": "458617e7140e32f4cd6e2332d6a69bf01e23429e7d63b2b1d9fba73151db901d",
-    "results/v14/catalogue/manifest.json": "64a81231fb72179f2426c5b68d97e24caecf36448db8d59c61bcbf0e790e2a1e",
-    "results/v14/catalogue/candidate_modes.csv": "5476bcf31a142fdc6c34b5dc2774524dd84f34609c3a92a708aa5b911bf71224",
-    "results/v14/catalogue/candidate_catalogue.csv": "1e4c58ae1af4a5c4fed61bbb00943c70a6c0676c048241856574b715c8ed163a",
+    "results/v14/catalogue/manifest.json": "76ad50811de108c74550a1be2b20987f22872ab5dd411b1a707d87acffa5e516",
+    "results/v14/catalogue/candidate_modes.csv": "61da7a092a112ec8f5014695abf6ec20e4bbcc0e44c376d61358cf242d49a2a2",
+    "results/v14/catalogue/candidate_catalogue.csv": "fa10912447d359829c03535778e276976209dd0df1afccc896c903f5341925b3",
     "results/v14/shortlist/cases.csv": "e8b6902fd7faf9984e5fca2534e688d44b7a7083e5dfdf0be2971d08e1585d0b"
   },
   "code_sha256": "ce7231b2bb75277124afe5fc666d0ee112dee0b9c9dc736f830e3f46d7414b41",
   "qualified_records": 7994,
   "provisional_positions": 7822,
-  "records_with_successful_bound_C": 1832,
+  "records_with_successful_bound_C": 2924,
   "frozen75_verified_current_identities": 75,
   "C_states": {
-    "available_modes_complete_required_seed_audit_pending": 1832,
-    "no_bound_complete_mode": 6162
+    "available_modes_complete_required_seed_audit_pending": 2924,
+    "no_bound_complete_mode": 5070
   },
   "final_production_frozen": false,
   "scope": "Qualified discovery records only, reconciled with the existing complete-link sky/DM/scale rule. Nearby incompatible hypotheses remain linked in the 5-arcmin table; these are provisional positions, not final human-review units or physical discoveries. C rows inherit the catalogue source/seed binding; a completed available row is not certification that every required seed was run. Historical raster-area union, terminal search completion, seed completeness, source-level image QA and final review-unit freeze remain gates. Frozen 75 identities are retained with empty user grades; never put this identity crosswalk in an anonymous archive."

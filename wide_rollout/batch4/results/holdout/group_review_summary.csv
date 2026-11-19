@@ -1,0 +1,20 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+survey_31-A_base-0.3-001,awaiting_visual_review,2,2,2,1,0.0,20.0,11.2,0.0,Segue 2,1223.8166164734273,L0
+survey_31-A_base-0.3-002,awaiting_visual_review,3,3,2,2,0.0,16.25,11.2,0.0,Segue 2,1240.5362332570116,L0
+survey_32-A_base-0.3-001,awaiting_visual_review,2,2,2,1,10.565315601784555,18.75,0.5,0.10637509988372584,Aquarius III,922.3867681938827,L0
+survey_33-A_base-0.3-001,awaiting_visual_review,1,1,1,1,10.611824962157149,17.0,1.0,1.2602871883998796,Triangulum II,1507.334443549403,L0
+survey_33-A_base-0.3-002,awaiting_visual_review,1,1,1,2,4.263453133381586,18.25,1.0,0.0,Segue 2,1595.7770474427073,L0
+survey_35-A_base-0.3-001,awaiting_visual_review,1,1,1,1,1.5830929514567984,18.5,0.7,0.0,DELVE 5,232.96036597794063,L0
+survey_35-A_base-0.3-002,awaiting_visual_review,1,1,1,2,14.142926661285038,19.0,0.7,0.20469911940053076,DELVE 5,265.31449398408574,L0
+survey_36-A_base-0.3-001,awaiting_visual_review,2,2,1,1,7.6582737039108935,16.75,0.7,0.0,Aquarius III,1210.6418045755079,L0
+survey_36-A_base-0.3-002,awaiting_visual_review,1,1,1,3,7.435444690007987,16.75,1.0,0.027868486161775063,Aquarius III,1249.8007948697957,L0
+survey_36-A_base-0.3-003,awaiting_visual_review,1,1,1,4,13.471907042176595,20.75,0.5,0.0,Aquarius III,1205.0103470732142,L0
+survey_37-A_base-0.3-001,awaiting_visual_review,2,2,2,1,4.762356602487554,21.0,11.2,0.02148448763466293,Balbinot 1,422.5343213829178,L0
+survey_37-A_base-0.3-002,awaiting_visual_review,1,1,1,3,1.9399683545146664,17.25,0.5,0.0,Balbinot 1,377.61597185939183,L0
+survey_37-A_base-0.3-003,awaiting_visual_review,1,1,1,4,0.0,19.75,11.2,0.0,Balbinot 1,405.62131191944934,L0
+survey_39-A_base-0.3-001,awaiting_visual_review,7,7,6,1,0.0,16.25,11.2,0.0,Bootes IV,874.8896793193047,L0
+survey_39-A_base-0.3-002,awaiting_visual_review,5,5,5,3,0.0,19.5,11.2,0.0,Bootes IV,860.2565981797974,L0
+survey_39-A_base-0.3-003,awaiting_visual_review,1,1,1,11,0.0,20.0,11.2,0.0,Bootes IV,900.2098709113124,L0
+survey_39-A_base-0.3-004,awaiting_visual_review,1,1,1,14,0.0,19.75,5.6,0.0,Bootes IV,845.564476069615,L0
+survey_40-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.75861566699071,19.5,0.7,0.0,Triangulum II,1209.6567058937128,L0
+survey_40-A_base-0.3-002,awaiting_visual_review,1,1,1,2,1.5397869205295618,20.25,0.5,0.0,Triangulum II,1229.8965640528452,L0

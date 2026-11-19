@@ -32,6 +32,9 @@ case "$1" in
         .venv/bin/python -u scripts/v14_repeat.py measure_complete
         exec .venv/bin/python scripts/v14_repeat_accept.py --full
         ;;
+    measure_site)
+        exec .venv/bin/python -u scripts/v14_repeat.py measure_site --field "$2"
+        ;;
     measure)
         .venv/bin/python -u scripts/v14_repeat.py measure
         ;;

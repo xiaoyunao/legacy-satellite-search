@@ -1,0 +1,9 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+gap_72-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,17.0,5.6,0.0,DELVE 4,179.94713530615508,L0
+gap_73-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.924360737724692,16.75,0.5,0.0,Hercules,252.5400220119423,L0
+gap_73-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.0,20.0,1.4,0.0,Hercules,270.1265577715651,L0
+gap_74-A_base-0.3-001,awaiting_visual_review,1,1,1,1,5.296077610635212,20.5,1.4,0.0011294282785511423,Triangulum II,1512.9607685058847,L0
+gap_75-A_base-0.3-001,awaiting_visual_review,1,1,1,1,21.59086999835006,16.25,0.5,3.989989585282869,Aquarius III,743.70464714686,L0
+gap_77-A_base-0.3-001,awaiting_visual_review,1,1,1,1,9.787452804238246,16.5,0.7,0.031216863634391467,Segue 1,343.5373331658238,L0
+gap_78-A_base-0.3-001,awaiting_visual_review,2,2,2,3,18.509721059943743,17.5,0.35,2.605969159410268,Canes Venatici II,236.5686431632051,L0
+gap_78-A_base-0.3-002,awaiting_visual_review,2,2,2,2,0.0,19.25,11.2,0.0,Canes Venatici II,356.14522492099996,L0

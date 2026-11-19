@@ -1,0 +1,33 @@
+{
+  "job": "61575366",
+  "tasks": 4,
+  "worklist": "results/v14/progress_20261119j/retry_tasks.csv",
+  "worklist_sha256": "e8cc24eb9c602a6aa9c137460f94dfbcd0b0934fdedad732822e03ae97c85c27",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=128G",
+    "-t",
+    "02:00:00",
+    "--array=0-3%2",
+    "-J",
+    "ls14-oom-j-retry",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "--wrap",
+    "export LS_SAT_STEP_MEM=120000M; bash scripts/v14_retry_manifest.sh results/v14/progress_20261119j/retry_tasks.csv"
+  ],
+  "state": "submitted_not_complete",
+  "observed_failure": "All four field logs explicitly report Slurm oom_kill at44G science-step limit; not coverage failures. Retry with120000M step within128G allocation, preserving scientific configuration.",
+  "previous_dependency": "afterany:61469851_*(unfulfilled),afterany:61568908_*(unfulfilled),afterany:61574390_*(unfulfilled),afterany:61575080(unfulfilled)",
+  "new_dependency": "afterany:61469851,afterany:61568908,afterany:61574390,afterany:61575080,afterany:61575366"
+}

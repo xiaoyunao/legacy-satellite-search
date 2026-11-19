@@ -57,9 +57,7 @@ def run(output, extra_jobs=()):
             cohort=primary[parent]
             fields=specs[cohort][index*8:(index+1)*8]
         elif parent in retry_maps:
-            if index>=len(retry_maps[parent]):
-                raise ValueError('Unexpected registered retry task index')
-            fields=[dict(id=retry_maps[parent][index]['field'])]
+            fields=retry_fields(retry_maps[parent],index)
         else:
             continue
         state=task['State'].split()[0].removesuffix('+')
@@ -107,6 +105,15 @@ def run(output, extra_jobs=()):
         note='Terminal accounting tasks are intersected with incomplete manifests and expanded live squeue coverage. Registered queued/running retries are retained.'))
     print(dict(original_requests=len(requested),accepted=sum(r['action']=='accepted_manifest' for r in reports),
                covered=sum(r['action']=='covered_by_live_job' for r in reports),new_retries=len(retry)),flush=True)
+
+
+def retry_fields(rows,index):
+    if rows and 'array_task_index' in rows[0]:
+        selected=[dict(id=r['field']) for r in rows if int(r['array_task_index'])==index]
+        if not selected:raise ValueError('Unexpected registered packed retry task index')
+        return selected
+    if index>=len(rows):raise ValueError('Unexpected registered retry task index')
+    return [dict(id=rows[index]['field'])]
 
 
 if __name__=='__main__':

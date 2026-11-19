@@ -1,0 +1,112 @@
+{
+  "registration": "results/v14/production_integration/masks/tiled/3e675c854e361681/registration.json",
+  "registration_sha256": "da81a7690ed7263bf3a3b8f7fa8d9be1f4420bf674ecba2ae9d53f819911c074",
+  "jobs": {
+    "vectors": {
+      "id": "61574867",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-A",
+        "desi",
+        "-C",
+        "cpu",
+        "-N1",
+        "-n1",
+        "-o",
+        "logs/%x-%A_%a.log",
+        "-q",
+        "regular",
+        "-c2",
+        "--mem=8G",
+        "-t",
+        "01:00:00",
+        "--array=0-31%8",
+        "-J",
+        "ls14-area-vectors",
+        "--wrap",
+        "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; $LS_SAT_DATA/envs/area-union-20261119/bin/python -u -m scripts.v14_mask_tiles vectorize --index $SLURM_ARRAY_TASK_ID --registration results/v14/production_integration/masks/tiled/3e675c854e361681/registration.json"
+      ]
+    },
+    "index": {
+      "id": "61574868",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-A",
+        "desi",
+        "-C",
+        "cpu",
+        "-N1",
+        "-n1",
+        "-o",
+        "logs/%x-%A_%a.log",
+        "-q",
+        "debug",
+        "-c1",
+        "--mem=4G",
+        "-t",
+        "00:10:00",
+        "-J",
+        "ls14-area-index",
+        "--dependency=afterok:61574867",
+        "--wrap",
+        "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; $LS_SAT_DATA/envs/area-union-20261119/bin/python -u -m scripts.v14_mask_tiles index --registration results/v14/production_integration/masks/tiled/3e675c854e361681/registration.json"
+      ]
+    },
+    "tiles": {
+      "id": "61574869",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-A",
+        "desi",
+        "-C",
+        "cpu",
+        "-N1",
+        "-n1",
+        "-o",
+        "logs/%x-%A_%a.log",
+        "-q",
+        "regular",
+        "-c4",
+        "--mem=16G",
+        "-t",
+        "00:45:00",
+        "--array=0-23%4",
+        "-J",
+        "ls14-area-tiles",
+        "--dependency=afterok:61574868",
+        "--wrap",
+        "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; $LS_SAT_DATA/envs/area-union-20261119/bin/python -u -m scripts.v14_mask_tiles tile_shard --index $SLURM_ARRAY_TASK_ID --registration results/v14/production_integration/masks/tiled/3e675c854e361681/registration.json"
+      ]
+    },
+    "collect": {
+      "id": "61574870",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "-A",
+        "desi",
+        "-C",
+        "cpu",
+        "-N1",
+        "-n1",
+        "-o",
+        "logs/%x-%A_%a.log",
+        "-q",
+        "debug",
+        "-c2",
+        "--mem=4G",
+        "-t",
+        "00:20:00",
+        "-J",
+        "ls14-area-collect",
+        "--dependency=afterok:61574869",
+        "--wrap",
+        "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; $LS_SAT_DATA/envs/area-union-20261119/bin/python -u -m scripts.v14_mask_tiles collect --registration results/v14/production_integration/masks/tiled/3e675c854e361681/registration.json"
+      ]
+    }
+  },
+  "state": "submitted_not_complete"
+}

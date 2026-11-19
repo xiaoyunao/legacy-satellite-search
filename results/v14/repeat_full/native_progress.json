@@ -1,9 +1,12 @@
 {
-  "utc": "2026-11-19T10:59:41.541911+00:00",
-  "validated_native": 34,
-  "registered_native": 144,
-  "complete_two_arm_blind_trials": 9,
-  "scope": "Native proof files only. Additional native products are not yet blind recovery measurements or a physical completeness estimate.",
-  "remaining_array_throttle": 4,
-  "throttle_reason": "Four dispatched remaining-array tasks completed in 2:32\u20134:29 with measured peak RSS below 7 GiB and no failures; resources/cuts unchanged, pending concurrency raised from two to four."
+  "utc": "2026-11-19T13:37:15.954754+00:00",
+  "expected_native_trials": 144,
+  "validated_native_trials": 133,
+  "full_blind_measured_trials": 9,
+  "owned_job": "61572579",
+  "handoff_guard": "61572628",
+  "full_measurement_job": "61568456",
+  "acceptance_job": "61568539",
+  "statistics_job": "61574814",
+  "scope": "Native product validation is separate from the accepted two-arm blind measurement and physical PS1 response. Original nine remain the only accepted blind tranche until full-grid gate passes."
 }

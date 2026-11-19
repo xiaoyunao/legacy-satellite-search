@@ -1,0 +1,5 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+gap_04-A_base-0.3-001,awaiting_visual_review,6,6,6,1,0.0,20.5,11.2,0.0,Bootes IV,1002.7059316183205,L0
+gap_04-A_base-0.3-002,awaiting_visual_review,11,11,6,3,0.0,19.5,11.2,0.0,Bootes IV,1029.9501640117746,L0
+gap_04-A_base-0.3-003,awaiting_visual_review,4,4,4,12,0.0,19.5,11.2,0.0,Bootes IV,1020.3134185993814,L0
+gap_09-A_base-0.3-001,awaiting_visual_review,1,1,1,1,7.271917405970761,19.25,0.5,0.0,Segue 2,1514.8443054714403,L0

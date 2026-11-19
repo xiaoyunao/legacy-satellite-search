@@ -300,6 +300,9 @@ def run(output):
     source_paths = sorted({*paths, *(Path(r['input']) for r in modes),
         *(p.with_name(name) for p in paths for name in ('group_review_summary.csv','reviewed_group_inputs.csv')
           if p.with_name(name).is_file())})
+    source_paths = sorted({*source_paths,
+        *(p.with_name(name) for p in source_paths if 'candidate_review' in p.parts
+          for name in ('provenance.json','review_modes.csv') if p.with_name(name).is_file())})
     write_json(output/'manifest.json', dict(job=os.getenv('SLURM_JOB_ID'), config_sha256=sha(config),
                inputs={str(p):sha(p) for p in source_paths}, records=len(detected), modes=len(modes),
                physical_candidate_associations=len(groups), sga=sga, classifications=dict(Counter(r['grade'] for r in output_rows)),

@@ -1,0 +1,7 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+gap_81-A_base-0.3-001,awaiting_visual_review,2,2,2,2,2.479833794230032,20.0,1.0,0.0,DELVE 5,134.110283275416,L0
+gap_82-A_base-0.3-001,awaiting_visual_review,1,1,1,1,10.307288604546915,17.5,0.5,0.014649492246347928,Leo I,326.1690045549221,L0
+gap_84-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,19.5,11.2,0.0,Segue 2,1094.0372782467048,L0
+gap_85-A_base-0.3-001,awaiting_visual_review,2,2,2,1,0.0,19.75,11.2,0.0,DELVE 4,745.9063549397151,L0
+gap_88-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.0,20.5,11.2,0.0,Leo Minor I,96.5727336040308,L0
+gap_89-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.809530598078112,16.75,0.35,0.0,Segue 2,1029.872418646366,L0

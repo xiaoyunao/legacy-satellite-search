@@ -105,10 +105,15 @@ def run(root, full=False):
                 raise ValueError('CMD diagnostic denominator is inconsistent')
             if int(row['latent_population_id']) != int(row['trial']) or int(row['realization_id']) != int(row['trial'])//6:
                 raise ValueError('Shared population identifiers are inconsistent')
+            light=[float(row[key]) for key in ('L_proxy_full_IMF','L_proxy_rendered','L_proxy_exposed',
+                   'L_proxy_detected','L_proxy_PSF','L_proxy_hard_selected','L_proxy_CMD')]
+            if not all(math.isfinite(v) and v>=0 for v in light) or any(b>a*(1+1e-8) for a,b in zip(light,light[1:])):
+                raise ValueError('True V-proxy light attrition has inconsistent denominators')
     for trial in trials:
         part = [r for r in rows if int(r['trial']) == trial]
         shared = ('N_imf','N_rendered','realized_MV_proxy','seed','model_sha256',
                   'ps1_model_sha256','source_poisson_seed')
+        if full:shared += ('L_proxy_full_IMF','L_proxy_rendered')
         if len({tuple(r[k] for k in shared) for r in part}) != 1:
             raise ValueError('Latent physical population differs between backgrounds/arms')
         for site in sites:
@@ -121,7 +126,9 @@ def run(root, full=False):
                'spatial','correct_mode_exists','blind_correct','blind_dm','blind_dm_error',
                'c_modes_fit','c_ts','c_after_top3']
     if full:columns += ['latent_population_id','realization_id','N_cmd_at_truth_dm',
-                        'n_spatial_matching_groups','correct_mode_in_any_spatial_group']
+                        'n_spatial_matching_groups','correct_mode_in_any_spatial_group',
+                        'L_proxy_full_IMF','L_proxy_rendered','L_proxy_exposed','L_proxy_detected',
+                        'L_proxy_PSF','L_proxy_hard_selected','L_proxy_CMD']
     with summary.open('w', newline='') as stream:
         writer = csv.DictWriter(stream, fieldnames=columns, lineterminator='\n')
         writer.writeheader()

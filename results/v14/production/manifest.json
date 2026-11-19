@@ -11,16 +11,16 @@
     "results/v14/discovery/south_outside_census_extension/fields.csv": "4514abdddb860e1b0f92f137e035f371bf5a8fc5860fad54fcf8b8df5f0ba3d6",
     "results/v14/discovery/south_ps1/fields.csv": "4d6a8ec4c0c1238586dca267f308f2595eeb74d4e076a69adfff82f75124ea5e",
     "results/v14/discovery/south_ps1_extension/fields.csv": "2266acf6d36757ca97d975093f2f891258ff2d9a55743fbe5768859ce2c083a3",
-    "results/v14/catalogue/manifest.json": "64a81231fb72179f2426c5b68d97e24caecf36448db8d59c61bcbf0e790e2a1e",
-    "results/v14/catalogue/candidate_modes.csv": "5476bcf31a142fdc6c34b5dc2774524dd84f34609c3a92a708aa5b911bf71224",
-    "results/v14/catalogue/candidate_catalogue.csv": "1e4c58ae1af4a5c4fed61bbb00943c70a6c0676c048241856574b715c8ed163a",
+    "results/v14/catalogue/manifest.json": "76ad50811de108c74550a1be2b20987f22872ab5dd411b1a707d87acffa5e516",
+    "results/v14/catalogue/candidate_modes.csv": "61da7a092a112ec8f5014695abf6ec20e4bbcc0e44c376d61358cf242d49a2a2",
+    "results/v14/catalogue/candidate_catalogue.csv": "fa10912447d359829c03535778e276976209dd0df1afccc896c903f5341925b3",
     "results/v14/discovery/status.csv": "c8fd52cc0e5933e428b54b4d85f17bcc14c4b2c3b6d0e53caeffb0997fb8687a"
   },
-  "source_snapshot_job": "61568667",
+  "source_snapshot_job": "61573608",
   "code_sha256": "376f04513cabb22ba18bfde6f1fa3b8ac0431d2829a573acd67cba62959f7abd",
   "discovery_records": 6708,
   "provisional_sky_associations": 6660,
-  "successful_C_records": 1032,
+  "successful_C_records": 2124,
   "main_dm": [
     16.5,
     20.75

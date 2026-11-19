@@ -1,0 +1,20 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+survey_51-A_base-0.3-001,awaiting_visual_review,1,1,1,1,24.421613023988836,20.25,0.7,6.343803458360071,DELVE 5,400.7610744578628,L0
+survey_51-A_base-0.3-002,awaiting_visual_review,1,1,1,2,21.152726155822872,20.25,0.7,6.361109215471892,DELVE 5,401.3159366779061,L0
+survey_52-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.6344500937288426,17.0,1.4,0.0,Koposov 1,212.72773074809496,L0
+survey_53-A_base-0.3-001,awaiting_visual_review,3,3,3,1,0.0,20.5,11.2,0.0,Segue 2,1210.566421642892,L0
+survey_53-A_base-0.3-002,awaiting_visual_review,1,1,1,3,0.0,20.5,11.2,0.0,Segue 2,1237.3995019562274,L0
+survey_54-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.996129849040853,20.25,0.7,0.0,Segue 2,457.83890657664807,L0
+survey_54-A_base-0.3-002,awaiting_visual_review,1,1,1,2,9.384415901257768,20.0,1.4,0.0,Segue 2,521.0504769899684,L0
+survey_55-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.6693995947816491,19.75,1.4,0.0,Balbinot 1,419.01590824135855,L0
+survey_57-A_base-0.3-001,awaiting_visual_review,1,1,1,1,3.060082188930875,17.75,0.5,0.0,Ursa Major III,153.4712562570577,L0
+survey_59-A_base-0.3-001,awaiting_visual_review,6,6,6,1,0.0,20.25,11.2,0.0,Triangulum II,960.2900286380451,L0
+survey_59-A_base-0.3-002,awaiting_visual_review,5,5,5,7,0.0,17.25,11.2,0.0,Triangulum II,986.1921459190905,L0
+survey_59-A_base-0.3-003,awaiting_visual_review,1,1,1,12,4.825212320071248,19.75,0.35,0.0,Triangulum II,920.9342215281365,L0
+survey_60-A_base-0.3-001,awaiting_visual_review,6,6,6,2,0.0013446433985024875,16.5,11.2,0.0,Ursa Major III,204.28675570846656,L0
+survey_60-A_base-0.3-002,awaiting_visual_review,5,5,4,7,0.0,19.75,11.2,0.0,Ursa Major III,218.316323774495,L0
+survey_60-A_base-0.3-003,awaiting_visual_review,1,1,1,9,0.0,20.5,11.2,0.0,Ursa Major III,270.0210419272002,L0
+survey_60-A_base-0.3-004,awaiting_visual_review,2,2,2,11,0.0,20.0,2.8,0.0,Ursa Major III,209.84288023016256,L0
+survey_60-A_base-0.3-005,awaiting_visual_review,1,1,1,12,0.26163142470759304,20.75,2.8,0.0,Ursa Major III,221.02508345269308,L0
+survey_60-A_base-0.3-006,awaiting_visual_review,1,1,1,14,0.0,16.5,5.6,0.0,Ursa Major III,209.28081308902867,L0
+survey_60-A_base-0.3-007,awaiting_visual_review,1,1,1,15,0.0,20.5,2.8,0.0,Ursa Major III,217.94024096399414,L0

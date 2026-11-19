@@ -1,0 +1,7 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+gap_23-A_base-0.3-001,awaiting_visual_review,1,1,1,1,17.391536947298675,19.25,0.35,1.3346426529898832,Pisces II,973.5185013214966,L0
+gap_25-A_base-0.3-001,awaiting_visual_review,2,2,2,1,0.0,17.25,11.2,0.0,DELVE 4,545.9130311244782,L0
+gap_25-A_base-0.3-002,awaiting_visual_review,1,1,1,2,1.826730762823071,18.5,1.0,0.0,DELVE 4,510.8031683432875,L0
+gap_26-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.436082845563487,19.0,1.0,0.0,Segue 1,337.29127132356825,L0
+gap_28-A_base-0.3-001,awaiting_visual_review,1,1,1,1,2.7687147721929284,16.75,0.7,0.0,Segue 2,745.5256316152676,L0
+gap_30-A_base-0.3-001,awaiting_visual_review,1,1,1,1,1.6415653127422223,20.25,1.0,0.0,Bootes I,299.6308602569795,L0

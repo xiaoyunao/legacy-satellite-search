@@ -228,6 +228,23 @@ def measure(name, allow_partial=False, diagnostics=False):
     field=local_coordinates(site)
     radius=plan['matching_radius_arcsec']
     splice=plan['splice_radius_arcmin']
+    native_conditions={}
+    if diagnostics and VERSION=='v14_repeat':
+        core=np.hypot(*field.xy(blank['RA'],blank['DEC']))<splice
+        valid=core.copy()
+        for band in 'GR':valid &= (blank['NOBS_'+band]>0)&(blank['FLUX_IVAR_'+band]>0)
+        native_conditions.update(source_sample='positive-measurement gr blank-catalogue positions inside the registered splice circle, not uniform random pixels',
+            gr_sources=int(valid.sum()),PSF_sources=int((valid&(np.char.strip(blank['TYPE'].astype(str))=='PSF')).sum()))
+        for band in 'GR':
+            values={}
+            for column in ('PSFSIZE_'+band,'PSFDEPTH_'+band):
+                if column not in blank.dtype.names:continue
+                good=valid&np.isfinite(blank[column])&(blank[column]>0)
+                sample_values=blank[column][good]
+                if column.startswith('PSFDEPTH'):
+                    sample_values=22.5-2.5*np.log10(5/np.sqrt(sample_values))
+                values[column+('_observed_5sigma_mag' if column.startswith('PSFDEPTH') else '_arcsec')]=np.quantile(sample_values,[.16,.5,.84]).tolist() if len(sample_values) else None
+            native_conditions[band]=values
     blank_sky=np.column_stack([blank['RA'],blank['DEC']])
     blank_initial=np.load(storage/'blank'/'initial_detection.npy',allow_pickle=False)
     release,_=sweeps(root,field,site['region'])
@@ -310,6 +327,18 @@ def measure(name, allow_partial=False, diagnostics=False):
                 extra=dict(N_cmd_at_truth_dm=int((observed&cmd_selected).sum()),
                     latent_population_id=int(truth.get('latent_population_id',truth['trial'])),
                     realization_id=int(truth.get('realization_id',int(truth['trial'])//6)))
+                if VERSION=='v14_repeat':
+                    # True-light bookkeeping is diagnostic only. The blind
+                    # detector still receives only the measured catalogue.
+                    dm_true=5*np.log10(truth['D_kpc'])+10
+                    light=10**(-.4*(t['g0']-.59*(t['g0']-t['r0'])-.01-dm_true))
+                    extra.update(L_proxy_full_IMF=10**(-.4*truth['realized_MV_proxy']),
+                        L_proxy_rendered=float(light.sum()),
+                        L_proxy_exposed=float(light[observed].sum()),
+                        L_proxy_detected=float(light[observed&det].sum()),
+                        L_proxy_PSF=float(light[observed&psf].sum()),
+                        L_proxy_hard_selected=float(light[observed&selected].sum()),
+                        L_proxy_CMD=float(light[observed&cmd_selected].sum()))
             # Real faint blending is counted as a failure when the existing blank source remains.
             clearance=parents.query(pixels)[0]*60
             for low,high in ((-10,30),(20,22),(22,23),(23,23.5),(23.5,24),(24,25),(25,26)):
@@ -340,6 +369,7 @@ def measure(name, allow_partial=False, diagnostics=False):
                outer_catalog_inputs=release_inputs,matched_config_sha256=sha(config_path),
                ps1_defined_mask_sha256=None if deep_south else sha(census_mask),
                inputs=input_refs,requested_trials=len(plan['conditions']),measured_trials=len(ready),
+               **(dict(native_blank_conditions=native_conditions) if native_conditions else {}),
                **(dict(measurement_code_sha256=code_inputs,measurement_seconds=monotonic()-started) if diagnostics else {}),
                scope='Rerun on real calibrated CCDs; released mask and preserved outer background. '
                'Unique 0.8 arcsec matching, counting existing sources present in the blank as blends. '

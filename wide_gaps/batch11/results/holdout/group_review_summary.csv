@@ -1,0 +1,6 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+gap_101-A_base-0.3-001,awaiting_visual_review,1,1,1,1,7.85777125089111,20.5,0.35,0.03199675475513564,Hercules,263.4993099319176,L0
+gap_103-A_base-0.3-001,awaiting_visual_review,2,2,2,2,7.6179932440615925,16.75,0.5,0.0,Hercules,832.4117785437711,L0
+gap_104-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.9522709139629861,17.75,0.5,0.0,Triangulum II,1450.6226792867965,L0
+gap_107-A_base-0.3-001,awaiting_visual_review,1,1,1,1,4.0066470366766165,16.5,1.0,0.0,Pisces II,291.9785350680665,L0
+gap_110-A_base-0.3-001,awaiting_visual_review,1,1,1,1,19.67869677548228,20.25,0.5,0.15904723747049987,Kim 1,273.45241643073814,L0

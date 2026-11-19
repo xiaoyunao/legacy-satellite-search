@@ -1,0 +1,2 @@
+candidate_group_id,field_id,depth,method,rank,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,channel,peak_rank,ranking,field,role,policy,budget,group_id,representative,passes_group_cut,branch,evidence_level,nearest_known,nearest_known_arcmin,nearest_known_catalog
+gap_111-A_base-0.3-001,gap_111,base,A,1,-32.25,18.916666666666657,9.640586764484379,6.815378264192396,20.75,0.5,6.342857316819412,A_base,1,6.342857316819412,gap_111,pilot_eval,A_base,0.3,gap_111-A_base-0.3-001,True,True,main,L0,Aquarius III,967.3837739582912,lvdb_data_dwarf_mw.csv

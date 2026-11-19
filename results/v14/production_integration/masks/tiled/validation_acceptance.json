@@ -1,0 +1,42 @@
+{
+  "job": "61574703",
+  "independent_direct_union_job": "61573759",
+  "passed": true,
+  "checks": [
+    {
+      "layer": "all_ordinary_scanned",
+      "metric": "union_deg2",
+      "absolute_difference_deg2": 5.471179065352771e-13
+    },
+    {
+      "layer": "all_ordinary_scanned",
+      "metric": "summed_record_pieces_deg2",
+      "absolute_difference_deg2": 1.4210854715202004e-14
+    },
+    {
+      "layer": "all_ordinary_scanned",
+      "metric": "census_boundary_ambiguity_deg2",
+      "absolute_difference_deg2": 5.134781488891349e-16
+    },
+    {
+      "layer": "qualified_production",
+      "metric": "union_deg2",
+      "absolute_difference_deg2": 3.765876499528531e-13
+    },
+    {
+      "layer": "qualified_production",
+      "metric": "summed_record_pieces_deg2",
+      "absolute_difference_deg2": 1.4210854715202004e-14
+    },
+    {
+      "layer": "qualified_production",
+      "metric": "census_boundary_ambiguity_deg2",
+      "absolute_difference_deg2": 0.0
+    }
+  ],
+  "sources": {
+    "results/v14/production_integration/masks/pilot/summary.json": "feb91788aad638f7adbe401a6adb0796571e79c4cf6183292cafed9784ac9acd",
+    "results/v14/production_integration/masks/tiled/41126469b2db3382/summary.json": "825c2974456490f63ee1204b49cb26e69bc12ccc34b39154a7412bf874b914c2"
+  },
+  "scope": "Actual same32-mask bounded-sky validation. Disjoint-tile and direct working-cell union agree; not whole-survey area."
+}

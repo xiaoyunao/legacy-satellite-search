@@ -25,3 +25,6 @@ __pycache__/
 
 # Large pixel-derived union geometry stays on NERSC.
 *.wkb
+
+# Per-tile intermediates remain on NERSC; publish aggregate areas and hashes.
+/results/v14/production_integration/masks/tiled/*/tiles/

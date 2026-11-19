@@ -1,0 +1,12 @@
+seed: 487430
+bootstrap_draws: 20000
+confidence_level: 0.95
+backgrounds: 3
+repetition_blocks: 8
+cells: 6
+primary_endpoint: spatial
+secondary_endpoints: [correct_mode_exists, blind_correct, correct_mode_in_any_spatial_group]
+resampling: Draw three background indices with replacement, then eight shared repetition-block IDs with replacement; use the same block draw for every sampled background and all six cells, preserving each shared latent population across skies and paired depths.
+weighting: Equal weights in the frozen three-background, six-cell grid; never sky-area or population weights.
+uncertainty_scope: Bootstrap percentiles are sensitivity to resampling these three selected backgrounds and eight shared blocks, not a validated all-sky confidence interval. Report per-background/cell exact binomial Monte Carlo intervals and a simultaneous conservative paired bound across all eighteen background/cell strata; zero discordances must not imply zero uncertainty.
+PS1_status: Physical PS1 comparison remains unresolved until truth-response support, contamination and calibration uncertainty are validated. Do not multiply a joint empirical selection by its constituent stages again.

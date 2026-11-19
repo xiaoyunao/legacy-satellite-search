@@ -1,5 +1,14 @@
 # Decisions
 
+## 2026-11-19 Exact C seed coverage and conditional physical statistics
+
+- An available C maximum is insufficient: account for every qualified original retained mode, distinguishing missing computation, terminal unavailable likelihood and complete fits. Preserve source/seed/provenance hashes; legacy context never certifies another source. This is separate from image/membership and user judgment.
+- Use tiled exact working-cell union only after numerical agreement with the real direct pilot; keep original masks, census-center labeling and their ambiguity. Full registered search, formal eligible footprint and physical-gain footprint remain different quantities.
+- New explicit OOM logs invalidate extrapolating safe memory from completed-task RSS. Increase only the failed four fields' retry memory. Pack previously waiting individual retries only after the real8-field pilot, retain original held tasks, and release only failed originals or retire passed originals after their terminal manifests/rasters/peaks verify. Do not touch unrelated allocations.
+- Freeze physical uncertainty before full outcomes: shared latent populations stay shared across backgrounds and depth arms. Add exact finite-Monte-Carlo bounds to resampling sensitivity; three selected skies do not certify all-sky intervals. Record true-light attrition separately from member counts and missing faint/tail light. The main native engine and registered144 populations remain unchanged.
+- Treat3–15pc as a scientific target, not a certified continuous domain: current physical nodes are3/10/30pc at100kpc with two V-proxy targets. Prior compact recoveries/image injection preclude a novelty claim from methods alone. Physical PS1 transfer, parameter interpolation and population inference need their own evidence.
+
+
 ## 2026-11-19 Evidence-qualified area, legacy C and physical-response limits
 
 - Require explicit same-source full seed sets for legacy C certification; group labels or nearby coordinates alone cannot bind a fit to production. Keep unbound evidence visible as context. Restore original missing metadata by hashes before rerunning C, so valid historical work is not needlessly repeated.

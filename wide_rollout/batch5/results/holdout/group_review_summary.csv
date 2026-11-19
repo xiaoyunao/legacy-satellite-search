@@ -1,0 +1,11 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+survey_42-A_base-0.3-001,awaiting_visual_review,1,1,1,1,17.974730704863774,20.0,0.35,3.814648047537063,Koposov 2,1073.3584771843125,L0
+survey_44-A_base-0.3-001,awaiting_visual_review,1,1,1,1,16.07760313588866,16.75,0.35,0.26882769073107005,Triangulum II,1158.6609257652717,L0
+survey_47-A_base-0.3-001,awaiting_visual_review,5,5,4,1,0.12831186820910379,20.25,11.2,0.0,Hercules,1047.7492489811739,L0
+survey_47-A_base-0.3-002,awaiting_visual_review,2,2,2,4,0.0,16.25,11.2,0.0,Hercules,1025.1376783075873,L0
+survey_47-A_base-0.3-003,awaiting_visual_review,1,1,1,7,0.0,20.5,11.2,0.0,Hercules,1032.1190830272947,L0
+survey_47-A_base-0.3-004,awaiting_visual_review,1,1,1,9,6.186971900519877,19.25,0.5,0.0,Hercules,992.1227679156029,L0
+survey_49-A_base-0.3-001,awaiting_visual_review,7,7,7,1,0.0,20.5,11.2,0.0,Ursa Major III,150.88354474861413,L0
+survey_49-A_base-0.3-002,awaiting_visual_review,3,3,2,3,0.0,20.5,11.2,0.0,Ursa Major III,169.91794373863831,L0
+survey_49-A_base-0.3-003,awaiting_visual_review,1,1,1,4,0.0,20.0,11.2,0.0,Ursa Major III,167.63482816425187,L0
+survey_50-A_base-0.3-001,awaiting_visual_review,2,2,2,1,0.0,18.0,1.4,0.0,Draco,1477.5037491984842,L0

@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
-export LS_SAT_VERSION=v14 LS_SAT_SKIP_EMPTY=1 LS_SAT_STEP_MEM=52000M LS_SAT_FIELD_WORKERS=1
+export LS_SAT_VERSION=v14 LS_SAT_SKIP_EMPTY=1 LS_SAT_FIELD_WORKERS=1
+export LS_SAT_STEP_MEM="${LS_SAT_STEP_MEM:-52000M}"
 if [[ "$1" == *.csv ]]; then
     read -r cohort index < <(.venv/bin/python - "$1" "$SLURM_ARRAY_TASK_ID" <<'PYCODE'
 import csv

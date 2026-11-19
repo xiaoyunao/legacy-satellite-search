@@ -1,0 +1,8 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+survey_72-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.3092594900455521,19.0,1.0,0.0,Pegasus III,241.6950169984251,L0
+survey_72-A_base-0.3-002,awaiting_visual_review,1,1,1,2,4.575997626118931,19.0,0.35,0.0,Pisces II,265.5393645888458,L0
+survey_73-A_base-0.3-001,awaiting_visual_review,1,1,1,1,0.38965890608088616,16.5,0.7,0.0,Aquarius IV,571.3934633716465,L0
+survey_74-A_base-0.3-001,awaiting_visual_review,4,4,4,1,0.0,20.25,11.2,0.0,Kim 1,197.39323097749607,L0
+survey_74-A_base-0.3-002,awaiting_visual_review,1,1,1,2,0.0,16.5,11.2,0.0,Kim 1,185.24365276591647,L0
+survey_74-A_base-0.3-003,awaiting_visual_review,1,1,1,4,0.0,19.0,2.8,0.0,Kim 1,270.3232466140363,L0
+survey_74-A_base-0.3-004,awaiting_visual_review,1,1,1,5,0.0,16.5,1.4,0.0,Kim 1,177.3729610093275,L0

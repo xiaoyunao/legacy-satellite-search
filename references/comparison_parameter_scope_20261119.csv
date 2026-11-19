@@ -1,0 +1,15 @@
+work,quantity,value,source_section_or_file,source_url,interpretation
+Drlica-Wagner2020,DES_Y3_searched_deg2,4844,section VI.1,https://arxiv.org/html/1912.03302v2,"literature area, not DR11 gain area"
+Drlica-Wagner2020,PS1_DR1_searched_deg2,21123,section VI.1,https://arxiv.org/html/1912.03302v2,overlaps DES
+Drlica-Wagner2020,DES_PS1_union_deg2,24343,section VI.1,https://arxiv.org/html/1912.03302v2,published masked union; use common geometry before comparing
+Drlica-Wagner2020,Kim2_literature_D_kpc_rh_pc_MV,100;12;-3.32,Table3,https://arxiv.org/html/1912.03302v2,"historical recovery point, not a newly adopted latest benchmark"
+Tan2026,main_population_rhalf_pc,15..3000,AppendixA;Table4,https://arxiv.org/html/2509.12313v2,"compact systems separately examined; lower cut is population definition, not proof of survey blindness"
+Tan2026,image_blending_test_rhalf_pc,1..100,AppendixB,https://arxiv.org/html/2509.12313v2,already examines compact systems
+Tan2026,image_profile,exponential resolved plus diffuse,AppendixB,https://arxiv.org/html/2509.12313v2,differs from present circular Plummer population
+Tan2026,resolved_component_g_limit,25.5,AppendixB,https://arxiv.org/html/2509.12313v2,fainter light modeled diffusely; differs from truncated primary144
+LS_DR11_R14,CCD_grid_D_kpc,100,configs/v14_repeat/protocol.yaml,,"one distance, not a continuous distance selection function"
+LS_DR11_R14,CCD_grid_rhalf_pc,3;10;30,configs/v14_repeat/protocol.yaml,,no15pc physical grid node;30pc boundary control
+LS_DR11_R14,CCD_grid_target_V_proxy,-3;-1.5,configs/v14_repeat/protocol.yaml,,retain realized IMF luminosity; not calibrated V-band absolute magnitudes
+LS_DR11_R14,CCD_backgrounds_shared_populations,3;48,configs/v14_repeat/protocol.yaml,,144 native trials are not144 independent populations
+LS_DR11_R14,physical_profile,circular Plummer,scripts/v13_image_trials.py,,tail truncation separate from crowding and point-source classification
+LS_DR11_R14,formal_DM_max,20.75,configs/v14/production_registry.yaml,,mu21.0 boundary experiment remains separate; a template bound is not a sharp true-distance horizon

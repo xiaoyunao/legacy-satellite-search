@@ -32,6 +32,11 @@ def run(out=Path('results/v14/progress_20261118')):
                     raise ValueError(f'Complete run lacks owned raster {manifest}')
             r=dict(cohort=folder.name,field=spec['id'],index=i,status=status,job=m.get('slurm_job_id'),
                    effective_deg2=m.get('area_deg2') if status=='complete' else None,
+                   valid_mask_deg2=m.get('area_deg2'),
+                   selected_search_sources=m.get('cutflow',{}).get('psf'),
+                   terminal_area_state=('scan_completed' if status=='complete' else
+                     'no_valid_owned_area' if status=='no_usable_gr' and not m.get('area_deg2') else
+                     'positive_mask_empty_selected_catalogue' if status=='no_usable_gr' else 'not_terminal'),
                    raw_peaks=m.get('raw_peaks'),dedup_peaks=m.get('deduplicated_peaks'),
                    wall_seconds=m.get('wall_seconds'),manifest_sha256=sha(manifest) if m else None)
             fields.append(r);cohort.append(r)
@@ -58,6 +63,8 @@ def run(out=Path('results/v14/progress_20261118')):
     write_json(out/'manifest.json',dict(utc=datetime.now(timezone.utc).isoformat(),
           fields=len(fields),complete=sum(r['completed'] for r in totals),
           no_usable=sum(r['no_usable_gr'] for r in totals),
+          no_usable_with_positive_valid_mask=sum(r['terminal_area_state']=='positive_mask_empty_selected_catalogue' for r in fields),
+          excluded_no_usable_valid_mask_deg2=sum((r['valid_mask_deg2'] or 0) for r in fields if r['status']=='no_usable_gr'),
           native_complete_sites=sum(r['measured_trials']==8 and r['tractor_trials']==8 and r['blank'] for r in native)))
     for row in totals:
         print(row,flush=True)
