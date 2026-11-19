@@ -25,12 +25,67 @@
     "--wrap",
     "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; .venv/bin/python -u -m scripts.v14_cosmos_validate --native-coverage results/v14/repeat_full/cosmos_reference/native_image_coverage/manifest.json"
   ],
-  "state": "submitted_not_accepted",
+  "state": "completed_conditional_reference_validation_not_physical_transfer",
   "source_sha256": {
     "scripts/v14_cosmos_native_coverage.py": "fd42ba31581586ffbff138c667ac5afe3477925649c73d3ee538a05e4e8e025f",
     "scripts/v14_cosmos_validate.py": "4ba892cd805252ded27cf815c3ef03a2932b0f90e9241a54a009de5055cc3381",
     "configs/v14_cosmos_reference/native_coverage.yaml": "098ba3d8c409a09e4cd4e281b5ee2a4170f6daa73c736158bddc99aff6daf42f"
   },
   "motivation": "Actual strict-mask diagnostic61583938 finds192898/192929 LS-covered reference positions have census FOOT128. Independent calibration requires native PS1 exposure/mask coverage; do not alter census or production masks.",
-  "scope": "External single-source reference validation; not system Pdet, census membership, background transport or discovery area."
+  "scope": "External single-source reference validation; not system Pdet, census membership, background transport or discovery area.",
+  "coverage_resource_update": {
+    "utc": "2026-11-19T17:15:01.346241+00:00",
+    "command": [
+      "scontrol",
+      "update",
+      "JobId=61584237",
+      "TimeLimit=00:29:00",
+      "QOS=debug"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "scope": "One existing bounded24-image acquisition/coverage producer; no duplicate, data or science change. Resume-capable downloads survive a time limit. Reuses available debug queue."
+  },
+  "coverage_retry_job": "61584655",
+  "coverage_retry_command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c2",
+    "--mem=16G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-cosmos-native-coverage-retry",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; .venv/bin/python -u -m scripts.v14_cosmos_native_coverage"
+  ],
+  "coverage_retry_source_sha256": "55af9ff352cc155bc3ff4e1af36e64b21b716c36de8a1c4432a1f0c0afef54f2",
+  "coverage_retry_utc": "2026-11-19T17:17:59.168075+00:00",
+  "failure_accounting": "61584237|FAILED|1:0|00:00:20\n",
+  "failure_reason": "Astropy could not parse io.StringIO using ascii guess mode; saved official whitespace-schema response is valid. Parse split text lines explicitly as ascii.basic, verified with the actual schema. No images were downloaded or scientific mask measured in failed attempt.",
+  "validation_rebound_dependency": "afterok:61584655",
+  "validation_resource_update": {
+    "utc": "2026-11-19T17:20:16.519219+00:00",
+    "command": [
+      "scontrol",
+      "update",
+      "JobId=61584300",
+      "QOS=debug"
+    ],
+    "scope": "Existing2CPU16G20minute validation; no duplicate or scientific change."
+  },
+  "coverage_state": "completed_24_real_images_356287_valid_LS_cells",
+  "coverage_control_deg2": 0.6872820216049381,
+  "validation_manifest_sha256": "16cf737b8a206ded16d3ef734f97a1b4a548bb8b47c27aba89b0d2a6c73284fc",
+  "physical_PS1_transfer_validated": false
 }

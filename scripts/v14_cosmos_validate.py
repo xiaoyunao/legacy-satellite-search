@@ -26,7 +26,7 @@ def response(coords,raw,field,ps1_cfg,radius):
     return linked,dict(primary=found,**events)
 
 
-def run(native_coverage=None):
+def run(native_coverage=None,output=None):
     global OUT
     if not os.getenv('SLURM_JOB_ID'):raise ValueError('Read real reference/survey catalogues on a compute node')
     protocol=Path('configs/v14_repeat/cosmos_reference.yaml')
@@ -47,13 +47,13 @@ def run(native_coverage=None):
     else:
         # Separate estimand: actual external-reference image coverage, not census area.
         coverage_proof=json.loads(native_coverage.read_text())
-        native_protocol=Path('configs/v14_cosmos_reference/native_coverage.yaml')
+        native_protocol=Path(coverage_proof.get('config_path','configs/v14_cosmos_reference/native_coverage.yaml'))
         if sha(native_protocol)!=coverage_proof['config_sha256']:raise ValueError('Native coverage policy changed')
         coverage_parent=Path(coverage_proof['coverage']['path'])
         if sha(coverage_parent)!=coverage_proof['coverage']['sha256']:raise ValueError('Native image coverage changed')
         area=np.load(coverage_parent,allow_pickle=False)
         if area.shape!=ls_area.shape or np.any(area&~ls_area):raise ValueError('Native coverage does not belong to this LS mask')
-        OUT=OUT/'native_image_coverage_validation'
+        OUT=output if output is not None else OUT/'native_image_coverage_validation'
         OUT.mkdir(parents=True,exist_ok=True)
     ps1_directory=data/'resources/ps1/tiles-v3'/field_name
     raw,ps1_manifest=ps1_measurements(field_spec,matched,ps1_directory)
@@ -182,4 +182,5 @@ if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--native-coverage',type=Path)
+    parser.add_argument('--output',type=Path)
     run(**vars(parser.parse_args()))

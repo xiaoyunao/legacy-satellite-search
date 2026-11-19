@@ -1,0 +1,575 @@
+{
+  "utc": "2026-11-19T17:28:46.839464+00:00",
+  "reason": "Four actual South DELVE-extension18G OOM shards plus prior North90minute timeouts. Increase only not-yet-running C resources to128G/four hours; same jobs, discovery records, seeds and algorithms. No new owner or duplicate fits.",
+  "updates": [
+    {
+      "job": "61470252_4",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470252_4",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470252_5",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470252_5",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470252_6",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470252_6",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470252_7",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470252_7",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470264_7",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470264_7",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470266_0",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_0",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470266_1",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_1",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470266_2",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_2",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470266_3",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_3",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470266_4",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_4",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470266_5",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_5",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470266_6",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_6",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470266_7",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_7",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470256_0",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_0",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470256_1",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_1",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470256_2",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_2",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470256_3",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_3",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470256_4",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_4",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470256_5",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_5",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470256_6",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_6",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    },
+    {
+      "job": "61470256_7",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_7",
+        "MinMemoryNode=128G",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 1,
+      "stderr": "scontrol: error: Invalid MinMemoryNode value: 128G\n"
+    }
+  ],
+  "numeric_MiB_retry": [
+    {
+      "utc": "2026-11-19T17:29:32.932131+00:00",
+      "job": "61470264_7",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470264_7",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:33.169884+00:00",
+      "job": "61470252_4",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470252_4",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:33.330066+00:00",
+      "job": "61470252_5",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470252_5",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:33.487667+00:00",
+      "job": "61470252_6",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470252_6",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:33.646817+00:00",
+      "job": "61470252_7",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470252_7",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:33.808561+00:00",
+      "job": "61470266_0",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_0",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:33.968432+00:00",
+      "job": "61470266_1",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_1",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:34.158340+00:00",
+      "job": "61470266_2",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_2",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:34.324181+00:00",
+      "job": "61470266_3",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_3",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:34.488703+00:00",
+      "job": "61470266_4",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_4",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:34.654236+00:00",
+      "job": "61470266_5",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_5",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:34.819625+00:00",
+      "job": "61470266_6",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_6",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:34.980194+00:00",
+      "job": "61470266_7",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470266_7",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:35.166521+00:00",
+      "job": "61470256_0",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_0",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:35.329636+00:00",
+      "job": "61470256_1",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_1",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:35.492961+00:00",
+      "job": "61470256_2",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_2",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:35.653139+00:00",
+      "job": "61470256_3",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_3",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:35.811716+00:00",
+      "job": "61470256_4",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_4",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:35.973065+00:00",
+      "job": "61470256_5",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_5",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:36.344706+00:00",
+      "job": "61470256_6",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_6",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    },
+    {
+      "utc": "2026-11-19T17:29:36.503212+00:00",
+      "job": "61470256_7",
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61470256_7",
+        "MinMemoryNode=131072",
+        "TimeLimit=04:00:00"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "verified_after": "MinMemoryNode=128G",
+      "time_limit": "TimeLimit=04:00:00"
+    }
+  ]
+}

@@ -1,0 +1,2046 @@
+{
+  "config_path": "configs/v14_cosmos_reference/native_coverage_full.yaml",
+  "job": "61585005",
+  "utc": "2026-11-19T17:28:43.124481+00:00",
+  "config_sha256": "fdaf8083c130680a80465275eafef8a88c89bde2178075c4d519dfe073220276",
+  "code_sha256": "6ebdd92368896c6013af7dcbcacf22fbee5679c8665436adaaac8c47ce4fe911",
+  "image_requests": [
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=149.5&dec=1.6&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-149.5-1.6.txt",
+      "sha256": "019a41a7c9f7233382d26591c321a2b3522899073fc35c98754d996ee82cfca4"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=149.5&dec=2.0&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-149.5-2.0.txt",
+      "sha256": "f94789bd579b367c63727805fcca3742e470e8896f6cad50826e6dd394dea0b8"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=149.5&dec=2.4&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-149.5-2.4.txt",
+      "sha256": "935187444b9e54aa059b7e04cd0acf1d50c69077cfedc67111988755a29f2b42"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=149.5&dec=2.8&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-149.5-2.8.txt",
+      "sha256": "ad3178f43fb822534cb50b67df59e9c408266ecf4d66aac4ccb452294e8fe927"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=149.9&dec=1.6&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-149.9-1.6.txt",
+      "sha256": "978ae025275258f3c7e9518d2959ab3cb8ac05497544e65a6304a95b13ad8b07"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=149.9&dec=2.0&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-149.9-2.0.txt",
+      "sha256": "f4c13c7e87cd717c44f4c09abf0a4e46b896ef788c813e9e46cea553024fe404"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=149.9&dec=2.4&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-149.9-2.4.txt",
+      "sha256": "d7fcdb3f95b693e41fa8c9809de9260974cbb7344838e33933ff5abf963a7615"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=149.9&dec=2.8&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-149.9-2.8.txt",
+      "sha256": "b3a022997e9b9adac2bf4283d45bac60709e16c0ef83f2acc3d758117b8a6394"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=150.3&dec=1.6&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-150.3-1.6.txt",
+      "sha256": "f39d3fdca567814dee0c2bad32015be60c16c518ba35d470acce84c1d8d1e9eb"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=150.3&dec=2.0&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-150.3-2.0.txt",
+      "sha256": "496a0aad0668188d331066c631d77467ab9a541cfa5b8ab6c576c156e3a1f3a1"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=150.3&dec=2.4&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-150.3-2.4.txt",
+      "sha256": "b72b883277b109dd3360912c1f22c53e47a1829dabf1d16d07f0f1bde6a842b5"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=150.3&dec=2.8&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-150.3-2.8.txt",
+      "sha256": "abc63ee915fae57f2fc7aa4bb699b914ad415844629f9d560c34d3bb5b85a865"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=150.7&dec=1.6&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-150.7-1.6.txt",
+      "sha256": "33dd1c23cde243dfbd0ffcb51688e476727c963edad0770d67e561ebe0c2209f"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=150.7&dec=2.0&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-150.7-2.0.txt",
+      "sha256": "b5ebff51e604a981cbbbb656b05db61204495f78f56e3b2b3d45ab911672e1b5"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=150.7&dec=2.4&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-150.7-2.4.txt",
+      "sha256": "d286aa58f2f4ded6f7486893f7b9f8aa85905baabd43fa7bb66edef90214c077"
+    },
+    {
+      "url": "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py?ra=150.7&dec=2.8&filters=gri&type=stack.exp%2Cstack.mask",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/list-150.7-2.8.txt",
+      "sha256": "e9b80932d94a7a53e05a9cda07047e455e14b5d1c990fca9a8b90e5033a5b7a1"
+    }
+  ],
+  "products": [
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.041.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.041.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.g.unconv.exp.fits",
+      "bytes": 10690560,
+      "sha256": "59eb4941726af623662b7c0e4aa7fc39a94aa1bcb2fdd9433c38cf23e48326fb"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.041.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.041.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.g.unconv.mask.fits",
+      "bytes": 766080,
+      "sha256": "a3f7293d6fc3291a30ed7b42d0f8edfe94d8f8a7552de148d30c82ec7e93c80f"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.041.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.041.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.i.unconv.exp.fits",
+      "bytes": 7534080,
+      "sha256": "937522efd3ce3579d278c48dcd3818ff29659f893247c83b74a71be519ac0942"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.041.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.041.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.i.unconv.mask.fits",
+      "bytes": 783360,
+      "sha256": "e4c5d3b61a8811141701d319cf1b5db93f11ef9636af922aee6ab129c021b8d0"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.041.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.041.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.r.unconv.exp.fits",
+      "bytes": 13435200,
+      "sha256": "fe5cf7732fd9600df9b0ff284acbc5d7c01dd4db7a42ebd781859341fcca6857"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.041.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.041.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/041/rings.v3.skycell.1359.041.stk.r.unconv.mask.fits",
+      "bytes": 751680,
+      "sha256": "05b89acaa57a7197cc5b8f9a3944fe1909369c47fd2e45f040c23a6178451141"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.051.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.051.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.g.unconv.exp.fits",
+      "bytes": 10964160,
+      "sha256": "4fa32fe858d87bd08af97541b861addbe55177928fb7d846733a0fe6bb44615b"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.051.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.051.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.g.unconv.mask.fits",
+      "bytes": 711360,
+      "sha256": "03ed43712a2fa6c4beea474b48485125cc8747706b00224545a439f4d9384013"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.051.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.051.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.i.unconv.exp.fits",
+      "bytes": 9080640,
+      "sha256": "867ab060c57ae98bc700a211ac03a5f1220724d8994d24c3092b9d1f9fb36ca8"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.051.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.051.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.i.unconv.mask.fits",
+      "bytes": 711360,
+      "sha256": "0e9dd4d0f9b396125ea2328d1cbf7e003ac65b6d08306eb55ab2784797f120f4"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.051.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.051.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.r.unconv.exp.fits",
+      "bytes": 14973120,
+      "sha256": "cd30b8d3cc7a542acdb6348f194d0c74c94ad0a46323a44625bf33a955a5f213"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.051.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.051.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/051/rings.v3.skycell.1359.051.stk.r.unconv.mask.fits",
+      "bytes": 728640,
+      "sha256": "2fcfd433e0bb83fb827745933d67112318c67b1268172813f8f1ab48765ecf09"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.061.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.061.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.g.unconv.exp.fits",
+      "bytes": 11407680,
+      "sha256": "862c055b13dabda4853d72903dc9d6d529676583db5877b943565f3c72363f02"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.061.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.061.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.g.unconv.mask.fits",
+      "bytes": 728640,
+      "sha256": "3e08ed47f160660ef5fc55c9a156f6e2607c2830d5f245fe1c0b5be02bebff66"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.061.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.061.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.i.unconv.exp.fits",
+      "bytes": 9558720,
+      "sha256": "3e0f91870ea60352fd0b0f2ad0f82e5740a019ce8edd051225ff57e6325776d3"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.061.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.061.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.i.unconv.mask.fits",
+      "bytes": 714240,
+      "sha256": "4908c457f54d43b4ce795a3ab6e2522c77e63f7f502811fcdcae6d4ec28b0d06"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.061.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.061.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.r.unconv.exp.fits",
+      "bytes": 14863680,
+      "sha256": "eb7ca091df18be6f5c9e68fa8aca5b1bda3dddb3a42f0057781df691660f596d"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.061.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.061.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/061/rings.v3.skycell.1359.061.stk.r.unconv.mask.fits",
+      "bytes": 722880,
+      "sha256": "c2f73126cfeba6b0095603545a980785dde0ad960abc8f743e49a0c360b35dc6"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.071.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.071.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.g.unconv.exp.fits",
+      "bytes": 11790720,
+      "sha256": "b87e58ac68ec5c6522b59a51bfbc8cb8d8dfeef3a5cce7b92dc88cf23a0309d5"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.071.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.071.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.g.unconv.mask.fits",
+      "bytes": 720000,
+      "sha256": "7fdb3a0b7f9e8439fd4c691712c23fbc611fbe1de5a2d36afeb961f5421af44d"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.071.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.071.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.i.unconv.exp.fits",
+      "bytes": 10601280,
+      "sha256": "eebfbdddbc6d5ac7a6f2a694b81d580ac0bf1f6cad5b299701b87ea10e384d06"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.071.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.071.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.i.unconv.mask.fits",
+      "bytes": 722880,
+      "sha256": "b2f84e984136ece94889e244a348f3aa03b88ceb272b8573a5f1105172b0c241"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.071.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.071.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.r.unconv.exp.fits",
+      "bytes": 15010560,
+      "sha256": "660695cf39441c11ca4a93a8046c2e9229001140e605856ad2e167e0f5eea16a"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.071.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.071.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/071/rings.v3.skycell.1359.071.stk.r.unconv.mask.fits",
+      "bytes": 720000,
+      "sha256": "e47fd242dbf54538bac7875358d6c667a3b7c6def288187bd989e3865f27fe56"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.040.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.040.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.g.unconv.exp.fits",
+      "bytes": 10978560,
+      "sha256": "800d5d459fac83677f2e66c5517f55167156e90a2027b51965a47b16afc0eb2c"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.040.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.040.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.g.unconv.mask.fits",
+      "bytes": 720000,
+      "sha256": "4c9211e4f32a7e3ca2d0185571b6aef1fa8520a91d0cd02c6aec5585874c82c2"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.040.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.040.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.i.unconv.exp.fits",
+      "bytes": 8988480,
+      "sha256": "bb41877ff024b20b3a6165f32d18a9817a8147005bbb503211e0d3c6f2874907"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.040.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.040.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.i.unconv.mask.fits",
+      "bytes": 720000,
+      "sha256": "3587f2ec43d288cefda5fd0a16d6e2f5f2afdf6d93df7293ce9ff468677ea618"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.040.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.040.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.r.unconv.exp.fits",
+      "bytes": 12974400,
+      "sha256": "948b250ca636001f5b5d51ea954de4c8574d439737bd542552b25ffdc37d1687"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.040.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.040.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/040/rings.v3.skycell.1359.040.stk.r.unconv.mask.fits",
+      "bytes": 725760,
+      "sha256": "9615adb183c6633c497805f4c575934b3f33a06913106a80f59334d5da866ac3"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.050.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.050.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.g.unconv.exp.fits",
+      "bytes": 11329920,
+      "sha256": "524dcf770434ca239b0801df274cb141e4ee7a81fe2ed3e78f4d4969b0d1dd45"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.050.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.050.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.g.unconv.mask.fits",
+      "bytes": 737280,
+      "sha256": "6baa77a0553570dbda383256f6c176a90a30f0fb89e554ecb36996179e4def3b"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.050.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.050.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.i.unconv.exp.fits",
+      "bytes": 9288000,
+      "sha256": "a86b1ddbeddec66f40c2e47bf2a1696e4aaccf530d37b1d9ed191555c208810c"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.050.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.050.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.i.unconv.mask.fits",
+      "bytes": 754560,
+      "sha256": "547c141c4599aeb38259c108929047617467d503064ceb011fcb324574b31817"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.050.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.050.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.r.unconv.exp.fits",
+      "bytes": 14855040,
+      "sha256": "53a185d8b8eb38c73e08635606440e68b23760d09992ed492aae9c0e67b5b20c"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.050.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.050.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/050/rings.v3.skycell.1359.050.stk.r.unconv.mask.fits",
+      "bytes": 743040,
+      "sha256": "04f83f0c9982d8f13c8f1d3d86008b6639c16f931eb33df5a2ef291e8b8a7180"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.060.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.060.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.g.unconv.exp.fits",
+      "bytes": 10183680,
+      "sha256": "46aa81722811e9ea21a2d85ee0ca149429253f7cb1118e804eacc133b9a8cc55"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.060.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.060.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.g.unconv.mask.fits",
+      "bytes": 728640,
+      "sha256": "818f7a2434f7d00fc009abeca2e4e4c58f024aeb36dc629468a059ed24ed9824"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.060.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.060.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.i.unconv.exp.fits",
+      "bytes": 8856000,
+      "sha256": "4a2ed0ff55815d97acecc05da35f15d2478a7c3db3ec018864d2a1f2b306ff82"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.060.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.060.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.i.unconv.mask.fits",
+      "bytes": 708480,
+      "sha256": "8ca17b5dcd8c57ff226db0de4205e98bd88767a6b36072b9761cf5b5faff68f3"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.060.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.060.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.r.unconv.exp.fits",
+      "bytes": 14307840,
+      "sha256": "4b32948feff01e56b550b96cd70622d56942b08a7ebc5e08d4772e1e141e9611"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.060.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.060.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/060/rings.v3.skycell.1359.060.stk.r.unconv.mask.fits",
+      "bytes": 717120,
+      "sha256": "bec07f5a86df68e948ce747d660bdaea943b06bcb3329ff72e78db76243d4fb0"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.070.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.070.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.g.unconv.exp.fits",
+      "bytes": 9731520,
+      "sha256": "3e23ba2929a67d0fd41be46c512ca29801d322f9a55f84a3b4dfa8cffc42e96f"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.070.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.070.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.g.unconv.mask.fits",
+      "bytes": 757440,
+      "sha256": "580d54220ffcbf9594b75f0e71f77b17f6b5b51ca9eed94471369071575aab7a"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.070.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.070.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.i.unconv.exp.fits",
+      "bytes": 9426240,
+      "sha256": "8739760852da1d84074315748aff784623b851cd6e62a3a0924e31c37ccd2971"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.070.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.070.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.i.unconv.mask.fits",
+      "bytes": 717120,
+      "sha256": "01fb6fd690a11e2f8bd9ce872813e7eb404734e6dac6afb2f3dd9c59d48e0c63"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1359.070.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.070.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.r.unconv.exp.fits",
+      "bytes": 14748480,
+      "sha256": "60c47f1d4f83e76253270f78305bc8706ff9a892632a56d7ce6d60d117c99148"
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1359.070.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1359.070.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1359/070/rings.v3.skycell.1359.070.stk.r.unconv.mask.fits",
+      "bytes": 714240,
+      "sha256": "2b31c70e313a843e04f338c52cdec35a1ae7d55eba55dcb89879b5e87a6adb0a"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.049.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.049.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.g.unconv.exp.fits",
+      "bytes": 11050560,
+      "sha256": "bb3bfcdfe8ed61b0e0eca437b6e4469619c544f517e1f8eb2a5e90a63e5de04d"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.049.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.049.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.g.unconv.mask.fits",
+      "bytes": 734400,
+      "sha256": "a98ae68e03bcb821ea342c405ff40b203266b111c030a14ab43f0ed7f9a1b9ce"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.049.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.049.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.i.unconv.exp.fits",
+      "bytes": 9878400,
+      "sha256": "05ac0097200e326fdcc90011afcdcffd7f09fe5805662c6f06aba93732748bd3"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.049.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.049.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.i.unconv.mask.fits",
+      "bytes": 708480,
+      "sha256": "9b94fd6fa8fa9f8c13bc2cd33349b297852e7b0a20e2d4aefc5b720124c61a39"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.049.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.049.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.r.unconv.exp.fits",
+      "bytes": 12116160,
+      "sha256": "f0106d58fc1cfc8ab462e537d2b809a52a5d40ec0abfa9c41f0e715098cb4298"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.049.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.049.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/049/rings.v3.skycell.1360.049.stk.r.unconv.mask.fits",
+      "bytes": 705600,
+      "sha256": "178469ccef3f5aacf96187b7d3258bc6a5b46f875b98665b74e201814d737ead"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.059.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.059.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.g.unconv.exp.fits",
+      "bytes": 10546560,
+      "sha256": "4808c55c8a0cd65e97f5d71e60298b9c3512ba95392af56bb6cdc9142c3db0ad"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.059.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.059.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.g.unconv.mask.fits",
+      "bytes": 717120,
+      "sha256": "a527b7c1106c21b0f287af9fd6ceca84d966a774084b6e850275fc1332e20bb9"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.059.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.059.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.i.unconv.exp.fits",
+      "bytes": 10028160,
+      "sha256": "8975a6895f53ed37a24295086c965844a07fbcfc454f0ffc86475e814fba8d1f"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.059.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.059.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.i.unconv.mask.fits",
+      "bytes": 702720,
+      "sha256": "d17c9742d89e66947f236d38cf44464a0d62025c4165ba20356ecd164a011407"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.059.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.059.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.r.unconv.exp.fits",
+      "bytes": 13988160,
+      "sha256": "a1ed547d3d13122936e432936ca0feb5f3863d9f40852b0d784919ee0b812b1e"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.059.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.059.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/059/rings.v3.skycell.1360.059.stk.r.unconv.mask.fits",
+      "bytes": 711360,
+      "sha256": "6dd662dff279b93d82261dd24398dfb68dc34cf641b8acbe362c632177199ded"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.069.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.069.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.g.unconv.exp.fits",
+      "bytes": 10756800,
+      "sha256": "8e84248d0a3a7d3a645f072ec8704e7fc2c60d70f899a79e0c7c00362222fce4"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.069.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.069.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.g.unconv.mask.fits",
+      "bytes": 740160,
+      "sha256": "db863f4dc7fff6ea90ff09988d39fb6390d563055a5612c246a470bfb697f44d"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.069.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.069.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.i.unconv.exp.fits",
+      "bytes": 9682560,
+      "sha256": "658a9fe894adfa6ad76ac5cd498ad90a52063b29a5c8a2d892e1a3a24d77f6c8"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.069.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.069.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.i.unconv.mask.fits",
+      "bytes": 717120,
+      "sha256": "4c9d7bc2ab3ef3f4fcdb1998286d4e71bfcd72a26c417073e6aa0c821398aad0"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.069.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.069.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.r.unconv.exp.fits",
+      "bytes": 15024960,
+      "sha256": "d367de2860fc93befe75ab82994ad28fefddb7ccd5b273b33e7f8ee89c97fc4a"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.069.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.069.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/069/rings.v3.skycell.1360.069.stk.r.unconv.mask.fits",
+      "bytes": 731520,
+      "sha256": "287fd6b8dc3c6c9738c712dfa3b84239e8effd4f7bb0936fc1f55b0689f80dd0"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.079.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.079.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.g.unconv.exp.fits",
+      "bytes": 9832320,
+      "sha256": "ed23050e80e4b1e30af4d39786841791496f7d00f8e10d639733b2fd9d62a3c8"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.079.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.079.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.g.unconv.mask.fits",
+      "bytes": 748800,
+      "sha256": "be2aabcf17f1fc8c70444a7b1d3fe9b3bfed5396473cbed112c0719490f5668d"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.079.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.079.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.i.unconv.exp.fits",
+      "bytes": 10105920,
+      "sha256": "a82a61ea3ecefbaf71c7118c288fcc84c9b7577426f2e4ad3d943bfd98ac0e7f"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.079.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.079.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.i.unconv.mask.fits",
+      "bytes": 717120,
+      "sha256": "6db4b7dc589576dfcadf805cf435e4bd647e4e03d9ff10988184597ac0805366"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.079.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.079.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.r.unconv.exp.fits",
+      "bytes": 14846400,
+      "sha256": "06c2532d345a025dc2226e55ba4401bd071db615966573111343c48aa55daccc"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.079.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.079.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/079/rings.v3.skycell.1360.079.stk.r.unconv.mask.fits",
+      "bytes": 708480,
+      "sha256": "29316d26a6b38ee3e4218416b8ed703556883f221e05d3d7801bf233a5e113c8"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.048.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.048.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.g.unconv.exp.fits",
+      "bytes": 9475200,
+      "sha256": "977eaa369877a374e83605283b9c00217bf0a3bb2b689c5522cd01bec898b35c"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.048.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.048.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.g.unconv.mask.fits",
+      "bytes": 768960,
+      "sha256": "e2845fb3588e2dc8152815ba33aa694feea6a5f950e6976416d5f2e2aa75a901"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.048.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.048.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.i.unconv.exp.fits",
+      "bytes": 9368640,
+      "sha256": "5690f6d90fb4276a4dc45072ccad35d71cf7fc86e5169570161142ca4c685d6b"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.048.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.048.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.i.unconv.mask.fits",
+      "bytes": 748800,
+      "sha256": "448483e661b73f6e1698fc68316b4024f9473f390639bba302963014e3383ddd"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.048.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.048.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.r.unconv.exp.fits",
+      "bytes": 9987840,
+      "sha256": "8444942c5190bcd17b043deb95b980f9dbb8ab7927f7bda0e3fb4744357d1647"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.048.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.048.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/048/rings.v3.skycell.1360.048.stk.r.unconv.mask.fits",
+      "bytes": 734400,
+      "sha256": "e64debd0c88428096b3ac1fd03dd24187c2aa8ec2f7a3635c3934c632841b754"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.058.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.058.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.g.unconv.exp.fits",
+      "bytes": 10183680,
+      "sha256": "bd0becf45d4131dac283ba84ab87604a1e75ff7093d23acf6d96c73123aa4c51"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.058.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.058.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.g.unconv.mask.fits",
+      "bytes": 722880,
+      "sha256": "75c9d8e9df06d2dcfde1b30c9a33318e42ae3523a8c1000c2235e1de56bdf66d"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.058.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.058.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.i.unconv.exp.fits",
+      "bytes": 9518400,
+      "sha256": "01667890d76508548d85a037a6601c6916e487ab9c8d86c3ab978e2af7fb1f6d"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.058.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.058.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.i.unconv.mask.fits",
+      "bytes": 754560,
+      "sha256": "15c3d77d49417f86abccee1110c0424d26a2f4348a8a31674798b8f1831995d6"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.058.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.058.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.r.unconv.exp.fits",
+      "bytes": 11401920,
+      "sha256": "ab5ca76b03dbf9566634d1a1fb4e60b5fca6ffa7fc3c3d5dc759d090f3679cc7"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.058.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.058.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/058/rings.v3.skycell.1360.058.stk.r.unconv.mask.fits",
+      "bytes": 725760,
+      "sha256": "c419fc6eff45ee7518453552a83b2aedbc72224bc19fd009c26fa484f35b2183"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.068.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.068.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.g.unconv.exp.fits",
+      "bytes": 10549440,
+      "sha256": "02aa4800d8cf79fb2d217c747a376b7694af12ef124b6ea5f77a2fbd8dd1d616"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.068.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.068.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.g.unconv.mask.fits",
+      "bytes": 737280,
+      "sha256": "6667b4f2ebd0f7d216a5b7c3689719025abd0b58fd3749684d2c11b6358cb7e6"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.068.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.068.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.i.unconv.exp.fits",
+      "bytes": 10353600,
+      "sha256": "f5c2353e5c140e9e4f97eb75882316c4ed1f071d92135e020d4f79a86ad193c7"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.068.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.068.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.i.unconv.mask.fits",
+      "bytes": 740160,
+      "sha256": "f0d46c34d7102dbd52110cddf4e35403dd80a70a7caed50cb8c2bf79640d6206"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.068.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.068.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.r.unconv.exp.fits",
+      "bytes": 13386240,
+      "sha256": "b0899bd7e9878ab7e1c509d31a66aff88612cad96e8f290092eff937a488cff5"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.068.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.068.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/068/rings.v3.skycell.1360.068.stk.r.unconv.mask.fits",
+      "bytes": 714240,
+      "sha256": "067a1563aa55472de9bc438dfd0ce8882b9d65c756e1c71bb412c2e0f5ef72e9"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "filter": "g",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.g.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.078.stk.g.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.078.stk.g.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.g.unconv.exp.fits",
+      "bytes": 10241280,
+      "sha256": "e097ecf64bf5b239ee6dcbe9baa290429b7c63121363cbb27ad280c411fbb741"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "filter": "g",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.g.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.078.stk.g.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.078.stk.g.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.g.unconv.mask.fits",
+      "bytes": 711360,
+      "sha256": "9d057a07154d77d78139c1f20404273a720758797ea2d9edd2170efc3d203f1e"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "filter": "i",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.i.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.078.stk.i.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.078.stk.i.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.i.unconv.exp.fits",
+      "bytes": 11419200,
+      "sha256": "844df618fb11019dbf3d57fcbab617eaefa7d9889df280459e2a15a5062c5280"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "filter": "i",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.i.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.078.stk.i.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.078.stk.i.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.i.unconv.mask.fits",
+      "bytes": 722880,
+      "sha256": "2c0a4ca3e3bd8b02bc35c097479c02b534f880055541834e07b1adbde1bdafdf"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "filter": "r",
+      "type": "stack.exp",
+      "filename": "/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.r.unconv.exp.fits",
+      "shortname": "rings.v3.skycell.1360.078.stk.r.unconv.exp.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.078.stk.r.unconv.exp.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.r.unconv.exp.fits",
+      "bytes": 14474880,
+      "sha256": "06b5cbb780d8b42ca8306e210035ca2134c712364b89a5868045645f7af73e9f"
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "filter": "r",
+      "type": "stack.mask",
+      "filename": "/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.r.unconv.mask.fits",
+      "shortname": "rings.v3.skycell.1360.078.stk.r.unconv.mask.fits",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/rings.v3.skycell.1360.078.stk.r.unconv.mask.fits",
+      "url": "https://ps1images.stsci.edu/rings.v3.skycell/1360/078/rings.v3.skycell.1360.078.stk.r.unconv.mask.fits",
+      "bytes": 708480,
+      "sha256": "45c1b06deadd5efe0a0afa902405d3569a232b2de58d3616166939400d8ea212"
+    }
+  ],
+  "tiles": [
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "band": "g",
+      "valid_LS_cells": 70242,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "band": "i",
+      "valid_LS_cells": 70156,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "41",
+      "band": "r",
+      "valid_LS_cells": 70234,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "band": "g",
+      "valid_LS_cells": 70689,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "band": "i",
+      "valid_LS_cells": 70687,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "51",
+      "band": "r",
+      "valid_LS_cells": 70687,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "band": "g",
+      "valid_LS_cells": 70631,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "band": "i",
+      "valid_LS_cells": 70650,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "61",
+      "band": "r",
+      "valid_LS_cells": 70656,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "band": "g",
+      "valid_LS_cells": 35672,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "band": "i",
+      "valid_LS_cells": 35650,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "71",
+      "band": "r",
+      "valid_LS_cells": 35675,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "band": "g",
+      "valid_LS_cells": 96473,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "band": "i",
+      "valid_LS_cells": 96491,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "40",
+      "band": "r",
+      "valid_LS_cells": 96435,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "band": "g",
+      "valid_LS_cells": 96290,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "band": "i",
+      "valid_LS_cells": 96189,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "50",
+      "band": "r",
+      "valid_LS_cells": 96243,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "band": "g",
+      "valid_LS_cells": 96531,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "band": "i",
+      "valid_LS_cells": 96582,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "60",
+      "band": "r",
+      "valid_LS_cells": 96566,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "band": "g",
+      "valid_LS_cells": 48494,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "band": "i",
+      "valid_LS_cells": 48529,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1359",
+      "subcell": "70",
+      "band": "r",
+      "valid_LS_cells": 48536,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "band": "g",
+      "valid_LS_cells": 96759,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "band": "i",
+      "valid_LS_cells": 96868,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "49",
+      "band": "r",
+      "valid_LS_cells": 96898,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "band": "g",
+      "valid_LS_cells": 96751,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "band": "i",
+      "valid_LS_cells": 96770,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "59",
+      "band": "r",
+      "valid_LS_cells": 96750,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "band": "g",
+      "valid_LS_cells": 96330,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "band": "i",
+      "valid_LS_cells": 96376,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "69",
+      "band": "r",
+      "valid_LS_cells": 96315,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "band": "g",
+      "valid_LS_cells": 48880,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "band": "i",
+      "valid_LS_cells": 48890,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "79",
+      "band": "r",
+      "valid_LS_cells": 48895,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "band": "g",
+      "valid_LS_cells": 95929,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "band": "i",
+      "valid_LS_cells": 96021,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "48",
+      "band": "r",
+      "valid_LS_cells": 96113,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "band": "g",
+      "valid_LS_cells": 96346,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "band": "i",
+      "valid_LS_cells": 96070,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "58",
+      "band": "r",
+      "valid_LS_cells": 96270,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "band": "g",
+      "valid_LS_cells": 96510,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "band": "i",
+      "valid_LS_cells": 96441,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "68",
+      "band": "r",
+      "valid_LS_cells": 96576,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "band": "g",
+      "valid_LS_cells": 48692,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "band": "i",
+      "valid_LS_cells": 48658,
+      "shape": [
+        6243,
+        6240
+      ]
+    },
+    {
+      "projcell": "1360",
+      "subcell": "78",
+      "band": "r",
+      "valid_LS_cells": 48697,
+      "shape": [
+        6243,
+        6240
+      ]
+    }
+  ],
+  "LS_inputs": {
+    "sweeps": [
+      {
+        "path": "south/sweep/11.0/sweep-145p000-150p005.fits",
+        "rows": 2421086,
+        "columns": [
+          "ALLMASK_G",
+          "ALLMASK_I",
+          "ALLMASK_R",
+          "ALLMASK_Z",
+          "ANYMASK_G",
+          "ANYMASK_I",
+          "ANYMASK_R",
+          "ANYMASK_Z",
+          "BRICKID",
+          "BRICKNAME",
+          "DCHISQ",
+          "DEC",
+          "DEC_IVAR",
+          "EBV",
+          "FIBERFLUX_G",
+          "FIBERFLUX_I",
+          "FIBERFLUX_R",
+          "FIBERFLUX_Z",
+          "FIBERTOTFLUX_G",
+          "FIBERTOTFLUX_I",
+          "FIBERTOTFLUX_R",
+          "FIBERTOTFLUX_Z",
+          "FITBITS",
+          "FLUX_G",
+          "FLUX_I",
+          "FLUX_IVAR_G",
+          "FLUX_IVAR_I",
+          "FLUX_IVAR_R",
+          "FLUX_IVAR_W1",
+          "FLUX_IVAR_W2",
+          "FLUX_IVAR_W3",
+          "FLUX_IVAR_W4",
+          "FLUX_IVAR_Z",
+          "FLUX_R",
+          "FLUX_W1",
+          "FLUX_W2",
+          "FLUX_W3",
+          "FLUX_W4",
+          "FLUX_Z",
+          "FRACFLUX_G",
+          "FRACFLUX_I",
+          "FRACFLUX_R",
+          "FRACFLUX_W1",
+          "FRACFLUX_W2",
+          "FRACFLUX_W3",
+          "FRACFLUX_W4",
+          "FRACFLUX_Z",
+          "FRACIN_G",
+          "FRACIN_I",
+          "FRACIN_R",
+          "FRACIN_Z",
+          "FRACMASKED_G",
+          "FRACMASKED_I",
+          "FRACMASKED_R",
+          "FRACMASKED_Z",
+          "GAIA_ASTROMETRIC_EXCESS_NOISE",
+          "GAIA_ASTROMETRIC_PARAMS_SOLVED",
+          "GAIA_ASTROMETRIC_SIGMA5D_MAX",
+          "GAIA_DUPLICATED_SOURCE",
+          "GAIA_PHOT_BP_MEAN_FLUX_OVER_ERROR",
+          "GAIA_PHOT_BP_MEAN_MAG",
+          "GAIA_PHOT_BP_RP_EXCESS_FACTOR",
+          "GAIA_PHOT_G_MEAN_FLUX_OVER_ERROR",
+          "GAIA_PHOT_G_MEAN_MAG",
+          "GAIA_PHOT_RP_MEAN_FLUX_OVER_ERROR",
+          "GAIA_PHOT_RP_MEAN_MAG",
+          "GALDEPTH_G",
+          "GALDEPTH_I",
+          "GALDEPTH_R",
+          "GALDEPTH_Z",
+          "MASKBITS",
+          "MW_TRANSMISSION_G",
+          "MW_TRANSMISSION_I",
+          "MW_TRANSMISSION_R",
+          "MW_TRANSMISSION_W1",
+          "MW_TRANSMISSION_W2",
+          "MW_TRANSMISSION_W3",
+          "MW_TRANSMISSION_W4",
+          "MW_TRANSMISSION_Z",
+          "NOBS_G",
+          "NOBS_I",
+          "NOBS_R",
+          "NOBS_W1",
+          "NOBS_W2",
+          "NOBS_W3",
+          "NOBS_W4",
+          "NOBS_Z",
+          "OBJID",
+          "PARALLAX",
+          "PARALLAX_IVAR",
+          "PMDEC",
+          "PMDEC_IVAR",
+          "PMRA",
+          "PMRA_IVAR",
+          "PSFDEPTH_G",
+          "PSFDEPTH_I",
+          "PSFDEPTH_R",
+          "PSFDEPTH_W1",
+          "PSFDEPTH_W2",
+          "PSFDEPTH_Z",
+          "PSFSIZE_G",
+          "PSFSIZE_I",
+          "PSFSIZE_R",
+          "PSFSIZE_Z",
+          "RA",
+          "RA_IVAR",
+          "RCHISQ_G",
+          "RCHISQ_I",
+          "RCHISQ_R",
+          "RCHISQ_W1",
+          "RCHISQ_W2",
+          "RCHISQ_W3",
+          "RCHISQ_W4",
+          "RCHISQ_Z",
+          "REF_CAT",
+          "REF_EPOCH",
+          "REF_ID",
+          "RELEASE",
+          "SERSIC",
+          "SERSIC_IVAR",
+          "SHAPE_E1",
+          "SHAPE_E1_IVAR",
+          "SHAPE_E2",
+          "SHAPE_E2_IVAR",
+          "SHAPE_R",
+          "SHAPE_R_IVAR",
+          "TYPE",
+          "WISEMASK_W1",
+          "WISEMASK_W2",
+          "WISE_COADD_ID"
+        ],
+        "size_bytes": 1222692480
+      },
+      {
+        "path": "south/sweep/11.0/sweep-150p000-155p005.fits",
+        "rows": 2286586,
+        "columns": [
+          "ALLMASK_G",
+          "ALLMASK_I",
+          "ALLMASK_R",
+          "ALLMASK_Z",
+          "ANYMASK_G",
+          "ANYMASK_I",
+          "ANYMASK_R",
+          "ANYMASK_Z",
+          "BRICKID",
+          "BRICKNAME",
+          "DCHISQ",
+          "DEC",
+          "DEC_IVAR",
+          "EBV",
+          "FIBERFLUX_G",
+          "FIBERFLUX_I",
+          "FIBERFLUX_R",
+          "FIBERFLUX_Z",
+          "FIBERTOTFLUX_G",
+          "FIBERTOTFLUX_I",
+          "FIBERTOTFLUX_R",
+          "FIBERTOTFLUX_Z",
+          "FITBITS",
+          "FLUX_G",
+          "FLUX_I",
+          "FLUX_IVAR_G",
+          "FLUX_IVAR_I",
+          "FLUX_IVAR_R",
+          "FLUX_IVAR_W1",
+          "FLUX_IVAR_W2",
+          "FLUX_IVAR_W3",
+          "FLUX_IVAR_W4",
+          "FLUX_IVAR_Z",
+          "FLUX_R",
+          "FLUX_W1",
+          "FLUX_W2",
+          "FLUX_W3",
+          "FLUX_W4",
+          "FLUX_Z",
+          "FRACFLUX_G",
+          "FRACFLUX_I",
+          "FRACFLUX_R",
+          "FRACFLUX_W1",
+          "FRACFLUX_W2",
+          "FRACFLUX_W3",
+          "FRACFLUX_W4",
+          "FRACFLUX_Z",
+          "FRACIN_G",
+          "FRACIN_I",
+          "FRACIN_R",
+          "FRACIN_Z",
+          "FRACMASKED_G",
+          "FRACMASKED_I",
+          "FRACMASKED_R",
+          "FRACMASKED_Z",
+          "GAIA_ASTROMETRIC_EXCESS_NOISE",
+          "GAIA_ASTROMETRIC_PARAMS_SOLVED",
+          "GAIA_ASTROMETRIC_SIGMA5D_MAX",
+          "GAIA_DUPLICATED_SOURCE",
+          "GAIA_PHOT_BP_MEAN_FLUX_OVER_ERROR",
+          "GAIA_PHOT_BP_MEAN_MAG",
+          "GAIA_PHOT_BP_RP_EXCESS_FACTOR",
+          "GAIA_PHOT_G_MEAN_FLUX_OVER_ERROR",
+          "GAIA_PHOT_G_MEAN_MAG",
+          "GAIA_PHOT_RP_MEAN_FLUX_OVER_ERROR",
+          "GAIA_PHOT_RP_MEAN_MAG",
+          "GALDEPTH_G",
+          "GALDEPTH_I",
+          "GALDEPTH_R",
+          "GALDEPTH_Z",
+          "MASKBITS",
+          "MW_TRANSMISSION_G",
+          "MW_TRANSMISSION_I",
+          "MW_TRANSMISSION_R",
+          "MW_TRANSMISSION_W1",
+          "MW_TRANSMISSION_W2",
+          "MW_TRANSMISSION_W3",
+          "MW_TRANSMISSION_W4",
+          "MW_TRANSMISSION_Z",
+          "NOBS_G",
+          "NOBS_I",
+          "NOBS_R",
+          "NOBS_W1",
+          "NOBS_W2",
+          "NOBS_W3",
+          "NOBS_W4",
+          "NOBS_Z",
+          "OBJID",
+          "PARALLAX",
+          "PARALLAX_IVAR",
+          "PMDEC",
+          "PMDEC_IVAR",
+          "PMRA",
+          "PMRA_IVAR",
+          "PSFDEPTH_G",
+          "PSFDEPTH_I",
+          "PSFDEPTH_R",
+          "PSFDEPTH_W1",
+          "PSFDEPTH_W2",
+          "PSFDEPTH_Z",
+          "PSFSIZE_G",
+          "PSFSIZE_I",
+          "PSFSIZE_R",
+          "PSFSIZE_Z",
+          "RA",
+          "RA_IVAR",
+          "RCHISQ_G",
+          "RCHISQ_I",
+          "RCHISQ_R",
+          "RCHISQ_W1",
+          "RCHISQ_W2",
+          "RCHISQ_W3",
+          "RCHISQ_W4",
+          "RCHISQ_Z",
+          "REF_CAT",
+          "REF_EPOCH",
+          "REF_ID",
+          "RELEASE",
+          "SERSIC",
+          "SERSIC_IVAR",
+          "SHAPE_E1",
+          "SHAPE_E1_IVAR",
+          "SHAPE_E2",
+          "SHAPE_E2_IVAR",
+          "SHAPE_R",
+          "SHAPE_R_IVAR",
+          "TYPE",
+          "WISEMASK_W1",
+          "WISEMASK_W2",
+          "WISE_COADD_ID"
+        ],
+        "size_bytes": 1154770560
+      }
+    ],
+    "missing_optional_by_file": {
+      "south/sweep/11.0/sweep-145p000-150p005.fits": [],
+      "south/sweep/11.0/sweep-150p000-155p005.fits": []
+    },
+    "duplicate_ids": 0,
+    "area_bricks_read": 49,
+    "area_bricks_missing_products": [],
+    "area_sample_arcmin": 0.08333333333333333,
+    "geometry": [
+      150.1,
+      2.2,
+      1.6,
+      0.16666666666666666,
+      0
+    ],
+    "mask": [
+      1,
+      5,
+      6,
+      10,
+      19
+    ],
+    "subdivision": 2,
+    "census": null,
+    "root": "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11"
+  },
+  "LS_valid_cells": 1317656,
+  "PS1_band_valid_LS_cells": {
+    "g": 1105732,
+    "r": 1106063,
+    "i": 1106010
+  },
+  "common_valid_cells": 1105621,
+  "pixel_area_deg2": 1.929012345679012e-06,
+  "common_control_deg2": 2.132756558641975,
+  "coverage": {
+    "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/independent/cosmos2020/PS1_native/coverage-59f70eb1b070117e5431b5c7dd8ef466e935e17502d21c83d8ef6a18e893a7a0.npy",
+    "sha256": "59f70eb1b070117e5431b5c7dd8ef466e935e17502d21c83d8ef6a18e893a7a0",
+    "shape": [
+      1152,
+      1152
+    ]
+  },
+  "scope": "Targeted external single-source response validation. No new discovery area, primary CCD background, candidate confirmation or validated transport to the three physical backgrounds. Native central-pixel coverage is not PSF-weighted completeness or census footprint membership. PS1 public DR1/DR2 products are 3pi, not Medium Deep stacks."
+}

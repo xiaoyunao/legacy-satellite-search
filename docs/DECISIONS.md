@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-11-19T17:42Z — Increase reference coverage after measured support loss; retain scope limits
+
+**Evidence:** the first0.6873deg² native control has no supported LS-blue estimator bins. **Action:** expand only fixed native exposure/mask coverage of the same reference field, retaining the first products, labels, cuts, seed and bins. Jobs61585005/6 passed on2.1328deg²,6800 labelled stars/539 faint-blue references. This is an exploratory object holdout with prior-viewed subset, not fresh-sky validation.
+
+**Evidence:** faint LS blue proxies include many independent galaxy labels; conservative count-difference intervals still cross zero. **Decision:** publish conditional contamination/response diagnostics and uncertainty, but keep physical PS1 transfer unvalidated. Do not apply a universal correction or call the source-response figure a system-completeness curve. Exact parent/hash checks and visual figure QA passed.
+
+**Resource evidence:** extension C0/1/2/4 and now3 actually OOM at18G. Existing failed-shard retry61584021 may run alongside disjoint original shards; add61585731 for newly failed3 and extend both global-release dependencies. Increase only21 still-pending C tasks to128G/four hours in place. Numeric-MiB scontrol updates/readback passed after the unit-syntax rejection; all science settings and live original fits remain unchanged.
+
 ## 2026-11-19T17:10Z — accepted formal-policy baseline; retain failed reference scope
 
 - **Evidence:** formal replay61579269 and corrected metadata acceptance61582141 certify144 same-catalogue baseline scans.39/144 spatial,31 highest-correct,35 retained-correct. **Decision:** publish this as the formal policy response in three selected control interiors, separate from legacy matched-budget depth results; no borrowed C, actual-owned-edge transfer or physical PS1 claim.

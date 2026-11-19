@@ -1,0 +1,6 @@
+{
+  "image": "results/v14/repeat_full/cosmos_reference/full_native_summary/reference_response.png",
+  "sha256": "64826398382636bd8319856561acd6d259b3c82cd9a238124cfb830dfcd5135f",
+  "raster_integrity_passed": true,
+  "visual_QA": "Both panels inspected; labels, limits, sample counts and legends are legible, without clipping. Scientific count intervals and label/transport limits remain separate from layout QA."
+}

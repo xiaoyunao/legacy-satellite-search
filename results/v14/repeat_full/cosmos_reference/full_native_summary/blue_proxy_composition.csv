@@ -1,0 +1,6 @@
+LS_g0_low,LS_g0_high,proxy_sources,independent_stellar_references,independent_resolved_SED_galaxies,ambiguous_or_unmatched,PS1_selected,PS1_selected_stellar_references,galaxy_label_fraction_lower
+22.0,22.5,243,71,8,164,187,60,0.03292181069958848
+22.5,23.0,283,62,47,174,156,43,0.16607773851590105
+23.0,23.5,502,52,193,257,131,17,0.3844621513944223
+23.5,24.0,1155,37,583,535,44,3,0.5047619047619047
+24.0,30.0,259,3,143,113,1,0,0.5521235521235521

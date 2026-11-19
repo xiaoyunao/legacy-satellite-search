@@ -30,6 +30,10 @@ The snapshot can be submitted on a CPU allocation with `scripts/v14_finalize.sh 
 
 The current paper mainline and complete review requirements are tracked in [PRO_REVIEW_CHECKLIST](docs/PRO_REVIEW_CHECKLIST.md). Run `PYTHONPATH=src .venv/bin/python scripts/v14_production.py` to audit the synchronized aggregate R14 baseline/main/evaluation/primary-budget sample. Its funnel and provenance are in `results/v14/production/`; this incremental audit does not replace historical production reconciliation or visual adjudication. Snapshot/catalogue finalization also refreshes it. Register additional retry array IDs with their immutable CSV path and SHA256 in ignored `logs/v14-retry-jobs.json`; continuation checks use expanded live scheduler coverage as well as accounting.
 
+## Independent stellar-reference validation
+
+The [independent reference audit](docs/INDEPENDENT_REFERENCE_AUDIT.md) documents the COSMOS/ACS+HSC reference, actual PS1 native exposure/mask coverage, proxy contamination and finite-count holdout tests. Aggregates and reproducible figures are in `results/v14/repeat_full/cosmos_reference/`; source rows and images stay on NERSC. This is a conditional single-source audit, not physical PS1 system completeness or candidate confirmation. Production masks and thresholds are unchanged.
+
 ## Current search and selection experiments
 
 The [project memory](docs/PROJECT_MEMORY.md) records the science questions and scope. The [work plan](PLAN.md) defines current tests and acceptance criteria. The [run status](docs/STATUS.md) records completed runs and Slurm IDs. The [thirteenth science report](thirteenth_science_report.md) describes the South PS1 rollout, new matched recovery measurements and the native CCD experiment.

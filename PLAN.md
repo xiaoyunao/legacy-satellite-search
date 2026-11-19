@@ -1,11 +1,18 @@
 # Plan
 
+## 2026-11-19T17:42Z — Finish production; reference response is now measured but not universally transferable
+
+1. Continue existing6891-field scans/retries. Latest n6257complete+29zero-valid-area;171 registered retry fields accepted,3live-covered,0uncovered. Add retries only for actual terminal gaps without live coverage.
+2. Complete regional C and resource retries61584021/61585731; watch original DELVE-extension5/6 terminal states. North retry complete.21 pending C tasks now128G/four hours; retain all source/seed rules. Finish mask repair61579696→61579698, then final common-clock production/area/C/identity integration.
+3. Preserve accepted144 native LS trials and formal-baseline144 replay, finite-stamp/realized-light limits. Independent reference audit now has6800 labelled stars/539 faint blue on2.1328deg², but physical PS1 transport/crowding remains unvalidated. Its conditional source response and galaxy labels do not establish a physical system ΔPdet. Avoid universal correction or unsupported50% contours.
+4. Freeze final independent review units and probability design only after production convergence; finish all selected C/images/member/privacy/page QA. Deliver once; preserve first75 and blank grades. No interim grading, automatic candidate promotion, population inference or manuscript writing.
+
 ## Current checkpoint — 2026-11-19T17:10Z
 
 1. Follow the existing remaining outside-census scans, six live-covered retry fields and regional C; audit terminal manifests before adding retries. Current6116complete+28zero-area terminals/6891. Packed113 is accepted; no uncovered retry gaps at m.
 2. Accept formal baseline replay144/144: spatial39, highest-correct31, retained-correct35. Keep separate from old matched baseline40/deeper64 and do not borrow its C. Preserve realized-light, finite-stamp and three-sky scope limitations.
 3. Finish exact6269-mask union repair61579696→61579698 and North required-C61579635 (now both complete), South DELVE-extension OOM retry61584021 and all regional chains, then rebuild production at a common input clock. Current7994/7822 remains provisional; final inventory grows with completed scans.
-4. The COSMOS denominator collapse is census FOOT128. Complete separate native-image coverage61584237→validation61584300 before using independent stellar references. Raw deep data and PS1 DR2 downloads are complete; first strict-mask test has two stars and no supported faint-blue validation. Do not substitute an unsupported probability response for physical PS1 selection.
+4. The COSMOS denominator collapse is census FOOT128. Complete separate native-image coverage retry61584655→validation61584300 (61584237 failed only during ASCII parsing) before using independent stellar references. Raw deep data and PS1 DR2 downloads are complete; first strict-mask test has two stars and no supported faint-blue validation. Do not substitute an unsupported probability response for physical PS1 selection.
 5. After full production convergence, freeze independent review units and probability sampling, complete same-record C and image/membership/privacy/page QA, then deliver once. Preserve the first75 and blank grades. No sparse50% contour, unsupported LS−PS1 gain, population inference or manuscript writing.
 
 ## Current checkpoint — 2026-11-19T15:40Z

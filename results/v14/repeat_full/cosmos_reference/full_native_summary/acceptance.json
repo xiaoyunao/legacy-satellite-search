@@ -1,0 +1,17 @@
+{
+  "inputs": {
+    "results/v14/repeat_full/cosmos_reference/full_native_image_coverage_validation/validation.json": "11909ac9850beecb827d49573bd9c3b4aed9b415ed6e4ac429707341700c23d9",
+    "results/v14/repeat_full/cosmos_reference/full_native_image_coverage_validation/independent_stellar_source_response.csv": "7b7a1526203a7d7953269e3711714891f29bae49d9f71fab04639f1b47c14c05",
+    "results/v14/repeat_full/cosmos_reference/full_native_image_coverage_validation/LS_proxy_reference_composition.csv": "45b3ad8dc5766a43486b52e9e6def3809032e480bdf17cbdc9fc3ae94f8affb8",
+    "results/v14/repeat_full/cosmos_reference/full_native_image_coverage_validation/heldout_estimator_validation.csv": "75423796adeec87ff355ae57368718ebe51b4cd85e7b3df8ab263782da8f61cb"
+  },
+  "code_sha256": "cfc9c74a45afd408457ef893fda8e8b85b18eac23368b0f9424624d046ee781e",
+  "reference_partition_verified": true,
+  "composition_partition_verified": true,
+  "stellar_references": 6800,
+  "faint_blue_stellar_references": 539,
+  "supported_estimator_bins": 21,
+  "supported_LS_blue_estimator_bins": 5,
+  "physical_PS1_transfer_validated": false,
+  "scope": "Conditional independent-label source audit in one exposure-defined field. Exact marginal binomial intervals and conservative Bonferroni difference bounds describe finite reference counts, not sky/reference-label/matching/transport systematics or paired differences. HSC observed and LS corrected bins use distinct native passbands; do not equate them. Unknown references stay unknown; galaxy-labelled fractions are reference-conditional lower labels, not globally calibrated contamination. No physical LS\u2212PS1 Pdet, new discovery area, candidate confirmation or population constraint."
+}

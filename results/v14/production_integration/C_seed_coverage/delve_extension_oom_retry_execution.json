@@ -68,5 +68,15 @@
       "previous": "afterany:61470267(unfulfilled)",
       "current": "afterany:61470267,afterany:61584021"
     }
+  },
+  "disjoint_failed_shard_early_release": {
+    "utc": "2026-11-19T17:37:41.642459+00:00",
+    "command": [
+      "scontrol",
+      "update",
+      "JobId=61584021",
+      "Dependency=0"
+    ],
+    "reason": "All selected original shards are terminal OOM. Field-hash sharding guarantees no overlap with live original5/6/7. The immutable discovery table is verified. Retain global release dependencies on both original and retries; do not wait for unrelated shards before processing these failures."
   }
 }

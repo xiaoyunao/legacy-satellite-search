@@ -1,5 +1,11 @@
 # 当前科学主线
 
+## 2026-11-19T17:42Z — Independent reference reveals proxy contamination; response transport remains a scientific gate
+
+The completed exposure-defined COSMOS audit has6800 independent morphology/SED stellar references and539 faint blue stars. A substantial fraction of faint LS blue PSF proxies instead has resolved/SED galaxy labels (193/502 atg₀23–23.5 and583/1155 at23.5–24); unknown labels remain unknown. The expanded same-field object holdout supports21 estimator cells/five blue cells, but all conservative blue difference intervals include zero. Reference contamination is observed; a universal numerical correction is not established. Neither labels nor source-selection curves validate PS1 compact-system detection or transfer to the three selected physical backgrounds. Preserve native passband/error, IR-selection, observing-condition and crowding limits. Do not add model complexity to substitute for missing truth or extrapolate isolated-source recovery to clusters.
+
+Main production closure continues with6257 complete plus29 zero-area terminals/6891. No uncovered scan retry at n. Final once-only human review still requires terminal search, common-clock production/union/identity, all selected same-record C, evidence, probability sampling and privacy/page QA. Original75 remain unchanged; the actual144 LS experiments and their formal-baseline replay remain separate from this external calibration.
+
 ## 2026-11-19T17:10Z — production policy transfer measured; protect the reference denominator
 
 The same144 native catalogues now pass the frozen formal A-baseline replay:39 spatial recoveries,31 correct highest-distance modes and35 correct retained modes. Available baseline member count1170 is unchanged. The old matched-budget40/64 depth contrast is a different policy experiment; formal-baseline39 versus matched-deeper64 is not a paired depth comparison. No C or human certification is borrowed across these policies.

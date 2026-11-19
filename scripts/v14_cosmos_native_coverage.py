@@ -1,7 +1,6 @@
 """Measure external-reference coverage from real PS1 exposure and mask images."""
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,timezone
-import io
 import os
 from pathlib import Path
 import subprocess
@@ -39,9 +38,9 @@ def sample(image,wcs,ra,dec):
     return inside,values
 
 
-def run():
+def run(config=CONFIG,output=OUT):
     if not os.getenv('SLURM_JOB_ID'):raise ValueError('Real image processing requires Slurm')
-    spec=yaml.safe_load(CONFIG.read_text());config_hash=sha(CONFIG)
+    spec=yaml.safe_load(config.read_text());config_hash=sha(config)
     os.environ['LS_SAT_CONFIG_DIR']='configs/v14_cosmos_reference'
     root,data,cfg=settings();m=yaml.safe_load(Path('configs/v14_cosmos_reference/matched.yaml').read_text())
     field_spec=dict(m['fields'][0],width=m['width_deg'],buffer_arcmin=0)
@@ -53,7 +52,7 @@ def run():
         with urlopen(url,timeout=90) as response:body=response.read().decode()
         listing=folder/f'list-{ra}-{dec}.txt';listing.write_text(body)
         requests.append(dict(url=url,path=str(listing),sha256=sha(listing)))
-        table=Table.read(io.StringIO(body),format='ascii')
+        table=Table.read(body.splitlines(),format='ascii.basic',guess=False)
         for row in table:
             if str(row['type']) not in spec['products']:continue
             item={key:str(row[key]) for key in ('projcell','subcell','filter','type','filename','shortname')}
@@ -87,10 +86,15 @@ def run():
         if sha(target)!=digest:raise ValueError('Immutable coverage artifact changed')
         pending.unlink()
     else:pending.replace(target)
-    if sha(CONFIG)!=config_hash:raise ValueError('Native coverage policy changed during measurement')
-    OUT.mkdir(parents=True,exist_ok=True)
-    write_json(OUT/'manifest.json',dict(job=os.environ['SLURM_JOB_ID'],utc=datetime.now(timezone.utc).isoformat(),config_sha256=config_hash,code_sha256=sha(Path(__file__)),image_requests=requests,products=products,tiles=tile_counts,LS_inputs=ls_inputs,LS_valid_cells=int(ls_area.sum()),PS1_band_valid_LS_cells={k:int(v.sum()) for k,v in band_valid.items()},common_valid_cells=int(common.sum()),pixel_area_deg2=(cell/60)**2,common_control_deg2=float(common.sum()*(cell/60)**2),coverage=dict(path=str(target),sha256=digest,shape=list(coverage.shape)),scope=spec['scope']+' Native central-pixel coverage is not PSF-weighted completeness or census footprint membership. PS1 public DR1/DR2 products are 3pi, not Medium Deep stacks.'))
+    if sha(config)!=config_hash:raise ValueError('Native coverage policy changed during measurement')
+    output.mkdir(parents=True,exist_ok=True)
+    write_json(output/'manifest.json',dict(config_path=str(config),job=os.environ['SLURM_JOB_ID'],utc=datetime.now(timezone.utc).isoformat(),config_sha256=config_hash,code_sha256=sha(Path(__file__)),image_requests=requests,products=products,tiles=tile_counts,LS_inputs=ls_inputs,LS_valid_cells=int(ls_area.sum()),PS1_band_valid_LS_cells={k:int(v.sum()) for k,v in band_valid.items()},common_valid_cells=int(common.sum()),pixel_area_deg2=(cell/60)**2,common_control_deg2=float(common.sum()*(cell/60)**2),coverage=dict(path=str(target),sha256=digest,shape=list(coverage.shape)),scope=spec['scope']+' Native central-pixel coverage is not PSF-weighted completeness or census footprint membership. PS1 public DR1/DR2 products are 3pi, not Medium Deep stacks.'))
     print('NATIVE_REFERENCE_COVERAGE',len(products),int(common.sum()),flush=True)
 
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--config',type=Path,default=CONFIG)
+    parser.add_argument('--output',type=Path,default=OUT)
+    run(**vars(parser.parse_args()))
