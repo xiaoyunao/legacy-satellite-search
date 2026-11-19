@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-19T19:16:10+00:00",
+  "updated_utc": "2026-11-19T19:50:00+00:00",
   "policy_source": "GPT Pro 437262c6; user next-round prompt 2026-11-19",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -12,7 +12,7 @@
     "full_search_terminal_accounting": "r19:15Z:6449complete+29zero-valid-gr/6891;174scan retries accepted,0uncovered;413fields remain",
     "historical_production_and_exact_mask_union": "Interim6269 ordinary masks/720 tiles accepted:25181.084427deg2 all ordinary,18173.912657 source-clock-qualified. Old7994-record/7822-position catalogue not final. Final common-clock inventory/union/integration pending.",
     "same_eligible_record_C_complete": "Expanded75-task audit has11failed attempts,0uncovered; North retry complete; South DELVE2/3 timeout retry61592117, DELVE-extension61584021/61585731/61590980/61591390 and original regional chains remain. Scheduler coverage is not exact-source C acceptance.",
-    "all_final_objects_images_and_evidence": "pending",
+    "all_final_objects_images_and_evidence": "pending; accepted rendering-equivalence61593937 enables numerical C first. Deferred rows explicitly lack generated diagnostics; final selected modes still need saved-membership-bound images/diagnostics and all material QA.",
     "final_sampling_inclusion_probabilities": "Not drawn. Interim5arcmin connected components can chain over>40arcmin; final review units require constituent/environment retention before probability sampling",
     "final_anonymity_and_page_QA": "pending"
   },
@@ -33,6 +33,8 @@
     "formal_baseline_spatial_recoveries": 39,
     "formal_baseline_highest_DM_correct": 31,
     "formal_baseline_retained_DM_correct": 35,
-    "independent_reference_state": "Conditional COSMOS source audit accepted; local PS1 conditions61589109 confirms gr formal-noise mismatch with three physical backgrounds. Bandpass/labels/conditions/crowding physical transfer unvalidated."
+    "independent_reference_state": "Conditional COSMOS source audit accepted; local PS1 conditions61589109 confirms gr formal-noise mismatch with three physical backgrounds. Bandpass/labels/conditions/crowding physical transfer unvalidated.",
+    "C_rendering_equivalence_job": "61593937",
+    "C_rendering_equivalence_state": "two modes/34 common scientific fields and membership arrays identical; ordered warm-cache timings122.156s/27.492s, not a full-workflow speedup"
   }
 }

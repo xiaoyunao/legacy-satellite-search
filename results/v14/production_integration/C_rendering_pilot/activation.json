@@ -1,0 +1,36 @@
+{
+  "utc": "2026-11-19T19:48:29.398397+00:00",
+  "accepted_pilot": "61593937",
+  "acceptance_sha256": "8d5321952ffd1f1ec3976d38651da55bbfecc6927b2cef0c410fe43b70e2f7c6",
+  "code_sha256": {
+    "src/ls_satsearch/review.py": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
+    "scripts/v14_review.py": "37e504e97ad30c02a05847ffbb19763249f27c11a074809016a405801ee56861",
+    "scripts/v14_review.sh": "3def2d5abe6b08a9817cd2994a2ac681586795833db7d1ed84a5881867680d20"
+  },
+  "default_scope": "New v14 C Python processes defer diagnostic rendering; general review API and other versions retain immediate rendering defaults. LS_SAT_DEFER_C_DIAGNOSTICS=0 explicitly requests immediate diagnostics.",
+  "queue": [
+    "61470252_6|ls14-c-south_delve|PENDING|0:00|(Priority)",
+    "61592117_[2-3%2]|ls14-c-delve-timeout|PENDING|0:00|(Priority)",
+    "61591390_[2%1]|ls14-c-delve-ext-fallback|PENDING|0:00|(Priority)",
+    "61590980_[6%1]|ls14-c-delve-ext-timeout|PENDING|0:00|(Priority)",
+    "61584021_[0-1,4%2]|ls14-c-delve-ext-oom-retry|PENDING|0:00|(Priority)",
+    "61469845_[151-190%6]|ls14-south_outside_census|PENDING|0:00|(Priority)",
+    "61469851_[112-123%6]|ls14-south_outside_census_extension|PENDING|0:00|(Priority)",
+    "61585731_[3%1]|ls14-c-delve-ext-extra-oom|PENDING|0:00|(Priority)",
+    "61470256_[0-7]|ls14-c-south_outside_census|PENDING|0:00|(Dependency)",
+    "61470266_[0-7]|ls14-c-south_outside_census_extension|PENDING|0:00|(Dependency)",
+    "61470252_7|ls14-c-south_delve|PENDING|0:00|(Priority)",
+    "61470508|ls14-release|PENDING|0:00|(Dependency)",
+    "61470267|ls14-release|PENDING|0:00|(Dependency)",
+    "61470265|ls14-sum-south_outside_census_extension|PENDING|0:00|(Dependency)",
+    "61470255|ls14-sum-south_outside_census|PENDING|0:00|(Dependency)",
+    "61470252_4|ls14-c-south_delve|RUNNING|1:05:02|nid007093",
+    "61470252_5|ls14-c-south_delve|RUNNING|39:14|nid006450",
+    "61470264_7|ls14-c-south_delve_extension|RUNNING|5:40|nid004805"
+  ],
+  "existing_running_processes": "Continue with their already-loaded implementation; no scientific job canceled or duplicated.",
+  "numerical_C_fitting_and_source_selection_unchanged": true,
+  "all_deferred_rows_evidence_pending": true,
+  "final_selected_evidence_required": true,
+  "scope": "Rendering/I/O policy only after actual two-mode equivalence. Every final selected mode still requires saved-membership-bound diagnostic rendering, images, privacy and full-page QA. No human grade, candidate promotion or completion claim."
+}

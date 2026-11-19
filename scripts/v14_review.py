@@ -95,11 +95,19 @@ def run(version, cohort, index, count):
     workspace = home/f'regional_{version}_{cohort}'
     os.environ['LS_SAT_CONFIG_DIR'] = str(config)
     os.environ['LS_SAT_RUN_VERSION'] = version
+    defer=os.getenv('LS_SAT_DEFER_C_DIAGNOSTICS','1' if version=='v14' else '0')
+    if defer not in ('0','1'):raise ValueError('LS_SAT_DEFER_C_DIAGNOSTICS must be0 or1')
+    implementation=sha(Path('src/ls_satsearch/review.py'))
+    config_checksum=sha(config/'search.yaml')
+    render=defer=='0'
     review_sky_groups(selection,'A_base',.3,archived_run=workspace/'results',
-                      archive_version=version,products=products,blind_reference=True)
+                      archive_version=version,products=products,blind_reference=True,render_diagnostics=render)
     write_json(dest/'provenance.json',dict(job=os.getenv('SLURM_JOB_ID'), input=str(table),
                                           input_sha256=source_checksum,selection_sha256=sha(selection),count=count,index=index,
-                                          visual_review_pending=True, blinded_cross_id=True))
+                                          visual_review_pending=True, blinded_cross_id=True,
+                                          review_implementation_sha256=implementation,search_config_sha256=config_checksum,
+                                          render_diagnostics=render,
+                                          diagnostic_policy=('immediate' if render else 'pending_final_selected_evidence')))
 
 
 if __name__ == '__main__':

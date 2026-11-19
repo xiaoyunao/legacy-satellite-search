@@ -1,0 +1,14 @@
+{
+  "job": "61593937",
+  "render_diagnostics": true,
+  "elapsed_seconds": 122.15639835401089,
+  "inputs": {
+    "results/v14/candidate_review/v14/south_delve/04/review_modes.csv": "4282fa8741ad0c25a4667b1ea150d1482acf67e750915a4294edb55467650087",
+    "configs/v14/cohorts/south_delve/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d",
+    "src/ls_satsearch/review.py": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
+    "src/ls_satsearch/search.py": "45ab165baf8e4249253b26944dc64be487360bd1d24db975bc7bf8260f2383b9"
+  },
+  "selection_sha256": "b38582e4989fbe75907bb3f5d55328b81b3f54b04452a2204fea6d6613470cc7",
+  "products": "/pscratch/sd/y/yunao/legacy-satellite-search/runs/v14/rendering_pilot/immediate",
+  "scope": "Two retained production modes, diagnostic-equivalence pilot only. Not a complete production source record or extra blind recovery."
+}

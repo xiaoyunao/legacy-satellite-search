@@ -1,0 +1,3 @@
+group_id,field,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,raw_peak_id,n_on,n_off,area_on_arcmin2,area_off_arcmin2,channel,peak_rank,ranking,role,policy,budget,representative,passes_group_cut,audit_priority
+v14_south_delve_0017-A_base-0.3-001,v14_south_delve_0017,24.0,56.0,56.63413720710035,-76.62225464728343,20.75,16.0,38.54646933762135,230583.0,3125.0,15493.0,1781.861111111111,11501.979166666666,A_base,1,38.54646933762135,pilot_eval,A_base,0.3,True,True,compact_or_high_score
+v14_south_delve_0017-A_base-0.3-002,v14_south_delve_0017,-66.66666666666669,-24.0,49.63947394162945,-77.93010602074993,20.75,16.0,20.385995723124708,230574.0,2283.0,19533.0,1673.6875,17719.458333333332,A_base,2,20.385995723124708,pilot_eval,A_base,0.3,True,True,compact_or_high_score

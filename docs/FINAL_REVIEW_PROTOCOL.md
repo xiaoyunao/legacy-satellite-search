@@ -14,6 +14,8 @@ The existing-snapshot geometry diagnostic tests a5arcmin maximum **pairwise** sp
 
 ## Materials and reveal
 
+R14 C may finish numerically before plots are generated. A deferred row is not complete review evidence: selected modes must be rendered from their own verified saved membership, with all figure/image conditions checked before release.
+
 Each selected position must have measured-error CMD/background, spatial/radial panels, native gr pixels, morphology and contributor stamps, all important C modes, leave-top-three sensitivity, conditions and known-environment evidence. Keep the full information, with a short per-object overview, bookmarks and consistent page order for continuous review.
 
 Phase 1 contains only anonymous IDs, relative positions and the permitted CMD/morphology/spatial evidence. Hide identities, absolute coordinates, scores, known environments and processing clues reserved for reveal. Audit PDF text/metadata, image annotations, filenames, ZIP entries and blank forms for leakage. Keep administrative identity keys outside the anonymous ZIP. Grade tables remain blank until the user acts. Seal actual user responses against the released hashes before revealing identities and scientific context.

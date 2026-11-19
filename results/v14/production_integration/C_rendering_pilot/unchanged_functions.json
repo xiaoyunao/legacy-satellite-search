@@ -1,0 +1,14 @@
+{
+  "previous_commit": "33cacc5",
+  "unchanged_functions": [
+    "fit_at_peak",
+    "convert_peak",
+    "save_membership",
+    "membership_path",
+    "image_cutouts",
+    "coadd_stamp",
+    "observing_page"
+  ],
+  "point_process_source_sha256": "45ab165baf8e4249253b26944dc64be487360bd1d24db975bc7bf8260f2383b9",
+  "passed": true
+}

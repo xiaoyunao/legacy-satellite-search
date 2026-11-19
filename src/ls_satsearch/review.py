@@ -207,7 +207,8 @@ def image_cutouts(path, root, bricks, field, peak, member_xy, prob, *, details=F
 
 
 def review(field_id, depth, group_limit=None, group_rows=None, *,
-           archived_run=None, archive_version=None, products=Path('results')):
+           archived_run=None, archive_version=None, products=Path('results'),
+           render_diagnostics=True):
     root, data_root, cfg = settings()
     if depth == 'deep':
         for b in 'gr':
@@ -240,10 +241,11 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
         folder.mkdir(parents=True, exist_ok=True)
     raw_dir = data_root/'runs'/archive_version/out.name if archive_version else work
     summary = []
-    with (raw_dir/'all_template_peaks.csv').open() as f:
-        raw_peaks = [convert_peak(r) for r in csv.DictReader(f)]
-    raw_xy = np.array([(r['x'],r['y']) for r in raw_peaks]).reshape(-1,2)
-    raw_tree = cKDTree(raw_xy)
+    if render_diagnostics:
+        with (raw_dir/'all_template_peaks.csv').open() as f:
+            raw_peaks = [convert_peak(r) for r in csv.DictReader(f)]
+        raw_xy = np.array([(r['x'],r['y']) for r in raw_peaks]).reshape(-1,2)
+        raw_tree = cKDTree(raw_xy)
     for row in fields:
         peak = convert_peak(row)
         best = fit_at_peak(peak, sample, field, area, cmd, weights=weights)
@@ -267,20 +269,28 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
             a, b, _, _ = exact_onoff(field, peak['x'], peak['y'], peak['rh_arcmin'], tree, area, use)
             test[f'cmd_on_snr{threshold}'] = a
             test[f'cmd_off_snr{threshold}'] = b
-        nearby = raw_tree.query_ball_point((fit_peak['x'],fit_peak['y']),fit_peak['rh_arcmin'])
-        raw = [raw_peaks[i] for i in nearby if raw_peaks[i]['method']==peak['method']]
+        if render_diagnostics:
+            nearby = raw_tree.query_ball_point((fit_peak['x'],fit_peak['y']),fit_peak['rh_arcmin'])
+            raw = [raw_peaks[i] for i in nearby if raw_peaks[i]['method']==peak['method']]
         total = prob.sum()
         fit['top1_membership_fraction'] = float(prob[ranking[:1]].sum()/total) if total else 0.
         fit['top3_membership_fraction'] = float(prob[ranking[:3]].sum()/total) if total else 0.
         fit['effective_members'] = float(total**2/(prob@prob)) if total else 0.
         label = f"{peak['branch']}-{peak['method']}-{peak['rank']}"
         co = manifest['observing_conditions_source_sample']
-        candidate(figure_dir/f'candidate-{label}.png', spec, field, area, sample, data,
-                  valid, mags, chosen, fit_peak, idx, prob, raw, model, co)
-        metadata = observing_page(figure_dir/f'candidate-{label}-environment.png',
-                                  root, bricks, data, valid, field, fit_peak, row)
-        images = image_cutouts(figure_dir/f'candidate-{label}-images.png', root, bricks, field,
-                               fit_peak,sample[idx,:2],prob,details=True,region=cfg.get('region','south'))
+        if render_diagnostics:
+            candidate(figure_dir/f'candidate-{label}.png', spec, field, area, sample, data,
+                      valid, mags, chosen, fit_peak, idx, prob, raw, model, co)
+            metadata = observing_page(figure_dir/f'candidate-{label}-environment.png',
+                                      root, bricks, data, valid, field, fit_peak, row)
+            images = image_cutouts(figure_dir/f'candidate-{label}-images.png', root, bricks, field,
+                                   fit_peak,sample[idx,:2],prob,details=True,region=cfg.get('region','south'))
+        else:
+            metadata = {}
+            images = dict(image_diagnostic_generated=False, image_centre_complete=False,
+                          image_pending=True, diagnostics_deferred=True,
+                          image_expected_member_stamps=2*min(3, int((prob>0).sum())),
+                          image_missed_member_stamps=None)
         membership=save_membership(data_root,work/f'membership-{label}.npz',
             data[['RELEASE', 'BRICKID', 'OBJID']][chosen][idx],prob)
         summary.append(dict(field=field_id, depth=depth, branch=peak['branch'], method=peak['method'], rank=peak['rank'],
@@ -294,7 +304,7 @@ def review(field_id, depth, group_limit=None, group_rows=None, *,
 
 
 def review_sky_groups(table, policy, budget, *, archived_run=None, archive_version=None,
-                      products=Path('results'), blind_reference=False):
+                      products=Path('results'), blind_reference=False, render_diagnostics=True):
     """Refit each retained distance–size hypothesis and summarize each sky group."""
     from astropy.coordinates import SkyCoord
     from .evaluate import source_references
@@ -316,7 +326,8 @@ def review_sky_groups(table, policy, budget, *, archived_run=None, archive_versi
         rows.append(dict(r,field_id=r['field'],depth=depth,method=method,branch='main',rank=r['peak_rank'],
                          candidate_group_id=r['group_id'],evidence_level='L0',**nearest))
     batches = sorted({(r['field_id'],r['depth']) for r in rows})
-    kwargs = dict(archived_run=archived_run,archive_version=archive_version,products=products)
+    kwargs = dict(archived_run=archived_run,archive_version=archive_version,products=products,
+                  render_diagnostics=render_diagnostics)
     allocated = int(os.environ.get('SLURM_CPUS_PER_TASK','1'))
     workers = min(len(batches), max(1,allocated//2))
     if workers>1:

@@ -1,0 +1,35 @@
+{
+  "job": "61593937",
+  "inputs": {
+    "results/v14/candidate_review/v14/south_delve/04/review_modes.csv": "4282fa8741ad0c25a4667b1ea150d1482acf67e750915a4294edb55467650087",
+    "configs/v14/cohorts/south_delve/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d",
+    "src/ls_satsearch/review.py": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
+    "src/ls_satsearch/search.py": "45ab165baf8e4249253b26944dc64be487360bd1d24db975bc7bf8260f2383b9"
+  },
+  "pilot_code_sha256": "a710d1affb1056de81ce636a6dcec85456c5b61478b8cf0ab864ae565ede62a6",
+  "elapsed_seconds": {
+    "immediate": 122.15639835401089,
+    "deferred": 27.492075832007686
+  },
+  "comparisons": [
+    {
+      "ts": "3.3303302030738386",
+      "fit_dm": "21.0",
+      "fit_rh_arcmin": "11.2",
+      "compared_scientific_columns": 34,
+      "identical": true,
+      "membership_arrays_identical": true
+    },
+    {
+      "ts": "0.0",
+      "fit_dm": "20.5",
+      "fit_rh_arcmin": "11.2",
+      "compared_scientific_columns": 34,
+      "identical": true,
+      "membership_arrays_identical": true
+    }
+  ],
+  "all_scientific_columns_and_memberships_identical": true,
+  "deferred_evidence_remains_pending": true,
+  "scope": "Ordered warm-cache two-mode equivalence test; elapsed times are not an unbiased full-workflow speedup measurement. Numerical fitting, mask/selection, top-source deletions and membership are unchanged. Raw-template-peak I/O used only by plotting is deferred too. No production completion, human grade or candidate evidence upgrade."
+}
