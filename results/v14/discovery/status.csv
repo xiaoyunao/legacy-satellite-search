@@ -2,11 +2,11 @@ cohort,registered,completed,no_usable,prepared,missing,planned_proxy_deg2,search
 north,408,408,0,0,0,3688.669342776665,3642.638418209876,0,96417979,23860118,6.220669272502449,1685,0,results/v11/north/main/calibration/sky_group_policy.json
 north_extension,142,140,2,0,0,815.3213204698228,779.7811265432097,0,22636388,6425346,6.405633379405386,296,46,results/v14/discovery/north_extension/calibration/sky_group_policy.json
 north_single_native,7,6,1,0,0,9.783016551992663,7.845252700617282,0,226079,66184,,0,0,results/v14/discovery/north_single_native/calibration/sky_group_policy.json
-south_delve,993,400,0,0,593,8005.156560097696,3089.603541666666,0,83724368,23672410,5.73753452328614,2278,0,results/v11/south_delve/main/calibration/sky_group_policy.json
-south_delve_extension,741,128,0,0,613,3768.2317575500424,701.6219791666665,0,20143378,5975683,,,,awaiting completed development scans
-south_des,497,384,0,0,113,4595.434328684886,3813.407671682098,0,79725730,20755204,5.883355909604258,1313,0,results/v11/south_des/main/calibration/sky_group_policy.json
+south_delve,993,697,0,27,269,8005.156560097696,5437.569945987653,0,145396894,40068677,5.73753452328614,3275,0,results/v11/south_delve/main/calibration/sky_group_policy.json
+south_delve_extension,741,230,0,6,505,3768.2317575500424,1381.5545100308639,0,39512831,11748778,,,,awaiting completed development scans
+south_des,497,459,0,30,8,4595.434328684886,4264.260368441357,0,89080892,23086383,5.883355909604258,1410,0,results/v11/south_des/main/calibration/sky_group_policy.json
 south_des_extension,68,68,0,0,0,113.93411233741588,113.48958912037035,0,2911585,830351,6.256213786895604,20,6,results/v14/discovery/south_des_extension/calibration/sky_group_policy.json
-south_outside_census,1526,138,0,0,1388,805.2366827640824,198.90787615740737,0,5349885,1594258,,,,awaiting completed development scans
-south_outside_census_extension,991,122,1,0,868,2938.839154559726,493.29967206790116,0,15191768,4434683,,,,awaiting completed development scans
+south_outside_census,1526,262,0,12,1252,805.2366827640824,301.97461226851846,0,7510501,2239884,,,,awaiting completed development scans
+south_outside_census_extension,991,215,11,13,752,2938.839154559726,864.3027893518516,0,26499805,7793843,,,,awaiting completed development scans
 south_ps1,1039,1038,1,0,0,168.094780379949,17.982685185185183,0,342481,151557,6.137901371660258,22,0,configs/v7/production.json
-south_ps1_extension,479,160,0,0,319,746.3681019304429,88.54354938271604,0,1883971,559015,,,,awaiting completed development scans
+south_ps1_extension,479,292,0,10,177,746.3681019304429,253.6627854938271,0,6087521,1801058,,,,awaiting completed development scans

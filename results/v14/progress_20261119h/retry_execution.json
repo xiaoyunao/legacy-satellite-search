@@ -1,0 +1,42 @@
+{
+  "job": "61571922",
+  "tasks": 6,
+  "worklist": "results/v14/progress_20261119h/uncovered_retries.csv",
+  "worklist_sha256": "c641189a92fa850fced0b1f7ffe778ee59fe723c91a3a0c93de0d46eebdc4d2e",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=56G",
+    "-t",
+    "01:00:00",
+    "--array=0-5%2",
+    "-J",
+    "ls14-terminal-h-retry",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "scripts/v14_retry_manifest.sh",
+    "results/v14/progress_20261119h/uncovered_retries.csv"
+  ],
+  "dependency_updates": [
+    {
+      "aggregate": "61470263",
+      "previous_dependency": "afterany:61469850_*(unfulfilled),afterany:61568908_*(unfulfilled)",
+      "new_dependency": "afterany:61469850,afterany:61568908,afterany:61571922"
+    },
+    {
+      "aggregate": "61470265",
+      "previous_dependency": "afterany:61469851_*(unfulfilled),afterany:61568908_*(unfulfilled)",
+      "new_dependency": "afterany:61469851,afterany:61568908,afterany:61571922"
+    }
+  ],
+  "state": "submitted_not_complete"
+}

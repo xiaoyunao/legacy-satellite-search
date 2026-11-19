@@ -1,0 +1,16 @@
+{
+  "queries": [
+    {
+      "site": "v14_south_response_2",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/argus/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+O.observationID%2CP.productID%2CP.energy_bandpassName%2C%0AA.uri%2CA.productType%2CA.contentLength%2CA.contentChecksum%0AFROM+caom2.Observation+AS+O+JOIN+caom2.Plane+AS+P+ON+O.obsID%3DP.obsID%0AJOIN+caom2.Artifact+AS+A+ON+P.planeID%3DA.planeID%0AWHERE+O.collection%3D%27CFHTMEGAPIPE%27+AND+O.observationID%3D%27MegaPipe.630.216%27%0AAND+P.energy_bandpassName%3D%27r.MP9601%27",
+      "query": "SELECT O.observationID,P.productID,P.energy_bandpassName,\nA.uri,A.productType,A.contentLength,A.contentChecksum\nFROM caom2.Observation AS O JOIN caom2.Plane AS P ON O.obsID=P.obsID\nJOIN caom2.Artifact AS A ON P.planeID=A.planeID\nWHERE O.collection='CFHTMEGAPIPE' AND O.observationID='MegaPipe.630.216'\nAND P.energy_bandpassName='r.MP9601'"
+    },
+    {
+      "site": "v14_south_response_3",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/argus/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+O.observationID%2CP.productID%2CP.energy_bandpassName%2C%0AA.uri%2CA.productType%2CA.contentLength%2CA.contentChecksum%0AFROM+caom2.Observation+AS+O+JOIN+caom2.Plane+AS+P+ON+O.obsID%3DP.obsID%0AJOIN+caom2.Artifact+AS+A+ON+P.planeID%3DA.planeID%0AWHERE+O.collection%3D%27CFHTMEGAPIPE%27+AND+O.observationID%3D%27MegaPipe.434.232%27%0AAND+P.energy_bandpassName%3D%27r.MP9601%27",
+      "query": "SELECT O.observationID,P.productID,P.energy_bandpassName,\nA.uri,A.productType,A.contentLength,A.contentChecksum\nFROM caom2.Observation AS O JOIN caom2.Plane AS P ON O.obsID=P.obsID\nJOIN caom2.Artifact AS A ON P.planeID=A.planeID\nWHERE O.collection='CFHTMEGAPIPE' AND O.observationID='MegaPipe.434.232'\nAND P.energy_bandpassName='r.MP9601'"
+    }
+  ],
+  "artifact_sha256": "8ae677dcbccaebb1b1ff0e889ea1f8b15865a355679d60b1e744d7ad2542b205",
+  "scope": "Two public r stacks selected from metadata, before image quality or PS1 response is seen. Independent instrument and exposures; processing does not establish stellar truth. No physical grid/background, discovery cut or selection-function denominator is changed."
+}

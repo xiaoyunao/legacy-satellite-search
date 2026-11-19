@@ -16,7 +16,10 @@ from ls_satsearch.hsc_depth_audit import aperture, candidate_sources, robust_sig
 from ls_satsearch.matched import reddening, PS1_MODEL
 from ls_satsearch.run import read_csv, sha, write_csv, write_json
 from ls_satsearch.search import load_isochrone
-from v12_footprint import save
+if __package__:
+    from .v12_footprint import save
+else:
+    from v12_footprint import save
 
 RA,DEC=165.61216974832084,31.892121971411218
 

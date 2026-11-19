@@ -1,0 +1,10 @@
+{
+  "job": "61570645",
+  "input": "results/v14/discovery/north/main/sky_group_candidates.csv",
+  "input_sha256": "8359a9fe619a5c89089548b3de9782f6d87c72ab22b3de81638ca11331a6296b",
+  "selection_sha256": "db5a5323cf358b8fce9b4044e0acbaff1d926e4d13afbb7cca4d8657ef2a3a99",
+  "count": 65536,
+  "index": 282,
+  "visual_review_pending": true,
+  "blinded_cross_id": true
+}

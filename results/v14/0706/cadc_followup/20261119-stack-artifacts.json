@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-19T10:18:53.183207+00:00",
+  "query": "SELECT O.collection,O.observationID,P.productID,P.energy_bandpassName,\nA.uri,A.productType,A.contentType,A.contentLength,A.contentChecksum\nFROM caom2.Observation AS O JOIN caom2.Plane AS P ON O.obsID=P.obsID\nJOIN caom2.Artifact AS A ON P.planeID=A.planeID\nWHERE O.collection='CFHTMEGAPIPE' AND O.observationID='MegaPipe.281.244'\nAND (P.energy_bandpassName='r.MP9602' OR P.energy_bandpassName='u.MP9302')",
+  "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/argus/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+O.collection%2CO.observationID%2CP.productID%2CP.energy_bandpassName%2C%0AA.uri%2CA.productType%2CA.contentType%2CA.contentLength%2CA.contentChecksum%0AFROM+caom2.Observation+AS+O+JOIN+caom2.Plane+AS+P+ON+O.obsID%3DP.obsID%0AJOIN+caom2.Artifact+AS+A+ON+P.planeID%3DA.planeID%0AWHERE+O.collection%3D%27CFHTMEGAPIPE%27+AND+O.observationID%3D%27MegaPipe.281.244%27%0AAND+%28P.energy_bandpassName%3D%27r.MP9602%27+OR+P.energy_bandpassName%3D%27u.MP9302%27%29",
+  "state": "metadata_received",
+  "artifacts": 6,
+  "scope": "Public artifact discovery only. No standard g product in the recovered ROI metadata; gri is a distinct broad filter. u/r stacks require actual WCS/weight/depth measurement before any stellar-population claim."
+}

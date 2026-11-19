@@ -1,5 +1,26 @@
 # DR11 search and selection response
 
+## 2026-11-19T10:55Z checkpoint: integrated sources and independent images
+
+- Search manifest h: **3977/6891 complete**, 15 no-usable-gr, **17871.851998456787 owned deg²**. These are R14 registered owned-mask areas, not the final historical union or a measured-gain area. Six newly terminal gaps were registered once in **61571922**; the two affected pending summaries now wait for it. Existing 131-field recovery **61568908** remains active.
+- Snapshot **61568667 COMPLETED/0:0/43:15**: R14 incremental production has **6708 records /6660 provisional associations /1032 records with a successful eligible C**. Historical qualification now covers 57 source tables and **7833 records**, reconciled to **7665 provisional positions**, with 1671 records having an available successful same-record C. All **75 frozen identities** cross-match their current source position; all user grades remain blank. This is not a final production freeze: necessary-seed completeness, exact historical mask union, terminal search completion and image QA still remain. [Integrated source ledger](results/v14/production_integration/reconciled/manifest.json).
+- Native CCD progress is separately recorded in `results/v14/repeat_full/native_progress.json`: 34/144 native products validated at this checkpoint, while only the original nine have full two-arm blind measurements. Remaining-array concurrency was raised from two to four after four real tasks completed with <7 GiB measured peak RSS; per-task resources, seeds and science cuts remain fixed. Full measurement/acceptance remain **61568456/61568539**, after all native tasks.
+- CADC is accessible again from local and NERSC. Four 0706 CFHT u/r science/weight artifacts were downloaded to NERSC and size/MD5/SHA verified. **61571692 COMPLETED/0:0/21s**: independent r has 93.6% full-aperture core coverage and observed PS1-r-equivalent 5σ aperture depth **23.509 mag** (27 references, 9 held out, 0.191 mag scatter); u has zero valid core/annulus support. No standard deep g was found; gri is a different filter. These data do not establish a stellar population; **0706 stays L0**.
+- Independent CFHT r measurements at physical-background sites 2/3 completed in **61571902**: alternate stacks fully cover the 0.75′ cores, with aperture depths **23.558/24.025 mag** and held-out scatter **0.042/0.038 mag**. Their 2.47′ stamp supports are only **87.6%/78.2%**, so they are potential local morphology checks, not whole-stamp truth or calibrated PS1 physical response. The first selected site-2 stack has no valid support, and the first site-3 stack covers only 16.3% of the core; retain these failures rather than treating metadata intersection as coverage.
+- Single-case faint-light guard **61571693 COMPLETED/0:0/1:56**: original site-1 trial 00 has the same 311 response stars; adding 5703 faint stars to CCD pixels gives detection/PSF/hard-cut counts **30/20/1** versus **35/20/1** at baseline, and **30/20/3** versus **35/20/4** when deeper. Neither variant is spatially recovered. The reused control reproduces the accepted initial counts. This one deliberately chosen shared draw does not estimate a global bias or clear the other cells. The primary 144 are untouched. Separate **30 pc radius guard 61571822** is submitted; it compares the same draw/CCD frame at original and 3.1′ injection radii, leaving residual tails explicit.
+- Euclid-context C **61570645_282 COMPLETED/0:0/2:51**, six ordinary groups/nine seeds, all fits complete. The three Ursa-Minor-II-associated groups have best TS **19.38/8.62/11.86**, after-top-three **2.50/0.039/0.597**; no new discovery or user grade is inferred. A new *any spatial group* distance diagnostic preserves, rather than replaces, the registered highest-A-group recovery metric.
+
+**Final delivery remains deferred:** finish the full registered search, exact historical area/position reconciliation, same-record required C seeds and complete evidence/anonymity/page QA before the user's single formal review. No interim manual grading, physical ΔP claim, unsupported completeness contour or manuscript writing.
+
+## 新补充：PS1 条件响应与模拟范围
+
+真实参考审计61569134已完成。三背景暗端22.5≤g₀<24的普通PSF留出样本联合入选率分别为23.9%、43.9%、38.8%；在共同有支持的星等/颜色分箱上，较严形态子样本仍高约1.9–2.7个百分点。不能把该嵌套子样本敏感性解释成独立验证或纯污染率。暗端Gaia标签参考全部较红（g−r≥0.8），未验证目标蓝主序的物理PS1响应。[原始阶段计数](results/v14/repeat_full/ps1_reference_audit/reference_stage_counts.csv) · [同分箱敏感性](results/v14/repeat_full/ps1_reference_audit/common_bin_shape_sensitivity.csv)
+
+生成星等阈值前后光度核算进一步显示：空间截断前仅渲染完整IMF V proxy光的68.0–94.1%，遗漏中位数14.68%。实际IMF光度元数据仍保留全体恒星；不自动下调它或修改冻结试验。未渲染暗光对提取/分类的影响还未测量，需要与30pc窗口损失分别做有限图像对照。[光度范围审计](results/v14/repeat_full/population_audit/magnitude_generation_light_audit.csv)
+
+近期Euclid三系统补入已知环境关联；现有快照中三组与Ursa Minor II/Euclid UFSS DR1 1空间接近，属于待C诊断的后验已知关联。不能算三个独立新对象，也不能由宽DM相容性声称最高距离模式正确。原恢复真值集与探测器未改变。[上下文范围与文献比较](docs/COMPARISON_SCOPE_20261119.md) · [源记录匹配](results/v14/production_integration/euclid_context_matches.csv)
+
+
 最新 g 快照：3462/6891 场完成、10 场无可用 gr、15451.314 owned deg²。131 个新近终态失败场已由 61568908 按清单登记补跑；代表性日志显示 HOME quota 写峰表失败。存储位置已修复，正式数值搜索配置未变。候选来源审计仍对应较早快照，不能将新面积直接赋给旧候选表。
 
 ## 新轮次已取得的实测诊断：144 份冻结潜在星族重放

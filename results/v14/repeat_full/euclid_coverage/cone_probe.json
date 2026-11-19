@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-19T10:09:43.764680+00:00",
+  "endpoint": "https://eas.esac.esa.int/tap-server/tap/sync",
+  "catalogue": "dr1.mer_catalogue_wide_survey",
+  "positive_control_valid": true,
+  "successful_counts": 5,
+  "scope": "Public count queries only. Positive source count establishes some catalogue coverage, not complete core coverage, adequate depth or clean point-source truth. Zero or failed responses are not interchangeable. Check the known published-system control before interpreting nulls. Raw catalogues/images, if needed, must be retrieved to NERSC."
+}

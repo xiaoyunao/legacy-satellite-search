@@ -1,0 +1,7 @@
+collection,observationID,productID,energy_bandpassName,uri,productType,contentType,contentLength,contentChecksum
+CFHTMEGAPIPE,MegaPipe.281.244,MegaPipe.281.244.R.MP9602,r.MP9602,cadc:CFHTSG/MegaPipe.281.244.R.MP9602.fits,science,application/fits,400006080,md5:4aed79d4fc46b15dc39f160737f9d18f
+CFHTMEGAPIPE,MegaPipe.281.244,MegaPipe.281.244.R.MP9602,r.MP9602,cadc:CFHTSG/MegaPipe.281.244.R.MP9602.fits.gif,preview,image/gif,520489,md5:e1bef32e50645dd23ad872f944cd6dec
+CFHTMEGAPIPE,MegaPipe.281.244,MegaPipe.281.244.R.MP9602,r.MP9602,cadc:CFHTSG/MegaPipe.281.244.R.MP9602.weight.fits.fz,weight,application/fits,41872320,md5:3b6eaef72b655c3e4fecd5e82fa9bc47
+CFHTMEGAPIPE,MegaPipe.281.244,MegaPipe.281.244.U.MP9302,u.MP9302,cadc:CFHTSG/MegaPipe.281.244.U.MP9302.fits,science,application/fits,400006080,md5:e44d7648e451e6e9130aa1ff042a3905
+CFHTMEGAPIPE,MegaPipe.281.244,MegaPipe.281.244.U.MP9302,u.MP9302,cadc:CFHTSG/MegaPipe.281.244.U.MP9302.fits.gif,preview,image/gif,11502,md5:91c249eb6b47ed43b4e905d00b968664
+CFHTMEGAPIPE,MegaPipe.281.244,MegaPipe.281.244.U.MP9302,u.MP9302,cadc:CFHTSG/MegaPipe.281.244.U.MP9302.weight.fits.fz,weight,application/fits,14307840,md5:2f8670d00f7f14b0288466d7ac4bd441

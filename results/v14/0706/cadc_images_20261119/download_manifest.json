@@ -1,0 +1,48 @@
+{
+  "job": "61571692",
+  "metadata_sha256": "d1e4a24c935cf8ef4717f26fca583a4d60334f4d447c80ac04e8763b206f2b78",
+  "files": [
+    {
+      "uri": "cadc:CFHTSG/MegaPipe.281.244.R.MP9602.fits",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/MegaPipe.281.244.R.MP9602.fits",
+      "bytes": 400006080,
+      "parent_md5": "4aed79d4fc46b15dc39f160737f9d18f",
+      "sha256": "de9d19f44021627793cf08495f0495ab43c18ed1ddff5f80d59bbc2455fe9e18",
+      "product_type": "science",
+      "filter": "r.MP9602",
+      "verified": true
+    },
+    {
+      "uri": "cadc:CFHTSG/MegaPipe.281.244.R.MP9602.weight.fits.fz",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/MegaPipe.281.244.R.MP9602.weight.fits.fz",
+      "bytes": 41872320,
+      "parent_md5": "3b6eaef72b655c3e4fecd5e82fa9bc47",
+      "sha256": "21f83b68942871a54dd383fb058590ff114988f21e729e6cbbc19ef0bbbe0d29",
+      "product_type": "weight",
+      "filter": "r.MP9602",
+      "verified": true
+    },
+    {
+      "uri": "cadc:CFHTSG/MegaPipe.281.244.U.MP9302.fits",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/MegaPipe.281.244.U.MP9302.fits",
+      "bytes": 400006080,
+      "parent_md5": "e44d7648e451e6e9130aa1ff042a3905",
+      "sha256": "8d7a5c62bb54b50d3a4f840aee2f97ae956827b8e9fe5d5b11f00e84d72a6382",
+      "product_type": "science",
+      "filter": "u.MP9302",
+      "verified": true
+    },
+    {
+      "uri": "cadc:CFHTSG/MegaPipe.281.244.U.MP9302.weight.fits.fz",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/MegaPipe.281.244.U.MP9302.weight.fits.fz",
+      "bytes": 14307840,
+      "parent_md5": "2f8670d00f7f14b0288466d7ac4bd441",
+      "sha256": "39ae2b42d7e3b570b15cc616cc01139454f8ffea02d048c110dec29bccca2d71",
+      "product_type": "weight",
+      "filter": "u.MP9302",
+      "verified": true
+    }
+  ],
+  "all_four_verified": true,
+  "scope": "Public CFHT MegaPipe u/r products only; no dedicated g image and no classification promotion. Full raw images stay on NERSC."
+}

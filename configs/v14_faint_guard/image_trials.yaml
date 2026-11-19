@@ -1,0 +1,11 @@
+seed: 487219
+conditions:
+- - 100
+  - 3
+  - -3
+- - 100
+  - 3
+  - -3
+splice_radius_arcmin: 2.5
+matching_radius_arcsec: 0.8
+ps1_template: isochrones/ps1/bressan2012/iso_a12.0_z0.00010.dat

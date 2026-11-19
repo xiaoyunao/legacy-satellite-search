@@ -1,0 +1,14 @@
+{
+  "inputs": {
+    "results/v14/repeat_full/ps1_reference_audit/reference_stage_counts.csv": "448acb172b252a5ad135bf8f4908cf7da0488da23c67e73c6efc51c176cc9d13",
+    "results/v14/repeat_full/population_audit/population_stamp_and_support.csv": "de25a2f37e4877d67926c6af37ef70a4cc242991d003bb355b7d8c169d1b75d0"
+  },
+  "code_sha256": "0bd78472dc126396abaccb5f31f26782d6cb2353b322eeb33a0adef9589433f8",
+  "unique_population_draws": 48,
+  "unrendered_faint_proxy_light_fraction_min_median_max": [
+    0.059043345431987415,
+    0.14677224932636818,
+    0.3198353308293932
+  ],
+  "scope": "Aggregate real-data and deterministic-population diagnostics. The Gaia-reference stratum supplies no faint blue-star truth calibration here; shape strata do not identify LS contamination. The original generation limit represents 68\u201394% of full IMF V-proxy light before spatial truncation; missing diffuse-light effects on source detection/classification need a bounded image check before an unrestricted physical-completeness claim. Do not renormalize target luminosity or change the frozen 144 trials after viewing outcomes. No PS1 physical Pdet, gain interval or new-system promotion."
+}

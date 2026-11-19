@@ -1,0 +1,4 @@
+known_key,known_name,input,group_id,offset_arcmin,closest_dm_error,within_existing_position_DM_rule
+euclid_ufss_dr1_1,Ursa Minor II / Euclid UFSS DR1 1,results/v14/discovery/north/main/sky_group_candidates.csv,v14_north_0372-A_base-0.3-002,0.8098868605169427,0.75,True
+euclid_ufss_dr1_1,Ursa Minor II / Euclid UFSS DR1 1,results/v14/discovery/north/main/sky_group_candidates.csv,v14_north_0372-A_base-0.3-005,1.288280915188726,0.75,True
+euclid_ufss_dr1_1,Ursa Minor II / Euclid UFSS DR1 1,results/v14/discovery/north/main/sky_group_candidates.csv,v14_north_0372-A_base-0.3-006,1.2865444343850916,0.0,True

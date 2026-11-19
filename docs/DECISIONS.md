@@ -1,5 +1,19 @@
 # Decisions
 
+## 2026-11-19 Source-qualified integration and finite-image guards
+
+- Accept 61568667 only as a completed interim snapshot. Reconcile the qualified historical source records alone, retain 5′ incompatible-mode links and the original 75 identity crosswalk, and leave all-required-C, exact union area and final human-review units unapproved. Ranking remains within cohort; no cross-region score equivalence is inferred.
+- Keep metadata overlap separate from measured positive-weight support. CADC recovered u/r products for 0706, but neither a complete useful u core nor standard deep g; retain L0. At the physical backgrounds, alternate r stacks support bounded core morphology investigations, not full-stamp truth labels.
+- The generation-limit guard adds faint flux only in a separate namespace and preserves original response-star IDs; its control reproduces accepted counts. One unchanged recovery decision does not certify all sizes/backgrounds. Run the registered 30pc radius comparison separately, retaining residual tails and luminosity conditioning. Do not rewrite the 144.
+- Record implementation/data failures before successful retries: the first image analysis aborted on zero u support (now records the unusable band without losing r); the first guard analysis hit duplicate metadata keyword arguments (now merges metadata explicitly). All downloaded/native inputs were retained and verified, so neither required repeating the raw download or CCD processing.
+- Preserve the registered first/highest-A spatial-group distance metric; report any-group correct mode only as an additional diagnostic. Euclid known-system annotation and C are posterior context, not another blind discovery claim.
+
+## 2026-11-19 PS1 条件响应和新增已知环境
+
+61569134/0:0/51s 已完成三个背景20′参考样本敏感性审计：暗端普通PSF入选23.9%、43.9%、38.8%；同星等/颜色支持分箱的较严形态组高1.9–2.7个百分点。所有暗端Gaia标签均较红，不能验证目标蓝主序或识别LS污染率。48潜在星族的生成星等截断遗漏完整IMF V proxy光中位14.68%，恢复偏差未实测；和30pc空间截断分开验证，保持144原样。
+
+Euclid 2026-11三已知系统补入交叉识别（原18恢复集和探测器不变）。已有快照3条来源组靠近Ursa Minor II/Euclid UFSS DR1 1，但最高DM并不都准确；只记后验已知环境，不是3个新发现。单字段6组/9种子的普通A→C复核61570645已提交，缺结果不填零。详见 `docs/COMPARISON_SCOPE_20261119.md`、`results/v14/repeat_full/scope_diagnostics.json` 与 `results/v14/production_integration/euclid_context_matches.csv`。一次最终人工审查政策不变。
+
 Latest checkpoint g (2026-11-19T09:29:06.064749+00:00): **3462/6891 complete**, 10 no-usable-gr, **15451.314 owned deg²**. The older f checkpoint below predates 131 newly uncovered terminal failures, identified during the HOME quota incident; inspect `results/v14/progress_20261119g/retry_execution.json` for the subsequent registered recovery job. Science candidates still have a separate older summary clock.
 
 ## 2026-11-19 authoritative next-round policy (GPT Pro 437262c6)

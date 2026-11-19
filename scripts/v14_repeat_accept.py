@@ -120,7 +120,8 @@ def run(root, full=False):
                'N_imf','N_rendered','N_exposed','N_final','N_psf','N_used','blank_spatial',
                'spatial','correct_mode_exists','blind_correct','blind_dm','blind_dm_error',
                'c_modes_fit','c_ts','c_after_top3']
-    if full:columns += ['latent_population_id','realization_id','N_cmd_at_truth_dm']
+    if full:columns += ['latent_population_id','realization_id','N_cmd_at_truth_dm',
+                        'n_spatial_matching_groups','correct_mode_in_any_spatial_group']
     with summary.open('w', newline='') as stream:
         writer = csv.DictWriter(stream, fieldnames=columns, lineterminator='\n')
         writer.writeheader()

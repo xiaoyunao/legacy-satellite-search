@@ -1,5 +1,14 @@
 # GPT Pro review: requirements and acceptance
 
+## Checkpoint 2026-11-19h — still active, no final human release
+
+- [x] Completed snapshot61568667 synchronized; qualified historical sources reconciled (7833 records/7665 provisional positions), all75 original identities retained with blank grades. This does not certify exact mask union, all required C seeds or final review units.
+- [x] CADC restored;0706 public CFHTu/r raw artifacts verified onNERSC. Actualr core93.6%,u0%, no standarddeepg; L0retained. Background2/3alternate rcores100% butstamp87.6%/78.2%; notPS1truth calibration.
+- [x] Single-case faint-light native/control test accepted61572021:6014/6014 rendered pixel sources havepositivegr exposures; same original311response stars. Both variants failspatially; no population-wide conclusion. Original144unchanged.
+- [ ] Finish144native+two-arm blindmeasurements/PS1validation/uncertainty.34nativeproofs in the saved checkpoint, only9 fullblind trials;61568456→61568539 waitsallnative.
+- [ ] Quantify30pc finite-radius effect:61571822submitted, notcomplete; residual profiletails remainexplicit.
+- [ ] Finish3977/6891 current-search checkpoint and registered retries61568908/61571922, exacthistoricalareaunion, requiredsame-recordC/imageQA and one finalanonymous release. Nointerimusergrading or manuscriptwriting.
+
 Latest checkpoint g (2026-11-19T09:29:06.064749+00:00): **3462/6891 complete**, 10 no-usable-gr, **15451.314 owned deg²**. The older f checkpoint below predates 131 newly uncovered terminal failures, identified during the HOME quota incident; inspect `results/v14/progress_20261119g/retry_execution.json` for the subsequent registered recovery job. Science candidates still have a separate older summary clock.
 
 ## 2026-11-19 authoritative next-round policy (GPT Pro 437262c6)

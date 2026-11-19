@@ -1,0 +1,6 @@
+target,ra_deg,dec_deg,radius_deg,query,state,source_count
+v14_south_response_1,27.421875,32.797168295823646,0.3333333333333333,"SELECT COUNT(*) AS n FROM dr1.mer_catalogue_wide_survey WHERE 1=CONTAINS(POINT('ICRS',right_ascension,declination),CIRCLE('ICRS',27.421875,32.797168295823646,0.3333333333333333))",count_received,0
+v14_south_response_2,331.171875,18.20995686428301,0.3333333333333333,"SELECT COUNT(*) AS n FROM dr1.mer_catalogue_wide_survey WHERE 1=CONTAINS(POINT('ICRS',right_ascension,declination),CIRCLE('ICRS',331.171875,18.20995686428301,0.3333333333333333))",count_received,0
+v14_south_response_3,241.17187500000003,25.94447977237001,0.3333333333333333,"SELECT COUNT(*) AS n FROM dr1.mer_catalogue_wide_survey WHERE 1=CONTAINS(POINT('ICRS',right_ascension,declination),CIRCLE('ICRS',241.17187500000003,25.94447977237001,0.3333333333333333))",count_received,0
+candidate_0706,165.61216974832084,31.892121971411218,0.06,"SELECT COUNT(*) AS n FROM dr1.mer_catalogue_wide_survey WHERE 1=CONTAINS(POINT('ICRS',right_ascension,declination),CIRCLE('ICRS',165.61216974832084,31.892121971411218,0.06))",count_received,0
+positive_control_euclid_ufss_dr1_1,196.1542,75.5724,0.1,"SELECT COUNT(*) AS n FROM dr1.mer_catalogue_wide_survey WHERE 1=CONTAINS(POINT('ICRS',right_ascension,declination),CIRCLE('ICRS',196.1542,75.5724,0.1))",count_received,13280

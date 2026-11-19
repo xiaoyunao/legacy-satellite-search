@@ -1,0 +1,31 @@
+{
+  "job": "61571692",
+  "ra_deg": 165.61216974832084,
+  "dec_deg": 31.892121971411218,
+  "r_PS1_aperture_equivalent": {
+    "path": "image-cfht-r.fits",
+    "sha256": "1fbf37a636aad2251733d34d7535e7010e597766e32195cc65d9d17290e8b00e",
+    "pixel_arcsec": 0.18576844740892787,
+    "asinh_decoded": false,
+    "calibration_n": 27,
+    "heldout_n": 9,
+    "heldout_median_mag": 0.016336809280900866,
+    "heldout_scatter_mag": 0.19074922129539998,
+    "full_aperture_core_coverage": 0.9360306178239475,
+    "full_aperture_background_coverage": 0.9828952454580595,
+    "aperture5_mag": 23.508791302331634,
+    "blank_apertures": 1777
+  },
+  "u_native": {
+    "zeropoint_header_candidates": {
+      "PHOTZP": 30.0
+    },
+    "blank_aperture_sigma": null,
+    "measurement_state": "insufficient_supported_blank_apertures",
+    "full_aperture_core_coverage": 0.0,
+    "full_aperture_background_coverage": 0.0,
+    "blank_apertures": 0
+  },
+  "independent_instrument": "CFHT MegaPrime; LS discovery uses DECam and BASS comparison uses 90Prime",
+  "scope": "Actual independent u/r image support and aperture noise. No standard g product recovered in the ROI. Native u zeropoint is recorded without inventing a PS1-g transformation, extinction correction or independent CMD detection. Candidate remains L0."
+}

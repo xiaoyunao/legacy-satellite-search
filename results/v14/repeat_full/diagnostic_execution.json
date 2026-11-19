@@ -1,0 +1,80 @@
+{
+  "jobs": [
+    {
+      "job": "61569134",
+      "purpose": "PS1 reference sensitivity",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61570645_282",
+      "purpose": "Euclid-context C",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61571304",
+      "purpose": "CFHT 0706 download and first measurement",
+      "state": "FAILED",
+      "exit_code": "1:0"
+    },
+    {
+      "job": "61571692",
+      "purpose": "0706 u-support aware measurement retry",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61571451",
+      "purpose": "Native faint-light guard with first analysis",
+      "state": "FAILED",
+      "exit_code": "1:0"
+    },
+    {
+      "job": "61571693",
+      "purpose": "Guard analysis dictionary-merge correction",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61572021",
+      "purpose": "Faint guard native exposure/control acceptance",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61571768",
+      "purpose": "Physical-background initial CFHT images",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61571902",
+      "purpose": "CFHT alternate stacks and support measurement",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    },
+    {
+      "job": "61571822",
+      "purpose": "Same-frame 30pc radius guard",
+      "state": "PENDING",
+      "exit_code": "0:0"
+    }
+  ],
+  "code_sha256": {
+    "scripts/v14_cadc_reference_probe.py": "7e9fc38ee7032b49c149249bde1d4065dfa886ad7bcde812728631a5a5ebafc4",
+    "scripts/v14_ps1_reference_audit.py": "c4c46e0b98b359e7572004e1283346a5988fc74a6d01e97d6ae6ca894b0bf05c",
+    "scripts/v14_integrated_ledger.py": "ce7231b2bb75277124afe5fc666d0ee112dee0b9c9dc736f830e3f46d7414b41",
+    "scripts/v14_cadc0706_retry.py": "9338927a5b7a204f6130ec9db10ee2dd1d9d0e7ee691baa0f7bfd743fa46a026",
+    "scripts/v14_repeat_scope_summary.py": "0bd78472dc126396abaccb5f31f26782d6cb2353b322eeb33a0adef9589433f8",
+    "scripts/v14_cadc0706_images.py": "57321d1f4495dc3bbace3fa6a2fd1dcacaeee4f769fbd357ef4b4dc71014632a",
+    "scripts/v14_cadc_artifact_probe.py": "ca56ff1c845ea1c8c158106c8220817ebeab2d819e8dacb09c134af6a5cbb541",
+    "scripts/v14_euclid_cone_probe.py": "4a1259d9b08dc9d853f6a82d432c62729ac643d91563ccd9b73249f3c1279ba2",
+    "scripts/v14_faint_native.py": "cea8a737d37d6dbae0b94057ba64a530fe6d506ab5b9c22ef1c1b1f41030e35a",
+    "scripts/v14_cadc_reference_images.py": "81c5dd40ab215f7b9f8b45f1312c2262565a05ac29601e954b1e3bce683c8c01",
+    "scripts/v14_stamp_guard.py": "c56ce6b6a72afc50d40d749d533bcfc1ee4723608e8bcf2f969380b7c5b34212",
+    "scripts/v14_faint_guard.py": "6bf7855ac569843e5550990b87f4c7738f0703c47677844e9eb6f8a94aaae6e7",
+    "scripts/v14_euclid_schema_probe.py": "0a7ab93caf0eef32e460a11f8131f73a6fd479caf3f91fb065d4be63947d09d0"
+  },
+  "scope": "Execution ledger at this checkpoint; source CSV/JSON manifests contain the actual results. Failed analyses retain successful raw downloads/native products and do not count as accepted science. Submitted radius guard is not complete."
+}

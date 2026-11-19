@@ -1,0 +1,40 @@
+{
+  "job": "61571902",
+  "measurements": [
+    {
+      "site": "v14_south_response_2",
+      "state": "unusable",
+      "support": {
+        "core_full_aperture_fraction": 0.0,
+        "stamp_full_aperture_fraction": 0.0,
+        "annulus_full_aperture_fraction": 0.0
+      },
+      "reason": "Too few source-free full blank apertures",
+      "path": "image-cfht-r.fits"
+    },
+    {
+      "site": "v14_south_response_3",
+      "state": "measured",
+      "support": {
+        "core_full_aperture_fraction": 0.15834522111269614,
+        "stamp_full_aperture_fraction": 0.37202032043767097,
+        "annulus_full_aperture_fraction": 0.3948948948948949
+      },
+      "path": "image-cfht-r.fits",
+      "sha256": "0286c8e48e4c35e982797a181b8c402198082c108128baa23ed4cb0a06e8e8a2",
+      "pixel_arcsec": 0.18576844740892787,
+      "asinh_decoded": false,
+      "calibration_n": 18,
+      "heldout_n": 6,
+      "heldout_median_mag": 0.03462539685264687,
+      "heldout_scatter_mag": 0.05155267287842991,
+      "full_aperture_core_coverage": 0.16347731000546747,
+      "full_aperture_background_coverage": 0.3949555469655972,
+      "aperture5_mag": 23.99135387635293,
+      "blank_apertures": 1765
+    }
+  ],
+  "artifact_sha256": "4ee89126ac00b6e152f0230b9ac01b39fce7116fc705da6c7e25a45518f2efe5",
+  "code_sha256": "81c5dd40ab215f7b9f8b45f1312c2262565a05ac29601e954b1e3bce683c8c01",
+  "scope": "Actual WCS/positive-weight full-aperture support and PS1-r-equivalent aperture noise only. Core radius 0.75 arcmin; background 1.75\u20132.5 arcmin. These measurements do not yet validate faint blue-star morphology, calibration transfer or truth-level PS1 response."
+}

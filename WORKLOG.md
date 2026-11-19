@@ -2,6 +2,27 @@
 
 ## 2026-11-19
 
+### Interim production integration, independent CFHT images and real faint-light guard
+
+- Slurm 61568667 COMPLETED/0:0/43:15; synchronized explicit aggregate-only directories and 100 source/policy paths. Actual registry input hashes all match locally. R14: 6708/6660/1032 records/associations/successful eligible C; all historical qualified sources:7833 records,7665 provisional positions,1671 available successful same-record C; new `v14_integrated_ledger.py` verifies all75 frozen identities and leaves user grades/final gates blank.
+- h audit 10:55:08Z:3977 complete,15 no_usable,17871.851998456787 owned deg². Six uncovered terminal gaps submitted as61571922; registry SHA saved and61470263/61470265 dependencies extended, preserving prior live retries. Existing131 retries remain covered61568908.
+- CADC local/NERSC probes both return38 metadata rows, not38 independent exposures; no standardg. Downloaded4 CFHT u/r parent artifacts toSCRATCH, exact size/MD5/SHA. First61571304 failed on unsupportedu; fix retains validr,61571692 successful21s: r23.509ap5,93.6%core, u0%core. Originalrawdownloads reused, no L1/L2.
+- CFHT physical-background coverage probe61571768 and alternate measurement61571902 completed. Firstsite2stack invalid; firstsite3partial. Alternate2/3cores100%,r23.558/24.025,stamp87.6%/78.2%; no claim these are full PS1 truth. Scripts/artifact manifests preserve exact products and failures.
+- Faint-light native61571451 completedpixels but analysis failed duplicate latentID kwargs. Fix dictionary merge;61571693 completed1:56 without repeatingnative. Same311 response stars +5703 faint pixel sources: baseline hard1vs1,deeper3vs4; neither recovered. Control reproducesinitial1/4. Record selected-single-case scope, no primary144 changes.
+- Registered30pc finite-radius guard61571822, same original latent4 across3backgrounds, same1536pxframe/blank and3.1′ replacement for both variants; extends only previously truncated magnitude-eligible members. Remainingtails explicit, no independent-population claim.
+- Euclid C61570645_282 completed sixgroups/ninefits; code keeps first-group correct-mode metric and adds any-spatial-group diagnostic. `v13_native.py/.sh` original physical engine unchanged.
+- Real4 dispatched remaining-arraytasks completed2:32–4:29 with measuredRSS<7GiB; pending throttle61568439 raised2→4,resources/seeds unchanged. Nativeproof count34/144, stillonlynine two-arm blind trials; full61568456→61568539 waitsallnative.
+- Validation: py_compile changedscripts; focused2unittests pass; fullunittest discover55 pass (2skip). Initialpytest invocation unavailable inprojectvenv, corrected torepositoryunittest. Registry+catalogue actual source hashes/7833 mode counts/75identity coordinates all validated; no new usergrades. Next: finishlivework and30pcguard, inspect independent r morphology only within measured support, exacthistoricalarea/requiredC/finalreview gates remain.
+
+
+### PS1 参考敏感性与图像模拟范围的真实诊断
+
+- 61569134 COMPLETED/0:0/51s：三个 CCD 背景周围20′，保持 source-ID train/heldout；实测普通 PSF、较严形态 PSF、Gaia标签和非PSF对照的 gr/i/形态联合响应。暗端22.5≤g0<24 的普通 PSF 留出率为141/590、604/1376、316/814；共同支持的星等/颜色分箱重加权后，较严形态组高2.68、2.64、1.90个百分点。嵌套组差异不是独立样本显著性或已识别的污染率。
+- 同暗端 Gaia 标签38/40/56参考全在g-r≥0.8，不能校准目标蓝主序；非PSF对照选中7.3–9.7%也不等于真实星系误分率。保留条件范围，不填物理PS1 Pdet/ΔP。
+- 原48星族重放还给出：空间截断前，生成星等阈值仅表示完整IMF V proxy光的68.0–94.1%（遗漏中位14.68%）。此值不等于恢复偏差，也不据此改目标光度或重写144试验。需有限图像对照评估未渲染暗光与30pc截断。
+- 核对Tan附录A/B和Euclid一手资料。Tan已测紧致对象、图像注入含未分辨暗光，不能把使用现成方法/紧致搜索本身称新意。Euclid2026-11表中三银河晕系统补入独立已知环境CSV，保留半长轴和派生圆化半径；原18 benchmark不变。
+- 实际源表发现3条生产来源组与Ursa Minor II/Euclid UFSS DR1 1在0.81–1.29′内并有宽DM相容模式；最高DM有20.25/17.25，不能说距离都准确或算3个新候选。新已知对象后验环境关联尚无本轮C结果，已提交61570645，单普通字段的6组/9模式盲参考C复核，不向C传已知中心/距离。
+
 ### 新轮次：全区收尾、完整物理重复与一次最终人工审查
 
 - 更新 g 审计：3462/6891 complete，10 no_usable，15451.31413001543 owned deg²；发现 131 个新终态未覆盖场。抽查南 DELVE/DES 日志证实 Errno122 写峰表失败；按冻结 manifest 提交 61568908（131×单场，56G/4CPU，%4），已登记 SHA，五个待运行区域汇总依赖增加该补跑。DES 原汇总已完成，另接补跑后刷新与独立命名空间 C，复用完全相同来源/种子且已完成的 C，避免重复计算。

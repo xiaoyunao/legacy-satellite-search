@@ -1,0 +1,6 @@
+{
+  "reference_sha256": "9caa6643bb98f15e2bed4272a4a02ac0e11b885d0ded347520ac73c523ca4462",
+  "production_snapshot_sha256": "26996b1d401e88a6c6b3550ef21a13dceeea1ba9d7d51990f281d13de480c94e",
+  "context_rows_within_30arcmin": 3,
+  "scope": "Context audit of available qualified source records only. Not a new blind recovery test or full completed-footprint absence claim. Source duplicates are retained."
+}

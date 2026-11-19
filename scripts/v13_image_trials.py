@@ -3,6 +3,7 @@ import argparse
 import json
 import os
 from pathlib import Path
+from time import monotonic
 
 import fitsio
 import numpy as np
@@ -153,11 +154,19 @@ def replaced(field, site, exterior, inner, limit):
                       inner[np.linalg.norm(inner[:,:2]-center,axis=1)<limit]])
 
 
-def blind(sample, field, mask, model, cfg, truth, cut, *, followup=False):
+def blind(sample, field, mask, model, cfg, truth, cut, *, followup=False, diagnostics=False, products=None):
     _, peaks, _, cmd = scan(sample,field,mask,model,cfg)
     rows = [dict(r,channel='A_base',ranking=r['score']) for r in peaks if r['branch']=='main']
     hypotheses = groups(rows)
     record = matches(hypotheses, truth, cut, cfg)
+    if diagnostics:
+        spatial=[r for h in hypotheses if cut is not None and h[0]['ranking']>=cut
+                 if (r:=matches([h],truth,cut,cfg))['spatial']]
+        record.update(n_spatial_matching_groups=len(spatial),
+            correct_mode_in_any_spatial_group=any(r['correct_mode_exists'] for r in spatial))
+        if products is not None:
+            products.mkdir(parents=True,exist_ok=True)
+            write_csv(products/'all_main_hypotheses.csv',rows)
     if followup:
         from ls_satsearch.review import fit_at_peak
         from ls_satsearch.search import point_fit
@@ -204,6 +213,9 @@ def counts(denom,det,point,selected):
 
 
 def measure(name, allow_partial=False, diagnostics=False):
+    started=monotonic()
+    code_inputs={p:sha(Path(p)) for p in ('scripts/v13_image_trials.py',
+        'src/ls_satsearch/search.py','src/ls_satsearch/review.py','src/ls_satsearch/group_budget.py')}
     root,data,_ = settings()
     site,plan,cfg=context(name)
     storage=data/f'image-{VERSION}'/name
@@ -261,9 +273,15 @@ def measure(name, allow_partial=False, diagnostics=False):
         clean=select(blank,search_field,area,actual)[0]
         background_sample=replaced(search_field,site,exterior,clean,splice)
         c=dict(actual,dm=[16.5,actual.get('main_dm_max', 20.75),actual['dm'][2]])
+        # The blank catalogue and scan grid are constant within this arm;
+        # only the post-scan truth position changes between realizations.
+        _,blank_peaks,_,_=scan(background_sample,search_field,area,model,c)
+        blank_groups=groups([dict(r,channel='A_base',ranking=r['score'])
+                             for r in blank_peaks if r['branch']=='main'])
         for stage in ready:
             truth=json.loads((stage/'truth.json').read_text())
             trial=str(truth['trial'])
+            if diagnostics:print('IMAGE_MEASUREMENT',name,arm,stage.name,flush=True)
             sample,cat=native_table(stage)
             t=np.load(stage/'truth.npy',allow_pickle=False)
             inject_sky=np.column_stack([t['ra'],t['dec']])
@@ -290,8 +308,8 @@ def measure(name, allow_partial=False, diagnostics=False):
                     5*np.log10(truth['D_kpc'])+10,model[2])
                 cmd_selected=(final_match>=0)&native_cmd[np.maximum(final_match,0)]
                 extra=dict(N_cmd_at_truth_dm=int((observed&cmd_selected).sum()),
-                    latent_population_id=int(truth['trial']),
-                    realization_id=int(truth['trial'])//6)
+                    latent_population_id=int(truth.get('latent_population_id',truth['trial'])),
+                    realization_id=int(truth.get('realization_id',int(truth['trial'])//6)))
             # Real faint blending is counted as a failure when the existing blank source remains.
             clearance=parents.query(pixels)[0]*60
             for low,high in ((-10,30),(20,22),(22,23),(23,23.5),(23.5,24),(24,25),(25,26)):
@@ -302,12 +320,13 @@ def measure(name, allow_partial=False, diagnostics=False):
                     rows.append(dict(site=name,trial=trial,arm=arm,g_lo=low,g_hi=high,environment=context_,
                                      detected_initial=int((use&found_first).sum()),**counts(use,det,psf,selected)))
             after=replaced(search_field,site,exterior,select(sample,search_field,area,actual)[0],splice)
-            blank_fit=blind(background_sample,search_field,area,model,c,truth,cut)
-            injection=blind(after,search_field,area,model,c,truth,cut,followup=VERSION!='v13')
+            blank_fit=matches(blank_groups,truth,cut,c)
+            injection=blind(after,search_field,area,model,c,truth,cut,followup=VERSION!='v13',
+                diagnostics=diagnostics,products=stage/f'blind_{arm}' if diagnostics else None)
             outcomes.append(dict(site=name,arm=arm,cutoff=cut,blank_spatial=blank_fit['spatial'],
                                  N_exposed=int(observed.sum()),N_final=int((observed&det).sum()),
                                  N_psf=int((observed&psf).sum()),N_used=int((observed&selected).sum()),
-                                 **truth,**injection,**extra))
+                                 **{**truth,**injection,**extra}))
             input_refs.append(dict(trial=trial,arm=arm,tractor_sha256=sha(cat),
                                    policy_sha256=sha(policy),
                                    **(dict(truth_sha256=sha(stage/'truth.npy'),
@@ -321,9 +340,12 @@ def measure(name, allow_partial=False, diagnostics=False):
                outer_catalog_inputs=release_inputs,matched_config_sha256=sha(config_path),
                ps1_defined_mask_sha256=None if deep_south else sha(census_mask),
                inputs=input_refs,requested_trials=len(plan['conditions']),measured_trials=len(ready),
+               **(dict(measurement_code_sha256=code_inputs,measurement_seconds=monotonic()-started) if diagnostics else {}),
                scope='Rerun on real calibrated CCDs; released mask and preserved outer background. '
                'Unique 0.8 arcsec matching, counting existing sources present in the blank as blends. '
-               'Image experiments assess conditional response in selected stamps.'))
+               'Image experiments assess conditional response in selected stamps. '
+               'Registered correct_mode_exists and C fit refer to the highest-ranking spatially matched A group. '
+               'The separate any-spatial-group distance diagnostic does not replace those frozen metrics.'))
 
 
 if __name__=='__main__':

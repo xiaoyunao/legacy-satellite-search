@@ -1,0 +1,18 @@
+{
+  "job": "61572021",
+  "paired_measurements": 4,
+  "registered_sources_verified": true,
+  "control_reproduces_initial": true,
+  "all_pixel_sources": 6014,
+  "original_response_stars": 311,
+  "added_faint_stars": 5703,
+  "pixel_sources_with_positive_gr_exposure": 6014,
+  "original_with_positive_gr_exposure": 311,
+  "faint_with_positive_gr_exposure": 5703,
+  "sources": {
+    "results/v14/faint_guard/registration.json": "9b304dfeca8b5c81e49ffe9d8ed9b821fd635c33ee3dff17bf99d67706e1d031",
+    "results/v14_faint_guard/image_response/v14_south_response_1-blind.csv": "af156258935b05362b0e9f3de704993059cce3f72ee20bef2166e65bdb8c78d8",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_guard/v14_south_response_1/trial00/injected_exposures_all_rendered.npy": "4f8b6079d79b32d08b9f40aa0756abe5d8e0d157d60e5f7ed667338434d180e0"
+  },
+  "scope": "Native exposure counts verified for all rendered sources. Standard recovery and attrition denominators remain the original response stars. One deliberately selected paired case, not a physical completeness or global faint-light correction."
+}

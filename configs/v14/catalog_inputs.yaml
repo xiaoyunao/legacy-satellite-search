@@ -21,6 +21,7 @@ known:
 - references/codex_benchmark_sources/offical_delve_census_refgalaxy_list.csv
 - references/codex_benchmark_sources/offical_delve_census_refambigous_list.csv
 - references/known_globular_centres.csv
+- references/euclid_dr1_202611_known_systems.csv
 priority_groups:
 - survey_63-A_base-0.3-001
 - survey_14-A_base-0.3-001

@@ -1,0 +1,30 @@
+{
+  "source_sha256": {
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_repeat/v14_south_response_1/trial00/truth.npy": "ce7ce5864314b1bda7987408f75c05c80bbf5d68a795f5bd850704a865d51476",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_repeat/v14_south_response_1/trial00/truth.json": "90d8bafe605b6af8d4409e5f4137067fd7357afab8166dae296a2f828d2ebaab",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_repeat/v14_south_response_1/trial00/tractor/cus/tractor-custom-027421p32797.fits": "bab1e07f66e8d0559b6ee1038239a31a2aeac2cd996f7af6d2e7f6f9f6f3a9cd",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_repeat/v14_south_response_1/trial00/injected_exposures.npy": "bf17acabb27eb287cb621f725ae5c39d30ed4d8645d86459ef61491268d2ba4b",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_repeat/v14_south_response_1/trial00/initial_detection.npy": "d2a3a0710259897403371bc359787f40bf16298d4c64d6ff6eb330730b909bc2",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/isochrones/des/bressan2012/iso_a12.0_z0.00010.dat": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/isochrones/ps1/bressan2012/iso_a12.0_z0.00010.dat": "4fa53e8a963933310941ae5c43da4391e782a3760320fa61bd5c940e4ffb201b",
+    "scripts/v13_native.sh": "4731a136cf0d6700cd440b830f65a1538c7655c5424fabd47e8b443d9ce02536",
+    "logs/v14-faint-native-runner.sh": "9a76fab10a3d75f3b293491b51164bf34324c387f8a6bd5bae641264499e72a0",
+    "configs/v14_faint_guard/image_fields.csv": "fd3659ef993f03aeafbf4cb0b2f1eec97f2412a73c85295dbf3a1c31dc002b69",
+    "configs/v14_faint_guard/image_trials.yaml": "4f88d1c1aeaba22075ccad57ea7e6cfb23cf36b3f0b6f0d0e08f5bd5c2038163",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_guard/v14_south_response_1/trial00/truth.npy": "ce7ce5864314b1bda7987408f75c05c80bbf5d68a795f5bd850704a865d51476",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_guard/v14_south_response_1/trial00/truth.json": "9d802b7b2afe23ae9cec9cbc5c24d64f79fb15905d34e3af60034e4dada0a4f2",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_guard/v14_south_response_1/trial00/render_sources.npy": "45816cabeea6a6dcdb4ca1646e3d37d04c77138c5834407d279d2eaf2649d5c7",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_guard/v14_south_response_1/trial01/truth.json": "ffc3763d54eeeee7b75a8c29267120d6023934f3a99dd9e31e1afaacc4c043ca"
+  },
+  "original_site": "v14_south_response_1",
+  "original_trial": 0,
+  "response_stars": 311,
+  "added_faint_stars": 5703,
+  "actual_rendered_stars": 6014,
+  "faint_position_seed": [
+    487219,
+    0,
+    74217
+  ],
+  "scope": "One deliberately selected previously failed 3pc/100kpc bright-cell case. Shared original IMF draw, bright-star positions and original image/control; only previously unrendered faint flux added. Native marginal photon noise remains physical; identical random seeds do not imply identical pixel noise after the flux changes. No population recovery/gain estimate and no change to the primary 144."
+}

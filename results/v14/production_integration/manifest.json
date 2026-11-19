@@ -93,9 +93,9 @@
     "results/v14/discovery/north_extension/main/sky_group_policy.json": "267750d9f925b66f428a6f18e0e286f8c2430ae0bc5cb740a22d22158f19d269",
     "results/v14/discovery/north_single_native/main/sky_group_candidates.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
     "results/v14/discovery/north_single_native/main/sky_group_policy.json": "b24585b6b962d7f866ca328aa482bb683da66f380aa238f5d195692f4c9d382a",
-    "results/v14/discovery/south_delve/main/sky_group_candidates.csv": "ae112b66de3c413d9c1ad411830f3b2a3ba515c142aa4d5bcc9d7c24ac2dd89d",
+    "results/v14/discovery/south_delve/main/sky_group_candidates.csv": "e1f1539536b45c64d6c1a22711e4e590238e8f9eabc0189780dc9c37644da776",
     "results/v14/discovery/south_delve/main/sky_group_policy.json": "282a0d2ad472530d89f22ad85ef3a0cce4fe3526ffbe7e89d5bf473be105dfff",
-    "results/v14/discovery/south_des/main/sky_group_candidates.csv": "bfe02fbf4486992b8bb72d394cc63d33ad3a6b0b55c1bee6473a8f60aabd5dd3",
+    "results/v14/discovery/south_des/main/sky_group_candidates.csv": "993661cd5b3d7d9d8edc2b03130120cf4470de00522ef2677e0b474ab5669fd7",
     "results/v14/discovery/south_des/main/sky_group_policy.json": "59794f9ce75e30ad5af2f2bb96f50da6c6a166d6e31a21e94aa17f1adbdab76c",
     "results/v14/discovery/south_des_extension/main/sky_group_candidates.csv": "3ec21c938599b263c626197d3eeb709d67e2c5e919180ee058c4837e7409f0ad",
     "results/v14/discovery/south_des_extension/main/sky_group_policy.json": "518da078e2eabf6357ebf3bacada6a71bf2269faf4d41d53fca7834adfa7f029",
@@ -104,7 +104,7 @@
   },
   "code_sha256": "b80409819181e511b3957f7a3449cc6d8ac72d30a764e28e251dd80e65ba5c09",
   "inventoried_tables": 57,
-  "qualified_discovery_records": 6739,
+  "qualified_discovery_records": 7833,
   "final_production_frozen": false,
   "scope": "Actual candidate tables classified against their saved frozen A-base primary policy and development roles. Follow-up indices never count as discovery. These are source records, not independent positions or a final production sample. No summed or inferred area, inherited C certification, human grades or new discoveries. Historical mask union, original 75 crosswalk, complete regional inputs and same-record C remain required."
 }

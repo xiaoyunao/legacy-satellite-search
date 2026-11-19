@@ -1,0 +1,49 @@
+{
+  "job": "61571902",
+  "files": [
+    {
+      "site": "v14_south_response_2",
+      "uri": "cadc:CFHTSG/MegaPipe.628.217.R.MP9601.fits",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/MegaPipe.628.217.R.MP9601.fits",
+      "bytes": 400006080,
+      "parent_md5": "8dd30100373b27d84cfc8de5b9354fd0",
+      "sha256": "399dfcf67aabb6468da864a4f51d95daa94a722827a6a27b00f80b3231b20b0d",
+      "product_type": "science",
+      "filter": "r.MP9601",
+      "verified": true
+    },
+    {
+      "site": "v14_south_response_2",
+      "uri": "cadc:CFHTSG/MegaPipe.628.217.R.MP9601.weight.fits.fz",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/MegaPipe.628.217.R.MP9601.weight.fits.fz",
+      "bytes": 33779520,
+      "parent_md5": "5bfcf04f5c81e0fac8f1e5ef1749c0ba",
+      "sha256": "43847db000039786917531f24234ce9841e39f4109fd82edd9fc11f6acdf9000",
+      "product_type": "weight",
+      "filter": "r.MP9601",
+      "verified": true
+    },
+    {
+      "site": "v14_south_response_3",
+      "uri": "cadc:CFHTSG/MegaPipe.433.232.R.MP9601.fits",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/MegaPipe.433.232.R.MP9601.fits",
+      "bytes": 400006080,
+      "parent_md5": "f815f230c9cf95dcf459964d03694e3e",
+      "sha256": "25e80d98e3aa3bbf1a0386030798a4c25e9cea05353eafdcdee61b6eac00fc1a",
+      "product_type": "science",
+      "filter": "r.MP9601",
+      "verified": true
+    },
+    {
+      "site": "v14_south_response_3",
+      "uri": "cadc:CFHTSG/MegaPipe.433.232.R.MP9601.weight.fits.fz",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/CFHTSG/MegaPipe.433.232.R.MP9601.weight.fits.fz",
+      "bytes": 28368000,
+      "parent_md5": "682782502aa43678bba6d53572b3538c",
+      "sha256": "8c6a16f0e306a27b5b3b0f618417509c66db7d3932a50a29444ae03b4668ed87",
+      "product_type": "weight",
+      "filter": "r.MP9601",
+      "verified": true
+    }
+  ]
+}

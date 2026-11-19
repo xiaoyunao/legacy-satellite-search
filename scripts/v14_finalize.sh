@@ -18,6 +18,7 @@ case "$1" in
         .venv/bin/python -u scripts/v14_catalog.py
         .venv/bin/python -u scripts/v14_production.py
         .venv/bin/python -m scripts.v14_production_registry
+        .venv/bin/python -m scripts.v14_integrated_ledger
         .venv/bin/python -u scripts/v14_atlas.py
         ;;
     snapshot)
@@ -25,6 +26,7 @@ case "$1" in
         .venv/bin/python -u scripts/v14_catalog.py
         .venv/bin/python -u scripts/v14_production.py
         .venv/bin/python -m scripts.v14_production_registry
+        .venv/bin/python -m scripts.v14_integrated_ledger
         .venv/bin/python -u scripts/v14_atlas.py
         .venv/bin/python -u scripts/v14_efficiency.py
         .venv/bin/python -u scripts/v14_native_summary.py

@@ -1,0 +1,50 @@
+{
+  "job": "61571902",
+  "measurements": [
+    {
+      "site": "v14_south_response_2",
+      "state": "measured",
+      "support": {
+        "core_full_aperture_fraction": 1.0,
+        "stamp_full_aperture_fraction": 0.8762537449524553,
+        "annulus_full_aperture_fraction": 0.8245745745745746
+      },
+      "path": "image-cfht-r.fits",
+      "sha256": "e79e2b982116b638edb3c012ec45dde06547a1db8de8834f1688533d549726aa",
+      "pixel_arcsec": 0.18576844740892787,
+      "asinh_decoded": false,
+      "calibration_n": 76,
+      "heldout_n": 26,
+      "heldout_median_mag": 0.0029783000678360594,
+      "heldout_scatter_mag": 0.041537454511321,
+      "full_aperture_core_coverage": 1.0,
+      "full_aperture_background_coverage": 0.8281793583301121,
+      "aperture5_mag": 23.558183283402073,
+      "blank_apertures": 1766
+    },
+    {
+      "site": "v14_south_response_3",
+      "state": "measured",
+      "support": {
+        "core_full_aperture_fraction": 1.0,
+        "stamp_full_aperture_fraction": 0.7824671095480005,
+        "annulus_full_aperture_fraction": 0.6731731731731732
+      },
+      "path": "image-cfht-r.fits",
+      "sha256": "dd1f3d9fb39820d0cc678fdb737dd5b0a9f7aa413be015fcb46bd09458fd7fe1",
+      "pixel_arcsec": 0.18576844740892787,
+      "asinh_decoded": false,
+      "calibration_n": 45,
+      "heldout_n": 15,
+      "heldout_median_mag": -0.016612279423362963,
+      "heldout_scatter_mag": 0.0377186652128453,
+      "full_aperture_core_coverage": 1.0,
+      "full_aperture_background_coverage": 0.6722071897951295,
+      "aperture5_mag": 24.024946480795595,
+      "blank_apertures": 1781
+    }
+  ],
+  "artifact_sha256": "8ae677dcbccaebb1b1ff0e889ea1f8b15865a355679d60b1e744d7ad2542b205",
+  "code_sha256": "81c5dd40ab215f7b9f8b45f1312c2262565a05ac29601e954b1e3bce683c8c01",
+  "scope": "Actual WCS/positive-weight full-aperture support and PS1-r-equivalent aperture noise only. Core radius 0.75 arcmin; background 1.75\u20132.5 arcmin. These measurements do not yet validate faint blue-star morphology, calibration transfer or truth-level PS1 response."
+}

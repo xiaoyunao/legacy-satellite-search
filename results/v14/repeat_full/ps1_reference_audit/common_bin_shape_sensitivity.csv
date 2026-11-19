@@ -1,0 +1,4 @@
+site,common_supported_bins,base_n_in_common_bins,base_fraction,tight_fraction_standardized_to_base_bins,difference,scope
+v14_south_response_1,6,539,0.22634508348794063,0.2531780026623747,0.02683291917443409,"Nested reference subsets, descriptive sensitivity only; no independent-sample significance or identified contamination fraction."
+v14_south_response_2,9,1376,0.438953488372093,0.46534126651468094,0.026387778142587914,"Nested reference subsets, descriptive sensitivity only; no independent-sample significance or identified contamination fraction."
+v14_south_response_3,8,794,0.3979848866498741,0.41701966874175406,0.019034782091879976,"Nested reference subsets, descriptive sensitivity only; no independent-sample significance or identified contamination fraction."

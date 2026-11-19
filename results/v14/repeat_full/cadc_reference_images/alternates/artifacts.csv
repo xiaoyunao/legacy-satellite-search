@@ -1,0 +1,5 @@
+site,observationID,productID,energy_bandpassName,uri,productType,contentLength,contentChecksum
+v14_south_response_2,MegaPipe.630.216,MegaPipe.630.216.R.MP9601,r.MP9601,cadc:CFHTSG/MegaPipe.630.216.R.MP9601.fits,science,400006080,md5:456174e959863aeb03bbf33a5daedd69
+v14_south_response_2,MegaPipe.630.216,MegaPipe.630.216.R.MP9601,r.MP9601,cadc:CFHTSG/MegaPipe.630.216.R.MP9601.weight.fits.fz,weight,28627200,md5:dca1d30d5b47d419b3f6c275b49fa1b0
+v14_south_response_3,MegaPipe.434.232,MegaPipe.434.232.R.MP9601,r.MP9601,cadc:CFHTSG/MegaPipe.434.232.R.MP9601.fits,science,400006080,md5:3f11ef869a015ed2af3d363a6781318e
+v14_south_response_3,MegaPipe.434.232,MegaPipe.434.232.R.MP9601,r.MP9601,cadc:CFHTSG/MegaPipe.434.232.R.MP9601.weight.fits.fz,weight,28454400,md5:1405779ab5d37e4238540dbb645e8279
