@@ -16,4 +16,9 @@ __pycache__/
 *.local.yaml
 .env
 
+# Retain full multimode diagnostic PNGs locally/NERSC; publish the indexed
+# best-mode priority panels instead of duplicate images and audit identity keys.
+/results/v14/shortlist/cached_cases/*/seed-*.png
+/results/v14/shortlist/cases/*/seed-*.png
+
 *.egg-info/

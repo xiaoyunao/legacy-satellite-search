@@ -1,0 +1,32 @@
+{
+  "plan_sha256": "4793f2acd9be844d89cda97861245eabd10e207ee26ded92d1603756ddcd678c",
+  "source_hashes": {
+    "results/v14/discovery/north/main/sky_group_candidates.csv": "8359a9fe619a5c89089548b3de9782f6d87c72ab22b3de81638ca11331a6296b",
+    "results/v14/discovery/north_extension/main/sky_group_candidates.csv": "960c28eadf9fce43026e65900de289229c3e0561a75f1980dbecf91acb63f90b",
+    "results/v14/discovery/south_delve/main/sky_group_candidates.csv": "ae112b66de3c413d9c1ad411830f3b2a3ba515c142aa4d5bcc9d7c24ac2dd89d",
+    "results/v14/discovery/south_des/main/sky_group_candidates.csv": "bfe02fbf4486992b8bb72d394cc63d33ad3a6b0b55c1bee6473a8f60aabd5dd3",
+    "results/v14/discovery/south_des_extension/main/sky_group_candidates.csv": "3ec21c938599b263c626197d3eeb709d67e2c5e919180ee058c4837e7409f0ad",
+    "results/v14/discovery/south_ps1/main/sky_group_candidates.csv": "67d75a6001bc2fadddf03e2c84cf421873f73665b1460d23fdd502cdf521fbc3"
+  },
+  "packet_hashes": {
+    "results/v14/shortlist/cases.csv": "e8b6902fd7faf9984e5fca2534e688d44b7a7083e5dfdf0be2971d08e1585d0b",
+    "results/v14/shortlist/input_modes_north.csv": "b7b17a7a49d11dcaabe2cc771bdb86b28a4d143871f3aeed67a1fbdc9edf490f",
+    "results/v14/shortlist/input_modes_north_extension.csv": "ce7bd5aeeb1d152988c11fca5746349d56aae8d9744f9d921c1c4a8be8f67d4e",
+    "results/v14/shortlist/input_modes_south_delve.csv": "1516465b6ee645d9ce108ca44f6fd056c124756298df163275ce421eb55bf4ad",
+    "results/v14/shortlist/input_modes_south_des.csv": "6f35636ab9f755d49467c1589d73ea8527d5599eebb6083615018eb41a109dca",
+    "results/v14/shortlist/input_modes_south_des_extension.csv": "5ca4b0c06f1e35ab1cb808adf65e9c56a7bd2e8524884a409c6cba2ffeaad9d8",
+    "results/v14/shortlist/input_modes_south_ps1.csv": "c9f804d33d61e9697f76aec64a327a181ff17d96ebcc9a6fa01da3df11310667"
+  },
+  "production_manifest_sha256": "4192bf130b937b29f0a893a6a8971f846bb70597d7ad77b1a2e7d1228afe48f6",
+  "priority_positions": 40,
+  "audit_positions": 35,
+  "counts_by_cohort": {
+    "north": 14,
+    "north_extension": 14,
+    "south_delve": 14,
+    "south_des": 13,
+    "south_des_extension": 12,
+    "south_ps1": 8
+  },
+  "scope": "Incremental R14 baseline production follow-up queue, not a new detection policy or evidence promotion. Rank within cohort, then interleave cohorts. Blind-audit identities must stay masked until grades are sealed. C stability is a ranking proxy only. Missing C is not zero. The 5 arcmin separation controls independent follow-up positions, without changing the discovery associations. Known positions within 30 arcmin route to context/control review irrespective of distance-mode agreement; this is not a physical membership assertion. Blind audit is registered, not graded; the identity key must not be read during grading. No candidate is promoted by selection."
+}

@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-19T04:21:55.966961+00:00",
+  "source_sha256": {
+    "scripts/v14_shortlist_archives.py": "6930158b656a6e0c8a4e8e63bd9fcba70966ae097b84f75f6b25fbc6b72cb71a",
+    "scripts/v14_shortlist.sh": "e166589c4283c69f2ba457baac63b5c60497e1ace384eef561c5edf2c8f81379",
+    "scripts/v14_shortlist_context.sh": "f8115203d7f7e986c5e7867002610ff401a1819376e7b246cdc1d551e519579f",
+    "scripts/v14_shortlist_index.py": "c1661f44b5002132806cb25fbf9be8a317c09e68241c41ea926a7dcc08b3f5da",
+    "scripts/v14_shortlist.py": "1929cfa28a0ae9668d2fb71a75742ef4b7c034d58dbfbce6fed4226c8b3d512b",
+    "scripts/v14_shortlist_context.py": "7bf3ee3f3f17c69f750b3c7929054ff6890121ca3501049170a3e96c98d848c9",
+    "scripts/v14_repeat.py": "e1b53b6c8c72503fa424ba9b519f832b509827339a6f9bafc57ae52ea2bae7b4",
+    "scripts/v14_repeat.sh": "b50e9bcc40f60b84a0562e0f1747774b945fbb2ee91c13f4d78c50cda6225fb4",
+    "scripts/v14_ps1_response.sh": "0cd461617fc30cc32487eaed1cd01cbeb8fba56d7e82db0527df236343ef5501",
+    "scripts/v14_ps1_summary.py": "d08bd79c2cf39c6fb944f4d9235665de5d7ea7a2fdfa9338d81992beac53d6f6",
+    "scripts/v14_ps1_response.py": "6a4cb98d4feace5ab7812571f24bd2ec2a316ed5cb098a05f56953b110c87d78",
+    "configs/v14_repeat/image_trials.yaml": "89d27a693f054bbd7e68f5b94387a2c73bee89e4db92503e1e0228bbb93583e5",
+    "configs/v14_repeat/image_fields.csv": "f5eac1b2ae1ba753ee143ce19d344e17be1416b7f59b5dfdd5cfa2242b6a5929",
+    "configs/v14_repeat/protocol.yaml": "90f16a722deb5f5cc0d6921097f0161a4f17044437488e6a65607f7993f5e0bb",
+    "configs/v14/shortlist_plan.yaml": "4793f2acd9be844d89cda97861245eabd10e207ee26ded92d1603756ddcd678c",
+    "scripts/v13_native.py": "49db07f280d41bb68ce4f59f3c785edf65a707d9ba21b561037ac5d001c9f325",
+    "scripts/v13_native.sh": "4731a136cf0d6700cd440b830f65a1538c7655c5424fabd47e8b443d9ce02536",
+    "scripts/v13_image_trials.py": "5364d8bd72d59949a004ba37b54adc6a9b42fb739a83ef691893deabbb8f83dd"
+  },
+  "scope": "Code/config checkpoint after completed smoke validations and before remaining registered arrays execute; scheduler_snapshot records actual job states. This is not a claim that a queued task executed these hashes."
+}

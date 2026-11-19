@@ -1,0 +1,9 @@
+{
+  "job": "61556311",
+  "index": 0,
+  "count": 1,
+  "input_sha256": "b7b17a7a49d11dcaabe2cc771bdb86b28a4d143871f3aeed67a1fbdc9edf490f",
+  "plan_sha256": "4793f2acd9be844d89cda97861245eabd10e207ee26ded92d1603756ddcd678c",
+  "actual_visual_grading": false,
+  "scope": "Blind-reference multimode C and diagnostic images. No evidence promotion."
+}

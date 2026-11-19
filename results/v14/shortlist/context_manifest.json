@@ -1,0 +1,10 @@
+{
+  "job": "61557190",
+  "inputs": {
+    "north": "7371c306077ac15fa759370686669e80b57121b2497575387d235221bdd11afb",
+    "south": "32d5fb305d40dda2213ccbf7ccc8a5573b55062e030b4ba43faecbdaaee4e99e"
+  },
+  "discovery_centres": 75,
+  "fitted_centres": 130,
+  "scope": "Context annotations only. A C fit can move into an extended-galaxy ellipse even when its discovery centre was outside. Keep this identity key separate from blinded grading. No discovery cut, physical membership or automatic evidence promotion."
+}

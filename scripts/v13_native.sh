@@ -18,6 +18,14 @@ export LARGEGALAXIES_CAT="/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/masking
 export DUST_DIR=/global/cfs/cdirs/cosmo/data/dust/v0_0
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 export LS13_NATIVE_DIR="$output" LS13_TRUTH="$output/truth.npy"
+export LS13_SHOT_SEED=483423
+if [[ -f "$output/truth.json" ]]; then
+    LS13_SHOT_SEED=$("$workspace/.venv/bin/python" - "$output/truth.json" <<'PYSEED'
+import json,sys
+print(json.load(open(sys.argv[1])).get('source_poisson_seed',483423))
+PYSEED
+)
+fi
 if [[ "$region" == south ]]; then
     bands=g,r,z,i
 else

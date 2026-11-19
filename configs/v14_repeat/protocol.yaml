@@ -1,0 +1,21 @@
+seed: 487219
+distance_kpc: 100
+radii_pc: [3, 10, 30]
+target_MV_proxy: [-3.0, -1.5]
+independent_realizations_per_cell: 8
+backgrounds: 3
+planned_ccd_trials: 144
+initial_trial_indices: [0, 2, 4]
+smoke_site: v14_south_response_1
+smoke_trial: 2
+meaningful_gain: 0.10
+confidence_level: 0.95
+primary_contrast: ls_base_minus_ps1_validated_response
+secondary_contrasts: [ls_deep_minus_ps1_validated_response, ls_deep_minus_ls_base]
+physical_cell_weighting: Equal weights in the registered grid for pilot contrasts; not population or sky-area weights. Also publish every cell separately.
+resampling_unit: background_then_within_background_shared_realization
+positive_criterion: Paired gain strictly above 0.10 and two-sided background-bootstrap lower interval above zero after the registered final repeats. Report the LS depth contrast separately from the LS-minus-PS1 contrast.
+interim_rule: Initial trials test software, resource use and data integrity only. Do not repeatedly test for positive scientific significance or expand the grid because an intermediate result is favorable.
+ps1_requirement: Validate actual PS1 primary/gr/i/morphology selection on shared sky and source-level held-out samples before a physical PS1 gain claim. Unsupported response bins and LS-reference classification uncertainty require bounds or an unresolved result; no silent unit-response extrapolation.
+scope: New IMF and spatial realizations within three already selected backgrounds, not an independent sky-area validation or an area-weighted selection function. Existing-background selection and only three resampling units limit generalization. Target and realized luminosity retain the archived V-proxy definition.
+finite_stamp_limit: Stars outside 2.47 arcmin are not rendered. The Plummer fraction is about 0.852 for 30 pc at 100 kpc, 0.981 for 10 pc and 0.998 for 3 pc; retain generated/rendered/exposed counts and do not advertise full-population completeness without validating this truncation.

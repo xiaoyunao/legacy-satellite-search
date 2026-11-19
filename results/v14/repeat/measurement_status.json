@@ -1,0 +1,21 @@
+{
+  "job": "61556503",
+  "sites": [
+    {
+      "site": "v14_south_response_1",
+      "ready_trials": 1,
+      "state": "partial_measured"
+    },
+    {
+      "site": "v14_south_response_2",
+      "ready_trials": 0,
+      "state": "not_measured"
+    },
+    {
+      "site": "v14_south_response_3",
+      "ready_trials": 0,
+      "state": "not_measured"
+    }
+  ],
+  "scope": "Only ready sites measured. Job completion is not completion of all registered trials or PS1 response validation."
+}

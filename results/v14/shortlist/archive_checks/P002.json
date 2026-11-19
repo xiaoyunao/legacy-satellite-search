@@ -1,0 +1,73 @@
+{
+  "case_id": "P002",
+  "discovery_ra_dec": [
+    280.2690301007535,
+    75.68772599765836
+  ],
+  "utc": "2026-11-19T04:17:49.505079+00:00",
+  "archives": {
+    "CADC": {
+      "label": "shortlist_roi",
+      "method": "GET",
+      "url": "https://ws.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/argus/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT+TOP+300+O.collection%2CO.observationID%2CO.instrument_name%2CP.planeURI%2C%0AP.productID%2CP.calibrationLevel%2CP.energy_bandpassName%2CP.time_exposure%2CP.dataRelease%0AFROM+caom2.Observation+AS+O+JOIN+caom2.Plane+AS+P+ON+O.obsID%3DP.obsID%0AWHERE+INTERSECTS%28CIRCLE%28%27ICRS%27%2C280.2690301007535%2C75.68772599765836%2C0.15%29%2CP.position_bounds%29%3D1%0AAND+P.dataProductType%3D%27image%27%0AAND+O.collection+IN+%28%27CFHT%27%2C%27CFHTMEGAPIPE%27%2C%27CFHTTERAPIX%27%2C%27GEMINI%27%2C%27HST%27%2C%27HSTHLA%27%2C%27SUBARU%27%29",
+      "query": "SELECT TOP 300 O.collection,O.observationID,O.instrument_name,P.planeURI,\nP.productID,P.calibrationLevel,P.energy_bandpassName,P.time_exposure,P.dataRelease\nFROM caom2.Observation AS O JOIN caom2.Plane AS P ON O.obsID=P.obsID\nWHERE INTERSECTS(CIRCLE('ICRS',280.2690301007535,75.68772599765836,0.15),P.position_bounds)=1\nAND P.dataProductType='image'\nAND O.collection IN ('CFHT','CFHTMEGAPIPE','CFHTTERAPIX','GEMINI','HST','HSTHLA','SUBARU')",
+      "status": "failed",
+      "error": "TimeoutError: The read operation timed out"
+    },
+    "NOIRLab_g": {
+      "status": "complete",
+      "result": {
+        "url": "https://astroarchive.noirlab.edu/api/sia/vohdu?POS=280.26903%2C75.68773&SIZE=.15&VERB=3&format=json",
+        "sha256": "10bda1f93c71e93b46c6d5d7b72a545aa0d5b6c686e634f8d3db715e4c302bd0",
+        "rows": 54,
+        "instruments": [
+          "90prime",
+          "mosaic3"
+        ],
+        "g_visits": [
+          {
+            "utc": "2018-06-11 10:25:31.4145+00",
+            "band": "g",
+            "seconds": 194.059,
+            "instrument": "90prime",
+            "product_hdu_rows": 2,
+            "original_filename": "d8280.0146.fits"
+          },
+          {
+            "utc": "2018-06-11 10:29:22.3785+00",
+            "band": "g",
+            "seconds": 194.059,
+            "instrument": "90prime",
+            "product_hdu_rows": 2,
+            "original_filename": "d8280.0147.fits"
+          },
+          {
+            "utc": "2018-06-11 10:36:50.3425+00",
+            "band": "g",
+            "seconds": 194.059,
+            "instrument": "90prime",
+            "product_hdu_rows": 2,
+            "original_filename": "d8280.0149.fits"
+          },
+          {
+            "utc": "2018-06-17 09:30:25.501+00",
+            "band": "g",
+            "seconds": 225.0,
+            "instrument": "90prime",
+            "product_hdu_rows": 8,
+            "original_filename": "d8286.0098.fits"
+          },
+          {
+            "utc": "2018-07-22 10:06:48.2965+00",
+            "band": "g",
+            "seconds": 215.001,
+            "instrument": "90prime",
+            "product_hdu_rows": 2,
+            "original_filename": "d8321.0122.fits"
+          }
+        ]
+      }
+    }
+  },
+  "scope": "Metadata query only. Failed services leave coverage unresolved. An overlapping product is not yet deep, full-core or independent of LS. No image download or population confirmation is implied."
+}

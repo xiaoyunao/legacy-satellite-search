@@ -49,7 +49,7 @@ def render_tims(*args, **kwargs):
         actual = (model_image != 0) & (inverse_error > 0)
         expected = np.clip(model_image[actual],0,None)*electron_per_nmgy
         exposure_key = zlib.crc32(tim.name.encode())
-        rng = np.random.default_rng([483423, exposure_key])
+        rng = np.random.default_rng([int(os.environ.get('LS13_SHOT_SEED','483423')), exposure_key])
         shot_delta = (rng.poisson(expected)-expected)/electron_per_nmgy
         dest[actual] += model_image[actual]+shot_delta
         inverse_error[actual] = 1/np.sqrt(inverse_error[actual]**-2 + expected/electron_per_nmgy**2)

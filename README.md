@@ -260,3 +260,20 @@ Keep the existing v7 and v11 production policies. The four-stratum registration 
 From the NERSC project revision, submit the CPU array with an appropriate Slurm account and launch `scripts/v12_batches.sh <region> <field-count>`. Its index selects eight disjoint fields and skips completed manifests. Use `LS_SAT_VERSION=v12g` for the supplement. After each successful array, use `scripts/v12_discovery.py` on a compute node to apply the frozen candidate policies and review priority groups.
 
 Run `scripts/v12_ps1_download.sh <north|south> <Perlmutter scratch>` from a data transfer node to acquire and checksum the common-area PS1 DR2 catalog pages. The actual Perlmutter scratch path is reported by the login environment. From the project revision on a Perlmutter login node, `PYTHONPATH=src .venv/bin/python scripts/v12_matched_submit.py <north|south>` submits only ready fields. It records submitted job IDs and starts calibration and physical trials when the required inputs become available. Compute steps remain on Slurm. The small selection and paper-figure tables are described in the [round 12 report](twelfth_science_report.md).
+## Latest review-driven checkpoint (2026-11-19)
+
+The [science report](fourteenth_science_report.md) and [A–E acceptance checklist](docs/PRO_REVIEW_CHECKLIST.md) track the current measured selection/census objective and parallel discovery work. The [first 40-position priority queue](results/v14/shortlist/README.md) contains actual C tables, images and explicit pending stages; a separate 35-position audit is not yet graded. The [registered three-background repeat protocol](configs/v14_repeat/protocol.yaml) distinguishes 144 planned CCD realizations, nine submitted initial trials and one measured pair. These are not completed physical completeness curves.
+
+NERSC compute commands after entering this snapshot's configured environment:
+
+```sh
+# Run through Slurm allocations, not on a login node.
+bash scripts/v14_shortlist.sh reuse
+# An existing four-shard Slurm array supplies SLURM_ARRAY_TASK_ID.
+bash scripts/v14_shortlist.sh 4
+bash scripts/v14_repeat.sh smoke
+bash scripts/v14_repeat.sh trial
+bash scripts/v14_repeat.sh measure
+```
+
+These commands reuse registered inputs; first inspect `results/v14/priority_execution/scheduler_snapshot.json` and live Slurm state to avoid duplicating queued work. Keep raw science files on NERSC. After syncing allowlisted aggregates and diagnostic PNGs, `PYTHONPATH=src .venv/bin/python scripts/v14_shortlist_index.py` builds the operational review index; it does not perform or approve human review. The current scripts add no new runtime dependencies.

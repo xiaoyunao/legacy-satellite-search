@@ -1,0 +1,13 @@
+{
+  "job": "61556313",
+  "plan_sha256": "89d27a693f054bbd7e68f5b94387a2c73bee89e4db92503e1e0228bbb93583e5",
+  "protocol_sha256": "90f16a722deb5f5cc0d6921097f0161a4f17044437488e6a65607f7993f5e0bb",
+  "blank_sha256": {
+    "v14_south_response_1": "c946728b15f7c632ce96d5e2783b19add5d017ff4a987f824c1f884150d317ac",
+    "v14_south_response_2": "e80edaa960a4df5b74d4a1068ae0717282ebfc1eb70cd977ec2c95587961a8a9",
+    "v14_south_response_3": "2da2519b3dd21a08c2fad897d277d46de04addade99d3d973ce2c76d87b26cd8"
+  },
+  "planned_trials": 144,
+  "initial_trials": 9,
+  "scope": "Preparation and shared latent PS1/native rows; no recovery result implied."
+}

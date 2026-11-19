@@ -14,11 +14,18 @@ from ls_satsearch.group_budget import groups, matches
 from ls_satsearch.matched import joint_coverage, reddening
 from ls_satsearch.run import field_cache, read_csv, settings, sha, write_csv, write_json
 from ls_satsearch.search import load_isochrone, scan
-from v12_selection_stats import interval
+if __package__:
+    from .v12_selection_stats import interval
+else:
+    from v12_selection_stats import interval
 
 VERSION = os.environ.get('LS_SAT_IMAGE_VERSION', 'v13')
 CONFIG = Path('configs') / VERSION
 OUTPUT = Path('results') / VERSION / 'image_response'
+
+
+def photon_seed(seed, trial):
+    return int(np.random.SeedSequence([seed,trial,143]).generate_state(1)[0])
 
 
 def context(name):
@@ -50,6 +57,20 @@ def produce(name):
     native, decam = template_paths(data,cfg)
     model = load_isochrone(native)
     dec = load_isochrone(decam)
+    ps1_path = data/'resources'/plan['ps1_template'] if plan.get('ps1_template') else None
+    ps1_values = None
+    if ps1_path is not None:
+        ps1_model = load_isochrone(ps1_path,bands=('gP1','rP1'))
+        def physical_rows(path):
+            with path.open() as handle:
+                header=next(line[1:].split() for line in handle if line.startswith('#') and 'M_ini' in line and 'int_IMF' in line)
+            phase='stage' if 'stage' in header else 'label'
+            return np.loadtxt(path,usecols=[header.index(k) for k in ('M_ini','int_IMF',phase)]),header
+        identity,_=physical_rows(native)
+        other_identity,ps1_header=physical_rows(ps1_path)
+        if not np.array_equal(identity,other_identity):
+            raise ValueError('PS1 and native image populations do not share physical rows')
+        ps1_values=np.column_stack([ps1_model[0],np.loadtxt(ps1_path,usecols=ps1_header.index('iP1'))])
     with native.open() as f:
         columns = next(line[1:].split() for line in f if line.startswith('#') and 'int_IMF' in line)
     iz = ('i','z') if site['region']=='south' else ('iP1','zP1')
@@ -81,19 +102,24 @@ def produce(name):
         ebv = reddening(ra,dec_)
         extinction = [3.214,2.165,1.592,1.211] if site['region']=='south' else [3.258,2.176,1.592,1.199]
         observed = magnitudes[indices]+dm+ebv[:,None]*np.array(extinction)
+        extra_bands=('ps1_g0','ps1_r0','ps1_i0') if ps1_values is not None else ()
         bands = np.empty(len(indices),dtype=[(k,'f8') for k in
-                         ('ra','dec','g0','r0','flux_g','flux_r','flux_i','flux_z')])
+                         ('ra','dec','g0','r0','flux_g','flux_r','flux_i','flux_z')+extra_bands])
         bands['ra'],bands['dec'] = ra,dec_
         bands['g0'],bands['r0'] = (magnitudes[indices,:2]+dm).T
         for idx, band in enumerate('griz'):
             bands[f'flux_{band}'] = 10**(-.4*(observed[:,idx]-22.5))
+        if ps1_values is not None:
+            for idx,band in enumerate(extra_bands): bands[band]=ps1_values[indices,idx]+dm
         np.save(stage/'truth.npy',bands,allow_pickle=False)
         ra0,dec0 = field.sky(*center)
+        extra_meta=dict(ps1_model_sha256=sha(ps1_path),shared_population_rows_verified=True,
+                        source_poisson_seed=photon_seed(plan['seed'],number)) if ps1_path else {}
         write_json(stage/'truth.json',dict(D_kpc=distance,rh_pc=rh,expected_MV_proxy=mv,
                    realized_MV_proxy=-2.5*np.log10(draw@proxy) if draw.any() else None,
                    N_imf=int(draw.sum()),N_rendered=len(indices),trial=number,
                    theta_h_arcmin=arc,truth_ra_deg=ra0,truth_dec_deg=dec0,
-                   ra_deg=ra0,dec_deg=dec0,seed=[plan['seed'],number],model_sha256=sha(native)))
+                   ra_deg=ra0,dec_deg=dec0,seed=[plan['seed'],number],model_sha256=sha(native),**extra_meta))
 
 
 def native_table(folder):

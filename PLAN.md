@@ -1,5 +1,16 @@
 # Plan
 
+## 2026-11-19 latest execution priority
+
+Follow the fully read GPT Pro message af4ec677 in the [acceptance checklist](docs/PRO_REVIEW_CHECKLIST.md). Keep route B (measured selection/census increment) as the stable paper objective and discovery in parallel. Do not wait for the full footprint to review current candidates.
+
+1. Frozen first queue: 40 priority positions and 35 stratified audit positions, all ≥5′ apart. Nineteen priority and fourteen audit C/image packets reused from the same production records; P001 new smoke completed. Complete queued C array 61556312 and context job 61556642, then actual visual grading. Publish failed candidates, weak-control attrition, review burden and agreement; the audit selection is not yet calibrated review completeness. P001 is background favored by galaxy fragmentation, still L0. Query independent imaging for plausible remaining cases.
+2. Frozen physical repeat: three existing South PS1 backgrounds, 144 potential realizations (100 kpc; 3/10/30 pc; V proxy −3/−1.5; eight per cell). One actual CCD pair is measured; initial nine jobs 61556314 and measurement 61556315 are queued. Validate resource/stage outputs before dispatching the remaining grid. Keep shared latent IDs, unique photon noise, fixed masks/cuts, target/realized luminosity and finite-stamp losses explicit.
+3. Real PS1 selection-stage and source-ID holdout audits are complete on full buffered fields and separate local 20′ regions. They are conditional on LS proxies. Validate a physical PS1 response including classification/reference uncertainty and unsupported-bin bounds before claiming LS−PS1 gain. Preserve joint paired/background bootstrap dependence and the frozen >0.10 plus positive lower-bound criterion. Catalogue and CCD cohorts remain separate.
+4. Produce physical response curves only after sufficient repeats and PS1 validation; no sparse 50% contour. Keep PS1 DR2 execution versus Tan PS1 DR1 distinct, and the three area layers separate. Formal μ≤20.75 and 0.5′ production scale stay frozen. No population inference until selection and review completeness are supported.
+
+Latest metadata audit: 3,117 complete, eight no-usable-gr /6,891; 13,456.908 owned deg². Four retries accepted, eleven live-covered, zero uncovered. The candidate snapshot remains 5,614 production records and has a different clock. Follow existing jobs; do not duplicate covered failures.
+
 ## Current objective
 
 Use the measured selection function and census increment as the stable paper mainline, while continuing new-system discovery. Prioritize actual detectability near 100 kpc, radii below about 15 pc and luminosity around −3 to −1.5. The fully read GPT Pro requirements and acceptance states are tracked in [PRO_REVIEW_CHECKLIST](docs/PRO_REVIEW_CHECKLIST.md).

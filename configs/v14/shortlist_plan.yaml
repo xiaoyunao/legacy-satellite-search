@@ -1,0 +1,9 @@
+seed: 487219
+priority_positions: 40
+low_per_cohort_bin: 2
+score_quantile_edges: [0.0, 0.5, 0.8, 1.0]
+independent_position_arcmin: 5.0
+priority_max_rh_pc: 30.0
+c_stability_ranking_proxy: 1.0
+known_position_context_arcmin: 30.0
+scope: Incremental R14 baseline production follow-up queue, not a new detection policy or evidence promotion. Rank within cohort, then interleave cohorts. Blind-audit identities must stay masked until grades are sealed.

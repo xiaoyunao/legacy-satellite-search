@@ -1,0 +1,88 @@
+{
+  "ls14-shortlist-smoke": {
+    "job": "61556311",
+    "state": "submitted_not_completed",
+    "qos": "debug",
+    "cores": 4,
+    "memory": "24G",
+    "time": "00:25:00"
+  },
+  "ls14-shortlist-review": {
+    "job": "61556312",
+    "state": "submitted_not_completed",
+    "qos": "regular",
+    "cores": 8,
+    "memory": "32G",
+    "time": "02:00:00"
+  },
+  "ls14-repeat-smoke": {
+    "job": "61556313",
+    "state": "submitted_not_completed",
+    "qos": "debug",
+    "cores": 8,
+    "memory": "56G",
+    "time": "00:25:00"
+  },
+  "ls14-repeat-initial": {
+    "job": "61556314",
+    "state": "submitted_not_completed",
+    "qos": "regular",
+    "cores": 8,
+    "memory": "56G",
+    "time": "01:20:00"
+  },
+  "ls14-repeat-measure": {
+    "job": "61556315",
+    "state": "submitted_not_completed",
+    "qos": "regular",
+    "cores": 8,
+    "memory": "48G",
+    "time": "02:00:00"
+  },
+  "ls14-ps1-response": {
+    "job": "61556316",
+    "state": "submitted_not_completed",
+    "qos": "debug",
+    "cores": 4,
+    "memory": "24G",
+    "time": "00:25:00"
+  },
+  "ls14-repeat-smoke-measure": {
+    "job": "61556503",
+    "state": "submitted_not_completed",
+    "qos": "debug",
+    "cores": 8,
+    "memory": "48G",
+    "time": "00:25:00",
+    "scope": "Partial measurement of the completed real CCD smoke only"
+  },
+  "ls14-shortlist-context": {
+    "job": "61556641",
+    "state": "submitted_not_completed",
+    "qos": "debug",
+    "scope": "SGA context at discovery and fitted centres"
+  },
+  "ls14-shortlist-context-final": {
+    "job": "61556642",
+    "state": "submitted_not_completed",
+    "qos": "regular",
+    "scope": "SGA context at discovery and fitted centres"
+  },
+  "ls14-ps1-response-local": {
+    "job": "61556716",
+    "state": "submitted_not_completed",
+    "scope": "20 arcmin local reference diagnostic, distinct from the full-field calibration audit"
+  },
+  "ls14-shortlist-reuse": {
+    "job": "61557017",
+    "state": "submitted_not_completed",
+    "qos": "debug",
+    "scope": "Reuse completed same-record C diagnostics, without any new fitting"
+  },
+  "ls14-cache-context": {
+    "job": "61557190",
+    "state": "submitted_not_completed",
+    "qos": "debug",
+    "scope": "Context annotations for reused completed C packets"
+  }
+}

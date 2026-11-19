@@ -1,5 +1,14 @@
 # Decisions
 
+## 2026-11-19 Shortlist and registered repeat pilot
+
+- Adopt latest af4ec677 review: prioritize a current 30–50-object shortlist ahead of full-footprint completion. Freeze 40 priority plus 35 exploratory stratified audit positions from eligible R14 production, within-region ranking and 5′ separation. Low-score spatial exclusion means no unweighted claim of global review completeness. Preserve the initial alias-contaminated selection and final frozen queue separately.
+- Known-position distance aliases near NGC 6341/1261 exposed a context gap: unknown prioritization now routes every ≤30′ known positional neighbor to context/control review irrespective of DM. This changes follow-up allocation, not discovery cuts or physical membership. P001 is retained after adverse image evidence, not silently removed.
+- P001's C centre moved into an SGA ellipse despite its discovery centre being outside. Annotate both centres/modes. Actual galaxy fragments explain why top-three deletion alone does not guarantee a stellar system; no automatic L1 gate based on C.
+- Reuse complete same-record C packets before recomputation. Record original source hashes; reuse is neither new measurement nor independent evidence. Keep identity keys separate from blinded grading.
+- Freeze three-background 100 kpc repeated CCD pilot in a new namespace, retaining all old products. Native/PS1 templates must share physical rows; each new realization gets a distinct deterministic source-photon seed, with the legacy seed preserved for older experiments. Store finite-stamp truncation and target/realized light explicitly.
+- Source-level PS1 holdouts are conditional diagnostics. Full-field response is not automatically local-CCD calibration; retain the separate 20′ check. Physical LS−PS1 comparison awaits supported, validated source response with uncertainty/bounds. Same realization IDs across backgrounds require joint ID resampling, not independent draws by field.
+
 ## 2026-11-19 完整评审落实
 
 - 完整读取最新 GPT Pro 评审后，采用“选择函数与普查增量”为稳定论文路线，发现工作继续；按 PRO_REVIEW_CHECKLIST 逐项验收，不以发现数量替代科学判据。

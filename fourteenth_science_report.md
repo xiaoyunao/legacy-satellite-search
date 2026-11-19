@@ -1,5 +1,50 @@
 # DR11 search and selection response
 
+## 2026-11-19 latest-review experiment checkpoint
+
+The full latest GPT Pro review (af4ec677) is now implemented as a priority-ordered acceptance checklist, retaining route B as the paper objective and discovery in parallel. The first follow-up queue does not wait for all registered search fields. The newer manifest audit validates **3,117 complete fields, eight no-usable-gr fields and 13,456.908 new owned deg²**. Four retry fields are accepted and eleven remain live-covered; no uncovered terminal gap calls for duplicate submission. This search clock differs from the current 5,614-record production snapshot. [Audit](results/v14/progress_20261119b/manifest.json) · [Continuation](results/v14/progress_20261119b/continuation.json)
+
+### Current production shortlist and a real failure diagnosis
+
+The frozen queue contains **40 independent priority positions plus 35 exploratory stratified audit positions**, separated by ≥5′. Priority uses within-cohort score quantiles and existing C stability, followed by cohort interleaving; raw North/South scores are not globally comparable significance. Complete same-record C/image packets are available for 33 positions (19 priority, 14 audit). Existing C is reused with source hashes, not counted as a new measurement. The new P001 five-mode smoke overlaps a reused position. The missing C queue remains pending; actual blind grades, reviewer agreement and review selection probabilities remain outstanding. Spatial exclusion makes the audit's inclusion nonuniform. [Frozen positions](results/v14/shortlist/priority_shortlist.csv) · [Actual readiness](results/v14/shortlist/review_readiness.csv)
+
+P001 provides a specific caution: its strongest C mode has TS=95.580 and TS after deleting the three strongest contributors=63.163, but actual images show point-source fragments superposed on extended galaxy light. The C centre lies at an SGA ellipse-radius multiple of 1.259, while the discovery centre was at 4.650. Context annotations now cover both centres. This is a morphological/background failure, not a stellar-system promotion; P001 remains L0 and stays in the frozen selection denominator. P007 also has stable C (106.853→80.026), but the fitted centre is only 44.706′ from Ursa Minor. A known-environment explanation remains unresolved; this project does not pursue known-dwarf outskirts as a new target. [Images and decisions](results/v14/shortlist/README.md)
+
+Bounded public archive checks for P002/P007 succeeded at NOIRLab and returned 90Prime/Mosaic3 data only. Exposure independence from North LS has not been demonstrated. CADC SSL/timeout failures leave its coverage unresolved. No independent deep two-band population measurement or download is reported. 0706 also remains L0. [Archive metadata](results/v14/shortlist/archive_checks/)
+
+### Registered CCD repeat and first measured pair
+
+The experiment freezes three existing South PS1 backgrounds spanning seeing ≈1.46–1.87″, depth and source density. The planned grid is 100 kpc, circularized radii 3/10/30 pc, target V proxy −3/−1.5 and eight realizations per cell: **144 potential CCD trials**. Only the initial nine-trial tranche is submitted; the full 144 are not executed. Distinct deterministic photon-noise streams supplement new IMF/position realizations. Native/PS1 template physical rows are checked exactly before storing shared-population photometry. [Protocol](configs/v14_repeat/protocol.yaml) · [Registration](results/v14/repeat/registration.json)
+
+One native-CCD realization has actually been measured at background 1, 100 kpc, 10 pc, target V proxy −3.0 and realized V proxy **−2.7519**. It contains 5,929 generated IMF stars and 275 rendered/exposed stars; 83 matched output detections include 54 PSF assignments.
+
+| Same injected realization | LS baseline | LS deeper |
+| --- | ---: | ---: |
+| Usable injected CMD members | 13 | 20 |
+| Spatial recovery | yes | yes |
+| Correct retained / highest blind distance mode | yes / yes | yes / yes |
+| Highest blind distance modulus | 20.0 | 20.0 |
+| C TS | 52.437 | 52.934 |
+| C TS after top-three deletion | 23.633 | 29.813 |
+
+The unmodified background does not spatially recover that position. This demonstrates that the new image-to-blind-search path works on a real CCD background. Added usable faint members did **not** add a positional recovery in this single pair. N=1 cannot rank depth policies or establish physical completeness. The previous 56 CCD realizations and 168 catalogue-level South trials have separate designs/denominators. [Measured pair](results/v14_repeat/image_response/v14_south_response_1-blind.csv)
+
+The new grid remains a conditional pilot, not the final production selection surface: its matched-sky search uses its own fixed main-grid/budget recipe. Stars outside 2.47′ are not rendered (Plummer fractions ≈0.998/0.981/0.852 at 3/10/30 pc); full-population completeness requires a truncation check. With only three fixed backgrounds, between-field uncertainty and generalization are limited. Shared latent IDs across backgrounds require joint ID resampling while preserving survey arms and physical cells. The registered positive criterion remains gain >0.10 with a positive 95% background-bootstrap lower bound after final repeats, not interim significance testing.
+
+### Real PS1 response: a useful diagnostic, not yet the physical third arm
+
+Actual PS1 primary/gr/i/morphology selection is measured against ordinary LS S/N≥10 point-source proxies using source-ID training/held-out splits. In held-out reference bins 23≤g₀<24, the final PS1 selection fractions are:
+
+| Background | Full buffered field | Separate local 20′ region |
+| --- | ---: | ---: |
+| 1 | 1,073/7,262 = 14.8% | 53/433 = 12.2% |
+| 2 | 5,276/16,633 = 31.7% | 287/981 = 29.3% |
+| 3 | 3,022/10,395 = 29.1% | 140/594 = 23.6% |
+
+Primary counterparts exist for about 91% in the full-field faint bin; subsequent gr/i/shape requirements account for much of the selection loss. This is conditional on the LS reference and its contaminants, with differing colour mixes. The local/full samples are nested, not independent validations. Binomial intervals exclude reference-classification and sky systematics. Unsupported colour/magnitude bins cannot be extrapolated as unit response, and joint final-selection rates must not be multiplied by the same cuts again. A truth-level, validated PS1 response and three-arm physical recovery remain pending. [Held-out figure](results/v14/repeat/ps1_response/heldout_ps1_response.png) · [Local audit](results/v14/repeat/ps1_response_local/manifest.json)
+
+The next scientific decision follows actual shortlist review and sufficient repeated physical measurements: assess whether gains survive background variation and PS1 response uncertainty. Do not draw 50% contours, infer population statistics, equate owned area with new census area, or extend the μ≤20.75 production claim to 150 kpc on these results. Retain the 0.5′ production kernel and frozen cuts.
+
 ## 2026-11-19 review and production checkpoint
 
 The native source-reading interface is restored, and the full latest GPT Pro review has been checked. The stable paper objective is measured compact-system selection and census increment, alongside continued discovery. The adopted requirements and their outstanding acceptance stages are tracked in the [review checklist](docs/PRO_REVIEW_CHECKLIST.md).
