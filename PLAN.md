@@ -1,5 +1,13 @@
 # Plan
 
+## Current checkpoint — 2026-11-19T22:25Z
+
+1. Follow333remaining scan fields and necessary C (v6529+29/6891;174retries accepted/zero uncovered). Ctimeout-q02 accepted784modes/403groups. Preserve pending owners; refresh common-clock production/areas/identities after convergence.
+2. Faint-light3-site experiment accepted: base2/3→1/3,deep3/3→3/3spatial; bg2matching group drops below unchangedcut, not merging. Treat this as conditional light/noise sensitivity, not a population correction. Current144 remain a finite-rendered-light experiment, not fully calibratedV/full-spatial SF.
+3. Finish paired-radius same-population stages under successor61608931 (exact21remaining cases; old61604174 whollypending and retired). Collector61604183 now follows it. Reuse accepted cases; inspect per-case proofs for bounded-pack timeout recovery. Keep8shared populations/3fixed skies and no new blindsearch/Pdet claim.
+4. PhysicalPS1 transfer and broad-sky/15pc completeness remain unsupported; report limits. Freeze final production/sampling units, render selected saved-membership-bound diagnostics, complete privacy/page QA and preserve75before one final user review. No interim grading or manuscript.
+
+
 ## Latest Pro68fa1336 calibration — 2026-11-19T21:55Z
 
 Complete the three-site draw34 faint-IMF-light sensitivity after accepted native resource pilot61605249 (COMPLETED5:24; remaining61606497→measurement61606498); preserve original278bright-star positions and measure their associations separately. Added4975faint stars within same3.1arcmin footprint account for another6.19%full V-proxy light;4.10%outer light remains. Follow existing radius24 owners61604174→61604183 and all full-search/C owners concurrently. These bounded diagnostics address observed IMF/truncation confounds; no physicalPS1 transfer or global completeness is implied. Current final-delivery gates and one-review policy remain unchanged.

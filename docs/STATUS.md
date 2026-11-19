@@ -1,5 +1,15 @@
 # Status
 
+## 2026-11-19T22:25Z — faint-light perturbation measured; production continues
+
+- v22:19Z: **6529/6891 complete +29 zero-valid-gr terminals**, **24361.03503858024 summed R14 owned deg²**,333 fields remain;174scan retries accepted,zero uncovered. These are not final historical union or physical-gain areas. **61592117_2 COMPLETED/13:14**,784retained modes/403source groups pass exact source/seed/membership checks; remaining registered C owners still require acceptance.
+- Faint-light native3/3 and six paired-depth measurements pass. Same278bright members; add4975omitted faint members inside the same3.1arcmin footprint, rendering95.90%fullIMF V-proxy light (4.10%outer light remains). Original144 and expanded-bright controls are unchanged. Native jobs61605249/61606497 and measurement61606498 are terminal successes.
+- Baseline spatial/highest-correct recovery changes **2/3→1/3**; deeper spatial stays **3/3**,highest-correct2/3→2/3,retained-correct2/3→3/3. Fixed bright-member hard counts sum58→57 and88→88. These are three backgrounds of one selected IMF realization, not independent populations or a population-rate estimate. New faint positions and changed source photon pixels remain coupled to the perturbation.
+- Saved-peak audit resolves the baseline loss in background2: matching raw and grouped A scores both6.504599→5.488268 versus fixedcut5.789099. The peak remains below cut, so this is not a peak-merging failure. Do not tune the threshold. Full faint-light treatment and finite footprint are material near a decision boundary; no universal correction or proof that faint light alone causes the change. Figure/aggregate provenance and full-raster QA pass. See results/v14/faint_light/.
+- The same21registered paired-radius native cases transferred from wholly pending regular61604174 to **61608931** in bounded4/5-case debug packs after pilot resource proof and actual QOS check (2running/5submitted). Old pending owner retired only after new ownership and collector dependency verified; no running task or scientific config changed. **61604183** awaits the new owner. Native success remains distinct from all24stage acceptance.
+- PhysicalPS1 transfer remains unvalidated; no physicalLS−PS1 gain, full-spatial luminosity completeness or population inference. Preserve original75 and blank grades; finish common-clock production/area/required C/selected evidence/sampling/privacy-page QA before one final human release. No manuscript writing.
+
+
 ## 2026-11-19T21:55Z — latest Pro review: omitted faint-star light calibration
 
 Follow-up21:58Z: **61605249 COMPLETED/5:24**, native DR11.1.0 processing185.2s; registered native catalogue/truth/exposure/initial-detection hashes pass. Remaining two fixed backgrounds **61606497**, three-site paired blind/stage measurements **61606498** are submitted, not complete. The input contains5253stars (278unchanged bright+4975faint) and95.90%full V-proxy light;4.10%spatial-tail light remains outside. Native completion is not a recovery result.

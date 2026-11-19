@@ -2,6 +2,16 @@
 
 ## 2026-11-20
 
+### 06:25 CST — omitted faint light changes a conditional threshold crossing
+
+- All3registered native faint-light cases and6paired arm measurements accepted. Original extended-bright controls reproduce, and unchanged278bright identities are matched separately from4975new faint truths. Baseline2/3→1/3spatial/highest-correct;deep3/3→3/3spatial,2/3→2/3highest-correct,2/3→3/3retained-correct. Hard bright-member totals58→57/88→88. One selected IMF realization, three fixed skies; no population correction.
+- Read-only saved peak audit: bg2base raw/group scores6.504599→5.488268,cut5.789099; peak retained below cut, not merge loss. Same3.1arcmin frame now contains95.90%full proxy light;4.10%outer light remains. Added faint positions and changed photon pixels prevent a pure faint-light causal claim. Original144 unchanged. No threshold change, physicalPS1 claim or extra parameter-grid tuning.
+- Actual pilot resources and debug QOS2running/5submitted support bounded native packs. Verified61604174 all3tasks pending, held only during handoff, registered61608931 for exactsame21indices, rebound61604183, then retired old pending owner. No running work interrupted. Frozen producer/config hashes unchanged; Python/shell argument parsing verified. Follow individual native proof files after any timeout; do not repeat accepted cases.
+- v22:19Z6529complete+29zero-valid-gr/6891;333remaining;24361.03503858024summedowneddeg²;174scan retries accepted/zero uncovered. C61592117_2 COMPLETED13:14,all784modes/403source groups pass. Others remain registered; final production/sample/union/evidence freeze remains outstanding.
+- Files: faint-light summary/score-margin audit and plotting code;3native/3measurement proof sets,paired6-row comparison/summary/figure,source-bound C shard,v audit,native handoff and main scientific docs/delivery gates. Validation: actual all-site control/stage/blind acceptance, saved-hypothesis audit, syntax,65unit tests/2skip; full PNG raster inspected after compact count-label repair. Early attempted audit sync preceded completion and returned missing-file errors; only the successful post-exit0 sync is used. Raw pixels/stellar tables stayNERSC.
+- Next: finish all24paired-radius cases and stages; follow333remaining scans and regional C, rebuild common-clock production and final area/identity/funnel. Preserve original75 and one final review requirement. No manuscript writing.
+
+
 ### 05:55 CST — latest Pro review and faint IMF light pilot
 
 - Follow-up05:58CST:61605249 COMPLETED/5:24,native185.2s,5253stars/95.90%full proxy light inside footprint. Native proof passes; remaining two cases61606497 and all-site paired measurement61606498 submitted. Search/C owners continue;61592117_2 now running.

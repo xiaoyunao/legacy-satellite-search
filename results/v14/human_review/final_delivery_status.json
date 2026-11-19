@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-19T21:58:00+00:00",
+  "updated_utc": "2026-11-19T22:25:00+00:00",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -9,7 +9,7 @@
     "package_manifest_sha256": "7900621c7b3974629dce4501deb3393797893c8779cee5aee3b57d8a758b29b8"
   },
   "gates": {
-    "full_search_terminal_accounting": "u21:33Z:6521complete+29zero-valid-gr/6891;174 retries accepted,zero uncovered;341 fields remain under existing owners",
+    "full_search_terminal_accounting": "v22:19Z6529complete+29zero-valid-gr/6891;333fields remain;174scan retries accepted,0uncovered",
     "historical_production_and_exact_mask_union": "Interim6269 ordinary masks/720 tiles accepted:25181.084427deg2 all ordinary,18173.912657 source-clock-qualified. Old7994-record/7822-position catalogue not final. Final common-clock inventory/union/integration pending.",
     "same_eligible_record_C_complete": "Seven further source-bound shards accepted,4239modes/1926source groups. SouthDELVE04/05 all311preserved partial fits identical. Source-clock integration/remaining regional C and selected evidence pending; extension07 legacy run-start metadata remain unknown.",
     "all_final_objects_images_and_evidence": "pending; accepted rendering-equivalence61593937 enables numerical C first. Deferred rows explicitly lack generated diagnostics; final selected modes still need saved-membership-bound images/diagnostics and all material QA.",
@@ -42,26 +42,39 @@
       "backgrounds": 3,
       "pilot_cases_accepted": 3,
       "pilot_paired_depth_rows": 6,
-      "remaining_job": "61604174",
+      "remaining_job": "61608931",
       "stage_collector_job": "61604183",
-      "state": "remaining_submitted_not_complete",
+      "state": "same21cases_transferred_to_bounded_debug_packs_no_overlap",
       "blind_search": false,
-      "Pdet_measured": false
+      "Pdet_measured": false,
+      "superseded_pending_job": "61604174"
     },
     "faint_IMF_light_sensitivity": {
       "original_trial": 34,
       "new_native_cases_registered": 3,
       "pilot_job": "61605249",
-      "state": "one_native_case_accepted_remaining_two_and_measurements_submitted",
+      "state": "accepted_all_three_native_cases_and_six_paired_depth_cases",
       "held_fixed": "accepted extended bright278-member list/native frame/splice; add4975faint members inside3.1arcmin",
       "full_IMF_light_proxy": 26.26746360597052,
       "rendered_bright_light_proxy": 23.565137200070517,
       "added_faint_light_proxy": 1.6259697531727084,
       "residual_outer_light_proxy": 1.0763566527272943,
       "scope": "conditional finite-footprint sensitivity of one selected near-boundary population, not full-spatial completeness",
-      "native_cases_accepted": 1,
+      "native_cases_accepted": 3,
       "remaining_job": "61606497",
-      "measurement_job": "61606498"
+      "measurement_job": "61606498",
+      "paired_arm_cases": 6,
+      "baseline_spatial_before_after": [
+        2,
+        1
+      ],
+      "deeper_spatial_before_after": [
+        3,
+        3
+      ],
+      "independent_latent_populations": 1,
+      "baseline_lost_case": "saved_matching_group_below_unchanged_cut_not_peak_merging",
+      "global_physical_correction_validated": false
     }
   }
 }

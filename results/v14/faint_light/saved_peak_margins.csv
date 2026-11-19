@@ -1,0 +1,13 @@
+site,arm,variant,cutoff,accepted_spatial,best_matching_raw_score,best_matching_group_score,best_matching_group_dm,best_matching_group_scale_arcmin,group_score_minus_cutoff,interpretation
+v14_south_response_1,ls_base,added_faint_light,5.7890987854427625,True,6.860636732007375,6.860636732007375,20.0,2.0,1.0715379465646127,retained_above_cut
+v14_south_response_1,ls_base,extended_bright_control,5.7890987854427625,True,6.4439894085488225,6.4439894085488225,20.0,2.0,0.65489062310606,retained_above_cut
+v14_south_response_1,ls_deep,added_faint_light,6.02890805457013,True,8.821357418134735,8.821357418134735,20.5,1.0,2.7924493635646046,retained_above_cut
+v14_south_response_1,ls_deep,extended_bright_control,6.02890805457013,True,7.720654309114012,7.720654309114012,20.5,1.0,1.6917462545438822,retained_above_cut
+v14_south_response_2,ls_base,added_faint_light,5.7890987854427625,False,5.488267550369077,5.488267550369077,20.25,1.0,-0.3008312350736855,matching_group_below_cut
+v14_south_response_2,ls_base,extended_bright_control,5.7890987854427625,True,6.504599370380233,6.504599370380233,20.25,1.0,0.7155005849374705,retained_above_cut
+v14_south_response_2,ls_deep,added_faint_light,6.02890805457013,True,7.322772833546948,7.322772833546948,20.25,1.0,1.2938647789768183,retained_above_cut
+v14_south_response_2,ls_deep,extended_bright_control,6.02890805457013,True,8.288128494114325,8.288128494114325,20.25,1.0,2.259220439544195,retained_above_cut
+v14_south_response_3,ls_base,added_faint_light,5.7890987854427625,False,5.756417029711459,5.756417029711459,21.0,2.0,-0.0326817557313035,matching_group_below_cut
+v14_south_response_3,ls_base,extended_bright_control,5.7890987854427625,False,5.395958080004774,5.395958080004774,21.0,2.0,-0.39314070543798874,matching_group_below_cut
+v14_south_response_3,ls_deep,added_faint_light,6.02890805457013,True,8.192182301141957,8.192182301141957,20.25,2.0,2.1632742465718264,retained_above_cut
+v14_south_response_3,ls_deep,extended_bright_control,6.02890805457013,True,8.192182301141957,8.192182301141957,20.25,2.0,2.1632742465718264,retained_above_cut

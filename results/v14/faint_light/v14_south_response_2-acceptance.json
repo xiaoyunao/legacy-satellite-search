@@ -1,0 +1,22 @@
+{
+  "job": "61607377",
+  "paired_arm_cases": 2,
+  "inputs": {
+    "results/v14/faint_light/registration.json": "343e79f9286f4be4774bfbd80fbd5e722fdc7db0bdaff59fdc8cb175161b99b2",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_repeat/v14_south_response_2/blank/tractor/cus/tractor-custom-331171p18209.fits": "e80edaa960a4df5b74d4a1068ae0717282ebfc1eb70cd977ec2c95587961a8a9",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_2/trial00/tractor/cus/tractor-custom-331171p18209.fits": "09552f777aa92cf1b4c4450c40e0e108deb409c2cfef2989e59235b762d7d432",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_2/trial00/truth.npy": "078c2aced9b055bc27c7975211c162f6c0fda08ae232e34396379bd7c116c00b",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_2/trial00/truth.json": "e34c75e750a9be70646abe9371f85eaeba0b9eae50eb02351d2b191dad4ccd21",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_2/trial00/injected_exposures.npy": "ca8231d4161780c54ed91339a90b61a0b414e956c53a481d98e61dc4baddee0a",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_2/trial01/tractor/cus/tractor-custom-331171p18209.fits": "e225da60da42a97cebc6fd16739def14caad71d180679e311417204661c6089f",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_2/trial01/truth.npy": "d4b8f4f9331b76f0651d14a871706a50f0a5afc1c8a5cf04e5989c549bef3534",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_2/trial01/truth.json": "654a3713251088c8eb5c5b133165f4c438d9785073aac7453003d03272aca795",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_faint_light/v14_south_response_2/trial01/injected_exposures.npy": "720758d12f707dbf277d6cb103f8e64531b3cb486b3771fd7124d935a16d12a1",
+    "results/v14_faint_light/image_response/v14_south_response_2-blind.csv": "04a4ec15883b4692afc8762be5146c72af786742ebb615bbfeb78dc8141468ce",
+    "results/v14_stamp_boundary/image_response/v14_south_response_2-blind.csv": "e5915319e6041b4a5aab2b9cc5fe1ad21d7ea4463093a1160b475217291098e2"
+  },
+  "code_sha256": "f83fe724b67780e76d6ef6f0ac990bca8fedf4f44dbc0a651ee29a4cb743af21",
+  "unchanged_bright_members_measured_separately": true,
+  "original_extended_controls_reproduced": true,
+  "scope": "One outcome-targeted near-boundary IMF realization across prespecified original backgrounds. Blind scanner receives measured catalogues, not truth centres. Bright-member associations use the unchanged bright list to prevent faint truth crowding from biasing the comparison. All-truth counts have a different denominator; retained separately. Native frame/splice fixed. New faint positions and changed photon pixels are included; no pure diffuse-light effect, full spatial IMF rendering, independent-population completeness or PS1 gain claim."
+}

@@ -1,0 +1,10 @@
+{
+  "inputs": {
+    "results/v14/faint_light/saved_peak_margins.csv": "28deabb33c5bd6dfc9ff9cf1def60a0aa8550af16ba386ad85ab2f691aa59764",
+    "results/v14/faint_light/paired_comparison.csv": "e39e1b48c95bbd6cc2cf47ec9334c30ea4999e6d17c905a01783c15fa6980c0b"
+  },
+  "code_sha256": "cd93f87629087d4118fd66f058e693b16b75bd7de31722afee5da727a7bafb79",
+  "figure_sha256": "ee7a98944ca9362aed2d77b98033905dd06f9d477bb9f8707732e305e8ae05dd",
+  "scope": "Saved matching group scores without a new scan; truth used for post-scan association only. Counts use unchanged bright-member identities. Connecting lines organize three fixed skies, not a continuous condition relation.",
+  "visual_QA": "Full raster inspected after shortening hard-count annotations; titles, axes, threshold, points, legend, count labels and scope footer legible without clipping."
+}

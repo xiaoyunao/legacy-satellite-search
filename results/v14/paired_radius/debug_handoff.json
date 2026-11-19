@@ -1,0 +1,70 @@
+{
+  "utc": "2026-11-19T22:17:30.006628+00:00",
+  "old_native_job": "61604174",
+  "existing_collector": "61604183",
+  "old_states": "61604174_0|PENDING\n61604174_1|PENDING\n61604174_2|PENDING",
+  "debug_qos": "debug|2|5|00:30:00",
+  "state": "native_cases_transferred_without_overlap",
+  "scope": "Same21 frozen native cases, no new populations or science changes. Actual pilot max245.86s/native; bounded4/5-case debug packs use29minutes/8CPU64G. Original regular owners remained wholly pending; no running task is interrupted. Primary144 and accepted pilot3 untouched.",
+  "original_pending_held": true,
+  "new_native_job": "61608931",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=64G",
+    "-t",
+    "00:29:00",
+    "--array=0-4%2",
+    "-J",
+    "ls14-radius-native-bounded",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "--wrap",
+    "export LS_SAT_IMAGE_VERSION=v14_paired_radius LS_SAT_CONFIG_DIR=configs LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg; .venv/bin/python -u -c 'import os; from scripts.v14_paired_radius import run_native; blocks=[[3, 4, 5, 6], [7, 8, 9, 10], [11, 12, 13, 14], [15, 16, 17, 18], [19, 20, 21, 22, 23]]; [run_native(i) for i in blocks[int(os.environ[\"SLURM_ARRAY_TASK_ID\"])]]'"
+  ],
+  "blocks": [
+    [
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8,
+      9,
+      10
+    ],
+    [
+      11,
+      12,
+      13,
+      14
+    ],
+    [
+      15,
+      16,
+      17,
+      18
+    ],
+    [
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  ],
+  "collector_dependency_updated": true,
+  "old_native_retired": true,
+  "python_shell_argument_parse_validated": true
+}

@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-11-19T22:25Z — preserve the observed faint-light sensitivity
+
+Adding4975omitted faint members changes one baseline crossing in the outcome-selected draw34 (2/3→1/3), while deep spatial3/3remains. Saved raw/group peaks show the same below-cut score; do not change merging or threshold. Native source-noise and new faint spatial assignment are part of this perturbation, so no pure-light causal effect or global correction is inferred. Preserve144finite-input results, report that physical integrated-light completeness still needs calibrated treatment rather than silently relabeling the old grid.
+
+A separate execution-only handoff moves the exact21remaining paired-radius cases from wholly pending regular owners to bounded debug packs after actual pilot/QOS proof. Source producer, population/configuration and accepted cases are unchanged. Existing collector is rebound, old pending owner retired without overlap; per-case proofs define completion/retry eligibility.
+
+
 ## 2026-11-19T21:55Z — latest Pro review: omitted faint-star light calibration
 
 Follow-up21:58Z: **61605249 COMPLETED/5:24**, native DR11.1.0 processing185.2s; registered native catalogue/truth/exposure/initial-detection hashes pass. Remaining two fixed backgrounds **61606497**, three-site paired blind/stage measurements **61606498** are submitted, not complete. The input contains5253stars (278unchanged bright+4975faint) and95.90%full V-proxy light;4.10%spatial-tail light remains outside. Native completion is not a recovery result.
