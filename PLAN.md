@@ -2,6 +2,8 @@
 
 ## Current human-review delivery objective (latest review 46d21aad)
 
+Current verification refinement: C output uses shared per-field/per-rank membership paths. Bind all retained rows to probability count, richness normalization and reconstructed TS, freeze the verified arrays on NERSC, then render from those copies. Prototype 61559482 passed two real positions/six modes. Full integrity job 61559510 follows C and precedes evidence 61558007; package 61558755 also requires it. A stale array can no longer pass merely because its filename exists. Guard 61558199 installs an integrity-failure guard after successful C, restoring bulk order on either failure and after evidence on success.
+
 The user is waiting for the **complete** review material before grading. Finish both cohorts: 40 priority PDF packets and a separate 35-position anonymous phase-1 PDF/image ZIP, with blank response forms and immutable input hashes. Preserve the frozen denominator and all retained modes. Do not fill human grades or promote evidence levels; merge the user's judgments only after they respond, and seal anonymous grades before identity/score/environment reveal.
 
 Existing C array 61556312 and final context 61556642 remain queued. Full measured evidence job 61558007 follows C and its successful anonymous prototype 61557934; layout prototype 61558097 validates priority plus blind panels. The final PDF builder refuses missing C, diagnostics or mismatched input hashes. Only internal drafts may be incomplete. Keep the initial nine-trial CCD chain 61556314→61556315 running at the registered settings; physical PS1 calibration and repeated recovery curves remain outstanding.

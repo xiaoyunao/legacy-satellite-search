@@ -1,5 +1,11 @@
 # DR11 search and selection response
 
+## 2026-11-19 saved-mode integrity and continued scan
+
+A later bounded manifest audit validates 3,151 completed fields, eight empty fields and 13,626.117035 owned deg². Retry 61554330_0 completed and passed its field manifest; six retry fields are accepted, nine remain live-covered and zero uncovered gaps require duplicate submission. C and the new CCD tranche still await scheduler priority. [Audit d](results/v14/progress_20261119d/manifest.json)
+
+Before human delivery, the saved C memberships now have a numerical integrity gate: source count/uniqueness, membership sum versus richness times masked profile integral, and likelihood reconstructed from the probabilities. Two actual positions/six modes passed, with TS differences around floating-point precision; their immutable per-source copies remain on NERSC. This verifies existing outputs and adds no fit, recovery or candidate grade. The full 75-position integrity job is still pending. Figures/tables explicitly separate discovery and fitted centres, and final assembly requires all-mode input hashes and image integrity. [Measured prototype proof](results/v14/human_review/integrity_prototype/membership_integrity.csv)
+
 ## 2026-11-19 human-review material checkpoint
 
 The latest full review (46d21aad) and user instruction put the completed 75-object review package before human grading. The original 40 priority and 35 stratified audit positions stay frozen. Thirty-three retained C/diagnostic packets are available; two actual saved-membership prototypes (P001 and B001) now also have standardized observed-error, member CMD, spatial and native-pixel evidence. No new user science grades have been entered. The full C array and 75-object evidence job remain queued, so **the human-review package is not released**. Internal incomplete PDFs are layout checks only. [Preparation state](results/v14/human_review/preparation_status.json)

@@ -14,12 +14,12 @@ The new evidence renderer reuses actual saved C membership and measured photomet
 
 ## Completion and release checks
 
-1. Every frozen case has every required retained seed represented in its C table and a complete fit outcome; no silent case omission.
-2. Full-mode diagnostic PNGs exist, the supplementary measured panels match the C table hash, and the context includes discovery and fitted centres.
+1. Every frozen case has every required retained seed represented in its C table and a complete fit outcome; no silent case omission. Recheck the frozen case/mode/policy hashes.
+2. Every saved membership reproduces its local count, fitted richness normalization and local C likelihood. Verified per-source arrays are frozen on NERSC scratch. All full-mode diagnostic PNGs pass decode/CRC checks and have recorded hashes; supplementary panels use the verified snapshot and match the C table. Context includes discovery and fitted centres.
 3. Both priority and anonymous layouts pass raster inspection; anonymous panel headers and PDF text contain no identity/score/environment leaks. Material image-coverage gaps remain explicitly documented.
 4. The assembled `package_manifest.json` first records `materials_complete=true` and `ready_for_human_review=false`. After all PDF pages have been rasterized and inspected, layout/privacy QA sets the final human-release flag. The PDF builder refuses incomplete assembly. Internal drafts go under ignored `results/work/` and are not handed off for grading.
 
-Current scheduler dependencies are recorded in `../priority_execution/jobs.json`. Existing C array 61556312 precedes full evidence job 61558007; context job 61556642 follows C. Package assembly 61558755 follows both evidence and context. Small prototype jobs validate the two real layouts. None of those submission records means full cohort completion.
+Current scheduler dependencies are recorded in `../priority_execution/jobs.json`. Existing C array 61556312 precedes membership verification 61559510, then full evidence job 61558007; context job 61556642 follows C. Package assembly 61558755 requires evidence, context and integrity. Prototype verification 61559482 checked two actual positions/six modes; its result is not a full-cohort pass. Queue-restoration guards handle failed C or integrity before deferring restoration to the end of evidence work. None of those submission records means full cohort completion.
 
 ## Commands
 

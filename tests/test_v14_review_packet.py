@@ -19,11 +19,16 @@ class GradeSealTest(unittest.TestCase):
         with patch('scripts.v14_review_queue.call',return_value='FAILED|'),patch('scripts.v14_review_queue.restore') as restore:
             after_c();restore.assert_called_once()
 
-    def test_successful_C_chain_defers_restoration_until_evidence_is_terminal(self):
+    def test_successful_C_chain_installs_integrity_failure_guard(self):
         from scripts.v14_review_queue import after_c
         with patch('scripts.v14_review_queue.call',side_effect=['COMPLETED|\nCOMPLETED|','123']) as call,patch('scripts.v14_review_queue.restore') as restore:
             after_c();restore.assert_not_called()
-            self.assertIn('--dependency=afterany:61558007',call.call_args.args)
+            self.assertIn('--dependency=afterany:61559510',call.call_args.args)
+
+    def test_integrity_failure_restores_bulk_queue(self):
+        from scripts.v14_review_queue import after_integrity
+        with patch('scripts.v14_review_queue.call',return_value='FAILED|'),patch('scripts.v14_review_queue.restore') as restore:
+            after_integrity();restore.assert_called_once()
 
 
 @unittest.skipUnless(importlib.util.find_spec('reportlab'),'Run with the bundled PDF Python runtime')

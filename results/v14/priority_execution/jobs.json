@@ -114,5 +114,17 @@
     "state": "submitted_not_completed",
     "qos": "regular",
     "scope": "Assemble both complete PDF/image packages after evidence and fitted-centre context; local render QA required before human release"
+  },
+  "ls14-integrity-smoke": {
+    "job": "61559482",
+    "qos": "debug",
+    "state": "submitted_not_completed",
+    "scope": "Check actual probability/count/likelihood consistency for P001 and B001"
+  },
+  "ls14-integrity-full": {
+    "job": "61559510",
+    "qos": "regular",
+    "state": "submitted_not_completed",
+    "scope": "Verify and freeze all retained-mode memberships after C completion; required by package job"
   }
 }

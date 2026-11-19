@@ -48,16 +48,28 @@ def after_c():
     if states and all(s.strip('| ')=='COMPLETED' for s in states):
         job=call('sbatch','--parsable','-A','desi','-q','debug','-C','cpu','-N','1',
             '--ntasks=1','--cpus-per-task=1','--mem=1G','-t','00:05:00',
-            '--dependency=afterany:61558007','--job-name=ls14-restore-review-order',
-            '--output=logs/ls14-restore-review-order-%j.out',
-            '--wrap','python scripts/v14_review_queue.py restore')
-        print('Bulk queue restoration follows evidence job:',job,flush=True)
+            '--dependency=afterany:61559510','--job-name=ls14-review-integrity-guard',
+            '--output=logs/ls14-review-integrity-guard-%j.out',
+            '--wrap','python scripts/v14_review_queue.py after-integrity')
+        print('Queue restoration guard follows integrity job:',job,flush=True)
     else:
         # A failed C chain cannot leave the bulk queue indefinitely reduced.
         restore()
 
 
+def after_integrity():
+    states=call('sacct','-X','-n','-P','-j','61559510','--format=State').splitlines()
+    if states and all(s.strip('| ')=='COMPLETED' for s in states):
+        job=call('sbatch','--parsable','-A','desi','-q','debug','-C','cpu','-N','1',
+            '--ntasks=1','--cpus-per-task=1','--mem=1G','-t','00:05:00',
+            '--dependency=afterany:61558007','--job-name=ls14-restore-review-order',
+            '--output=logs/ls14-restore-review-order-%j.out',
+            '--wrap','python scripts/v14_review_queue.py restore')
+        print('Bulk queue restoration follows evidence job:',job,flush=True)
+    else:restore()
+
+
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('mode',choices=('order','restore','after-c'));args=parser.parse_args()
-    {'order':order,'restore':restore,'after-c':after_c}[args.mode]()
+    parser.add_argument('mode',choices=('order','restore','after-c','after-integrity'));args=parser.parse_args()
+    {'order':order,'restore':restore,'after-c':after_c,'after-integrity':after_integrity}[args.mode]()

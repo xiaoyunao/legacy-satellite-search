@@ -32,6 +32,14 @@ def digest(path):
     return sha256(path.read_bytes()).hexdigest()
 
 
+def validate_registration():
+    manifest=json.loads((ROOT/'manifest.json').read_text())
+    for name,checksum in manifest['packet_hashes'].items():
+        if digest(Path(name))!=checksum:raise ValueError('Frozen case/mode packet changed: '+name)
+    if digest(Path('configs/v14/shortlist_plan.yaml'))!=manifest['plan_sha256']:
+        raise ValueError('Frozen shortlist policy changed')
+
+
 def select_packet(case):
     required=read(ROOT/f'input_modes_{case["cohort"]}.csv')
     required={int(float(r['peak_rank'])) for r in required if r['group_id']==case['source_group_id']}
@@ -54,8 +62,12 @@ def ready(case):
         for m in modes:
             rank=int(float(m['rank']))
             for suffix in ('','-environment','-images'):
-                if not (folder/f'seed-{rank}{suffix}.png').is_file():
+                path=folder/f'seed-{rank}{suffix}.png'
+                if not path.is_file():
                     reasons.append('Full-mode diagnostic PNG missing');break
+                try:
+                    with Image.open(path) as picture:picture.verify()
+                except (OSError,ValueError,SyntaxError):reasons.append('Full-mode diagnostic PNG is corrupt')
         for name in ('evidence.png','images.png','provenance.json'):
             if not (evidence/name).is_file():reasons.append(f'Observed anonymous evidence pending: {name}')
         if (evidence/'provenance.json').is_file():
@@ -68,6 +80,19 @@ def ready(case):
         if not any(r['position_type']=='discovery' for r in positions):reasons.append('Discovery-centre context pending')
         if not any(r['position_type']=='C_refit' and int(float(r['mode_rank']))==int(float(best['rank']))
                    for r in positions):reasons.append('Best fitted-centre context pending')
+        integrity=Path('results/v14/human_review/membership_integrity.json')
+        proof=json.loads(integrity.read_text()) if integrity.is_file() else {}
+        if not (proof.get('all_registered_positions') and
+                proof.get('shortlist_manifest_sha256')==digest(ROOT/'manifest.json') and
+                proof.get('csv_sha256')==digest(integrity.with_suffix('.csv')) and
+                proof.get('table_hashes',{}).get(case['case_id'])==digest(folder/'review_modes.csv')):
+            reasons.append('All-mode saved membership integrity verification pending')
+        elif (evidence/'provenance.json').is_file():
+            verified=read(integrity.with_suffix('.csv'))
+            expected=next((r for r in verified if r['case_id']==case['case_id'] and
+                           int(r['seed_rank'])==int(float(best['rank']))),{})
+            if p.get('membership_sha256')!=expected.get('membership_sha256'):
+                reasons.append('Observed panel membership differs from verified snapshot')
     return folder,modes,list(dict.fromkeys(reasons))
 
 
@@ -147,12 +172,21 @@ def build_group(cases,output,blind,require_complete):
     context=read(ROOT/'postfit_context.csv') if not blind else []
     for c in cases:
         cid=c['case_id'];folder,modes,reasons=packets[cid];first=pdf.getPageNumber()
-        new_page(pdf,cid+' | observed population and spatial evidence')
+        subtitle=''
+        if not blind and modes:
+            centre=max(modes,key=lambda m:float(m['ts']))
+            subtitle=f'Evidence centred on C fit: ICRS {float(centre["fit_ra_deg"]):.5f}, {float(centre["fit_dec_deg"]):+.5f}'
+        new_page(pdf,cid+' | observed population and spatial evidence',subtitle)
         if reasons:
             lines(pdf,['NOT READY - no substitute or simulated result is inserted.',*reasons],MARGIN,H-90)
             footer(pdf,cid+' | pending; do not grade absent evidence')
         else:
             supplement=ROOT/'evidence'/cid
+            for mode in modes:
+                mode_rank=int(float(mode['rank']))
+                for suffix in ('','-environment','-images'):
+                    path=folder/f'seed-{mode_rank}{suffix}.png'
+                    source_hashes[str(path)]=digest(path)
             for name in ('evidence.png','images.png'):
                 if name!='evidence.png':new_page(pdf,cid+' | native g/r pixels and strongest contributors')
                 source=supplement/name;source_hashes[str(source)]=digest(source)
@@ -170,7 +204,7 @@ def build_group(cases,output,blind,require_complete):
             if not blind:
                 best=max(modes,key=lambda m:float(m['ts']));rank=int(float(best['rank']))
                 new_page(pdf,cid+' | distance response, radial distribution and exposure mask',
-                         f'ICRS {float(c["ra_deg"]):.6f}, {float(c["dec_deg"]):+.6f}; {c["cohort"]}')
+                         f'Discovery ICRS {float(c["ra_deg"]):.6f}, {float(c["dec_deg"]):+.6f}; {c["cohort"]}; plots centred on C fit')
                 path=folder/f'seed-{rank}.png';source_hashes[str(path)]=digest(path)
                 image(pdf,path,(MARGIN,35,W-2*MARGIN,H-92))
                 footer(pdf,cid+' | raw discovery scores are not comparable between survey regions')
@@ -183,16 +217,18 @@ def build_group(cases,output,blind,require_complete):
                     chunk=modes[start:start+20]
                     new_page(pdf,cid+' | retained C solutions and known context',
                              'All retained seeds; C TS and deletion TS are local statistics, not global significance.')
-                    x=[MARGIN,90,155,220,292,370,462,555,660]
-                    headers=['seed','seed DM','fit DM','r_h (arcmin)','C TS','minus top 1','minus top 3','N_eff','image pending']
-                    pdf.setFont('Helvetica-Bold',9)
+                    x=[MARGIN,78,132,186,248,312,376,440,504,596,688]
+                    headers=['seed','seed DM','fit DM','r_h (arcmin)','C TS','minus top 1','minus top 3','N_eff','C RA (deg)','C Dec (deg)','image pending']
+                    pdf.setFont('Helvetica-Bold',8)
                     for xx,h in zip(x,headers):pdf.drawString(xx,H-78,h)
-                    y=H-97;pdf.setFont('Helvetica',9)
+                    y=H-97;pdf.setFont('Helvetica',8)
                     for m in chunk:
                         vals=[m.get(k,'') for k in ('rank','seed_dm','fit_dm','fit_rh_arcmin','ts',
-                              'C_refit_TS_without_top1','C_refit_TS_without_top3','effective_members','image_pending')]
-                        for xx,value in zip(x,vals):
-                            try:value=f'{float(value):.3f}'
+                              'C_refit_TS_without_top1','C_refit_TS_without_top3','effective_members',
+                              'fit_ra_deg','fit_dec_deg','image_pending')]
+                        for j,(xx,value) in enumerate(zip(x,vals)):
+                            try:value=(str(int(float(value))) if j==0 else
+                                       f'{float(value):.5f}' if j in (8,9) else f'{float(value):.3f}')
                             except (ValueError,TypeError):pass
                             pdf.drawString(xx,y,str(value))
                         y-=15
@@ -215,6 +251,7 @@ def build_group(cases,output,blind,require_complete):
 
 def run(output,require_complete=False):
     output.mkdir(parents=True,exist_ok=True)
+    validate_registration()
     previous=output/'package_manifest.json'
     if previous.is_file():
         saved=json.loads(previous.read_text())
@@ -236,6 +273,7 @@ def run(output,require_complete=False):
     manifest=dict(
         utc=datetime.now(timezone.utc).isoformat(),shortlist_manifest_sha256=digest(ROOT/'manifest.json'),
         compiler_sha256=digest(Path(__file__)),
+        membership_integrity_sha256=digest(Path('results/v14/human_review/membership_integrity.json')) if require_complete else None,
         versions={name:version(name) for name in ('reportlab','pypdf','pillow')},
         materials_complete=all(r['materials_complete'] for r in results.values()),
         render_QA_complete=False,ready_for_human_review=False,
@@ -262,6 +300,7 @@ def run(output,require_complete=False):
 
 def preparation_status(output):
     output.mkdir(parents=True,exist_ok=True)
+    validate_registration()
     cases=read(ROOT/'cases.csv');rows=[]
     for case in cases:
         _,modes,reasons=ready(case)
@@ -272,6 +311,8 @@ def preparation_status(output):
     released=output/'package_manifest.json'
     state=dict(utc=datetime.now(timezone.utc).isoformat(),registered=len(rows),
         retained_C_packets_complete=sum(r['C_modes_complete']>0 for r in rows),
+        observed_supplement_packets_present=sum(all((ROOT/'evidence'/r['case_id']/name).is_file()
+                                                   for name in ('evidence.png','images.png','provenance.json')) for r in rows),
         measured_review_ready=sum(r['measured_review_ready'] for r in rows),
         materials_complete=all(r['measured_review_ready'] for r in rows),
         ready_for_human_review=(json.loads(released.read_text()).get('ready_for_human_review',False) if released.is_file() else False),

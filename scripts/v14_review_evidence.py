@@ -32,13 +32,24 @@ def run(case_id=None, require_all=False):
     if require_all and any(packet(c)[1] is None for c in cases):
         raise ValueError('Full review evidence requires every registered C packet; pending cases are not silently omitted')
     root=Path(os.environ['LS_DR11_ROOT']);data_root=Path(os.environ['LS_SAT_DATA'])
+    proof=Path('results/v14/human_review/membership_integrity.json')
+    if proof.is_file() and sha(proof.with_suffix('.csv'))!=json.loads(proof.read_text()).get('csv_sha256'):
+        raise ValueError('Saved membership integrity CSV differs from its manifest')
+    frozen_rows=read_csv(proof.with_suffix('.csv')) if proof.is_file() else []
+    frozen={(r['case_id'],int(r['seed_rank'])):r for r in frozen_rows}
+    if require_all and not (proof.is_file() and json.loads(proof.read_text()).get('all_registered_positions')):
+        raise ValueError('The full saved-membership integrity step must precede complete evidence rendering')
     bricks_by_region={}
     for case in cases:
         folder,mode=packet(case)
         if mode is None:continue
         rank=int(float(mode['rank']));cohort=case['cohort'];field_id=case['field']
         output=base/'evidence'/case['case_id'];output.mkdir(parents=True,exist_ok=True)
-        membership=data_root/'runs/v14'/f'{field_id}-base'/f'membership-main-A-{rank}.npz'
+        snapshot=frozen.get((case['case_id'],rank))
+        membership=(data_root/snapshot['frozen_path'] if snapshot else
+                    data_root/'runs/v14'/f'{field_id}-base'/f'membership-main-A-{rank}.npz')
+        if snapshot and sha(membership)!=snapshot['membership_sha256']:
+            raise ValueError('Frozen membership source changed')
         config=Path('configs/v14/cohorts')/cohort
         previous=output/'provenance.json'
         if previous.is_file():
@@ -76,7 +87,13 @@ def run(case_id=None, require_all=False):
         axes[0,0].scatter(*(sample[near,:2]-(x,y)).T,s=7,c='#b6b6b6')
         members=prob>.05
         axes[0,0].scatter(*(sample[members,:2]-(x,y)).T,s=17,c=prob[members],cmap='plasma',vmin=0,vmax=1)
-        axes[0,0].add_patch(plt.Circle((0,0),rh,fill=False,color='tab:blue'))
+        for scale,color,style,label in ((1,'tab:blue','-','C half-light contour'),
+                                        (1.5,'#3a7650','--','CMD core'),
+                                        (3.5,'#545454',':','CMD background annulus'),
+                                        (np.sqrt(3.5**2+1.5**2),'#545454',':',None)):
+            axes[0,0].add_patch(plt.Circle((0,0),scale*rh,fill=False,color=color,lw=.8,
+                                           linestyle=style,label=label))
+        axes[0,0].legend(loc='lower left',fontsize=7,framealpha=.8)
         axes[0,0].set(xlabel='East (arcmin)',ylabel='North (arcmin)',title='Selected sources and C membership',
                       xlim=(-6*rh,6*rh),ylim=(-6*rh,6*rh),aspect='equal')
         for ax,use,title in ((axes[0,1],core,'Core'),(axes[1,0],off,'Equal geometric area background')):

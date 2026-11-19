@@ -1,0 +1,13 @@
+{
+  "job": "61559482",
+  "positions": 2,
+  "modes": 6,
+  "all_registered_positions": false,
+  "shortlist_manifest_sha256": "ef33e961841e13e5b1e6213b7798bb91acea85d7cd60d1e845b60efbcf014804",
+  "table_hashes": {
+    "P001": "f63c5933a6e4bc85d48be4e9dc16780ba3d5d071552525a115976359a9495cde",
+    "B001": "ae19fa32819cb849c78e1a0b85260fb6e1316c1b20bd22bb40d839c135cf77eb"
+  },
+  "verification_code_sha256": "989a4a5a2e67828ab3a33519e9049bce22f8ba34361834b494428d2dcd6bdbca",
+  "scope": "Every included saved C membership reproduces local count, normalized richness and likelihood; immutable source arrays remain on NERSC scratch. This is output integrity, not a new fit, discovery or human scientific grade."
+}

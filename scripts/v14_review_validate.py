@@ -14,15 +14,16 @@ from PIL import Image,ImageDraw,ImageStat
 from pypdf import PdfReader
 
 if __package__:
-    from .v14_review_pdf import read,ROOT
+    from .v14_review_pdf import read,ROOT,validate_registration
 else:
-    from v14_review_pdf import read,ROOT
+    from v14_review_pdf import read,ROOT,validate_registration
 
 
 def digest(path):return sha256(path.read_bytes()).hexdigest()
 
 
 def run(package,work,approve=False):
+    validate_registration()
     manifest_path=package/'package_manifest.json'
     manifest=json.loads(manifest_path.read_text())
     if not manifest.get('materials_complete'):raise ValueError('The complete 75-object cohort is required for release QA')

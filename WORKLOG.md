@@ -2,6 +2,17 @@
 
 ## 2026-11-19
 
+### 持续目标：真实补跑验收与逐模式成员绑定
+
+- 以 20282cd 清洁工作树继续；目标未完成。明确核查活跃 C/CCD/材料链，均为 live PENDING，没有将排队当终止或复制任务。61554330_0 COMPLETED 17:55、61469851_19 COMPLETED 13:33；新 d 审计 3151 完成/8 空场/13626.117035108022 owned deg²，6 retry 验收、9 live-covered、0 uncovered。
+- 检查 C 实现确认 membership 用全局 field/depth/rank 路径，文件存在不足以证明匹配所用 C 行。新增 v14_review_integrity：实际 NPZ 的计数、唯一 ID、概率归一化与拟合 richness×integral、重建 TS 均需匹配；只做输出一致性，不优化新模型。验证后原始数组固定到 scratch 的 shortlist-hash/case/seed+hash 路径，逐源数据不回本地。
+- 61559482 真实原型完成 37 秒，P001 5 模式＋B001 1 模式全部通过，TS 重建误差在约 1e-13；保存聚合 proof，原数组留 NERSC。61559510 全验证已提交，等待 C；证据61558007改读固定源并依赖验证，组装61558755也依赖验证。包含已完成旧 smoke 的更新被 Slurm 拒为 dependency problem；去掉已满足旧项、仅保留活跃任务后成功。
+- 全验证版本新增 CSV→JSON 哈希绑定；原型执行源另存 references/run_sources/v14_review_integrity_61559482.py，并与实际作业记录的源码 SHA256 完全比对通过，保留版本差异的可复现性。
+- 修补恢复链：C 失败立即恢复 bulk Nice，C 成功登记 afterany integrity guard；验证失败恢复，成功再登记 afterany evidence 恢复。新增失败分支回归，不改变科学切选/种子/搜索器。实际恢复尚未发生，继续核查。
+- PDF 发布额外核对冻结列表/模式/计划 hash、全部模式 PNG decode/CRC/hash、补页数组 hash 与全模式 proof 一致。保留材料计数与全体验收分离，原型不是全 cohort pass；没有填写人的等级。
+- 原型实际显示外层坐标可能被误读为拟合中心；明确标注 discovery/C 两种坐标，完整模式表增加每个 C 的 RA/Dec。用真实 P001/B001 proof 只在 ignored layout 原型里做局部版面检查，P001 新坐标标题和 11 列模式表均经 Poppler 栅格查看，正式 75 门槛未放宽。空间页新增核心/背景环边界，待全材料任务实际重绘与最终 QA。
+- 两项成员一致性测试通过；bundle PDF 六项测试通过；完整科学测试 44 项中 42 passed/2 optional PDF skips。后续运行 Python 编译、shell 与 diff 检查。下一步仍按登记链跟进全 C、完整补页/环境、组装和全页 QA，同时继续初批 CCD。
+
 ### 完整人工审查包准备与队列优先级
 
 - 从 c1c0524 清洁 main 开始；status/branch/fetch/15 历史、WORKLOG、PLAN 和规则已恢复。原生工具完整读取 46d21aad（5,020 字符，4 轮，无后页）。用户等完整材料后亲自审核；不替用户写新等级/判断。已建立持续目标，未以排队或部分包为完成。
