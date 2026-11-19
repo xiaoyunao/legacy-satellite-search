@@ -2,8 +2,8 @@
 
 ## 2026-11-19T19:10Z — close production with existing owners
 
-1. Follow remaining415 registered fields in original outside-census arrays; q6447 complete+29 zero-valid-gr,174 scan retries accepted. Submit only actual terminal uncovered gaps. Keep frozen detector/cuts/region policies.
-2. Finish C61584021 remaining shards,61585731,61590980,61591390 and original regional chains; audit actual terminal products/exact retained seeds before integration. Preserve partial timeout/OOM products and global-release dependencies.
+1. Follow remaining413 registered fields in original outside-census arrays; r6449 complete+29 zero-valid-gr,174 scan retries accepted. Submit only actual terminal uncovered gaps. Keep frozen detector/cuts/region policies.
+2. Finish C61584021 remaining shards,61585731,61590980,61591390,61592117 and original regional chains; audit actual terminal products/exact retained seeds before integration. Preserve partial timeout/OOM products and global-release dependencies.
 3. Accept the interim6269-mask/720-tile union25181.084427deg² (qualified subset18173.912657), but rebuild inventory/union at final source clock after all fields terminate. Do not substitute interim all-ordinary/development or source-lag subsets for final production.
 4. Preserve accepted144 CCD results, formal baseline replay and measured stamp sensitivity. Independent stellar-reference and four-local-PS1 condition results establish conditional limits, not validated physical PS1 transport. A defensible three-arm physical comparison still needs condition-matched independent truth or separately validated native PS1 response/crowding; do not apply a scalar depth correction or claim zero gain.
 5. After source/area/C convergence, freeze independent review units/priority+probability sampling; include original75, finish evidence/membership/privacy/page QA and deliver once. Hold new identity-bearing context until stage-one responses are sealed. No interim grades, candidate promotion, abundance inference or manuscript writing.

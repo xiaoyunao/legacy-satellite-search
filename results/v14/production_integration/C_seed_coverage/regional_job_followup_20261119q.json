@@ -1,0 +1,556 @@
+{
+  "utc": "2026-11-19T19:15:11.828647+00:00",
+  "command": [
+    "sacct",
+    "-j",
+    "61470250,61470252,61470254,61470256,61470260,61470264,61470266,61568974,61579635,61584021,61585731,61590980,61591390,61592117",
+    "-X",
+    "--array",
+    "-n",
+    "-P",
+    "-o",
+    "JobID,State,ExitCode,Elapsed"
+  ],
+  "accounting": [
+    {
+      "job": "61470250_0",
+      "state": "TIMEOUT",
+      "exit_code": "0:0",
+      "elapsed": "01:30:19"
+    },
+    {
+      "job": "61470250_1",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:58:12"
+    },
+    {
+      "job": "61470250_2",
+      "state": "TIMEOUT",
+      "exit_code": "0:0",
+      "elapsed": "01:30:06"
+    },
+    {
+      "job": "61470250_3",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:27:42"
+    },
+    {
+      "job": "61470250_4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:36:45"
+    },
+    {
+      "job": "61470250_5",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:43:08"
+    },
+    {
+      "job": "61470250_6",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:53:11"
+    },
+    {
+      "job": "61470250_7",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:47:05"
+    },
+    {
+      "job": "61470252_0",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "01:06:56"
+    },
+    {
+      "job": "61470252_1",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:52:57"
+    },
+    {
+      "job": "61470252_2",
+      "state": "TIMEOUT",
+      "exit_code": "0:0",
+      "elapsed": "01:30:02"
+    },
+    {
+      "job": "61470252_3",
+      "state": "TIMEOUT",
+      "exit_code": "0:0",
+      "elapsed": "01:30:01"
+    },
+    {
+      "job": "61470252_4",
+      "state": "RUNNING",
+      "exit_code": "0:0",
+      "elapsed": "00:31:44"
+    },
+    {
+      "job": "61470252_5",
+      "state": "RUNNING",
+      "exit_code": "0:0",
+      "elapsed": "00:05:56"
+    },
+    {
+      "job": "61470252_6",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470252_7",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470254_0",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "01:05:41"
+    },
+    {
+      "job": "61470254_1",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "01:18:09"
+    },
+    {
+      "job": "61470254_2",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:52:43"
+    },
+    {
+      "job": "61470254_3",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:34:44"
+    },
+    {
+      "job": "61470254_4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "01:05:03"
+    },
+    {
+      "job": "61470254_5",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:32:23"
+    },
+    {
+      "job": "61470254_6",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:40:09"
+    },
+    {
+      "job": "61470254_7",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:39:07"
+    },
+    {
+      "job": "61470256_0",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470256_1",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470256_2",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470256_3",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470256_4",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470256_5",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470256_6",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470256_7",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470260_0",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:16:28"
+    },
+    {
+      "job": "61470260_1",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:10:52"
+    },
+    {
+      "job": "61470260_2",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:02:35"
+    },
+    {
+      "job": "61470260_3",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:17:37"
+    },
+    {
+      "job": "61470260_4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:08:41"
+    },
+    {
+      "job": "61470260_5",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:22:43"
+    },
+    {
+      "job": "61470260_6",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:06:09"
+    },
+    {
+      "job": "61470260_7",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:03:50"
+    },
+    {
+      "job": "61470264_0",
+      "state": "OUT_OF_MEMORY",
+      "exit_code": "0:125",
+      "elapsed": "00:12:35"
+    },
+    {
+      "job": "61470264_1",
+      "state": "OUT_OF_MEMORY",
+      "exit_code": "0:125",
+      "elapsed": "00:31:48"
+    },
+    {
+      "job": "61470264_2",
+      "state": "OUT_OF_MEMORY",
+      "exit_code": "0:125",
+      "elapsed": "00:03:43"
+    },
+    {
+      "job": "61470264_3",
+      "state": "OUT_OF_MEMORY",
+      "exit_code": "0:125",
+      "elapsed": "00:31:44"
+    },
+    {
+      "job": "61470264_4",
+      "state": "OUT_OF_MEMORY",
+      "exit_code": "0:125",
+      "elapsed": "00:09:16"
+    },
+    {
+      "job": "61470264_5",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:35:14"
+    },
+    {
+      "job": "61470264_6",
+      "state": "TIMEOUT",
+      "exit_code": "0:0",
+      "elapsed": "01:30:03"
+    },
+    {
+      "job": "61470264_7",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470266_0",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470266_1",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470266_2",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470266_3",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470266_4",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470266_5",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470266_6",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61470266_7",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61568974_0",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:03:55"
+    },
+    {
+      "job": "61568974_1",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:02:46"
+    },
+    {
+      "job": "61568974_2",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:06:16"
+    },
+    {
+      "job": "61568974_3",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:02:00"
+    },
+    {
+      "job": "61568974_4",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:05:11"
+    },
+    {
+      "job": "61568974_5",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:02:16"
+    },
+    {
+      "job": "61568974_6",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:02:54"
+    },
+    {
+      "job": "61568974_7",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:03:07"
+    },
+    {
+      "job": "61579635_0",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "01:46:04"
+    },
+    {
+      "job": "61579635_2",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "01:40:11"
+    },
+    {
+      "job": "61584021_2",
+      "state": "TIMEOUT",
+      "exit_code": "0:0",
+      "elapsed": "00:29:00"
+    },
+    {
+      "job": "61584021_0",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61584021_1",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61584021_4",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61585731_3",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61590980_6",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61591390_2",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61592117_2",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    },
+    {
+      "job": "61592117_3",
+      "state": "PENDING",
+      "exit_code": "0:0",
+      "elapsed": "00:00:00"
+    }
+  ],
+  "terminal_failure_followup": [
+    {
+      "failed_job": "61470250_0",
+      "failed_state": "TIMEOUT",
+      "registered_followup": "61579635_0",
+      "followup_scheduler_state": "COMPLETED",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470250_2",
+      "failed_state": "TIMEOUT",
+      "registered_followup": "61579635_2",
+      "followup_scheduler_state": "COMPLETED",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470252_2",
+      "failed_state": "TIMEOUT",
+      "registered_followup": "61592117_2",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470252_3",
+      "failed_state": "TIMEOUT",
+      "registered_followup": "61592117_3",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470264_0",
+      "failed_state": "OUT_OF_MEMORY",
+      "registered_followup": "61584021_0",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470264_1",
+      "failed_state": "OUT_OF_MEMORY",
+      "registered_followup": "61584021_1",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470264_2",
+      "failed_state": "OUT_OF_MEMORY",
+      "registered_followup": "61591390_2",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470264_3",
+      "failed_state": "OUT_OF_MEMORY",
+      "registered_followup": "61585731_3",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470264_4",
+      "failed_state": "OUT_OF_MEMORY",
+      "registered_followup": "61584021_4",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61470264_6",
+      "failed_state": "TIMEOUT",
+      "registered_followup": "61590980_6",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    },
+    {
+      "failed_job": "61584021_2",
+      "failed_state": "TIMEOUT",
+      "registered_followup": "61591390_2",
+      "followup_scheduler_state": "PENDING",
+      "scientific_product_acceptance": "separate_exact_source_seed_and_membership_audit_required"
+    }
+  ],
+  "uncovered_terminal_C_tasks": [],
+  "registration_sha256": {
+    "results/v14/production_integration/C_seed_coverage/small_retry_debug_execution.json": "7273ca6619b42c6742ac59d2c126f6b0f1f98d59f90274846fcfe892b496449e",
+    "results/v14/production_integration/C_seed_coverage/delve_extension_timeout_retry_execution.json": "ff7411a031596b62ae06693a89c6cd41bb72ee1b22f8d4e5a66fc26d4aa019e2",
+    "results/v14/production_integration/C_seed_coverage/south_delve_timeout_retry_execution.json": "f52e2df4f00b005629519d3755d097762c6732e71cbeec87c86475f1b2bdd9c4",
+    "results/v14/production_integration/C_seed_coverage/delve_extension_oom_retry_execution.json": "10109d6bfe678fddfa03ab6dc2e786aac3d0691917aa544768786a05beac6414",
+    "results/v14/production_integration/C_seed_coverage/delve_extension_debug_fallback_execution.json": "0f82b970582559896b72527e02c88e8463f0385f127066d073ed1a4879322054",
+    "results/v14/production_integration/C_seed_coverage/delve_extension_oom_retry_additional_execution.json": "6fabfcd311be8ad165f9c746b16d45db7da79dae33f1e1076c52496b5a2bfae5",
+    "results/v14/production_integration/C_seed_coverage/north_retry_execution.json": "e12aa840984e6cda866a8cec4bb4733269cc13d035a217d9d8efb82406c03cd1"
+  },
+  "scope": "Scheduler followup only: pending/submitted/completed Slurm state is not same-record C acceptance. Earlier failed attempts and partial products are retained. This is not a final catalogue or review release."
+}

@@ -2,6 +2,11 @@
 
 ## 2026-11-20
 
+### 03:16 CST — complete regional failure-to-owner audit
+
+- Follow-up19:16Z: full regional accounting75 tasks identifies11 failed C attempts; all now have a registered live/completed follow-up (scheduler coverage, not scientific acceptance). Newly confirmed South DELVE original2/3 TIMEOUT are covered by **61592117** (784/632 identical retained seeds,403/406groups,128G/four hours). Both global release jobs wait for it. Regional75-task/11-failure audit has zero uncovered failures. Scan r19:15Z is6449complete+29zero-valid-gr/6891,174scan retries accepted,zero uncovered; summed R14 owned area24330.253906249996deg².413 fields remain, covered by the original pending arrays; outside-extension111 completed1:06:06. Queued work is not a completed final sample.
+- Commands: full expanded sacct regional-job list, immutable source/seed preflight, conditional sbatch and release-dependency readback. Files: C_seed_coverage/south_delve_timeout_retry_execution.json and regional_job_followup_20261119q.json; progress_r and status/memory/plan/report. No C mathematics or source-selection change. Next: monitor registered owners and accept exact-source products before final integration.
+
 ### 03:10 CST — interim union accepted; physical PS1 transfer constrained
 
 - Search audit q19:02Z: **6447/6891 complete +29 no-valid-gr terminals**, all terminal masks have zero positive valid area; **24329.532515432093 summed R14 owned deg²**. All174 registered scan-retry fields accepted, zero live-covered or uncovered retry gaps. Remaining415 registered fields still require terminal accounting; remaining original outside-census arrays are queued/running. This is not a final historical union or a measured-gain footprint.
