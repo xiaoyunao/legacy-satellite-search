@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-19T20:00:51.346116+00:00",
+  "job": "61469845_151",
+  "registered_field_ids": [
+    "v14_south_outside_census_1209",
+    "v14_south_outside_census_1210",
+    "v14_south_outside_census_1211",
+    "v14_south_outside_census_1212",
+    "v14_south_outside_census_1213",
+    "v14_south_outside_census_1214",
+    "v14_south_outside_census_1215",
+    "v14_south_outside_census_1216"
+  ],
+  "config_sha256": "320a71a90447fca775bb4f5aba202dbcdf13a359759552d0068909b4a6a1b466",
+  "spooled_batch_sha256": "e640a5849b10f579d89348b5aa34ffd655aa78d0dbef1fcbfb6e1946af00dea3",
+  "command": [
+    "scontrol",
+    "update",
+    "JobId=61469845_151",
+    "QOS=shared",
+    "Partition=shared_milan_ss11",
+    "NumCPUs=64",
+    "CPUsPerTask=8"
+  ],
+  "returncode": 1,
+  "stderr": "61469845_151: Unspecified error (Job request does not match any supported policy.)\n",
+  "before": "JobId=61469845 ArrayJobId=61469845 ArrayTaskId=151 ArrayTaskThrottle=6 JobName=ls14-south_outside_census UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:20:00 TimeMin=N/A SubmitTime=2026-11-17T05:04:12 EligibleTime=2026-11-19T10:34:51 AccrueTime=Unknown StartTime=2026-11-19T12:00:50 EndTime=2026-11-19T13:20:50 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-19T12:00:47 Scheduler=Backfill:* Partition=regular_milan_ss11 AllocNode:Sid=login24:1909868 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=32 NumTasks=8 CPUs/Task=4 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=32,mem=104G,node=1,billing=32 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=4 MinMemoryNode=104G MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=u2:1 LicensesAlloc=(null) Network=(null) Command=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7/scripts/v14_batches.sh SubmitLine=sbatch --parsable -A desi -q regular -C cpu -N1 -n8 -c4 --mem=104G -t 01:20:00 -o logs/%x-%A_%a.log --array=0-190%1 -J ls14-south_outside_census --dependency=afterok:61469829 --kill-on-invalid-dep=yes scripts/v14_batches.sh south_outside_census 1526 WorkDir=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7 StdErr= StdIn=/dev/null StdOut=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7/logs/ls14-south_outside_census-61469845_151.log KillOnInvalidDependent=Yes TresPerTask=cpu=4\n",
+  "after": "JobId=61595578 ArrayJobId=61469845 ArrayTaskId=151 ArrayTaskThrottle=6 JobName=ls14-south_outside_census UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:20:00 TimeMin=N/A SubmitTime=2026-11-17T05:04:12 EligibleTime=2026-11-19T10:34:51 AccrueTime=Unknown StartTime=2026-11-19T12:00:51 EndTime=2026-11-19T13:20:51 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-19T12:00:47 Scheduler=Backfill:* Partition=regular_milan_ss11 AllocNode:Sid=login24:1909868 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=32 NumTasks=8 CPUs/Task=4 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=32,mem=104G,node=1,billing=32 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=4 MinMemoryNode=104G MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=u2:1 LicensesAlloc=(null) Network=(null) Command=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7/scripts/v14_batches.sh SubmitLine=sbatch --parsable -A desi -q regular -C cpu -N1 -n8 -c4 --mem=104G -t 01:20:00 -o logs/%x-%A_%a.log --array=0-190%1 -J ls14-south_outside_census --dependency=afterok:61469829 --kill-on-invalid-dep=yes scripts/v14_batches.sh south_outside_census 1526 WorkDir=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7 StdErr= StdIn=/dev/null StdOut=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7/logs/ls14-south_outside_census-61469845_151.log KillOnInvalidDependent=Yes TresPerTask=cpu=4\n",
+  "state": "resource_change_rejected_original_regular_owner_preserved",
+  "scope": "Same existing pending8-field outside-census batch. Frozen search/configuration,104G request and80minute walltime unchanged. Actual spooled batch was inspected:8 scientific field workers,12500M/four-CPU per-field steps, all unchanged. Parent CPU reservation rises32\u219264logical CPUs to respect current shared-partition1905MiB/CPU memory mapping (104GiB/64<1905MiB); no billing-rule bypass or change to the actual per-field process/threads. Shared CPU partition/QOS resource-only pilot; no new job, owner, retry field, scientific parameter or duplicate scan. Official shared queue charges fractional nodes; actual performance/acceptance remain unmeasured until terminal field proofs.",
+  "documentation": "https://docs.nersc.gov/jobs/examples/#shared",
+  "scientific_experiment_executed_in_shared_queue": false
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "sbatch",
+    "--test-only",
+    "-A",
+    "desi",
+    "-q",
+    "shared",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n9",
+    "-c8",
+    "--mem=128G",
+    "-t",
+    "04:00:00",
+    "--wrap",
+    "true"
+  ],
+  "response": "sbatch: Job61596117 to start at2027-01-18T04:37:05 using72processors on nid004137/shared_milan_ss11",
+  "no_job_submitted": true,
+  "scope": "Scheduling preflight only;61596117 is a test-only scheduler identifier, not a registered running/submitted science job. The very late provisional estimate is not a promised start date. Shared-queue continuation was not adopted; original regular scan owners remain unchanged."
+}

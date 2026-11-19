@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-19T20:14:41.156511+00:00",
+  "job": "61470252_4",
+  "source": "results/v14/discovery/south_delve/main/sky_group_candidates.csv",
+  "source_sha256": "18407c12810fdfc2217f5ce8980e986a0376861e48cd1c08b47c8a792bf403e2",
+  "selection_sha256": "4282fa8741ad0c25a4667b1ea150d1482acf67e750915a4294edb55467650087",
+  "selected_seeds": 996,
+  "accepted_large_numeric_shard": "results/v14/candidate_review/v14/south_delve/06/acceptance.json",
+  "accepted_large_numeric_shard_sha256": "91f47f3f5f222dca381dae6778852f8fb3bb7645e448dc49ad43a7bf58c68fa7",
+  "before": "JobId=61584434 ArrayJobId=61470252 ArrayTaskId=4 ArrayTaskThrottle=4 JobName=ls14-c-south_delve UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67812 Nice=0 Account=desi QOS=regular_1 JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=01:31:14 TimeLimit=04:00:00 TimeMin=N/A SubmitTime=2026-11-17T05:08:33 EligibleTime=2026-11-19T10:40:22 AccrueTime=2026-11-19T09:14:50 StartTime=2026-11-19T10:43:27 EndTime=2026-11-19T14:43:27 Deadline=N/A PreemptEligibleTime=2026-11-19T10:43:27 PreemptTime=None SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-19T10:43:27 Scheduler=Backfill Partition=regular_milan_ss11 AllocNode:Sid=login11:773876 ReqNodeList=(null) ExcNodeList=(null) NodeList=nid007093 BatchHost=nid007093 StepMgrEnabled=Yes NumNodes=1 NumCPUs=256 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=128G,node=1,billing=8 AllocTRES=cpu=256,mem=128G,node=1,billing=256 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=128G MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=u2:1 LicensesAlloc=u2:1 Network=(null) Command=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7/scripts/v14_review.sh SubmitLine=sbatch --parsable -A desi -q regular -C cpu -N1 -n1 -c8 --mem=18G -t 01:30:00 -o logs/%x-%j.log -J ls14-c-south_delve --dependency=afterok:61470251 --array=0-7%2 scripts/v14_review.sh v14 south_delve 8 WorkDir=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7 StdErr= StdIn=/dev/null StdOut=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7/logs/ls14-c-south_delve-61584434.log TresPerTask=cpu=8 ResvPorts=63001-64000\n",
+  "stage": "prepared",
+  "scope": "Same original running C owner is requeued once after actual plotting bottleneck and582/98-seed deferred production proofs. Original partial plots/tables/logs are archived before restart. No scientific mode, selection, fit mathematics, discovery threshold or job identity changes; final selected evidence remains mandatory.",
+  "release_dependencies": {
+    "61470267": {
+      "previous": "afterany:61470252_*(unfulfilled),afterany:61470256_*(unfulfilled),afterany:61470264_*(unfulfilled),afterany:61470266_*(unfulfilled),afterany:61584021_*(unfulfilled),afterany:61585731_*(unfulfilled),afterany:61590980_*(unfulfilled),afterany:61592117_*(unfulfilled)",
+      "current": "afterany:61470252,afterany:61470256,afterany:61470264,afterany:61470266,afterany:61584021,afterany:61585731,afterany:61590980,afterany:61592117,afterany:61584434"
+    },
+    "61470508": {
+      "previous": "afterany:61470267(unfulfilled),afterany:61584021_*(unfulfilled),afterany:61585731_*(unfulfilled),afterany:61590980_*(unfulfilled),afterany:61592117_*(unfulfilled)",
+      "current": "afterany:61470267,afterany:61584021,afterany:61585731,afterany:61590980,afterany:61592117,afterany:61584434"
+    }
+  },
+  "requeuehold": {
+    "command": [
+      "scontrol",
+      "requeuehold",
+      "61470252_4"
+    ],
+    "returncode": 1,
+    "stderr": "61470252_4: Requested operation is presently disabled\n"
+  }
+}

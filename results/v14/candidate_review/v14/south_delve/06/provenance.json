@@ -1,0 +1,14 @@
+{
+  "job": "61585146",
+  "input": "results/v14/discovery/south_delve/main/sky_group_candidates.csv",
+  "input_sha256": "18407c12810fdfc2217f5ce8980e986a0376861e48cd1c08b47c8a792bf403e2",
+  "selection_sha256": "e08af8fdf942df0f9d856b9ce5858c7c05d9c0e94f6a8d3eb0bc358c4e015fb5",
+  "count": 8,
+  "index": 6,
+  "visual_review_pending": true,
+  "blinded_cross_id": true,
+  "review_implementation_sha256": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
+  "search_config_sha256": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d",
+  "render_diagnostics": false,
+  "diagnostic_policy": "pending_final_selected_evidence"
+}
