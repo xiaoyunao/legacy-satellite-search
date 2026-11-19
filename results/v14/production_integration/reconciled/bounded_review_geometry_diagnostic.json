@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "results/v14/production_integration/reconciled/provisional_positions.csv": "a2f2048748b5c961af128b394aa390c9497b627691d69c13f207fb683f76286f",
+    "results/v14/production_integration/reconciled/frozen75_crosswalk.csv": "b89046f1afda02890d905ed175ff0aa608d54653ca130f27d32a84544c53171c"
+  },
+  "code_sha256": "7a264847d7147a89962cdefb3e0dcd61720bbde4f79cb4f5779220ae9732cc99",
+  "input_positions": 7822,
+  "input_source_records": 7994,
+  "retained_positions": 7822,
+  "unique_positions": 7822,
+  "sky_only_greedy_packets": 6881,
+  "maximum_pairwise_span_arcmin": 4.9958598225168735,
+  "span_cap_arcmin": 5,
+  "packet_size_counts": {
+    "1": 6398,
+    "4": 44,
+    "7": 13,
+    "2": 292,
+    "5": 31,
+    "6": 19,
+    "3": 76,
+    "13": 1,
+    "10": 1,
+    "12": 1,
+    "8": 4,
+    "9": 1
+  },
+  "largest_packet_positions": 13,
+  "original75_crosswalk_rows_retained": 75,
+  "human_grades_unfilled": true,
+  "ordering": "ascending immutable input provisional_position_id; first compatible existing complete-link packet",
+  "final_review_units_defined": false,
+  "sampling_performed": false,
+  "scope": "Diagnostic on the existing provisional aggregate snapshot only. Every position and its unchanged source-record/mode linkage is retained, including incompatible distance hypotheses and known-environment responses. Bounded administrative packets prevent long connected chains; they are neither distinct physical systems nor statistically independent sky trials. Nearby positions can remain in different packets. Final production, grouping rule, certainty cases, strata and positive inclusion probabilities must be frozen before any final draw; no sampled position may be rejected afterwards for proximity."
+}

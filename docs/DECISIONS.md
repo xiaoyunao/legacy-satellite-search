@@ -1,5 +1,9 @@
 # Decisions
 
+## 2026-11-19T19:27Z — bounded review geometry on the existing snapshot
+
+The observed5arcmin friends-of-friends diagnostic chained87 provisional positions and could span over40arcmin. A sky-only greedy complete-link diagnostic now requires every pair in an administrative packet to be within5arcmin, ordered only by immutable input position ID. On the unchanged7994-record/7822-position snapshot it yields6881 packets, largest13 positions, maximum pairwise span4.995860arcmin. All7822 positions and75 frozen identities remain; original source/mode links and grades are unchanged. RA-wrap, pole, chain and input-order regression cases pass. This is a prospective grouping diagnostic, not the final candidate universe, a physical-system identification or a claim of independent sky trials. Nearby cases can remain in different packets; retain their adjacency and never reject sampled cases afterwards for proximity. Freeze the final units and inclusion probabilities only after production convergence.
+
 ## 2026-11-19T19:10Z — accepted area snapshot and PS1 condition boundary
 
 - Follow-up19:16Z: full regional accounting75 tasks identifies11 failed C attempts; all now have a registered live/completed follow-up (scheduler coverage, not scientific acceptance). Newly confirmed South DELVE original2/3 TIMEOUT are covered by **61592117** (784/632 identical retained seeds,403/406groups,128G/four hours). Both global release jobs wait for it. Regional75-task/11-failure audit has zero uncovered failures. Scan r19:15Z is6449complete+29zero-valid-gr/6891,174scan retries accepted,zero uncovered; summed R14 owned area24330.253906249996deg².413 fields remain, covered by the original pending arrays; outside-extension111 completed1:06:06. Queued work is not a completed final sample.

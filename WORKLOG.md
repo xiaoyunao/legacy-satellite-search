@@ -2,6 +2,11 @@
 
 ## 2026-11-20
 
+### 03:27 CST — replace unbounded-chain diagnostic with bounded packet test
+
+- Problem: existing5arcmin connected components can span>40arcmin and contain87positions; they cannot be interpreted as one physical object. Added scripts/v14_bounded_review_geometry.py and three focused spherical-geometry/order tests. Actual old aggregate run retains7994source records/7822positions/75frozen identities,6881administrative packets,max13positions,maxspan4.995860arcmin. Existing tables and old diagnostic preserved. No final grouping freeze, random draw, user grade or selected-case key was produced.
+- Validation: changed modules parse; three focused tests pass; aggregate SHA/preservation/span checks pass. Next: freeze common-clock final units/strata after all production and required C settle.
+
 ### 03:16 CST — complete regional failure-to-owner audit
 
 - Follow-up19:16Z: full regional accounting75 tasks identifies11 failed C attempts; all now have a registered live/completed follow-up (scheduler coverage, not scientific acceptance). Newly confirmed South DELVE original2/3 TIMEOUT are covered by **61592117** (784/632 identical retained seeds,403/406groups,128G/four hours). Both global release jobs wait for it. Regional75-task/11-failure audit has zero uncovered failures. Scan r19:15Z is6449complete+29zero-valid-gr/6891,174scan retries accepted,zero uncovered; summed R14 owned area24330.253906249996deg².413 fields remain, covered by the original pending arrays; outside-extension111 completed1:06:06. Queued work is not a completed final sample.
