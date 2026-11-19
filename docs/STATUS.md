@@ -1,5 +1,16 @@
 # Status
 
+## 2026-11-19T21:40Z — native radius pairing registered; further C shards accepted
+
+The u21:33Z audit has **6521/6891 complete +29 zero-valid-gr terminals**, **24357.978722993823 summed R14 owned deg²**;341 fields remain. All174 registered scan retries are accepted,zero uncovered. Existing scan/C owners remain authoritative; queued work is not complete. This area is neither the final historical union nor a measured-gain footprint.
+
+Six additional source-bound C shards pass exact seed/group/membership checks: South DELVE04 996modes/501groups and07 1297/590; DELVE-extension07 98/34; OOM-m00 217/57; OOM-n03 384/116; timeout-p06 150/53. Their3142 modes/1351 source groups are not independent physical systems or final global C coverage. Extension07 explicitly uses a legacy provenance audit: run-start implementation/config/render policy remain unknown. On shard04,252 preserved full-render fits (208 positive TS) exactly match restarted numerical values and membership hashes. Selected final diagnostics remain mandatory.
+
+To distinguish native size-response loss from the observed IMF-luminosity confound, all eight existing100kpc/10pc/target−3 populations were registered for shrinking to3pc on the same three skies, holding rendered member identities and intrinsic light fixed. Original144 results are immutable. **61602484 completed**,three native cases/six paired-depth stage rows pass, reproducing original exposure/final/PSF/hard counts. Remaining21 native cases are submitted as **61604174**, with full stage collector **61604183**. These are image-to-catalogue stage diagnostics, without blind search or a new Pdet measurement; retain finite-list, local dust/coverage/blend/noise limits. See [registered protocol](../configs/v14_paired_radius/protocol.yaml) and results/v14/paired_radius/. Pilot outcomes do not select the remaining cases.
+
+Physical PS1 transfer remains unvalidated because the independently labelled COSMOS reference has different gr observing conditions. No physical LS−PS1 increment, radius-only completeness,50% contour or population inference is asserted. Preserve the original75 and blank grades. Final common-clock production/area/C integration, saved-membership-bound selected evidence, sampling and anonymity/page QA are still required before one human review. No manuscript writing.
+
+
 ## 2026-11-19T20:30Z — production-scale C acceptance and unchanged scan continuation
 
 - s20:23Z manifests: **6459/6891 complete +29 zero-valid-gr terminals**, **24335.501543209873 summed R14 owned deg²**,403 fields remaining. All174 registered scan retries accepted,zero uncovered. Eight original scan batches were running; retain their original owners/frozen search policy. These are not final historical/gain areas.

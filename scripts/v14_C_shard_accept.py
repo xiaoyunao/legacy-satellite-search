@@ -9,7 +9,7 @@ from ls_satsearch.run import read_csv, sha, write_json
 from scripts.v14_catalog import bound_fit_seed, number, seed_signature
 
 
-def run(directory):
+def run(directory, legacy_provenance=False):
     provenance=directory/'provenance.json';proof=json.loads(provenance.read_text())
     source=Path(proof['input']);selection=directory/'review_modes.csv'
     modes=directory/'group_review_modes.csv';summary=directory/'group_review_summary.csv'
@@ -17,9 +17,14 @@ def run(directory):
     inputs={str(p):sha(p) for p in (provenance,source,selection,modes,summary,config)}
     if proof['input_sha256']!=sha(source) or proof['selection_sha256']!=sha(selection):
         raise ValueError('Source or selected seeds changed')
-    if proof.get('search_config_sha256')!=sha(config):raise ValueError('C configuration differs')
-    if proof.get('review_implementation_sha256')!=sha(Path('src/ls_satsearch/review.py')):
+    config_recorded=proof.get('search_config_sha256') is not None
+    implementation_recorded=proof.get('review_implementation_sha256') is not None
+    if config_recorded and proof['search_config_sha256']!=sha(config):raise ValueError('C configuration differs')
+    if implementation_recorded and proof['review_implementation_sha256']!=sha(Path('src/ls_satsearch/review.py')):
         raise ValueError('Review implementation is not the current verified version')
+    if not legacy_provenance and not (config_recorded and implementation_recorded and 'render_diagnostics' in proof):
+        raise ValueError('Missing run-start metadata; explicit legacy audit required')
+    render=proof.get('render_diagnostics')
     original=defaultdict(list);selected=defaultdict(list)
     for r in read_csv(source):original[r['group_id']].append(r)
     for r in read_csv(selection):selected[r['group_id']].append(r)
@@ -39,7 +44,7 @@ def run(directory):
             p=data/row['membership_data_path']
             if sha(p)!=row['membership_sha256']:raise ValueError('Saved membership changed')
             artifacts[str(p)]=row['membership_sha256']
-            if not proof['render_diagnostics'] and (row['image_pending']!='True' or row['diagnostics_deferred']!='True'):
+            if render is False and (row['image_pending']!='True' or row['diagnostics_deferred']!='True'):
                 raise ValueError('Deferred evidence was incorrectly accepted')
     for group in totals:
         rows=[r for r in fitted if r['candidate_group_id']==group['group_id']]
@@ -50,10 +55,12 @@ def run(directory):
         exact_source_groups=len(selected),selected_seeds=sum(expected.values()),fit_states=dict(states),
         complete_membership_references=states['complete'],unique_membership_artifacts=len(artifacts),
         exact_source_and_seed_binding_passed=True,all_selected_C_fits_complete=states['complete']==sum(expected.values()),
-        render_diagnostics=proof['render_diagnostics'],final_human_evidence_accepted=False,
-        scope='Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates.'))
+        render_diagnostics=render,run_start_config_hash_recorded=config_recorded,
+        run_start_implementation_hash_recorded=implementation_recorded,legacy_provenance_audit=legacy_provenance,
+        final_human_evidence_accepted=False,
+        scope='Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata.'))
     print(dict(groups=len(selected),selected_seeds=sum(expected.values()),fit_states=dict(states),memberships=len(artifacts)))
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('directory',type=Path);run(**vars(p.parse_args()))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('directory',type=Path);p.add_argument('--legacy-provenance',action='store_true');run(**vars(p.parse_args()))

@@ -1,0 +1,28 @@
+{
+  "job": "61470264",
+  "inputs": {
+    "results/v14/candidate_review/v14/south_delve_extension/07/provenance.json": "8eb42ac2a73506aa1779babed109d92ef2a0a704bd9944f4b8eefe4017044bca",
+    "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv": "ca12c32172d971bf2d09c89b3bacebf794bf7797e91cfcf7785075d3497a61e3",
+    "results/v14/candidate_review/v14/south_delve_extension/07/review_modes.csv": "09f5efdb34fa6268ec591d606b5e61b651938d240dc08f5b337a58dad71550a9",
+    "results/v14/candidate_review/v14/south_delve_extension/07/group_review_modes.csv": "d2b4e24c54a6972e52a02b10e2cbc65d8d1a0a6878d18105925a816cb5887ac2",
+    "results/v14/candidate_review/v14/south_delve_extension/07/group_review_summary.csv": "b2fcab1c7e278e4a35e4ef8a37d72b7d46e814eee9c90e0eadd43d2969cd6673",
+    "configs/v14/cohorts/south_delve_extension/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "2f84ca82eae60153d6b5fb21a76a63fc64f376684f7e9c9551fa10d9b4a06236",
+  "exact_source_groups": 34,
+  "selected_seeds": 98,
+  "fit_states": {
+    "complete": 98
+  },
+  "complete_membership_references": 98,
+  "unique_membership_artifacts": 62,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": null,
+  "run_start_config_hash_recorded": false,
+  "run_start_implementation_hash_recorded": false,
+  "legacy_provenance_audit": true,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata.",
+  "default_missing_metadata_rejected": true
+}

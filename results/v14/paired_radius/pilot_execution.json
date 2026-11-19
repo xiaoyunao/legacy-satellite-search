@@ -1,0 +1,36 @@
+{
+  "utc": "2026-11-19T21:08:43.189550+00:00",
+  "job": "61602484",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=64G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-radius-stage-pilot",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "bash scripts/v14_paired_radius.sh pilot"
+  ],
+  "inputs": {
+    "configs/v14_paired_radius/protocol.yaml": "a917536aff5cd5164bbbb5eba26a629e19eb4fdc12b278829c2af7215847ac28",
+    "scripts/v14_paired_radius.py": "bd4ccfbddd199cf08f5ea15e9b8a344637c6c45ea1965bbc0350f7294dcd5891",
+    "scripts/v14_paired_radius_stages.py": "35c8084afbbd66160e1cbf4c0be58963caef689db49677c29a1bcdefcf2364d2",
+    "scripts/v14_paired_radius.sh": "12dfd7bf69c0e04c3d63e4536dfb2237e057646772e5ec2aa303938198cfc299"
+  },
+  "planned_new_native_cases": 24,
+  "pilot_cases": 3,
+  "pilot_rule": "First parent population by fixed trial index, all three backgrounds; source/flux/geometry/native product and old-stage-count checks only. Do not choose remaining populations by this outcome.",
+  "state": "submitted_not_complete"
+}

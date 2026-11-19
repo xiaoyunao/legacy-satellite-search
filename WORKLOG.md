@@ -2,6 +2,15 @@
 
 ## 2026-11-20
 
+### 05:40 CST — fixed-population radius experiment and additional C acceptance
+
+- Science question: original IMF light differs by radius, so isolate native size response using the same eight existing bright10pc populations shrunk to3pc across the same three skies. No new IMF/D/light/background nodes, blind search or Pdet claim. Producer/input hashes freeze24native cases; true-centre scaling and intrinsic griz/light invariance are verified. SFD is recomputed at changed positions; finite original rendered lists and non-identical photon pixels remain explicit.
+- Pilot61602484 COMPLETED/10:55:3native cases and6paired-depth rows accepted; parent exposure/final/PSF/hard counts reproduce. Remaining21 cases submitted61604174 (three7-case packs,cap2); collector61604183 afterok. The first submission failed on an expired completed-pilot controller dependency and created no job; accounting+accepted-product hash gates replace that obsolete dependency. Preserve failure metadata. No outcome-based sample extension.
+- u21:33Z:6521complete+29zero-valid-gr/6891;341pending fields;24357.978722993823 summed R14 owneddeg²;174scan retries accepted,zero uncovered. Existing queued owners retained. Six additional C shards accepted:3142modes/1351source groups; no distinct-object/global-coverage claim. Extension07 uses explicit legacy provenance, leaving absent run-start metadata unknown. Shard04 old252fits/208positiveTS match all common scientific values and immutable membership hashes exactly.
+- Files: paired-radius producer/stage scripts/wrapper/protocol/generated configs/registration and pilot aggregates; C legacy-audit flag and partial comparison helper; six accepted C aggregate shards; progress_t/u; delivery gate and main science/memory/plan/status/checklist. Raw pixels/truth/per-star arrays stayNERSC. Original144 and75frozen review objects unchanged.
+- Validation: actual pilot and source/seed/member artifact checks pass; Python parse/shell syntax and focused project unit discovery run. Next: finish21paired native cases and summarize paired stages; follow existing full-search/C owners, rebuild final common-clock production/geometry, then complete selected evidence and one final anonymous review release. PhysicalPS1 transfer,15pc/broad-sky SF and final human gates remain open.
+
+
 ### 04:30 CST — source-bound C shards accepted; old render attempts preserved
 
 - s20:23Z manifests: **6459/6891 complete +29 zero-valid-gr terminals**, **24335.501543209873 summed R14 owned deg²**,403 fields remaining. All174 registered scan retries accepted,zero uncovered. Eight original scan batches were running; retain their original owners/frozen search policy. These are not final historical/gain areas.

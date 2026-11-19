@@ -1,5 +1,13 @@
 # Plan
 
+## Current checkpoint — 2026-11-19T21:40Z
+
+1. Follow existing owners for341remaining scan fields and regional C; u6521complete+29zero-valid-gr/6891,174retries accepted/zero uncovered. Do not duplicate queued work. Accept completed source-bound C and then rebuild common-clock production/zero-peak-inclusive masks/identities/funnel.
+2. Finish the registered fixed-rendered-population native radius diagnostic: pilot61602484 accepted3cases;61604174 holds remaining21,61604183 collects all24. Reproduce original stages, retain eight shared populations/three fixed skies and intrinsic light. Analyze stage loss with paired dependence; no blind-recovery/Pdet or pure-crowding claim from this experiment. Original144 immutable.
+3. Retain accepted formal144 baseline and legacy matched-policy depth results separately. PhysicalPS1 transfer remains unsupported by current condition-mismatched independent reference; no universal response correction or physicalLS−PS1 gain.
+4. Freeze final sample/administrative units only after convergence. Render selected deferred evidence from verified membership, preserve original75, and complete probability sampling/anonymity/page QA before one final human delivery. No interim grading, automatic promotion, abundance inference or manuscript writing.
+
+
 ## 2026-11-19T19:10Z — close production with existing owners
 
 1. Follow remaining403 registered fields in original outside-census arrays; s6459 complete+29 zero-valid-gr,174 scan retries accepted. Submit only actual terminal uncovered gaps. Keep frozen detector/cuts/region policies.

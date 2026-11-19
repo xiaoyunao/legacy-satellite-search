@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-19T21:17:45.237287+00:00",
+  "production_proofs": {
+    "results/v14/candidate_review/v14/south_delve/07/acceptance.json": "143adbfb23e950deab128dffc76d3687f4bda0525c0d63fedbb8edf096b58032",
+    "results/v14/candidate_review/v14/south_delve/06/acceptance.json": "91f47f3f5f222dca381dae6778852f8fb3bb7645e448dc49ad43a7bf58c68fa7",
+    "results/v14/candidate_review/v14_oom_n/south_delve_extension/03/acceptance.json": "dadb0857e19e3441d55d23a243b5d29989ea3ea4eb85ddc4e6340bb7e26285b3"
+  },
+  "measured_completed_shards": {
+    "61470252_7": "1297modes/16:15",
+    "61470252_6": "582modes/11:11",
+    "61585731_3": "384modes/11:16"
+  },
+  "updates": [],
+  "scope": "Existing pending numerical-first South DELVE/extension C tasks only: four-hour requests reduced to one hour after actual full-shard582/1297/384-mode runtime/product proofs. Keep8CPU/128G, owners, source/selection/fit mathematics fixed. No debug-queue promotion, no outside-census sizing assumption, no measured queue-throughput or scientific-quality improvement claimed."
+}

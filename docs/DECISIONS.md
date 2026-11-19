@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-11-19T21:40Z — isolate size response at fixed rendered population
+
+Observed limitation: original radius cells do not share their IMF luminosity realization. Register all eight existing bright10pc populations on the three original skies, shrink about each true centre to3pc, preserve member order/SED/intrinsic light, recompute local extinction and retain native extraction. Endpoints are exposure, detection/association, PSF, hard selection and truth-DM CMD only; no blindsearch/Pdet or universal radius effect. Pilot3cases passes; remaining21 submitted regardless of pilot outcomes. Keep original144 immutable. If losses remain unexplained, report that boundary before proposing another branch.
+
+An explicit legacy C audit may accept source/seed/membership identity when old run-start metadata is absent, but must leave implementation/config/render provenance unknown; present mismatching hashes still fail. Newly recorded C uses the stronger run-start gate. Numerical completeness remains separate from final human evidence readiness.
+
+
 ## 2026-11-19T20:30Z — production-scale C acceptance and unchanged scan continuation
 
 - s20:23Z manifests: **6459/6891 complete +29 zero-valid-gr terminals**, **24335.501543209873 summed R14 owned deg²**,403 fields remaining. All174 registered scan retries accepted,zero uncovered. Eight original scan batches were running; retain their original owners/frozen search policy. These are not final historical/gain areas.

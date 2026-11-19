@@ -1,0 +1,16 @@
+experiment: fixed_population_radius_stage_diagnostic
+parent_version: v14_repeat
+parent_condition: [100, 10, -3.0]
+new_Plummer_rh_pc: 3
+population_rule: all eight existing parent-condition draws, ascending original trial ID; no recovery-based selection
+backgrounds: original three registered South PS1 native backgrounds
+planned_new_native_cases: 24
+pilot_task_indices: [0, 1, 2]
+held_fixed: [parent rendered member identities and row order, intrinsic griz flux, intrinsic g0/r0 and V proxy, true centre, distance, real exposure background, native processing and selection definitions]
+changed: [member offsets from the true centre scaled by the angular-radius ratio]
+extinction: recompute the same SFD correction at new positions and report its change
+photon_noise: retain parent source_poisson_seed; changed pixel models do not imply identical photons
+endpoints: [gr exposure, novel initial detection, novel final association, PSF classification, hard selection, truth-DM CMD diagnostic]
+blind_search_performed: false
+PS1_physical_response_validated: false
+scope: Paired conditional response of the same finite rendered populations, not a complete luminosity-based selection function or a population-average pure-crowding effect. Parent IMF/faint/stamp exclusions remain. Original 144 products are immutable. No new sky, distance, luminosity or stellar-population nodes.

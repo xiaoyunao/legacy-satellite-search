@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-19T21:30:30.023605+00:00",
+  "error": "Batch job submission failed: Job dependency problem",
+  "failed_dependency": "afterok:61602484",
+  "failure_before_any_remaining_job_created": true,
+  "controller_returncode": 1,
+  "controller_stderr": "slurm_load_jobs error: Invalid job id specified\n",
+  "pilot_terminal_accounting": "61602484|COMPLETED|0:0|00:10:55\n",
+  "resolution": "Pilot is scientifically accepted and COMPLETED in accounting; omit obsolete controller dependency and gate by accepted artifact hashes. No pilot or completed image is rerun."
+}

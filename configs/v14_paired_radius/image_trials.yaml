@@ -1,0 +1,38 @@
+seed: 487219
+conditions:
+- - 100
+  - 3
+  - -3.0
+- - 100
+  - 3
+  - -3.0
+- - 100
+  - 3
+  - -3.0
+- - 100
+  - 3
+  - -3.0
+- - 100
+  - 3
+  - -3.0
+- - 100
+  - 3
+  - -3.0
+- - 100
+  - 3
+  - -3.0
+- - 100
+  - 3
+  - -3.0
+splice_radius_arcmin: 2.5
+matching_radius_arcsec: 0.8
+ps1_template: isochrones/ps1/bressan2012/iso_a12.0_z0.00010.dat
+parent_trials:
+- 2
+- 8
+- 14
+- 20
+- 26
+- 32
+- 38
+- 44
