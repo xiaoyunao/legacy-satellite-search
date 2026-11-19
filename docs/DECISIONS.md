@@ -1,5 +1,14 @@
 # Decisions
 
+## 2026-11-19 Evidence-qualified area, legacy C and physical-response limits
+
+- Require explicit same-source full seed sets for legacy C certification; group labels or nearby coordinates alone cannot bind a fit to production. Keep unbound evidence visible as context. Restore original missing metadata by hashes before rerunning C, so valid historical work is not needlessly repeated.
+- Use geometric union of original working-mask cells for historical production area. The real bounded pilot proves source-area reproduction and overlap removal; preserve inventory/code hashes and keep survey-label boundary ambiguity explicit. No stellar density, nominal field sum or all-DR11 footprint may substitute for valid searched area.
+- Independent CFHT r cannot certify the faint-blue PS1 response in the measured backgrounds (0/1 supported shape references). Stop treating this image branch as truth calibration in that locus; retain its supported brighter/redder diagnostic scope and negative result. No physical ΔP claim until a defensible response and uncertainty are established.
+- The bright30pc extension restores14 members but all cases were already detected. It constrains stage counts only; retain residual26 stars and do not claim the population truncation bias is cleared. Choose any further boundary test from the full-grid failure/transition evidence, preserving the primary144.
+- Preserve original75 hash files and initial-nine validation bytes. Rechecks write new evidence namespaces; native repeat validation is idempotent. After-top3 fragility is descriptive, never a universal rejection gate: a genuine Euclid weak known system is fragile too.
+
+
 ## 2026-11-19 Source-qualified integration and finite-image guards
 
 - Accept 61568667 only as a completed interim snapshot. Reconcile the qualified historical source records alone, retain 5′ incompatible-mode links and the original 75 identity crosswalk, and leave all-required-C, exact union area and final human-review units unapproved. Ranking remains within cohort; no cross-region score equivalence is inferred.

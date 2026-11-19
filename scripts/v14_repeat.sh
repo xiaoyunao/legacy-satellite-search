@@ -19,6 +19,9 @@ case "$1" in
         ;;
     remaining)
         read -r field phase < <(.venv/bin/python scripts/v14_repeat.py remaining "$SLURM_ARRAY_TASK_ID")
+        if [[ -s "results/v14/repeat/validation/$field-$phase.json" ]]; then
+            exec .venv/bin/python scripts/v14_repeat.py validate --field "$field" --phase "$phase"
+        fi
         bash scripts/v13_native.sh "$field" "$phase"
         exec .venv/bin/python scripts/v14_repeat.py validate --field "$field" --phase "$phase"
         ;;

@@ -1,0 +1,13 @@
+{
+  "source_sha256": "e8e0e0874b0841bfcfb6211fbe1565a6aa46adb0e79e049f131fabdcaed580a9",
+  "range": "22.5 <= LS g0 <24, heldout ordinary LS SNR10 PSF; blue subset g-r<0.4",
+  "blue_heldout_references": [
+    9,
+    10
+  ],
+  "blue_point_shape_consistent": [
+    0,
+    1
+  ],
+  "scope": "The independent r images provide essentially no high-SNR morphology support for the faint-blue target locus in these local heldout samples. Shape-consistent subset PS1 selection is conditional on r detectability and may reflect luminosity/colour/observing-condition selection. Do not interpret its higher selection as measured contamination removal or a truth-level physical response."
+}

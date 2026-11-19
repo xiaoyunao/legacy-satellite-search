@@ -1,0 +1,10 @@
+{
+  "job": "61572579",
+  "site": "v14_south_response_3",
+  "phase": "trial32",
+  "tractor_sha256": "f865235d1cc9ceff5b53109a32f30c46ca56309e8c2f712a7b952f88b0c6c1d0",
+  "truth_sha256": "7cc324a374eab09595342b4b2aa87d7843afc4774979b897846257a8ff587fbf",
+  "rendered_stars": 303,
+  "native_products_validated": true,
+  "scope": "Native product contract only; blind recovery measurement is separate."
+}

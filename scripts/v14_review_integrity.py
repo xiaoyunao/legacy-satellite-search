@@ -48,7 +48,7 @@ def mode_table(case):
     raise ValueError('Retained C packet is incomplete: '+case['case_id'])
 
 
-def run(case_ids,output):
+def run(case_ids,output,prior_proof_dir=None):
     manifest=json.loads((ROOT/'manifest.json').read_text())
     if any(sha(Path(name))!=value for name,value in manifest['packet_hashes'].items()):
         raise ValueError('Frozen case/mode packet changed before membership verification')
@@ -57,7 +57,8 @@ def run(case_ids,output):
     if case_ids:cases=[r for r in cases if r['case_id'] in case_ids]
     data=Path(os.environ['LS_SAT_DATA']);rows=[];tables={}
     frozen=data/'runs/v14/review_membership_frozen'/sha(ROOT/'manifest.json')[:12]
-    previous_meta=output/'membership_integrity.json';previous_csv=output/'membership_integrity.csv'
+    prior_dir=prior_proof_dir or output
+    previous_meta=prior_dir/'membership_integrity.json';previous_csv=prior_dir/'membership_integrity.csv'
     prior={};prior_tables={}
     if previous_meta.is_file() and previous_csv.is_file():
         previous=json.loads(previous_meta.read_text())
@@ -101,4 +102,5 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--case',action='append',default=[])
     parser.add_argument('--output',type=Path,default=Path('results/v14/human_review'))
-    args=parser.parse_args();run(args.case,args.output)
+    parser.add_argument('--prior-proof-dir',type=Path,help='Read an earlier verified frozen proof without changing that release or its sources')
+    args=parser.parse_args();run(args.case,args.output,args.prior_proof_dir)

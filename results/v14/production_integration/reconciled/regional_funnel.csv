@@ -1,6 +1,12 @@
 cohort,qualified_records,provisional_positions,records_with_successful_bound_C,all_required_C_complete,effective_union_deg2,human_adjudicated
 north,1888,1867,835,,,
 north_extension,296,296,203,,,
+results/v4/holdout,23,23,23,,,
+results/v5/batches/batch1/results/holdout,38,38,38,,,
+results/v5/batches/batch2/results/holdout,34,34,34,,,
+results/v5/batches/batch3/results/holdout,27,27,27,,,
+results/v6/batches/batch1/results/holdout,21,21,21,,,
+results/v6/batches/batch2/results/holdout,18,18,18,,,
 results/v7/first_batch/results/holdout,30,30,30,,,
 results/v7/rollout/batch1/results/holdout,33,33,0,,,
 results/v7/rollout/batch2/results/holdout,19,19,19,,,

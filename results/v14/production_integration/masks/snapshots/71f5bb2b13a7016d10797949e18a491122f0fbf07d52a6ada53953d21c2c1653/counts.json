@@ -1,0 +1,17 @@
+{
+  "completed_mask_records": 5994,
+  "classes": {
+    "known_recovery_control": 1,
+    "development_calibration": 275,
+    "development_regression": 2,
+    "complete_not_in_qualified_source_roster": 1560,
+    "qualified_discovery": 4156
+  },
+  "gross_record_areas_not_union": {
+    "complete_not_in_qualified_source_roster": 5877.270771604937,
+    "development_calibration": 1098.2241203703702,
+    "development_regression": 14.189436728395059,
+    "known_recovery_control": 3.849828317901234,
+    "qualified_discovery": 17723.006062885797
+  }
+}

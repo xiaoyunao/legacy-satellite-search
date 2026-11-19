@@ -1,0 +1,82 @@
+{
+  "job": "61573759",
+  "utc": "2026-11-19T12:21:48.170017+00:00",
+  "window_ra_dec_deg": [
+    161.6,
+    169.6,
+    27.9,
+    35.9
+  ],
+  "mask_records": 32,
+  "layers": [
+    {
+      "layer": "all_ordinary_scanned",
+      "union_deg2": 52.95695658142618,
+      "summed_record_pieces_deg2": 62.89464530784636,
+      "census_boundary_ambiguity_deg2": 0.05282626343851099,
+      "census": [
+        {
+          "census_label": 0,
+          "unambiguous_deg2": 0.7296368638780477,
+          "represented_label_union_deg2": 0.731886616268797
+        },
+        {
+          "census_label": 1,
+          "unambiguous_deg2": 0.0,
+          "represented_label_union_deg2": 0.0
+        },
+        {
+          "census_label": 2,
+          "unambiguous_deg2": 12.493093714986964,
+          "represented_label_union_deg2": 12.543670226034644
+        },
+        {
+          "census_label": 3,
+          "unambiguous_deg2": 39.68139973912185,
+          "represented_label_union_deg2": 39.73422600255983
+        }
+      ],
+      "scratch_geometry": "runs/v14/area_union_pilot/71f5bb2b13a7-all_ordinary_scanned.wkb",
+      "geometry_sha256": "8fc8594b8987962d496e923b7141685f4c8ad349b7d0d70cc20ef07d1d666173"
+    },
+    {
+      "layer": "qualified_production",
+      "union_deg2": 35.58561334056216,
+      "summed_record_pieces_deg2": 38.8133192873849,
+      "census_boundary_ambiguity_deg2": 8.798313175464212e-05,
+      "census": [
+        {
+          "census_label": 0,
+          "unambiguous_deg2": 0.7317986331370417,
+          "represented_label_union_deg2": 0.731886616268797
+        },
+        {
+          "census_label": 1,
+          "unambiguous_deg2": 0.0,
+          "represented_label_union_deg2": 0.0
+        },
+        {
+          "census_label": 2,
+          "unambiguous_deg2": 0.0,
+          "represented_label_union_deg2": 0.0
+        },
+        {
+          "census_label": 3,
+          "unambiguous_deg2": 34.8537267242935,
+          "represented_label_union_deg2": 34.853814707425016
+        }
+      ],
+      "scratch_geometry": "runs/v14/area_union_pilot/71f5bb2b13a7-qualified_production.wkb",
+      "geometry_sha256": "f562cc755ba0cc158fef66b76cd99f23999333db8931d3f467260990b3433768"
+    }
+  ],
+  "seconds": 204.50426247199357,
+  "input_inventory_sha256": "71f5bb2b13a7016d10797949e18a491122f0fbf07d52a6ada53953d21c2c1653",
+  "source_checks_sha256": "0b3175a100b0e7932c1a418aa6368ebc0beb344f4c002159b1ffe7cfc1aa632d",
+  "code_sha256": "855f53b7d65b6128ca528e486fcf257954ad381a88a515c8071ddac2cb16ef33",
+  "versions": {
+    "numpy": "2.5.5",
+    "shapely": "2.2.0"
+  },
+  "scope": "Real bounded pilot, not full-project area. Exact planar union of the represented WCS-derived valid cells in equal-area RA/sinDec coordinates; no HEALPix or stellar-density regridding. Source-cell counts must reproduce each original area before union. RA seam/polar corners are handled geometrically. Census labels come from the fixed author map at each source cell center; cross-grid boundary disagreement is retained as an explicit ambiguity area rather than assigned arbitrary priority. This is working-mask area, not infinitely resolved exposure geometry, unexplored sky or a measured physical detectability-gain area."
+}

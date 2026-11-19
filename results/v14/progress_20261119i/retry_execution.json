@@ -1,0 +1,43 @@
+{
+  "job": "61574390",
+  "tasks": 7,
+  "worklist": "results/v14/progress_20261119i/retry_tasks.csv",
+  "worklist_sha256": "e70c14138eb10c614cdab344ffb698fce2929fbbe2b14c6ad54f93d0624dfff9",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=56G",
+    "-t",
+    "01:00:00",
+    "--array=0-6%2",
+    "-J",
+    "ls14-terminal-i-retry",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "scripts/v14_retry_manifest.sh",
+    "results/v14/progress_20261119i/retry_tasks.csv"
+  ],
+  "dependency_updates": [
+    {
+      "aggregate": "61470263",
+      "previous_dependency": "afterany:61469850_*(unfulfilled),afterany:61568908_*(unfulfilled),afterany:61571922_*(unfulfilled)",
+      "new_dependency": "afterany:61469850,afterany:61568908,afterany:61571922,afterany:61574390"
+    },
+    {
+      "aggregate": "61470265",
+      "previous_dependency": "afterany:61469851_*(unfulfilled),afterany:61568908_*(unfulfilled),afterany:61571922_*(unfulfilled)",
+      "new_dependency": "afterany:61469851,afterany:61568908,afterany:61571922,afterany:61574390"
+    }
+  ],
+  "state": "submitted_not_complete",
+  "actual_manifests_rechecked_before_submit": true
+}

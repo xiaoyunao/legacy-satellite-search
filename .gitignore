@@ -22,3 +22,6 @@ __pycache__/
 /results/v14/shortlist/cases/*/seed-*.png
 
 *.egg-info/
+
+# Large pixel-derived union geometry stays on NERSC.
+*.wkb

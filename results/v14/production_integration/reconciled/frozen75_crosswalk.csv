@@ -10,7 +10,7 @@ P008,priority,results/v14/discovery/north_extension/main:v14_north_extension_006
 P009,priority,results/v14/discovery/south_delve/main:v14_south_delve_0197-A_base-0.3-001,True,0.0,PROD-0700c66f6925,PROD-0700c66f6925,True,
 P010,priority,results/v14/discovery/south_des/main:v14_south_des_0277-A_base-0.3-001,True,0.0,PROD-c73d7abde669,PROD-c73d7abde669,True,
 P011,priority,results/v14/discovery/south_des_extension/main:v14_south_des_extension_0019-A_base-0.3-001,True,0.0,PROD-8f56a0524246,PROD-8f56a0524246,True,
-P012,priority,results/v14/discovery/south_ps1/main:v14_south_ps1_0920-A_base-0.3-001,True,0.0,PROD-0a1c9970d59d,PROD-0a1c9970d59d,True,
+P012,priority,results/v14/discovery/south_ps1/main:v14_south_ps1_0920-A_base-0.3-001,True,0.0,PROD-74085f0f39fc,PROD-74085f0f39fc,True,
 P013,priority,results/v14/discovery/north/main:v14_north_0252-A_base-0.3-005,True,0.0,PROD-45077597f84a,PROD-08f6c995e90b|PROD-45077597f84a|PROD-a99427ebcc76|PROD-b82bbbe793f5|PROD-c97ae575dc47|PROD-d3f50b3fb18a,True,
 P014,priority,results/v14/discovery/north_extension/main:v14_north_extension_0142-A_base-0.3-001,True,0.0,PROD-443fdd4b0d31,PROD-443fdd4b0d31,True,
 P015,priority,results/v14/discovery/south_delve/main:v14_south_delve_0351-A_base-0.3-001,True,0.0,PROD-3bbcfabcf5f5,PROD-346351537073|PROD-3bbcfabcf5f5|PROD-91bb118a348d,True,

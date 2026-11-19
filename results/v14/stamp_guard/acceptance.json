@@ -1,0 +1,31 @@
+{
+  "job": "61574388",
+  "backgrounds": 3,
+  "unique_latent_populations": 1,
+  "paired_arm_comparisons": 6,
+  "control_native_source_counts_reproduce_original": true,
+  "original_magnitude_eligible": 300,
+  "original_rendered": 260,
+  "extended_rendered": 274,
+  "residual_outside_extended": 26,
+  "baseline_available_members_before": 61,
+  "baseline_available_members_after": 64,
+  "deeper_available_members_before": 96,
+  "deeper_available_members_after": 98,
+  "spatial_before": 6,
+  "spatial_after": 6,
+  "sources": {
+    "results/v14_stamp_guard/image_response/v14_south_response_1-blind.csv": "3efd2c928dc6e0d4556871a04d8ee1cef723e82a2322478642e02f7fcc555b44",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_stamp_guard/v14_south_response_1/trial00/injected_exposures.npy": "f7990656b5fc0ce0ddd5bb10ebc1e056953656522dd21164886b765e053fd5e6",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_stamp_guard/v14_south_response_1/trial01/injected_exposures.npy": "349a83b3e4df080ae3a70eaaaca4e17a0375b4d08b60e4383ca7f1707b6087f9",
+    "results/v14_stamp_guard/image_response/v14_south_response_2-blind.csv": "059577d0839e06a02ba27db7bba8575610750243bdef08edae8168c9724e52aa",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_stamp_guard/v14_south_response_2/trial00/injected_exposures.npy": "efe3b9aa0a8d3ecfb66f05838eeed6785713e3c216b19e3cf3224bb767e80e55",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_stamp_guard/v14_south_response_2/trial01/injected_exposures.npy": "a845bca6a145cac0c771d7bf1af792d7b684b66a5024bdc924c04a9c836a721e",
+    "results/v14_stamp_guard/image_response/v14_south_response_3-blind.csv": "76bef4ca46f6fce03c36ab425201e14bc8875691edd3b2a89a866389746dc1ee",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_stamp_guard/v14_south_response_3/trial00/injected_exposures.npy": "44240d5b92a67b04ea83c5bc8c3b74929404e0c45f510689bb47d36b51449887",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/image-v14_stamp_guard/v14_south_response_3/trial01/injected_exposures.npy": "6a51eeb46032c09e4f6d567ffdd05710f821f08cb0841e1d3bd54bff180ec17e"
+  },
+  "registration_sha256": "9f14bcea368d265ebdac4724998168de2979bf30932392fa6dfcd8436c7fde53",
+  "code_sha256": "0b961e9892220aae555c60d4f9a6185363c066a8eee4eabaa22a63958a44fc50",
+  "scope": "One fixed bright 30pc draw (realized V proxy=-3.770) across the same three backgrounds, all already detectable. The same3.1arcmin replacement aperture is used for both variants, so C/background values need not equal the original2.47arcmin experiment. This tests stage/parameter sensitivity in a ceiling case; it does not measure near-threshold population recovery bias. The extension restores14 of40 truncated magnitude-eligible members;26 remain outside. The primary144 and original9 tables are unchanged."
+}

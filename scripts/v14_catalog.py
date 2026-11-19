@@ -39,6 +39,16 @@ def bound_supplements(supplements, path, group, rows):
             if source==str(path) and seeds==current]
 
 
+def bound_fit_seed(fit, seeds):
+    """Require the fitted seed, field and score to belong to this source record."""
+    candidates=[r for r in seeds if number(r.get('peak_rank'),r.get('rank'))==number(fit.get('rank'))]
+    return any((r.get('field') or r.get('field_id'))==fit.get('field')
+        and number(r.get('dm'))==number(fit.get('seed_dm'))
+        and number(r.get('rh_arcmin'))==number(fit.get('seed_rh_arcmin'))
+        and (not fit.get('discovery_score') or number(r.get('score'))==number(fit.get('discovery_score')))
+        for r in candidates)
+
+
 def load_modes(paths):
     detections, all_modes = [], []
     supplement_paths = sorted(Path('results/v14/candidate_review').glob('*/*/*/group_review_modes.csv'))
@@ -66,6 +76,15 @@ def load_modes(paths):
         fits = {r['group_id']: r for r in read_csv(fit_path)} if fit_path.is_file() else {}
         fit_modes_path = path.with_name('group_review_modes.csv')
         model_modes = read_csv(fit_modes_path) if fit_modes_path.is_file() else []
+        seed_file=path.with_name('reviewed_group_inputs.csv')
+        sibling_seeds={}
+        if seed_file.is_file():
+            for seed in read_csv(seed_file):
+                sibling_seeds.setdefault(seed.get('group_id') or seed.get('candidate_group_id'),[]).append(seed)
+        source_groups={}
+        for seed in read_csv(path):source_groups.setdefault(seed.get('group_id') or seed.get('candidate_id'),[]).append(seed)
+        bound_groups={g for g,seeds in sibling_seeds.items()
+                      if {seed_signature(r) for r in seeds}=={seed_signature(r) for r in source_groups.get(g,[])}}
         groups = {}
         for i, r in enumerate(read_csv(path), 1):
             ra, dec = number(r.get('ra_deg'), r.get('fit_ra_deg')), number(r.get('dec_deg'), r.get('fit_dec_deg'))
@@ -93,16 +112,20 @@ def load_modes(paths):
                 fits.setdefault(group, r)
         for key, rows in groups.items():
             main = next((r for r in rows if r['representative']), rows[0])
-            fit = fits.get(main['group_id'], {})
+            original_fit=fits.get(main['group_id'], {})
+            fit={}
             modes = sorted({r['dm'] for r in rows if r['dm'] is not None})
             extra = bound_supplements(supplements,path,main['group_id'],rows)
-            successful = [r for _, _, r in extra if r['fit_status']=='complete']
+            raw_seeds=source_groups.get(main['group_id'],[])
+            successful = [r for r in model_modes if r['candidate_group_id']==main['group_id']
+                          and main['group_id'] in bound_groups and r['fit_status']=='complete' and bound_fit_seed(r,raw_seeds)]
+            successful.extend(r for _, _, r in extra if r['fit_status']=='complete' and bound_fit_seed(r,raw_seeds))
             if successful:
                 best = max(successful,key=lambda r: float(r['ts']))
                 if number(fit.get('best_ts'), fit.get('C_ts'), -1) < float(best['ts']):
-                    fit = dict(fit, best_ts=best['ts'], best_dm=best['fit_dm'],
+                    fit = dict(best_ts=best['ts'], best_dm=best['fit_dm'],
                                best_ts_without_top3=best['C_refit_TS_without_top3'],
-                               best_rh=best['fit_rh_arcmin'], review_status='C_completed_visual_pending')
+                               best_rh=best['fit_rh_arcmin'], review_status=original_fit.get('review_status','C_completed_visual_pending'))
                 modes = sorted(set(modes + [float(r['fit_dm']) for r in successful]))
             fitted = number(fit.get('best_dm'), fit.get('C_fit_dm'))
             if fitted is not None:
@@ -110,23 +133,27 @@ def load_modes(paths):
             detections.append(dict(main, modes=modes, c_ts=number(fit.get('best_ts'), fit.get('C_ts')),
                                    c_without_top3=number(fit.get('best_ts_without_top3'), fit.get('C_refit_TS_without_top3')),
                                    image_review=fit.get('review_status'), environment=fit.get('known_context_name'),
-                                   best_fit_rh=number(fit.get('best_rh'))))
-        all_fits = [(fit_modes_path,i,fit) for i,fit in enumerate(model_modes,1)]
-        all_fits.extend(r for key,rows in groups.items()
+                                   best_fit_rh=number(fit.get('best_rh')),
+                                   unbound_summary_ts=number(original_fit.get('best_ts'),original_fit.get('C_ts')) if not successful else None))
+        all_fits = [(fit_modes_path,i,fit,fit['candidate_group_id'] in bound_groups)
+                    for i,fit in enumerate(model_modes,1)]
+        all_fits.extend((*r,True) for key,rows in groups.items()
                         for r in bound_supplements(supplements,path,rows[0]['group_id'],rows))
-        for fit_origin, i, fit in all_fits:
+        for fit_origin, i, fit, selected_binding in all_fits:
             group = fit['candidate_group_id']
             key = f'{path.parent}:{group}'
             if key not in groups:
                 continue
+            bound=selected_binding and bound_fit_seed(fit,source_groups.get(group,[]))
             all_modes.append(dict(record_id=f'{fit_origin}:{i}', detection_id=key, group_id=group,
-                                  input=str(fit_origin), source_kind='C_followup', branch=fit.get('branch'),
+                                  input=str(fit_origin), source_kind='C_followup' if bound else 'C_unbound_context', branch=fit.get('branch'),
                                   field=fit.get('field'), ra_deg=number(fit.get('fit_ra_deg')),
                                   dec_deg=number(fit.get('fit_dec_deg')), dm=number(fit.get('fit_dm')),
                                   rh_arcmin=number(fit.get('fit_rh_arcmin')),
                                   c_ts=number(fit.get('ts')), c_without_top3=number(fit.get('C_refit_TS_without_top3')),
                                   effective_members=number(fit.get('effective_members')),
-                                  image_centre_complete=fit.get('image_centre_complete'), fit_status=fit.get('fit_status')))
+                                  image_centre_complete=fit.get('image_centre_complete'), fit_status=fit.get('fit_status'),
+                                  membership_data_path=fit.get('membership_data_path'),membership_sha256=fit.get('membership_sha256')))
     return detections, all_modes
 
 
@@ -255,6 +282,7 @@ def run(output):
                        sga_automated=bool(sga), c_ts=c_best['c_ts'], c_without_top3=c_best['c_without_top3'],
                        has_frozen_eval_record=any(m['role']=='pilot_eval' and m['budget']==.3 for m in members),
                        any_C_review=any(m['c_ts'] is not None for m in members),
+                       unbound_C_summary_present=any(m['unbound_summary_ts'] is not None for m in members),
                        merge_status='candidate_association_requires_membership_check' if len(group)>1 else 'single_record'))
         for j in group:
             ids[j] = cid
@@ -269,7 +297,9 @@ def run(output):
                           right_detection=detected[j]['detection_id'], left_candidate=ids[i],right_candidate=ids[j],
                           provisional_merge=ids[i] == ids[j]))
     write_csv(output/'potential_associations_within_5arcmin.csv', links)
-    source_paths = sorted({*paths, *(Path(r['input']) for r in modes)})
+    source_paths = sorted({*paths, *(Path(r['input']) for r in modes),
+        *(p.with_name(name) for p in paths for name in ('group_review_summary.csv','reviewed_group_inputs.csv')
+          if p.with_name(name).is_file())})
     write_json(output/'manifest.json', dict(job=os.getenv('SLURM_JOB_ID'), config_sha256=sha(config),
                inputs={str(p):sha(p) for p in source_paths}, records=len(detected), modes=len(modes),
                physical_candidate_associations=len(groups), sga=sga, classifications=dict(Counter(r['grade'] for r in output_rows)),

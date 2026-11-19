@@ -1,0 +1,30 @@
+{
+  "proofs": [
+    {
+      "path": "results/v4/holdout/sky_group_policy.json",
+      "sha256": "b9d4479e8eb7b1637ff05f1f842c555ed165574ff8d7d88bf2ce7346a596cf3d"
+    },
+    {
+      "path": "results/v5/batches/batch1/results/holdout/sky_group_policy.json",
+      "sha256": "b9d4479e8eb7b1637ff05f1f842c555ed165574ff8d7d88bf2ce7346a596cf3d"
+    },
+    {
+      "path": "results/v5/batches/batch2/results/holdout/sky_group_policy.json",
+      "sha256": "b9d4479e8eb7b1637ff05f1f842c555ed165574ff8d7d88bf2ce7346a596cf3d"
+    },
+    {
+      "path": "results/v5/batches/batch3/results/holdout/sky_group_policy.json",
+      "sha256": "b9d4479e8eb7b1637ff05f1f842c555ed165574ff8d7d88bf2ce7346a596cf3d"
+    },
+    {
+      "path": "results/v6/batches/batch1/results/holdout/sky_group_policy.json",
+      "sha256": "b9d4479e8eb7b1637ff05f1f842c555ed165574ff8d7d88bf2ce7346a596cf3d"
+    },
+    {
+      "path": "results/v6/batches/batch2/results/holdout/sky_group_policy.json",
+      "sha256": "b9d4479e8eb7b1637ff05f1f842c555ed165574ff8d7d88bf2ce7346a596cf3d"
+    }
+  ],
+  "source": "Previously committed local/GitHub original frozen policy files, not regenerated thresholds.",
+  "reason": "NERSC mutable snapshot omitted six saved policy files. Registry conservatively classified affected hypotheses as missing proof; restore identical originals and recompute eligibility. No search threshold or candidate score changes."
+}

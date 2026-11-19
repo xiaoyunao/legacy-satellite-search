@@ -165,8 +165,16 @@ def validate(field, phase):
         if not {'RA','DEC','TYPE','FLUX_G','FLUX_R','FLUX_IVAR_G','FLUX_IVAR_R'}<=columns:
             raise ValueError('Native catalogue lacks mandatory named gr columns')
     out=Path('results/v14/repeat/validation');out.mkdir(parents=True,exist_ok=True)
-    write_json(out/f'{field}-{phase}.json',dict(job=os.getenv('SLURM_JOB_ID'),site=field,phase=phase,
-        tractor_sha256=sha(cats[0]),truth_sha256=sha(folder/'truth.npy'),
+    proof=out/f'{field}-{phase}.json';cat_hash=sha(cats[0]);truth_hash=sha(folder/'truth.npy')
+    if proof.is_file():
+        old=json.loads(proof.read_text())
+        if not (old.get('native_products_validated') and old.get('site')==field and old.get('phase')==phase
+                and old['tractor_sha256']==cat_hash and old['truth_sha256']==truth_hash):
+            raise ValueError('Previously validated native inputs changed: '+str(proof))
+        print('EXISTING_NATIVE_VALIDATION_PRESERVED',field,phase,flush=True)
+        return
+    write_json(proof,dict(job=os.getenv('SLURM_JOB_ID'),site=field,phase=phase,
+        tractor_sha256=cat_hash,truth_sha256=truth_hash,
         rendered_stars=len(np.load(folder/'truth.npy',allow_pickle=False)),
         native_products_validated=True,scope='Native product contract only; blind recovery measurement is separate.'))
 

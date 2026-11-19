@@ -283,3 +283,7 @@ bash scripts/v14_repeat.sh measure
 ```
 
 These commands reuse registered inputs; first inspect `results/v14/priority_execution/scheduler_snapshot.json` and live Slurm state to avoid duplicating queued work. Keep raw science files on NERSC. After syncing allowlisted aggregates and diagnostic PNGs, `PYTHONPATH=src .venv/bin/python scripts/v14_shortlist_index.py` builds the operational review index; it does not perform or approve human review. The current scripts add no new runtime dependencies.
+
+## Historical area union environment
+
+The optional `area` dependency group adds rasterio and Shapely for exact union of the represented WCS working-mask cells. Keep this separate from the frozen detector environment. The NERSC pilot used `$PSCRATCH/legacy-satellite-search/envs/area-union-20261119` (NumPy2.5.5, rasterio1.5.2, Shapely2.2.0). `PYTHONPATH=src:. <area-env>/bin/python -m scripts.v14_production_masks` inventories source-qualified masks including zero-peak fields. On a Slurm CPU node, `python -m scripts.v14_mask_union --window 161.6 169.6 27.9 35.9` reproduces the bounded pilot for its archived input. The source inventory, cell-area checks, code hashes and geometry-only tests accompany the result; WKB/raster geometry remains on NERSC. This area calculation does not change the detection grid or certify a physical-gain footprint.

@@ -1,0 +1,13 @@
+site,CFHT_shape_state,references,PS1_selected
+v14_south_response_2,anomalously_sharp,0,0
+v14_south_response_2,blend_or_close_neighbor,0,0
+v14_south_response_2,extended_shape_evidence,0,0
+v14_south_response_2,not_detected_or_low_snr,6,0
+v14_south_response_2,point_shape_consistent,0,0
+v14_south_response_2,unsupported,3,2
+v14_south_response_3,anomalously_sharp,0,0
+v14_south_response_3,blend_or_close_neighbor,0,0
+v14_south_response_3,extended_shape_evidence,0,0
+v14_south_response_3,not_detected_or_low_snr,3,0
+v14_south_response_3,point_shape_consistent,1,1
+v14_south_response_3,unsupported,6,1

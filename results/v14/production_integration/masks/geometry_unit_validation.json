@@ -1,0 +1,8 @@
+{
+  "kind": "synthetic_geometry_unit_validation_not_science",
+  "holes_preserved": true,
+  "duplicate_union_idempotent": true,
+  "RA_seam_area_preserved": true,
+  "polar_out_of_sphere_corners_clipped": true,
+  "code_sha256": "855f53b7d65b6128ca528e486fcf257954ad381a88a515c8071ddac2cb16ef33"
+}

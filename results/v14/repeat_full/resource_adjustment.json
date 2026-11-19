@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-19T11:12:38.988684+00:00",
+  "job": "61568439",
+  "pending_elements": "29-134",
+  "old_memory_MiB": 57344,
+  "new_memory_MiB": 24576,
+  "minimum_time": "00:15:00",
+  "maximum_time": "00:30:00",
+  "cpus": 8,
+  "throttle": 4,
+  "slurm_readback": "JobId=61568439 ArrayJobId=61568439 ArrayTaskId=29-134%4 ArrayTaskThrottle=4 JobName=ls14-repeat-remaining UserId=yunao(106645) GroupId=yunao(106645) MCS_label=N/A Priority=67679 Nice=0 Account=desi QOS=regular_1 JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:30:00 TimeMin=00:15:00 SubmitTime=2026-11-19T01:10:58 EligibleTime=2026-11-19T01:46:00 AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-19T03:11:49 Scheduler=Main Partition=regular_milan_ss11 AllocNode:Sid=login35:2338766 ReqNodeList=(null) ExcNodeList=(null) NodeList= StepMgrEnabled=Yes NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=24G,node=1,billing=8 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=24G MinTmpDiskNode=0 Features=cpu DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=u2:1 LicensesAlloc=(null) Network=(null) Command=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7/scripts/v14_repeat.sh SubmitLine=sbatch --parsable -A desi -q regular -C cpu -N1 -n1 -c8 --mem=56G -t 00:30:00 --array=24-134%2 -J ls14-repeat-remaining -o logs/%x-%A_%a.log scripts/v14_repeat.sh remaining WorkDir=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7 StdErr= StdIn=/dev/null StdOut=/global/u2/y/yunao/projects/legacy-satellite-search/revisions/verification-v7/logs/ls14-repeat-remaining-61568439_4294967294.log TresPerTask=cpu=8",
+  "scientific_settings_changed": false,
+  "reason": "Five dispatched three-background tasks finished2:32\u20134:36; firstfourRSS<7GiB. Preserve >3x measured headroom and permit backfill.",
+  "update_diagnostics": [
+    "MinMemoryNode=24G suffix rejected; this scontrol update requires integerMiB.",
+    "Numeric24576 updated pending parent, while completed element28 caused nonzero command exit. Actual pending-parent readback confirms24G/15min; no repeat submission or allocation change to finished tasks."
+  ]
+}

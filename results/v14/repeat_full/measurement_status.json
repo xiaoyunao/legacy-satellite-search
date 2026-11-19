@@ -1,0 +1,7 @@
+{
+  "job": "61568227",
+  "state": "deferred_until_full_native_grid",
+  "validated_files": 38,
+  "expected_files": 144,
+  "scope": "Native tranche finished; no partial science measurement performed. The separate complete-grid measurement job remains required."
+}
