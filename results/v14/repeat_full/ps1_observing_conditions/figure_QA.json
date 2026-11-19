@@ -1,0 +1,6 @@
+{
+  "path": "results/v14/repeat_full/ps1_observing_conditions/local_conditions.png",
+  "sha256": "a2902429ed6631a9d99dad4fb4c149e8e8b7eed6df6730909e77cb6cfbf96e7a",
+  "raster_integrity_passed": true,
+  "visual_QA": "All three panels inspected: labels, units, source-spread bars and legend are legible without clipping. Marginal source spreads are explicitly not confidence intervals or completeness depths."
+}

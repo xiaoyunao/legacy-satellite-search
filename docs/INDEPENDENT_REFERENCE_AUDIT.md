@@ -36,6 +36,25 @@ Five LS-blue cells support a proxy-mixture versus held-out stellar-reference com
 
 The independent HSC-star response curves demonstrate actual isolated-source selection differences, including PS1 i/morphology losses, under this field's conditions. They are not LS−PS1 system detection probabilities. The joint PS1 response already includes gr, i, morphology and magnitude selection once; never apply those losses again.
 
+## Local PS1 observing-condition probe
+
+Job61589109 passed all four real20arcmin catalogue probes after reader normalization matched the existing canonical PS1 reader:82,235 valid stack positions,517 discarded split-primary rows and11 invalid stack positions. The first attempt61586412 finished Slurm but accepted no measurements;61587648 failed on invalid position sentinels. Both attempts and original executed code are retained. Multiple primary rows are a [documented PS1 split-detection issue](https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812205/PS1+FAQ+-+Frequently+asked+questions); the documented corrupted DR2 bestDetection flag was not used. First-primary row resolution is unchanged from the existing comparator, and does not eliminate all split-source ambiguity. Large duplicate magnitude differences include the−999 missing-value sentinel.
+
+The official fields give PSF FWHM in arcsec and flux/error in Jy ([StackObjectView units](https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812432/PS1+StackObjectView+table+fields)). All12 band/field checks reproduce the3631Jy AB relation to a median offset of about−0.000065mag; this checks units, not uncertainty calibration.
+
+For the predeclared3–20arcmin annulus, observed-band magnitude22–23, QFPerfect≥0.95 and flux-SNR5–20 noise subset, the all-primary source-sampled values are:
+
+| Site | g FWHM / formal m5 | r FWHM / formal m5 | i FWHM / formal m5 |
+|---|---|---|---|
+| Background1 |1.340″ /23.059|1.056″ /23.383|1.105″ /23.023|
+| Background2 |1.150″ /23.434|1.039″ /23.417|1.042″ /23.170|
+| Background3 |1.149″ /23.352|1.091″ /23.286|0.952″ /23.200|
+| COSMOS local |1.236″ /23.989|1.328″ /23.952|1.057″ /23.206|
+
+The gr formal-noise distributions differ; i is closer. Bright-i point-proxy gr strata corroborate the contrast. The point-proxy i22–23 cell is empty by construction because the proxy requires i<22; it does not indicate missing i exposure. These are catalogue formal source-error proxies, conditional on detections, radial/magnitude/quality strata and source population, not empirical aperture depths, stellar completeness or independent-sky confidence intervals. The local COSMOS cone does not describe all2.1328deg² of the reference footprint. Neither a scalar depth shift nor photon-history attribution follows from this table.
+
+**Decision:** retain the measured source responses as a conditional audit. The actual PS1 condition contrast strengthens the case against transporting a universal COSMOS response to the three physical backgrounds. Condition-matched independent truth or a separately validated native PS1 response is needed; compact-system mutual crowding remains a separate gap. No physical ΔPdet, zero-gain conclusion or abundance constraint is inferred. Aggregates and the condition plot are under `results/v14/repeat_full/ps1_observing_conditions/`.
+
 ## Scientific decision and reproducibility
 
 Physical PS1 transfer remains **unvalidated**: native passband/error mapping, independent-label/reference selection, observation-condition transfer to the three CCD backgrounds and compact-system mutual crowding have not all been validated. Do not insert this field's response as a universal stellar probability or use isolated-source curves as physical ΔPdet. The144 LS trials and their finite-stamp/realized-light limits remain unchanged. No source was promoted, no discovery area added and0706 was not confirmed.

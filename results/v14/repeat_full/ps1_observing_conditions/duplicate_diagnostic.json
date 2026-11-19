@@ -1,0 +1,58 @@
+{
+  "job": "61586864",
+  "files": [
+    {
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_conditions/0640b8db7881a268/cosmos_local_control-01.csv",
+      "rows": 24195,
+      "unique_objIDs": 24122,
+      "duplicate_objIDs": 64,
+      "duplicate_extra_rows": 73,
+      "identical_extra_rows": 0,
+      "objID_length_counts": {
+        "18": 24122
+      },
+      "maximum_duplicate_offset_arcsec": 0.0,
+      "maximum_duplicate_gr_i_mag_difference": 1025.141300201416
+    },
+    {
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_conditions/0640b8db7881a268/v14_south_response_1-01.csv",
+      "rows": 21703,
+      "unique_objIDs": 21453,
+      "duplicate_objIDs": 200,
+      "duplicate_extra_rows": 250,
+      "identical_extra_rows": 3,
+      "objID_length_counts": {
+        "18": 21453
+      },
+      "maximum_duplicate_offset_arcsec": 0.0,
+      "maximum_duplicate_gr_i_mag_difference": 1026.300500869751
+    },
+    {
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_conditions/0640b8db7881a268/v14_south_response_2-01.csv",
+      "rows": 20923,
+      "unique_objIDs": 20822,
+      "duplicate_objIDs": 68,
+      "duplicate_extra_rows": 101,
+      "identical_extra_rows": 2,
+      "objID_length_counts": {
+        "18": 20822
+      },
+      "maximum_duplicate_offset_arcsec": 0.0,
+      "maximum_duplicate_gr_i_mag_difference": 1027.0051002502441
+    },
+    {
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_conditions/0640b8db7881a268/v14_south_response_3-01.csv",
+      "rows": 15942,
+      "unique_objIDs": 15849,
+      "duplicate_objIDs": 62,
+      "duplicate_extra_rows": 93,
+      "identical_extra_rows": 3,
+      "objID_length_counts": {
+        "18": 15849
+      },
+      "maximum_duplicate_offset_arcsec": 0.0,
+      "maximum_duplicate_gr_i_mag_difference": 1028.5265998840332
+    }
+  ],
+  "scope": "Aggregate duplicate diagnostics; no per-source rows exported."
+}

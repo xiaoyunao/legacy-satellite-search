@@ -1,0 +1,16 @@
+{
+  "job": "61589109",
+  "inputs": {
+    "results/v14/repeat_full/ps1_observing_conditions/manifest.json": "cbdcb4a495898c21ff76a58bb7e1a05483ceeca1193d32d68d04ee5011c7c96e",
+    "results/v14/repeat_full/ps1_observing_conditions/source_sampled_conditions.csv": "5cd0d79d3838a38019605cba99cf56cc0d0b0ffcf2ef6c3326a00b8b2636ebab",
+    "configs/v14_repeat/ps1_conditions.yaml": "0640b8db7881a2683f95163d56d3c1870fc58ac4d81222ca8b7c3fa2a6878afe",
+    "scripts/v14_ps1_conditions.py": "7955f001428fedd0b0f41ca24112ce2b9b235e974afc2e8602ac01e6c2fbd49c"
+  },
+  "summary_code_sha256": "f53ae5dc0582649ea9e29aa3502e4a8cec364725e4cbc7a48997443f0d78b6c0",
+  "four_fields_and_units_passed": true,
+  "valid_stack_positions": 82235,
+  "discarded_split_primary_rows": 517,
+  "discarded_invalid_stack_positions": 11,
+  "physical_PS1_transfer_validated": false,
+  "scope": "Descriptive local PS1 condition/noise proxies. Catalogue PSF flux errors are not independently calibrated aperture noise or stellar completeness; source-selected distributions and percentile spreads are not independent-sky uncertainty. Compare all three bands; the bright-i point-proxy i22\u201323 stratum is empty by construction, not absent exposure. COSMOS local gr error proxies differ from the three physical backgrounds, while i is closer. Do not transfer a universal response, make a scalar depth-offset correction, infer system Pdet or claim the entire COSMOS control has these local conditions."
+}

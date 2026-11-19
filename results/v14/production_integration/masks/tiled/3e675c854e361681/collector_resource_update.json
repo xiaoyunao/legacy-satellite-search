@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-19T17:51:19.579040+00:00",
+  "job": "61579698",
+  "command": [
+    "scontrol",
+    "update",
+    "JobId=61579698",
+    "QOS=debug"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "previous_QOS": "regular_1",
+  "scope": "Existing20minute aggregate collector, no new job, geometry, inventory, source, algorithm or dependency change. Original repair registration remains immutable."
+}

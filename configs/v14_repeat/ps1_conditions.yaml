@@ -1,0 +1,11 @@
+api: https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack
+metadata_documentation: https://catalogs.mast.stsci.edu/docs/panstarrs.html
+unit_documentation: https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812432/PS1+StackObjectView+table+fields
+source_fields: configs/v14_repeat/image_fields.csv
+cosmos_local_control: {field: cosmos_local_control, ra_deg: 150.1, dec_deg: 2.2}
+cone_radius_deg: 0.3333333333333333
+radial_strata_arcmin: [[0, 3], [3, 20]]
+magnitude_edges: [18, 20, 21, 22, 23, 24, 25]
+formal_noise_SNR_range: [5, 20]
+minimum_sources: 20
+scope: Measure local PS1 DR2 PSF FWHM and formal source-noise proxies in the external-reference field and the three existing physical backgrounds before considering response transport. Conditions are source-sampled, conditional on detections/photometric quality and radial/magnitude strata. Formal flux-error depth is neither empirical aperture noise nor stellar completeness. The local COSMOS cone does not characterize the entire2.1328deg2 reference footprint. No new physical realization, discovery field, production selection, response correction, cluster-crowding validation or system Pdet is introduced.

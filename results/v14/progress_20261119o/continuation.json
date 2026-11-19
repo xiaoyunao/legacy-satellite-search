@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-19T18:00:41.505639+00:00",
+  "requested_retry_count": 174,
+  "original_retry_count": 13,
+  "retry_jobs": [
+    "61510268",
+    "61554330",
+    "61568908",
+    "61571922",
+    "61574390",
+    "61575067",
+    "61575366",
+    "61575703",
+    "61579459"
+  ],
+  "accepted": 173,
+  "live_covered": 1,
+  "uncovered": 0,
+  "dispatch_sha256": "afce306776e1e84233b59b7ff245e4d4da1b2dd6e7c5b6c6c4182821af9a5bf4",
+  "audit_sha256": "05dafcfe278ea55f2b0538c0010f886e2dd0cb5f4b0f4a3209f6a6405ef0111e",
+  "original_retry_sha256": "7e5bc6318287d2f459f56e5964c62956af31b022d4717dcf32c0ca7d1cbeae32",
+  "sacct_command": [
+    "sacct",
+    "-j",
+    "61469829,61469832,61469835,61469842,61469845,61469847,61469848,61469849,61469850,61469851,61470504,61510268,61554330,61568908,61571922,61574390,61575067,61575366,61575703,61579459,61510994,61511922,61510733",
+    "-X",
+    "--array",
+    "-P",
+    "--format=JobID,JobName%60,State,ExitCode,Elapsed,ReqMem,QOS,Reason%100,Start,End"
+  ],
+  "note": "Terminal accounting tasks are intersected with incomplete manifests and expanded live squeue coverage. Registered queued/running retries are retained."
+}

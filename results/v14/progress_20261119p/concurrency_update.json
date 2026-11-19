@@ -1,0 +1,34 @@
+{
+  "utc": "2026-11-19T18:38:01.430237+00:00",
+  "scope": "Only the two existing residual scan arrays, after6257+ completed fields and completion of the four-way geometry workload. Increase a binding task cap from3to6 when confirmed; no new job, field, code, threshold or per-task resource change. Scheduler account/QOS/resource limits still apply; unrelated projects untouched.",
+  "updates": [
+    {
+      "job": "61469845",
+      "previous_cap": "ArrayTaskThrottle=3",
+      "pending_tasks": 40,
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61469845",
+        "ArrayTaskThrottle=6"
+      ],
+      "exit_code": 1,
+      "stderr": "61469845_148: Job has already finished\n",
+      "current_cap": "ArrayTaskThrottle=6"
+    },
+    {
+      "job": "61469851",
+      "previous_cap": "ArrayTaskThrottle=3",
+      "pending_tasks": 12,
+      "command": [
+        "scontrol",
+        "update",
+        "JobId=61469851",
+        "ArrayTaskThrottle=6"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "current_cap": "ArrayTaskThrottle=6"
+    }
+  ]
+}

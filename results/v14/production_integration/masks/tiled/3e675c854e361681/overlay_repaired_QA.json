@@ -1,0 +1,14 @@
+{
+  "inputs": {
+    "results/v14/production_integration/masks/tiled/3e675c854e361681/overlay_repaired_summary.json": "91bb8c54c52f38ab2639d6b9e44c46b70905663e08507bfbf7eef1aa58ae4289",
+    "results/v14/production_integration/masks/tiled/3e675c854e361681/overlay_repaired_tile_areas.csv": "ddcce54eb9d9fe017ceeb4e712edf1da8b8f4095cad17a986153054431fd82aa",
+    "results/v14/production_integration/masks/tiled/3e675c854e361681/overlay_repair_registration.json": "a4719f14c89f1851afc6c4c26f91f3ce68a7e2b1aad2676cbf29408692c75f1f"
+  },
+  "code_sha256": "f450d1cffed7dd6734eb6141e5d42ee41c68df0f2fa11bcfa437f96a772f988e",
+  "tile_partition_and_numerical_sums_passed": true,
+  "census_unambiguous_plus_ambiguity_balance_passed": true,
+  "original_tiles": 130,
+  "repaired_tiles": 590,
+  "final_production_frozen": false,
+  "scope": "Accepted immutable6269 ordinary completed-mask snapshot, including zero-peak fields. Qualified area is a source-clock-qualified subset; later completed masks awaiting matching source ledgers remain unqualified. Exact union of represented WCS working cells is not a continuous native-pixel area, physical completeness, measured-gain area or final full-project footprint. Labelled unions can overlap inside the recorded census-boundary ambiguity; do not sum them as an exclusive partition."
+}

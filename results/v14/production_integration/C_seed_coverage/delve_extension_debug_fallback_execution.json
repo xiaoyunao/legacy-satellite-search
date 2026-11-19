@@ -1,0 +1,53 @@
+{
+  "utc": "2026-11-19T19:06:59.750926+00:00",
+  "job": "61591390",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=128G",
+    "-t",
+    "04:00:00",
+    "--array=2%1",
+    "-J",
+    "ls14-c-delve-ext-fallback",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "--wrap",
+    "export LS_SAT_REVIEW_TAG=debug_fallback_q; bash scripts/v14_review.sh v14 south_delve_extension 8"
+  ],
+  "source": "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv",
+  "source_sha256": "ca12c32172d971bf2d09c89b3bacebf794bf7797e91cfcf7785075d3497a61e3",
+  "original_array": "61584021",
+  "original_terminal_accounting": "61584021_2|TIMEOUT|0:0|00:29:00\n61584021_[0-1,4%2]|PENDING|0:0|00:00:00\n",
+  "failed_shards": [
+    2
+  ],
+  "strict_preflight_counts": [
+    {
+      "index": 2,
+      "seeds": 98,
+      "groups": 34
+    }
+  ],
+  "state": "submitted_not_complete",
+  "scope": "Same production records, selected seeds and C implementation; retry actual timeout shards only with larger memory/walltime. Other original shards remain live. No human grading or new discovery threshold.",
+  "release_dependencies": {
+    "61470267": {
+      "previous": "afterany:61470252_*(unfulfilled),afterany:61470256_*(unfulfilled),afterany:61470264_*(unfulfilled),afterany:61470266_*(unfulfilled),afterany:61584021_*(unfulfilled),afterany:61585731_*(unfulfilled),afterany:61590980_*(unfulfilled)",
+      "current": "afterany:61470252,afterany:61470256,afterany:61470264,afterany:61470266,afterany:61584021,afterany:61585731,afterany:61590980,afterany:61591390"
+    },
+    "61470508": {
+      "previous": "afterany:61470267(unfulfilled),afterany:61584021_*(unfulfilled),afterany:61585731_*(unfulfilled),afterany:61590980_*(unfulfilled)",
+      "current": "afterany:61470267,afterany:61584021,afterany:61585731,afterany:61590980,afterany:61591390"
+    }
+  }
+}
