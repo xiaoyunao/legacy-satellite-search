@@ -1,0 +1,10 @@
+{
+  "tasks": 135,
+  "worklist": "configs/v14_repeat/remaining_tasks.csv",
+  "worklist_sha256": "86d0498149b4b70a420599a11c530eae8cb28ca939a2caf07b386fda78468f2a",
+  "protocol_sha256": "90f16a722deb5f5cc0d6921097f0161a4f17044437488e6a65607f7993f5e0bb",
+  "plan_sha256": "89d27a693f054bbd7e68f5b94387a2c73bee89e4db92503e1e0228bbb93583e5",
+  "fields_sha256": "f5eac1b2ae1ba753ee143ce19d344e17be1416b7f59b5dfdd5cfa2242b6a5929",
+  "initial_acceptance_sha256": "98fa8501df08d91331bd34a03221fd2b741e1ce7ccc9a8f281b75033f736b6a6",
+  "scope": "Remaining frozen physical realizations only, phase-major across backgrounds. No new random draws, parameter choices or interim gain test. Initial nine and their measured inputs remain unchanged."
+}

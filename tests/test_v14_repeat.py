@@ -20,6 +20,18 @@ class RepeatTest(unittest.TestCase):
         self.assertEqual(len(set(seeds)),48)
         self.assertEqual(seeds,[photon_seed(487219,i) for i in range(48)])
 
+    def test_remaining_partition_preserves_all_frozen_trials(self):
+        from scripts.v14_repeat import remaining_task
+        sites=['v14_south_response_'+str(i) for i in range(1,4)]
+        initial={task(i) for i in range(9)}
+        remaining={remaining_task(i) for i in range(135)}
+        self.assertEqual(len(remaining),135)
+        self.assertFalse(initial & remaining)
+        self.assertEqual(initial | remaining,
+            {(site,f'trial{i:02d}') for site in sites for i in range(48)})
+        for bad in (-1,135):
+            with self.assertRaises(ValueError):remaining_task(bad)
+
     def test_prepare_refuses_legacy_namespace_before_writes(self):
         from scripts.v14_repeat import prepare
         with patch('scripts.v13_image_trials.VERSION','v13'):

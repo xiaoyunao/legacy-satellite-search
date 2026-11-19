@@ -17,6 +17,18 @@ case "$1" in
         fi
         exec .venv/bin/python scripts/v14_repeat.py validate --field "$field" --phase "$phase"
         ;;
+    remaining)
+        read -r field phase < <(.venv/bin/python scripts/v14_repeat.py remaining "$SLURM_ARRAY_TASK_ID")
+        bash scripts/v13_native.sh "$field" "$phase"
+        exec .venv/bin/python scripts/v14_repeat.py validate --field "$field" --phase "$phase"
+        ;;
+    measure_full)
+        exec .venv/bin/python -u scripts/v14_repeat.py measure_full
+        ;;
+    measure_complete)
+        .venv/bin/python -u scripts/v14_repeat.py measure_complete
+        exec .venv/bin/python scripts/v14_repeat_accept.py --full
+        ;;
     measure)
         .venv/bin/python -u scripts/v14_repeat.py measure
         ;;

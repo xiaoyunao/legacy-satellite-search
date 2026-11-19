@@ -1,5 +1,17 @@
 # Status
 
+**Active execution:** CCD own 61568227 / array61568439 → measure61568456 → accept61568539; scan retry61568908; refreshed production61568667; DES retry summary/C61568973/61568974. Twelve native trials have product validation, but only the original nine have completed two-arm blind measurements. User review remains deferred.
+
+Latest checkpoint g (2026-11-19T09:29:06.064749+00:00): **3462/6891 complete**, 10 no-usable-gr, **15451.314 owned deg²**. The older f checkpoint below predates 131 newly uncovered terminal failures, identified during the HOME quota incident; inspect `results/v14/progress_20261119g/retry_execution.json` for the subsequent registered recovery job. Science candidates still have a separate older summary clock.
+
+## 2026-11-19 authoritative next-round policy (GPT Pro 437262c6)
+
+The user will perform **one final, project-wide human review**. The first frozen 75-position `release_v2` is a technically validated historical batch, not an instruction to begin grading. Preserve every file/hash and blank response; do not seal or reveal identities. Final delivery waits for the full eligible production sample, historical reconciliation and exact owned-mask area, necessary same-record multimode C, complete images/evidence and anonymity/page QA. No intermediate batches require user judgment.
+
+Continue frozen full-DR11 A baseline/regional policies and the remaining 135 of 144 physical CCD trials. Keep shared IMF realization IDs, target/realized light, native exposure/detection/PSF/hard-selection/CMD/blind-distance/C losses, and quantify the finite stamp at 30 pc. Validate the physical PS1 DR2 joint response and reference contamination/support uncertainty before any LS−PS1 gain claim; preserve Tan PS1 DR1 separately. Gains require >0.10 and positive 95% lower bound with shared IDs resampled jointly across backgrounds. No unsupported completeness contours, population inference or manuscript writing.
+
+Latest manifest checkpoint f: 3,296/6,891 complete, nine no-usable-gr, 14,536.704 owned deg²; eight retry fields accepted, seven live-covered, zero uncovered. This is a newer area clock than the 5,614-record incremental candidate snapshot. Historical production integration, full repeated physics, PS1 validation and final review assembly remain outstanding. These requirements supersede older “review now” passages retained below as history.
+
 ## 2026-11-19 初批 CCD 已实测验收，计算资源已释放
 
 - 61562188 与主 step 均 COMPLETED/0:0；9 个实现/18 个深度结果/378 阶段行通过完整性验收。原 pending CCD/测量链和退出 guard 已退役，无残留 hold；bulk Nice 实际回读全为 0。

@@ -1,5 +1,7 @@
 # Frozen first production follow-up queue
 
+**Current delivery policy (2026-11-19): wait for one final whole-project review.** The existing 75-position release is preserved as frozen batch 1. Do not fill, seal or reveal it yet. Full production reconciliation, required C/evidence and final anonymous/page QA must finish before user grading. Earlier batch instructions below document the release protocol, not a request for intermediate review.
+
 The queue is 40 priority positions and 35 exploratory region/score-stratified audit positions. All positions are separated by at least 5′. Selection uses eligible R14 A baseline/main/evaluation/primary-budget records and within-cohort score ranks; it does not define a new discovery threshold. The initial alias-contaminated selection is retained separately. Nearby known positions route to context review irrespective of distance alias; unknown does not mean exhaustive novelty established.
 
 Start with `priority_shortlist.csv`, then `review_readiness.csv` and `priority_figures/Pxxx*.png`. The published panels are the highest-C mode for each available priority position; the full retained C mode tables are in `cases/` or `cached_cases/`. All mode images remain locally and on NERSC. `cache_manifest.json` identifies exact same-record reuse, not new evidence. `postfit_context.csv` checks both discovery and refitted centres, including the nearest census object beyond the 30′ shortlist-routing radius.

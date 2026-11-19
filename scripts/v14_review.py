@@ -1,15 +1,49 @@
 """Run compact and high-priority modes plus a deterministic lower-priority audit sample."""
 import argparse
+from collections import Counter
 import hashlib
+import json
 from math import radians, tan
 from pathlib import Path
 import os
 
 from ls_satsearch.review import review_sky_groups
-from ls_satsearch.run import read_csv, write_csv, write_json
+from ls_satsearch.run import read_csv, sha, write_csv, write_json
+if __package__:
+    from .v14_catalog import seed_signature
+else:
+    from v14_catalog import seed_signature
 
 
-def sliced(table, output, index, count, previous):
+def completed_prior_groups(table, exclude=None, root=Path('results/v14/candidate_review')):
+    current={}
+    for row in read_csv(table):
+        current.setdefault(row['group_id'],set()).add(seed_signature(row))
+    seen=set()
+    for provenance in root.glob('*/*/*/provenance.json'):
+        if provenance.parent==exclude:continue
+        saved=json.loads(provenance.read_text())
+        selection=provenance.with_name('review_modes.csv')
+        summary=provenance.with_name('group_review_summary.csv')
+        fitted=provenance.with_name('group_review_modes.csv')
+        if (saved.get('input')!=str(table) or not selection.is_file()
+                or not summary.is_file() or not fitted.is_file()):continue
+        if saved.get('selection_sha256') and saved['selection_sha256']!=sha(selection):
+            raise ValueError('Prior C selection changed after fitting')
+        seeds={}
+        for row in read_csv(selection):
+            seeds.setdefault(row['group_id'],set()).add(seed_signature(row))
+        fitted_counts=Counter(r['candidate_group_id'] for r in read_csv(fitted) if r['fit_status']=='complete')
+        for row in read_csv(summary):
+            key=row['group_id']
+            if (int(row['modes_attempted'])>0 and row['modes_fit']==row['modes_attempted']
+                    and fitted_counts[key]==int(row['modes_attempted'])
+                    and seeds.get(key)==current.get(key)):
+                seen.add(key)
+    return seen
+
+
+def sliced(table, output, index, count, previous, extra_seen=()):
     rows = read_csv(table)
     if not rows:
         return
@@ -19,9 +53,9 @@ def sliced(table, output, index, count, previous):
                if float(r['rh_arcmin']) <= 2 or
                1000 * 10**((float(r['dm'])-10)/5) * tan(radians(float(r['rh_arcmin'])/60)) <= 15}
     shard = lambda key: int(hashlib.sha256(key.encode()).hexdigest()[:12], 16)
-    seen = set()
+    seen = set(extra_seen)
     if previous.is_file():
-        seen = {r['group_id'] for r in read_csv(previous) if int(r['modes_fit']) == int(r['modes_attempted'])}
+        seen.update(r['group_id'] for r in read_csv(previous) if int(r['modes_fit']) == int(r['modes_attempted']))
     priority = {}
     for r in representatives:
         key = r['group_id']
@@ -46,19 +80,25 @@ def run(version, cohort, index, count):
     table = base/'sky_group_candidates.csv'
     if not table.is_file():
         return
-    dest = Path(f'results/v14/candidate_review/{version}/{cohort}/{index:02d}')
+    tag=os.getenv('LS_SAT_REVIEW_TAG','')
+    if tag and not all(c.isalnum() or c in '_-' for c in tag):raise ValueError('Invalid review pass tag')
+    namespace=version+'_'+tag if tag else version
+    dest = Path(f'results/v14/candidate_review/{namespace}/{cohort}/{index:02d}')
     selection = dest/'review_modes.csv'
-    if not sliced(table, selection, index, count, base/'group_review_summary.csv'):
+    seen=completed_prior_groups(table,exclude=dest) if tag else set()
+    if not sliced(table, selection, index, count, base/'group_review_summary.csv',extra_seen=seen):
         return
+    source_checksum=sha(table)
     config = home/f'configs/{version}/cohorts/{cohort}'
     data = Path(os.environ['LS_SAT_DATA'])
-    products = data/f'runs/v14/review/{version}/{cohort}/{index:02d}'
+    products = data/f'runs/v14/review/{namespace}/{cohort}/{index:02d}'
     workspace = home/f'regional_{version}_{cohort}'
     os.environ['LS_SAT_CONFIG_DIR'] = str(config)
     os.environ['LS_SAT_RUN_VERSION'] = version
     review_sky_groups(selection,'A_base',.3,archived_run=workspace/'results',
                       archive_version=version,products=products,blind_reference=True)
-    write_json(dest/'provenance.json',dict(job=os.getenv('SLURM_JOB_ID'), input=str(table), count=count,index=index,
+    write_json(dest/'provenance.json',dict(job=os.getenv('SLURM_JOB_ID'), input=str(table),
+                                          input_sha256=source_checksum,selection_sha256=sha(selection),count=count,index=index,
                                           visual_review_pending=True, blinded_cross_id=True))
 
 

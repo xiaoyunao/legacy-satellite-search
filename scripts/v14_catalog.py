@@ -1,6 +1,7 @@
 """Inventory original hypotheses and provisionally reconcile compatible sky detections."""
 from collections import Counter
 import hashlib
+import json
 import os
 import re
 from pathlib import Path
@@ -25,14 +26,41 @@ def number(*values):
     return None
 
 
+def seed_signature(row):
+    """Bind a C shard to the exact discovery hypotheses, not a reused group label."""
+    return (row.get('field'),row.get('channel'),row.get('policy'),
+            *(number(row.get(k)) for k in ('budget','ra_deg','dec_deg','dm','rh_arcmin')),
+            number(row.get('ranking'),row.get('score')))
+
+
+def bound_supplements(supplements, path, group, rows):
+    current={seed_signature(r) for r in rows}
+    return [record for record,source,seeds in supplements.get(group, [])
+            if source==str(path) and seeds==current]
+
+
 def load_modes(paths):
     detections, all_modes = [], []
     supplement_paths = sorted(Path('results/v14/candidate_review').glob('*/*/*/group_review_modes.csv'))
     supplements = {}
     for file in supplement_paths:
+        provenance=file.with_name('provenance.json')
+        selection=file.with_name('review_modes.csv')
+        if not provenance.is_file() or not selection.is_file():
+            continue
+        saved=json.loads(provenance.read_text())
+        if not saved.get('input'):
+            # Standalone follow-up packets remain in their own frozen ledger;
+            # an unbound packet cannot certify a production discovery record.
+            continue
+        if saved.get('selection_sha256') and saved['selection_sha256']!=sha(selection):
+            raise ValueError('C selection changed after fitting: '+str(selection))
+        seeds={}
+        for row in read_csv(selection):
+            seeds.setdefault(row['group_id'],set()).add(seed_signature(row))
         for i, row in enumerate(read_csv(file), 1):
             group = row['candidate_group_id']
-            supplements.setdefault(group, []).append((file, i, row))
+            supplements.setdefault(group, []).append(((file,i,row),saved['input'],seeds.get(group,set())))
     for path in paths:
         fit_path = path.with_name('group_review_summary.csv')
         fits = {r['group_id']: r for r in read_csv(fit_path)} if fit_path.is_file() else {}
@@ -67,7 +95,7 @@ def load_modes(paths):
             main = next((r for r in rows if r['representative']), rows[0])
             fit = fits.get(main['group_id'], {})
             modes = sorted({r['dm'] for r in rows if r['dm'] is not None})
-            extra = supplements.get(main['group_id'], [])
+            extra = bound_supplements(supplements,path,main['group_id'],rows)
             successful = [r for _, _, r in extra if r['fit_status']=='complete']
             if successful:
                 best = max(successful,key=lambda r: float(r['ts']))
@@ -84,7 +112,8 @@ def load_modes(paths):
                                    image_review=fit.get('review_status'), environment=fit.get('known_context_name'),
                                    best_fit_rh=number(fit.get('best_rh'))))
         all_fits = [(fit_modes_path,i,fit) for i,fit in enumerate(model_modes,1)]
-        all_fits.extend(r for key in groups for r in supplements.get(groups[key][0]['group_id'], []))
+        all_fits.extend(r for key,rows in groups.items()
+                        for r in bound_supplements(supplements,path,rows[0]['group_id'],rows))
         for fit_origin, i, fit in all_fits:
             group = fit['candidate_group_id']
             key = f'{path.parent}:{group}'

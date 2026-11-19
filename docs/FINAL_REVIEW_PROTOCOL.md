@@ -1,0 +1,25 @@
+# One final project-wide human review
+
+The user-adopted GPT Pro message 437262c6 supersedes earlier intermediate-review instructions. No human grades are requested until the final delivery gates pass. `release_v2` and its hashes remain an immutable first batch; `final_delivery_status.json` is the current delivery gate. Do not change the historical package's readiness flags to disguise the new policy.
+
+## Population and sampling
+
+1. Freeze the full qualified production ledger and WCS-mask area/overlap accounting. Preserve development/calibration, alternative depth/distance, known-centre recovery and injection/control experiments in separate ledgers. A development detection cannot become a production discovery through positional association.
+2. Crosswalk every original P/B identity, source hypothesis, frozen C packet and diagnostic to the final positions. Keep all 75 in the final materials. Distinct retained hypotheses remain identifiable; missing C is unknown, not zero. A C packet must bind to its own qualified discovery record.
+3. Define review units before random sampling. Nearby positions may share a packet only if every constituent's modes/evidence are retained and the deterministic spatial grouping/exclusion rule is registered. Do not discard sampled positions afterwards for proximity. Certainty-selected high-priority units, the original 75 and positive controls have inclusion probability one and explicit selection reasons. Any excluded target population has to be reported separately.
+4. For the remaining units, freeze regional and within-region score strata, stratum sizes, allocation and seed **487241** before drawing. Draw simple random samples without replacement in every nonempty stratum; retain `N_h`, `n_h`, `pi=n_h/N_h`, seed, unit membership and selection outcome. No cherry-picking after viewing the sampled cases. Ensure positive inclusion probability over the claimed audit population. The original 35 used nonuniform spatial exclusions and cannot retrospectively be treated as this probability sample.
+5. Probability weights can estimate human-decision prevalence within the defined L0 review population. They alone do not calibrate recovery of real systems, the missed-source population or physical review completeness. Include weak known-system controls separately, keep their original recovery/processing caveats and evaluate their attrition without automatic evidence promotion.
+
+## Materials and reveal
+
+Each selected position must have measured-error CMD/background, spatial/radial panels, native gr pixels, morphology and contributor stamps, all important C modes, leave-top-three sensitivity, conditions and known-environment evidence. Keep the full information, with a short per-object overview, bookmarks and consistent page order for continuous review.
+
+Phase 1 contains only anonymous IDs, relative positions and the permitted CMD/morphology/spatial evidence. Hide identities, absolute coordinates, scores, known environments and processing clues reserved for reveal. Audit PDF text/metadata, image annotations, filenames, ZIP entries and blank forms for leakage. Keep administrative identity keys outside the anonymous ZIP. Grade tables remain blank until the user acts. Seal actual user responses against the released hashes before revealing identities and scientific context.
+
+## Final release gates
+
+- Full search terminal accounting and historical production reconciliation are complete, with actual mask area and overlap provenance.
+- The final production and sampling universes, source hashes and original-75 crosswalk are frozen.
+- Required C modes bind to the same qualified records and all selected images/evidence exist.
+- PDFs, standalone anonymous ZIP and blank forms pass integrity, anonymity, image and full-page QA; unresolved evidence is recorded rather than fabricated.
+- Release one final version and ask for one concentrated grading session. Machine triage does not fill user grades or establish a new stellar system.

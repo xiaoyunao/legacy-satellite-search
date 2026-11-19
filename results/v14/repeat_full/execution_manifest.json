@@ -1,0 +1,61 @@
+{
+  "registered_utc": "2026-11-19T09:11:33.139207+00:00",
+  "original_trials": 144,
+  "accepted_initial_trials": 9,
+  "remaining": 135,
+  "worklist": "configs/v14_repeat/remaining_tasks.csv",
+  "worklist_sha256": "86d0498149b4b70a420599a11c530eae8cb28ca939a2caf07b386fda78468f2a",
+  "dispatch": [
+    {
+      "job": "61568227",
+      "kind": "owned_cpu",
+      "indices": [
+        0,
+        23
+      ],
+      "tasks": 24,
+      "node": "nid200004"
+    },
+    {
+      "job": "61568439",
+      "kind": "regular_array",
+      "indices": [
+        24,
+        134
+      ],
+      "tasks": 111,
+      "concurrency": 2
+    }
+  ],
+  "measurement": {
+    "job": "61568456",
+    "afterok": [
+      "61568227",
+      "61568439"
+    ],
+    "mode": "measure_complete",
+    "output": "results/v14_repeat_full/image_response",
+    "requires_validated_native_trials": 144
+  },
+  "state": "dispatched_not_accepted",
+  "scope": "Only original frozen physical realizations. Never count submission as execution, measurement or acceptance. Preserve original nine measurement source hashes. Current allocation also relocates completed large intermediate peak caches with checksum verification before native work.",
+  "acceptance": {
+    "job": "61568539",
+    "afterok": [
+      "61568456"
+    ],
+    "scope": "Full native/LS measurements only; PS1 and finite-stamp sensitivity are separate."
+  },
+  "population_audit": {
+    "job": "61568571",
+    "state": "COMPLETED",
+    "exit": "0:0",
+    "elapsed_seconds": 19,
+    "supersedes_failed_environment_attempt": "61568538"
+  },
+  "production_refresh": {
+    "job": "61568667",
+    "state": "submitted_not_complete"
+  },
+  "owned_measurement_policy": "After the 24 native tasks, optional full measurement defers if any of the 144 native trials is absent. Full science measurement remains a separate registered job; no partial measurement is required in the three-hour native allocation."
+}

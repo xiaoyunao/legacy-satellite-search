@@ -1,6 +1,24 @@
 # Plan
 
-## Current human-review delivery objective (latest review 46d21aad)
+131 场补跑已登记为 **61568908**（0–130%4，冻结工作单 SHA）；DES 后续汇总 **61568973** 等待补跑与原 C，增量 C **61568974** 使用独立 quota_g 命名空间并只复用完整同记录证据。其余五区待运行汇总依赖已增加补跑。全量最终测量与正式样本/人工审查冻结仍未完成。
+
+Latest checkpoint g (2026-11-19T09:29:06.064749+00:00): **3462/6891 complete**, 10 no-usable-gr, **15451.314 owned deg²**. The older f checkpoint below predates 131 newly uncovered terminal failures, identified during the HOME quota incident; inspect `results/v14/progress_20261119g/retry_execution.json` for the subsequent registered recovery job. Science candidates still have a separate older summary clock.
+
+## 2026-11-19 authoritative next-round policy (GPT Pro 437262c6)
+
+Execution register (active; not completion): owned CPU **61568227** runs remaining IDs 0–23; regular array **61568439** covers 24–134%2; full measurement **61568456** waits for both and requires all native validations; aggregate acceptance **61568539** follows. No overlap with the accepted initial nine. Population replay **61568571** completed 144 prepared truths /48 unique latent populations in 19 seconds; first attempt 61568538 failed before science because LS_DR11_ROOT was absent and was corrected. Production refresh **61568667** is submitted for current regional results/catalogue/registry. Preserve the frozen first-source snapshots before any refresh.
+
+Completed storage repair: 593 MiB pip cache moved reversibly to scratch; 408 completed North peak tables (3,792,210,864 bytes) copied and SHA-verified before atomic symlink replacement. HOME fell from 40.32 to 36.23 GiB. New R14 peak tables write to scratch work with the original logical summary path. This changes storage, not the frozen numerical detector.
+
+Current measured physics diagnostic: finite stamps discard 0.10%/2.12%/14.59% of magnitude-eligible potential members at 3/10/30 pc across the 48 latent populations. These are not detection losses; paired wider-stamp recovery sensitivity remains required. In g0<24.5 support diagnostics, 1,419/2,309 rendered members have n≥20 proxy-calibration support in each field; this does not validate transfer to physical PS1 stars.
+
+The user will perform **one final, project-wide human review**. The first frozen 75-position `release_v2` is a technically validated historical batch, not an instruction to begin grading. Preserve every file/hash and blank response; do not seal or reveal identities. Final delivery waits for the full eligible production sample, historical reconciliation and exact owned-mask area, necessary same-record multimode C, complete images/evidence and anonymity/page QA. No intermediate batches require user judgment.
+
+Continue frozen full-DR11 A baseline/regional policies and the remaining 135 of 144 physical CCD trials. Keep shared IMF realization IDs, target/realized light, native exposure/detection/PSF/hard-selection/CMD/blind-distance/C losses, and quantify the finite stamp at 30 pc. Validate the physical PS1 DR2 joint response and reference contamination/support uncertainty before any LS−PS1 gain claim; preserve Tan PS1 DR1 separately. Gains require >0.10 and positive 95% lower bound with shared IDs resampled jointly across backgrounds. No unsupported completeness contours, population inference or manuscript writing.
+
+Latest manifest checkpoint f: 3,296/6,891 complete, nine no-usable-gr, 14,536.704 owned deg²; eight retry fields accepted, seven live-covered, zero uncovered. This is a newer area clock than the 5,614-record incremental candidate snapshot. Historical production integration, full repeated physics, PS1 validation and final review assembly remain outstanding. These requirements supersede older “review now” passages retained below as history.
+
+## Historical bounded delivery milestone (46d21aad; superseded by the next-round policy)
 
 The complete 75-position material is technically ready in `results/v14/human_review/release_v2/`: 40 priority positions/202 pages, 35 anonymous positions/71 pages, anonymous PNG ZIP and two wholly blank response forms. All 226 retained C modes passed saved-membership integrity. All pages were rasterized; all priority contact sheets, six unchanged anonymous contact sheets and eight 150-dpi full pages were inspected. The first unreleased assembly is retained privately: QA found cropped condition-panel headings, fixed in the versioned replacement. Only 40 condition pages changed; the other 233 raster pages are identical. Human scientific grading and anonymous sealing have **not** happened.
 
@@ -10,7 +28,7 @@ This bounded material/initial-tranche goal is ready for completion audit. The br
 
 The user's next stage is anonymous morphology/CMD/spatial responses followed by sealing and identity reveal, then priority scientific decisions. Only afterward merge judgments and create the final follow-up shortlist. The reviewer should open the standalone anonymous ZIP first; legacy coordinate tables and environment keys are excluded from that phase. Preserve every failed/rejected entry and the denominator.
 
-## 2026-11-19 latest execution priority
+## Historical 2026-11-19 execution priority
 
 Follow the fully read GPT Pro message af4ec677 in the [acceptance checklist](docs/PRO_REVIEW_CHECKLIST.md). Keep route B (measured selection/census increment) as the stable paper objective and discovery in parallel. Do not wait for the full footprint to review current candidates.
 

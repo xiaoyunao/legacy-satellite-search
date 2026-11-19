@@ -1,0 +1,11 @@
+{
+  "files": 408,
+  "bytes": 3792210864,
+  "details_sha256": "e052da615d4c2bf6aacbe70340b397d616c56bf0c5a0a1079448daf32007b159",
+  "source_scope": "Completed North per-field deduplicated intermediate peak tables only",
+  "method": "Stream SHA256 equality checked before atomic logical symlink replacement; source table contents preserved on personal scratch. No survey data deleted.",
+  "details_ner_home": "logs/v14-peak-relocation.json",
+  "quota_after_home_GiB": 36.23,
+  "quota_GiB": 40,
+  "new_R14_peak_storage": "Scratch work table with original summary path symlink. Code change affects storage only, not numerical search."
+}

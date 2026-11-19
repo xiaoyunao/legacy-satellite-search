@@ -11,6 +11,7 @@ from scripts.v12_selection_stats import interval
 
 def run():
     out=Path('results/v14/repeat/ps1_response');path=out/'selection_stage_counts.csv'
+    input_checksum=sha(path)
     grouped=defaultdict(list)
     for r in read_csv(path):
         if r['split']=='heldout':grouped[r['site'],float(r['ls_g_lo']),float(r['ls_g_hi'])].append(r)
@@ -45,7 +46,7 @@ def run():
         if suffix=='svg':
             path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines())+'\n')
     plt.close(fig)
-    write_json(out/'figure_manifest.json',dict(input_sha256=sha(path),
+    write_json(out/'figure_manifest.json',dict(input_sha256=input_checksum,
         scope='Real held-out matched-source diagnostics; not a physical satellite completeness curve. Colour distributions vary by site. Binomial intervals omit sky-to-sky and reference-classification systematics.'))
 
 

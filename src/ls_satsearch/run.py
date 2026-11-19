@@ -49,6 +49,17 @@ def read_csv(path):
         return list(csv.DictReader(f))
 
 
+def publish_peak_cache(summary, work, peaks):
+    """Keep the full R14 intermediate table on scratch at its existing logical path."""
+    target=work/'deduplicated_peaks.csv'
+    write_csv(target,peaks)
+    logical=summary/'deduplicated_peaks.csv'
+    temporary=logical.with_suffix('.csv.link.tmp')
+    temporary.symlink_to(target.resolve())
+    temporary.replace(logical)
+    return target
+
+
 def settings():
     root = Path(os.environ['LS_DR11_ROOT'])
     data = Path(os.environ['LS_SAT_DATA'])
@@ -290,7 +301,11 @@ def execute(spec, root, data_root, cfg, bricks, template, depth, tag):
         raw = [p for p,use in zip(raw,keep) if use]
         peaks = deduplicate(raw,cfg.get('main_dm_max',20.75))
     write_csv(work / 'all_template_peaks.csv', raw)
-    write_csv(summary / 'deduplicated_peaks.csv', peaks)
+    if os.getenv('LS_SAT_RUN_VERSION')=='v14':
+        peak_cache=publish_peak_cache(summary,work,peaks)
+        manifest['deduplicated_peaks_path']=str(peak_cache.relative_to(data_root))
+    else:
+        write_csv(summary / 'deduplicated_peaks.csv', peaks)
     if spec.get('truth'):
         truth = next(b for b in read_csv(Path('references/benchmarks.csv')) if b['name'] == spec['truth'])
         records = recovery(peaks, truth, field, area, cfg, depth)

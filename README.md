@@ -1,9 +1,11 @@
 # Legacy Satellite Search
 
+**Current delivery policy (2026-11-19): wait for one final whole-project review.** The existing 75-position release is preserved as frozen batch 1. Do not fill, seal or reveal it yet. Full production reconciliation, required C/evidence and final anonymous/page QA must finish before user grading. Earlier batch instructions below document the release protocol, not a request for intermediate review.
+
 This project searches the North BASS and South DECam photometric catalogs of DESI Legacy Imaging Surveys DR11 for faint Milky Way stellar systems. It measures how often the deeper photometry adds recoveries to PS1 at a comparable review cost. The main science sample spans 20–150 kpc and circularized half-light radii of 3–30 pc. South PS1 is the discovery priority. South DELVE and DES overlap fields provide deeper comparison samples. Nearby and distant search branches have their own calibration.
 
 
-The first complete human-review material is available: [40 priority positions and 35 anonymous positions](results/v14/human_review/README.md), with 202/71-page versioned PDFs, an isolated anonymous image bundle and blank forms. Begin with the anonymous ZIP; seal those judgments before identity reveal. Material QA does not constitute scientific grading or a new-system confirmation.
+The first complete human-review material is available: [40 priority positions and 35 anonymous positions](results/v14/human_review/README.md), with 202/71-page versioned PDFs, an isolated anonymous image bundle and blank forms. Material QA does not constitute scientific grading or a new-system confirmation.
 
 The initial three-background CCD tranche is also complete: [nine trials / eighteen arm measurements](results/v14/repeat/initial_nine_summary.csv), accepted against native-catalogue hashes and the frozen protocol. Run `PYTHONPATH=src .venv/bin/python scripts/v14_repeat_accept.py` against the aggregate result snapshot to verify the tranche. This does not complete the registered 144 trials or physical PS1 response validation; the initial counts are not a population-completeness estimate.
 

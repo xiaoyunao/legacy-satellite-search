@@ -1,5 +1,27 @@
 # DR11 search and selection response
 
+最新 g 快照：3462/6891 场完成、10 场无可用 gr、15451.314 owned deg²。131 个新近终态失败场已由 61568908 按清单登记补跑；代表性日志显示 HOME quota 写峰表失败。存储位置已修复，正式数值搜索配置未变。候选来源审计仍对应较早快照，不能将新面积直接赋给旧候选表。
+
+## 新轮次已取得的实测诊断：144 份冻结潜在星族重放
+
+NERSC 61568571 用 19 秒完成全部 144 份已准备 truth 的确定性重放，逐份核对坐标、g 星等、IMF 星数与积分 V proxy，未重写原始输入。这里是 48 个共享潜在星族在三个背景中的重放，**不是 144 次 CCD 已完成**。
+
+按独立潜在星族、合并两档目标光度计算，3/10/30 pc 分别在有限 stamp 外损失 3/3004、65/3073、445/3050 个满足生成星等范围的潜在成员，约 0.10%、2.12%、14.59%。分母不是全部 IMF 恒星数。30 pc 的真实成员截断已被逐实现证实；它对最终恢复概率的影响仍须配对图像实验，不能由这些比例直接推断。
+
+目标 V proxy −3 的八次抽样，在 3/10/30 pc 单元的实际范围分别为 [−3.586,−2.342]、[−3.081,−2.418]、[−3.770,−2.314]；目标 −1.5 对应 [−1.603,−0.536]、[−1.698,−0.928]、[−1.975,−0.598]。后续按目标和实际光度同时报告，不能把跨半径恢复变化全部归因于尺寸。
+
+在潜在 g₀<24.5 的 2309 个已渲染成员中，每个背景有 1419 个（61.5%）落入现有全场 PS1 训练表中 n≥20 的 LS g/颜色分箱。此项使用真实 LS 模型星等定位测量参考样本分箱，只是支持域诊断；它既没有验证 LS 参考样本纯度，也没有校正测量散射、条件选择或建立物理 PS1 检出率。其余成员不能静默外推。当前不报告物理 ΔP_det 或显著增益。
+
+[逐实现截断与支持域](results/v14/repeat_full/population_audit/population_stamp_and_support.csv) · [每物理单元光度范围](results/v14/repeat_full/population_audit/cell_luminosity_and_truncation.csv) · [原始输入核对](results/v14/repeat_full/population_audit/manifest.json)
+
+## 2026-11-19 authoritative next-round policy (GPT Pro 437262c6)
+
+The user will perform **one final, project-wide human review**. The first frozen 75-position `release_v2` is a technically validated historical batch, not an instruction to begin grading. Preserve every file/hash and blank response; do not seal or reveal identities. Final delivery waits for the full eligible production sample, historical reconciliation and exact owned-mask area, necessary same-record multimode C, complete images/evidence and anonymity/page QA. No intermediate batches require user judgment.
+
+Continue frozen full-DR11 A baseline/regional policies and the remaining 135 of 144 physical CCD trials. Keep shared IMF realization IDs, target/realized light, native exposure/detection/PSF/hard-selection/CMD/blind-distance/C losses, and quantify the finite stamp at 30 pc. Validate the physical PS1 DR2 joint response and reference contamination/support uncertainty before any LS−PS1 gain claim; preserve Tan PS1 DR1 separately. Gains require >0.10 and positive 95% lower bound with shared IDs resampled jointly across backgrounds. No unsupported completeness contours, population inference or manuscript writing.
+
+Latest manifest checkpoint f: 3,296/6,891 complete, nine no-usable-gr, 14,536.704 owned deg²; eight retry fields accepted, seven live-covered, zero uncovered. This is a newer area clock than the 5,614-record incremental candidate snapshot. Historical production integration, full repeated physics, PS1 validation and final review assembly remain outstanding. These requirements supersede older “review now” passages retained below as history.
+
 ## 2026-11-19 initial nine physical trials accepted
 
 The complete initial software/resource tranche now contains nine physical CCD realizations across three fixed backgrounds, 18 LS arm measurements and 378 stage-count rows. Eight native runs are new and one prior smoke is reused. The complete-tranche gate binds measured inputs to the validated native catalogues, registered blanks, physical protocol and shared populations. Allocation 61562188 and its science step exited COMPLETED/0:0; its 1:50:54 includes review-material work as well as the CCD stage. All temporary holds and queue-order changes have been resolved.

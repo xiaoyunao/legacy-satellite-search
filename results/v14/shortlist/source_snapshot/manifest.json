@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "results/v14/discovery/north/main/sky_group_candidates.csv": {
+      "snapshot": "results/v14/shortlist/source_snapshot/north/sky_group_candidates.csv",
+      "sha256": "8359a9fe619a5c89089548b3de9782f6d87c72ab22b3de81638ca11331a6296b"
+    },
+    "results/v14/discovery/north_extension/main/sky_group_candidates.csv": {
+      "snapshot": "results/v14/shortlist/source_snapshot/north_extension/sky_group_candidates.csv",
+      "sha256": "960c28eadf9fce43026e65900de289229c3e0561a75f1980dbecf91acb63f90b"
+    },
+    "results/v14/discovery/south_delve/main/sky_group_candidates.csv": {
+      "snapshot": "results/v14/shortlist/source_snapshot/south_delve/sky_group_candidates.csv",
+      "sha256": "ae112b66de3c413d9c1ad411830f3b2a3ba515c142aa4d5bcc9d7c24ac2dd89d"
+    },
+    "results/v14/discovery/south_des/main/sky_group_candidates.csv": {
+      "snapshot": "results/v14/shortlist/source_snapshot/south_des/sky_group_candidates.csv",
+      "sha256": "bfe02fbf4486992b8bb72d394cc63d33ad3a6b0b55c1bee6473a8f60aabd5dd3"
+    },
+    "results/v14/discovery/south_des_extension/main/sky_group_candidates.csv": {
+      "snapshot": "results/v14/shortlist/source_snapshot/south_des_extension/sky_group_candidates.csv",
+      "sha256": "3ec21c938599b263c626197d3eeb709d67e2c5e919180ee058c4837e7409f0ad"
+    },
+    "results/v14/discovery/south_ps1/main/sky_group_candidates.csv": {
+      "snapshot": "results/v14/shortlist/source_snapshot/south_ps1/sky_group_candidates.csv",
+      "sha256": "67d75a6001bc2fadddf03e2c84cf421873f73665b1460d23fdd502cdf521fbc3"
+    }
+  },
+  "scope": "Immutable original candidate inputs for the frozen first 75; preserved before regional refresh. Not a final production catalogue."
+}

@@ -1,0 +1,23 @@
+scope: Historical and R14 discovery-source eligibility audit; final owned-mask area and candidate freeze are separate gates.
+main_dm: [16.5, 20.75]
+policy: A_base
+budget: 0.3
+sources:
+  - {pattern: results/summary/pilot_candidate_summary.csv, class: development_regression}
+  - {pattern: results/v2/summary/pilot_candidate_summary.csv, class: development_regression}
+  - {pattern: results/v3/archive/sky_group_candidates.csv, class: development_regression}
+  - {pattern: 'results/v3/development_groups/*/sky_group_candidates.csv', class: development_calibration}
+  - {pattern: results/v4/holdout/sky_group_candidates.csv, class: frozen_discovery}
+  - {pattern: 'results/v5/batches/*/results/holdout/sky_group_candidates.csv', class: frozen_discovery}
+  - {pattern: 'results/v6/batches/*/results/holdout/sky_group_candidates.csv', class: frozen_discovery}
+  - {pattern: results/v7/first_batch/results/holdout/sky_group_candidates.csv, class: frozen_discovery}
+  - {pattern: 'results/v7/rollout/*/results/holdout/sky_group_candidates.csv', class: frozen_discovery}
+  - {pattern: 'wide_rollout/*/results/holdout/sky_group_candidates.csv', class: frozen_discovery}
+  - {pattern: 'wide_gaps/*/results/holdout/sky_group_candidates.csv', class: frozen_discovery}
+  - {pattern: results/v8/rollout/candidate_index.csv, class: followup_index_not_discovery}
+  - {pattern: 'results/v11/*/main/sky_group_candidates.csv', class: frozen_discovery}
+  - {pattern: 'results/v11/*/near/sky_group_candidates.csv', class: alternate_distance_branch}
+  - {pattern: 'results/v11/*/far/sky_group_candidates.csv', class: alternate_distance_branch}
+  - {pattern: 'results/v12/discovery/*/*/main/sky_group_candidates.csv', class: frozen_discovery}
+  - {pattern: 'results/v13/discovery/*/*/main/sky_group_candidates.csv', class: frozen_discovery}
+  - {pattern: 'results/v14/discovery/*/main/sky_group_candidates.csv', class: frozen_discovery}

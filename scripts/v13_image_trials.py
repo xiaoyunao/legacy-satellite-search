@@ -13,7 +13,7 @@ from ls_satsearch.data import Field, load_bricks, sample_pixels, select, sweeps
 from ls_satsearch.group_budget import groups, matches
 from ls_satsearch.matched import joint_coverage, reddening
 from ls_satsearch.run import field_cache, read_csv, settings, sha, write_csv, write_json
-from ls_satsearch.search import load_isochrone, scan
+from ls_satsearch.search import CMD, load_isochrone, scan
 if __package__:
     from .v12_selection_stats import interval
 else:
@@ -203,7 +203,7 @@ def counts(denom,det,point,selected):
     return result
 
 
-def measure(name, allow_partial=False):
+def measure(name, allow_partial=False, diagnostics=False):
     root,data,_ = settings()
     site,plan,cfg=context(name)
     storage=data/f'image-{VERSION}'/name
@@ -280,6 +280,18 @@ def measure(name, allow_partial=False):
             final_match=np.where(finals>=0,np.flatnonzero(novel)[np.maximum(finals,0)],-1) if novel.any() else finals
             det=final_match>=0
             psf, selected=photometry(sample,final_match,search_field,area,actual)
+            extra={}
+            if diagnostics:
+                # Truth distance is used only to diagnose CMD attrition after
+                # selection; it never enters blind() or its candidate seeds.
+                selected_sample,_,_,_,chosen=select(sample,search_field,area,actual)
+                native_cmd=np.zeros(len(sample),dtype=bool)
+                native_cmd[chosen]=CMD.top_hat(selected_sample[:,2:4],selected_sample[:,4:6],
+                    5*np.log10(truth['D_kpc'])+10,model[2])
+                cmd_selected=(final_match>=0)&native_cmd[np.maximum(final_match,0)]
+                extra=dict(N_cmd_at_truth_dm=int((observed&cmd_selected).sum()),
+                    latent_population_id=int(truth['trial']),
+                    realization_id=int(truth['trial'])//6)
             # Real faint blending is counted as a failure when the existing blank source remains.
             clearance=parents.query(pixels)[0]*60
             for low,high in ((-10,30),(20,22),(22,23),(23,23.5),(23.5,24),(24,25),(25,26)):
@@ -295,9 +307,11 @@ def measure(name, allow_partial=False):
             outcomes.append(dict(site=name,arm=arm,cutoff=cut,blank_spatial=blank_fit['spatial'],
                                  N_exposed=int(observed.sum()),N_final=int((observed&det).sum()),
                                  N_psf=int((observed&psf).sum()),N_used=int((observed&selected).sum()),
-                                 **truth,**injection))
+                                 **truth,**injection,**extra))
             input_refs.append(dict(trial=trial,arm=arm,tractor_sha256=sha(cat),
-                                   policy_sha256=sha(policy)))
+                                   policy_sha256=sha(policy),
+                                   **(dict(truth_sha256=sha(stage/'truth.npy'),
+                                           truth_metadata_sha256=sha(stage/'truth.json')) if diagnostics else {})))
     OUTPUT.mkdir(exist_ok=True,parents=True)
     write_csv(OUTPUT/f'{name}-stages.csv',rows)
     write_csv(OUTPUT/f'{name}-blind.csv',outcomes)

@@ -1,0 +1,45 @@
+{
+  "job": "61568908",
+  "tasks": 131,
+  "worklist": "results/v14/progress_20261119g/uncovered_retries.csv",
+  "worklist_sha256": "7b520572976fc1a89810ab9fe9a393943d7042b01458352a2554270ba5b7c98d",
+  "dependency_updates": [
+    {
+      "cohort": "south_delve",
+      "aggregate": "61470251",
+      "previous_dependency": "afterany:61469835_*(unfulfilled),afterany:61510268_*(unfulfilled)",
+      "new_dependency": "afterany:61469835,afterany:61510268,afterany:61568908"
+    },
+    {
+      "cohort": "south_delve_extension",
+      "aggregate": "61470263",
+      "previous_dependency": "afterany:61469850_*(unfulfilled)",
+      "new_dependency": "afterany:61469850,afterany:61568908"
+    },
+    {
+      "cohort": "south_des",
+      "aggregate": "61470253",
+      "state": "COMPLETED",
+      "action": "requires_separate_refreshed_followup_after_retry"
+    },
+    {
+      "cohort": "south_outside_census",
+      "aggregate": "61470255",
+      "previous_dependency": "afterany:61469845_*(unfulfilled),afterany:61510268_*(unfulfilled)",
+      "new_dependency": "afterany:61469845,afterany:61510268,afterany:61568908"
+    },
+    {
+      "cohort": "south_outside_census_extension",
+      "aggregate": "61470265",
+      "previous_dependency": "afterany:61469851_*(unfulfilled),afterany:61510268_*(unfulfilled)",
+      "new_dependency": "afterany:61469851,afterany:61510268,afterany:61568908"
+    },
+    {
+      "cohort": "south_ps1_extension",
+      "aggregate": "61470259",
+      "previous_dependency": "afterany:61469848_*(unfulfilled)",
+      "new_dependency": "afterany:61469848,afterany:61568908"
+    }
+  ],
+  "state": "submitted_not_complete"
+}

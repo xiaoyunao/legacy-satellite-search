@@ -17,12 +17,14 @@ case "$1" in
     catalogue)
         .venv/bin/python -u scripts/v14_catalog.py
         .venv/bin/python -u scripts/v14_production.py
+        .venv/bin/python -m scripts.v14_production_registry
         .venv/bin/python -u scripts/v14_atlas.py
         ;;
     snapshot)
         .venv/bin/python -u scripts/v14_results.py
         .venv/bin/python -u scripts/v14_catalog.py
         .venv/bin/python -u scripts/v14_production.py
+        .venv/bin/python -m scripts.v14_production_registry
         .venv/bin/python -u scripts/v14_atlas.py
         .venv/bin/python -u scripts/v14_efficiency.py
         .venv/bin/python -u scripts/v14_native_summary.py

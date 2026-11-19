@@ -1,0 +1,21 @@
+{
+  "updated_utc": "2026-11-19T09:10:01.315443+00:00",
+  "policy_source": "GPT Pro 437262c6; user next-round prompt 2026-11-19",
+  "one_formal_review_only": true,
+  "final_ready_for_human_review": false,
+  "frozen_first_batch": {
+    "positions": 75,
+    "release": "results/v14/human_review/release_v2",
+    "package_manifest_sha256": "7900621c7b3974629dce4501deb3393797893c8779cee5aee3b57d8a758b29b8"
+  },
+  "gates": {
+    "full_search_terminal_accounting": "pending",
+    "historical_production_and_exact_mask_union": "pending",
+    "same_eligible_record_C_complete": "pending",
+    "all_final_objects_images_and_evidence": "pending",
+    "final_sampling_inclusion_probabilities": "pending",
+    "final_anonymity_and_page_QA": "pending"
+  },
+  "human_responses": "unfilled; no seal or identity reveal",
+  "scope": "Historical batch technical readiness is distinct from final project-wide delivery. Preserve release_v2 bytes. Final package must retain and crosswalk the original 75 positions."
+}

@@ -1,5 +1,7 @@
 # 第一批候选人工审查
 
+**Current delivery policy (2026-11-19): wait for one final whole-project review.** The existing 75-position release is preserved as frozen batch 1. Do not fill, seal or reveal it yet. Full production reconciliation, required C/evidence and final anonymous/page QA must finish before user grading. Earlier batch instructions below document the release protocol, not a request for intermediate review.
+
 正式入口是 `release_v2/`：40 个优先位置（202 页）和 35 个匿名位置（71 页）已全部通过材料与版面检查，`release_v2/package_manifest.json` 的 `ready_for_human_review=true`。`release.json` 保存发布目录和哈希。候选等级仍为 L0；这里没有代填人工判断。
 
 ## 先完成匿名阶段

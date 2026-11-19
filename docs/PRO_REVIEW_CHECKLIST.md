@@ -1,5 +1,15 @@
 # GPT Pro review: requirements and acceptance
 
+Latest checkpoint g (2026-11-19T09:29:06.064749+00:00): **3462/6891 complete**, 10 no-usable-gr, **15451.314 owned deg²**. The older f checkpoint below predates 131 newly uncovered terminal failures, identified during the HOME quota incident; inspect `results/v14/progress_20261119g/retry_execution.json` for the subsequent registered recovery job. Science candidates still have a separate older summary clock.
+
+## 2026-11-19 authoritative next-round policy (GPT Pro 437262c6)
+
+The user will perform **one final, project-wide human review**. The first frozen 75-position `release_v2` is a technically validated historical batch, not an instruction to begin grading. Preserve every file/hash and blank response; do not seal or reveal identities. Final delivery waits for the full eligible production sample, historical reconciliation and exact owned-mask area, necessary same-record multimode C, complete images/evidence and anonymity/page QA. No intermediate batches require user judgment.
+
+Continue frozen full-DR11 A baseline/regional policies and the remaining 135 of 144 physical CCD trials. Keep shared IMF realization IDs, target/realized light, native exposure/detection/PSF/hard-selection/CMD/blind-distance/C losses, and quantify the finite stamp at 30 pc. Validate the physical PS1 DR2 joint response and reference contamination/support uncertainty before any LS−PS1 gain claim; preserve Tan PS1 DR1 separately. Gains require >0.10 and positive 95% lower bound with shared IDs resampled jointly across backgrounds. No unsupported completeness contours, population inference or manuscript writing.
+
+Latest manifest checkpoint f: 3,296/6,891 complete, nine no-usable-gr, 14,536.704 owned deg²; eight retry fields accepted, seven live-covered, zero uncovered. This is a newer area clock than the 5,614-record incremental candidate snapshot. Historical production integration, full repeated physics, PS1 validation and final review assembly remain outstanding. These requirements supersede older “review now” passages retained below as history.
+
 ## Latest human-review delivery request (46d21aad, 2026-11-19)
 
 Fully read through the native tool: four turns, no older page, newest review 5,020 characters. It adopts the existing scientific architecture and makes delivery concrete: complete 40 priority candidate PDF packets plus an independent 35-object anonymous PDF/image bundle, then the user supplies the scientific grades. Preserve failed records and the sample denominator. Keep morphology/CMD/spatial judgments sealed before revealing anonymous scores, environment or original identity; merge user judgments and form the final follow-up shortlist afterward. Blank forms are not completed reviews.
