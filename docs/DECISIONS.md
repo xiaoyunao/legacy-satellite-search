@@ -1,5 +1,10 @@
 # Decisions
 
+## 2026-11-20 — original-record C rather than positional inheritance
+
+The269historical compact/high-score records with no boundC are followed using their original completed scan configuration, same template bytes and retained seeds. Pilot6/6modes accepted; registered resource partitions preserve all467modes. Exact source/config/model proofs determine completion; a later nearby R14fit cannot certify another historical record. This does not change the final human sampling universe or create independent evidence. The validator accepts an explicitly recorded original config path; existingR14default and numerical implementation remain unchanged.
+
+
 ## 2026-11-20T00:23Z — current regional counts with frozen policy; missing history C stays explicit
 
 Use each current regional comparison beside its discovery table for production cardinality, after exact agreement with the frozen cut retained in global status. Preserve old global counts as another clock. Do not relax count checks, rerun discovery or shift thresholds to make an interim refresh pass. All425source hashes/75identitychecks pass in61617103. Numerical C completion and final evidence completion stay separate.

@@ -6,6 +6,8 @@ The completed-source refresh is accepted: catalogue61616596(COMPLETED4:08), corr
 
 **7655records/17386required seeds** are fully C-complete;**1921records/3013seeds** are unattempted. Applying the existing compact/high-score follow-up rule finds no missing R14priority record, but269historical priority records still need their own source/configuration handling. Do not borrow an alternate record's fit to erase these gaps. Low-priority missingC is unknown. Current scans:6566complete+29zero-valid-gr/6891,296remain;24381.922789summedR14owneddeg²,not final history union or gain area.
 
+Historical priority follow-up:99fields/467original retained modes are registered with exact original selection/template hashes. Pilot61617524completed54s,5records/6modes accepted. Remaining97fields/342modes are in61617692;one119-mode field in61617693. These submitted batches do not yet change the accepted7655/17386global coverage clock. No new discovery, quality grade or independent confirmation follows from C fitting.
+
 The initial ledger safely failed because its global SouthDELVE/DES status counts lagged actual regional comparisons(3275vs4132;1410vs1482). The repair checks current per-cohort comparison counts with exact frozen-cut agreement, retaining the older clock separately. Search parameters and thresholds did not change.
 
 Private score-hidden rendering now succeeds on one previously exposed case: unweighted measured-source positions/CMD errors/nativegr/exposure, neutral mode ordering and full-rasterQA. No final sample, complete evidence or anonymousPDF/ZIP is released. All75old bytes/identities and blank responses remain preserved.

@@ -1,5 +1,10 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-20 — historical C source/config check
+
+All99historical priority fields pass original config/template registration;6pilot modes accepted in61617524. Remaining461modes are registered in61617692/61617693, not counted complete. No new detector/cuts, final sample draw, user grades or manuscript. Final selected old-source hypotheses still need their own bound C and images.
+
+
 ## 2026-11-20T00:23Z — latest acceptance supersedes old counts below
 
 - [x] Interim historical/R14source reconciliation9576records/9403positions;all75identities preserved;425catalogue input hashes synchronized.

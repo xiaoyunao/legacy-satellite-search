@@ -1,5 +1,10 @@
 # Plan
 
+## 2026-11-20 — original-configuration historical priority C launched
+
+All269historical compact/high-score gaps map to99fields/467retained source modes. Registration checks each original complete scan's full selection config and stellar-template bytes. Pilot61617524(task30)COMPLETED54s/2854892KiBMaxRSS:5groups/6modes/6immutable member artifacts pass exact-source/config/seed checks. Remaining97fields are four bounded packs61617692(342modes), with119-mode task93 in longer regular61617693. No overlapping owner or additional discovery/sampling; accepted field tasks are verified and skipped on retry. Global coverage will update only after an accepted catalogue refresh. All selected diagnostics/final-human gates remain open.
+
+
 ## Current checkpoint — 2026-11-20T00:23Z
 
 1. Finish existing296scan fields and outside regionalC, retaining registered owners. x6566complete+29zero-valid-gr/6891;174retries accepted/zero uncovered. Rebuild final common-clock history/masks/identities/funnel after convergence.

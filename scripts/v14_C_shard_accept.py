@@ -13,7 +13,8 @@ def run(directory, legacy_provenance=False):
     provenance=directory/'provenance.json';proof=json.loads(provenance.read_text())
     source=Path(proof['input']);selection=directory/'review_modes.csv'
     modes=directory/'group_review_modes.csv';summary=directory/'group_review_summary.csv'
-    config=Path('configs/v14/cohorts')/directory.parent.name/'search.yaml'
+    config=Path(proof['search_config_path']) if proof.get('search_config_path') else (
+        Path('configs/v14/cohorts')/directory.parent.name/'search.yaml')
     inputs={str(p):sha(p) for p in (provenance,source,selection,modes,summary,config)}
     if proof['input_sha256']!=sha(source) or proof['selection_sha256']!=sha(selection):
         raise ValueError('Source or selected seeds changed')

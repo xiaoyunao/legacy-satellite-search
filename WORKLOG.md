@@ -2,6 +2,15 @@
 
 ## 2026-11-20
 
+### Original-configuration historical C pilot and registered backfill
+
+- Newv14_historical_C.py registers269qualified historical priority records→99fields/467source modes. Every original manifest iscomplete and has identical current configuration plus original stellar-template hash. Task/source/model/config hashes frozen; source-specific archive mappings explicit, no R14Cborrowed.
+- Pilot61617524task30COMPLETED54s/2854892KiBMaxRSS;5groups/6modes/6member artifacts pass source/config/seed/membership validation. Added explicit historical config path to Cvalidator, preserving existingR14default.
+- Four bounded sequential packs61617692cover97remaining fields/342modes;regular61617693covers119-mode task93. Original467modes unchanged; numerical only, no discovery/threshold/sampling/grade change. Accepted field proofs verified/skipped on retry.
+- Files:configs/v14_historical_C,source/config-bound runner/pack,validator,pilotaggregate/proofs/executions,science memory/status/plan. Validation:Pythonparse,actualall99metadata/model checks and six-modeSlurmproof. Corrected only locally generated priority-audit CSV line endings; no scientific rows changed. Previous git diff check reported CRLF after staging; next staged check must pass before commit. Old425source/75identityfacts unchanged; rawmembers remainNERSC.
+- Next:followbackfill and existingfullsearch/outsideC, refreshcoverageonlyafteracceptedoutputs. Preserve finalone-reviewgates; no manuscript or extraPS1installation.
+
+
 ### 08:23 CST — interim unified C ledger and score-hidden real-data renderer
 
 - x6566complete+29zero-valid-gr/6891,296remain,24381.922789351847summedowneddeg²;174retries accepted/zero uncovered. OOM-m04C535modes/203groups/399member artifacts accepted.

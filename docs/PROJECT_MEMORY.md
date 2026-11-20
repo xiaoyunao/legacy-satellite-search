@@ -1,5 +1,9 @@
 # 当前科学主线
 
+## 2026-11-20 — original-configuration historical priority C launched
+
+All269historical compact/high-score gaps map to99fields/467retained source modes. Registration checks each original complete scan's full selection config and stellar-template bytes. Pilot61617524(task30)COMPLETED54s/2854892KiBMaxRSS:5groups/6modes/6immutable member artifacts pass exact-source/config/seed checks. Remaining97fields are four bounded packs61617692(342modes), with119-mode task93 in longer regular61617693. No overlapping owner or additional discovery/sampling; accepted field tasks are verified and skipped on retry. Global coverage will update only after an accepted catalogue refresh. All selected diagnostics/final-human gates remain open.
+
 ## 2026-11-20T00:23Z — scientific and production checkpoint
 
 Fixed frozen-search source clocks now reconcile9576qualified records/9403provisional positions and preserve all75old identities. Exact same-record C is complete for7655records/17386seeds;1921records/3013seeds remain unattempted. All current R14compact/high-score priorities are covered, but269historical priority records require source-specific handling before final important modes can be certified. This snapshot is not final production/area/candidate quality. Current full-search audit is6566complete+29zero-valid-gr/6891,296remaining.

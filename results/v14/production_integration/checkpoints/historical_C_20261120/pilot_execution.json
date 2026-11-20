@@ -1,0 +1,48 @@
+{
+  "job": "61617524",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=64G",
+    "-t",
+    "00:20:00",
+    "-J",
+    "ls14-historical-C-pilot",
+    "-o",
+    "logs/%x-%j.log",
+    "--wrap",
+    "export LS_DR11_ROOT=/global/cfs/cdirs/cosmo/data/legacysurvey/dr11 LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MPLBACKEND=Agg; exec .venv/bin/python -u -m scripts.v14_historical_C --task 30"
+  ],
+  "task": {
+    "task": "30",
+    "source_key": "historical_04",
+    "input": "results/v12/discovery/v12/north/main/sky_group_candidates.csv",
+    "input_sha256": "16eba2a693f67479b3884a3a3f32f0f2e1f2cc3c1ed065bd962dbd57df5769e3",
+    "version": "v12",
+    "config": "configs/v12/cohorts/north",
+    "config_sha256": "d539a2d143b8557d1d1297cd1476ef716462c4da45e64f0c114bd351b8149627",
+    "archive": "regional_v12_north/results",
+    "field": "v12_north_001",
+    "model": "isochrones/bass/ps1_projected12_z0.00010.dat",
+    "model_sha256": "f6efb6c6653d15ffd4f7101c9886e38bf664dd596da2756984af4dd931dc4316",
+    "scan_manifest": "regional_v12_north/results/summary/v12_north_001-base/manifest.json",
+    "scan_manifest_sha256": "fbab48a7f6b09689a9fdfb35de5496bad9c5f778f5761a0d760d6ff6e73ce855",
+    "group_ids": "v12_north_001-A_base-0.3-001|v12_north_001-A_base-0.3-003|v12_north_001-A_base-0.3-005|v12_north_001-A_base-0.3-007|v12_north_001-A_base-0.3-009",
+    "groups": "5",
+    "modes": "6"
+  },
+  "code": {
+    "scripts/v14_historical_C.py": "bf0d9a579da5368b8fab50fbd40ac78019323b1af5a86fc8cb59a259ccbd0ecb",
+    "scripts/v14_C_shard_accept.py": "4329f4805dee600eb9bab3e8b0e6e211652c57b0ba8881db105276b908bc17c7"
+  },
+  "state": "submitted_not_complete"
+}
