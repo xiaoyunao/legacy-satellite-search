@@ -1,0 +1,8 @@
+{
+  "original_registration_sha256": "81f6885528577981918bdaa512879f61f1d521316eb0538c82379d4655713db4",
+  "reason": "Technical NumPy bool-weight histogram fix only; cast valid-exposure weights to float without changing any mask value, spatial extent, mode, seed or selection.",
+  "runner_sha256": "aba7f24f0f033396d284e8164c18d0d837e8023e5ceeafa3f76c00955cda3917",
+  "extent_renderer_sha256": "6eceaaead5a1295e149ab2c40c1b099adc434e4502ccd3032003aeaa9b1e9233",
+  "retry_job": "61623142",
+  "final_review_release": false
+}

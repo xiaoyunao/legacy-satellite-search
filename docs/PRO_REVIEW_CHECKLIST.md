@@ -6,7 +6,8 @@
 - [x] Mandatory old-75 preparation pilot: 22 saved modes, no fit changes. Not a final release.
 - [x] Native single-band PS1 measured output; exact FITS STK_ID audit and descriptive matched photometry. Preserve initial parameter/identity failures.
 - [ ] Remaining outside-census C, existing final aggregation, common-clock historical production/area/identities/funnel freeze.
-- [ ] Full-extent material pilot, then all selected original/new cases and controlled probability audit, complete saved-mode evidence/privacy/PDF/ZIP/page QA. One final human review only.
+- [x] Largest-angular full-extent material pilot61623142 completes: full2rh grfinite1.0each, sampled raster inspected.
+- [ ] Remaining74mandatory old cases61623753, then final selected new cases and controlled probability audit, complete saved-mode evidence/privacy/PDF/ZIP/page QA. One final human review only.
 - [ ] Five-band PS1 blank equivalence and physical response; no three-arm physical gain claim from native-g success.
 
 ## 2026-11-20T02:00Z — current acceptance and remaining gates

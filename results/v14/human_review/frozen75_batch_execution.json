@@ -1,0 +1,31 @@
+{
+  "job": "61623753",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n4",
+    "-c4",
+    "--mem=64G",
+    "-t",
+    "01:30:00",
+    "--array=0-9%2",
+    "-J",
+    "ls14-prepare75-pack",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "scripts/v14_prepare_frozen75_pack.sh"
+  ],
+  "plan_sha256": "070b077db6de21deca16925742670868d25916a6f9056d0ddd65f46f10f9c8ba",
+  "state": "submitted_not_complete",
+  "cases": 74,
+  "packs": 10,
+  "parallel_cases_per_node": 4,
+  "scope": "Exact mandatory74remaining cases, no new scientific selection, refit or human release; source-bound accepted cases skip on retry. Prior conservative74task submission was rejected before job creation; no overlapping owner."
+}

@@ -1,0 +1,32 @@
+{
+  "pilots": [
+    {
+      "job": "61622229",
+      "private_acceptance_sha256": "4d99b336ebd47aa84ef56b145bf1e751363cf6efb5dc6d218b5a45123d0dfe31",
+      "modes": 22,
+      "hashes_checked": 132,
+      "PNG_integrity_checked": 88,
+      "refitted": false
+    },
+    {
+      "job": "61623142",
+      "private_acceptance_sha256": "3929f6ea0a58b9ae190d8031990d4799e224a6bef3eb9c0abcc5e6632b64930b",
+      "modes": 1,
+      "hashes_checked": 8,
+      "PNG_integrity_checked": 5,
+      "refitted": false,
+      "full_extent_halfwidth_arcsec": 2688.0,
+      "image_pixel_arcsec": 3.84,
+      "finite_pixel_fraction": {
+        "g": 1.0,
+        "r": 1.0
+      },
+      "full_extent_raster_visually_inspected": true
+    }
+  ],
+  "source_probability_or_grade_changes": false,
+  "full_raster_visual_samples_inspected": 2,
+  "all_final_pages_visually_checked": false,
+  "final_review_release": false,
+  "scope": "Private mandatory-position preparation pilots only. All listed PNG files pass integrity and all saved artifact hashes match; sampled full rasters inspected. Full final sampling, identity/privacy and page QA remain open. Original75 unchanged."
+}
