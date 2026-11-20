@@ -2,6 +2,16 @@
 
 ## 2026-11-20
 
+### 08:23 CST — interim unified C ledger and score-hidden real-data renderer
+
+- x6566complete+29zero-valid-gr/6891,296remain,24381.922789351847summedowneddeg²;174retries accepted/zero uncovered. OOM-m04C535modes/203groups/399member artifacts accepted.
+- Catalogue61616596COMPLETED4:08; ledger61616597failed on stale global regional counts. Root cause:SouthDELVE3275vs4132/SouthDES1410vs1482;v14_production.py now checks current comparison count AND unchanged frozen cut, preserving both clocks. Retry61617103COMPLETED4:27:9576historical+R14records/9403positions,75identities preserved. ExactC7655records/17386seeds complete,1921/3013unattempted;allR14existing-priority rules covered,269historical priority gaps. All425source hashes match local sync; old catalogue backed up remotely.
+- Newv14_phase1_panels.py private native pilot61616923COMPLETED45s/oneold mode:unweightedpositions/CMDerrors/nativegr/exposure,gr100%finite,fullrasterQA. No scores/probability/contributor order/environment labels. Original75unchanged; private crosswalk/raster ignored. Final all-mode/evidence/PDF/privacyQA remain open.
+- IPPOhana61615369failed16s(Werror formatting),61616642failed27s(common symbols),61617028failed1:36(generatedheader invalid Ntoken). Only warning/compiler compatibility flags/libraries, no numerical-source patch/fullapplication or database suite. Originalexecuted wrappers/loghashes preserved; stop broad installation. PhysicalPS1response remains unknown.
+- Files: unifiedcatalogue/sourceCtables/production/history/Ccoverage/checkpoints;source-clockfix;unweightedrenderer and publicpilot acceptance;IPPexecution/failure/sourcearchives;science/status/memory/decisions/checklist/plan/deliverygate. Commands:actualSlurmmetadata/candidate computation,explicitallowlist rsync,Pythonparse/bashsyntax,3targeted existingunit tests(allpass),realrasterinspection/hashchecks. Raw/member arrays remainNERSC.
+- Next: source/config-bound historical priority C, existingfullscan/outsideC, then final union/identities/evidence/probability sample and singlehumanpackage. No interim grading or manuscript.
+
+
 ### 07:27 CST — fixed-population native size response and association bounds
 
 - Completed all24native cases/48paired-depth rows:8existing bright10pc populations shrunk to3pc across3original skies, identical rendered members/intrinsic light.61608931all5packs COMPLETED11:44/13:38/12:52/11:44/17:13;collector61610213COMPLETED1:57. Stage proof reproduces original exposure/final/PSF/hard counts; original144immutable.
@@ -10,6 +20,7 @@
 - w23:20Z6545complete+29zero-valid-gr/6891,317remaining,24375.34227237654summedowneddeg²;174retries accepted/zero uncovered. Ctimeout-q03 632/406andOOM-m01 433/118accepted by exact-source/seed/member hashes. Full common-clock production and final review gates remain open.
 - Verified officialIPP source archive151700998bytes,MD516021a46323a79c04432bb839e353f34,SHA3a8cf08538b1ed23d130abe8a41a5ac1ccccb52dade488fc355d5f172f1b3cb4. Build probe61613456(COMPLETEDbutfailed_psLib) shows missingCFITSIO/floatFFTWdev.61613934buildsCFITSIO but vendor runtime-onlyFFTW skips headers/pkgconfig. 61614223force-builds floatFFTW3.0.1, then actualpsLib compilation fails on optionalMySQL mysql_com.h. 61614542documented database-disabled/debug-build reconfiguration reaches later compilation and stops on bundledOhana/kapa.h. All executed-source versions/logs are preserved; no fullDB/Perl install or PS1response claim. Old executed probe source archived. Public raw-pipeline availability and stack-level photometry reproducibility remain distinct.
 - Files: paired full acceptance/stage/uncertainty/geometry/association/core tables,scientificPNG/QA;source-boundCproofs,w audit,IPPsource manifest/isolated build wrappers/failed executions;science/memory/status/decisions/plan/checklist/delivery gates. Commands: actual Slurm native/stage/audit;Python parse,graph smoke,real-data aggregate scripts;PNG full-raster inspection. Raw images/per-star arrays remainNERSC.
+- Final-review renderer inspection found old evidence uses member-probability colours. Registered final phase-one unweighted panels/neutral mode labels, withholding probabilities/weights/scores until reveal. Preserve original75 bytes/prior exposure; no sampling or grades changed.
 - Next: finish existing production owners, integrate final source clock/areas/identities/C,then select/render final evidence and one anonymous human package. Advance PS1operator only with actual blank-stack validation. No new detector tuning, unsupported global SF/abundance, manual grades or manuscript.
 
 

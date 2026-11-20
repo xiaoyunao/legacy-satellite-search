@@ -1,5 +1,17 @@
 # Decisions
 
+## 2026-11-20T00:23Z — current regional counts with frozen policy; missing history C stays explicit
+
+Use each current regional comparison beside its discovery table for production cardinality, after exact agreement with the frozen cut retained in global status. Preserve old global counts as another clock. Do not relax count checks, rerun discovery or shift thresholds to make an interim refresh pass. All425source hashes/75identitychecks pass in61617103. Numerical C completion and final evidence completion stay separate.
+
+Existing compact/high-score C priority is complete for R14 but269historical qualified records still need same-source/configuration handling. No cross-position/alternate-record fit inheritance. A successful one-case unweighted renderer pilot only establishes that observed score/probability leakage can be avoided; it does not establish final anonymity/sample/evidence readiness. Preserve old75bytes and prior-exposure flags.
+
+
+## Final phase-one rendering — hide model confidence before grading
+
+Inspection of scripts/v14_review_evidence.py shows member-probability colouring in old evidence. For the final score-hidden phase, use unweighted observed-source CMD/spatial panels and neutral mode labels, with all probabilities/contribution weights/A/C statistics held for reveal. This addresses an observed rendering channel for model-confidence information without changing discovery or sampling. Original75images/PDFs/hashes remain intact; their previous exposure is still flagged. The full scientific context is retained for phase two, and no user grades are filled.
+
+
 ## 2026-11-19T23:27Z — distinguish catalogue component loss from association errors
 
 Observed fixed-light size response is robust to optimal0.8arcsec association and doubling tolerance; raw3rh source excess also falls. Treat blending/source separation as the principal observed compact-case bottleneck at100kpc in these finite populations. Keep detector/kernel/cuts frozen, rather than trying to repair missing separable members with search-score changes. Do not extrapolate to faint/15pc/other-distance/all-sky completeness. Source-noise and local geometry are included; this is not a pure-crowding decomposition.

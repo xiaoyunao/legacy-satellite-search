@@ -1,5 +1,16 @@
 # Status
 
+## 2026-11-20T00:23Z — completed-source C and historical ledger accepted
+
+- x00:06Z:6566complete+29zero-valid-gr/6891,296remain;24381.922789351847summedR14owneddeg²;174registered retries accepted/zero uncovered. Final historical union remains separate.
+- Catalogue61616596COMPLETED4:08; ledger61617103COMPLETED4:27. All425catalogue input hashes match locally. 9576qualified historical/R14 source records→9403provisional positions; original75identities all preserved. R14increment alone8290records/8241associations/6855records with an available same-sourceC. Neither subset is final frozen production.
+- Exact C seed coverage:7655records/17386seeds complete;1921records/3013seeds unattempted. Existing compact/high-score rule covers all R14priority records;269historical priority records need source-specific backfill/selection consideration. Low-priority missingC remains unknown, not zero or failure. OOM-m04 accepted535modes/203sourcegroups/399unique saved member artifacts.
+- First ledger61616597failed safely: old global status retained3275/1410SouthDELVE/DES groups versus actual regional4132/1482. Fix validates current comparison/cardinality AND exactly unchanged frozen cuts, records both clocks; no discovery rerun or threshold change.
+- Unweighted score-hidden real-data renderer61616923COMPLETED45s:one prior-exposed case/mode, gr100%finite and full-raster inspected. Outputs/key remain private; original75unchanged. This is not final sample/evidence/PDF/ZIP QA.
+- IPP library-only attempts61615369/61616642/61617028fail16s/27s/1:36 on Werror/common symbols/generatedautocode.h respectively. Original sources/logs/hashes preserved; stop broad installation. No psphot/PS1pixel response or physical gain accepted.
+- Final user review remains false; full scans/outsideC/common-clock area/history/selected evidence/sampling/privacy-page QA remain gates. No grades or manuscript.
+
+
 ## 2026-11-19T23:27Z — native24paired stages and association audit accepted
 
 - w23:20Z6545complete+29zero-valid-gr/6891;317remaining;24375.34227237654summedowneddeg²,174scan retries accepted/zero uncovered. Existing remaining scan/regional C owners retained.

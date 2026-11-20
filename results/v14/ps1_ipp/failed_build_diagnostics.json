@@ -28,7 +28,49 @@
         "problem building psLib : failure in make"
       ],
       "raw_log_relative": "probe_core_fftw/build_psLib.log"
+    },
+    {
+      "job": "61614542",
+      "result": "failed_psLib_kapa_header",
+      "log_sha256": "008e1be6ad4169e409cb47ec5e382834203fb3b13806ab118980f3f1f364d3a7",
+      "failure_lines": [
+        "psImageJpeg.c:9:10: fatal error: kapa.h: No such file or directory"
+      ],
+      "raw_log_relative": "probe_nodb_core/build_psLib.log"
+    },
+    {
+      "job": "61615369",
+      "result": "failed_Ohana_warning_policy",
+      "log_sha256": "a6734f9b3f9ab7687cd9c21e813c925ade8f79752e33bbaa826e7f27e320bb7f",
+      "failure_lines": [
+        "/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libohana/src/findexec.c:297:35: error: \u2018snprintf\u2019 output may be truncated before the last format character [-Werror=format-truncation=]"
+      ],
+      "raw_log_relative": "probe_ohana_core/ohana_libraries.log"
+    },
+    {
+      "job": "61616642",
+      "result": "failed_Ohana_common_symbols",
+      "log_sha256": "3d099c9eb66eff9bce5c5adf5d0dbc1226844e6b9c5e8d88e27c65c1b2a15a7f",
+      "failure_lines": [
+        "/usr/lib64/gcc/x86_64-suse-linux/14/../../../../x86_64-suse-linux/bin/ld: /pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/src/coordops.lin64.o:/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/include/dvodb.h:308: multiple definition of `dvoMeasureType'; /pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/src/version.lin64.o:/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/include/dvodb.h:308: first defined here",
+        "/usr/lib64/gcc/x86_64-suse-linux/14/../../../../x86_64-suse-linux/bin/ld: /pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/src/coordops.lin64.o:/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/include/dvodb.h:367: multiple definition of `dvoAverageType'; /pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/src/version.lin64.o:/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/include/dvodb.h:367: first defined here",
+        "/usr/lib64/gcc/x86_64-suse-linux/14/../../../../x86_64-suse-linux/bin/ld: /pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/src/coordops.lin64.o:/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/include/dvodb.h:453: multiple definition of `dvoImageType'; /pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/src/version.lin64.o:/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libdvo/include/dvodb.h:453: first defined here"
+      ],
+      "raw_log_relative": "probe_ohana_warnings/ohana_libraries.log"
+    },
+    {
+      "job": "61617028",
+      "result": "failed_Ohana_generated_header",
+      "log_sha256": "b95f21d490cecb8f6531d73036c647a0277634df1e765a050b00f1ccff7da6c9",
+      "failure_lines": [
+        "/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libautocode/include/autocode.h:49:1: error: unknown type name \u2018N\u2019",
+        "/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libautocode/include/autocode.h:49:5: error: expected identifier or \u2018(\u2019 before \u2018/\u2019 token",
+        "/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/ipp-20190404/Ohana/src/libautocode/include/autocode.h:70:3: error: type defaults to \u2018int\u2019 in declaration of \u2018SecFilt_PS1_V4\u2019 [-Wimplicit-int]"
+      ],
+      "raw_log_relative": "probe_ohana_common/ohana_libraries.log"
     }
   ],
-  "scope": "Preserved actual compiler/configuration failures; Slurm completion is not successful core build or PS1 image validation. Full source/build outputs remain in the isolated scratch prefix."
+  "scope": "Preserved actual compiler/configuration failures; Slurm completion is not successful core build or PS1 image validation. Full source/build outputs remain in the isolated scratch prefix.",
+  "physical_PS1_response_validated": false,
+  "next_gate": "No further broad installation. Reassess generated-header/library build capability before any PS1 blank-image equivalence or image injection. No algorithmic photometry source patch or accepted psphot binary."
 }

@@ -1,5 +1,15 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-20T00:23Z — latest acceptance supersedes old counts below
+
+- [x] Interim historical/R14source reconciliation9576records/9403positions;all75identities preserved;425catalogue input hashes synchronized.
+- [x] ExactCcoverage7655records/17386seeds complete. All current R14compact/high-score priorities covered;269historical priority records and low-priority final-sample C still require source-specific handling. Do not call1921unattempted records nondetections.
+- [x] Metadata source-clock repair catches stale global SouthDELVE/DES counts; same frozen cuts and regional cardinality remain mandatory.
+- [x] Private unweighted phase-one pilot61616923:oneold mode/nativegr fullfinite/fullrasterQA. Original75preserved; no final probability draw or user grades.
+- [ ] Finish296remaining scans, outside regionalC, common-clock final production/area/positions; render all final selected evidence, final identity/privacy/pageQA and one formal review.
+- [ ] PhysicalPS1response remains unvalidated after bounded original-operator build attempt; generated-header error retained. No broad install expansion, unsupported gain/contours/abundance or manuscript.
+
+
 ## 2026-11-19T23:27Z — native stage question closed within a bounded scope
 
 Accepted24fixed-population native size cases/48depth rows, with8shared populations/3fixed backgrounds and all original stage counts reproduced. Association61613306excludes greedy/radius artifacts as the explanation of the large member loss. Statistics, per-background/core/neighbor tables and full-raster figure QA are complete; no blindPdet added. The original144/faint-light scope and physicalPS1transfer limitation remain explicit. w6545+29/6891 leaves317fields; final common-clock production/area/C/selected evidence/probability sampling/anonymity gates remain open. Original75 and one final human review policy unchanged.

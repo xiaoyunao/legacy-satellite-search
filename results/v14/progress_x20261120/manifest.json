@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-20T00:06:39.030423+00:00",
+  "fields": 6891,
+  "complete": 6566,
+  "no_usable": 29,
+  "no_usable_with_positive_valid_mask": 0,
+  "excluded_no_usable_valid_mask_deg2": 0,
+  "native_complete_sites": 7
+}

@@ -1,0 +1,10 @@
+{
+  "job": "61583867",
+  "input": "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv",
+  "input_sha256": "ca12c32172d971bf2d09c89b3bacebf794bf7797e91cfcf7785075d3497a61e3",
+  "selection_sha256": "48f4a2a4c76edc564473793c3b96f2fb2e6143e2d208e957ddd89cc9da8cad58",
+  "count": 8,
+  "index": 5,
+  "visual_review_pending": true,
+  "blinded_cross_id": true
+}

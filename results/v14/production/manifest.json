@@ -1,29 +1,35 @@
 {
   "inputs": {
+    "results/v14/discovery/north/main/sky_group_comparison.csv": "3c24a87e6d4fed91db0fc26a6864d391e44bb658aa2c5a731b5632f102a5e2be",
     "results/v14/discovery/north/fields.csv": "1b9231f0b8f3420e3e0b224b4e2eef27c462e84ca7263022fe5ac6a8ce9f3f78",
+    "results/v14/discovery/north_extension/main/sky_group_comparison.csv": "09689501a12802e3966cc973e4a48dfe55652ecaefa9b37c285b3280456ba47e",
     "results/v14/discovery/north_extension/fields.csv": "b2a766b5c720c3c3ea2eee885c1f91e30c53196b6327ddd3a71dcc816e2539ec",
     "results/v14/discovery/north_single_native/fields.csv": "44fc074d170eb026ec69652ac7b8a76aa8e0bbec649533bc7b78575ef5423b72",
-    "results/v14/discovery/south_delve/fields.csv": "79650a55b7c2c6a7ff91615a4281b0ab1d1f990aaa9478c4a299d8bf339d40a4",
-    "results/v14/discovery/south_delve_extension/fields.csv": "6b5695ac0dfb71d1c643d460a17545c41892ca0968e19e8219dd7e96551a2f02",
-    "results/v14/discovery/south_des/fields.csv": "6d2031998f15ee76c5920b14e0678b3349c1d65a42578f9074cea3170b9589a1",
+    "results/v14/discovery/south_delve/main/sky_group_comparison.csv": "e632687ff73264e5db1cbbd624f3cd5f412376ad732ebf89598b49781e4657d7",
+    "results/v14/discovery/south_delve/fields.csv": "8f2f9017ad9dec8d1956ea94fddd48695a516ff8613449fa212faf8c50971088",
+    "results/v14/discovery/south_delve_extension/fields.csv": "7c5d6fb26b4a4b1806b56bade3de4df81040f105510fc07c0eede503a4892f26",
+    "results/v14/discovery/south_des/main/sky_group_comparison.csv": "c3eabcb9c8930e0cb651196ad929eca4d7e38ef2b241362ccc3bbc8179a9da58",
+    "results/v14/discovery/south_des/fields.csv": "45a8637ec7844b89678c5a2736dbf2c7505e15f1a6eb4de5d5dbb2eb420cac8d",
+    "results/v14/discovery/south_des_extension/main/sky_group_comparison.csv": "9499bfb2386d472377f8b21c8b8cd846732c89121cde9915c428181903b9dc84",
     "results/v14/discovery/south_des_extension/fields.csv": "e1fd8839b35f6f45c5e8c121ba292fc8a9a4d0a3bc080760e61a84c0fc47534d",
     "results/v14/discovery/south_outside_census/fields.csv": "135e8910874425f2b058af4adfd4ec39ad82d4bdc0eb002203ad2b4c1a572208",
     "results/v14/discovery/south_outside_census_extension/fields.csv": "4514abdddb860e1b0f92f137e035f371bf5a8fc5860fad54fcf8b8df5f0ba3d6",
+    "results/v14/discovery/south_ps1/main/sky_group_comparison.csv": "4e86c21b372cb6720d52e146c5275bb560b884d20455b3bc892eed9d06b88b12",
     "results/v14/discovery/south_ps1/fields.csv": "4d6a8ec4c0c1238586dca267f308f2595eeb74d4e076a69adfff82f75124ea5e",
-    "results/v14/discovery/south_ps1_extension/fields.csv": "2266acf6d36757ca97d975093f2f891258ff2d9a55743fbe5768859ce2c083a3",
-    "results/v14/catalogue/manifest.json": "76ad50811de108c74550a1be2b20987f22872ab5dd411b1a707d87acffa5e516",
-    "results/v14/catalogue/candidate_modes.csv": "61da7a092a112ec8f5014695abf6ec20e4bbcc0e44c376d61358cf242d49a2a2",
-    "results/v14/catalogue/candidate_catalogue.csv": "fa10912447d359829c03535778e276976209dd0df1afccc896c903f5341925b3",
+    "results/v14/discovery/south_ps1_extension/fields.csv": "17bb04bb96678a38e8f760a43423b8dffe09c6fa91ca2e500045d035642f72bc",
+    "results/v14/catalogue/manifest.json": "9b37d59f1f7d2be4ea059a33456eea6993e15a9fb5e6419337909f014c99251e",
+    "results/v14/catalogue/candidate_modes.csv": "6f84e8b52aaaa9815bd2571b2afe5fcf3ee9cac732f69db20b5f290e134d364c",
+    "results/v14/catalogue/candidate_catalogue.csv": "3c2642de9a7b4f3ce6f7a3466011b065b7c6108f1d0af3d4a70144efbcd2248e",
     "results/v14/discovery/status.csv": "c8fd52cc0e5933e428b54b4d85f17bcc14c4b2c3b6d0e53caeffb0997fb8687a"
   },
-  "source_snapshot_job": "61573608",
-  "code_sha256": "376f04513cabb22ba18bfde6f1fa3b8ac0431d2829a573acd67cba62959f7abd",
-  "discovery_records": 6708,
-  "provisional_sky_associations": 6660,
-  "successful_C_records": 2124,
+  "source_snapshot_job": "61616596",
+  "code_sha256": "076dc96fd2dcc3bd9b0f5fb5e17ddcab89a8c23917b66a78a85cfaa09986d0ac",
+  "discovery_records": 8290,
+  "provisional_sky_associations": 8241,
+  "successful_C_records": 6855,
   "main_dm": [
     16.5,
     20.75
   ],
-  "scope": "Completed R14 primary-budget baseline main-branch evaluation records only. Historical records remain in the inventory but are not included in this incremental sample. Area uses the same regional-summary clock as the candidate inputs. Raw/deduplicated peak totals include all distances; they are not main-only funnel stages. Associations remain provisional and can share cross-version context. Blank review stages and uncalibrated counts are unknown, not zero. No population completeness or physical confirmation is inferred."
+  "scope": "Completed R14 primary-budget baseline main-branch evaluation records only. Historical records remain in the inventory but are not included in this incremental sample. Counts are checked against current per-cohort comparison tables and unchanged frozen cuts; a lagging global status count is retained separately. Area uses the same regional-summary clock as the candidate inputs. Raw/deduplicated peak totals include all distances; they are not main-only funnel stages. Associations remain provisional and can share cross-version context. Blank review stages and uncalibrated counts are unknown, not zero. No population completeness or physical confirmation is inferred."
 }

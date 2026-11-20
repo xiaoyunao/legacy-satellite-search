@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-20T00:05:45.582981+00:00",
+  "job": "61616642",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-ohana-warnings",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ipp_ohana_core.sh"
+  ],
+  "script_sha256": "e66236ff68772d9cde89c092453203e80230e22bfc0688aa8ceb85820bfbf002",
+  "state": "submitted_not_complete",
+  "previous_job": "61615369",
+  "specific_fix": "Remove only -Werror from generated Ohana CPPFLAGS via make command-line override. Preserve all other flags and source. Distinct logs; libraries only, no application/database suite.",
+  "physical_PS1_response_validated": false
+}

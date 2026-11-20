@@ -1,0 +1,27 @@
+{
+  "job": "61584021",
+  "inputs": {
+    "results/v14/candidate_review/v14_oom_m/south_delve_extension/04/provenance.json": "6a4c22b8dba73c212d37df8202c4bcfc3efd3d4e80dfa1b5aa7d66220e62732f",
+    "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv": "ca12c32172d971bf2d09c89b3bacebf794bf7797e91cfcf7785075d3497a61e3",
+    "results/v14/candidate_review/v14_oom_m/south_delve_extension/04/review_modes.csv": "026063a9b36e82e01d88e07b3338831f15967decec6242658d16214684d11f09",
+    "results/v14/candidate_review/v14_oom_m/south_delve_extension/04/group_review_modes.csv": "970cc1e370901aa7c2691ae9d1494a73c274e652075cd1753b2c9b92d700ae30",
+    "results/v14/candidate_review/v14_oom_m/south_delve_extension/04/group_review_summary.csv": "7c05d1d8ed39a967f65138c482f4fc52ff473177768a6f2c1fe63f631344ae31",
+    "configs/v14/cohorts/south_delve_extension/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "2f84ca82eae60153d6b5fb21a76a63fc64f376684f7e9c9551fa10d9b4a06236",
+  "exact_source_groups": 203,
+  "selected_seeds": 535,
+  "fit_states": {
+    "complete": 535
+  },
+  "complete_membership_references": 535,
+  "unique_membership_artifacts": 399,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}

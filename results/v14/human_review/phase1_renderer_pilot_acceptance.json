@@ -1,0 +1,13 @@
+{
+  "job": "61616923",
+  "modes_rendered": 1,
+  "renderer_sha256": "f3bbd90f958159e93681a77d3ede2738ed4a95b30e596df683b9f6786a075993",
+  "private_proof_sha256": "b9c93480c87dc1c0052eadeffe01382ce450e448c0bc89f85059988614c924fc",
+  "native_gr_all_finite": true,
+  "probabilities_or_scores_rendered": false,
+  "source_overlay_or_contributor_order_rendered": false,
+  "full_raster_visually_inspected": true,
+  "observed": "Unweighted selected-source positions, core/equal-area background CMD with marginal errors, native gr coadds and effective exposure; neutral label/order. No identity/absolute coordinates/scores/known-processing labels in panels.",
+  "final_review_release": false,
+  "scope": "One previously exposed old-case renderer pilot only. Final selection, all selected evidence/modes, contributor/radial/context panels, probability sampling and PDF/ZIP privacy/page QA remain gates. Private raster/crosswalk retained; original75 unchanged."
+}

@@ -1,0 +1,10 @@
+{
+  "job": "61582122",
+  "input": "results/v14/discovery/south_ps1_extension/main/sky_group_candidates.csv",
+  "input_sha256": "f100dc586db9a296392e834b31ab34b39eb9ea55dbcafafb72d92cd77495eb48",
+  "selection_sha256": "af0cb5bd095c63e61ada934fd1ea835897e3b22dcd326b23429b8747c8b75cc8",
+  "count": 8,
+  "index": 3,
+  "visual_review_pending": true,
+  "blinded_cross_id": true
+}

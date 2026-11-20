@@ -1,0 +1,10 @@
+{
+  "job": "61582139",
+  "input": "results/v14/discovery/south_des/main/sky_group_candidates.csv",
+  "input_sha256": "4e93bd75a00d620be2afc033e47631b4ff5921fe1fece59761665415b4384192",
+  "selection_sha256": "3b80574bd3a67b5c65f6b0621fe73567d75536e3283835a00b6cb6e038299ffb",
+  "count": 8,
+  "index": 2,
+  "visual_review_pending": true,
+  "blinded_cross_id": true
+}

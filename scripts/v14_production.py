@@ -76,9 +76,22 @@ def run(root=Path('results/v14')):
         ids = {r['candidate_id'] for r in members}
         c_ids = {r['candidate_id'] for r in members if r['successful_C_on_eligible_record']}
         calibrated = finite(state.get('primary_cut')) is not None
-        if calibrated and len(members)!=int(state['primary_eval']):
+        # Per-cohort summaries can finish after the last global status snapshot.
+        # Check the actual comparison beside the candidate input, not that old
+        # global count. Preserve both clocks rather than weakening the check.
+        expected=int(state['primary_eval']) if calibrated else None
+        comparison=root/f'discovery/{cohort}/main/sky_group_comparison.csv'
+        if calibrated and comparison.is_file():
+            current=[r for r in read_csv(comparison) if r['policy']=='A_base' and finite(r['budget'])==.3]
+            if len(current)!=1 or finite(current[0]['cutoff'])!=finite(state['primary_cut']):
+                raise ValueError(f'Regional frozen policy disagrees with status: {cohort}')
+            expected=int(current[0]['evaluation_sky_groups'])
+            inputs[str(comparison)]=sha(comparison)
+        if calibrated and len(members)!=expected:
             raise ValueError(f'Production record count disagrees with regional snapshot: {cohort}')
         funnel.append(dict(cohort=cohort, calibrated=calibrated, completed_evaluation_fields=len(fields),
+            global_status_records=int(state['primary_eval']) if calibrated else None,
+            regional_comparison_records=expected,
             evaluation_owned_deg2=area, frozen_cut=state.get('primary_cut'),
             raw_peaks_all_distances=sum(int(r['raw_peaks']) for r in fields.values()),
             deduplicated_peaks_all_distances=sum(int(r['dedup_peaks']) for r in fields.values()),
@@ -100,7 +113,7 @@ def run(root=Path('results/v14')):
         code_sha256=sha(Path(__file__)), discovery_records=len(records),
         provisional_sky_associations=len({r['candidate_id'] for r in records}),
         successful_C_records=len(reviewed), main_dm=[16.5,20.75],
-        scope='Completed R14 primary-budget baseline main-branch evaluation records only. Historical records remain in the inventory but are not included in this incremental sample. Area uses the same regional-summary clock as the candidate inputs. Raw/deduplicated peak totals include all distances; they are not main-only funnel stages. Associations remain provisional and can share cross-version context. Blank review stages and uncalibrated counts are unknown, not zero. No population completeness or physical confirmation is inferred.'))
+        scope='Completed R14 primary-budget baseline main-branch evaluation records only. Historical records remain in the inventory but are not included in this incremental sample. Counts are checked against current per-cohort comparison tables and unchanged frozen cuts; a lagging global status count is retained separately. Area uses the same regional-summary clock as the candidate inputs. Raw/deduplicated peak totals include all distances; they are not main-only funnel stages. Associations remain provisional and can share cross-version context. Blank review stages and uncalibrated counts are unknown, not zero. No population completeness or physical confirmation is inferred.'))
     print(dict(records=len(records), provisional_associations=len({r['candidate_id'] for r in records}),
                successful_C_records=len(reviewed)), flush=True)
 

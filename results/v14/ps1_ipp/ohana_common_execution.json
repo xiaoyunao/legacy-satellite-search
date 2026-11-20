@@ -1,0 +1,30 @@
+{
+  "job": "61617028",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-ohana-common",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ipp_ohana_core.sh"
+  ],
+  "script_sha256": "fa50bb0de3fb072530d0e5e7754deafe14a30d488b7b66b50e532ce53d772ea0",
+  "state": "submitted_not_complete",
+  "previous_job": "61616642",
+  "specific_fix": "GCC-documented -fcommon for archived tentative definitions; force library-only rebuild with original CFLAGS plus fcommon, keep warning override. No numerical source patch.",
+  "compiler_reference": "https://gcc.gnu.org/gcc-10/porting_to.html",
+  "physical_PS1_response_validated": false
+}

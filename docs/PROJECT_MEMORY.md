@@ -1,5 +1,12 @@
 # 当前科学主线
 
+## 2026-11-20T00:23Z — scientific and production checkpoint
+
+Fixed frozen-search source clocks now reconcile9576qualified records/9403provisional positions and preserve all75old identities. Exact same-record C is complete for7655records/17386seeds;1921records/3013seeds remain unattempted. All current R14compact/high-score priorities are covered, but269historical priority records require source-specific handling before final important modes can be certified. This snapshot is not final production/area/candidate quality. Current full-search audit is6566complete+29zero-valid-gr/6891,296remaining.
+
+The original144native trials, fixed-population24-case component-loss response and one-draw/three-sky faint-light sensitivity are accepted as previously described. PS1 source build remains blocked by archived Ohana generated-header compilation; no valid pixel response or physical LS−PS1 gain follows. Keep the principal scientific effort on actual DR11 increment and calibrated limits, not the generic existence of compact blending already studied by Tan. Final anonymous panels now have a successful private unweighted renderer pilot; finish whole-project evidence and one review only after all release gates.
+
+
 ## 2026-11-19T23:27Z — measured size-response boundary
 
 Same-member/light native24pairs: final matched sources2347→1032after10pc→3pc; baseline hard384→197,deeper616→284. Exposure unchanged at>99.9%;0.8arcsec maximum association equals greedy,1.6arcsec does not restore hard members. Core catalogue-minus-blank2073→733and member-neighbor12.66%→62.91%support blending/source separation before PSF/CMD as the main observed limitation in this selected experiment. Preserve8shared populations/3fixed skies; no new blindPdet or full-light SF claim. Keep A production frozen; do not respond with more threshold/kernel tuning. See [current report](../fourteenth_science_report.md).

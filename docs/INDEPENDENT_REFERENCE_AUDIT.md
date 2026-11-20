@@ -1,5 +1,11 @@
 # Independent morphology and PS1 source-response audit
 
+## 2026-11-20 — bounded operator attempt remains unvalidated
+
+Ohana library-only jobs61615369/61616642/61617028 failed after16s/27s/1m36s. Removing only generated `-Werror` exposed legacy multiple tentative definitions; GCC documents `-fcommon` as a compatibility workaround ([official porting note](https://gcc.gnu.org/gcc-10/porting_to.html)). A forced library-only rebuild with that flag reached a generated `autocode.h` containing an invalid `N **/` token. Original scripts, separate logs and compact failure/hash records are retained. No photometric algorithm source was patched, database/application suite installed, compiled psphot accepted or PS1 image run claimed.
+
+Stop broad installation expansion here. A later bounded operator investigation must explain the generated-header failure and reproduce blank public-stack photometry/selection before any injection can represent PS1 DR2. The existing independent-reference condition mismatch is unchanged; physical PS1 response and LS-minus-PS1 detection gain remain unresolved, not zero.
+
 ## Official PS1 operator capability check — 2026-11-19T23:25Z
 
 The [official IPP server](https://ipp.ifa.hawaii.edu/) still distributes the20190404source archive. The151700998byte file is downloaded onNERSC; officialMD516021a46323a79c04432bb839e353f34matches, SHA2563a8cf08538b1ed23d130abe8a41a5ac1ccccb52dade488fc355d5f172f1b3cb4. The archive and generated build stay in scratch; only provenance/our wrapper code are public. See references/ps1_ipp_source_manifest.json.

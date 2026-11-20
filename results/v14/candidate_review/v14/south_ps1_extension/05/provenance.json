@@ -1,0 +1,10 @@
+{
+  "job": "61583293",
+  "input": "results/v14/discovery/south_ps1_extension/main/sky_group_candidates.csv",
+  "input_sha256": "f100dc586db9a296392e834b31ab34b39eb9ea55dbcafafb72d92cd77495eb48",
+  "selection_sha256": "4155e89e0285cd16604ea8cfa7d25194b43a7d787a010623ce057ff89ddaea10",
+  "count": 8,
+  "index": 5,
+  "visual_review_pending": true,
+  "blinded_cross_id": true
+}

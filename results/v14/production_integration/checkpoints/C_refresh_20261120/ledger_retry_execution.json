@@ -1,0 +1,33 @@
+{
+  "job": "61617103",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=96G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-C-ledger-clock-retry",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_C_catalogue_refresh.sh",
+    "ledger"
+  ],
+  "state": "submitted_not_complete",
+  "previous_job": "61616597",
+  "failure": "Global status counts lag completed SouthDELVE/DES cohort tables (3275 vs4132;1410 vs1482)",
+  "fix": "Check actual current per-cohort comparison counts and exact unchanged frozen cutoff; retain global snapshot count separately. Do not recalculate discovery or relax cardinality validation.",
+  "code": {
+    "scripts/v14_production.py": "076dc96fd2dcc3bd9b0f5fb5e17ddcab89a8c23917b66a78a85cfaa09986d0ac",
+    "scripts/v14_C_catalogue_refresh.sh": "4cf845dbf22f91f01e53a6b21e1bae5b929411dc177e9dfd8cb4a635b677f410"
+  }
+}

@@ -1,5 +1,18 @@
 # DR11 search and selection response
 
+## 2026-11-20T00:23Z — interim unified production and C accounting
+
+The completed-source refresh is accepted: catalogue61616596(COMPLETED4:08), corrected ledger61617103(COMPLETED4:27), all425input hashes synchronized. Qualified historical plus R14 discovery records now number**9576**, provisionally associated into**9403positions**; original75identities remain intact. R14alone contributes8290records,8241provisional associations and6855records with an available same-source fit. These are source/sample accounting counts, not new systems or final independent human-review units.
+
+**7655records/17386required seeds** are fully C-complete;**1921records/3013seeds** are unattempted. Applying the existing compact/high-score follow-up rule finds no missing R14priority record, but269historical priority records still need their own source/configuration handling. Do not borrow an alternate record's fit to erase these gaps. Low-priority missingC is unknown. Current scans:6566complete+29zero-valid-gr/6891,296remain;24381.922789summedR14owneddeg²,not final history union or gain area.
+
+The initial ledger safely failed because its global SouthDELVE/DES status counts lagged actual regional comparisons(3275vs4132;1410vs1482). The repair checks current per-cohort comparison counts with exact frozen-cut agreement, retaining the older clock separately. Search parameters and thresholds did not change.
+
+Private score-hidden rendering now succeeds on one previously exposed case: unweighted measured-source positions/CMD errors/nativegr/exposure, neutral mode ordering and full-rasterQA. No final sample, complete evidence or anonymousPDF/ZIP is released. All75old bytes/identities and blank responses remain preserved.
+
+The bounded PS1library build reaches an invalid generatedOhana header after documented warning/common-symbol compatibility flags. There is no accepted psphot/image-response measurement. Physical LS-minus-PS1 gain remains unresolved. Existing native144, fixed-population size loss and faint-light sensitivity retain their stated finite-light/three-sky limits; no new parameter grid or manuscript is started.
+
+
 ## 2026-11-19T23:27Z — fixed-population size experiment: native source separation is limiting
 
 All **24 native cases /48 paired-depth rows** pass (eight existing bright10pc IMF populations, each shrunk to3pc on three original skies). Intrinsic member identities/light are unchanged; original144products are immutable. Registered source/producer/configuration and native proof hashes pass. Jobs61608931all five packs COMPLETED; stage61610213COMPLETED1:57. This experiment measures catalogue stages, not a new blind-search Pdet.

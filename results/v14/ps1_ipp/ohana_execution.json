@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-19T23:49:14.066963+00:00",
+  "job": "61615369",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-ohana-core",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ipp_ohana_core.sh"
+  ],
+  "script_sha256": "6e093fafa08c2057f642115cd4937297a980d6d1ec41c88480ecd469022d42a2",
+  "state": "submitted_not_complete",
+  "observed_failure": "Database-disabled psLib reaches its JPEG module, which unconditionally requires bundledOhana/kapa.h and palette symbols.",
+  "specific_fix": "Official Ohana configure/make libs target builds library prerequisites only; do not build its application suite or install a database. Then retry unchanged photometric core with documented optional flags."
+}

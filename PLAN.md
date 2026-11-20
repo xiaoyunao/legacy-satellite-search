@@ -1,5 +1,13 @@
 # Plan
 
+## Current checkpoint — 2026-11-20T00:23Z
+
+1. Finish existing296scan fields and outside regionalC, retaining registered owners. x6566complete+29zero-valid-gr/6891;174retries accepted/zero uncovered. Rebuild final common-clock history/masks/identities/funnel after convergence.
+2. Interim catalogue/ledger accepted9576qualified records/9403positions,7655records/17386seeds C-complete,all75preserved. Source-specific audit identifies269historical compact/high-score records for C backfill/selection handling; R14priorities complete. Do not borrow same-position alternative C.
+3. Keep144native/paired-size24/faint-light3science scopes. Original PS1operator build stops at archived generated-header failure; no broad install expansion or physicalPS1gain claim without blank-image equivalence. No unsupported grid growth or abundance inference.
+4. Use the accepted private unweighted real-data rendering pilot as preparation, then render all final selected modes/context and complete sampling/privacy/pageQA. No interim user review, grades or manuscript; old75bytes untouched.
+
+
 ## Current checkpoint — 2026-11-19T23:27Z
 
 1. Finish existing317scan fields and regional C; w6545complete+29zero-valid-gr/6891,174retries accepted/zero uncovered. Accept completed shards, then rebuild final common-clock source/area/zero-peak ledger/identities/funnel.
