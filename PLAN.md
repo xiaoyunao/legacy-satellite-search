@@ -1,5 +1,12 @@
 # Plan
 
+## 2026-11-20T02:24Z — terminal scans; finish production and one review
+
+1. All 6,891 registered fields are terminal (6,861 scans + 30 zero-valid-gr); do not resubmit completed owners. Follow the existing outside-census C arrays and final aggregation jobs, validate exact source/seed/member artifacts, then freeze the common-clock historical production and actual mask union.
+2. Finish the mandatory old-75 private evidence preparation using saved fits. The 22-mode pilot succeeds; test full-extent gr/radial supplements on the largest angular case before the remaining batch. Retain all old bytes/identities. Define final certainty cases and positive-probability strata only after the full production population freezes; no interim grading.
+3. Compare actual native five-band PS1 output to image-ID-qualified DR2 photometry, morphology and selection. Native g alone is a technical result, not physical response. Preserve original144 and all finite-light/size/background limits; no unsupported gain, global surface or abundance claim.
+4. Render all selected important modes, then final PDF/anonymous ZIP/blank forms, privacy and full-page QA. Deliver one human review package. No manuscript.
+
 ## 2026-11-20T02:00Z — next execution steps
 
 1. Follow the existing 38 remaining outside-census fields and regional C owners; retry only uncovered failed manifests. Preserve the frozen detector and thresholds.

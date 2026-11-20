@@ -1,0 +1,203 @@
+{
+  "job": "61622217",
+  "acquisition_sha256": "4c10573a295a71ad260509be2009b9fee6af312b0059d5a48f9cd36d54af203b",
+  "rows": [
+    {
+      "band": "g",
+      "image_path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.fits",
+      "headers": [
+        {},
+        {
+          "STACK_V": "37083",
+          "STK_TYPE": "DEEP_STACK",
+          "STK_ID": "4297531",
+          "SKYCELL": "skycell.2015.027",
+          "TESS_ID": "RINGS.V3",
+          "FPA.FILTERID": "g.00000",
+          "FPA.FILTER": "g.00000",
+          "FPA.TELTEMP.M1CELL": "NaN",
+          "FPA.ZP": 25.0,
+          "CHIP.VIDEOCELL": false,
+          "CELL.GAIN": 1.033966,
+          "CELL.READNOISE": 6.893427,
+          "CELL.SATURATION": 1564969.0,
+          "CELL.BAD": 0.0,
+          "CELL.DARKTIME": "NaN",
+          "CELL.XBIN": 1,
+          "CELL.YBIN": 1,
+          "CELL.XSIZE": 0,
+          "CELL.YSIZE": 0,
+          "CELL.XWINDOW": 0,
+          "CELL.YWINDOW": 0,
+          "CELL.TRIMSEC": "[1:6265,1:6274]",
+          "CELL.BIASSEC": ""
+        }
+      ],
+      "DR2_image_id_counts": {
+        "4297531": 6111,
+        "-999": 119,
+        "4297530": 362,
+        "4297521": 346,
+        "4297520": 12
+      }
+    },
+    {
+      "band": "i",
+      "image_path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.i.unconv.fits",
+      "headers": [
+        {},
+        {
+          "STACK_V": "37083",
+          "STK_TYPE": "DEEP_STACK",
+          "STK_ID": "4096066",
+          "SKYCELL": "skycell.2015.027",
+          "TESS_ID": "RINGS.V3",
+          "FPA.FILTERID": "i.00000",
+          "FPA.FILTER": "i.00000",
+          "FPA.TELTEMP.M1CELL": "NaN",
+          "FPA.ZP": 25.0,
+          "CHIP.VIDEOCELL": false,
+          "CELL.GAIN": 1.056949,
+          "CELL.READNOISE": 68.37077,
+          "CELL.SATURATION": 1607780.0,
+          "CELL.BAD": 0.0,
+          "CELL.DARKTIME": "NaN",
+          "CELL.XBIN": 1,
+          "CELL.YBIN": 1,
+          "CELL.XSIZE": 0,
+          "CELL.YSIZE": 0,
+          "CELL.XWINDOW": 0,
+          "CELL.YWINDOW": 0,
+          "CELL.TRIMSEC": "[1:6265,1:6274]",
+          "CELL.BIASSEC": ""
+        }
+      ],
+      "DR2_image_id_counts": {
+        "4096066": 6110,
+        "-999": 120,
+        "4096065": 362,
+        "4096118": 346,
+        "4096061": 12
+      }
+    },
+    {
+      "band": "r",
+      "image_path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.r.unconv.fits",
+      "headers": [
+        {},
+        {
+          "STACK_V": "37083",
+          "STK_TYPE": "DEEP_STACK",
+          "STK_ID": "4101543",
+          "SKYCELL": "skycell.2015.027",
+          "TESS_ID": "RINGS.V3",
+          "FPA.FILTERID": "r.00000",
+          "FPA.FILTER": "r.00000",
+          "FPA.TELTEMP.M1CELL": "NaN",
+          "FPA.ZP": 25.0,
+          "CHIP.VIDEOCELL": false,
+          "CELL.GAIN": 1.094454,
+          "CELL.READNOISE": 174.379,
+          "CELL.SATURATION": 1113649.0,
+          "CELL.BAD": 0.0,
+          "CELL.DARKTIME": "NaN",
+          "CELL.XBIN": 1,
+          "CELL.YBIN": 1,
+          "CELL.XSIZE": 0,
+          "CELL.YSIZE": 0,
+          "CELL.XWINDOW": 0,
+          "CELL.YWINDOW": 0,
+          "CELL.TRIMSEC": "[1:6265,1:6274]",
+          "CELL.BIASSEC": ""
+        }
+      ],
+      "DR2_image_id_counts": {
+        "4101543": 6110,
+        "-999": 120,
+        "4101472": 362,
+        "4101468": 346,
+        "4101467": 12
+      }
+    },
+    {
+      "band": "y",
+      "image_path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.y.unconv.fits",
+      "headers": [
+        {},
+        {
+          "STACK_V": "37083",
+          "STK_TYPE": "DEEP_STACK",
+          "STK_ID": "4103181",
+          "SKYCELL": "skycell.2015.027",
+          "TESS_ID": "RINGS.V3",
+          "FPA.FILTERID": "y.00000",
+          "FPA.FILTER": "y.00000",
+          "FPA.TELTEMP.M1CELL": "NaN",
+          "FPA.ZP": 25.0,
+          "CHIP.VIDEOCELL": false,
+          "CELL.GAIN": 1.026487,
+          "CELL.READNOISE": 17.26754,
+          "CELL.SATURATION": 3179142.0,
+          "CELL.BAD": 0.0,
+          "CELL.DARKTIME": "NaN",
+          "CELL.XBIN": 1,
+          "CELL.YBIN": 1,
+          "CELL.XSIZE": 0,
+          "CELL.YSIZE": 0,
+          "CELL.XWINDOW": 0,
+          "CELL.YWINDOW": 0,
+          "CELL.TRIMSEC": "[1:6265,1:6274]",
+          "CELL.BIASSEC": ""
+        }
+      ],
+      "DR2_image_id_counts": {
+        "4103181": 6110,
+        "-999": 120,
+        "4103180": 362,
+        "4103172": 346,
+        "4103171": 12
+      }
+    },
+    {
+      "band": "z",
+      "image_path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.z.unconv.fits",
+      "headers": [
+        {},
+        {
+          "STACK_V": "37083",
+          "STK_TYPE": "DEEP_STACK",
+          "STK_ID": "4095984",
+          "SKYCELL": "skycell.2015.027",
+          "TESS_ID": "RINGS.V3",
+          "FPA.FILTERID": "z.00000",
+          "FPA.FILTER": "z.00000",
+          "FPA.TELTEMP.M1CELL": "NaN",
+          "FPA.ZP": 25.0,
+          "CHIP.VIDEOCELL": false,
+          "CELL.GAIN": 1.043383,
+          "CELL.READNOISE": 19.64175,
+          "CELL.SATURATION": 1144758.0,
+          "CELL.BAD": 0.0,
+          "CELL.DARKTIME": "NaN",
+          "CELL.XBIN": 1,
+          "CELL.YBIN": 1,
+          "CELL.XSIZE": 0,
+          "CELL.YSIZE": 0,
+          "CELL.XWINDOW": 0,
+          "CELL.YWINDOW": 0,
+          "CELL.TRIMSEC": "[1:6265,1:6274]",
+          "CELL.BIASSEC": ""
+        }
+      ],
+      "DR2_image_id_counts": {
+        "4095984": 6110,
+        "-999": 120,
+        "4095983": 362,
+        "4095975": 346,
+        "4095974": 12
+      }
+    }
+  ],
+  "physical_PS1_response_validated": false,
+  "scope": "Same skycell can have multiple DR2 image IDs; native image identity must be audited before binding the stack operator or claiming DR2 equivalence."
+}

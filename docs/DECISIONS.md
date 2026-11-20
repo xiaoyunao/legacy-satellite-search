@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-11-20T02:24Z — terminal scans and image-bound response checks
+
+Accept the registered scan roster as terminal under its actual manifest (6,861 complete + 30 zero-valid-gr); do not call this final production, union area or measured gain area before regional C and common-clock integration finish. No redundant scan submission is justified.
+
+Bind PS1 per-band references/operator inputs to the actual FITS STK_ID. A shared catalogue skyCellID does not guarantee identical per-band image IDs. Keep the initial mixed-ID g comparison descriptive and report the corrected exact-image comparison separately; no fitted zero point or physical response claim.
+
+Prepare the mandatory old75 privately during downstream computation. The observed central-stamp cap misses the full spatial extent for 96 retained hypotheses, so add explicit wide gr and unweighted radial evidence rather than declaring those images complete. Preserve original materials and the one-final-review policy; rendering preparation does not select a new human sample or grade candidates.
+
 ## 2026-11-20T02:00Z — accepted source C and native PS1 validation boundary
 
 All 467 registered historical modes are accepted under their original discovery configuration and template; a nearby alternative fit never substitutes for same-record provenance. Refreshes use separate immutable checkpoint keys. Existing priority rules are covered, while selected low-priority missing C remains an explicit final-package gate.

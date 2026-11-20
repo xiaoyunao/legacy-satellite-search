@@ -1,0 +1,18 @@
+{
+  "pilot_job": "61622229",
+  "pilot_index": 17,
+  "pilot_modes": 22,
+  "task_registration": "configs/v14_review_preparation/registration.json",
+  "scope": "Private evidence preparation for mandatory old75; no final sample draw or release. Wait pilot resource validation before remaining74.",
+  "state": "22_mode_pilot_complete_extent_retry_pending",
+  "pilot_state": "COMPLETED",
+  "pilot_elapsed": "00:07:25",
+  "pilot_observed_peak_KiB": 1688220,
+  "extent_pilot_job": "61622790",
+  "extent_pilot_state": "FAILED",
+  "extent_failure": "NumPy histogram cannot accumulate boolean weights; converted valid-exposure weights to float, preserving 0/1 coverage.",
+  "extent_retry_job": "61623142",
+  "extent_retry_state": "submitted_not_complete",
+  "outside_C_acceptance_job": "61623103",
+  "outside_C_acceptance_dependency": "afterany:61470256:61470266"
+}

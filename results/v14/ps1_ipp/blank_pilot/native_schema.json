@@ -1,0 +1,635 @@
+{
+  "job": "61621772",
+  "preflight_sha256": "620d6c63818c315b6652596bae983ade8bc1da97b89c37a5bf8ba79630fe7c71",
+  "schema": [
+    {
+      "file": "native_g.fpa.cmf",
+      "hdu": 0,
+      "name": "SkyChip.hdr",
+      "rows": 6274,
+      "columns": [],
+      "header": {
+        "ZPT_0000": 24.40647,
+        "ZPT_0001": 24.43038,
+        "ZPT_0002": 24.47056,
+        "ZPT_0003": 24.43578,
+        "ZPT_0004": 24.50369,
+        "ZPT_0005": 24.40865,
+        "ZPT_0006": 24.43678,
+        "ZPT_0007": 24.46895,
+        "ZPT_0008": 24.39181,
+        "ZPT_0009": 24.49846,
+        "ZPT_0010": 24.47327,
+        "ZPT_0011": 24.46367,
+        "ZPT_0012": 24.44234,
+        "ZPT_0013": 24.45328,
+        "ZPT_0014": 24.41307,
+        "ZPT_0015": 24.40405,
+        "ZPT_0016": 24.47665,
+        "ZPT_0017": 24.4507,
+        "ZPT_0018": 24.19451,
+        "ZPT_0019": 24.3846,
+        "ZPT_0020": 24.49834,
+        "ZPT_0021": 24.4962,
+        "PSFORMAT": "SKYCELL",
+        "FPA.TELESCOPE": "PS1",
+        "FPA.INSTRUMENT": "GPC1",
+        "FPA.DETECTOR": "GPC1",
+        "FPA.COMMENT": "",
+        "FPA.OBS.MODE": "",
+        "FPA.OBS.GROUP": "",
+        "FPA.FOCUS": "NaN",
+        "FPA.FILTERID": "g.00000",
+        "FPA.FILTER": "g.00000",
+        "FPA.POSANGLE": "NaN",
+        "FPA.ROTANGLE": "NaN",
+        "FPA.RADECSYS": "",
+        "FPA.RA": "NaN",
+        "FPA.DEC": "NaN",
+        "FPA.LONGITUDE": "NaN",
+        "FPA.LATITUDE": "NaN",
+        "FPA.ELEVATION": "NaN",
+        "FPA.OBSTYPE": "",
+        "FPA.OBJECT": "",
+        "FPA.ALT": "NaN",
+        "FPA.AZ": "NaN",
+        "FPA.SHUTOUTC": "",
+        "FPA.SHUTCUTC": "",
+        "FPA.TEMP": "NaN",
+        "FPA.M1X": "NaN",
+        "FPA.M1Y": "NaN",
+        "FPA.M1Z": "NaN",
+        "FPA.M1TIP": "NaN",
+        "FPA.M1TILT": "NaN",
+        "FPA.M2X": "NaN",
+        "FPA.M2Y": "NaN",
+        "FPA.M2Z": "NaN",
+        "FPA.M2TIP": "NaN",
+        "FPA.M2TILT": "NaN",
+        "FPA.ENV.TEMP": "NaN",
+        "FPA.ENV.HUMID": "NaN",
+        "FPA.ENV.WIND": "NaN",
+        "FPA.ENV.DIR": "NaN",
+        "FPA.TELTEMP.M1": "NaN",
+        "FPA.TELTEMP.M1CELL": "NaN",
+        "FPA.TELTEMP.M2": "NaN",
+        "FPA.TELTEMP.SPIDER": "NaN",
+        "FPA.TELTEMP.TRUSS": "NaN",
+        "FPA.TELTEMP.EXTRA": "NaN",
+        "FPA.PON.TIME": "NaN",
+        "FPA.ZP": 25.0,
+        "EXPTIME": 946.0,
+        "NPSFSTAR": 582,
+        "PSFMODEL": "PS_MODEL_PS1_V1",
+        "PSF_OK": true,
+        "PSPHOT.PSF.APRESID": -0.2148831,
+        "PSPHOT.PSF.APRESID.SYSERR": 0.07238089,
+        "PSPHOT.CR.MAX.MAG": -8.0,
+        "DETEFF.MAGREF": -9.532694
+      }
+    },
+    {
+      "file": "native_g.fpa.cmf",
+      "hdu": 1,
+      "name": "SkyChip.psf",
+      "rows": 4057,
+      "columns": [
+        {
+          "name": "IPP_IDET",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "X_PSF",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "Y_PSF",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "X_PSF_SIG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "Y_PSF_SIG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "POSANGLE",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PLTSCALE",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_INST_MAG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_INST_MAG_SIG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_INST_FLUX",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_INST_FLUX_SIG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "AP_MAG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "AP_MAG_RAW",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "AP_MAG_RADIUS",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "AP_FLUX",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "AP_FLUX_SIG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "AP_NPIX",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "CAL_PSF_MAG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "CAL_PSF_MAG_SIG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "RA_PSF",
+          "format": "1D",
+          "unit": null
+        },
+        {
+          "name": "DEC_PSF",
+          "format": "1D",
+          "unit": null
+        },
+        {
+          "name": "PEAK_FLUX_AS_MAG",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "SKY",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "SKY_SIGMA",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_CHISQ",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "CR_NSIGMA",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "EXT_NSIGMA",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_MAJOR",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_MINOR",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_THETA",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_CORE",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_FWHM_MAJ",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_FWHM_MIN",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_QF",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_QF_PERFECT",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "PSF_NDOF",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "PSF_NPIX",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_XX",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_XY",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_YY",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_M3C",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_M3S",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_M4C",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_M4S",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_R1",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MOMENTS_RH",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "KRON_FLUX",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "KRON_FLUX_ERR",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "KRON_FLUX_INNER",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "KRON_FLUX_OUTER",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "SKY_LIMIT_RAD",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "SKY_LIMIT_FLUX",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "SKY_LIMIT_SLOPE",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "FLAGS",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "FLAGS2",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "N_FRAMES",
+          "format": "1I",
+          "unit": null
+        },
+        {
+          "name": "PADDING",
+          "format": "1I",
+          "unit": null
+        }
+      ],
+      "header": {
+        "SOURCE.MASK.PSFMODEL": 1,
+        "SOURCE.MASK.PSFSTAR": 64,
+        "SOURCE.MASK.BADPSF": 1024,
+        "SOURCE.MASK.AP_MAGS": 2097152
+      }
+    },
+    {
+      "file": "native_g.fpa.cmf",
+      "hdu": 2,
+      "name": "SkyChip.deteff",
+      "rows": 13,
+      "columns": [
+        {
+          "name": "OFFSET",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "COUNTS",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "DIFF.MEAN",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "DIFF.STDEV",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "ERR.MEAN",
+          "format": "1E",
+          "unit": null
+        }
+      ],
+      "header": {
+        "DETEFF.MAGREF": -9.532694
+      }
+    },
+    {
+      "file": "native_g.fpa.psf",
+      "hdu": 0,
+      "name": "SkyChip.hdr",
+      "rows": 6274,
+      "columns": [],
+      "header": {
+        "ZPT_0000": 24.40647,
+        "ZPT_0001": 24.43038,
+        "ZPT_0002": 24.47056,
+        "ZPT_0003": 24.43578,
+        "ZPT_0004": 24.50369,
+        "ZPT_0005": 24.40865,
+        "ZPT_0006": 24.43678,
+        "ZPT_0007": 24.46895,
+        "ZPT_0008": 24.39181,
+        "ZPT_0009": 24.49846,
+        "ZPT_0010": 24.47327,
+        "ZPT_0011": 24.46367,
+        "ZPT_0012": 24.44234,
+        "ZPT_0013": 24.45328,
+        "ZPT_0014": 24.41307,
+        "ZPT_0015": 24.40405,
+        "ZPT_0016": 24.47665,
+        "ZPT_0017": 24.4507,
+        "ZPT_0018": 24.19451,
+        "ZPT_0019": 24.3846,
+        "ZPT_0020": 24.49834,
+        "ZPT_0021": 24.4962,
+        "PSFORMAT": "SKYCELL",
+        "NPSFSTAR": 582,
+        "PSFMODEL": "PS_MODEL_PS1_V1",
+        "PSF_OK": true,
+        "PSPHOT.PSF.APRESID": -0.2148831,
+        "PSPHOT.PSF.APRESID.SYSERR": 0.07238089,
+        "PSPHOT.CR.MAX.MAG": -8.0,
+        "DETEFF.MAGREF": -9.532694,
+        "FPA.TELESCOPE": "PS1",
+        "FPA.INSTRUMENT": "GPC1",
+        "FPA.DETECTOR": "GPC1",
+        "FPA.COMMENT": "",
+        "FPA.OBS.MODE": "",
+        "FPA.OBS.GROUP": "",
+        "FPA.FOCUS": "NaN",
+        "FPA.FILTERID": "g.00000",
+        "FPA.FILTER": "g.00000",
+        "FPA.POSANGLE": "NaN",
+        "FPA.ROTANGLE": "NaN",
+        "FPA.RADECSYS": "",
+        "FPA.RA": "NaN",
+        "FPA.DEC": "NaN",
+        "FPA.LONGITUDE": "NaN",
+        "FPA.LATITUDE": "NaN",
+        "FPA.ELEVATION": "NaN",
+        "FPA.OBSTYPE": "",
+        "FPA.OBJECT": "",
+        "FPA.ALT": "NaN",
+        "FPA.AZ": "NaN",
+        "FPA.SHUTOUTC": "",
+        "FPA.SHUTCUTC": "",
+        "FPA.TEMP": "NaN",
+        "FPA.M1X": "NaN",
+        "FPA.M1Y": "NaN",
+        "FPA.M1Z": "NaN",
+        "FPA.M1TIP": "NaN",
+        "FPA.M1TILT": "NaN",
+        "FPA.M2X": "NaN",
+        "FPA.M2Y": "NaN",
+        "FPA.M2Z": "NaN",
+        "FPA.M2TIP": "NaN",
+        "FPA.M2TILT": "NaN",
+        "FPA.ENV.TEMP": "NaN",
+        "FPA.ENV.HUMID": "NaN",
+        "FPA.ENV.WIND": "NaN",
+        "FPA.ENV.DIR": "NaN",
+        "FPA.TELTEMP.M1": "NaN",
+        "FPA.TELTEMP.M1CELL": "NaN",
+        "FPA.TELTEMP.M2": "NaN",
+        "FPA.TELTEMP.SPIDER": "NaN",
+        "FPA.TELTEMP.TRUSS": "NaN",
+        "FPA.TELTEMP.EXTRA": "NaN",
+        "FPA.PON.TIME": "NaN",
+        "FPA.ZP": 25.0,
+        "EXPTIME": 946.0
+      }
+    },
+    {
+      "file": "native_g.fpa.psf",
+      "hdu": 1,
+      "name": "SkyChip.psf_model",
+      "rows": 100,
+      "columns": [
+        {
+          "name": "MODEL_TERM",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "X_POWER",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "Y_POWER",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "VALUE",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "ERROR",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MASK",
+          "format": "1B",
+          "unit": null
+        }
+      ],
+      "header": {
+        "PSF_NAME": "PS_MODEL_PS1_V1",
+        "PSF_NPAR": 8,
+        "PSF_CLN": 9,
+        "PSF_APERTURE": 14.0,
+        "PSF_FIT_RADIUS": 22.0
+      }
+    },
+    {
+      "file": "native_g.fpa.psf",
+      "hdu": 2,
+      "name": "SkyChip.psf_resid",
+      "rows": 21,
+      "columns": [],
+      "header": {}
+    },
+    {
+      "file": "native_g.fpa.psf",
+      "hdu": 3,
+      "name": "AP_TREND",
+      "rows": 25,
+      "columns": [
+        {
+          "name": "APTREND",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "X_POWER",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "Y_POWER",
+          "format": "1J",
+          "unit": null
+        },
+        {
+          "name": "VALUE",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "ERROR",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "MASK",
+          "format": "1B",
+          "unit": null
+        }
+      ],
+      "header": {}
+    },
+    {
+      "file": "native_g.fpa.psf",
+      "hdu": 4,
+      "name": "GROWTH_CURVE",
+      "rows": 33,
+      "columns": [
+        {
+          "name": "RADIUS",
+          "format": "1E",
+          "unit": null
+        },
+        {
+          "name": "AP_MAG",
+          "format": "1E",
+          "unit": null
+        }
+      ],
+      "header": {
+        "GROWTH_FIT_MAG": -0.005150795
+      }
+    },
+    {
+      "file": "native_g.fpa.psf",
+      "hdu": 5,
+      "name": "PSF_MODEL",
+      "rows": 65,
+      "columns": [],
+      "header": {}
+    }
+  ],
+  "physical_PS1_response_validated": false
+}

@@ -1,0 +1,9 @@
+{
+  "job": "61622134",
+  "slurm_state": "FAILED",
+  "exit_code": "1:0",
+  "native_operator_started": false,
+  "runner_sha256": "f75eee44edb87f44490dc257eba0c78e252b6a04eaf08022f24b2cb9ec412a37",
+  "reason": "Registration incorrectly required a unique gstackImageID among same-skycell rows; found four. Native FITS STK_ID binding replaces that assumption. Actual native header identity audited in 61622217, corrected stack attempt 61622347.",
+  "physical_PS1_response_validated": false
+}

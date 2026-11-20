@@ -1,0 +1,11 @@
+{
+  "original_registration_sha256": "5c595ec0a3e614425b400e6bbbc45953bb1cc7ad7a9d7fb28b752e4a575df404",
+  "tasks_sha256": "5d27d30999788e5585b39960676471c2a2f6000dce68dbe8655e46d3ede17fd6",
+  "runner_sha256": "aba7f24f0f033396d284e8164c18d0d837e8023e5ceeafa3f76c00955cda3917",
+  "extent_renderer_sha256": "546132b11b2dc718e4b63773029ff9dac449908455588a5407ca334dbfc66cc8",
+  "modes_beyond_original_central_image_cap": 96,
+  "largest_rh_arcmin": 22.4,
+  "reason": "96 mandatory saved hypotheses exceed the current central-stamp halfwidth cap. Retain native central detail and add full two-rh-square gr plus unweighted exposure-corrected radial evidence. No discovery/C/refitting/sample/grade change.",
+  "private_preparation_only": true,
+  "final_review_release": false
+}

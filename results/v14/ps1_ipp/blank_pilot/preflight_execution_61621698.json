@@ -1,0 +1,30 @@
+{
+  "job": "61621698",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ps1-native-preflight",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ps1_operator_preflight.sh"
+  ],
+  "inputs": {
+    "scripts/v14_ps1_operator_preflight.py": "767fc9cab1243e2fa2992184a67121052390d29104b31604671bfa699c2e1d20",
+    "scripts/v14_ps1_operator_preflight.sh": "0975fe368331acf0240119443665b4e7f3f8bb728d02a4bee5ea1c76fb9d3728"
+  },
+  "state": "submitted_not_complete",
+  "scope": "Actual-source -threads syntax; one native g-band technical preflight, not DR2 equivalence or physical response."
+}

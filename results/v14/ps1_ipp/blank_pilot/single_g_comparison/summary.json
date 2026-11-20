@@ -1,0 +1,48 @@
+{
+  "job": "61622108",
+  "inputs": {
+    "results/v14/ps1_ipp/blank_pilot/preflight_61621698.json": "620d6c63818c315b6652596bae983ade8bc1da97b89c37a5bf8ba79630fe7c71",
+    "results/v14/ps1_ipp/blank_pilot/acquisition.json": "4c10573a295a71ad260509be2009b9fee6af312b0059d5a48f9cd36d54af203b",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621698/native_g.fpa.cmf": "7548165bbc12364aac77c720d956781f539beabb6ee8e3c8379a6e0e98a378ef"
+  },
+  "runner_sha256": "bd6ab64575042bd8691560ac21ee46c606b4da2b50af6f0132501b7772f5d26d",
+  "native_sources": 4057,
+  "native_astrometric_rows": 4057,
+  "reference_rows": 6950,
+  "reference_g_positive_rows": 5591,
+  "all_band_reference_rows_mutually_matched": 2184,
+  "native_header": {
+    "PSF_OK": true,
+    "NPSFSTAR": 582,
+    "PSFMODEL": "PS_MODEL_PS1_V1",
+    "FPA_ZP": 25.0
+  },
+  "separations_arcsec": {
+    "n": 2184,
+    "q16": 0.015246034383778197,
+    "median": 0.08202959387572034,
+    "q84": 0.27093961607004685
+  },
+  "native_cal_minus_inst_mag": {
+    "n": 2146,
+    "q16": 32.439727783203125,
+    "median": 32.439727783203125,
+    "q84": 32.439727783203125
+  },
+  "native_vs_DR2_quality_g_mag": {
+    "n": 2146,
+    "q16": -0.045546340942382815,
+    "median": -0.004115104675292969,
+    "q84": 0.029985809326171863
+  },
+  "native_g_image_ids": [
+    "4297520",
+    "4297521",
+    "4297530",
+    "4297531"
+  ],
+  "matching_rule": "Mutual nearest sky coordinates, radius <= 0.8 arcsec; no fitted position or magnitude shift.",
+  "physical_PS1_response_validated": false,
+  "DR2_operator_equivalence_validated": false,
+  "scope": "Descriptive real blank g comparison, using catalogued objects rather than injected stellar truth. Five-band detection, morphology/quality selection, faint blue populations, other backgrounds and DR2 configuration equivalence remain unvalidated. Multiple references can share source identities; row denominators are not an independent-star completeness estimate. No zero point fitted."
+}

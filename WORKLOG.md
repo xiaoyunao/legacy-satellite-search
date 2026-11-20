@@ -2,6 +2,15 @@
 
 ## 2026-11-20
 
+### 10:24 CST — all registered DR11 scans terminal; native PS1 photometry and old-75 preparation
+
+- Follow-up: five-band61622347 COMPLETED8:09/operator0. Comparison61622975 completes:11381rows/band,3944matchedgri/3937same-ID; descriptive primary/selection/stellar-truth equivalence remains unvalidated. Largest-extent61622790 FAILED6:51 at radial histogram boolean-weight casting, after actual image/context rendering; fixed weights to float and passed a targeted boolean-mask smoke, retry61623142. No fit changes or broader batch submitted before this QA. Acceptance61623103 registered after both outside C arrays; it validates all16shards and retains failures, without duplicate fitting.
+- ab audit: 6,861 complete + 30 zero-valid-gr = all 6,891 registered fields; 174 retries accepted / zero uncovered. All unusable fields have zero valid area. Terminal acceptance binds every field and audit source; summed owned area 24,481.307990 deg² is not the final historical union. Existing regional C/aggregation owners retained.
+- Native g 61621698 completes with 4,057 sources / 582 PSF stars. Root cause of initial call failure: archived help advertises -nthreads, compiled macro accepts -threads. Failed proof/source retained. Same-cell comparison 61622108 descriptive; identity audit 61622217 finds native STK_ID4297531 plus neighbouring IDs in catalogue rows. Corrected exact-image 61622359 completes (2,146 quality-g matches, median delta −0.00480 mag); no fitted zero point. Initial stack61622134 fails before operator start on incorrect unique-ID assumption; corrected five-band61622347 running.
+- Mandatory old75 driver pilot61622229 completes 22 modes in7:25 / ~1.7GiB observed peak, without C refitting. Outputs stay ignored/private. Inspection finds96/226 modes exceed central-image cap; new full-extent gr/radial supplement and largest-angular pilot61622790 address an observed evidence gap before bulk preparation. Old75 hashes unchanged.
+- Files: ab field audit/terminal proof, actual PS1 schemas/comparisons/operator runners/failure records/source archives, old75 task registration/private renderer driver/full-extent supplement, scientific docs/plan/gates. Validation: real Slurm outputs, exact catalogue/image hashes, Python parse/shell syntax, all 722 catalogue input hashes; actual terminal field uniqueness/count checks. Raw/per-star data remain NERSC.
+- Next: finish original regional C and final aggregation, common-clock union/identities/funnel, accepted private evidence then one final human package. Physical PS1 equivalence/response remains open; no new grid, grades, candidate promotion, abundance inference or manuscript.
+
 ### 10:00 CST — historical C complete, source refresh accepted, PS1 core built
 
 - All 99 historical priority fields / 269 records / 467 modes accepted. Jobs 61617692/61617693 complete; pending 61617693 moved to bounded debug only after measured pilot throughput, preserving the same owner. Catalogue/ledger 61619421/61619423 complete; 722 source hashes match, all 75 old identities preserved. C coverage is now 7,924 records / 17,853 seeds complete, 1,652 / 2,546 unattempted.

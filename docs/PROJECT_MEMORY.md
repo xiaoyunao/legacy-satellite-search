@@ -1,5 +1,15 @@
 # 当前科学主线
 
+## 2026-11-20T02:24Z — all 6,891 registered search fields are terminal
+
+The final manifest audit accepts **6,861 completed scans and 30 zero-valid-gr fields**. All 174 registered retries are accepted; no uncovered retry remains. The 30 unusable fields have zero valid mask area. R14 summed owned area is **24,481.307990 deg²**; this is not the final historical union or a physical-gain area. The source-bound terminal proof is `results/v14/progress_ab20261120/terminal_acceptance.json`.
+
+Outside-census regional summaries/C and the already registered final aggregation jobs continue. Final production/source clocks, mask union, selected C/evidence, probability sampling and anonymity/page QA are not yet frozen. The old 75 remain unchanged; no intermediate human grades are requested.
+
+Real PS1 g processing succeeds (61621698; 4,057 measured sources, 582 PSF stars). The first same-cell comparison is descriptive, not physical completeness. The native g FITS `STK_ID=4297531` distinguishes it from other per-band image IDs present in the same-skycell catalogue rows. Corrected exact-image comparison 61622359 completes, with median native-minus-DR2 magnitude −0.00480 over 2,146 quality-g matches. Five-band native operator 61622347 completes in 8:09 (operator return 0; 451 s) after actual-header identity binding. Its first comparison 61622975 records 11,381 native rows per band and 3,944 matched gri reference rows, of which 3,937 link to the same native object ID. The reference-conditional SNR/morphology comparison is descriptive, not a physical response. DR2 operator equivalence, primary/canonical rows, native-only sources, faint-blue selection and other backgrounds remain unvalidated. No zero-point fit or discovery tuning was performed.
+
+Mandatory old-75 preparation pilot 61622229 completes all 22 retained modes of the largest mode-count case in 7:25, without refitting. Preparation stays private. A separate geometry audit finds 96/226 hypotheses exceed the central stamp cap; add full two-half-light-radius gr views and unweighted usable-area radial profiles while retaining native central detail. Largest-extent pilot 61622790 failed on NumPy boolean histogram weights; float conversion passes the targeted smoke, and retry 61623142 is submitted, not accepted. Final PDF/ZIP release still waits for every whole-project gate.
+
 ## 2026-11-20T02:00Z — historical C accepted; whole search has 38 fields remaining
 
 - Latest manifest: **6,824 completed + 29 zero-valid-gr = 6,853/6,891 terminal fields**; 38 remain in the original outside-census owner. All 174 registered retries are accepted; no uncovered retry is required. R14 summed owned mask area is 24,473.889020 deg², not the final historical union or physical-gain area. Outside-extension scans are terminal; their C array is advancing.

@@ -1,5 +1,14 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-20T02:24Z — search terminal gate passed
+
+- [x] 6,891/6,891 terminal: 6,861 completed, 30 zero-valid-gr; 174 retries accepted, zero uncovered, no positive-area unusable field. Saved field-level source hashes and terminal acceptance.
+- [x] Mandatory old-75 preparation pilot: 22 saved modes, no fit changes. Not a final release.
+- [x] Native single-band PS1 measured output; exact FITS STK_ID audit and descriptive matched photometry. Preserve initial parameter/identity failures.
+- [ ] Remaining outside-census C, existing final aggregation, common-clock historical production/area/identities/funnel freeze.
+- [ ] Full-extent material pilot, then all selected original/new cases and controlled probability audit, complete saved-mode evidence/privacy/PDF/ZIP/page QA. One final human review only.
+- [ ] Five-band PS1 blank equivalence and physical response; no three-arm physical gain claim from native-g success.
+
 ## 2026-11-20T02:00Z — current acceptance and remaining gates
 
 - [x] Historical priority: 99 fields / 269 records / 467 original modes accepted; original config/template/seed/membership proofs and 722 current catalogue input hashes verified.

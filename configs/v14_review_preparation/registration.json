@@ -1,0 +1,10 @@
+{
+  "cases": 75,
+  "modes": 226,
+  "tasks_sha256": "5d27d30999788e5585b39960676471c2a2f6000dce68dbe8655e46d3ede17fd6",
+  "original_registration_sha256": "ef33e961841e13e5b1e6213b7798bb91acea85d7cd60d1e845b60efbcf014804",
+  "script_sha256": "207bcbb2a700a305d9603eb7cd71c8e607a5133bf3e32bc3f0d02dd5fb6f495f",
+  "final_sampling_performed": false,
+  "final_review_release": false,
+  "scope": "Prepare the immutable mandatory old75 privately while final production completes; no new case selection, grades or release."
+}

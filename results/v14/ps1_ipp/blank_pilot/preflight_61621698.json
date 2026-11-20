@@ -1,0 +1,85 @@
+{
+  "job": "61621698",
+  "command": [
+    "/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/install/lssat.lin64/bin/psphot",
+    "-ipprc",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621698/ipprc.config",
+    "-threads",
+    "4",
+    "-file",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.fits",
+    "-mask",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.mask.fits",
+    "-variance",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.wt.fits",
+    "-dumpconfig",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621698/effective.config",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621698/native_g"
+  ],
+  "returncode": 0,
+  "elapsed_s": 45.80931042000884,
+  "acquisition_sha256": "4c10573a295a71ad260509be2009b9fee6af312b0059d5a48f9cd36d54af203b",
+  "runner_sha256": "767fc9cab1243e2fa2992184a67121052390d29104b31604671bfa699c2e1d20",
+  "binary_sha256": "9471c4fc1cb716ff13cd3246badd411b017caa82450709c2c61f1c35a6ebec2b",
+  "inputs": {
+    "stack": {
+      "sha256": "7751b5e0095bc82bf7b3d6aded7899c09aca62adca346989ef306ba2a54a7421",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.fits"
+    },
+    "stack.mask": {
+      "sha256": "dd05af069ac63db1bd41bcd06b668465bb3e1a39e88a4665900f2c31aa36dd4a",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.mask.fits"
+    },
+    "stack.wt": {
+      "sha256": "81478d0b555e4ddee0a27f1cee90ef7a282851b1574fae3cad6c1179564e2cdc",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.wt.fits"
+    }
+  },
+  "native_header": {
+    "FPA": null,
+    "INSTR": null,
+    "INSTRUME": null,
+    "PSCAMERA": "GPC1",
+    "EXTNAME": null,
+    "HIERARCH FPA.INSTRUMENT": "GPC1",
+    "HIERARCH FPA.FILTER": "g.00000",
+    "HIERARCH FPA.ZP": 25.0,
+    "HIERARCH FPA.PHOTCODE": null,
+    "FLUXMAG0": null,
+    "MAGZP": null,
+    "MJD-OBS": 56216.513366281,
+    "EXPTIME": 946.0,
+    "BOFFSET": 1.155063390732,
+    "BSOFTEN": 99.83608415797
+  },
+  "artifacts": {
+    "native_g.fpa.cmf": {
+      "bytes": 990720,
+      "sha256": "7548165bbc12364aac77c720d956781f539beabb6ee8e3c8379a6e0e98a378ef"
+    },
+    "native_g.fpa.psf": {
+      "bytes": 83520,
+      "sha256": "bffa0035c030b88dfbb6f523535898d72c8ffec4fe7c6c67513620bbaabb4660"
+    },
+    "ipprc.config": {
+      "bytes": 356,
+      "sha256": "36fdba5ffb24ce6f6ec860badf264cb922bd6b561bf078601a60b62b4590ed31"
+    },
+    "native_g.fpa.mdl.fits": {
+      "bytes": 25920,
+      "sha256": "7f2b889e47630b0c78352d983cb5510ec745b4601706fe19fe9450d6ac5bb48d"
+    },
+    "effective.config": {
+      "bytes": 145161,
+      "sha256": "d94a9fdf006f115cd6a2115ace27dad3c9e4810cdb5864f190f0b485c7f706de"
+    },
+    "operator.log": {
+      "bytes": 25441,
+      "sha256": "2d3ec08d0eb0f14bdfc806d73c71daa502f927d3f3b34c9097ccd9c5142dd6eb"
+    }
+  },
+  "raw_output_root": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621698",
+  "native_processing_attempted": true,
+  "physical_PS1_response_validated": false,
+  "scope": "Single-band official psphot technical preflight with archived defaults. Not five-band psphotStack, DR2 configuration/photometry equivalence, injection response, independent candidate confirmation, or physical LS-minus-PS1 gain."
+}

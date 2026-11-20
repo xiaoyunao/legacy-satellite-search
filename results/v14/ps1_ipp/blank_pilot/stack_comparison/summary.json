@@ -1,0 +1,186 @@
+{
+  "job": "61622975",
+  "inputs": {
+    "results/v14/ps1_ipp/blank_pilot/stack_preflight_61622347.json": "aef7c340d04142466e38076cf8ced4b0a1d595f0c7154004660ec4733146aa73",
+    "results/v14/ps1_ipp/blank_pilot/acquisition.json": "4c10573a295a71ad260509be2009b9fee6af312b0059d5a48f9cd36d54af203b"
+  },
+  "runner_sha256": "78dc089a74a54e6c4506f56ceaacbbbc6d39a778b4410bfb65729acfb071a4bb",
+  "bands": {
+    "g": {
+      "native_rows": 11381,
+      "exact_image_reference_rows": 6110,
+      "mutual_matches": 5848,
+      "native_ids_unique": true,
+      "PSF": {
+        "PSF_OK": true,
+        "NPSFSTAR": 578,
+        "PSFMODEL": "PS_MODEL_PS1_V1",
+        "FPA.ZP": 25.0,
+        "EXPTIME": 946.0
+      },
+      "separation_arcsec": {
+        "n": 5848,
+        "q16": 0.007155374188465887,
+        "median": 0.02866309401641417,
+        "q84": 0.14271100680652743
+      },
+      "calibrated_mag_residual": {
+        "n": 4729,
+        "q16": -0.06131523132324218,
+        "median": 0.018552780151367188,
+        "q84": 0.08348701477050781
+      },
+      "qf_residual": {
+        "n": 5836,
+        "q16": -0.0002155900001525879,
+        "median": -5.894899368286133e-05,
+        "q84": 0.00019377470016479492
+      }
+    },
+    "r": {
+      "native_rows": 11381,
+      "exact_image_reference_rows": 6109,
+      "mutual_matches": 5862,
+      "native_ids_unique": true,
+      "PSF": {
+        "PSF_OK": true,
+        "NPSFSTAR": 896,
+        "PSFMODEL": "PS_MODEL_PS1_V1",
+        "FPA.ZP": 25.0,
+        "EXPTIME": 1080.0
+      },
+      "separation_arcsec": {
+        "n": 5862,
+        "q16": 0.008105680494170557,
+        "median": 0.04015041023313602,
+        "q84": 0.16537609712988746
+      },
+      "calibrated_mag_residual": {
+        "n": 5054,
+        "q16": -0.06642753601074218,
+        "median": -0.027471542358398438,
+        "q84": 0.0028421020507812464
+      },
+      "qf_residual": {
+        "n": 5820,
+        "q16": -0.00017678022384643555,
+        "median": -3.2842159271240234e-05,
+        "q84": 0.00013333320617675781
+      }
+    },
+    "i": {
+      "native_rows": 11381,
+      "exact_image_reference_rows": 6109,
+      "mutual_matches": 5872,
+      "native_ids_unique": true,
+      "PSF": {
+        "PSF_OK": true,
+        "NPSFSTAR": 980,
+        "PSFMODEL": "PS_MODEL_PS1_V1",
+        "FPA.ZP": 25.0,
+        "EXPTIME": 1125.0
+      },
+      "separation_arcsec": {
+        "n": 5872,
+        "q16": 0.006909108625574316,
+        "median": 0.028351928838856184,
+        "q84": 0.08575830189313995
+      },
+      "calibrated_mag_residual": {
+        "n": 4944,
+        "q16": -0.069637451171875,
+        "median": -0.0233917236328125,
+        "q84": 0.012819747924804677
+      },
+      "qf_residual": {
+        "n": 5840,
+        "q16": -0.0001552939414978027,
+        "median": -3.427267074584961e-05,
+        "q84": 0.00015125274658203138
+      }
+    },
+    "z": {
+      "native_rows": 11381,
+      "exact_image_reference_rows": 6109,
+      "mutual_matches": 5869,
+      "native_ids_unique": true,
+      "PSF": {
+        "PSF_OK": true,
+        "NPSFSTAR": 904,
+        "PSFMODEL": "PS_MODEL_PS1_V1",
+        "FPA.ZP": 25.0,
+        "EXPTIME": 840.0
+      },
+      "separation_arcsec": {
+        "n": 5869,
+        "q16": 0.008009526076605548,
+        "median": 0.041034664153274655,
+        "q84": 0.1714614942173124
+      },
+      "calibrated_mag_residual": {
+        "n": 5245,
+        "q16": -0.05861724853515625,
+        "median": -0.023206710815429688,
+        "q84": 0.007363815307617188
+      },
+      "qf_residual": {
+        "n": 5850,
+        "q16": -6.010532379150388e-05,
+        "median": 2.9742717742919922e-05,
+        "q84": 0.0002615308761596679
+      }
+    },
+    "y": {
+      "native_rows": 11381,
+      "exact_image_reference_rows": 6109,
+      "mutual_matches": 5876,
+      "native_ids_unique": true,
+      "PSF": {
+        "PSF_OK": true,
+        "NPSFSTAR": 792,
+        "PSFMODEL": "PS_MODEL_PS1_V1",
+        "FPA.ZP": 25.0,
+        "EXPTIME": 1000.0
+      },
+      "separation_arcsec": {
+        "n": 5876,
+        "q16": 0.006725778546904202,
+        "median": 0.025233099882327387,
+        "q84": 0.11885402978988446
+      },
+      "calibrated_mag_residual": {
+        "n": 4818,
+        "q16": -0.10069404602050781,
+        "median": -0.04384422302246094,
+        "q84": -0.004553680419921876
+      },
+      "qf_residual": {
+        "n": 5866,
+        "q16": -0.0002760887145996094,
+        "median": -3.758072853088379e-05,
+        "q84": 0.00028183981776237467
+      }
+    }
+  },
+  "reference_rows": 6950,
+  "unique_reference_objects": 6310,
+  "matched_gri_reference_rows": 3944,
+  "matched_gri_same_native_ID": 3937,
+  "gri_snr5_reference": 1536,
+  "gri_snr5_native_on_matched_refs": 1539,
+  "point_proxy_contingency": {
+    "both": 759,
+    "reference_only": 64,
+    "native_only": 23,
+    "neither": 724
+  },
+  "i_psf_minus_kron_residual": {
+    "n": 1420,
+    "q16": -0.01632493853569031,
+    "median": 0.016837913542985916,
+    "q84": 0.0413564788363874
+  },
+  "DR2_operator_equivalence_validated": false,
+  "physical_PS1_response_validated": false,
+  "scope": "Descriptive five-band blank comparison restricted per band to actual FITS STK_ID, mutual nearest 0.8arcsec, no fitted coordinate/magnitude shift. SNR5 and iPSF-iKron<0.05 compare measurements only among matched exact-image references; no stellar truth, primary/footprint/extinction/magnitude final sample or physical completeness. All native-only sources, faint-blue morphology/selection, other skies and uncertainty still require assessment before physical response."
+}

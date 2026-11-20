@@ -1,0 +1,30 @@
+{
+  "job": "61622347",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=64G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ps1-stack-blank",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ps1_stack_preflight.sh"
+  ],
+  "inputs": {
+    "scripts/v14_ps1_stack_preflight.py": "4a84aa4b3a0b23f3bd257f578609f164ad3a20106c3f2299870c1daa5baa14e5",
+    "scripts/v14_ps1_stack_preflight.sh": "fb80a7749b85427009699e05a2e43188aac4a355e51835f9797392bf9ec49208"
+  },
+  "state": "submitted_not_complete",
+  "scope": "Native FITS STK_ID bound; real five-band blank stack, no physical response or DR2 equivalence accepted."
+}

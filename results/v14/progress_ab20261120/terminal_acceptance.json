@@ -1,0 +1,25 @@
+{
+  "audit_utc": "2026-11-20T02:23:54.658070+00:00",
+  "registered_fields": 6891,
+  "completed_fields": 6861,
+  "zero_valid_gr_fields": 30,
+  "all_registered_fields_terminal": true,
+  "registered_retries_accepted": 174,
+  "uncovered_retries": 0,
+  "input_sha256": {
+    "results/v14/progress_ab20261120/manifest.json": "45c8677804976cc1b8c5bc99baf25e502e2311d59d2fe29877d628a4bf23cb2a",
+    "results/v14/progress_ab20261120/fields.csv": "fe85e7e4aff25f1215bbacd5b2f7871bbeffc3d98802069b44615f860cadf1ac",
+    "results/v14/progress_ab20261120/area_by_cohort.csv": "dc6d20178bd10131b7d96db9731abc70dd314c0e11621b6a0fd2366df4b4ff8e",
+    "results/v14/progress_ab20261120/continuation.json": "710e7e019bd3866207391c18fce9e8a4b22188d68c15c07e733289ac602d32df",
+    "results/v14/progress_ab20261120/uncovered_retries.csv": "9eb725576c87a3343018cc436ffdb54968ab2e5ac584fb5814d80729b31226cf"
+  },
+  "source_states": {
+    "complete": 6861,
+    "no_usable_gr": 30
+  },
+  "summed_R14_owned_deg2": 24481.30798996913,
+  "final_historical_mask_union_frozen": false,
+  "final_production_frozen": false,
+  "final_review_ready": false,
+  "scope": "Terminal accounting for the registered 6891 DR11 search fields only. All no-usable fields have zero valid mask area. Summed owned masks are not a final historical union or measured gain area. Final regional C, unified production, mask union, all selected evidence and review QA remain open."
+}
