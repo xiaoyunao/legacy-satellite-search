@@ -1,5 +1,11 @@
 # Status
 
+## Evidence progress after the native PS1 boundary
+
+Outside-extension C is terminal8/8; main outside C is terminal6/8 at the latest accounting check. Exact16-shard acceptance61623103and the two global snapshots still await the remaining two main shards. Cache shards0–5are complete,6–7retain their original owners. Old75pack1is complete and pack0/2advance; full evidence is not accepted yet.
+
+Actual original-case integrity pilot61626244passes B029/one mode,immutable old release PDF/ZIP and10retained PNG hashes. Full75validation61626094follows existing preparation61623753. Neutral PDF headers/covariance caveat pass actual3page raster/text/ZIP/blank-form QA. No final population draw, user grade or release.
+
 ## 2026-11-20T03:51Z — native PS1 preflight boundary
 
 Native PS1 mean-signal61625458 completes8:21/operator0, but the registered bright-unit check fails (only r passes both bounds). Bright grizy magnitude residuals are +0.163,−0.049,+0.089,+0.066,−0.002mag. Read-only61625886 completes42s: finite-patch added/declared flux is conserved to1.1e−6 across20band/calibrator combinations; griz centroids are approximately−0.5pixel in each axis. The discrepancy is therefore not a gross nanomaggy/exposure or asinh-flux scaling loss. Finite/global PSF representation, pixel-coordinate convention and local aperture/shape response remain unresolved; do not fit a compensating offset or promote these probes into physical PS1 trials. Stop parameter/recipe tuning in this technical branch; retain its measured boundary while closing production/evidence.

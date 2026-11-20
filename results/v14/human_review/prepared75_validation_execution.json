@@ -1,0 +1,17 @@
+{
+  "job": "61626094",
+  "dependency": "afterok:61623753",
+  "runner": "scripts/v14_accept_prepared75.py",
+  "runner_sha256": "f486eeeea38769b9722dabfe0595bd272665ca8ec839da92bbeddb8549284ac9",
+  "state": "submitted_not_complete",
+  "scope": "Original frozen75 only. Verify immutable release artifacts/mode/member hashes, private rasters and explicit image gaps after preparation. No grades, final selection, PDF release or likelihood fits.",
+  "pilot": {
+    "job": "61626244",
+    "state": "COMPLETED",
+    "elapsed": "00:01:16",
+    "case": "B029",
+    "verified_modes": 1,
+    "retained_PNG_integrity_checks": 10,
+    "original_release_artifact_hashes_passed": true
+  }
+}

@@ -17,5 +17,19 @@
   "human_grade_table_unfilled": true,
   "private_pilot": true,
   "final_review_release": false,
-  "scope": "One mandatory old position, private actual-image layout test only. Fixed observed clipped long CMD title and rerendered PDF. Not full final-sample privacy/image/page QA or user grading."
+  "scope": "One mandatory old position, private actual-image layout test only. Fixed observed clipped long CMD title and rerendered PDF. Not full final-sample privacy/image/page QA or user grading.",
+  "neutral_header_update": {
+    "pages": 3,
+    "all_pages_rasterized_and_visually_inspected": true,
+    "PDF_text_identity_checks_passed": true,
+    "ZIP_entries_identity_checks_passed": true,
+    "PDF_author_empty": true,
+    "human_grade_table_unfilled": true,
+    "source_package_manifest_sha256": "93aafaa227b006f794876cb9b65030479f3ab3f875a98b4ec04d9d3e1380d420",
+    "scope": "Independent neutral alternative labels in PDF headings and shared-g error caveat. No renderer/fit/sample changes. Actual private pilot only; final population and page/privacy QA still required."
+  },
+  "additional_private_full_rasters_inspected": [
+    "P003 phase-one first mode",
+    "B007 full-extent first mode"
+  ]
 }

@@ -2,6 +2,13 @@
 
 ## 2026-11-20
 
+### Final old-case evidence integrity pilot and neutral PDF headings
+
+-61626244COMPLETED1:16:original B029saved mode/config/member/raster proof passes,including immutable original release PDF/ZIP hashes and10retained PNG integrity checks. Full75validator61626094waits for61623753; no final source universe or human grading certified.
+- Added independent neutral alternative labels to PDF page headings and the shared-g marginal-error caveat on its cover. Actual3-page private output regenerated; all3rasters inspected,text/metadata/ZIP/formprivacychecks pass. Additional P003phase-one andB007full-extent rasters inspected; no scientific grade assigned. Does not modify running renderers or fits.
+- Code: v14_accept_prepared75.py and narrow v14_stage1_pdf.py assembly change; aggregate QA/proofs/execution receipts. Pythonparse,real Slurm proof,Poppler rendering and actual ZIP/PDF/form checks pass. Old75unchanged; final production/C/area/newselectedevidence/sampling/fullpackageQA remain open.
+
+
 ### 2026-11-20T03:51Z — actual native PS1 consistency rejection and final sealing preparation
 
 -61625458COMPLETED8:21/operator0,20calibrator-band measurements. Only r passes predeclared0.05mag/0.2arcsec bright bounds. Read-only61625886COMPLETED42s verifies finite injected patch flux to1.1e−6;grizcentroids~−0.5pixel,corrected PSFfluxratios0.861/1.046/0.922/0.941/1.002. Preserve failure/finite-kernel/local-PSF/aperture/coordinate limits;no correction or physicalPdet.

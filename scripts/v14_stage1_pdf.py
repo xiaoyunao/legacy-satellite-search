@@ -31,6 +31,8 @@ def build(source,output):
         raise ValueError('Anonymous unit labels must be unique neutral IDs')
     for u in units:
         for panel in u['panels']:
+            if panel.get('alternative_label') and not re.fullmatch(r'alternative \d{2,3}',panel['alternative_label']):
+                raise ValueError('Only neutral alternative labels are allowed')
             p=Path(panel['path'])
             if digest(p)!=panel['sha256']:raise ValueError('Registered raster changed')
             with Image.open(p) as im:im.verify()
@@ -47,6 +49,7 @@ def build(source,output):
         'Allowed assessments: unassessable / artefact_or_background / uncertain / follow_up.',
         'Confidence and notes are optional. No human assessment has been pre-filled.',
         'Alternative labels follow a neutral order; they do not indicate model rank.',
+        'CMD colour and g errors share g; plotted bars show marginal errors.',
         'Wide mosaics may be resampled. Use central stamps for source morphology;',
         'display sampling is not seeing. Count bars are not detection significance.',
         'Panels use the same imaging and are not independent confirmation.',
@@ -61,7 +64,8 @@ def build(source,output):
         first=doc.getPageNumber();label=u['anonymous_id']
         doc.bookmarkPage(label);doc.addOutlineEntry(label,label,0)
         for ordinal,panel in enumerate(u['panels'],1):
-            doc.setFont('Helvetica-Bold',13);doc.drawString(margin,height-27,f'{label} / evidence {ordinal:02d}')
+            heading=' / '.join(x for x in (label,panel.get('alternative_label'),f'evidence {ordinal:02d}') if x)
+            doc.setFont('Helvetica-Bold',13);doc.drawString(margin,height-27,heading)
             with Image.open(panel['path']) as im:
                 # Embed pixels only; neither source filename nor PNG metadata enter PDF.
                 rgb=im.convert('RGB');iw,ih=rgb.size

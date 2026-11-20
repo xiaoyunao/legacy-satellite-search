@@ -52,10 +52,22 @@
   "bounded_debug_tasks": [
     1,
     2,
-    3
+    3,
+    4,
+    5,
+    6,
+    7
   ],
   "shard1_state": "COMPLETED",
   "shard1_elapsed": "00:04:48",
   "same_original_array_and_dependencies": true,
-  "resource_scope": "Use measured <5minute geometry shards in bounded debug when available. No new task/owner or geometry/science change; untouched shards retain regular QOS."
+  "resource_scope": "Use measured <5minute geometry shards in bounded debug when available. No new task/owner or geometry/science change; untouched shards retain regular QOS.",
+  "completed_shards": {
+    "0": "00:04:57",
+    "1": "00:04:48",
+    "2": "00:05:36",
+    "3": "00:05:14",
+    "4": "00:05:26",
+    "5": "00:05:52"
+  }
 }
