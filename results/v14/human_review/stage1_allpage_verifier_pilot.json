@@ -1,0 +1,14 @@
+{
+  "package_manifest_sha256": "93aafaa227b006f794876cb9b65030479f3ab3f875a98b4ec04d9d3e1380d420",
+  "plan_sha256": "3f8b1bfb6be4049d9acc2cbd42e1972b5bb586d85b148595b6a6d55b04788517",
+  "verifier_sha256": "716b87597ec7fb45c6910a37f2a9332a31597358974ed38b4606638d34aaec1e",
+  "pages": 3,
+  "anonymous_units": 1,
+  "every_evidence_page_pixel_roundtrip_verified": true,
+  "neutral_evidence_page_text_verified": true,
+  "standalone_zip_verified": true,
+  "blank_forms_verified": true,
+  "visual_annotation_layout_QA_complete": false,
+  "final_ready_for_human_review": false,
+  "scope": "Actual private3page layout pilot only; all-page embedded pixel/text/ZIP/form verification passes. Final population/evidence/anonymous annotations/full-page QA remain separate; no final ready flag or grades."
+}

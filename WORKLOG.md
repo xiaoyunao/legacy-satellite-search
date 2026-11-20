@@ -2,6 +2,14 @@
 
 ## 2026-11-20
 
+### 2026-11-20T07:14Z — verified evidence reuse and whole-PDF integrity bridge
+
+- Native read_thread reread full latest Pro68fa1336 and adopted437262c6; no newer advice or priority change. Actual selected-C registration61632493 waits for current-area/frame owner, not a second discovery scan.
+- Added saved-record task runner:61632605 COMPLETED15s verifies an existing original-source3mode record without rerendering/refitting. Source/member/expected native image/output hashes pass. Final material-plan builder preserves all selected original records, original75 and weak controls, with an OS-private permutation independent of sampling seed; no actual final aliases/frame generated yet.
+- All-page verifier passes actual private3page PDF: every embedded image round-trips exactly to registered neutral raster pixels, neutral evidence text/page navigation/ZIP CRC and blank form pass. Visual source annotation/layout inspection and final readiness remain separate. Source-evidence schema checks pass old75,weakcontrol,newrecord. No new identity context emitted or user grades.
+- Added gated figure runner for accepted formal144rates and paired sensitivity/conservative bounds; parse only, no full result or figure invented. Preserve Vproxy, finite footprint, shared populations/skies and unvalidated physicalPS1limits.
+- Next: accept actual720tile union/frame, run selected missing C, prepare final evidence and one QA-complete package; finish same144formal deeper replay and report actual paired findings.
+
 ### 2026-11-20T07:04Z — prepare the exact-source final selected-C bridge
 
 - Added private selected-C registration/execution/acceptance, gated by the actual frozen final frame and original probability draw. It preserves every qualified record at selected positions, reuses complete same-record C, and registers only not-attempted groups with original manifest/config/model. Unique member namespace protects existing accepted products. Partial/unavailable attempts remain explicit; no changed discovery cut, public frame or user grade.

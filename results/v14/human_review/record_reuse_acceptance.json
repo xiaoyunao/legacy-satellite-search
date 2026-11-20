@@ -1,0 +1,10 @@
+{
+  "job": "61632605",
+  "state": "COMPLETED",
+  "elapsed": "00:00:15",
+  "existing_saved_modes_verified": 3,
+  "refitted": false,
+  "rerendered": false,
+  "final_selection": false,
+  "scope": "Source-bound reuse task positively verifies original configuration/C table/native image/member hashes without repeating accepted work."
+}

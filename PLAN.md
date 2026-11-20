@@ -1,5 +1,10 @@
 # Plan
 
+## Next gated handoff (2026-11-20)
+
+After61626692→61628955, use registered61632493 to bind every selected same-record C task. Run only its missing tasks, collect exact-source proofs, then register final record materials with the accepted private supplement. `v14_prepare_record_task.py` verifies and skips accepted records. `v14_final_material_plan.py` requires all selected source evidence/old75/weak controls before its one private alias permutation. Assemble with existing stage1 PDF runner, run all-page pixel/text/ZIP/form verification and complete visual/annotation QA before one final user delivery. All are preparation capabilities; no actual final selection/alias/package has run.
+
+
 ## 2026-11-20 14:57 CST — accepted evidence and paired formal-depth pilot
 
 Atlas/efficiency tail61629183 completes22:49; current atlas binds6861R14rasters and all four scientific PNGs pass full-raster layout inspection. Sidecar captions distinguish coarse/all-scope coverage, machine contexts and legacy catalogue/native pilot curves from qualified area, human grades and physicalPS1gain.
