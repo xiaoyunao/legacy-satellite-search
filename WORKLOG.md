@@ -2,6 +2,12 @@
 
 ## 2026-11-20
 
+### 2026-11-20T05:12Z — register source-gated final review allocation
+
+- Added final_population.py/wrapper and predeclared allocation config. The existing5arcmin bounded complete-link algorithm retains every production position/all source links and crosspacket adjacency. Original75certainty, five compact priority units per region, then two-per-region/quantile-bin SRSWOR with positivepi and no postdraw proximity discard. Weak controls separate; identity/selection keys remain private. No discovery-cut change, fitted C or user grade.
+- Job61628955 follows accepted current area collector61626692; before frame/draw it checks allscan terminals/current inputs/720tile area/frozen identities. Submitted does not mean frozen/drawn. Pythonparse/bashsyntax and actual three-position chaining/lost-position invariant/non-Slurm freeze rejection pass.
+- Next: complete existing global/post/area chain, accept actual frame, then exact-record selected C/evidence and full-package privacy/pageQA.
+
 ### 2026-11-20T05:07Z — all original75 materials and weak saved controls accepted
 
 - All10original preparation packs61623753 completed; full proof61626094 COMPLETED58s verifies75/75cases,226saved modes and1223retained PNGs, original release hashes and zero image gaps. Explicit PNG/JSON allowlist sync completed; local hash/PIL verification matches all1223. This includes preserved attempts, not1223final pages or final package QA.

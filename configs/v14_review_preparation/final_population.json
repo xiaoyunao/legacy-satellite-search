@@ -1,0 +1,12 @@
+{
+  "span_arcmin": 5.0,
+  "priority_per_region": 5,
+  "priority_max_rh_pc": 30.0,
+  "C_stability_ranking_proxy": 1.0,
+  "known_context_arcmin": 30.0,
+  "score_quantile_edges": [0.0, 0.5, 0.8, 1.0],
+  "audit_per_region_bin": 2,
+  "sampling_seed": 487241,
+  "controls": ["DELVE_4", "DELVE_5"],
+  "scope": "Administrative review allocation, not a discovery threshold or candidate classification. All production positions remain in the frame. Certainty original75 plus five compact low-known-context priority packets per region; positive-probability SRSWOR in every remaining nonempty region/score stratum. No post-draw proximity exclusion. Private aliases are generated separately with an unpublished permutation."
+}
