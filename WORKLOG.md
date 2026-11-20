@@ -2,6 +2,11 @@
 
 ## 2026-11-20
 
+### 2026-11-20T07:25Z — existing C adds distance context without new fits
+
+- Aggregate-only own-record diagnostic of the20benchmark audit: all8spatially matched covered/in-range targets have an existing position/DMcompatible C mode;7have a highestCdistance within0.25mag. Coma bestC18.0 versus literature18.13 restores strict-distance compatibility; VirgoII bestC21.0 versus literature19.29 stays wrong despite another compatible mode. Keep bothblind ranking and all alternatives, and prior forced/special-processing caveats.
+- Exact association/catalogue hashes checked; no optimizer, changed detector, truth-ranked production list, independentCrecall or population completeness claim. Final material allocation and new aliases remain gated by current area/frame.
+
 ### 2026-11-20T07:21Z — actual qualified-production benchmark crosscheck
 
 -61632872 COMPLETED13s. Current hashed roster has20targets (original18+DracoII/UrsaMajorII);17centres fall in qualified represented masks,15distances inside main grid and12meet both. Ordinary qualified responses:8/12spatial,7/12retainedDMwithin0.25,4/12highest-representativeDMwithin0.25. All222nearby-mode associations retain own source/rank/geometry and anchor flag. These fixed-roster counts are not population completeness or an independent holdout.

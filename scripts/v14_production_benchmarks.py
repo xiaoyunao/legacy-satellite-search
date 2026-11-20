@@ -4,6 +4,7 @@ Truth is used only after scanning. Centre coverage is reported as such, never
 as full-object coverage, an injection selection function or forced recovery.
 """
 from collections import defaultdict
+import argparse
 import json
 import math
 import os
@@ -101,4 +102,42 @@ def run():
     print(dict(benchmarks=len(benchmarks),qualified_centre_coverage=sum(bool(x) for x in coverage),matched_mode_rows=len(details)),flush=True)
 
 
-if __name__=='__main__':run()
+def c_diagnostics():
+    """Aggregate existing own-record C only; a missed A group remains missed."""
+    summary=OUT/'known_recovery_summary.csv';matched=OUT/'matched_modes.csv'
+    catalogue=Path('results/v14/catalogue/candidate_modes.csv')
+    original=json.loads((OUT/'manifest.json').read_text())
+    for name,digest in original['output_sha256'].items():
+        if sha(Path(name))!=digest:raise ValueError('Accepted benchmark association changed')
+    if sha(catalogue)!=original['inputs'][str(catalogue)]:raise ValueError('Different catalogue clock')
+    source_ids=defaultdict(set);fits=defaultdict(list)
+    for row in read_csv(matched):
+        if row['group_anchor_within_radius']=='True':source_ids[row['name']].add(row['detection_id'])
+    for row in read_csv(catalogue):
+        if row['source_kind']=='C_followup' and row['fit_status']=='complete':fits[row['detection_id']].append(row)
+    results=[]
+    for truth in read_csv(summary):
+        modes=[r for name in source_ids[truth['name']] for r in fits[name]
+            if separation(float(truth['ra_deg']),float(truth['dec_deg']),float(r['ra_deg']),float(r['dec_deg']))
+            <=float(truth['position_match_radius_arcmin'])]
+        correct=[r for r in modes if abs(float(r['dm'])-float(truth['literature_dm']))<=.25]
+        best=max(modes,key=lambda r:float(r['c_ts'])) if modes else None
+        results.append(dict(name=truth['name'],formal_main_distance=truth['formal_main_distance'],
+            centre_in_qualified_mask=truth['centre_in_qualified_mask'],ordinary_A_spatial_match=truth['ordinary_spatial_match'],
+            C_modes_at_A_matching_records=len(modes),any_C_mode_DM_within_0p25=bool(correct),
+            best_existing_C_dm=best['dm'] if best else None,
+            best_existing_C_dm_error=float(best['dm'])-float(truth['literature_dm']) if best else None,
+            best_existing_C_TS=best['c_ts'] if best else None,
+            best_existing_C_TS_without_top3=best['c_without_top3'] if best else None,
+            best_C_DM_within_0p25=bool(best and abs(float(best['dm'])-float(truth['literature_dm']))<=.25),
+            forced_fit=False,new_C_fits=0))
+    write_csv(OUT/'known_C_diagnostic.csv',results)
+    write_json(OUT/'known_C_diagnostic_manifest.json',dict(
+        inputs={str(p):sha(p) for p in (summary,matched,catalogue,OUT/'manifest.json')},
+        code_sha256=sha(Path(__file__)),output_sha256=sha(OUT/'known_C_diagnostic.csv'),
+        scope='Existing same-qualified-record C for already matched ordinary A groups only. A misses are not C discoveries. Preserve all existing modes, including fitted distance shifts outside the discovery grid; no new fit or physical classification. Any-mode distance compatibility is a post-search diagnostic, not truth-driven ranking. Maximum existing C across matched sources is a descriptive fit comparison, not cross-region discovery significance or an independent recovery experiment.'))
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--existing-C-only',action='store_true')
+    c_diagnostics() if parser.parse_args().existing_C_only else run()

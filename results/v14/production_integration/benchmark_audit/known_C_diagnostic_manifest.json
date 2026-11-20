@@ -1,0 +1,11 @@
+{
+  "inputs": {
+    "results/v14/production_integration/benchmark_audit/known_recovery_summary.csv": "77313f43b1ddb6b1f661541e2cee1891767d586d2cfc6839548675774acc1ba0",
+    "results/v14/production_integration/benchmark_audit/matched_modes.csv": "278bb0e4973b5ea8c98ac1998c7995e79d6cd3e519bc32f5cfbfcae8156940bb",
+    "results/v14/catalogue/candidate_modes.csv": "5dc84160760ef0201e6a5d6f36473060e1470b798cb0face07bcefb3567b55bc",
+    "results/v14/production_integration/benchmark_audit/manifest.json": "22e611e99f4b918d1d6d87f0dc77ace8b24c8a8fb82a53a1c72dacdeb3901d1d"
+  },
+  "code_sha256": "cef735e3c497d5bd19b83ba9e956bed6b8a39b57f536d84d9bd358a01dfe4584",
+  "output_sha256": "7486148729438f23d656b0a1e11d9ec4dfed34d67692c966247f47c6e6cda5de",
+  "scope": "Existing same-qualified-record C for already matched ordinary A groups only. A misses are not C discoveries. Preserve all existing modes, including fitted distance shifts outside the discovery grid; no new fit or physical classification. Any-mode distance compatibility is a post-search diagnostic, not truth-driven ranking. Maximum existing C across matched sources is a descriptive fit comparison, not cross-region discovery significance or an independent recovery experiment."
+}
