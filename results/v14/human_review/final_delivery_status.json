@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-20T06:58:16.741815+00:00",
+  "updated_utc": "2026-11-20T08:43:58.531359+00:00",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -10,12 +10,12 @@
   },
   "gates": {
     "full_search_terminal_accounting": "PASSED: ab 02:23:54Z, 6861 complete + 30 zero-valid-gr = 6891; all174 retries accepted, zero uncovered. Terminal acceptance binds all field manifests; summed owned24481.307990deg2 is not final union.",
-    "historical_production_and_exact_mask_union": "Closed source post61627306 accepted10356qualified records/10169provisional positions/all75identities; cache/index61626647 complete. Area61626690 pack0complete45:52,packs1/2running; collector61626692then final frame61628955pending. Atlas tail61629183complete22:49. No final union/gain-area claim.",
-    "same_eligible_record_C_complete": "Current source-bound coverage accepted:8704records/20362required seeds complete,1652records/2546seeds not attempted. All outside C16shards/979groups/3102modes already included. Required final selected records remain a release gate; private registration61632493 follows actual frozen frame61628955.",
-    "all_final_objects_images_and_evidence": "Original75accepted75cases/226modes/1223retainedPNG; weakDELVE4/5controls13modes/65PNG; two new exact-source readiness records5modes/25PNG accepted. New context/identity stays private; final selection, selected-source C/evidence, anonymous/fullpage QA still pending.",
-    "final_sampling_inclusion_probabilities": "Frame61628955 released after exact current-region binding QA, pending actual720tile union. Fixed source-mask hemisphere/census/extension strata, original75certainty, five compact regional priorities and two-per-score-bin SRSWOR. No draw yet, postdraw spacing deletion or aliases.",
+    "historical_production_and_exact_mask_union": "PASSED under represented working-mask/projection definition:61626692COMPLETED1:21,720tiles;qualified26886.647579deg\u00b2/allordinary28812.390012deg\u00b2. Historical10356records/10169positions; actual native continuum/physical-gain area not claimed.",
+    "same_eligible_record_C_complete": "PASSED for final selected226source records:202existing+24new/32new modes;pilot61633906,full61633996andpost61634100all complete. Private exact-source addendum, no borrowed or zero-filled C. Frozen global all-production Cclock remains distinct.",
+    "all_final_objects_images_and_evidence": "IN PROGRESS:old75/226modes exactly reused;weakcontrols13modes preserved;old/native PDF runtime probes pass.61634971renders150remaining source records/523modes in3eight-worker packs. No final package/native full QA or grades claimed.",
+    "final_sampling_inclusion_probabilities": "PASSED:61628955COMPLETED46s;8981bounded administrative units,103certainty/29strata/58SRSWORaudit,161selected. All75original identities retained;28additional regional priorities and58auditunits. Two weak controls separate. No alias key or human grade yet.",
     "final_anonymity_and_page_QA": "Actual private3page PDF/ZIP/blank-form pilot passes inspected title correction, image integrity and neutral text/metadata/ZIP check; final population/aliases/evidence/allpage/privacy gates remain open. No human grades.",
-    "required_source_bound_C_modes": "Current source audit:10356qualified records/22908required seeds;8704records/20362seeds all complete;1652low-priority records/2546seeds not attempted. Final selected original-record modes must be complete before release; no missing result set to zero."
+    "required_source_bound_C_modes": "752original-source modes registered for226selected records, all numerical C covered. Exact old75reuses226modes after source/scan/model/member/all20Cfield equality; remaining523render modes/150records queued in61634971. Final saved/native/full-page evidence checks remain open."
   },
   "human_responses": "unfilled; no seal or identity reveal",
   "scope": "Historical batch technical readiness is distinct from final project-wide delivery. Preserve release_v2 bytes. Final package must retain and crosswalk the original 75 positions.",
@@ -115,12 +115,12 @@
       "accepted_paired_cases": 18,
       "shared_latent_populations": 6,
       "spatial_baseline_deeper": [
-        5,
-        6
+        39,
+        49
       ],
       "highest_DM_correct_baseline_deeper": [
-        5,
-        5
+        31,
+        43
       ],
       "usable_members_baseline_deeper": [
         132,
@@ -137,11 +137,28 @@
         1
       ],
       "blank_truth_position_matches_in_pilot": 0,
-      "full_job": "61630564",
+      "full_job": "61630564 COMPLETED1:00:04",
       "full_acceptance_job": "61630992",
       "full_state": "pending_not_measured",
       "C_replayed": false,
-      "physical_PS1_response_validated": false
+      "physical_PS1_response_validated": false,
+      "state": "accepted_all144formal_pairs",
+      "proof_job": "61630992 COMPLETED18s",
+      "validated_paired_cases": 144,
+      "retained_DM_correct_baseline_deeper": [
+        35,
+        47
+      ],
+      "hard_members_baseline_deeper": [
+        1170,
+        1944
+      ],
+      "spatial_deeper_minus_baseline": 0.06944444444444445,
+      "crossed_sensitivity_interval": [
+        0,
+        0.14583333333333334
+      ],
+      "registered_gain_screen_passed": false
     }
   },
   "post_integration_job": "61627306"

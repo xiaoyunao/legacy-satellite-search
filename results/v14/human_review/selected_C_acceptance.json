@@ -1,0 +1,13 @@
+{
+  "tasks": 22,
+  "new_C_states": {
+    "complete": 32
+  },
+  "selected_records": 226,
+  "reused_complete_records": 202,
+  "exact_source_acceptance_passed": true,
+  "all_new_C_complete": true,
+  "material_QA_complete": false,
+  "human_grades_filled": false,
+  "identities_private": true
+}

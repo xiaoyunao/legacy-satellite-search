@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-11-20T08:37Z — retain baseline after the actual formal-depth test
+
+The accepted matched formal pair (same144native catalogues, mask/grid/template, existing development-budget cuts) gives spatial39→49, +6.94pp, crossed sensitivity[0,14.58]pp; no cell meets the registered>10ppand positive-lower screen. Continue frozen A baseline production. Keep deeper as a measured research arm; do not tune cuts after viewing these cases or extrapolate the three chosen skies into global physical gain. The authoritative pair table has144rows/48potential populations and two A arms; no physical PS1 or formal C arm is invented.
+
+Exact old75source/group/scan/model/member proofs and all20Cscientific values match current required records. Reuse all226saved modes/raster bytes, with both origins retained; never substitute a positional neighbour's C packet. New523mode material work is a render/QA task, not another detection or fit. HOME38.36/40GiB requires large new intermediate renders on scratch, leaving original75/release_v2 and small private registration metadata intact. Final critical archival/local copies remain explicit delivery gates; a scratch link alone is not durable archival.
+
+
 ## 2026-11-20 — measure depth gain under matching formal policies
 
 Observed definition mismatch: formal baseline39/144 and legacy matched deeper64/144 have different masks/grids/cuts. Add a fixed deeper research replay using the same accepted native catalogues/potential populations and formal mask/grid, original development A_deepcut7.520695022636638 at0.3group/deg2, g/r limits24/23.5. No fitting of the cutoff, new physical grid or change to discovery production. Preserve the baseline engine/products and legacy matched arms. First18case source/result/mask pilot precedes full144; compare only formal-to-formal arms and retain light/stamp/three-sky/C/PS1limits. This resolves an observed scientific comparison gap rather than growing a parameter search.

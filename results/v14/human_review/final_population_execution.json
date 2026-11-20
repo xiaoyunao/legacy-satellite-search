@@ -1,7 +1,7 @@
 {
   "job": "61628955",
   "dependency": "afterok:61626692",
-  "state": "same_pending_owner_released_after_current_source_binding_QA",
+  "state": "COMPLETED_frozen_and_drawn",
   "runner": "scripts/v14_final_population.py",
   "runner_sha256": "f3a23017b9515d42a9c2d38e6a58723693d0add29ac78780653a0953514e36c9",
   "plan": "configs/v14_review_preparation/final_population.json",
@@ -15,5 +15,15 @@
     "historical_blind_modes_retained": 2544,
     "source_mask_inventory_sha256": "ca7df7d53f3d8379031aec46e000c4ccd777fdcb0f2ca1e35dbdcd82f0a12789",
     "original_quota_seed_geometry_unchanged": true
-  }
+  },
+  "elapsed": "00:00:46",
+  "production_records": 10356,
+  "production_positions": 10169,
+  "review_units": 8981,
+  "certainty_units": 103,
+  "probability_audit_units": 58,
+  "selected_units": 161,
+  "old75_retained": 75,
+  "selected_source_records": 226,
+  "final_human_package_ready": false
 }

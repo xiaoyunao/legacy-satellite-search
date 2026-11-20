@@ -31,5 +31,13 @@
   "geometry_warming_state": "all8shards_completed_immutable_proofs_revalidated_in_setup",
   "handoff_receipt": "results/v14/production_integration/checkpoints/outside_C_final_20261120/global_snapshot_handoff_20261120.json",
   "setup_state": "COMPLETED 00:27:47; all8341source/raster/cache proofs and current index accepted",
-  "current_registration": "results/v14/production_integration/masks/tiled/8094b69a21510971/registration.json"
+  "current_registration": "results/v14/production_integration/masks/tiled/8094b69a21510971/registration.json",
+  "observed_utc": "2026-11-20T07:40:54.499484+00:00",
+  "tile_packs_terminal": {
+    "61626690_0": "COMPLETED 00:45:52",
+    "61626690_1": "COMPLETED 00:47:08",
+    "61626690_2": "COMPLETED 00:42:47"
+  },
+  "completed_tile_json": 720,
+  "collector_same_owner_qos": "61626692 changed regular_1 to debug while pending, confirmed by scontrol;10min/32G/source/dependencies unchanged. Previous720tile collector61579698completed2:11/RSS417000KiB. No duplicate submission."
 }

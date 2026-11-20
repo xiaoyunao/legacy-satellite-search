@@ -29,6 +29,10 @@ def run(plan,index):
                 raise ValueError('Accepted source membership or evidence incomplete')
         print(dict(task=index,existing_preparation_verified=True,modes=proof['modes']),flush=True)
         return
+    from scripts.v14_reuse_frozen_record import reuse
+    if reuse(spec,plan,registration):
+        run(plan,index)
+        return
     renderer.PLAN=plan;renderer.run(index)
 
 

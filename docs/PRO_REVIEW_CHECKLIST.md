@@ -1,5 +1,17 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-20T08:37Z — current adopted-prompt acceptance
+
+- [x] All6891registered scans terminal; current historical qualified ledger and all720represented-mask overlap tiles accepted.
+- [x] Closed final frame/draw accepted:8981units;161selected (103certainty/58SRSWOR),all75original cases retained;29strata with positive audit inclusion probabilities.
+- [x] Every necessary selected-source C seed covered:226records,32new modes in24records; complete source/config/member proofs, private supplement rather than a public-frame mutation.
+- [x] All144formal deeper replays and paired source/metric/statistical acceptance; fixed-grid recovery figures inspected. Registered gain criterion fails; baseline stays production.
+- [x] Exact old75raster reuse and NERSC PDF-runtime3page pixel/text/ZIP/form probe pass. These are not final full-package QA or human grades.
+- [ ] Finish150remaining record renders/523modes in existing61634971packs; inspect actual failures and retry only their manifest units.
+- [ ] Final anonymous/private-context assembly, all image/native completeness, full-page/privacy QA and durable local/project artifact copies; deliver once after gates pass.
+- [ ] PhysicalPS1response, genuine LSminusPS1physicaldelta, calibrated full-MV/light/continuous-distance/all-sky selection and abundance remain unsupported. Preserve measured technical/finite-data limits rather than filling missing arms or contours. No paper-body work.
+
+
 ## 2026-11-20 14:57 CST — accepted evidence and paired formal-depth pilot
 
 Atlas/efficiency tail61629183 completes22:49; current atlas binds6861R14rasters and all four scientific PNGs pass full-raster layout inspection. Sidecar captions distinguish coarse/all-scope coverage, machine contexts and legacy catalogue/native pilot curves from qualified area, human grades and physicalPS1gain.

@@ -1,0 +1,24 @@
+{
+  "job": "61628955",
+  "code_sha256": "f3a23017b9515d42a9c2d38e6a58723693d0add29ac78780653a0953514e36c9",
+  "geometry_code_sha256": "7a264847d7147a89962cdefb3e0dcd61720bbde4f79cb4f5779220ae9732cc99",
+  "frame_sha256": "cc242ed8c107f8e6f167904c269f0d4ea3347ea9ec3fc88b59e85a4ebbdbb06a",
+  "allocation_sha256": "7cb001e55937602692ba313f1e89b01cab4b58cb2a80f227c2c48524d5e10415",
+  "adjacency_sha256": "e43e27991d405964d50b851034ab21a7bddd25c9ce5b3f5086ff5ef47dacd9bf",
+  "production_records": 10356,
+  "production_positions": 10169,
+  "review_units": 8981,
+  "certainty_units": 103,
+  "strata": 29,
+  "audit_units": 58,
+  "original75_retained": 75,
+  "controls": [
+    "DELVE_4",
+    "DELVE_5"
+  ],
+  "population_frozen": true,
+  "sampling_performed": false,
+  "final_ready_for_human_review": false,
+  "human_grades_filled": false,
+  "source_scope": "Closed represented working-mask production frame. Units are administrative packets, not independent systems. Original75 prior exposure retained. No physical completeness or human classification."
+}

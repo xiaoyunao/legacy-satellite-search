@@ -1,5 +1,16 @@
 # Status
 
+## 2026-11-20T08:37Z — closed area/frame, selected C and formal144 accepted
+
+- Registered scans:6861complete+30zero-valid-gr=6891terminal; no uncovered retry. Qualified historical production10356records/10169provisional positions; original75identities retained.
+- Current720tile collector61626692 COMPLETED1:21. Represented working-mask union:all ordinary28812.390012deg²; qualified production26886.647579deg² (gross27031.731142before overlap). Qualified unambiguous census intersections:DES4791.806758,DELVE10894.403654,PS18565.827305,unassigned/masked2624.873374deg²; boundary ambiguity9.736488deg². These are current mask/projection areas, not continuous native-pixel geometry, unsearched sky or physical-gain area.
+- Frame61628955 COMPLETED46s:8981bounded administrative units;103certainty+58probability-audit=161selected units in29strata. All75original cases remain; add2weak controls separately. No human grade or anonymous permutation yet.
+- Required selected-source C:226records (202existing+24new);32new modes accepted in22tasks.61633996 COMPLETED1:50;61634100 COMPLETED1:03also registers752source modes. Frozen global C inventory remains a separate clock; private selected addendum is not a new detection.
+- Old75exact-source reuse61634471 COMPLETED48s:75records/226modes, all20Cfields/original scan/member/native proofs match; no fitting or image rendering repeated. Generic record material array61634971runs3packs×8workers/max2packs;150remaining records/523modes at registration. New large intermediates live on scratch through the original project-path link; old75/release_v2 remain unchanged.
+- Formal deeper144:61630564 COMPLETED1:00:04;validator61630992 COMPLETED18s. Spatial39→49,highest-correct31→43,retained-correct35→47;hard1170→1944. Delta+6.94pp;crossed-resampling sensitivity[0,14.58]pp;registered>10pp/positive-lower screen fails in every cell. No physical PS1 response or full selection function is claimed.
+- Final review release still waits for all selected native/material checks, anonymous assembly, every-page/privacy QA and durable local/project archival. User is not asked to grade an intermediate batch.
+
+
 ## 2026-11-20 14:57 CST — accepted evidence and paired formal-depth pilot
 
 Atlas/efficiency tail61629183 completes22:49; current atlas binds6861R14rasters and all four scientific PNGs pass full-raster layout inspection. Sidecar captions distinguish coarse/all-scope coverage, machine contexts and legacy catalogue/native pilot curves from qualified area, human grades and physicalPS1gain.

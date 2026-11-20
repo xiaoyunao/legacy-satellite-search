@@ -1,7 +1,7 @@
 {
   "pilot_job": "61629992",
   "pilot_scope": "first6frozen trials \u00d73existing backgrounds=18; full144only after source/result/mask QA",
-  "state": "pilot_accepted_full_registered",
+  "state": "accepted_all144_formal_pairs",
   "runner_sha256": "0f75f03b0787af0c0f0a663e2fd9775f98bd68447527b6e0a3d0209270e8f0ff",
   "registration_sha256": "9064f8747b08ca2f07594b6659e0b5e4e5ba0326c25322f6baebbf1df11a0f36",
   "protocol_sha256": "57e30f6aaaaacee20b40bdcf7d2966a9402aeaa14b613fe5db281af2bd16b40c",
@@ -12,8 +12,29 @@
   "pilot_state": "COMPLETED 00:10:27; acceptance61630419 COMPLETED 00:00:20",
   "pilot_acceptance_sha256": "3016c5e918719404abec589fa5372fcad5bca7435b9fd117bd8ec78be58d79c8",
   "full_job": "61630564",
-  "full_state": "RUNNING observed2026-11-20T07:02Z; not accepted",
+  "full_state": "COMPLETED 01:00:04",
   "full_scope": "Same144native catalogues; verify/skip first18cached cases and run remaining126formal deeper scans,192G/24CPU/90min. No new source extraction/populations.",
   "full_acceptance_job": "61630992",
-  "full_acceptance_dependency": "afterok:61630564"
+  "full_acceptance_dependency": "afterok:61630564",
+  "full_acceptance_state": "COMPLETED 00:00:18",
+  "full_acceptance_sha256": "e48b26ae4504a07691c051e8f5c4facca94765048a3c9d9c9b1a1a0293551741",
+  "actual_formal_counts": {
+    "spatial": {
+      "baseline": 39,
+      "deeper": 49
+    },
+    "blind_correct": {
+      "baseline": 31,
+      "deeper": 43
+    },
+    "correct_mode_exists": {
+      "baseline": 35,
+      "deeper": 47
+    },
+    "correct_mode_in_any_spatial_group": {
+      "baseline": 35,
+      "deeper": 47
+    }
+  },
+  "observed_utc": "2026-11-20T08:34:13.004697+00:00"
 }

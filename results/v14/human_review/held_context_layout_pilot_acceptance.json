@@ -1,0 +1,15 @@
+{
+  "pilot": true,
+  "old_previously_exposed_case_only": true,
+  "pages": 5,
+  "expected_science_rasters": 3,
+  "source_hashes_pass": true,
+  "passive_PDF_pages": true,
+  "contactsheet_all_pages_visually_inspected": true,
+  "layout_no_clipping_observed": true,
+  "renderer_sha256": "6851f43ea8a76ebb24b59f2031ea0f13c6899df716c9812dd5a9ff611dc3b52f",
+  "manifest_sha256": "6694d4f237fc65e79a27fbfc9689176451b659aeae9ebea3629185214b136a62",
+  "identity_revealed_for_final_sample": false,
+  "human_grades_filled": false,
+  "final_release": false
+}

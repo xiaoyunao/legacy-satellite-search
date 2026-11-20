@@ -7,6 +7,7 @@ sampling seed. All source alternatives and original exposed cases are retained.
 import argparse
 from collections import defaultdict
 import json
+import math
 from pathlib import Path
 import secrets
 
@@ -42,6 +43,9 @@ def evidence(path,inputs):
             with Image.open(p) as image:image.verify()
             panels.append(dict(path=str(p),sha256=sha(p)))
         mode=context['mode']
+        for name in ('ts','C_refit_TS_without_top3'):
+            if not math.isfinite(float(mode.get(name,''))):
+                raise ValueError('Required saved C/top-three statistic is not recorded')
         # Duplicate presentations are collapsed only when identical saved stars,
         # probabilities, fitted geometry and panel bytes agree. Every origin stays linked.
         signature=(context['membership_sha256'],*(mode[k] for k in ('fit_ra_deg','fit_dec_deg','fit_dm','fit_rh_arcmin')),

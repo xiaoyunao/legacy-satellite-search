@@ -1,0 +1,69 @@
+{
+  "job": "61626692",
+  "registration": "results/v14/production_integration/masks/tiled/8094b69a21510971/registration.json",
+  "registration_sha256": "0887032db6d1dc80e6b45279c234f8de0b3f67b52d28eeaf6e2021d9b60dc804",
+  "inventory_sha256": "ca7df7d53f3d8379031aec46e000c4ccd777fdcb0f2ca1e35dbdcd82f0a12789",
+  "summary": "results/v14/production_integration/masks/tiled/8094b69a21510971/overlay_repaired_summary.json",
+  "summary_sha256": "b1cf100dc4b6c131b475dcc99ebc22d786cee6641fb6a58a00fd666aff306442",
+  "driver_sha256": "e17ee5269637831608a81a70c47856a41ba6f68ec803c5a99cd7f4de9f4a8782",
+  "tiles": 720,
+  "layers": {
+    "all_ordinary_scanned": {
+      "union_deg2": 28812.39001194847,
+      "summed_record_pieces_deg2": 28997.83771026112,
+      "census_boundary_ambiguity_deg2": 10.075115981406032,
+      "census": [
+        {
+          "census_label": 0,
+          "represented_label_union_deg2": 3300.3393819586054,
+          "unambiguous_deg2": 3299.5202546562205
+        },
+        {
+          "census_label": 1,
+          "represented_label_union_deg2": 4846.325752381073,
+          "unambiguous_deg2": 4845.452092804417
+        },
+        {
+          "census_label": 2,
+          "represented_label_union_deg2": 11665.042229163406,
+          "unambiguous_deg2": 11656.471711365002
+        },
+        {
+          "census_label": 3,
+          "represented_label_union_deg2": 9010.757764431093,
+          "unambiguous_deg2": 9000.870837138787
+        }
+      ]
+    },
+    "qualified_production": {
+      "union_deg2": 26886.64757928536,
+      "summed_record_pieces_deg2": 27031.73114197422,
+      "census_boundary_ambiguity_deg2": 9.736487895847244,
+      "census": [
+        {
+          "census_label": 0,
+          "represented_label_union_deg2": 2625.485564175143,
+          "unambiguous_deg2": 2624.8733741262413
+        },
+        {
+          "census_label": 1,
+          "represented_label_union_deg2": 4792.644150288463,
+          "unambiguous_deg2": 4791.806758475998
+        },
+        {
+          "census_label": 2,
+          "represented_label_union_deg2": 10902.8092928542,
+          "unambiguous_deg2": 10894.403654129783
+        },
+        {
+          "census_label": 3,
+          "represented_label_union_deg2": 8575.445059868343,
+          "unambiguous_deg2": 8565.827304655491
+        }
+      ]
+    }
+  },
+  "physical_gain_area_deg2": null,
+  "final_production_frozen": false,
+  "scope": "All720disjoint equal-area tiles of the source-bound represented working masks. Qualification, census-boundary ambiguity and overlap retained. No scalar summation of overlapping masks, physical-gain footprint, continuous native-pixel claim, final candidate freeze or human release."
+}

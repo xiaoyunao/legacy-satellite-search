@@ -1,0 +1,7 @@
+{
+  "registration_sha256": "0887032db6d1dc80e6b45279c234f8de0b3f67b52d28eeaf6e2021d9b60dc804",
+  "vector_index_sha256": "6c09cfad2c16f376d90330dbc8da5bc823abacd82e1adbed0f6a9af59919cbb9",
+  "code_sha256": "fa0a11e020c574defd83b70a6266a3d589d0153aebaf1ebc33c491fa9277a11b",
+  "driver_sha256": "e17ee5269637831608a81a70c47856a41ba6f68ec803c5a99cd7f4de9f4a8782",
+  "scope": "Same validated polygon-only projection: discard only zero-area lines/points, without snapping or mask changes. Current closed-search inventory; final scientific production/review freeze remains separate."
+}

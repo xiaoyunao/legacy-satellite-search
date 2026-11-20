@@ -1,5 +1,14 @@
 # 当前科学主线
 
+## 2026-11-20T08:37Z — scientific state after the complete formal-depth pair
+
+Mainline B remains actual compact-system sensitivity/census increment; discovery A remains parallel. The frozen production detector remains method A baseline. The correct formal-to-formal144comparison gives39/144→49/144spatial, with11deeper-only/1baseline-only and +6.94pp. Its three-sky/shared-block sensitivity interval[0,14.58]pp includes zero and the point gain is below10pp; no cell passes the predeclared screen. Do not quote legacy40→64or mix formal39withlegacy64as the production depth gain. No uniform-depth rollout or new detector tuning follows.
+
+The largest cell gain is the bright30pc proxy bin12/24→18/24;bright3pc5→6,bright10pc22→23;faint10pc0→2,other faint cells0→0. These are24background applications of8potential populations per cell, not24independent star populations. Radius bins use different IMF/light realizations; retain the existing same-population native radius diagnostic and finite-light limits. Bootstrap zero in a zero-discordance cell is not zero uncertainty; conservative finite-MC bounds remain wide. PhysicalLSminusPS1gain is unresolved because real PS1 response has not passed its unit/transfer checks.
+
+Qualified represented production area is26886.647579deg² after true source-mask overlap bookkeeping; it is not all newly imaged/unsearched/gain area. Current final frame has8981administrative units and a fixed161unit sample, original75retained plus103certainty/58audit structure; two weak controls are separate. Necessary C is complete for226selected source records. Keep selection identities/context private; do not mutate frozen public ledger inputs when using the selected-C addendum. Deliver one final packet only after all materials/privacy/page gates pass; no grades, system promotion, all-sky selection function, abundance or manuscript yet.
+
+
 ## 2026-11-20 14:57 CST — accepted evidence and paired formal-depth pilot
 
 Atlas/efficiency tail61629183 completes22:49; current atlas binds6861R14rasters and all four scientific PNGs pass full-raster layout inspection. Sidecar captions distinguish coarse/all-scope coverage, machine contexts and legacy catalogue/native pilot curves from qualified area, human grades and physicalPS1gain.

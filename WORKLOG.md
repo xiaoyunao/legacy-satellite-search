@@ -2,6 +2,22 @@
 
 ## 2026-11-20
 
+### 2026-11-20T08:37Z — accepted science/area/frame/selected-C and final render owners
+
+-61626692COMPLETED1:21,720tiles/source hashes accepted:qualified26886.647579deg²/allordinary28812.390012deg²; qualifiedgross27031.731142before overlap. Area bookkeeping closes unambiguous census sums plus9.736488ambiguity. This is the represented-mask/projection definition, not exact native solid angle or physical-gain footprint.
+-61628955COMPLETED46s freezes8981units/103certainty/29strata then draws161(58audit),all75retained.61632493COMPLETED18s registers226source records/24missing/32seeds;pilot61633906COMPLETED24s,full61633996COMPLETED1:50/zero failed,post61634100COMPLETED1:03accepts32modes and registers752material modes. Private sources/keys stay ignored.
+-61630564COMPLETED1:00:04;61630992COMPLETED18s accepts144formal pairs:spatial39→49,highest31→43,retained35→47,hard1170→1944. Spatial+6.944pp,[0,14.583]ppcrossed sensitivity; no cell passes frozen>10pp/positive-lower criterion. All2PNGfigures visually inspected after legends moved off intervals; no physicalPS1/fullSF/Cclaim.
+-61634471COMPLETED48s verifies exact20-field/original source/scans/members and reuses75oldrecords/226modes without rendering/fitting.61634472COMPLETED10s validates NERSCReportLab5.1.0/pypdf7.1.1on actual3page neutral PDF/pixel/text/ZIP/forms. Local16GiBRAM motivates large PDFwork onNERSC, not a new dependency.
+-HOME38.36/40GiB:allversioned.venvs link to one active405MiBbase; no environment moved. No existing personalCFSpath verified, so none created. Onlyprepared_records intermediates moved toregisteredPSCRATCHpath with project symlink; all3previous proofs/outputs identical,old75/release_v2unchanged. Critical final archival remains pending; scratch link alone is not permanent.
+-61634971array0–2%2:3packs×8oneCPUworkers,29min/64G.76current source records already prepared;150records/523modes pending at registration,maxestimated worker1018s. Keep all pack/render code fixed and retry actual manifest failures only. Final assembly/native/privacy/page/durable-copy gates still pending; no user grades.
+
+### 2026-11-20T07:40Z — held-context layout and same-owner collector queue adjustment
+
+- Added held scientific-context PDF assembly outside the anonymous ZIP. Actual old exposedP001layout pilot5pages includes source/Csummary and three saved context/condition/contributor panels; every passive-page/image count/source hash passes, all5pages rendered/contactsheet inspected without clipping. Full final selected context remains private until actual user-response seal; no new identity mapping or grades.
+- Final material gate requires finite saved C/top-three statistics; alternative order follows neutral DM/scale/position, never Cscore. Old/new evidence proofs still pass, old rasters unchanged.
+- All720area tiles complete; pending collector61626692waited in regular. Previous comparable collector61579698measured2:11/417000KiB. Same owner QoS changed to debug with successful readback;10min/32G/source/dependencies unchanged. An earlier invalid memory-unit update was rejected before changes; no job or scientific input changed from that failed command. No duplicate submitted.
+- Next: actual collector/frame/selectedsource numericalC and final materials/anonymous/pageQA; accept full144formal paired depth results.
+
 ### 2026-11-20T07:35Z — historical saved-material readiness accepted
 
 -61633258 COMPLETED50s: one originalv7qualified record/one saved Cmode/fivePNGs; original scan configuration/template/member identities/likelihood and expected central/contributor images pass. Explicit private PNG/JSON and aggregate plan sync passes local hash/PIL checks. No refit, final source selection, new exposed context or grade.

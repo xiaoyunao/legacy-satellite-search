@@ -1,0 +1,21 @@
+{
+  "inputs": {
+    "results/v14/repeat_full/production_deeper_replay/acceptance.json": "e48b26ae4504a07691c051e8f5c4facca94765048a3c9d9c9b1a1a0293551741",
+    "results/v14/repeat_full/production_deeper_replay/fixed_background_formal_depth_recovery.csv": "9175da25936f9742ad8dcea4ceef1440f336b6eb1c66f9577afcc1b093452dd9",
+    "results/v14/repeat_full/production_deeper_replay/paired_formal_depth_resampling.csv": "6893fe0e739bd3a0ac9ade0061d52579772c911d6af40c77ddd2432eb6087431",
+    "results/v14/repeat_full/production_deeper_replay/formal_depth_pairs.csv": "eca3db2eb6c1cf2f67ff144608def9adc66a0943fcb025259534a088aa2bc50a",
+    "results/v14/repeat_full/production_deeper_replay/blank_response.csv": "dfad49f2ad09de1fe620f09a142e681c76e289dba9e29d87ef844f79d0d08b9d"
+  },
+  "code_sha256": "d4693a8437cd26979792b6eedc6a071273c9b740729265ac1b28de2b1223961d",
+  "outputs": {
+    "results/v14/repeat_full/production_deeper_replay/figures/formal_spatial_recovery.pdf": "654c4e00cf30f16c9a9a73633d8c6a6002df3cc50bbf0fb9fb33f83457f257a7",
+    "results/v14/repeat_full/production_deeper_replay/figures/formal_spatial_recovery.png": "8a3a9010b8e4cc3e80c7e82b56b87dfcd94bd703ef3bb2f716af9d5525c1791f",
+    "results/v14/repeat_full/production_deeper_replay/figures/formal_depth_difference.pdf": "1deba05442f30a515071563d7a2c7081f71201cd7108e59b1efab59519902446",
+    "results/v14/repeat_full/production_deeper_replay/figures/formal_depth_difference.png": "38eec901f182f31a23dc9dbb6f08a3d4584a9bb3a139341271e4d4fc172092da"
+  },
+  "all_sky_selection_function": false,
+  "physical_PS1_gain": false,
+  "visual_QA_pending": false,
+  "full_png_rasters_inspected": 2,
+  "legend_no_longer_obscures_intervals": true
+}

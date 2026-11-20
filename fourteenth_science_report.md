@@ -1,5 +1,25 @@
 # DR11 search and selection response
 
+## 2026-11-20T08:37Z — actual closed production and complete formal paired-depth result
+
+All6891registered scans are terminal (6861complete,30zero-valid-gr). Historical qualified records10356at10169provisional positions are represented by a26886.647579deg² working-mask union; gross27031.731142deg² loses145.083563deg²to overlap. Ordinary scans including non-production regions cover28812.390012deg²in the same representation. These are exposure-mask/projection areas, not continuous-native-pixel accuracy or newly imaged/unexplored/gain area. Unambiguous qualified intersections areDES4791.806758,DELVE10894.403654,PS18565.827305andunassigned/masked2624.873374deg², with9.736488deg²ofcensus-boundary ambiguity retained. North reuses older imaging; PS1assignment and unassigned labels do not establish new discovery space. Physical detectability-gain area remains unmeasured/null.
+
+The final administrative frame/draw is frozen:8981units,103certainty+58stratified SRSWORaudit=161selected units. Original75remain separate retained identities (17also satisfy regional priority);28additional regional priorities and58audit units complete the set. Two weak known controls remain separate. Necessary same-qualified-record C is complete for226selected records, including24new records/32modes. New render work is523modes in150records after existing exact-source caches; no human grade, L1promotion or final package is claimed before all gates pass.
+
+| Formal A endpoint /144background applications | Baseline | Deeper |
+|---|---:|---:|
+| Spatial |39|49|
+| Highest blind distance within0.25mag |31|43|
+| Any retained compatible distance |35|47|
+| Usable hard-selected members, summed |1170|1944|
+
+This pair uses the same48potential populations in three selected skies, six physical cells, the full formal grid/mask and original development-budget cuts6.137901/7.520695. Eleven pairs are deeper-only and one baseline-only:spatial delta+6.944pp,crossed shared-block/sky sensitivity[0,14.583]pp. The simultaneous conservative fixed-sky bound is[-60.239,66.681]pp; it retains limited Monte Carlo information and zero-discordance uncertainty. **No cell meets the registered meaningful-positive-gain screen.** Keep baseline production; this does not demonstrate that LS has no gain over PS1.
+
+Background spatial counts are16→18,11→16,12→15(each48applications). Bright target-proxy cells:3pc5/24→6/24,10pc22→23,30pc12→18. Faint10pc0→2;faint3/30pc0→0. These cells contain8independent potential populations reused across backgrounds. Actual realized luminosities differ between radii; do not call the raw radius contrast a pure size effect. Zero bootstrap width where no discordance was observed is not zero uncertainty. The three unchanged backgrounds contain0/0/0baseline groups and2/1/1deeper groups; none matches any of the144truth positions. They are3reused empirical backgrounds, not144independent FPRtrials.
+
+The figures and paired tables are actual accepted results, not simulations of a catalogue pipeline. Original native144/legacy288stage measurements and their Cdiagnostics remain separate from this formal A-only replay. Formal C is not rerun or borrowed; finite rendered light/stamps, V-band proxy, selected skies, unresolved physicalPS1response and unknown human attrition prevent a global physical selection function,50%contour or abundance bound. Existing matched-native Cfollow-up fits40/64spatial cases and the retained stability proxy passes40/60; those are legacy-procedure diagnostics, not the formal C endpoint or independent discoveries. No new system is confirmed, and0706continues L0with weak independent BASS support.
+
+
 ## 2026-11-20T07:21Z — ordinary production benchmark association
 
 The actual20-object registered roster has17centres inside qualified represented masks;15targets lie within the formal main-distance interval and12meet both conditions. Eight of those12have an ordinary qualified group-anchor spatial match, seven retain a distance mode within0.25mag, four have a highest blind representative within0.25mag. Keep all222nearby-mode/source links. This is a descriptive fixed-roster crosscheck, not population completeness or independent validation. DELVE3/4/5realgr control recoveries are separate from their exclusion from this qualified mask; no coverage failure is inferred. Four covered/in-range non-matches are DELVE7,SextansII,GeminiI/DELVE8,AquariusIV; Coma has spatial/broader-distance support but no retained strict0.25mag mode. No search or threshold change follows this audit.

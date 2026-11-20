@@ -1,0 +1,20 @@
+{
+  "reuse_job": "61634471",
+  "reuse_state": "COMPLETED 00:00:48",
+  "old75_exact_original_source_records_reused": 75,
+  "old75_modes_reused": 226,
+  "all20_C_fields_and_saved_members_verified": true,
+  "pending_records": 150,
+  "pending_modes": 523,
+  "material_array_job": "61634971",
+  "packs": 3,
+  "workers_per_pack": 8,
+  "maximum_simultaneous_packs": 2,
+  "time_limit": "00:29:00",
+  "registered_maximum_worker_estimate_seconds": 1018.331,
+  "pack_code_sha256": "a181def9cc1fb23f3fc99001b7a136fe21885c6f305ad85ebe3b626e6330a033",
+  "state": "submitted_running_not_accepted",
+  "storage": "New large intermediates under PSCRATCH via unchanged project-path link; original75/release_v2 bytes stay preserved. HOME quota38.36/40GiB; final verified local/HOME archival remains a gate, no archive is claimed yet.",
+  "anonymous_key_generated": false,
+  "human_grades_filled": false
+}

@@ -38,7 +38,8 @@ def run():
             ax.set_xticks(range(3),['sky 1','sky 2','sky 3']);ax.set_ylim(-.06,1.06)
             ax.grid(axis='y',alpha=.2)
             if col==0:ax.set_ylabel('Spatial recovery / 8 IMF draws')
-    axes[0,0].legend(loc='lower left',fontsize=9)
+    handles,labels=axes[0,0].get_legend_handles_labels()
+    fig.legend(handles,labels,loc='upper center',bbox_to_anchor=(.5,.935),ncol=2,fontsize=10)
     fig.suptitle('100 kpc: paired formal A policies, fixed development-budget cuts',fontsize=14)
     fig.text(.5,.018,'Three selected backgrounds; exact fixed-background Monte Carlo intervals. Actual IMF light varies within target bins.\n'
         'Finite rendered stamps and V-band proxy; no physical PS1 response, C/human completeness or all-sky selection function.',ha='center',fontsize=9)
@@ -58,10 +59,12 @@ def run():
     ax.set_yticks(ys,labels);ax.axvline(0,color='black',lw=.8);ax.axvline(.10,color='#c45b23',ls='--',lw=1)
     ax.set_xlabel('Spatial recovery difference: deeper − baseline');ax.grid(axis='x',alpha=.2)
     ax.set_title('Shared IMF realizations across depths and three fixed skies')
-    ax.legend(fontsize=8,loc='lower right');fig.text(.5,.02,
+    handles,labels=ax.get_legend_handles_labels()
+    fig.legend(handles,labels,fontsize=8,loc='upper center',bbox_to_anchor=(.5,.135))
+    fig.text(.5,.02,
         '48 potential populations, reused across skies; equal frozen-grid weights, not population or area weights.\n'
         'Resampling these three skies is a sensitivity analysis, not a validated all-sky confidence interval.',ha='center',fontsize=9)
-    fig.tight_layout(rect=(0,.08,1,1))
+    fig.tight_layout(rect=(0,.20,1,1))
     for suffix in ('png','pdf'):fig.savefig(out/f'formal_depth_difference.{suffix}',dpi=160)
     plt.close(fig)
     if any(sha(Path(p))!=digest for p,digest in inputs.items()):raise ValueError('Accepted plot inputs changed')

@@ -1,5 +1,13 @@
 # Plan
 
+## 2026-11-20T08:37Z — remaining current-round work
+
+1. Follow existing61634971material packs (150records/523modes after exact reuse), inspect actual private result manifests, and fix/retry failed source records only. Keep pack/renderer sources and final draw fixed during execution.
+2. Verify every selected source/C/native image and original75/weak-control crosswalk, build one private random alias permutation, anonymous PDF/isolated ZIP/blank form and held context. Use NERSC PDF libraries already probed (ReportLab5.1.0,pypdf7.1.1) for large assembly/structural QA; local16GiBRAMis unsuitable for an unbounded full-PDF decode. Finish visual/annotation QA and local/project durable archive before any user grading.
+3. Publish accepted formal144and area/frame/Caggregate results, figures, source hashes and scientific scope. Baseline remains production after the failed>10pp/positive-lower depth-gain screen. Do not add a physical grid, tune thresholds, restart stopped PS1recipe attempts or write the manuscript to fill queue time.
+4. After one final review delivery, the next scientific decision is whether validated PS1 source response and physical-light/finite-footprint calibration can support a genuine census increment. An ordinary blind replay of the already accepted paired-radius catalogues could connect the measured source-separation loss to conditional detection, but is a future scoped experiment, not a result claimed here.
+
+
 ## Next gated handoff (2026-11-20)
 
 After61626692→61628955, use registered61632493 to bind every selected same-record C task. Run only its missing tasks, collect exact-source proofs, then register final record materials with the accepted private supplement. `v14_prepare_record_task.py` verifies and skips accepted records. `v14_final_material_plan.py` requires all selected source evidence/old75/weak controls before its one private alias permutation. Assemble with existing stage1 PDF runner, run all-page pixel/text/ZIP/form verification and complete visual/annotation QA before one final user delivery. All are preparation capabilities; no actual final selection/alias/package has run.
