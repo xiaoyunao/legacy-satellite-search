@@ -1,5 +1,12 @@
 # Plan
 
+## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
+
+1. Outside C is accepted16/16(979source groups/3102modes); no repeated fitting. Finish existing snapshots61470267/61470508, then61625808source/Ccoverage/WCSregistration. Common-clock global candidate counts remain pending.
+2. All8geometry-cache shards are complete. Source-bound index61626647 waits for the post-source registration and cache owner. Then61626690uses3packs×8workers over all720tiles;61626692collects the existing validated polygon-only overlay. No area is claimed before actual acceptance. Keep the registered area driver and underlying geometry methods unchanged during this chain.
+3. Old75private preparation61623753has four complete packs and the remaining original owners; full proof61626094 follows. After final discovery/area/identity/C freeze, select certainty plus positive-probability audit cases, finish all important-mode evidence/privacy/page QA and deliver one package. No interim grades.
+4. Keep the accepted144/finite-light/size-response evidence and PS1bright-unit failure. No physical gain, abundance, parameter-grid expansion or manuscript.
+
 ## 2026-11-20T03:51Z — close production and preserve measured PS1 limit
 
 1. Follow existing outside-C owners, acceptance61623103, existing global snapshots and post-integration61625808. Register final WCS masks/Ccoverage after source convergence; complete union/identity/funnel before sampling.

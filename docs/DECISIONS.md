@@ -1,5 +1,11 @@
 # Decisions
 
+## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
+
+Accept the16outside C shards only after exact source/configuration/whole-group-seed/saved-membership validation. The3102completed modes are follow-up hypotheses and cannot be counted as independent discoveries. Common-clock global C coverage still needs the existing snapshot chain.
+
+Reuse the8341immutable cached geometries with current qualification; never sum old and new overlapping areas. For the same validated polygon-only overlay, pack24disjoint tile shards into3CPU allocations with8independent workers each. Actual prior maximum RSS4,623,296KiB per worker and34:57runtime support128G/90min pack requests. Algorithm/masks/thresholds remain unchanged; every720tile and source hash must pass before area acceptance.
+
 ## 2026-11-20T03:51Z — native PS1 preflight boundary
 
 Native PS1 mean-signal61625458 completes8:21/operator0, but the registered bright-unit check fails (only r passes both bounds). Bright grizy magnitude residuals are +0.163,−0.049,+0.089,+0.066,−0.002mag. Read-only61625886 completes42s: finite-patch added/declared flux is conserved to1.1e−6 across20band/calibrator combinations; griz centroids are approximately−0.5pixel in each axis. The discrepancy is therefore not a gross nanomaggy/exposure or asinh-flux scaling loss. Finite/global PSF representation, pixel-coordinate convention and local aperture/shape response remain unresolved; do not fit a compensating offset or promote these probes into physical PS1 trials. Stop parameter/recipe tuning in this technical branch; retain its measured boundary while closing production/evidence.

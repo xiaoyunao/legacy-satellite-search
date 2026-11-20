@@ -1,0 +1,2 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v14_south_outside_census_1265-A_base-0.3-001,key_images_pending,1,1,1,1,11448.144987175527,16.25,1.4,11407.088566940236,,,L0

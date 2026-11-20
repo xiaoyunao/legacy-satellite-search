@@ -29,5 +29,23 @@
     "south_outside_census": "de3c38584500965597c589789c2bd3f2d52473d8d92466d82150b904fe7b1af3",
     "south_outside_census_extension": "9871030a0b2f4d02f34bd1d1e0afe7f63da88798b5b6c1337c51dd9c84b076c5"
   },
-  "scope": "Bound pending time requests using exact frozen seed cardinalities and successful same-source throughput. No running task changed, duplicate submitted, scientific input/threshold/implementation/seed changed or Nice priority altered. Same original array dependencies and membership outputs remain. A real timeout would be retried only from remaining manifest work."
+  "scope": "Bound pending time requests using exact frozen seed cardinalities and successful same-source throughput. No running task changed, duplicate submitted, scientific input/threshold/implementation/seed changed or Nice priority altered. Same original array dependencies and membership outputs remain. A real timeout would be retried only from remaining manifest work.",
+  "terminal_result": {
+    "accepted_all16": true,
+    "acceptance_job": "61623103",
+    "elapsed": "00:00:36",
+    "source_groups": 979,
+    "selected_modes": 3102,
+    "unchanged_science": true
+  },
+  "pending_global_snapshot_time_amendment": {
+    "jobs": [
+      "61470267",
+      "61470508"
+    ],
+    "before": "04:00:00",
+    "after": "01:00:00",
+    "both_verified_pending_before_change": true,
+    "reason": "Existing regional summary2:14, catalogue4:08 and ledger4:27 throughput support a bounded one-hour request for aggregate-only snapshots; no input/scientific change."
+  }
 }

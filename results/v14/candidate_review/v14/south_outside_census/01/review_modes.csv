@@ -1,0 +1,2 @@
+group_id,field,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,raw_peak_id,n_on,n_off,area_on_arcmin2,area_off_arcmin2,channel,peak_rank,ranking,role,policy,budget,representative,passes_group_cut,audit_priority
+v14_south_outside_census_1265-A_base-0.3-001,v14_south_outside_census_1265,-63.5,54.16666666666666,182.52582117893556,18.543502638642554,16.5,1.0,1168.531884276207,2150.0,1395.0,275.0,7.083333333333333,74.49305555555556,A_base,1,1168.531884276207,pilot_eval,A_base,0.3,True,True,compact_or_high_score

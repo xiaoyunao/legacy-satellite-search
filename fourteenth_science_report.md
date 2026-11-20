@@ -1,5 +1,11 @@
 # DR11 search and selection response
 
+## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
+
+The remaining outside-census follow-up is now accepted:979source groups and3102retained modes across16shards(503main/2599extension). All selected fits complete, with exact discovery/configuration/member binding; synchronized local source hashes match. These are hypotheses on production records, not new physical systems, and do not by themselves change L0 status or establish independent confirmation.
+
+The next numerical release is the common-clock historical/global catalogue and represented-mask union. All8341ordinary mask geometries are cached; their final qualification and720tile union are not yet accepted. Do not replace final production area with the old18,173.913deg²subset or the24,481.308summedR14area. Physically demonstrated gain area remains unquantified. The144native LS experiment, PS1response failure and finite-light/three-background limits remain unchanged.
+
 ## 2026-11-20T03:51Z — native PS1 preflight boundary
 
 Native PS1 mean-signal61625458 completes8:21/operator0, but the registered bright-unit check fails (only r passes both bounds). Bright grizy magnitude residuals are +0.163,−0.049,+0.089,+0.066,−0.002mag. Read-only61625886 completes42s: finite-patch added/declared flux is conserved to1.1e−6 across20band/calibrator combinations; griz centroids are approximately−0.5pixel in each axis. The discrepancy is therefore not a gross nanomaggy/exposure or asinh-flux scaling loss. Finite/global PSF representation, pixel-coordinate convention and local aperture/shape response remain unresolved; do not fit a compensating offset or promote these probes into physical PS1 trials. Stop parameter/recipe tuning in this technical branch; retain its measured boundary while closing production/evidence.

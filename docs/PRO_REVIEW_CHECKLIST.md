@@ -1,5 +1,13 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
+
+- [x] Outside C16/16accepted,979source groups/3102modes; local source/config/proof hashes verified. No repeated fit or new-system claim.
+- [x] Eight cache shards complete; current qualification/area still not frozen.
+- [ ] Existing global snapshots and post-sourceCcoverage/WCSregistration, then all720current-source overlap tiles and final identity/funnel acceptance.
+- [ ] Remaining old75packs/full evidence integrity, selected final new cases/probability sample, complete evidence and anonymousPDF/ZIP/form/privacy/allpageQA. One final human session only.
+- [x] Native PS1 technical consistency rejection preserved; physical-response/three-arm gain remains unvalidated.
+
 ## 2026-11-20T03:51Z — actual PS1 consistency outcome
 
 - [x] Mean-signal operator61625458completed; original failed FITS attempt preserved.

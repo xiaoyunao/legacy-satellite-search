@@ -1,0 +1,27 @@
+{
+  "job": "61585160",
+  "inputs": {
+    "results/v14/candidate_review/v14/south_outside_census/06/provenance.json": "5cb31eac028604a0df931f2cf5d475009528c0bea1e2386b3fc85ec6ea8ad82c",
+    "results/v14/discovery/south_outside_census/main/sky_group_candidates.csv": "de3c38584500965597c589789c2bd3f2d52473d8d92466d82150b904fe7b1af3",
+    "results/v14/candidate_review/v14/south_outside_census/06/review_modes.csv": "a38702cf10e2e843a0cb08df9484195eef5ccb42ff3add282e51ef4313ca8dca",
+    "results/v14/candidate_review/v14/south_outside_census/06/group_review_modes.csv": "c283fc997a4da374ee9f9aa9584799abe680e400d6a0b7932f13c78368177c49",
+    "results/v14/candidate_review/v14/south_outside_census/06/group_review_summary.csv": "98a7141cf34fcb30ae82a2ff44b63ae46976ee93d27dd5371698ea49fe699827",
+    "configs/v14/cohorts/south_outside_census/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "4329f4805dee600eb9bab3e8b0e6e211652c57b0ba8881db105276b908bc17c7",
+  "exact_source_groups": 8,
+  "selected_seeds": 28,
+  "fit_states": {
+    "complete": 28
+  },
+  "complete_membership_references": 28,
+  "unique_membership_artifacts": 25,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}

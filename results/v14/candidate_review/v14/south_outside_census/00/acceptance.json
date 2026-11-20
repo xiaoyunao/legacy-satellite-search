@@ -1,0 +1,27 @@
+{
+  "job": "61585154",
+  "inputs": {
+    "results/v14/candidate_review/v14/south_outside_census/00/provenance.json": "2b3d717913c7a32aa511cd0c38aa81b67c4b6096bfec9db9af9455d0bbf2cb8f",
+    "results/v14/discovery/south_outside_census/main/sky_group_candidates.csv": "de3c38584500965597c589789c2bd3f2d52473d8d92466d82150b904fe7b1af3",
+    "results/v14/candidate_review/v14/south_outside_census/00/review_modes.csv": "498573fe823692ad4a39ee8958cb64ef9bb8ccda49982f473e180eaddbab621a",
+    "results/v14/candidate_review/v14/south_outside_census/00/group_review_modes.csv": "49877196f08ef9eb083516bd616ea6f078fad6b6399f32aad40ac324c3c4ed19",
+    "results/v14/candidate_review/v14/south_outside_census/00/group_review_summary.csv": "200831a9e9f4b930cf3055710c354e73293a2fb3a4b440d6eb4658fa35e2da79",
+    "configs/v14/cohorts/south_outside_census/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "4329f4805dee600eb9bab3e8b0e6e211652c57b0ba8881db105276b908bc17c7",
+  "exact_source_groups": 31,
+  "selected_seeds": 101,
+  "fit_states": {
+    "complete": 101
+  },
+  "complete_membership_references": 101,
+  "unique_membership_artifacts": 101,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}

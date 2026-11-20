@@ -1,5 +1,12 @@
 # Status
 
+## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
+
+-61623103COMPLETED36s:16/16outside C shards accepted,979source groups/3102modes;503main+2599extension,allcomplete. All16proof/input hashes match synchronized local files. Final global coverage is not yet refreshed.
+-Geometry0–7allCOMPLETED; all8341ordinary geometry keys are cached, including2072new keys. Qualification remains interim. Closed-source registration61625808→index61626647→tile packs61626690→collector61626692are registered, not completed; retain existing global snapshot dependencies.
+-First four old75preparation packs complete; remainder advance under61623753. B029integrity pilot and neutral3pagePDF QA pass; full75acceptance61626094and final new-case selection/evidence remain pending.
+-Physical144and bounded diagnostics unchanged; PS1mean-signal bright consistency rejected despite correct written flux. No human grades, final release or manuscript.
+
 ## Evidence progress after the native PS1 boundary
 
 Outside-extension C is terminal8/8; main outside C is terminal6/8 at the latest accounting check. Exact16-shard acceptance61623103and the two global snapshots still await the remaining two main shards. Cache shards0–5are complete,6–7retain their original owners. Old75pack1is complete and pack0/2advance; full evidence is not accepted yet.

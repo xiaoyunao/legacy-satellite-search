@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-20T03:51:09.239526+00:00",
+  "updated_utc": "2026-11-20T04:19:46.265768+00:00",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -10,8 +10,8 @@
   },
   "gates": {
     "full_search_terminal_accounting": "PASSED: ab 02:23:54Z, 6861 complete + 30 zero-valid-gr = 6891; all174 retries accepted, zero uncovered. Terminal acceptance binds all field manifests; summed owned24481.307990deg2 is not final union.",
-    "historical_production_and_exact_mask_union": "Interim catalogue/ledger 61619421/61619423 accepted: 9576 qualified records / 9403 provisional positions, all 75 original identities preserved, 722 source hashes synchronized. Final all-field common-clock inventory and area union remain pending.",
-    "same_eligible_record_C_complete": "7924 records / 17853 required seeds complete. All 269 registered historical priority records / 467 modes accepted. Remaining 1652 records / 2546 seeds are unattempted low-priority records; final sampled modes and outside-region C remain gates.",
+    "historical_production_and_exact_mask_union": "All scans and outsideCclosed. Existing globals61470267/61470508\u2192post61625808\u2192index61626647\u2192720tilepacks61626690\u2192collect61626692 registered. All8341ordinary geometry keys cached. No final area/population/identity freeze yet.",
+    "same_eligible_record_C_complete": "Outside C16/16accepted61623103:979source groups/3102modes; all exact inputs/member proofs and local source hashes pass. Existing global coverage refresh still pending; do not add follow-ups to old7924/17853counts. Final sampled required modes remain a release gate.",
     "all_final_objects_images_and_evidence": "Mandatory74-case61623753 released after accepted phase-one61624220 and context61625386 title QA; unchanged sample and numeric C, original75 preserved. Bulk and final new cases/source evidence still pending.",
     "final_sampling_inclusion_probabilities": "Not drawn. Registered FINAL_REVIEW_PROTOCOL.md requires bounded complete-link administrative packets retaining all constituents, certainty cases plus declared region/score SRSWOR strata with positive inclusion probabilities; original nonuniform 35 retained with exposure flags.",
     "final_anonymity_and_page_QA": "Actual private3page PDF/ZIP/blank-form pilot passes inspected title correction, image integrity and neutral text/metadata/ZIP check; final population/aliases/evidence/allpage/privacy gates remain open. No human grades."

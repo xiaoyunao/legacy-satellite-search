@@ -1,0 +1,14 @@
+{
+  "job": "61585149",
+  "input": "results/v14/discovery/south_outside_census_extension/main/sky_group_candidates.csv",
+  "input_sha256": "9871030a0b2f4d02f34bd1d1e0afe7f63da88798b5b6c1337c51dd9c84b076c5",
+  "selection_sha256": "99f5f6348071c5ff96315b10930bd2a23f411ae678c024947ef076aa03f6a2e0",
+  "count": 8,
+  "index": 2,
+  "visual_review_pending": true,
+  "blinded_cross_id": true,
+  "review_implementation_sha256": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
+  "search_config_sha256": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d",
+  "render_diagnostics": false,
+  "diagnostic_policy": "pending_final_selected_evidence"
+}

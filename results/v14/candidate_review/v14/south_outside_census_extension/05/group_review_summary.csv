@@ -1,0 +1,10 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v14_south_outside_census_extension_0068-A_base-0.3-001,key_images_pending,9,9,6,1,736.1544175623267,16.25,2.8,710.391377874415,,,L0
+v14_south_outside_census_extension_0068-A_base-0.3-002,key_images_pending,7,7,6,6,0.0,16.25,11.2,0.0,,,L0
+v14_south_outside_census_extension_0068-A_base-0.3-003,key_images_pending,2,2,2,8,0.0,18.5,5.6,0.0,,,L0
+v14_south_outside_census_extension_0068-A_base-0.3-004,key_images_pending,3,3,3,15,0.0,16.25,11.2,0.0,,,L0
+v14_south_outside_census_extension_0068-A_base-0.3-005,key_images_pending,1,1,1,20,271.44536338849093,16.25,2.8,250.613394881075,,,L0
+v14_south_outside_census_extension_0068-A_base-0.3-006,key_images_pending,1,1,1,22,0.0,19.75,1.4,0.0,,,L0
+v14_south_outside_census_extension_0068-A_base-0.3-007,key_images_pending,1,1,1,23,0.0,16.5,11.2,0.0,,,L0
+v14_south_outside_census_extension_0563-A_base-0.3-001,key_images_pending,1,1,1,1,0.0,20.5,5.6,0.0,,,L0
+v14_south_outside_census_extension_0898-A_base-0.3-001,key_images_pending,6,6,6,1,917.6501784590123,18.0,0.7,886.0150090486385,,,L0

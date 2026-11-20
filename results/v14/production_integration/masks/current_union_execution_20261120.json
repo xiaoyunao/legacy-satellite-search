@@ -1,0 +1,30 @@
+{
+  "setup_job": "61626647",
+  "setup_dependencies": "afterok:61625808:61624957",
+  "tile_array": "61626690",
+  "tile_dependency": "afterok:61626647",
+  "resource_packs": 3,
+  "workers_per_pack": 8,
+  "disjoint_original_tile_shards": 24,
+  "tiles": 720,
+  "script_sha256": {
+    "scripts/v14_current_area.py": "e17ee5269637831608a81a70c47856a41ba6f68ec803c5a99cd7f4de9f4a8782",
+    "scripts/v14_current_area.sh": "16df090a244d0d4fc9546ac35e95726c6530621e79c40aba0919c0849dc8c76a",
+    "scripts/v14_mask_overlay_repair.py": "fa0a11e020c574defd83b70a6266a3d589d0153aebaf1ebc33c491fa9277a11b",
+    "scripts/v14_mask_tiles.py": "9c4d17f140703beb4d3c015435a6504767bbd24a484f02389c373d18ad4c8a12",
+    "scripts/v14_mask_union.py": "855f53b7d65b6128ca528e486fcf257954ad381a88a515c8071ddac2cb16ef33"
+  },
+  "state": "submitted_not_complete",
+  "observed_old_overlay_resource_bounds": {
+    "max_elapsed": "00:34:57",
+    "maximum_RSS_KiB": 4623296
+  },
+  "new_pack_resources": {
+    "cpus": 8,
+    "memory": "128G",
+    "time": "01:30:00"
+  },
+  "scope": "Existing exact represented-mask polygon-only method and immutable cache; no new geometry/scientific threshold. Bind to post-outside-C inventory after both old global snapshots/source acceptance/warming. Three packs replace 24 largely idle whole-node tasks, retaining every tile and final source/hash checks. No final production/gain area or human delivery claim.",
+  "collector_job": "61626692",
+  "collector_dependency": "afterok:61626690"
+}

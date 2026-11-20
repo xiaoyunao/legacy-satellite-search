@@ -38,7 +38,7 @@
     7
   ],
   "final_area_claimed": false,
-  "state": "submitted_not_complete",
+  "state": "all8vector_shards_complete_pending_closed_source_reclassification",
   "single_task_QOS_amendment": {
     "task": "61624957_1",
     "underlying_job": "61625577",
@@ -68,6 +68,8 @@
     "2": "00:05:36",
     "3": "00:05:14",
     "4": "00:05:26",
-    "5": "00:05:52"
+    "5": "00:05:52",
+    "6": "00:05:54",
+    "7": "00:05:05"
   }
 }

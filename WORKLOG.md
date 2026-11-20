@@ -2,6 +2,14 @@
 
 ## 2026-11-20
 
+### 2026-11-20T04:19Z — all outside C accepted and current-source area chain registered
+
+-61623103COMPLETED36s;16same-source shards/979groups/3102modes allcomplete. Explicit5-filename C/source allowlist synchronized; every proof/input hash matches locally. All6891scan terminals unchanged. Global61470267isrunning;61470508follows; no duplicate snapshots/fits submitted.
+-All8cache vectors complete(8341ordinary immutable keys). Current source/qualification union queued:61625808post-source/Ccoverage→61626647revalidation/index→61626690three8workerpacks→61626692collector. Existing polygon-only algorithm unchanged; old actual worker RSS≤4,623,296KiB/runtime≤34:57 supports128G/90min. Pythonparse/bashsyntax pass; current union is submitted,notmeasured. Keep these executed source hashes fixed until completion.
+-Files:accepted16Ctables/proofs,sourcepeakaggregates,resource/executionreceipts,currentareaadapter/wrapper,andscientificmemory/status/decisions/checklist/plan/report/gates. Rawstars/pixels/memberarrays remainNERSC. The979source groups/3102follow-up modes do not imply discoveries. No human grading/newaliasdraw/PS1physicalgain/manuscript.
+-Next:accept existing globals/commonclockproduction/Ccoverage/area;finish75privateevidence thenfinalselectednewcases/probabilitysample/evidence/privacy-pageQA and one human package.
+
+
 ### Final old-case evidence integrity pilot and neutral PDF headings
 
 -61626244COMPLETED1:16:original B029saved mode/config/member/raster proof passes,including immutable original release PDF/ZIP hashes and10retained PNG integrity checks. Full75validator61626094waits for61623753; no final source universe or human grading certified.
