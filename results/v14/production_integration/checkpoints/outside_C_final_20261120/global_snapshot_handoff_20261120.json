@@ -25,5 +25,20 @@
     "61470508": "CANCELLED_zero_elapsed",
     "61625808": "CANCELLED_zero_elapsed"
   },
-  "new_executed_post_sha256": "ec75cfacdaae913dcf9b1b47a258af41a3014c3a0fa5e8590edee602ffc3ac0c"
+  "new_executed_post_sha256": "ec75cfacdaae913dcf9b1b47a258af41a3014c3a0fa5e8590edee602ffc3ac0c",
+  "actual_terminal_recovery": {
+    "source_job": "61470267",
+    "state": "TIMEOUT",
+    "elapsed": "01:00:22",
+    "last_verified_finished_stage": "regional_all_and_catalogue_written_by_original_owner; allocated hash proof pending",
+    "closed_source_acceptance_job": "61629166",
+    "post_integration_same_owner": "61627306",
+    "post_dependency_readback": "afterok:61629166",
+    "tail_job": "61629183",
+    "tail_dependency": "afterok:61629166",
+    "tail_scope": "Only atlas and efficiency; no scan, peak evaluation or C fit repeated",
+    "reason": "Actual one-hour old snapshot times out during large raster atlas after current source outputs; running limit extension forbidden by Slurm. Preserve completed source stages and independently gate same-owner post chain.",
+    "closed_source_acceptance_state": "COMPLETED_00:00:29_all_inputs_and_outputs_match",
+    "local_source_hash_verification": 777
+  }
 }

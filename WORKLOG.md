@@ -2,6 +2,12 @@
 
 ## 2026-11-20
 
+### 2026-11-20T05:15Z — recover only the timed-out snapshot tail
+
+-61470267 TIMEOUT1:00:22. All regional outputs/status and current-owner catalogue manifest were written before the large WCS footprint atlas finished; log records actual time-limit cancellation. Running extension had been denied. No blind scan/C fit is missing from this timeout.
+-Closed-source hash gate61629166 COMPLETED29s: current-owner all6891terminal regional counts and every catalogue input/output pass. Local explicit-allowlist sync verifies all777input/output hashes (772catalogue sources); catalogue includes16410all-scope source records/60625modes, not formal discoveries. Same post61627306dependency readback changed to afterok61629166; area/setup/tile/collector/frame owners unchanged. Separate61629183reruns only atlas/efficiency at2h/128G based actual~62GiB atlasRSS, not full peak aggregation. Both are submitted, not accepted.
+-Files: closed-snapshot validator/wrapper, tailwrapper and handoff/execution receipts. Validation:Pythonparse/bashsyntax, actual Slurm state/log/spooled priorstage receipts/dependency readback. Next: accept gate and current production/mask chain, final frame/selected C/evidence and one release.
+
 ### 2026-11-20T05:12Z — register source-gated final review allocation
 
 - Added final_population.py/wrapper and predeclared allocation config. The existing5arcmin bounded complete-link algorithm retains every production position/all source links and crosspacket adjacency. Original75certainty, five compact priority units per region, then two-per-region/quantile-bin SRSWOR with positivepi and no postdraw proximity discard. Weak controls separate; identity/selection keys remain private. No discovery-cut change, fitted C or user grade.

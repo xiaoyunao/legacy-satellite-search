@@ -6,5 +6,8 @@
   "state": "new_owner_registered_old_pending_retired",
   "scope": "Complete later-added production/registry/integrated/Ccoverage/mask stages missing from the actual old snapshot batch. Completed C acceptance is validated by immutable products, not an expired controller dependency. No repeated whole-scan summary or numerical fit.",
   "original_pending_job": "61625808",
-  "same_science_and_sources": true
+  "same_science_and_sources": true,
+  "snapshot_recovery_dependency": "afterok:61629166",
+  "prior_snapshot_terminal": "61470267 TIMEOUT 01:00:22; closed regional/catalogue proof must pass",
+  "closed_source_acceptance_state": "61629166 COMPLETED 00:00:29; 777 local/source/output hashes verified"
 }

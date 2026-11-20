@@ -1,5 +1,10 @@
 # Status
 
+## 2026-11-20T05:15Z — snapshot tail recovery
+
+61470267 TIMEOUT1:00:22 after writing all regional and catalogue stages. Source gate61629166 completes29s: current-owner6891terminal counts and all catalogue input/output hashes pass; all777hashes also verified locally after allowed aggregate sync. Same post61627306 now follows that gate, then existing61626647/61626690/61626692 and final frame61628955. Independent61629183runs only atlas/efficiency with2h limit. No scan/C/peak evaluation repeated; submitted does not mean accepted.
+
+
 ## 2026-11-20 13:07 CST — mandatory evidence accepted
 
 All original75 materials are now accepted: full integrity61626094 completes58s with75cases/226saved modes/1223retained PNGs, unchanged original release hashes and no image gaps; local allowlisted copy passes the same file hashes and PNG integrity. Saved DELVE4/5 control preparation also completes (6/7modes;30/35PNGs), with sampled native/phase-one/full-extent raster QA. These are private evidence preparation, not new fits, final sampling, human grades or final PDF QA. Final production/area/common-clock freeze and selected new-case evidence remain mandatory before the single user review.

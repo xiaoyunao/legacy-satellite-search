@@ -1,5 +1,10 @@
 # Plan
 
+## 2026-11-20T05:15Z — snapshot tail recovery
+
+61470267 TIMEOUT1:00:22 after writing all regional and catalogue stages. Source gate61629166 completes29s: current-owner6891terminal counts and all catalogue input/output hashes pass; all777hashes also verified locally after allowed aggregate sync. Same post61627306 now follows that gate, then existing61626647/61626690/61626692 and final frame61628955. Independent61629183runs only atlas/efficiency with2h limit. No scan/C/peak evaluation repeated; submitted does not mean accepted.
+
+
 ## 2026-11-20T04:27Z — active owners after batch-source inspection
 
 1. Keep running61470267,then corrected post61627306which actually integrates historical production/registry/ledger/Ccoverage/current masks. Do not resume cancelled duplicate61470508or stale post61625808. All16outsideCshards are accepted.
