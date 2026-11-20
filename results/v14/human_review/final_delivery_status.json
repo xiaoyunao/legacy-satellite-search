@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-20T00:23:00Z",
+  "updated_utc": "2026-11-20T02:00:00Z",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -9,12 +9,12 @@
     "package_manifest_sha256": "7900621c7b3974629dce4501deb3393797893c8779cee5aee3b57d8a758b29b8"
   },
   "gates": {
-    "full_search_terminal_accounting": "x00:06Z6566complete+29zero-valid-gr/6891;296remain;174scan retries accepted,0uncovered",
-    "historical_production_and_exact_mask_union": "Interim common-clock catalogue/ledger61616596/61617103accepted9576qualified records/9403provisional positions,75identities preserved. Historical union remains older6269ordinary-mask snapshot; final all-field inventory/area/source freeze pending.",
-    "same_eligible_record_C_complete": "7655records/17386required seeds complete;1921records/3013seeds unattempted. AllR14existing compact/high-score priorities covered;269historical priority records need source-specific handling. Selected diagnostics and outside-region C remain gates.",
+    "full_search_terminal_accounting": "aa 01:59:58Z: 6824 completed + 29 zero-valid-gr / 6891; 38 remain. All 174 registered retries accepted; zero uncovered.",
+    "historical_production_and_exact_mask_union": "Interim catalogue/ledger 61619421/61619423 accepted: 9576 qualified records / 9403 provisional positions, all 75 original identities preserved, 722 source hashes synchronized. Final all-field common-clock inventory and area union remain pending.",
+    "same_eligible_record_C_complete": "7924 records / 17853 required seeds complete. All 269 registered historical priority records / 467 modes accepted. Remaining 1652 records / 2546 seeds are unattempted low-priority records; final sampled modes and outside-region C remain gates.",
     "all_final_objects_images_and_evidence": "pending; accepted rendering-equivalence61593937 enables numerical C first. Deferred rows explicitly lack generated diagnostics; final selected modes still need saved-membership-bound images/diagnostics and all material QA.",
-    "final_sampling_inclusion_probabilities": "Not drawn. Interim5arcmin connected components can chain over>40arcmin; final review units require constituent/environment retention before probability sampling",
-    "final_anonymity_and_page_QA": "Private unweighted renderer pilot61616923 completed45s,1previously exposed mode/nativegr100%finite,fullrasterQA. No final population selection, allselectedevidence, probability draw or finalPDF/ZIPQA yet."
+    "final_sampling_inclusion_probabilities": "Not drawn. Registered FINAL_REVIEW_PROTOCOL.md requires bounded complete-link administrative packets retaining all constituents, certainty cases plus declared region/score SRSWOR strata with positive inclusion probabilities; original nonuniform 35 retained with exposure flags.",
+    "final_anonymity_and_page_QA": "Unweighted phase-one pilot accepted; saved-context null and positive-membership pilots 61618104/61618873 accepted without refitting, six rasters inspected, zero missing expected native gr stamps. Context stays private. Final population selection/evidence/probability draw/PDF/ZIP QA pending."
   },
   "human_responses": "unfilled; no seal or identity reveal",
   "scope": "Historical batch technical readiness is distinct from final project-wide delivery. Preserve release_v2 bytes. Final package must retain and crosswalk the original 75 positions.",
@@ -93,6 +93,6 @@
       "baseline_lost_case": "saved_matching_group_below_unchanged_cut_not_peak_merging",
       "global_physical_correction_validated": false
     },
-    "PS1_native_operator_build": "Official20190404source verified;CFITSIO/floatFFTWbuilt,optional database disabled;core still needs bundledOhana/kapa.h. No PS1binary/image/physical-response acceptance."
+    "PS1_native_operator_build": "61620144 built official unmodified photometry core after serial Ohana generation and documented legacy compiler compatibility. 61621032 acquired 20 native grizy products and 6950 same-cell references. Initial single-band preflight exits3 due to stale documented -nthreads; actual source accepts -threads. No physical response or DR2 operator equivalence validated."
   }
 }

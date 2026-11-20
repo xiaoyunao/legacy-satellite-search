@@ -1,0 +1,31 @@
+{
+  "job": "61620144",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-common-core",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ipp_common_core.sh"
+  ],
+  "script_sha256": "892458c628d434338c3a472547754fa8d6ca2437e2d7dec7333930868d2d9f1a",
+  "state": "submitted_not_complete",
+  "previous_job": "61619695",
+  "observed": "Serial Ohana rebuild and psLib succeeded. psModules consumers of dvodb.h fail on the same tentative global definitions. configure overwrites CFLAGS.",
+  "specific_fix": "Preserve module-generated CFLAGS; use compiler-driver gcc -fcommon in isolated CONFIG_SITE, clean only isolated core objects, then official core rebuild. Existing successful Ohana libraries reused; no source/photometry patch, dependency or database/application expansion.",
+  "compiler_reference": "https://gcc.gnu.org/gcc-10/porting_to.html",
+  "physical_PS1_response_validated": false
+}

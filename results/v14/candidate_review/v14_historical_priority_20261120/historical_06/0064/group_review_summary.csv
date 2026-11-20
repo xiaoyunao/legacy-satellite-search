@@ -1,0 +1,5 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v12_south_des_006-A_base-0.3-001,key_images_pending,1,1,1,1,2.854667989271497,18.25,0.5,0.0,,,L0
+v12_south_des_006-A_base-0.3-003,key_images_pending,1,1,1,4,5.51227586259002,19.5,1.0,0.0,,,L0
+v12_south_des_006-A_base-0.3-004,key_images_pending,1,1,1,5,8.61895129927493,16.75,1.0,0.6895159305889118,,,L0
+v12_south_des_006-A_base-0.3-005,key_images_pending,1,1,1,6,10.132310288123715,17.25,0.5,0.046869366966869164,,,L0

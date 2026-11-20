@@ -2,6 +2,14 @@
 
 ## 2026-11-20
 
+### 10:00 CST — historical C complete, source refresh accepted, PS1 core built
+
+- All 99 historical priority fields / 269 records / 467 modes accepted. Jobs 61617692/61617693 complete; pending 61617693 moved to bounded debug only after measured pilot throughput, preserving the same owner. Catalogue/ledger 61619421/61619423 complete; 722 source hashes match, all 75 old identities preserved. C coverage is now 7,924 records / 17,853 seeds complete, 1,652 / 2,546 unattempted.
+- aa audit: 6,824 complete + 29 zero-valid-gr / 6,891; 38 remain, 24,473.889020 summed owned deg². All 174 retries accepted; no uncovered retry. Outside-extension C has started. No discovery/cut/selection change.
+- Saved-context pilots 61618104/61618873 validate null and positive-membership saved fits without optimization; six full rasters inspected, zero missing expected stamps. Plot-only phase markers prevent false isochrone bridges. Private context and old 75 preserved; no final review release.
+- Serial Ohana generation 61619695 resolves parallel non-atomic header race. Core 61620144 succeeds after compiler-driver legacy `-fcommon`; no numerical source patch or broad database installation. Native PS1 acquisition 61621032 completes 20 products / 676,002,240 bytes / 6,950 same-cell references. New single-band preflight 61621526 submitted, not accepted or DR2-equivalent. Raw pixels/sources stay NERSC.
+- Files: historical C aggregate/proofs, refreshed catalogue/ledger/C coverage, y/z/aa audits, saved-context renderer/public QA, plotting marker, isolated IPP build and native acquisition/preflight scripts/metadata, scientific memory/status/decisions/checklist/plan/report. Commands: Slurm, original-source hash checks, explicit allowlist rsync, Python parse and shell syntax. Final full-search/area/evidence/sampling/privacy/page gates and physical PS1 validation remain open. Next: existing scan/C owners, real blank operator check, then common-clock final production and one human package.
+
 ### Original-configuration historical C pilot and registered backfill
 
 - Newv14_historical_C.py registers269qualified historical priority records→99fields/467source modes. Every original manifest iscomplete and has identical current configuration plus original stellar-template hash. Task/source/model/config hashes frozen; source-specific archive mappings explicit, no R14Cborrowed.

@@ -1,0 +1,2 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v12_north_019-A_base-0.3-001,key_images_pending,1,1,1,1,6.667783572287801,20.75,0.7,0.0,,,L0

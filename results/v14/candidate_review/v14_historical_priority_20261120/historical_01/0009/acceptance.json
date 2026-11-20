@@ -1,0 +1,27 @@
+{
+  "job": "61617874",
+  "inputs": {
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_01/0009/provenance.json": "0e32e796f32bea85c5283a8682a2100498960746fcf938437c752e9c6d69b72b",
+    "results/v11/south_delve/main/sky_group_candidates.csv": "061940bf45bde2bc59718f12ba545834aae5cebf889be2206d55dc4c66df39da",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_01/0009/review_modes.csv": "e4a38acc2e2dc649b550d4031002943ccb4a0e1b51630491beb17f1e3cbc7b4d",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_01/0009/group_review_modes.csv": "4fca6c6a735bd3c9ab5d2197be1e4df8e5d41fd93878958ae57e706e7833b81a",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_01/0009/group_review_summary.csv": "f948cf4cf408ae8c6a2527c11d9c09d5fb1eec86e67143f44bbfc47f098fa992",
+    "configs/v11/cohorts/south_delve/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "4329f4805dee600eb9bab3e8b0e6e211652c57b0ba8881db105276b908bc17c7",
+  "exact_source_groups": 9,
+  "selected_seeds": 11,
+  "fit_states": {
+    "complete": 11
+  },
+  "complete_membership_references": 11,
+  "unique_membership_artifacts": 11,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}

@@ -1,0 +1,30 @@
+{
+  "job": "61621526",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ps1-native-preflight",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ps1_operator_preflight.sh"
+  ],
+  "inputs": {
+    "scripts/v14_ps1_operator_preflight.py": "89df0c6b1f531cb6fa6df264d31619a79bad79290efca958c9fde311e8377ca5",
+    "scripts/v14_ps1_operator_preflight.sh": "0975fe368331acf0240119443665b4e7f3f8bb728d02a4bee5ea1c76fb9d3728"
+  },
+  "state": "submitted_not_complete",
+  "scope": "One native g-band I/O/recipe preflight; not DR2 operator equivalence or physical response."
+}

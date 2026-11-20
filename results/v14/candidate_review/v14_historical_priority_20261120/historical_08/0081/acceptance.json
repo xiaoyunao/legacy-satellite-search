@@ -1,0 +1,27 @@
+{
+  "job": "61617874",
+  "inputs": {
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_08/0081/provenance.json": "fa62049505ddef6de74cdc68fd39c7e4429a5055cacc5d9723a6635ed42eda73",
+    "results/v12/discovery/v12g/south_ps1/main/sky_group_candidates.csv": "1d9c5de96a7ea58d16ca3d5a5817d180d2c369266c3d19f16db039fb94c2e79c",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_08/0081/review_modes.csv": "7c8e4663d425a4aa7fae64b9fe02bd32c1025434d39fcc492ef2acfe926f6e64",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_08/0081/group_review_modes.csv": "86940f394760e8a66fc24c0366d876099784b535dfa57172d7da64b2095a68a2",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_08/0081/group_review_summary.csv": "8e347b379328a640c59c2ef784d7634ad1d8c8fa9dac04a9cb49852efe694175",
+    "configs/v12g/cohorts/south_ps1/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "4329f4805dee600eb9bab3e8b0e6e211652c57b0ba8881db105276b908bc17c7",
+  "exact_source_groups": 1,
+  "selected_seeds": 1,
+  "fit_states": {
+    "complete": 1
+  },
+  "complete_membership_references": 1,
+  "unique_membership_artifacts": 1,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}

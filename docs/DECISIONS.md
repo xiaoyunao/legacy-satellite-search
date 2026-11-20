@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-11-20T02:00Z — accepted source C and native PS1 validation boundary
+
+All 467 registered historical modes are accepted under their original discovery configuration and template; a nearby alternative fit never substitutes for same-record provenance. Refreshes use separate immutable checkpoint keys. Existing priority rules are covered, while selected low-priority missing C remains an explicit final-package gate.
+
+The archived IPP generated-header failure was a parallel library-build race: serial regeneration succeeds. A documented compiler-driver compatibility option builds the unmodified psphot core. Advance only to a real blank-image operator check; do not call a compiled executable or downloaded PS1 stack a calibrated physical response. Single-band preflight is distinct from the five-band stack operator and catalogue selection.
+
+Saved C context may be rendered from validated immutable membership without refitting. Keep coordinate/probability/contributor/score-bearing context in the held second phase; final anonymous first-phase panels remain unweighted. The two successful pilots do not certify the final population or final package.
+
 ## 2026-11-20 — original-record C rather than positional inheritance
 
 The269historical compact/high-score records with no boundC are followed using their original completed scan configuration, same template bytes and retained seeds. Pilot6/6modes accepted; registered resource partitions preserve all467modes. Exact source/config/model proofs determine completion; a later nearby R14fit cannot certify another historical record. This does not change the final human sampling universe or create independent evidence. The validator accepts an explicitly recorded original config path; existingR14default and numerical implementation remain unchanged.

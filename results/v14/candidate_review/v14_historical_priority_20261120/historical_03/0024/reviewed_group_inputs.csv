@@ -1,0 +1,2 @@
+candidate_group_id,field_id,depth,method,rank,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,channel,peak_rank,ranking,field,role,policy,budget,group_id,representative,passes_group_cut,branch,evidence_level
+v11_south_ps1_15-A_base-0.3-001,v11_south_ps1_15,base,A,1,73.91666666666663,70.91666666666663,32.98214132029877,24.505289144367207,19.75,0.5,6.332553056987469,A_base,1,6.332553056987469,v11_south_ps1_15,pilot_eval,A_base,0.3,v11_south_ps1_15-A_base-0.3-001,True,True,main,L0

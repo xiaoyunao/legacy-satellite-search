@@ -1,0 +1,2 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+survey_25-A_base-0.3-002,key_images_pending,1,1,1,2,15.622974178400018,20.0,0.35,0.9539662317051927,,,L0

@@ -41,7 +41,8 @@ def candidate(path, spec, field, area, sample, sources, valid, mags, chosen, pea
                                       ('Central CMD', 'Equal geometric area annulus CMD')):
         g, r = sample[selection, 2:4].T
         axis.scatter(g-r, g, s=8, alpha=.6)
-        axis.plot(locus[:, 0]-locus[:, 1], locus[:, 0]+dm, color='tab:red', lw=1)
+        # Do not connect distinct evolutionary phases across the RGB/HB handoff.
+        axis.plot(locus[:, 0]-locus[:, 1], locus[:, 0]+dm, '.', color='tab:red', ms=1.5)
         axis.set(xlim=(-.5, 1.8), ylim=(max(23.5, g.max(initial=23.5)), 15), xlabel='$(g-r)_0$ (mag)',
                  ylabel='$g_0$ (mag)', title=f'{title} ({len(g)})')
     ax = axes[1, 0]

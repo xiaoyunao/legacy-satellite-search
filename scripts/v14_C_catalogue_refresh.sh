@@ -13,7 +13,8 @@ case "$1" in
 from pathlib import Path
 import shutil,os
 from ls_satsearch.run import sha,write_json
-out=Path('results/v14/production_integration/checkpoints/C_refresh_20261120');out.mkdir(parents=True,exist_ok=True)
+out=Path('results/v14/production_integration/checkpoints')/os.getenv('LS_SAT_C_REFRESH_KEY','C_refresh_20261120');out.mkdir(parents=True,exist_ok=True)
+if (out/'catalogue_completion.json').exists():raise ValueError('Preserve accepted catalogue checkpoint; choose a new refresh key')
 backup=out/'previous_catalogue';backup.mkdir(exist_ok=True)
 for name in ('candidate_catalogue.csv','candidate_modes.csv','manifest.json','potential_associations_within_5arcmin.csv'):
  source=Path('results/v14/catalogue')/name;target=backup/name
@@ -27,18 +28,18 @@ PY
 from pathlib import Path
 import os,json
 from ls_satsearch.run import sha,write_json
-out=Path('results/v14/production_integration/checkpoints/C_refresh_20261120')
+out=Path('results/v14/production_integration/checkpoints')/os.getenv('LS_SAT_C_REFRESH_KEY','C_refresh_20261120')
 paths=[Path('results/v14/catalogue')/n for n in ('candidate_catalogue.csv','candidate_modes.csv','manifest.json','potential_associations_within_5arcmin.csv')]
 write_json(out/'catalogue_completion.json',dict(job=os.environ['SLURM_JOB_ID'],files={str(p):sha(p) for p in paths},scope='Accepted catalogue source clock; final full-search convergence and final human evidence remain separate.'))
 PY
   ;;
  ledger)
-  test -s results/v14/production_integration/checkpoints/C_refresh_20261120/catalogue_completion.json
   .venv/bin/python - <<'PY'
 from pathlib import Path
-import json
+import json,os
 from ls_satsearch.run import sha
-proof=Path('results/v14/production_integration/checkpoints/C_refresh_20261120/catalogue_completion.json')
+proof=Path('results/v14/production_integration/checkpoints')/os.getenv('LS_SAT_C_REFRESH_KEY','C_refresh_20261120')/'catalogue_completion.json'
+if proof.with_name('ledger_completion.json').exists():raise ValueError('Preserve accepted ledger checkpoint')
 for name,digest in json.loads(proof.read_text())['files'].items():
  if sha(Path(name))!=digest:raise ValueError('Catalogue source clock changed before ledger refresh')
 PY
@@ -50,7 +51,7 @@ PY
 from pathlib import Path
 import json,os
 from ls_satsearch.run import sha,write_json
-out=Path('results/v14/production_integration/checkpoints/C_refresh_20261120')
+out=Path('results/v14/production_integration/checkpoints')/os.getenv('LS_SAT_C_REFRESH_KEY','C_refresh_20261120')
 files=[Path(p) for p in ['results/v14/production_integration/manifest.json','results/v14/production_integration/reconciled/manifest.json','results/v14/production_integration/C_seed_coverage/summary.json']]
 if json.loads(files[1].read_text())['frozen75_verified_current_identities']!=75:
  raise ValueError('Original75 identity preservation failed; no checkpoint acceptance')

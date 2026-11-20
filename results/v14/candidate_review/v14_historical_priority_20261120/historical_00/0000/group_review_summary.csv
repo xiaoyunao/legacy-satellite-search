@@ -1,0 +1,5 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v11_north_09-A_base-0.3-001,key_images_pending,2,2,1,2,10.637843172013515,20.75,1.0,2.7685507271588268,,,L0
+v11_north_09-A_base-0.3-004,key_images_pending,1,1,1,5,1.8661350700664467,16.25,1.4,0.0,,,L0
+v11_north_09-A_base-0.3-005,key_images_pending,2,2,2,6,13.252670132658999,20.0,1.0,4.36346277360909,,,L0
+v11_north_09-A_base-0.3-007,key_images_pending,1,1,1,10,2.8544372695627303,16.25,1.4,0.0,,,L0

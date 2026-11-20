@@ -1,5 +1,15 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-20T02:00Z — current acceptance and remaining gates
+
+- [x] Historical priority: 99 fields / 269 records / 467 original modes accepted; original config/template/seed/membership proofs and 722 current catalogue input hashes verified.
+- [x] Interim unified catalogue preserves all 75 old identities; 7,924 records / 17,853 required seeds are C-complete. Keep the 1,652 low-priority unattempted records explicit.
+- [x] Saved-context null and positive-membership rendering pilots: six rasters inspected, no refit and no missing expected gr contributor stamps. Private outputs stay private.
+- [x] Official IPP core compiled; actual five-band PS1 image/variance/mask/exposure and same-cell reference acquired on NERSC.
+- [ ] Native single-band preflight 61621526, five-band original-operator equivalence, physical PS1 response and justified uncertainty. No physical LS–PS1 gain claim yet.
+- [ ] Remaining 38 scan fields, outside regional C, final common-clock source/area/identity/funnel integration.
+- [ ] Final production selection, declared probability sampling, selected all-mode evidence and one PDF/ZIP/forms release after privacy/page QA. No interim user grades or manuscript.
+
 ## 2026-11-20 — historical C source/config check
 
 All99historical priority fields pass original config/template registration;6pilot modes accepted in61617524. Remaining461modes are registered in61617692/61617693, not counted complete. No new detector/cuts, final sample draw, user grades or manuscript. Final selected old-source hypotheses still need their own bound C and images.

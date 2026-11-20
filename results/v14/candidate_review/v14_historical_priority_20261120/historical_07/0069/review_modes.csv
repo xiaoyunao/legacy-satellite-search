@@ -1,0 +1,2 @@
+x,y,ra_deg,dec_deg,dm,rh_arcmin,score,channel,peak_rank,ranking,field,role,policy,budget,group_id,representative,passes_group_cut
+36.75,81.25,10.50152408742961,22.74256223381176,18.25,0.5,6.317749939863861,A_base,1,6.317749939863861,v12_south_ps1_006,pilot_eval,A_base,0.3,v12_south_ps1_006-A_base-0.3-001,True,True

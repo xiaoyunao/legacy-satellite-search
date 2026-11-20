@@ -1,0 +1,27 @@
+{
+  "job": "61617697",
+  "inputs": {
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_10/0096/provenance.json": "3c8fa9f825d1768c92ffa7b0e77d9fb3395f09b0ff634e4c9418da36fd052494",
+    "results/v7/rollout/batch3/results/holdout/sky_group_candidates.csv": "6dbac7c20e8785a56326b2535b3f7e0f9c19773224b62818fdacafe0ba532d49",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_10/0096/review_modes.csv": "4972b21f748bd202cd96fa47834c02c668473efe7f7b6905c6018f5c332cb2c7",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_10/0096/group_review_modes.csv": "de486bf697ecc2cc8704e8d1be5ddc204e04ab112ff9ffd2070d1440975ebae6",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_10/0096/group_review_summary.csv": "80c5a2c9bce72fe4d48db292f162b9b1a73713e2b556b2c72504e4420322b978",
+    "configs/v7/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "4329f4805dee600eb9bab3e8b0e6e211652c57b0ba8881db105276b908bc17c7",
+  "exact_source_groups": 1,
+  "selected_seeds": 1,
+  "fit_states": {
+    "complete": 1
+  },
+  "complete_membership_references": 1,
+  "unique_membership_artifacts": 1,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}

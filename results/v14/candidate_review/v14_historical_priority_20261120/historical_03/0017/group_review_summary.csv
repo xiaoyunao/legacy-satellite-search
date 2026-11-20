@@ -1,0 +1,3 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v11_south_ps1_05-A_base-0.3-001,key_images_pending,2,2,2,1,2.413991055456589,20.25,0.7,0.0,,,L0
+v11_south_ps1_05-A_base-0.3-002,key_images_pending,1,1,1,3,6.557934726443591,16.75,0.35,0.031255429829607384,,,L0

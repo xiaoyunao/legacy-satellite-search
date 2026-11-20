@@ -1,0 +1,31 @@
+{
+  "pilots": [
+    {
+      "job": "61618104",
+      "private_proof_sha256": "d3cb36792ae611b04124852700cff975dc5bd3cde3fa7869d266a6eedb90fc4d",
+      "saved_likelihood_verified": true,
+      "refitted": false,
+      "image_centre_complete": true,
+      "expected_contributor_stamps": 0,
+      "missing_contributor_stamps": 0,
+      "full_raster_visually_inspected": true
+    },
+    {
+      "job": "61618873",
+      "private_proof_sha256": "9845100381a42dc2f80298c9547ba87d17e46ef6151713ab6f45a3cf3d5a08c9",
+      "saved_likelihood_verified": true,
+      "refitted": false,
+      "image_centre_complete": true,
+      "expected_contributor_stamps": 6,
+      "missing_contributor_stamps": 0,
+      "full_raster_visually_inspected": true
+    }
+  ],
+  "modes": 2,
+  "rasters_visually_inspected": 6,
+  "renderer_sha256": "44a52a33bb2f9169c9b48891d97703f8dbe6dfea4b5a4a9397b19d6638e91f6e",
+  "plot_renderer_sha256": "8626560f82d3ad70e44f00bab2d5837a22e990425fea5dd307bf1a97456a543b",
+  "final_review_release": false,
+  "private_outputs_only": true,
+  "scope": "Two previously exposed old modes (one zero-richness optimum and one positive-membership fit). Reconstruct saved counts/normalization/TS algebraically; render radial/PSF-versus-nonPSF/distance/condition/native-gr/contributor evidence without optimizing C. The zero-richness fit has no positive contributors; it is a valid completed numerical attempt, not evidence of a stellar system. All six rasters inspected; no missing expected images. Score/coordinate/probability-bearing context stays held for phase two. Final full-sample evidence, selection, sampling and PDF/ZIP privacy/page QA remain gates. Original75 untouched."
+}

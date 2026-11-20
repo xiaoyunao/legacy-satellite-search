@@ -1,0 +1,2 @@
+candidate_group_id,field_id,depth,method,rank,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,channel,peak_rank,ranking,field,role,policy,budget,group_id,representative,passes_group_cut,branch,evidence_level
+v11_south_delve_05-A_base-0.3-002,v11_south_delve_05,base,A,2,-3.833333333333343,88.83333333333331,321.2613319509134,-15.482833256832997,17.0,1.0,8.042021370382658,A_base,2,8.042021370382658,v11_south_delve_05,pilot_eval,A_base,0.3,v11_south_delve_05-A_base-0.3-002,True,True,main,L0

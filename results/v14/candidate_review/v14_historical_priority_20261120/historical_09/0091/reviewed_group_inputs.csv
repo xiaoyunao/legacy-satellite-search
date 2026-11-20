@@ -1,0 +1,2 @@
+candidate_group_id,field_id,depth,method,rank,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,channel,peak_rank,ranking,field,role,policy,budget,group_id,representative,passes_group_cut,branch,evidence_level
+survey_06-A_base-0.3-001,survey_06,base,A,1,77.08333333333331,69.41666666666663,243.31749638180972,13.409571192432358,20.25,0.5,6.329285087063008,A_base,1,6.329285087063008,survey_06,pilot_eval,A_base,0.3,survey_06-A_base-0.3-001,True,True,main,L0

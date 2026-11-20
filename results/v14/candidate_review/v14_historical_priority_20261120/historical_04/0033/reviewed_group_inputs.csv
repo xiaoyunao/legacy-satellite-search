@@ -1,0 +1,4 @@
+candidate_group_id,field_id,depth,method,rank,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,channel,peak_rank,ranking,field,role,policy,budget,group_id,representative,passes_group_cut,branch,evidence_level
+v12_north_004-A_base-0.3-004,v12_north_004,base,A,13,-76.83333333333334,-1.8333333333333428,120.06405788466967,64.91754594989852,20.75,1.0,7.056714893221956,A_base,13,7.056714893221956,v12_north_004,pilot_eval,A_base,0.3,v12_north_004-A_base-0.3-004,True,True,main,L0
+v12_north_004-A_base-0.3-006,v12_north_004,base,A,19,-10.75,-102.58333333333334,122.6651128583055,63.28948722631344,19.75,0.5,6.524363330623146,A_base,19,6.524363330623146,v12_north_004,pilot_eval,A_base,0.3,v12_north_004-A_base-0.3-006,True,True,main,L0
+v12_north_004-A_base-0.3-007,v12_north_004,base,A,20,45.583333333333314,20.25,124.88240562271638,65.28773998337975,16.5,0.5,6.38203576621673,A_base,20,6.38203576621673,v12_north_004,pilot_eval,A_base,0.3,v12_north_004-A_base-0.3-007,True,True,main,L0

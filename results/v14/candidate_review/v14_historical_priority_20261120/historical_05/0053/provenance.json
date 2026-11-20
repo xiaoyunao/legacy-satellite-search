@@ -1,0 +1,15 @@
+{
+  "job": "61617692",
+  "input": "results/v12/discovery/v12/south_delve/main/sky_group_candidates.csv",
+  "input_sha256": "f2834d1e75b1921ee673322cd97b0043c18c2c0d6d632332484326e9b13501fa",
+  "selection_sha256": "dec1dff6182cdae05dc51bbe260296f1817bfb2c427b6bcfa200e0aa99b9270f",
+  "registered_task": 53,
+  "registration_sha256": "7da9ecba8f730ddcaaeaf53f22d1ea1f963b96e679081f2891926bf5e823fbfd",
+  "search_config_path": "configs/v12/cohorts/south_delve/search.yaml",
+  "search_config_sha256": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d",
+  "review_implementation_sha256": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
+  "render_diagnostics": false,
+  "diagnostic_policy": "pending_final_selected_evidence",
+  "original_scan_manifest_sha256": "98aa9aeafe4a1998eb28f08ecac5c84ab802120c333bba56805ba746b5cdb676",
+  "visual_review_pending": true
+}

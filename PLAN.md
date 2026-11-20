@@ -1,5 +1,13 @@
 # Plan
 
+## 2026-11-20T02:00Z — next execution steps
+
+1. Follow the existing 38 remaining outside-census fields and regional C owners; retry only uncovered failed manifests. Preserve the frozen detector and thresholds.
+2. After terminal convergence, rebuild the common-clock historical production, zero-peak field and mask union, known-context annotations, bounded review units and exact-source C coverage. Current interim counts are 9,576 records / 9,403 provisional positions; 7,924 records / 17,853 seeds have complete C. All 269 historical priority gaps are closed; low-priority sampled records may still require C.
+3. Execute PS1 native technical preflight 61621526 on acquired real skycell 2015.027. Establish pixel/variance/asinh handling, archived configuration and actual blank photometry before any PS1 injection or physical three-arm claim. Compilation/acquisition alone are not response validation.
+4. Apply the registered final-review protocol only to the final population: preserve old 75 identities/bytes, certainty controls plus declared positive-probability strata, saved all-mode evidence, private identity/context and score-hidden phase one, full PDF/ZIP/privacy/page QA. Deliver once; do not request intermediate grades.
+5. Preserve native 144, same-population size and faint-light negative results and uncertainty limits. No manuscript, unsupported global selection surface/50% contour or abundance inference.
+
 ## 2026-11-20 — original-configuration historical priority C launched
 
 All269historical compact/high-score gaps map to99fields/467retained source modes. Registration checks each original complete scan's full selection config and stellar-template bytes. Pilot61617524(task30)COMPLETED54s/2854892KiBMaxRSS:5groups/6modes/6immutable member artifacts pass exact-source/config/seed checks. Remaining97fields are four bounded packs61617692(342modes), with119-mode task93 in longer regular61617693. No overlapping owner or additional discovery/sampling; accepted field tasks are verified and skipped on retry. Global coverage will update only after an accepted catalogue refresh. All selected diagnostics/final-human gates remain open.

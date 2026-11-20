@@ -1,0 +1,31 @@
+{
+  "job": "61621032",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ps1-native-acquire",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ps1_operator_acquire.sh"
+  ],
+  "inputs": {
+    "scripts/v14_ps1_operator_acquire.py": "3fdb90c64c3fc1280426bc067b42fef787f2bff5613b6b94b85be4ccbe6e8d47",
+    "scripts/v14_ps1_operator_acquire.sh": "4a6c216b494c221cf721c783a09dd6400ceda4aa8896a0283d0d0dd13565df2d",
+    "configs/v14_ps1_operator/blank_pilot.yaml": "0c81be803b692bf5bcde04b539df0f3816c5ff05c0e62bc3b247f441129e6fd4"
+  },
+  "state": "submitted_not_complete",
+  "scope": "One skycell acquisition and installed-program usage only; no pixel photometry/injection/physical PS1response yet. Raw products/references stayNERSC."
+}

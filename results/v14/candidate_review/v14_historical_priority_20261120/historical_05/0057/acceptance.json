@@ -1,0 +1,27 @@
+{
+  "job": "61617696",
+  "inputs": {
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_05/0057/provenance.json": "961b63350b9879ce1c28839559d032a4f463ae6a9ab34859ce618e12f070521d",
+    "results/v12/discovery/v12/south_delve/main/sky_group_candidates.csv": "f2834d1e75b1921ee673322cd97b0043c18c2c0d6d632332484326e9b13501fa",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_05/0057/review_modes.csv": "6773c244ff0da67cf503a0602fb06783f04019964801c56826291ff4b948c163",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_05/0057/group_review_modes.csv": "c79ec75a432fd2369011f6345a7a76f5a1fd4f17f340cb2181605aa500eba59d",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_05/0057/group_review_summary.csv": "f2787f065c8758f75375937a8f77a07378cb98ab00d3f12d0ff5cc8176827f39",
+    "configs/v12/cohorts/south_delve/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d"
+  },
+  "code_sha256": "4329f4805dee600eb9bab3e8b0e6e211652c57b0ba8881db105276b908bc17c7",
+  "exact_source_groups": 6,
+  "selected_seeds": 7,
+  "fit_states": {
+    "complete": 7
+  },
+  "complete_membership_references": 7,
+  "unique_membership_artifacts": 7,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}

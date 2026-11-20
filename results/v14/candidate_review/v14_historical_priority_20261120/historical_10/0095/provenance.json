@@ -1,0 +1,15 @@
+{
+  "job": "61617696",
+  "input": "results/v7/rollout/batch3/results/holdout/sky_group_candidates.csv",
+  "input_sha256": "6dbac7c20e8785a56326b2535b3f7e0f9c19773224b62818fdacafe0ba532d49",
+  "selection_sha256": "57d42352761bfcce60fe5edb55716175a6f7693f9ab47c445438507c9445fac7",
+  "registered_task": 95,
+  "registration_sha256": "7da9ecba8f730ddcaaeaf53f22d1ea1f963b96e679081f2891926bf5e823fbfd",
+  "search_config_path": "configs/v7/search.yaml",
+  "search_config_sha256": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d",
+  "review_implementation_sha256": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
+  "render_diagnostics": false,
+  "diagnostic_policy": "pending_final_selected_evidence",
+  "original_scan_manifest_sha256": "a4638f4d11796998410aa02ff164e0a44aff071375147f9f3df4dab1a9f83e17",
+  "visual_review_pending": true
+}

@@ -1,0 +1,31 @@
+{
+  "job": "61619695",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c4",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ipp-ohana-serial",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ipp_ohana_core.sh"
+  ],
+  "script_sha256": "434f5b1dd85ad8c4ae7428fd52940521118985dcea89131a20eb47e15e99bebb",
+  "state": "submitted_not_complete",
+  "previous_job": "61617028",
+  "observed_generator": "Ohana/src/libautocode/Makefile50..53 builds shared autocode.h by non-atomic cat writes; recursive libdvo submakes can repeat it. No generated header is distributed in the archive.",
+  "hypothesis": "Our forced parallel recursive rebuild may corrupt the shared generated header. Serial -j1 regeneration tests this implementation failure before attributing it to archived operator capability.",
+  "specific_fix": "Library-only forced serial rebuild, unchanged source and compatibility flags, then bounded original core build. No expanded dependency/application/database installation.",
+  "physical_PS1_response_validated": false
+}

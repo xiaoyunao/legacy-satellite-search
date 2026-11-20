@@ -4,7 +4,7 @@ set -eo pipefail
 if [[ -z "${SLURM_JOB_ID:-}" ]]; then exit 2; fi
 workspace=$PWD
 ipp_task_root="$PSCRATCH/legacy-satellite-search/software/ipp"
-ipp_task_probe="$ipp_task_root/probe_ohana_common"
+ipp_task_probe="$ipp_task_root/probe_ohana_serial"
 export PSCONFDIR="$ipp_task_root/install" PSVERSION=lssat
 export MAKEFLAGS="-j${SLURM_CPUS_PER_TASK:-4}"
 mkdir -p "$ipp_task_probe"
@@ -34,12 +34,15 @@ PY
 printf '%s\n' "$ipp_ohana_cflags" > "$ipp_task_probe/ohana_cflags.txt"
 # Restore the documented pre-GCC10 common-symbol convention for archived C.
 # Force rebuilding all library objects so old fno-common objects cannot survive.
-make -B libs "CPPFLAGS=$ipp_ohana_cppflags" "CFLAGS=$ipp_ohana_cflags" > "$ipp_task_probe/ohana_libraries.log" 2>&1
+# Recursive library builds share a non-atomic generated autocode.h target.
+# Test serial regeneration before treating a parallel-build failure as an
+# intrinsic source problem. No header or photometry algorithm is patched.
+make -B -j1 libs "CPPFLAGS=$ipp_ohana_cppflags" "CFLAGS=$ipp_ohana_cflags" > "$ipp_task_probe/ohana_libraries.log" 2>&1
 cd "$workspace"
 cat > "$ipp_task_probe/config.site" <<'SITE'
 with_mysql=no
 enable_debug_build=yes
 SITE
 export CONFIG_SITE="$ipp_task_probe/config.site" LS_SAT_IPP_RECONFIGURE=1
-export LS_SAT_IPP_PROBE_NAME=probe_ohana_common LS_SAT_IPP_FIX_LIBS=0 LS_SAT_IPP_OUTPUT=build_ohana_common.json
+export LS_SAT_IPP_PROBE_NAME=probe_ohana_serial LS_SAT_IPP_FIX_LIBS=0 LS_SAT_IPP_OUTPUT=build_ohana_serial.json
 exec bash scripts/v14_ipp_build_probe.sh

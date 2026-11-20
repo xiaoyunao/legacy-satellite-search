@@ -1,0 +1,3 @@
+candidate_group_id,field_id,depth,method,rank,x,y,ra_deg,dec_deg,dm,rh_arcmin,score,channel,peak_rank,ranking,field,role,policy,budget,group_id,representative,passes_group_cut,branch,evidence_level
+v11_south_des_07-A_base-0.3-001,v11_south_des_07,base,A,1,-56.83333333333334,60.833333333333314,27.81224890790818,-46.35319494192304,17.25,1.0,8.727288133538469,A_base,1,8.727288133538469,v11_south_des_07,pilot_eval,A_base,0.3,v11_south_des_07-A_base-0.3-001,True,True,main,L0
+v11_south_des_07-A_base-0.3-002,v11_south_des_07,base,A,2,-56.5,61.833333333333314,27.82044994842361,-46.33683956697899,17.25,1.0,6.424068877323187,A_base,2,6.424068877323187,v11_south_des_07,pilot_eval,A_base,0.3,v11_south_des_07-A_base-0.3-002,True,True,main,L0

@@ -1,0 +1,26 @@
+{
+  "job": "61619695",
+  "result": "failed_psModules",
+  "artifacts": {
+    "probe_ohana_serial/bootstrap.log": "4ba06ae8f4d50c760e153ffd6752ec65a4c0534f901b127b89a852e74245e3b9",
+    "probe_ohana_serial/build_psLib.log": "82f12a334eb534f0af4c10d3ff6c6954e498e0d2adcf2e29ddf7f6cd9ad13e00",
+    "probe_ohana_serial/build_psModules.log": "c75ca2935459a02e1ba311b5f17e610f993298714b64c7b3ab1ff5e193218900",
+    "probe_ohana_serial/config.site": "5cc43e2d0a93a2673baac4861cd9f6a0c769d43473031d835783a3c1c57b1daa",
+    "probe_ohana_serial/libraries.log": "4019ac85024b4571124687e5d731b6aa158d55958d25f411302d026f5f4da4b9",
+    "probe_ohana_serial/library_check_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "probe_ohana_serial/ohana_cflags.txt": "847f5161d4e66d3db8a0ed16ad79f812ce52e02cc58e4603d99f35101eac436e",
+    "probe_ohana_serial/ohana_configure.log": "4b16529503a84c18a265e0240978294e0dae19da3fa2fc603998dbff0a695e4a",
+    "probe_ohana_serial/ohana_cppflags.txt": "efdc174dea2eafa1bc7a0901eadcb336b7a035504d318c04d31a06adb309336b",
+    "probe_ohana_serial/ohana_libraries.log": "810c7c901e184618e33b645b5587358ba7c7531c0409057d69aaa655ad251f32",
+    "probe_ohana_serial/status_psLib.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "probe_ohana_serial/status_psModules.txt": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+  },
+  "probe_script_sha256": "bde6be057b2fc4bc2187c62579a84c620422bef5134ee59933c6f96ebd25e28a",
+  "bundled_c_dependency_fix": false,
+  "archive_sha256": "3a8cf08538b1ed23d130abe8a41a5ac1ccccb52dade488fc355d5f172f1b3cb4",
+  "source": "https://ipp.ifa.hawaii.edu/ipp-20190404.tgz",
+  "isolated_prefix_relative": "software/ipp/install",
+  "shell_startup_files_modified": false,
+  "physical_PS1_response_validated": false,
+  "scope": "Bounded core build only. No external database/Perl suite installation, no image processing or PS1 catalogue equivalence claim. A successful build still needs blank-image PSF/photometry/selection validation before injection response can represent PS1 DR2."
+}

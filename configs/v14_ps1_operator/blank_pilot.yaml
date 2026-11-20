@@ -1,0 +1,11 @@
+background_table: configs/v14_repeat/image_fields.csv
+background_index: 0
+image_list_service: https://ps1images.stsci.edu/cgi-bin/ps1filenames.py
+image_root: https://ps1images.stsci.edu
+filters: grizy
+products: [stack, stack.wt, stack.mask, stack.exp]
+cell_rule: First numeric projection/subcell with all five filters and all four products; choose before reading pixels or recovered sources.
+reference_api: https://catalogs.mast.stsci.edu/api/v0.1/panstarrs/dr2/stack.csv
+reference_cone_deg: 0.3333333333333333
+reference_max_pages: 8
+scope: One original physical background, one native PS1 skycell. Acquire immutable science/variance-or-weight/mask/exposure products and image-specific DR2 references; inspect actual executable usage and FITS headers before native processing. No source truth, injection, discovery search, candidate confirmation, response transport or physical LS-minus-PS1 gain in this acquisition tranche. Pixel units and operator/catalogue equivalence must be established from actual products before physical injection.

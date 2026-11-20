@@ -1,0 +1,3 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v12_south_des_007-A_base-0.3-001,key_images_pending,1,1,1,1,33.574916950099464,17.75,0.5,8.168255424825087,,,L0
+v12_south_des_007-A_base-0.3-003,key_images_pending,1,1,1,3,9.842165639155791,16.75,1.0,0.7807084320823958,,,L0

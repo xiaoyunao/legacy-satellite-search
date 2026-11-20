@@ -1,0 +1,10 @@
+{
+  "job": "61619421",
+  "files": {
+    "results/v14/production_integration/checkpoints/historical_C_refresh_20261120/previous_catalogue/candidate_catalogue.csv": "3c2642de9a7b4f3ce6f7a3466011b065b7c6108f1d0af3d4a70144efbcd2248e",
+    "results/v14/production_integration/checkpoints/historical_C_refresh_20261120/previous_catalogue/potential_associations_within_5arcmin.csv": "5bc890cdb622b6dad6ccba5089b479bff72305bfa4dc7fc68d85a780ce5a7d6c",
+    "results/v14/production_integration/checkpoints/historical_C_refresh_20261120/previous_catalogue/candidate_modes.csv": "6f84e8b52aaaa9815bd2571b2afe5fcf3ee9cac732f69db20b5f290e134d364c",
+    "results/v14/production_integration/checkpoints/historical_C_refresh_20261120/previous_catalogue/manifest.json": "9b37d59f1f7d2be4ea059a33456eea6993e15a9fb5e6419337909f014c99251e"
+  },
+  "scope": "Preserved previous aggregate catalogue before C refresh; not raw or stellar data."
+}

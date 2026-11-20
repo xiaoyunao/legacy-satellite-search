@@ -1,0 +1,3 @@
+x,y,ra_deg,dec_deg,dm,rh_arcmin,score,channel,peak_rank,ranking,field,role,policy,budget,group_id,representative,passes_group_cut
+-34.83333333333334,18.833333333333314,344.5811702582257,27.59394785247959,19.5,1.0,6.535912062237114,A_base,1,6.535912062237114,v12_south_ps1_007,pilot_eval,A_base,0.3,v12_south_ps1_007-A_base-0.3-001,True,True
+-34.83333333333334,18.833333333333314,344.5811702582257,27.59394785247959,18.5,1.0,6.408368138680519,A_base,2,6.408368138680519,v12_south_ps1_007,pilot_eval,A_base,0.3,v12_south_ps1_007-A_base-0.3-001,False,True

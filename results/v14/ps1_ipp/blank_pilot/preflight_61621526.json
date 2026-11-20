@@ -1,0 +1,69 @@
+{
+  "job": "61621526",
+  "command": [
+    "/pscratch/sd/y/yunao/legacy-satellite-search/software/ipp/install/lssat.lin64/bin/psphot",
+    "-ipprc",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621526/ipprc.config",
+    "-nthreads",
+    "4",
+    "-file",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.fits",
+    "-mask",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.mask.fits",
+    "-variance",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.wt.fits",
+    "-dumpconfig",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621526/effective.config",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621526/native_g"
+  ],
+  "returncode": 3,
+  "elapsed_s": 0.9197347250010353,
+  "acquisition_sha256": "4c10573a295a71ad260509be2009b9fee6af312b0059d5a48f9cd36d54af203b",
+  "runner_sha256": "89df0c6b1f531cb6fa6df264d31619a79bad79290efca958c9fde311e8377ca5",
+  "binary_sha256": "9471c4fc1cb716ff13cd3246badd411b017caa82450709c2c61f1c35a6ebec2b",
+  "inputs": {
+    "stack": {
+      "sha256": "7751b5e0095bc82bf7b3d6aded7899c09aca62adca346989ef306ba2a54a7421",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.fits"
+    },
+    "stack.mask": {
+      "sha256": "dd05af069ac63db1bd41bcd06b668465bb3e1a39e88a4665900f2c31aa36dd4a",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.mask.fits"
+    },
+    "stack.wt": {
+      "sha256": "81478d0b555e4ddee0a27f1cee90ef7a282851b1574fae3cad6c1179564e2cdc",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/0c81be803b692bf5/rings.v3.skycell.2015.027.stk.g.unconv.wt.fits"
+    }
+  },
+  "native_header": {
+    "FPA": null,
+    "INSTR": null,
+    "INSTRUME": null,
+    "PSCAMERA": null,
+    "EXTNAME": null,
+    "HIERARCH FPA.INSTRUMENT": null,
+    "HIERARCH FPA.FILTER": null,
+    "HIERARCH FPA.ZP": null,
+    "HIERARCH FPA.PHOTCODE": null,
+    "FLUXMAG0": null,
+    "MAGZP": null,
+    "MJD-OBS": null,
+    "EXPTIME": null,
+    "BOFFSET": null,
+    "BSOFTEN": null
+  },
+  "artifacts": {
+    "ipprc.config": {
+      "bytes": 356,
+      "sha256": "36fdba5ffb24ce6f6ec860badf264cb922bd6b561bf078601a60b62b4590ed31"
+    },
+    "operator.log": {
+      "bytes": 691,
+      "sha256": "4c6d8e82ae9dddbaad1bcb236c3b3ace87a24a631891aaf0d4bf0814a6eab6da"
+    }
+  },
+  "raw_output_root": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/preflight/61621526",
+  "native_processing_attempted": true,
+  "physical_PS1_response_validated": false,
+  "scope": "Single-band official psphot technical preflight with archived defaults. Not five-band psphotStack, DR2 configuration/photometry equivalence, injection response, independent candidate confirmation, or physical LS-minus-PS1 gain."
+}

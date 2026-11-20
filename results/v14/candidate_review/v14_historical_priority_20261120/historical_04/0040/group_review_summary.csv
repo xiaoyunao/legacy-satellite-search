@@ -1,0 +1,11 @@
+group_id,review_status,modes_attempted,modes_fit,fitted_dm_modes,best_peak_rank,best_ts,best_dm,best_rh,best_ts_without_top3,nearest_known,nearest_known_arcmin,evidence_level
+v12_north_013-A_base-0.3-015,key_images_pending,6,6,4,74,56.826470378087386,16.75,0.5,37.24778773970969,,,L0
+v12_north_013-A_base-0.3-016,key_images_pending,2,2,2,103,11.564727040782223,20.5,1.4,1.641971295499003,,,L0
+v12_north_013-A_base-0.3-019,key_images_pending,1,1,1,84,8.155017607516774,20.5,2.0,0.0,,,L0
+v12_north_013-A_base-0.3-020,key_images_pending,2,2,2,89,18.60957926014953,19.0,1.4,7.560754409748942,,,L0
+v12_north_013-A_base-0.3-021,key_images_pending,1,1,1,93,18.43498097052314,19.5,1.0,6.784997279896709,,,L0
+v12_north_013-A_base-0.3-025,key_images_pending,1,1,1,110,11.445538670122078,20.25,0.5,0.6623016216236186,,,L0
+v12_north_013-A_base-0.3-026,key_images_pending,2,2,2,111,4.113341805700644,16.25,0.5,0.0,,,L0
+v12_north_013-A_base-0.3-027,key_images_pending,1,1,1,114,7.760854400489122,16.25,0.5,0.0,,,L0
+v12_north_013-A_base-0.3-028,key_images_pending,1,1,1,115,2.8490996981861505,17.75,1.4,0.0,,,L0
+v12_north_013-A_base-0.3-029,key_images_pending,1,1,1,116,9.840169104306574,16.75,0.7,0.0,,,L0

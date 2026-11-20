@@ -1,0 +1,27 @@
+{
+  "job": "61617874",
+  "inputs": {
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_04/0037/provenance.json": "17e417c3e22e523a1fb516402a6069fe8ae6d0efe75731a9fbd21c7c98d3941b",
+    "results/v12/discovery/v12/north/main/sky_group_candidates.csv": "16eba2a693f67479b3884a3a3f32f0f2e1f2cc3c1ed065bd962dbd57df5769e3",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_04/0037/review_modes.csv": "0f4be2703d46a1e9042a7de54626bb4fc42c73f086e2afa33ca9d6681570e0dd",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_04/0037/group_review_modes.csv": "13f1efbe5c1fc58b7f072b4cf17f97c2b10c4acc469feaa802f056c08e5a51a6",
+    "results/v14/candidate_review/v14_historical_priority_20261120/historical_04/0037/group_review_summary.csv": "c90d02a67f52228cc64a469dd0c2f810260a96455e1a3e26708762a63fa0a1a8",
+    "configs/v12/cohorts/north/search.yaml": "d539a2d143b8557d1d1297cd1476ef716462c4da45e64f0c114bd351b8149627"
+  },
+  "code_sha256": "4329f4805dee600eb9bab3e8b0e6e211652c57b0ba8881db105276b908bc17c7",
+  "exact_source_groups": 3,
+  "selected_seeds": 5,
+  "fit_states": {
+    "complete": 5
+  },
+  "complete_membership_references": 5,
+  "unique_membership_artifacts": 5,
+  "exact_source_and_seed_binding_passed": true,
+  "all_selected_C_fits_complete": true,
+  "render_diagnostics": false,
+  "run_start_config_hash_recorded": true,
+  "run_start_implementation_hash_recorded": true,
+  "legacy_provenance_audit": false,
+  "final_human_evidence_accepted": false,
+  "scope": "Completed-shard source/seed/membership proof, not a final qualified-production roster, global C coverage, candidate quality or image QA. Unavailable fits remain terminal scientific attempts, distinct from missing computation. Deferred diagnostics still require final selected saved-membership-bound rendering and all review gates. An explicitly requested legacy audit leaves absent run-start implementation/config/rendering metadata unknown; current config/source context does not retroactively supply that metadata."
+}

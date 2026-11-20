@@ -2,19 +2,19 @@
   "inputs": {
     "results/v14/production_integration/manifest.json": "f82c626c54d33241f74d38338066d7ce7310541772eb14dbbb2409a0402fb20a",
     "results/v14/production_integration/eligible_record_inventory.csv": "875d14eafa41c7258ae22881764166017227e1375406efaca020e2779b6c0af8",
-    "results/v14/catalogue/manifest.json": "9b37d59f1f7d2be4ea059a33456eea6993e15a9fb5e6419337909f014c99251e",
-    "results/v14/catalogue/candidate_modes.csv": "6f84e8b52aaaa9815bd2571b2afe5fcf3ee9cac732f69db20b5f290e134d364c",
-    "results/v14/catalogue/candidate_catalogue.csv": "3c2642de9a7b4f3ce6f7a3466011b065b7c6108f1d0af3d4a70144efbcd2248e",
+    "results/v14/catalogue/manifest.json": "3a4414e9a0227bf94a770b698898b63b6beb1ef820075069beded04d99562ed6",
+    "results/v14/catalogue/candidate_modes.csv": "3dd3f3528ff7e0e14672eda338570bed779ba4f0472dc58484dffdcf9e44aa5a",
+    "results/v14/catalogue/candidate_catalogue.csv": "0dc8e25d2849d5cab48a33a1a1efe0f12ac3f55a5e8b98c47bb1c1fd31858298",
     "results/v14/shortlist/cases.csv": "e8b6902fd7faf9984e5fca2534e688d44b7a7083e5dfdf0be2971d08e1585d0b"
   },
   "code_sha256": "9ae25e6eaa9808e0a0d6ab8fb07fdfadbca3f92fa708fe40f211890615c4844a",
   "qualified_records": 9576,
   "provisional_positions": 9403,
-  "records_with_successful_bound_C": 7655,
+  "records_with_successful_bound_C": 7924,
   "frozen75_verified_current_identities": 75,
   "C_states": {
-    "available_modes_complete_required_seed_audit_pending": 7655,
-    "no_bound_complete_mode": 1921
+    "available_modes_complete_required_seed_audit_pending": 7924,
+    "no_bound_complete_mode": 1652
   },
   "final_production_frozen": false,
   "records_near_known_positions": 609,
