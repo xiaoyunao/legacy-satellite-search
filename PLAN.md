@@ -1,5 +1,13 @@
 # Plan
 
+## 2026-11-20T09:28Z — current remaining delivery gates
+
+- Completed: all registered scans/terminal retries, historical qualified union/frame, selected exact-source C and226records/752modes of final image evidence. Material tail61637110COMPLETED4:54; all selected receipts are local.
+- Running:61636677 exact-source anonymous/held PDF assembly and all-page source-pixel/text/ZIP/forms checks. Preserve its once-only private permutation.
+- Next: independently render every actual page; inspect all anonymous overview sheets and full-size samples; complete annotation/metadata/ZIP privacy QA. Verify held pages without exposing identities. Archive verified final artifacts locally and in the personal project before one final delivery. No intermediate human grading.
+- Science is already published: formal144spatial39→49; registered gain screen fails. Keep frozen A baseline. PhysicalPS1transfer, true-V/full-spatial selection, continuous distances/15pc and abundance remain unsupported; do not start optional experiments or paper text while finishing this delivery.
+
+
 ## 2026-11-20T08:37Z — remaining current-round work
 
 1. Follow existing61634971material packs (150records/523modes after exact reuse), inspect actual private result manifests, and fix/retry failed source records only. Keep pack/renderer sources and final draw fixed during execution.

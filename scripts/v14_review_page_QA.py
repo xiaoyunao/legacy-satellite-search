@@ -23,7 +23,8 @@ def run(source, output, contacts):
     output.mkdir(parents=True, exist_ok=False)
     original=digest(source); document=pdfium.PdfDocument(source)
     records=[]; sheets=[]; sheet=None; tile_width=300; tile_height=238
-    for index in range(len(document)):
+    page_count=len(document)
+    for index in range(page_count):
         page=document[index];width,height=page.get_size();text=page.get_textpage()
         outside=[]
         for char in range(text.count_chars()):
@@ -48,12 +49,16 @@ def run(source, output, contacts):
             x=(slot%5)*tile_width;y=(slot//5)*tile_height
             sheet.paste(thumb,(x+(tile_width-thumb.width)//2,y+20))
             ImageDraw.Draw(sheet).text((x+8,y+4),f'Page {index+1}',fill='black')
-            if slot==39 or index==len(document)-1:
+            if slot==39 or index==page_count-1:
                 name=f'contact_{len(sheets)+1:03d}.png';sheet.save(output/name)
                 sheets.append(dict(path=name,sha256=digest(output/name),
                                    first_page=index-slot+1,last_page=index+1))
         image.close();bitmap.close();text.close();page.close()
-        if (index+1)%100==0:print(dict(rendered_pages=index+1),flush=True)
+        if (index+1)%100==0:
+            print(dict(rendered_pages=index+1),flush=True)
+            # Bound PDFium's document image cache on the 16GiB local machine.
+            if index+1<page_count:
+                document.close();document=pdfium.PdfDocument(source)
     document.close()
     if digest(source)!=original:raise ValueError('PDF changed during page QA')
     receipt=dict(pdf_sha256=original,code_sha256=digest(Path(__file__)),pages=len(records),

@@ -13,18 +13,24 @@
   "time_limit": "00:29:00",
   "registered_maximum_worker_estimate_seconds": 1018.331,
   "pack_code_sha256": "a181def9cc1fb23f3fc99001b7a136fe21885c6f305ad85ebe3b626e6330a033",
-  "state": "submitted_running_not_accepted",
+  "state": "all226records_752modes_prepared;final_PDF_QA_pending",
   "storage": "New large intermediates under PSCRATCH via unchanged project-path link; original75/release_v2 bytes stay preserved. HOME quota38.36/40GiB; final verified local/HOME archival remains a gate, no archive is claimed yet.",
   "anonymous_key_generated": false,
   "human_grades_filled": false,
   "original_pack_states": {
     "0": "COMPLETED22:11",
     "1": "TIMEOUT29:04;8records unaccepted",
-    "2": "running"
+    "2": "TIMEOUT29:29;6records not started; largest4-mode record accepted"
   },
   "retry_job": "61636581_1",
   "retry_rule": "Same frozen worker allocation; verify/skip accepted records and render only the eight unaccepted records. Rejected eight-task array created no job due debug submit-count limit.",
   "pdf_assembly_job": "61636677",
-  "pdf_assembly_dependency": "afterok:61634971_2:61636581_1",
-  "pdf_assembly_state": "pending; full evidence gate precedes private permutation/assembly"
+  "pdf_assembly_dependency": "afterok:61637110",
+  "pdf_assembly_state": "pending; full evidence gate precedes private permutation/assembly",
+  "tail_retry_job": "61637110",
+  "tail_retry_records": 6,
+  "tail_retry_rule": "Terminal manifest only; one record per independent CPU; accepted220records are not rerendered",
+  "accepted_source_records": 226,
+  "accepted_source_modes": 752,
+  "tail_retry_state": "COMPLETED zero_failed"
 }

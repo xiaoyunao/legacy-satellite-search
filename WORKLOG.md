@@ -3,6 +3,23 @@
 ## 2026-11-20
 
 
+### 2026-11-20T09:28Z — all final source materials complete
+
+-61637110 COMPLETED4:54, six independent source-record tasks/zero failed. Exact selected total226records/752retained modes now accepted and synchronized locally; all saved member/source/central/contributor flags pass. Frozen75and two controls remain byte-preserved.
+-61636677 now RUNNING, same dependency owner. Builder must recheck every final source receipt before creating its single private permutation. Large anonymous and held PDFs, full source-pixel/text/ZIP/forms checks, independent all-page render/bounds, anonymous visual overview and durable archive remain pending. No human grades or final readiness claimed.
+-Actual retry is the focused positive smoke test of v14_material_retry. Added bounded PDFium document-cache refresh every100pages for local16GiBRAM; Python parse passes, actual large-file validation follows. Chinese review guide explains one row per unit and response sealing before identities/context are revealed.
+
+
+
+### 2026-11-20T09:20Z — terminal material tail, source-preserving parallel retry
+
+-61636581_1 COMPLETED6:10, all eight missing records accepted; original frozen allocation verified/skipped accepted records.61634971_2 TIMEOUT29:29, but its largest4mode record completed before termination; terminal receipt census has220/226accepted, six never-started records remaining.
+- Registered private terminal worklist with original source/implementation hashes, indices196/154/62/191/9/8.61637110 runs one record per CPU, removing the observed single-worker serial backlog without changing fits or image functions. Initial regular60min request was reduced on the same pending owner to debug29min: the22.4arcmin heavy record already completed; remaining largest radius11.2arcmin(two modes); the five-mode record has maximum5.6arcmin, and the comparable prior retry completes6:10. No duplicate task submission.
+- Same pending assembly61636677 dependency changed from the timed-out owner toafterok61637110; readback confirms the new dependency. All source/permutation/material gates remain active. Local219records/734modes pass source member/native flags; full extent finite fractions≥.9716986, no missing centre/member stamp. These are material checks, not human grades.
+- Added focused retry driver and Chinese final-review guide. Python parse passes; actual retry run is its science-independent smoke test. No final package or durable archive claimed yet.
+
+
+
 ### 2026-11-20T09:12Z — retain completed materials and gate final all-page assembly
 
 - Re-read the native latest Pro messages68fa1336/437262c6; no newer instruction. Original material pack61634971_0 completes22:11; _1 times out29:04 leaving eight unaccepted records. Eight-task retry submission is rejected by debug submit-count policy and creates no job. Registered single frozen pack retry61636581_1 verifies/skips accepted records and renders only the missing eight; _2 continues without duplicate ownership.
