@@ -112,8 +112,8 @@
     "formal_deeper_replay": {
       "pilot_job": "61629992",
       "pilot_acceptance_job": "61630419",
-      "accepted_paired_cases": 18,
-      "shared_latent_populations": 6,
+      "accepted_paired_cases": 144,
+      "shared_latent_populations": 48,
       "spatial_baseline_deeper": [
         39,
         49
@@ -123,8 +123,8 @@
         43
       ],
       "usable_members_baseline_deeper": [
-        132,
-        230
+        1170,
+        1944
       ],
       "three_blank_background_group_counts_baseline": [
         0,
@@ -139,7 +139,7 @@
       "blank_truth_position_matches_in_pilot": 0,
       "full_job": "61630564 COMPLETED1:00:04",
       "full_acceptance_job": "61630992",
-      "full_state": "pending_not_measured",
+      "full_state": "accepted_all144formal_pairs",
       "C_replayed": false,
       "physical_PS1_response_validated": false,
       "state": "accepted_all144formal_pairs",
@@ -158,7 +158,23 @@
         0,
         0.14583333333333334
       ],
-      "registered_gain_screen_passed": false
+      "registered_gain_screen_passed": false,
+      "pilot": {
+        "accepted_paired_cases": 18,
+        "shared_latent_populations": 6,
+        "spatial_baseline_deeper": [
+          5,
+          6
+        ],
+        "highest_DM_correct_baseline_deeper": [
+          5,
+          5
+        ],
+        "usable_members_baseline_deeper": [
+          132,
+          230
+        ]
+      }
     }
   },
   "post_integration_job": "61627306"

@@ -16,5 +16,15 @@
   "state": "submitted_running_not_accepted",
   "storage": "New large intermediates under PSCRATCH via unchanged project-path link; original75/release_v2 bytes stay preserved. HOME quota38.36/40GiB; final verified local/HOME archival remains a gate, no archive is claimed yet.",
   "anonymous_key_generated": false,
-  "human_grades_filled": false
+  "human_grades_filled": false,
+  "original_pack_states": {
+    "0": "COMPLETED22:11",
+    "1": "TIMEOUT29:04;8records unaccepted",
+    "2": "running"
+  },
+  "retry_job": "61636581_1",
+  "retry_rule": "Same frozen worker allocation; verify/skip accepted records and render only the eight unaccepted records. Rejected eight-task array created no job due debug submit-count limit.",
+  "pdf_assembly_job": "61636677",
+  "pdf_assembly_dependency": "afterok:61634971_2:61636581_1",
+  "pdf_assembly_state": "pending; full evidence gate precedes private permutation/assembly"
 }

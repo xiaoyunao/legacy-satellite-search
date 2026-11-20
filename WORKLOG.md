@@ -2,6 +2,16 @@
 
 ## 2026-11-20
 
+
+### 2026-11-20T09:12Z — retain completed materials and gate final all-page assembly
+
+- Re-read the native latest Pro messages68fa1336/437262c6; no newer instruction. Original material pack61634971_0 completes22:11; _1 times out29:04 leaving eight unaccepted records. Eight-task retry submission is rejected by debug submit-count policy and creates no job. Registered single frozen pack retry61636581_1 verifies/skips accepted records and renders only the missing eight; _2 continues without duplicate ownership.
+- Registered61636677 afterok both remaining owners. Actual source/material/old75/control gates precede the one private permutation and PDF assembly. Large outputs remain in registered scratch/final_private until verified durable copies; no draft human review or grade.
+- Added final assembly shell, held every-image pixel validator, independent all-page PDFium render/nonblank/text+object-bounds audit, and final anonymous ZIP readiness finalizer. Actual3page anonymous and5page held pilots pass; actual pilot final-release attempt correctly rejects. Full final package/page/visual/durable-copy gates remain open.
+- Corrected stale mixed pilot/full fields in final_delivery_status: full formal144pairs/48latent populations/hard1170→1944, with pilot values nested separately. No scientific calculation or conclusion changed.
+- Next: accept remaining registered material receipts, assemble exact-source final packets, inspect every anonymous contact sheet plus full-page samples, verify held pages without exposing identity, then archive and deliver once.
+
+
 ### 2026-11-20T08:37Z — accepted science/area/frame/selected-C and final render owners
 
 -61626692COMPLETED1:21,720tiles/source hashes accepted:qualified26886.647579deg²/allordinary28812.390012deg²; qualifiedgross27031.731142before overlap. Area bookkeeping closes unambiguous census sums plus9.736488ambiguity. This is the represented-mask/projection definition, not exact native solid angle or physical-gain footprint.
