@@ -2,6 +2,13 @@
 
 ## 2026-11-20
 
+### 2026-11-20T04:37Z — retain the frozen analysis split in mask classification
+
+-Observedrealmetadata:outsidecensusoriginalfirsttenfieldsallmanifestpilot_eval,whilethealready-frozenfieldledgerassignseveryfifthpilot_dev. Maskinventorypreviouslyusedonlyoriginalrole,somiscalledrejectedcalibrationfieldsunqualified/unknownratherthandevelopment.
+- v14_production_masks.py now uses the analysis ledger only when its manifestSHA matches,retainsmanifest_role,andrejectsconflictingroles. Frozenmanifests,detector,sourceeligibility,actualrastersandgeometrycachekeysunchanged. Newpostwillmeasurefullclassificationcounts;no inventedarea/result.
+- Validation:Pythonparse,twoactualfieldrolesandstale-sourceguard,targetedproductionregistrytests2/2pass. Newhelperdeployedbeforependingpost;underlyingqueuedgeometrymethodsunchanged. Mainaggregateisactivelyreadingactualsourcefiles,notstuckonlock;running-timeincreaseattemptisdeniedbySlurmuserpolicyand1hremains,sofollowactualcohortprogressanduseboundedmanifestrecoveryonlyifneeded.
+
+
 ### 2026-11-20T04:27Z — inspect actual spooled batches and remove a duplicate snapshot
 
 -Rootcause:3-day-old Slurm snapshots retain oldshell bytes,not today's v14_finalize.sh. Actual61470267/61470508bothSHA60ebf1b9…/snapshot; neither includes new historicalproduction/registry/ledger/Ccoverage. Source copies preserved. This would leave the post-check on a stale ledger while repeating the full6,891-field aggregate pass.

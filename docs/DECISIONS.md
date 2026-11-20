@@ -1,5 +1,9 @@
 # Decisions
 
+## 2026-11-20T04:37Z — source-bound development mask labels
+
+The outside-census every-fifth-field calibration split was frozen in the analysis ledger without editing original manifests. Inventory classification now honors that ledger only with matching manifestSHA and preserves both roles; the real first-two-field/stale-ledger regression passes. This corrects labels for already rejected calibration fields; no detector, mask or geometry-cache change. Full counts await the pending closed-source post.
+
 ## 2026-11-20T04:27Z — actual batch-version handoff
 
 The actual Slurm-spooled61470267/61470508batch scripts are byte-identical(SHA60ebf1b9…),bothinvoke snapshot and omit later production/registry/integrated/Ccoverage steps. All registered scans and outsideCwere terminal before the running snapshot started. Preserve61470267; after registering corrected post61627306and rebinding setup61626647,retire only wholly pending duplicate61470508and stale post61625808. Both are CANCELLED with zero elapsed; running work is untouched. New post's executed SHAec75cfac…matches its registered source and includes the missing integration stages plus lock/source/old75 checks. A rejected completed-job dependency created no job; actual accepted C products remain the gate.

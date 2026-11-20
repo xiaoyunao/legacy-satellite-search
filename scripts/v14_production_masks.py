@@ -42,6 +42,15 @@ def roster(table):
         fields=fields,details=details,source_sha256={str(p):sha(p) for p in (table,policy,blocks,metric) if p.is_file()})
 
 
+def analysis_role(original,name,manifest_sha,items):
+    """Use the frozen analysis split without rewriting historical manifests."""
+    roles={item['details'][name]['role'] for item in items
+           if name in item['details'] and item['details'][name].get('manifest_sha256')==manifest_sha
+           and item['details'][name].get('role')}
+    if len(roles)>1:raise ValueError('Conflicting source-bound field analysis roles: '+name)
+    return next(iter(roles),original)
+
+
 def run():
     data=Path(os.environ['LS_SAT_DATA']);OUT.mkdir(parents=True,exist_ok=True)
     old=OUT/'inventory.json'
@@ -67,13 +76,15 @@ def run():
         if m.get('status')!='complete' or m.get('depth')!='base':
             noncomplete[m.get('status','unknown')]+=1;continue
         inputs=m['inputs'];field=m['field'];cfg=m['config'];root=path.parents[3]
-        role=field.get('analysis_role',field.get('role'));name=field['id']
+        original_role=field.get('analysis_role',field.get('role'));name=field['id']
+        manifest_sha=sha(path)
+        role=analysis_role(original_role,name,manifest_sha,proof.get(root,[]))
         state='complete_not_in_qualified_source_roster';accepted=[];failures=[]
         for item in proof.get(root,[]):
             if item['cutoff'] is None:failures.append('no_valid_frozen_cut');continue
             if name not in item['fields']:failures.append('not_in_source_evaluation_field_ledger');continue
             detail=item['details'].get(name,{})
-            if detail.get('manifest_sha256') and detail['manifest_sha256']!=sha(path):
+            if detail.get('manifest_sha256') and detail['manifest_sha256']!=manifest_sha:
                 failures.append('candidate_and_mask_snapshot_differ');continue
             if not math.isclose(float(item['fields'][name]['area_deg2']),m['area_deg2'],rel_tol=1e-10,abs_tol=1e-9):
                 failures.append('source_field_area_differs');continue
@@ -90,9 +101,10 @@ def run():
         cache=name+'-'+hashlib.sha256(json.dumps(key).encode()).hexdigest()[:12]
         raster=m.get('owned_coverage_path',f'cache/{cache}/coverage.npy')
         if not (data/raster).is_file():state='missing_actual_mask'
-        records.append(dict(field=name,manifest=os.path.relpath(path,Path.cwd()),manifest_sha256=sha(path),
+        records.append(dict(field=name,manifest=os.path.relpath(path,Path.cwd()),manifest_sha256=manifest_sha,
             workspace=os.path.relpath(root,Path.cwd()),region=cfg.get('region','south'),survey=inputs.get('census'),
-            role=role,classification=state,geometry=inputs['geometry'],subdivision=cfg['coverage_subdivision'],
+            role=role,manifest_role=original_role,analysis_role_differs_from_manifest=role!=original_role,
+            classification=state,geometry=inputs['geometry'],subdivision=cfg['coverage_subdivision'],
             known_recovery_truth=field.get('truth'),
             raster=raster,apply_ownership=None if 'owned_coverage_path' in m else field.get('ownership'),
             source_effective_deg2=m['area_deg2'],qualified_source_tables=accepted,qualification_diagnostics=sorted(set(failures))))
@@ -100,8 +112,9 @@ def run():
         sources=source_hashes,code_sha256=sha(Path(__file__)),frozen_history_id=history['inventory_id'],
         noncomplete_manifest_states=dict(noncomplete),final_frozen=False,
         scope='Actual completed WCS-derived mask paths, evaluated against original frozen A-base primary policies and field ledgers including zero-peak fields. No stars or peak density define area. Sources/masks on different clocks remain unqualified; no total union area inferred here. Known controls, development, uncalibrated and later-completed masks remain separately inventoried.'))
-    write_csv(OUT/'inventory.csv',[{k:r[k] for k in ('field','manifest','manifest_sha256','workspace','region','role','classification','raster','source_effective_deg2')} for r in records])
+    write_csv(OUT/'inventory.csv',[{k:r[k] for k in ('field','manifest','manifest_sha256','workspace','region','role','manifest_role','classification','raster','source_effective_deg2')} for r in records])
     write_json(OUT/'counts.json',dict(completed_mask_records=len(records),classes=dict(Counter(r['classification'] for r in records)),
+        source_bound_analysis_role_overrides=sum(r['analysis_role_differs_from_manifest'] for r in records),
         gross_record_areas_not_union={k:sum(r['source_effective_deg2'] for r in records if r['classification']==k) for k in sorted({r['classification'] for r in records})}))
     print(Counter(r['classification'] for r in records),flush=True)
 
