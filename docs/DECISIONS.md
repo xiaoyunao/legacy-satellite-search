@@ -1,5 +1,10 @@
 # Decisions
 
+## 2026-11-20 — measure depth gain under matching formal policies
+
+Observed definition mismatch: formal baseline39/144 and legacy matched deeper64/144 have different masks/grids/cuts. Add a fixed deeper research replay using the same accepted native catalogues/potential populations and formal mask/grid, original development A_deepcut7.520695022636638 at0.3group/deg2, g/r limits24/23.5. No fitting of the cutoff, new physical grid or change to discovery production. Preserve the baseline engine/products and legacy matched arms. First18case source/result/mask pilot precedes full144; compare only formal-to-formal arms and retain light/stamp/three-sky/C/PS1limits. This resolves an observed scientific comparison gap rather than growing a parameter search.
+
+
 ## 2026-11-20 — final review regions follow actual masks
 
 Historical batch paths are source identities, not review regions. Bind every qualified record to its own qualified mask hemisphere/census/extension stratum; use empirical within-region A/frozen-cut percentiles only for administrative priority and score strata. Preserve all qualified historical blind modes (the incremental R14 eligibility helper is insufficient), all cross-region packet constituents and original75. Actual10356records bind uniquely to10regions before any draw. Same pending frame owner is released after source-code/config readback; no new draw or detection cut is substituted.

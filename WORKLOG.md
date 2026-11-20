@@ -2,6 +2,13 @@
 
 ## 2026-11-20
 
+### 2026-11-20T05:48Z — pair the deeper arm with the actual formal policy
+
+-Scientific bottleneck: formal baseline39/144 cannot pair with legacy deeper64/144 (different grid/mask/cuts). Freeze an alternative deeper replay of the same144catalogues/48latentpopulations/three skies, formal grid/mask and existing0.3budget A_deepcut7.520695022636638 from the original61.1deg2calibration. Mother limits24/23.5; baselineproduction6.137901unchanged. No new parameter node, extraction/population, C or physicalPS1response.
+-Versioned engine fork differs only19insertions/10deletions, preserving original baseline code/products. Distinct cache/products/arm and input hashes. Registration/configuration recipe agreement, Pythonparse/bashsyntax and explicit old/new diff pass. Same source/config/data and shared-realization/mask/result QA must pass pilot beforefull.
+-Pilot61629992: first6frozen trials×3backgrounds,24allocatedCPUs/three8CPUworkers,debug29min/128G; submitted,notmeasured. Metric is paired formal spatial/DMresponse,selectedmembers and blank behavior, with actual negative/null outcomes retained. Mainline production/review owners untouched.
+-Next: accept18pilot cases, then same144fullreplay only if correct; currentarea and finalproduction/evidence gates remain first operational priorities.
+
 ### 2026-11-20T05:28Z — current production/C/mask inventory accepted
 
 -61627306COMPLETED7:42. Historical ledger10356qualified records/10169provisional positions,all75identities retained;8704records/20362required seeds complete,1652records/2546seeds not attempted. R14increment alone9070records/9007associations remains separate. Source/ledger/C aggregate hashes pass locally (115registry,6ledger,727Cinputs). No result is a confirmed system.

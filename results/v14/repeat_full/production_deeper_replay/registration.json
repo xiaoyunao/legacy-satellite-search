@@ -1,0 +1,60 @@
+{
+  "configuration": {
+    "seed": 481705,
+    "region": "south",
+    "dm": [
+      13.5,
+      22.5,
+      0.25
+    ],
+    "radii_arcmin": [
+      0.5,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "min_snr": 5,
+    "reject_maskbits": [
+      1,
+      5,
+      6,
+      10,
+      19
+    ],
+    "coverage_subdivision": 2,
+    "min_on_fraction": 0.75,
+    "min_off_fraction": 0.6,
+    "peak_seed_floor": 2.0,
+    "background_tile_arcmin": 120,
+    "match_min_arcmin": 2,
+    "match_rh_factor": 1,
+    "match_dm_tolerance": 0.75,
+    "review_budgets_deg2": [
+      0.1,
+      0.3
+    ],
+    "isochrone": "isochrones/des/bressan2012/iso_a12.0_z0.00010.dat",
+    "g_max": 24.0,
+    "r_max": 23.5,
+    "methods": [
+      "A"
+    ]
+  },
+  "cutoff": 7.520695022636638,
+  "width_deg": 1.8,
+  "buffer_arcmin": 100,
+  "source_sha256": {
+    "configs/v14/cohorts/south_ps1/search.yaml": "b6e8c9ca965c14877e5170d501d41bd5fac417bb3b294e388d073d75968b972d",
+    "results/v3/development_groups/all_A/sky_group_policy.json": "597bbebdf8d1b16fb127d1552031689910585005b0562a4f6ace600ef2ef4dbf",
+    "configs/v13/matched/south/matched.yaml": "422f1a57860d18f67e6a8ac6c185650e38b3df0bafab9f17cc8f8182a51d98d8",
+    "results/v14/repeat_full/production_replay/registration.json": "46fbb484ab168b4dbe4f770d0e1cc73f66242c605a8c749893d15cdeb1377e70",
+    "scripts/v14_production_replay.py": "76497905c8f52b7f6682b43a7e2066e02fb44f144d51cf7eb91ab3836feb10d2",
+    "configs/v14_repeat/protocol.yaml": "90f16a722deb5f5cc0d6921097f0161a4f17044437488e6a65607f7993f5e0bb",
+    "configs/v14_repeat/image_fields.csv": "f5eac1b2ae1ba753ee143ce19d344e17be1416b7f59b5dfdd5cfa2242b6a5929"
+  },
+  "code_sha256": "3072819e4afe16676c2cd3755072fb870eca74e45c1510be363eacecd80769b6",
+  "seed": 487430,
+  "scope": "Same144 native catalogues and shared potential populations; deeper research arm on the formal ordinary A grid/all six scales/mask, fixed pre-existing A_deep cutoff7.520695022636638 at0.3group/deg2 development budget. The discovery production policy remains baseline. Scan whole valid control core without truth priors; match afterward. Identical1.8degree core/100arcmin buffer as accepted formal baseline. No extra PS1 catalogue footprint. Pair with formal baseline results only; legacy matched deeper/C results stay separate. No new CCD extraction/population, production area, C fit or physicalPS1response; finite light/stamp/three-sky limitations remain."
+}

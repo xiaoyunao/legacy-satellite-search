@@ -1,0 +1,13 @@
+{
+  "question": "How much does0.5mag deeper selection change A detection under the same formal grid/mask and existing equal-review-budget calibration?",
+  "observed_limitation": "Formal baseline39/144 cannot be paired with legacy matched deeper64/144: grids,masks,kernels and cuts differ. Legacy results stay unchanged.",
+  "design": "Same144accepted native catalogues/48shared IMF populations/three selected control skies; no new CCD extraction or population. Pilot first6frozen trials in all3backgrounds, then full only after source/result/mask QA.",
+  "deep_cutoff": 7.520695022636638,
+  "cutoff_source": "results/v3/development_groups/all_A/sky_group_policy.json",
+  "budget_per_deg2": 0.3,
+  "baseline_cutoff": 6.137901371660258,
+  "success_metric": "Paired formal A spatial/correct-distance response, usable-member stage and blank response; cross-population/background uncertainty. Report any null/negative difference; no threshold fitting.",
+  "limits": "Deeper remains research-only. C/human selection not rerun; finite rendered IMF light/stamp, selected three backgrounds, one distance and physicalPS1response limits remain. No all-sky selection surface or abundance claim.",
+  "baseline_engine_sha256": "76497905c8f52b7f6682b43a7e2066e02fb44f144d51cf7eb91ab3836feb10d2",
+  "deeper_engine_sha256": "3072819e4afe16676c2cd3755072fb870eca74e45c1510be363eacecd80769b6"
+}

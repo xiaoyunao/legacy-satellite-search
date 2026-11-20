@@ -1,0 +1,12 @@
+{
+  "pilot_job": "61629992",
+  "pilot_scope": "first6frozen trials \u00d73existing backgrounds=18; full144only after source/result/mask QA",
+  "state": "submitted_not_accepted",
+  "runner_sha256": "0f75f03b0787af0c0f0a663e2fd9775f98bd68447527b6e0a3d0209270e8f0ff",
+  "registration_sha256": "9064f8747b08ca2f07594b6659e0b5e4e5ba0326c25322f6baebbf1df11a0f36",
+  "protocol_sha256": "57e30f6aaaaacee20b40bdcf7d2966a9402aeaa14b613fe5db281af2bd16b40c",
+  "new_native_catalogues": 0,
+  "new_latent_populations": 0,
+  "physical_PS1_response_validated": false,
+  "C_replayed": false
+}
