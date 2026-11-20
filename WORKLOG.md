@@ -2,6 +2,14 @@
 
 ## 2026-11-20
 
+### 2026-11-20T07:21Z — actual qualified-production benchmark crosscheck
+
+-61632872 COMPLETED13s. Current hashed roster has20targets (original18+DracoII/UrsaMajorII);17centres fall in qualified represented masks,15distances inside main grid and12meet both. Ordinary qualified responses:8/12spatial,7/12retainedDMwithin0.25,4/12highest-representativeDMwithin0.25. All222nearby-mode associations retain own source/rank/geometry and anchor flag. These fixed-roster counts are not population completeness or an independent holdout.
+-DELVE3/4/5have realgr in prior controls but are outside qualified production masks here; do not call missingimaging. DELVE7/SextansII/GeminiI/AquariusIVare covered in-range non-matches. Coma spatiallymatches but misses strict0.25mag retained-mode endpoint; no detector tuning. Outside-distance targets remain distinct from formal-branch misses.
+-Actual mask queries reuse source-bound accepted polygon cache/hash checks on CPU, without vectorizing again. Source/output hashes verify locally; executed source preserved because its descriptive18label is stale against actual20row input. Current code fixes only that string, no repeated science run. README states centre-only/processing/scale/chance-match limits.
+-Observed final-PDF label collision prevented before assembly: saved raster alternative labels are local to source versions; final unique page/evidence numbers identify presentations, without renumbering retained raster labels or rerendering old75. New3page local-label pilot passes exact-pixel/text/ZIP/forms and full cover inspection. All actual final sample/alias/material gates remain pending.
+-Next: current720tile acceptance/frame/selectedC/materials and formal144deeper owners; final one-time review.
+
 ### 2026-11-20T07:14Z — verified evidence reuse and whole-PDF integrity bridge
 
 - Native read_thread reread full latest Pro68fa1336 and adopted437262c6; no newer advice or priority change. Actual selected-C registration61632493 waits for current-area/frame owner, not a second discovery scan.

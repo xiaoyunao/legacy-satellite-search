@@ -106,15 +106,19 @@ def build(material_plan):
         panels=[];sources=[]
         for j,key in enumerate(sorted(alternatives),1):
             origins=alternatives[key];mode=origins[0]
-            panels.extend(dict(panel,alternative_label=f'alternative {j:02d}') for panel in mode['panels'])
-            sources.append(dict(alternative_label=f'alternative {j:02d}',origins=origins))
+            # Saved rasters already carry local neutral alternative labels.
+            # Do not relabel them with a conflicting global alternative number.
+            # Unique PDF page/evidence numbers identify each presentation.
+            panels.extend(mode['panels'])
+            sources.append(dict(retained_view=j,evidence_numbers=[len(panels)-1,len(panels)],origins=origins))
         if not panels:raise ValueError('No observed evidence for a selected unit')
         assembly.append(dict(anonymous_id=alias,panels=panels))
         held.append(dict(anonymous_id=alias,**{k:v for k,v in unit.items() if k!='modes'},alternatives=sources))
     for name,digest in inputs.items():
         if sha(Path(name))!=digest:raise ValueError('Evidence changed during plan assembly')
     OUT.mkdir(parents=True)
-    write_json(OUT/'anonymous_plan.json',dict(pilot=False,final_population_frozen=True,units=assembly))
+    write_json(OUT/'anonymous_plan.json',dict(pilot=False,final_population_frozen=True,
+        local_alternative_labels=True,units=assembly))
     write_json(OUT/'held_context_key.json',dict(units=held,publicly_reconstructible_permutation=False,
         release_only_after_actual_responses_sealed=True))
     proof=dict(inputs=inputs,assembly_sha256=sha(OUT/'anonymous_plan.json'),

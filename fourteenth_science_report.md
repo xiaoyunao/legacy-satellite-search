@@ -1,5 +1,10 @@
 # DR11 search and selection response
 
+## 2026-11-20T07:21Z — ordinary production benchmark association
+
+The actual20-object registered roster has17centres inside qualified represented masks;15targets lie within the formal main-distance interval and12meet both conditions. Eight of those12have an ordinary qualified group-anchor spatial match, seven retain a distance mode within0.25mag, four have a highest blind representative within0.25mag. Keep all222nearby-mode/source links. This is a descriptive fixed-roster crosscheck, not population completeness or independent validation. DELVE3/4/5realgr control recoveries are separate from their exclusion from this qualified mask; no coverage failure is inferred. Four covered/in-range non-matches are DELVE7,SextansII,GeminiI/DELVE8,AquariusIV; Coma has spatial/broader-distance support but no retained strict0.25mag mode. No search or threshold change follows this audit.
+
+
 ## 2026-11-20 14:57 CST — accepted evidence and paired formal-depth pilot
 
 Atlas/efficiency tail61629183 completes22:49; current atlas binds6861R14rasters and all four scientific PNGs pass full-raster layout inspection. Sidecar captions distinguish coarse/all-scope coverage, machine contexts and legacy catalogue/native pilot curves from qualified area, human grades and physicalPS1gain.

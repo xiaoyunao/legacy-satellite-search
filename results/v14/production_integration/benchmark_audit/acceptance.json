@@ -1,0 +1,11 @@
+{
+  "job": "61632872",
+  "state": "COMPLETED",
+  "elapsed": "00:00:13",
+  "source_outputs_verified_locally": true,
+  "available_aggregate_inputs_verified": 5,
+  "remote_only_polygon_index_inputs": 104,
+  "source_code_sha256": "c9d2c91ed36b6b11468ec79a9fc99d1df9ef4dcde908743dd0fff898779f023f",
+  "actual_current_roster": 20,
+  "no_forced_fit": true
+}

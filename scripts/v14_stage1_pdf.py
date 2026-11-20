@@ -57,6 +57,8 @@ def build(source,output):
         'remain in the held second phase until actual responses are sealed.',
         'Previously exposed cases are retained; this does not restore prospective blindness.',
     ]
+    if plan.get('local_alternative_labels'):
+        lines.append('Local alternative labels can recur across source versions. Refer to unique page/evidence numbers.')
     doc.setFont('Helvetica',11)
     for i,line in enumerate(lines):doc.drawString(margin,height-90-23*i,line)
     doc.showPage();index=[]
