@@ -1,5 +1,12 @@
 # Plan
 
+## 2026-11-20T03:51Z — close production and preserve measured PS1 limit
+
+1. Follow existing outside-C owners, acceptance61623103, existing global snapshots and post-integration61625808. Register final WCS masks/Ccoverage after source convergence; complete union/identity/funnel before sampling.
+2. Accept cache shards61624957 (0/1complete;2/3running at last check), same74case evidence61623753, then final selected new-case evidence and one final human package.
+3. Native PS1 blank and finite-kernel mean-signal execution are measured. The bright consistency check fails despite pixel flux conservation. Preserve61625886diagnosis and physical-response=false; no fitted correction, recipe/threshold tuning or added physical grid. Original144 and supported finite-light/component-loss conclusions remain unchanged.
+4. Final generic response seal is implemented and draft rejection verified; no actual grades/seal/reveal. Final all-source/material/sampling/privacy/page gates remain open; no manuscript.
+
 ## 2026-11-20T03:39Z — remaining production/evidence gates
 
 1. Registered scan terminal gate is passed. Follow only existing outside C owners 61470256/61470266, acceptance61623103 and global release61470267/61470508; diagnose actual terminal gaps before any retry. Then freeze the common-clock historical catalogue, masks/union, identities, C coverage and funnel.

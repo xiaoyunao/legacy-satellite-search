@@ -38,8 +38,11 @@
   },
   "retry": {
     "job": "61625458",
-    "state": "submitted_not_accepted",
+    "state": "COMPLETED_operator0_bright_unit_check_failed",
     "source_sha256": "ee07e2fb706084a5379ae6757cd09c3e3b5dc0b76f531d1e8a22dff3c893ffc7",
-    "fix": "Put linear image and native skycell header in primary HDU; no detector recipe/cut change."
+    "fix": "Put linear image and native skycell header in primary HDU; no detector recipe/cut change.",
+    "Slurm_elapsed": "00:08:21",
+    "read_only_diagnostic_job": "61625886",
+    "read_only_diagnostic_state": "COMPLETED_42s_pixel_flux_preserved_bright_consistency_not_validated"
   }
 }

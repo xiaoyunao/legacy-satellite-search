@@ -23,5 +23,14 @@
     "plots_sha256": "fd170c00ac4a6a4800c0ed0b463549c19037cca70835aeecd0f2711e034686fd",
     "numeric_review_sha256": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
     "scope": "Second actual raster QA repair wraps context CMD titles. Reuse source-bound saved fits and full-extent pixels; no C optimization or scientific change."
+  },
+  "pending_resource_time_amendment": {
+    "before": "01:30:00",
+    "after": "01:00:00",
+    "all_tasks_pending": true,
+    "same_original_owner": true,
+    "maximum_registered_single_worker_estimate_minutes": 37.35,
+    "science_or_sampling_changed": false,
+    "reason": "Measured22-mode7:25 and largestextent4:07 pilots bound the frozen pack estimates; use a one-hour pending backfill request with unchanged cases/4workers/64G."
   }
 }

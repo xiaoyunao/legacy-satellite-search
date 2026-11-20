@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-20T03:43:32.294482+00:00",
+  "same_original_array_owners": true,
+  "original_time_limit": "04:00:00",
+  "pending_regular_time_limit": "01:00:00",
+  "single_debug_task": "61470256_2",
+  "debug_time_limit": "00:29:00",
+  "pending_selected_seed_counts": {
+    "south_outside_census": [
+      24,
+      79,
+      190,
+      10,
+      28,
+      70
+    ],
+    "south_outside_census_extension": [
+      62,
+      31,
+      407
+    ]
+  },
+  "completed_resource_evidence": {
+    "main_seeds_101": "00:10:20",
+    "extension_seeds_510": "00:23:07",
+    "extension_seeds_459": "00:27:20"
+  },
+  "source_sha256": {
+    "south_outside_census": "de3c38584500965597c589789c2bd3f2d52473d8d92466d82150b904fe7b1af3",
+    "south_outside_census_extension": "9871030a0b2f4d02f34bd1d1e0afe7f63da88798b5b6c1337c51dd9c84b076c5"
+  },
+  "scope": "Bound pending time requests using exact frozen seed cardinalities and successful same-source throughput. No running task changed, duplicate submitted, scientific input/threshold/implementation/seed changed or Nice priority altered. Same original array dependencies and membership outputs remain. A real timeout would be retried only from remaining manifest work."
+}

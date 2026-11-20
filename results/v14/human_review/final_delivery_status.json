@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-20T03:39:03.315857+00:00",
+  "updated_utc": "2026-11-20T03:51:09.239526+00:00",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -101,7 +101,13 @@
       "retry_job": "61625458",
       "state": "submitted_not_accepted",
       "physical_response_validated": false,
-      "Pdet_measured": false
+      "Pdet_measured": false,
+      "retry_state": "COMPLETED_operator0_bright_unit_check_failed",
+      "bright_consistency_bands_passing": 1,
+      "bright_consistency_bands_tested": 5,
+      "read_only_diagnostic_job": "61625886",
+      "pixel_added_flux_conservation_max_abs_error": 1.1e-06
     }
-  }
+  },
+  "post_integration_job": "61625808"
 }

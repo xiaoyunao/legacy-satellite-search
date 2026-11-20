@@ -38,5 +38,24 @@
     7
   ],
   "final_area_claimed": false,
-  "state": "submitted_not_complete"
+  "state": "submitted_not_complete",
+  "single_task_QOS_amendment": {
+    "task": "61624957_1",
+    "underlying_job": "61625577",
+    "before": "regular_1",
+    "after": "debug",
+    "time_limit": "00:29:00",
+    "same_owner_no_duplicate": true,
+    "other_tasks_unchanged": true,
+    "reason": "Measured pilot4:57; use available bounded debug CPU for same immutable geometry while production C waits."
+  },
+  "bounded_debug_tasks": [
+    1,
+    2,
+    3
+  ],
+  "shard1_state": "COMPLETED",
+  "shard1_elapsed": "00:04:48",
+  "same_original_array_and_dependencies": true,
+  "resource_scope": "Use measured <5minute geometry shards in bounded debug when available. No new task/owner or geometry/science change; untouched shards retain regular QOS."
 }

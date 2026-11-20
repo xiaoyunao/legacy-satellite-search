@@ -1,0 +1,52 @@
+{
+  "job": "61625458",
+  "operator_returncode": 0,
+  "Slurm": "COMPLETED",
+  "Slurm_elapsed": "00:08:21",
+  "operator_elapsed_s": 460.3484194850025,
+  "input_sha256": "45f06f720f04837e826887ea6017c420c31b28ba92e0844bc9970377f4f769b1",
+  "registered_bright_offset_limit_arcsec": 0.2,
+  "registered_bright_mag_residual_limit": 0.05,
+  "bright_checks": [
+    {
+      "band": "g",
+      "matched": true,
+      "offset_arcsec": 0.18599041803158875,
+      "mag_residual": 0.16298675537109375,
+      "passed": false
+    },
+    {
+      "band": "r",
+      "matched": true,
+      "offset_arcsec": 0.17685013823912166,
+      "mag_residual": -0.04924810791015588,
+      "passed": true
+    },
+    {
+      "band": "i",
+      "matched": true,
+      "offset_arcsec": 0.1817291881317896,
+      "mag_residual": 0.0886822509765608,
+      "passed": false
+    },
+    {
+      "band": "z",
+      "matched": true,
+      "offset_arcsec": 0.1770513343024132,
+      "mag_residual": 0.06565502929687383,
+      "passed": false
+    },
+    {
+      "band": "y",
+      "matched": true,
+      "offset_arcsec": 0.2524577802011818,
+      "mag_residual": -0.002360565185547614,
+      "passed": false
+    }
+  ],
+  "bright_unit_check_passed": false,
+  "physical_PS1_response_validated": false,
+  "Pdet_measured": false,
+  "read_only_diagnostic_job": "61625886",
+  "scope": "Actual technical execution accepted, registered bright-unit consistency rejected. Four deterministic finite-kernel mean-signal probes in one acquired skycell are not satellite realizations, a completeness measurement or a physical LS-minus-PS1 comparison. No empirical magnitude correction is applied."
+}

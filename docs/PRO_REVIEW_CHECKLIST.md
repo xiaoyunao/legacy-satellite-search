@@ -1,5 +1,12 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-20T03:51Z — actual PS1 consistency outcome
+
+- [x] Mean-signal operator61625458completed; original failed FITS attempt preserved.
+- [x] Predeclared bright check honestly rejected; read-only61625886confirms input flux conservation and records centroid/photometric mismatch.
+- [ ] PhysicalPS1response/canonical/faint-blue/condition transfer remains unvalidated. No physical LS–PS1 gain or abundance claim.
+- [ ] Full production/C/area and final selected evidence/probability sample/privacy-page gates still required before the single user review.
+
 ## 2026-11-20T03:39Z — current release gates
 
 - [x] All registered scans terminal; no uncovered retry.

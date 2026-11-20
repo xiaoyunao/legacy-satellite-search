@@ -29,3 +29,7 @@ For newly drawn final audit cases, keep the anonymous-to-position key in ignored
 - Required C modes bind to the same qualified records and all selected images/evidence exist.
 - PDFs, standalone anonymous ZIP and blank forms pass integrity, anonymity, image and full-page QA; unresolved evidence is recorded rather than fabricated.
 - Release one final version and ask for one concentrated grading session. Machine triage does not fill user grades or establish a new stellar system.
+
+## Project-wide sealing implementation
+
+`scripts/v14_stage1_seal.py` accepts the new neutral A-numbered form, rather than the historical 35-case tool. It requires both final release gates, exact released PDF/ZIP/form hashes and one actual user assessment for every released unit; creates an exclusive immutable seal and never fills grades or reveals context. The actual private layout pilot is correctly rejected, with no seal written. This is preparation only: no final materials are ready and no human responses have been supplied.

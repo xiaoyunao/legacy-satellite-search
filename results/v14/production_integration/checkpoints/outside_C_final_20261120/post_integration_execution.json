@@ -1,0 +1,8 @@
+{
+  "job": "61625808",
+  "dependency": "afterok:61470267:61470508:61623103",
+  "script": "scripts/v14_post_outside_prepare.sh",
+  "script_sha256": "2b3f76dcd4bcb35607e97b93c5b02ec5a2b36d462e3a6df7db1dcaa518f05ba7",
+  "state": "submitted_not_complete",
+  "scope": "Wait for both existing global snapshot owners and exact outside-C acceptance; validate terminal/source/old75 invariants, refresh C seed coverage and register current WCS masks. No duplicate catalogue fitting, final area claim, sampling or human grades."
+}

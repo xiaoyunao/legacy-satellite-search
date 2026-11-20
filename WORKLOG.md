@@ -2,7 +2,17 @@
 
 ## 2026-11-20
 
+### 2026-11-20T03:51Z — actual native PS1 consistency rejection and final sealing preparation
+
+-61625458COMPLETED8:21/operator0,20calibrator-band measurements. Only r passes predeclared0.05mag/0.2arcsec bright bounds. Read-only61625886COMPLETED42s verifies finite injected patch flux to1.1e−6;grizcentroids~−0.5pixel,corrected PSFfluxratios0.861/1.046/0.922/0.941/1.002. Preserve failure/finite-kernel/local-PSF/aperture/coordinate limits;no correction or physicalPdet.
+- Existing Cmain3/7andextension4/5advance;cache1COMPLETED4:48,2/3running after measured-resource QOS amendment; original owners/inputs/limits/science retained. Post-integration61625808registered after both originalglobals and exactCacceptance, no duplicate fits. Old75time60minstillpending;no manual review.
+- Files:PS1audit/proofs,post-sourceCcoverage/WCSregistrationwrapper,generic final-stage response seal,protocol,memory/status/decisions/plan/report/deliverygates,resource receipts. Validation:Pythonparse/bashsyntax,actual Slurm/read-onlypixels,real private draft rejected without seal. Original75/numeric review hashes preserved.
+- Next:finish existingC/cache/materials,common-clockfinalproduction/union/sampling/evidence/privacy-pageQA;one finalhumanrelease. No extra PS1recipe tuning/newphysicalgrid/manuscript.
+
+
 ### 11:39 CST — actual PDF/context QA, cache warming and PS1 mean-signal attempt
+
+- Follow-up: exact pending C seeds are main24/79/190/10/28/70 and extension62/31/407; completed510-seed/23:07 and459/27:20 runs justify one-hour pending limits. Same owners retained; main24-seed task2 and one cache shard use bounded debug. Main3/7 and extension4/5 start after amendments. Old75packs pending limit90→60min based registered max37.35worker-minute estimate; no science/source/Nice change. Post-snapshot Ccoverage/mask-registration61625808 follows both existing globals and outsideacceptance. Generic final-stage sealing tool rejects actual private draft without writes; final human grades/release still absent.
 
 - Observed clipped CMD titles in actual private PDF/context rasters; two narrow plotting repairs preserve all saved fits and old outputs.61624220COMPLETE46s;61625386COMPLETE1:36. Revised context/phase-one rasters inspected. Exact74case batch61623753 held only while all tasks pending, hashes verified, released same owner; no remaining user hold. Numeric review.py unchanged.
 - Geometry main-env61623948FAILEDmissingShapely; existing area-env61624254COMPLETED3:15. Registered8341unique ordinary masks,6269cachehits/2072new. Pilotvector61624433COMPLETED4:57;remaining61624957submitted. No final qualification/union claim.

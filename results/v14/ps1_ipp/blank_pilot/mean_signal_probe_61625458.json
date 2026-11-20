@@ -1,0 +1,213 @@
+{
+  "job": "61625458",
+  "returncode": 0,
+  "elapsed_s": 460.3484194850025,
+  "config_sha256": "d644937ce9dbe9de7b0f873693b340d10063da7e344794eff7350c6fd0bf62a8",
+  "runner_sha256": "ee07e2fb706084a5379ae6757cd09c3e3b5dc0b76f531d1e8a22dff3c893ffc7",
+  "template_sha256": "4fa53e8a963933310941ae5c43da4391e782a3760320fa61bd5c940e4ffb201b",
+  "source_truth_sha256": "92469c4711efc34cf1fdaac47e22a061381c380b11f90e2363a45a365d3bd911",
+  "generated_images": [
+    {
+      "band": "g",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/mean_signal/61625458/calibration-g.fits",
+      "sha256": "6ae9480e75069e899c21fcc1d09379b988aa6d8d23dba5dab697a852bd34a43e",
+      "input_sha256": "7751b5e0095bc82bf7b3d6aded7899c09aca62adca346989ef306ba2a54a7421",
+      "PSF_sha256": "67f0de8c44af778ed588c9d438d36c6ebedc14f4e761135a763c98b382b0e55a"
+    },
+    {
+      "band": "r",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/mean_signal/61625458/calibration-r.fits",
+      "sha256": "87c193b45ee06983fb95163936725da706bd6363802d17c63ba7554b076ee94a",
+      "input_sha256": "574fc9602b36de4425c48987583b6e04f9ff95e14b3dfc4ed7ef8ebf96a2b000",
+      "PSF_sha256": "b07ab624e06e4085aed6c07325e89e77d97d6ed562d728a3fbaafdde61cd2c0a"
+    },
+    {
+      "band": "i",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/mean_signal/61625458/calibration-i.fits",
+      "sha256": "041767b1d49eb9b3f4295045804c56e39f45e2e94b893e4f120bb3c03c6a03f7",
+      "input_sha256": "bac1c3afb6aa5f9bc60ccd3c9614f291600844582d5fc5bb4bc36373a6e89d63",
+      "PSF_sha256": "7937878e4ab0f0ea65017ca2d0cac71f3c20adcce9194f9e8f8e60c0508b84fa"
+    },
+    {
+      "band": "z",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/mean_signal/61625458/calibration-z.fits",
+      "sha256": "1d19f7af43b5dfba678fc70f2f57aa371b9189fe6b8a342867a8883614196308",
+      "input_sha256": "62583f220773e59b35da41379849af2b9f85b309d35c096adb1a6105363ddb05",
+      "PSF_sha256": "9f43ac87dc52ff0834d648e6f364944915e879ce9de91f90613b65f54331f927"
+    },
+    {
+      "band": "y",
+      "path": "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_operator/mean_signal/61625458/calibration-y.fits",
+      "sha256": "fdef1bdc87210f089c54e59354f1034e966fdda6c47ebd72729ed72ef201a5f3",
+      "input_sha256": "c5ed614278b718901241a0c2d562e9322df445f029c520e3d85cae1eea93cd3d",
+      "PSF_sha256": "8b87dbe1335a6a57d6c5d4c5e27b6836c6fb57cfaa158f1df6e34e3fab63ea65"
+    }
+  ],
+  "measurements": [
+    {
+      "band": "g",
+      "target_observed_pixel_frame_g": 20.0,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.18599041803158875,
+      "native_minus_finite_kernel_mag": 0.16298675537109375
+    },
+    {
+      "band": "g",
+      "target_observed_pixel_frame_g": 22.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.19300239693222804,
+      "native_minus_finite_kernel_mag": null
+    },
+    {
+      "band": "g",
+      "target_observed_pixel_frame_g": 23.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.1650707043291146,
+      "native_minus_finite_kernel_mag": 0.0992584228515625
+    },
+    {
+      "band": "g",
+      "target_observed_pixel_frame_g": 24.0,
+      "matched": false,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": null,
+      "native_minus_finite_kernel_mag": null
+    },
+    {
+      "band": "r",
+      "target_observed_pixel_frame_g": 20.0,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.17685013823912166,
+      "native_minus_finite_kernel_mag": -0.04924810791015588
+    },
+    {
+      "band": "r",
+      "target_observed_pixel_frame_g": 22.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.1876569570357325,
+      "native_minus_finite_kernel_mag": -0.3496078338623043
+    },
+    {
+      "band": "r",
+      "target_observed_pixel_frame_g": 23.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.30034340195433273,
+      "native_minus_finite_kernel_mag": -0.11726797485351526
+    },
+    {
+      "band": "r",
+      "target_observed_pixel_frame_g": 24.0,
+      "matched": false,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": null,
+      "native_minus_finite_kernel_mag": null
+    },
+    {
+      "band": "i",
+      "target_observed_pixel_frame_g": 20.0,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.1817291881317896,
+      "native_minus_finite_kernel_mag": 0.0886822509765608
+    },
+    {
+      "band": "i",
+      "target_observed_pixel_frame_g": 22.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.19300239693222804,
+      "native_minus_finite_kernel_mag": -0.4062518310546892
+    },
+    {
+      "band": "i",
+      "target_observed_pixel_frame_g": 23.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.1650707043291146,
+      "native_minus_finite_kernel_mag": 0.5753613281249983
+    },
+    {
+      "band": "i",
+      "target_observed_pixel_frame_g": 24.0,
+      "matched": false,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": null,
+      "native_minus_finite_kernel_mag": null
+    },
+    {
+      "band": "z",
+      "target_observed_pixel_frame_g": 20.0,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.1770513343024132,
+      "native_minus_finite_kernel_mag": 0.06565502929687383
+    },
+    {
+      "band": "z",
+      "target_observed_pixel_frame_g": 22.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.19300239693222804,
+      "native_minus_finite_kernel_mag": 0.14065579223632696
+    },
+    {
+      "band": "z",
+      "target_observed_pixel_frame_g": 23.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.1650707043291146,
+      "native_minus_finite_kernel_mag": 0.27927998352050665
+    },
+    {
+      "band": "z",
+      "target_observed_pixel_frame_g": 24.0,
+      "matched": false,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": null,
+      "native_minus_finite_kernel_mag": null
+    },
+    {
+      "band": "y",
+      "target_observed_pixel_frame_g": 20.0,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.2524577802011818,
+      "native_minus_finite_kernel_mag": -0.002360565185547614
+    },
+    {
+      "band": "y",
+      "target_observed_pixel_frame_g": 22.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.19300239693222804,
+      "native_minus_finite_kernel_mag": 0.1362979583740227
+    },
+    {
+      "band": "y",
+      "target_observed_pixel_frame_g": 23.5,
+      "matched": true,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": 0.1650707043291146,
+      "native_minus_finite_kernel_mag": 0.2967002563476555
+    },
+    {
+      "band": "y",
+      "target_observed_pixel_frame_g": 24.0,
+      "matched": false,
+      "blank_counterpart_within_match_radius": false,
+      "separation_arcsec": null,
+      "native_minus_finite_kernel_mag": null
+    }
+  ],
+  "source_photon_noise_added": false,
+  "variance_covariance_mask_unchanged": true,
+  "physical_PS1_response_validated": false,
+  "Pdet_measured": false,
+  "scope": "Four isolated finite-kernel mean-signal calibrators in one acquired real background. Observed pixel-frame colours use one main-sequence template row; no distance, luminosity function or satellite population is inferred. Fixed integer-pixel centres avoid a new interpolation model. Keep actual background/variance/covariance/masks, and do not invent a Poisson conversion for coadd data units. Source photon noise, full PSF wings, field dependence, final catalogue calibration, primary selection and physical response are not validated. This preflight cannot measure completeness, a physical Pdet or LS-minus-PS1 gain."
+}

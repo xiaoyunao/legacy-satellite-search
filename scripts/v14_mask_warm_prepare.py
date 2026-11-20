@@ -5,6 +5,7 @@ cache key is independent of qualification, so warming does not freeze an area.
 """
 from collections import Counter
 from contextlib import redirect_stdout
+import argparse
 import io
 import json
 import os
@@ -14,7 +15,7 @@ from scripts.v14_production_masks import run as inventory
 from scripts.v14_mask_tiles import prepare,cache_key
 
 
-def main():
+def main(receipt=Path('results/v14/production_integration/masks/warm_registration_20261120.json')):
     if not os.getenv('SLURM_JOB_ID'):raise RuntimeError('Allocated CPU required')
     inventory()
     capture=io.StringIO()
@@ -24,7 +25,7 @@ def main():
     m=json.loads(registration.read_text());cache=Path(m['cache'])
     keys=Counter(cache_key(r,m) for r in m['records'])
     missing=[k for k in keys if not (cache/(k+'.json')).is_file()]
-    write_json(Path('results/v14/production_integration/masks/warm_registration_20261120.json'),dict(
+    write_json(receipt,dict(
         job=os.environ['SLURM_JOB_ID'],registration=str(registration),registration_sha256=sha(registration),
         records=len(m['records']),unique_geometry_keys=len(keys),new_geometry_keys=len(missing),
         duplicate_missing_keys=sum(keys[k]>1 for k in missing),cached_keys=len(keys)-len(missing),
@@ -32,4 +33,7 @@ def main():
     print(registration)
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--receipt',type=Path,default=Path('results/v14/production_integration/masks/warm_registration_20261120.json'))
+    main(parser.parse_args().receipt)

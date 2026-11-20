@@ -1,5 +1,9 @@
 # Decisions
 
+## 2026-11-20T03:51Z — native PS1 preflight boundary
+
+Native PS1 mean-signal61625458 completes8:21/operator0, but the registered bright-unit check fails (only r passes both bounds). Bright grizy magnitude residuals are +0.163,−0.049,+0.089,+0.066,−0.002mag. Read-only61625886 completes42s: finite-patch added/declared flux is conserved to1.1e−6 across20band/calibrator combinations; griz centroids are approximately−0.5pixel in each axis. The discrepancy is therefore not a gross nanomaggy/exposure or asinh-flux scaling loss. Finite/global PSF representation, pixel-coordinate convention and local aperture/shape response remain unresolved; do not fit a compensating offset or promote these probes into physical PS1 trials. Stop parameter/recipe tuning in this technical branch; retain its measured boundary while closing production/evidence.
+
 ## 2026-11-20T03:39Z — evidence repairs and reusable geometry
 
 Actual three-page PDF QA found a clipped background-CMD title; held all still-pending evidence tasks, wrapped phase-one title, inspected the revised raster/PDF, then found and corrected the same issue in held context. Saved-mode fits and numerical review engine are unchanged. The exact original74case indices remain; amended implementation hashes and both repairs/releases are recorded in frozen75_pdf_layout_amendment.json. Do not alter render sources during execution.
