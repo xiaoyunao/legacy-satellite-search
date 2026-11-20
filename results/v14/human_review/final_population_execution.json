@@ -1,10 +1,19 @@
 {
   "job": "61628955",
   "dependency": "afterok:61626692",
-  "state": "submitted_not_frozen_or_drawn",
+  "state": "same_pending_owner_released_after_current_source_binding_QA",
   "runner": "scripts/v14_final_population.py",
-  "runner_sha256": "6dbc4bdb93a43666a190f8fd4da9aa72f6bf9912924fc3cd0aab3479aff4bc4d",
+  "runner_sha256": "f3a23017b9515d42a9c2d38e6a58723693d0add29ac78780653a0953514e36c9",
   "plan": "configs/v14_review_preparation/final_population.json",
-  "plan_sha256": "dbb76f8ca7736d9e3736e053f44894975b5208136e3ed10aa581a411243fb9ef",
-  "scope": "Source-bound full production review frame after actual720-tile acceptance, then registered SRSWOR. Original75 certainty, five compact low-known-context priorities per source region, two remaining units per region/quantile bin with positive pi. Bounded5arcmin maxpairwise packets retain all positions/source modes and crosspacket adjacency. All new selection keys private; no anonymous permutation, C fit, user grade or final release."
+  "plan_sha256": "7f7175404dc701656f6fad967ea8ee7ecb5f1ddf6e253335809ed3e583b6f108",
+  "scope": "Source-bound full production review frame after actual720-tile acceptance, then registered SRSWOR. Original75 certainty, five compact low-known-context priorities per source region, two remaining units per region/quantile bin with positive pi. Bounded5arcmin maxpairwise packets retain all positions/source modes and crosspacket adjacency. All new selection keys private; no anonymous permutation, C fit, user grade or final release.",
+  "pre_execution_correction": "No frame/draw exists. Historical cohort labels may be batch paths, and the imported production eligibility helper was R14-only. Use source-bound qualified mask hemisphere/census/extension regions and all qualified historical blind modes. Rank regional A/frozen-cut empirical percentiles. Same pending owner held before deployment; full current source binding QA awaits existing post inventory. Original sampling seed, quotas, geometry and 75certainty unchanged.",
+  "actual_region_binding_QA": {
+    "qualified_records": 10356,
+    "matched_exactly_one_region": 10356,
+    "regions": 10,
+    "historical_blind_modes_retained": 2544,
+    "source_mask_inventory_sha256": "ca7df7d53f3d8379031aec46e000c4ccd777fdcb0f2ca1e35dbdcd82f0a12789",
+    "original_quota_seed_geometry_unchanged": true
+  }
 }

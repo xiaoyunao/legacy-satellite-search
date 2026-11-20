@@ -1,23 +1,23 @@
 {
   "inputs": {
-    "results/v14/production_integration/manifest.json": "f82c626c54d33241f74d38338066d7ce7310541772eb14dbbb2409a0402fb20a",
-    "results/v14/production_integration/eligible_record_inventory.csv": "875d14eafa41c7258ae22881764166017227e1375406efaca020e2779b6c0af8",
-    "results/v14/catalogue/manifest.json": "3a4414e9a0227bf94a770b698898b63b6beb1ef820075069beded04d99562ed6",
-    "results/v14/catalogue/candidate_modes.csv": "3dd3f3528ff7e0e14672eda338570bed779ba4f0472dc58484dffdcf9e44aa5a",
-    "results/v14/catalogue/candidate_catalogue.csv": "0dc8e25d2849d5cab48a33a1a1efe0f12ac3f55a5e8b98c47bb1c1fd31858298",
+    "results/v14/production_integration/manifest.json": "fa14fae217b878d7e7e7645a53810abd7b4302c5c5f1001f516a2a7b0ebaf125",
+    "results/v14/production_integration/eligible_record_inventory.csv": "64ce092b42373e4de9a90a189c8b7bf374ef0978bd0e89d14afbf781d8e4bae9",
+    "results/v14/catalogue/manifest.json": "fc080439fd6dbb277bbbbedcd7ac32cc10bcf799d8bd7dcae40ac80460772242",
+    "results/v14/catalogue/candidate_modes.csv": "5dc84160760ef0201e6a5d6f36473060e1470b798cb0face07bcefb3567b55bc",
+    "results/v14/catalogue/candidate_catalogue.csv": "4b557deac2cf3cce57034447cd36474bdefb7ddbc246ffe4994135350704c5d5",
     "results/v14/shortlist/cases.csv": "e8b6902fd7faf9984e5fca2534e688d44b7a7083e5dfdf0be2971d08e1585d0b"
   },
   "code_sha256": "9ae25e6eaa9808e0a0d6ab8fb07fdfadbca3f92fa708fe40f211890615c4844a",
-  "qualified_records": 9576,
-  "provisional_positions": 9403,
-  "records_with_successful_bound_C": 7924,
+  "qualified_records": 10356,
+  "provisional_positions": 10169,
+  "records_with_successful_bound_C": 8704,
   "frozen75_verified_current_identities": 75,
   "C_states": {
-    "available_modes_complete_required_seed_audit_pending": 7924,
+    "available_modes_complete_required_seed_audit_pending": 8704,
     "no_bound_complete_mode": 1652
   },
   "final_production_frozen": false,
-  "records_near_known_positions": 609,
+  "records_near_known_positions": 757,
   "context_scope": "Angular<=30arcmin known-position context is preserved separately from position-and-distance known-system matching. Neither proximity nor a galaxy ellipse proves membership or classification.",
   "scope": "Qualified discovery records only, reconciled with the existing complete-link sky/DM/scale rule. Nearby incompatible hypotheses remain linked in the 5-arcmin table; these are provisional positions, not final human-review units or physical discoveries. C rows inherit the catalogue source/seed binding; a completed available row is not certification that every required seed was run. Historical raster-area union, terminal search completion, seed completeness, source-level image QA and final review-unit freeze remain gates. Frozen 75 identities are retained with empty user grades; never put this identity crosswalk in an anonymous archive."
 }

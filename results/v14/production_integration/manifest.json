@@ -107,14 +107,18 @@
     "results/v14/discovery/south_des/main/sky_group_policy.json": "59794f9ce75e30ad5af2f2bb96f50da6c6a166d6e31a21e94aa17f1adbdab76c",
     "results/v14/discovery/south_des_extension/main/sky_group_candidates.csv": "3ec21c938599b263c626197d3eeb709d67e2c5e919180ee058c4837e7409f0ad",
     "results/v14/discovery/south_des_extension/main/sky_group_policy.json": "518da078e2eabf6357ebf3bacada6a71bf2269faf4d41d53fca7834adfa7f029",
+    "results/v14/discovery/south_outside_census/main/sky_group_candidates.csv": "de3c38584500965597c589789c2bd3f2d52473d8d92466d82150b904fe7b1af3",
+    "results/v14/discovery/south_outside_census/main/sky_group_policy.json": "b60b2e4a3e74d14ea617d8deaad9bfff1dd79fe8b4bfe5ea59130916b9811711",
+    "results/v14/discovery/south_outside_census_extension/main/sky_group_candidates.csv": "9871030a0b2f4d02f34bd1d1e0afe7f63da88798b5b6c1337c51dd9c84b076c5",
+    "results/v14/discovery/south_outside_census_extension/main/sky_group_policy.json": "aa0278773b48321a3dd1dc69af5de6742f9288815adad97f3bdd39f334da2d81",
     "results/v14/discovery/south_ps1/main/sky_group_candidates.csv": "67d75a6001bc2fadddf03e2c84cf421873f73665b1460d23fdd502cdf521fbc3",
     "results/v14/discovery/south_ps1/main/sky_group_policy.json": "b9d4479e8eb7b1637ff05f1f842c555ed165574ff8d7d88bf2ce7346a596cf3d",
     "results/v14/discovery/south_ps1_extension/main/sky_group_candidates.csv": "f100dc586db9a296392e834b31ab34b39eb9ea55dbcafafb72d92cd77495eb48",
     "results/v14/discovery/south_ps1_extension/main/sky_group_policy.json": "cb0d279810be73e39b0d6673edda0ec32158c868e31ced1e368f2e410ef2e22d"
   },
   "code_sha256": "b80409819181e511b3957f7a3449cc6d8ac72d30a764e28e251dd80e65ba5c09",
-  "inventoried_tables": 59,
-  "qualified_discovery_records": 9576,
+  "inventoried_tables": 61,
+  "qualified_discovery_records": 10356,
   "final_production_frozen": false,
   "scope": "Actual candidate tables classified against their saved frozen A-base primary policy and development roles. Follow-up indices never count as discovery. These are source records, not independent positions or a final production sample. No summed or inferred area, inherited C certification, human grades or new discoveries. Historical mask union, original 75 crosswalk, complete regional inputs and same-record C remain required."
 }

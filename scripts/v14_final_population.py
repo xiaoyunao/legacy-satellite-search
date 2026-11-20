@@ -18,11 +18,16 @@ from ls_satsearch.expansion import unit
 from ls_satsearch.run import read_csv, sha, write_csv, write_json
 from scripts.v14_bounded_review_geometry import bounded_groups
 from scripts.v14_catalog import chord
-from scripts.v14_production import eligibility
 
 ROOT = Path('results/v14/production_integration')
 PRIVATE = Path('results/v14/human_review/final_private/final_population')
 PLAN = Path('configs/v14_review_preparation/final_population.json')
+
+
+def review_region(mask, source):
+    survey = {None:'unassigned',0:'outside_census',1:'DES',2:'DELVE',3:'PS1'}[mask['survey']]
+    extension = any(part.endswith('_extension') for part in Path(source).parts)
+    return mask['region']+':'+survey+(':'+('extension' if extension else 'primary'))
 
 
 def validate_hashes(mapping):
@@ -68,17 +73,36 @@ def freeze():
         ledger_path, cover_path, catalog_path, positions_path, records_path, old_path, modes_path)}
     positions = read_csv(positions_path)
     records = read_csv(records_path)
+    regions = defaultdict(set)
+    for mask in json.loads(inventory.read_text())['records']:
+        if mask['classification'] == 'qualified_discovery':
+            for source in mask['qualified_source_tables']:
+                regions[source,mask['field']].add(review_region(mask,source))
+    grouped = defaultdict(list)
+    for record in records:
+        labels = regions[record['input'],record['field']]
+        if len(labels)!=1:raise ValueError('A qualified record needs one source-bound review region')
+        record['review_region'] = next(iter(labels))
+        grouped[record['review_region']].append(record)
+    for region, members in grouped.items():
+        ratios = sorted(float(r['score'])/float(r['cutoff']) for r in members)
+        for record in members:
+            ratio = float(record['score'])/float(record['cutoff'])
+            record['review_score_quantile'] = float(np.searchsorted(ratios,ratio,side='right')/len(ratios))
     by_position = defaultdict(list)
     for record in records:
         if record['human_grade']:
             raise ValueError('Human grades must be empty')
         by_position[record['provisional_position_id']].append(record)
     compact, stable_records = set(), set()
+    qualified_ids = {r['detection_id'] for r in records}
     for mode in read_csv(modes_path):
         if (mode['source_kind']=='C_followup' and mode['fit_status']=='complete' and
                 mode.get('c_without_top3') and float(mode['c_without_top3']) >= plan['C_stability_ranking_proxy']):
             stable_records.add(mode['detection_id'])
-        if eligibility(mode) == 'eligible':
+        if (mode['source_kind']=='blind_peak' and mode['detection_id'] in qualified_ids and
+                mode['channel']=='A_base' and mode['policy']=='A_base' and float(mode['budget'])==.3 and
+                mode['role']=='pilot_eval' and 16.5<=float(mode['dm'])<=20.75):
             pc = 1000*10**((float(mode['dm'])-10)/5)*math.tan(math.radians(float(mode['rh_arcmin'])/60))
             if pc <= plan['priority_max_rh_pc']:
                 compact.add(mode['detection_id'])
@@ -92,13 +116,13 @@ def freeze():
         ids = sorted(keys[i] for i in indices)
         packet_id = 'UNIT-'+hashlib.sha256('|'.join(ids).encode()).hexdigest()[:16]
         members = [r for name in ids for r in by_position[name]]
-        anchor = min(members, key=lambda r:(float(r['within_cohort_rank'])/int(r['within_cohort_records']), r['detection_id']))
+        anchor = min(members, key=lambda r:(-r['review_score_quantile'], r['detection_id']))
         clean_compact = [r for r in members if r['detection_id'] in compact and
             not (r['known_system'] or r['known_environment_context'] or r['extended_galaxy_context']) and
             (not r['nearest_known_position_arcmin'] or float(r['nearest_known_position_arcmin']) > plan['known_context_arcmin'])]
         stable = any(r['detection_id'] in stable_records for r in clean_compact)
         packets.append(dict(unit_id=packet_id, position_ids='|'.join(ids), source_records=len(members),
-            region=anchor['cohort'], score_quantile=1-(float(anchor['within_cohort_rank'])-1)/int(anchor['within_cohort_records']),
+            region=anchor['review_region'], score_quantile=anchor['review_score_quantile'],
             compact_priority_eligible=bool(clean_compact), stability_ranking_proxy=stable,
             original75_ids='', certainty_reason='', human_grade=''))
         for name in ids:

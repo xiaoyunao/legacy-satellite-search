@@ -1,5 +1,10 @@
 # Decisions
 
+## 2026-11-20 — final review regions follow actual masks
+
+Historical batch paths are source identities, not review regions. Bind every qualified record to its own qualified mask hemisphere/census/extension stratum; use empirical within-region A/frozen-cut percentiles only for administrative priority and score strata. Preserve all qualified historical blind modes (the incremental R14 eligibility helper is insufficient), all cross-region packet constituents and original75. Actual10356records bind uniquely to10regions before any draw. Same pending frame owner is released after source-code/config readback; no new draw or detection cut is substituted.
+
+
 ## 2026-11-20 — saved weak controls are evidence checks
 
 DELVE4/5 now have accepted private current-style materials from all13original retained blind/C modes, using original configs/templates/members. Retain them as certainty weak controls in final review with prior-exposure flags. This preparation does not rerun the current formal production policy, refit C or supply a user grade; no new recovery or confirmation claim follows from rendering. All original75 material integrity checks pass, but final whole-project release still waits for source/area/population/C/new-case/private-page gates.

@@ -1,17 +1,18 @@
 {
-  "completed_mask_records": 6273,
+  "completed_mask_records": 8345,
   "classes": {
     "known_recovery_control": 4,
-    "development_calibration": 313,
+    "development_calibration": 824,
     "development_regression": 2,
-    "qualified_discovery": 4220,
-    "complete_not_in_qualified_source_roster": 1734
+    "qualified_discovery": 7511,
+    "complete_not_in_qualified_source_roster": 4
   },
+  "source_bound_analysis_role_overrides": 306,
   "gross_record_areas_not_union": {
-    "complete_not_in_qualified_source_roster": 5816.089155092592,
-    "development_calibration": 1222.1509799382713,
+    "complete_not_in_qualified_source_roster": 6.189409722222221,
+    "development_calibration": 1945.7277218364193,
     "development_regression": 14.189436728395059,
     "known_recovery_control": 14.809949845679009,
-    "qualified_discovery": 18312.210516975305
+    "qualified_discovery": 27031.731141975302
   }
 }

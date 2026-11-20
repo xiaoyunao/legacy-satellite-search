@@ -1,0 +1,12 @@
+{
+  "job": "61627306",
+  "registration": "results/v14/production_integration/masks/tiled/8094b69a21510971/registration.json",
+  "registration_sha256": "0887032db6d1dc80e6b45279c234f8de0b3f67b52d28eeaf6e2021d9b60dc804",
+  "records": 8341,
+  "unique_geometry_keys": 8341,
+  "new_geometry_keys": 0,
+  "duplicate_missing_keys": 0,
+  "cached_keys": 8341,
+  "final_production_frozen": false,
+  "scope": "Completed-field cache registration only. Qualification/source roster is still interim; no final union area or gain claim. Reuse immutable geometry after the final production clock closes."
+}

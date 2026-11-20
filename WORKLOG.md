@@ -2,6 +2,19 @@
 
 ## 2026-11-20
 
+### 2026-11-20T05:28Z — current production/C/mask inventory accepted
+
+-61627306COMPLETED7:42. Historical ledger10356qualified records/10169provisional positions,all75identities retained;8704records/20362required seeds complete,1652records/2546seeds not attempted. R14increment alone9070records/9007associations remains separate. Source/ledger/C aggregate hashes pass locally (115registry,6ledger,727Cinputs). No result is a confirmed system.
+-Actual8345mask records:7511qualified,824development,4knowncontrols,2regression,4notqualified.306source-bound analysis-role overrides; masks/cuts unchanged. Qualified gross27031.731142deg2 is a sum before overlap and is NOT area; current source registration8094b69a21510971 now feeds same61626647→61626690→61626692.
+-All10356records have unique exact-source region binding across10mask strata;2544historical blind modes retained. Finalframe same pending61628955 released after deployedcode/configSHAreadback, with unchanged quota/seed/geometry. No frame/draw until actual720tile acceptance.
+-Next: exact represented-mask union, finalframe/selected-record C/evidence, privacy/pageQA and one final human package. Atlas-only tail61629183retains its original owner. No discovery-cut change, user grades, PS1physicalgain, abundance or manuscript.
+
+### 2026-11-20T05:23Z — correct final-frame region/history binding before any draw
+
+- Actual qualified ledger labels include historical batch paths; treating those as regions would multiply review allocations and prefer small-batch maxima. The imported production eligibility helper also accepts R14paths only. No final frame/draw exists. Same queued owner61628955 held before deployment.
+- Finalframe now uses qualified mask hemisphere/census/extension regions, within-region empirical A/frozen-cut percentiles and all qualified historical blind modes. Original quota/seed/geometry/original75 unchanged. Historical/extension label smoke passes; stale local inventory correctly fails full binding (7994matched/1582newer records absent), so current-source QA waits for existing post inventory rather than weakening the guard.
+- Current-source follow-up:61627306COMPLETED7:42; all10356record bindings match exactly one of10actual regions, including2544qualified historical blind modes. Full mask inventory has7511qualified/824development/306source-bound role overrides. Same pending frame owner released after deployed hash readback; still no final frame/draw until720tile area passes. Next:selected source-C/evidence and final privacy/pageQA.
+
 ### 2026-11-20T05:15Z — recover only the timed-out snapshot tail
 
 -61470267 TIMEOUT1:00:22. All regional outputs/status and current-owner catalogue manifest were written before the large WCS footprint atlas finished; log records actual time-limit cancellation. Running extension had been denied. No blind scan/C fit is missing from this timeout.
