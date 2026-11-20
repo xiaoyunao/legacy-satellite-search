@@ -1,5 +1,12 @@
 # Plan
 
+## 2026-11-20T04:27Z — active owners after batch-source inspection
+
+1. Keep running61470267,then corrected post61627306which actually integrates historical production/registry/ledger/Ccoverage/current masks. Do not resume cancelled duplicate61470508or stale post61625808. All16outsideCshards are accepted.
+2. Same source-bound area setup61626647nowdepends on61627306; tile packs61626690andcollector61626692unchanged. All8341geometry keys are cached. Final common-clock area/production acceptance remains open.
+3. Finish old75preparation61623753(sixpackscomplete atlastcheck),fullvalidator61626094,then final selected new cases/controlled probability audit/evidence/privacy/allpageQA. User grades remain blank until one final release.
+4. Preserve accepted144and supported limits; no PS1recipe tuning, extra physical grid, false gain/abundance claim or manuscript.
+
 ## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
 
 1. Outside C is accepted16/16(979source groups/3102modes); no repeated fitting. Finish existing snapshots61470267/61470508, then61625808source/Ccoverage/WCSregistration. Common-clock global candidate counts remain pending.

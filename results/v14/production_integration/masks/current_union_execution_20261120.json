@@ -1,6 +1,6 @@
 {
   "setup_job": "61626647",
-  "setup_dependencies": "afterok:61625808:61624957",
+  "setup_dependencies": "afterok:61627306",
   "tile_array": "61626690",
   "tile_dependency": "afterok:61626647",
   "resource_packs": 3,
@@ -26,5 +26,8 @@
   },
   "scope": "Existing exact represented-mask polygon-only method and immutable cache; no new geometry/scientific threshold. Bind to post-outside-C inventory after both old global snapshots/source acceptance/warming. Three packs replace 24 largely idle whole-node tasks, retaining every tile and final source/hash checks. No final production/gain area or human delivery claim.",
   "collector_job": "61626692",
-  "collector_dependency": "afterok:61626690"
+  "collector_dependency": "afterok:61626690",
+  "original_setup_dependencies": "afterok:61625808:61624957",
+  "geometry_warming_state": "all8shards_completed_immutable_proofs_revalidated_in_setup",
+  "handoff_receipt": "results/v14/production_integration/checkpoints/outside_C_final_20261120/global_snapshot_handoff_20261120.json"
 }

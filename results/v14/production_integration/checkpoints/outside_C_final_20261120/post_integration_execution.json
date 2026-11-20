@@ -1,8 +1,10 @@
 {
-  "job": "61625808",
-  "dependency": "afterok:61470267:61470508:61623103",
+  "job": "61627306",
+  "dependency": "afterok:61470267",
   "script": "scripts/v14_post_outside_prepare.sh",
-  "script_sha256": "2b3f76dcd4bcb35607e97b93c5b02ec5a2b36d462e3a6df7db1dcaa518f05ba7",
-  "state": "submitted_not_complete",
-  "scope": "Wait for both existing global snapshot owners and exact outside-C acceptance; validate terminal/source/old75 invariants, refresh C seed coverage and register current WCS masks. No duplicate catalogue fitting, final area claim, sampling or human grades."
+  "script_sha256": "ec75cfacdaae913dcf9b1b47a258af41a3014c3a0fa5e8590edee602ffc3ac0c",
+  "state": "new_owner_registered_old_pending_retired",
+  "scope": "Complete later-added production/registry/integrated/Ccoverage/mask stages missing from the actual old snapshot batch. Completed C acceptance is validated by immutable products, not an expired controller dependency. No repeated whole-scan summary or numerical fit.",
+  "original_pending_job": "61625808",
+  "same_science_and_sources": true
 }

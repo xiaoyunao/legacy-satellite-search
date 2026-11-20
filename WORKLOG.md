@@ -2,6 +2,14 @@
 
 ## 2026-11-20
 
+### 2026-11-20T04:27Z — inspect actual spooled batches and remove a duplicate snapshot
+
+-Rootcause:3-day-old Slurm snapshots retain oldshell bytes,not today's v14_finalize.sh. Actual61470267/61470508bothSHA60ebf1b9…/snapshot; neither includes new historicalproduction/registry/ledger/Ccoverage. Source copies preserved. This would leave the post-check on a stale ledger while repeating the full6,891-field aggregate pass.
+-Corrected postwrapper adds missingintegration before checks. Firstnewsubmissionrejects completed61623103controllerdependency(nojob); retry61627306depends onlyonrunning61470267and validates accepted C products itself. ExecutednewpostSHAec75cfac…matchesregisteredsource. Setup61626647rebound afterreadback; whollypendingold61625808andduplicate61470508cancelled/zeroelapsed. No runningwork/scientificinputs altered.
+-Files:archivedexecutedshells,postwrapper,handoff/currentexecutionreceipts,memory/status/decisions/plan/gates. Validation:bashsyntax,actualspooledbytes/dependency/QOS/terminalreadback,existing16Cproofs. RecheckednativeProthreadlatest68fa1336unchanged/fullmessage; current prompt remains active.
+-Next:acceptedrunning snapshot→correctedhistorical/sourcepost→currentmaskindex/union,old75preparation/fullproof,thenfinalselection/evidence/privacy-pageQA. No intermediatehumanreview or manuscript.
+
+
 ### 2026-11-20T04:19Z — all outside C accepted and current-source area chain registered
 
 -61623103COMPLETED36s;16same-source shards/979groups/3102modes allcomplete. Explicit5-filename C/source allowlist synchronized; every proof/input hash matches locally. All6891scan terminals unchanged. Global61470267isrunning;61470508follows; no duplicate snapshots/fits submitted.

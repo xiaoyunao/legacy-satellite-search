@@ -15,6 +15,15 @@ assert terminal['all_registered_fields_terminal'] and terminal['registered_field
 assert all(sha(Path(p))==d for p,d in terminal['input_sha256'].items())
 outside=json.loads(Path('results/v14/production_integration/checkpoints/outside_C_final_20261120/acceptance.json').read_text())
 assert outside['all_selected_C_accepted']
+PY
+# The actual older Slurm snapshot lacks these later integration stages.
+.venv/bin/python -u scripts/v14_production.py
+.venv/bin/python -u -m scripts.v14_production_registry
+.venv/bin/python -u -m scripts.v14_integrated_ledger
+.venv/bin/python - <<'PY'
+from pathlib import Path
+import json
+from ls_satsearch.run import sha
 ledger=json.loads(Path('results/v14/production_integration/reconciled/manifest.json').read_text())
 assert ledger['frozen75_verified_current_identities']==75
 assert all(sha(Path(p))==d for p,d in ledger['inputs'].items())

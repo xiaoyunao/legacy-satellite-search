@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-20T04:25:03.794513+00:00",
+  "running_snapshot": "61470267",
+  "pending_identical_snapshot": "61470508",
+  "both_executed_batch_SHA256": "60ebf1b9a4bd140bda2a83c5fd130dfab7eb46a578a1a4add8ee61b2e2122329",
+  "executed_source": "references/run_sources/v14_finalize_executed_61470267.sh",
+  "old_pending_post": "61625808",
+  "old_post_source": "references/run_sources/v14_post_outside_prepare_61625808.sh",
+  "new_post": "61627306",
+  "new_post_sha256": "ec75cfacdaae913dcf9b1b47a258af41a3014c3a0fa5e8590edee602ffc3ac0c",
+  "downstream_setup": "61626647",
+  "new_setup_dependency": "afterok:61627306",
+  "state": "new_post_registered_downstream_rebound_pending_old_owners_cancelled",
+  "all_registered_scans_terminal": true,
+  "all_outside_C_accepted": true,
+  "submission_rejection": {
+    "created_job": false,
+    "reason": "Completed acceptance61623103no longer accepted as a controller dependency; keep its actual proof checks in the new script and depend on the still-running snapshot only."
+  },
+  "scope": "Actual Slurm-spooled scripts are byte-identical and both invoke snapshot; both omit later production/registry/integrated/Ccoverage stages and the new summary lock. Preserve running work, replace the stale wholly pending post step, and retire only the wholly pending duplicate snapshot after source completeness and downstream rebinding. No search/fit/scientific parameter change.",
+  "running_snapshot_untouched": true,
+  "downstream_dependency_readback_verified": true,
+  "old_owners_pending_zero_elapsed_verified_before_cancellation": true,
+  "old_owner_terminal_readback": {
+    "61470508": "CANCELLED_zero_elapsed",
+    "61625808": "CANCELLED_zero_elapsed"
+  },
+  "new_executed_post_sha256": "ec75cfacdaae913dcf9b1b47a258af41a3014c3a0fa5e8590edee602ffc3ac0c"
+}

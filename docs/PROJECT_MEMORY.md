@@ -1,5 +1,9 @@
 # 当前科学主线
 
+## 2026-11-20T04:27Z — actual batch-version handoff
+
+The actual Slurm-spooled61470267/61470508batch scripts are byte-identical(SHA60ebf1b9…),bothinvoke snapshot and omit later production/registry/integrated/Ccoverage steps. All registered scans and outsideCwere terminal before the running snapshot started. Preserve61470267; after registering corrected post61627306and rebinding setup61626647,retire only wholly pending duplicate61470508and stale post61625808. Both are CANCELLED with zero elapsed; running work is untouched. New post's executed SHAec75cfac…matches its registered source and includes the missing integration stages plus lock/source/old75 checks. A rejected completed-job dependency created no job; actual accepted C products remain the gate.
+
 ## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
 
 All registered scans and now all16outside C shards are terminal and accepted. The outside follow-up adds979source groups/3102saved modes, not979new systems. Every local synchronized C/source/config hash matches its actual NERSC proof. The global source clock is still being rebuilt; do not add these overlapping follow-ups to old coverage counts.

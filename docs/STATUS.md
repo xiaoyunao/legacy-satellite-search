@@ -1,5 +1,9 @@
 # Status
 
+## 2026-11-20T04:27Z — actual batch-version handoff
+
+The actual Slurm-spooled61470267/61470508batch scripts are byte-identical(SHA60ebf1b9…),bothinvoke snapshot and omit later production/registry/integrated/Ccoverage steps. All registered scans and outsideCwere terminal before the running snapshot started. Preserve61470267; after registering corrected post61627306and rebinding setup61626647,retire only wholly pending duplicate61470508and stale post61625808. Both are CANCELLED with zero elapsed; running work is untouched. New post's executed SHAec75cfac…matches its registered source and includes the missing integration stages plus lock/source/old75 checks. A rejected completed-job dependency created no job; actual accepted C products remain the gate.
+
 ## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
 
 -61623103COMPLETED36s:16/16outside C shards accepted,979source groups/3102modes;503main+2599extension,allcomplete. All16proof/input hashes match synchronized local files. Final global coverage is not yet refreshed.
