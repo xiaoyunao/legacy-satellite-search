@@ -481,12 +481,14 @@
   ],
   "workers_per_node": 4,
   "implementation_sha256": {
-    "scripts/v14_prepare_frozen75.py": "aba7f24f0f033396d284e8164c18d0d837e8023e5ceeafa3f76c00955cda3917",
+    "scripts/v14_prepare_frozen75.py": "dd0ef8ac8c72ba1a5cb30253141205f65215906167ed8af5f41db094bde96585",
     "scripts/v14_phase1_extent.py": "6eceaaead5a1295e149ab2c40c1b099adc434e4502ccd3032003aeaa9b1e9233",
-    "scripts/v14_phase1_panels.py": "f3bbd90f958159e93681a77d3ede2738ed4a95b30e596df683b9f6786a075993",
+    "scripts/v14_phase1_panels.py": "6e1f6b094190963b93faf3280a4141a8ddd3c62e33e32d511b69db349cdec589",
     "scripts/v14_saved_context.py": "44a52a33bb2f9169c9b48891d97703f8dbe6dfea4b5a4a9397b19d6638e91f6e",
     "scripts/v14_prepare_frozen75_pack.py": "7b61be84eab3c50eb294f9dc175fed1e2aa05502f6c69585607bddd93044dd0d",
-    "scripts/v14_prepare_frozen75_pack.sh": "f22c8b43c4dd736a6df510b9534a2ba0d91417be1f6ea31ecd95f0f4b033a167"
+    "scripts/v14_prepare_frozen75_pack.sh": "f22c8b43c4dd736a6df510b9534a2ba0d91417be1f6ea31ecd95f0f4b033a167",
+    "src/ls_satsearch/plots.py": "fd170c00ac4a6a4800c0ed0b463549c19037cca70835aeecd0f2711e034686fd",
+    "src/ls_satsearch/review.py": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95"
   },
   "excluded_accepted_case_index": 68,
   "scope": "Resource packing only: exact same74mandatory cases, no scientific selection/fitting/sampling change. Estimates come from actual22-mode and largest-extent pilots, not measured science. One allocated node runs up to4independent cases; accepted cases are verified/skipped on retry."

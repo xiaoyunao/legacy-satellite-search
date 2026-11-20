@@ -1,5 +1,13 @@
 # Status
 
+## 2026-11-20T03:39Z — execution checkpoint
+
+- Registered scans: terminal6861complete+30zero-valid-gr;174retriesaccepted. Latest immutable proof: progress_ab20261120/terminal_acceptance.json.
+- Outside C: main61470256 has two completed shards; extension61470266 has five. Remaining original shards and final release61470267/61470508 are queued; acceptance61623103 follows both. Counts are pending final same-source validation.
+- Old75 evidence: title-only QA61624220 completes46s; context-title QA61625386 completes1:36. Context and phase-one rasters inspected; source hashes match. Same74case batch61623753 released with unchanged case indices; no technical hold remains. Final user package is not ready.
+- Geometry:61623948 fails on missing shapely in main venv; corrected dedicated-area environment61624254 completes3:15. Registration8341keys,6269cached/2072new. Vector pilot61624433 completes4:57; remaining61624957 queued. This is cache warming, not final area.
+- Native PS1: kernel61624929 measured. Mean-signal61625226 has SlurmCOMPLETED but operatorreturn5 before photometry (empty-primary FITS/cameraSIMPLE/NAXIS0). Corrected primary-image61625458 submitted; not accepted. PhysicalPS1response remains false.
+
 ## 2026-11-20T02:24Z — all 6,891 registered search fields are terminal
 
 The final manifest audit accepts **6,861 completed scans and 30 zero-valid-gr fields**. All 174 registered retries are accepted; no uncovered retry remains. The 30 unusable fields have zero valid mask area. R14 summed owned area is **24,481.307990 deg²**; this is not the final historical union or a physical-gain area. The source-bound terminal proof is `results/v14/progress_ab20261120/terminal_acceptance.json`.

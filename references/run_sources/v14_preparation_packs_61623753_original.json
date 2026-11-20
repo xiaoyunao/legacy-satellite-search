@@ -1,0 +1,493 @@
+{
+  "packs": [
+    [
+      51,
+      38,
+      19,
+      2,
+      30,
+      60
+    ],
+    [
+      12,
+      49,
+      46,
+      22,
+      7,
+      31,
+      66
+    ],
+    [
+      45,
+      54,
+      48,
+      27,
+      32,
+      36
+    ],
+    [
+      0,
+      65,
+      13,
+      52,
+      29,
+      39,
+      40
+    ],
+    [
+      50,
+      67,
+      15,
+      61,
+      37,
+      4,
+      16,
+      47
+    ],
+    [
+      57,
+      3,
+      73,
+      64,
+      72,
+      5,
+      20,
+      53
+    ],
+    [
+      62,
+      41,
+      17,
+      33,
+      8,
+      34,
+      26,
+      59
+    ],
+    [
+      71,
+      42,
+      25,
+      28,
+      63,
+      1,
+      35,
+      58
+    ],
+    [
+      74,
+      43,
+      6,
+      18,
+      69,
+      9,
+      10,
+      21
+    ],
+    [
+      56,
+      55,
+      44,
+      23,
+      70,
+      14,
+      11,
+      24
+    ]
+  ],
+  "estimated_worker_minutes": [
+    44.3,
+    44.3,
+    43.949999999999996,
+    43.949999999999996,
+    43.949999999999996,
+    43.949999999999996,
+    44.05,
+    43.99999999999999,
+    43.64999999999999,
+    43.64999999999999
+  ],
+  "case_estimates": [
+    {
+      "index": 51,
+      "case_id": "B012",
+      "estimated_worker_minutes": 37.349999999999994
+    },
+    {
+      "index": 12,
+      "case_id": "P013",
+      "estimated_worker_minutes": 29.049999999999997
+    },
+    {
+      "index": 45,
+      "case_id": "B006",
+      "estimated_worker_minutes": 29.049999999999997
+    },
+    {
+      "index": 0,
+      "case_id": "P001",
+      "estimated_worker_minutes": 20.749999999999996
+    },
+    {
+      "index": 50,
+      "case_id": "B011",
+      "estimated_worker_minutes": 20.749999999999996
+    },
+    {
+      "index": 57,
+      "case_id": "B018",
+      "estimated_worker_minutes": 20.749999999999996
+    },
+    {
+      "index": 62,
+      "case_id": "B023",
+      "estimated_worker_minutes": 20.749999999999996
+    },
+    {
+      "index": 71,
+      "case_id": "B032",
+      "estimated_worker_minutes": 20.749999999999996
+    },
+    {
+      "index": 74,
+      "case_id": "B035",
+      "estimated_worker_minutes": 20.749999999999996
+    },
+    {
+      "index": 56,
+      "case_id": "B017",
+      "estimated_worker_minutes": 16.95
+    },
+    {
+      "index": 55,
+      "case_id": "B016",
+      "estimated_worker_minutes": 12.45
+    },
+    {
+      "index": 65,
+      "case_id": "B026",
+      "estimated_worker_minutes": 12.45
+    },
+    {
+      "index": 67,
+      "case_id": "B028",
+      "estimated_worker_minutes": 12.45
+    },
+    {
+      "index": 3,
+      "case_id": "P004",
+      "estimated_worker_minutes": 8.299999999999999
+    },
+    {
+      "index": 41,
+      "case_id": "B002",
+      "estimated_worker_minutes": 8.299999999999999
+    },
+    {
+      "index": 42,
+      "case_id": "B003",
+      "estimated_worker_minutes": 8.299999999999999
+    },
+    {
+      "index": 43,
+      "case_id": "B004",
+      "estimated_worker_minutes": 8.299999999999999
+    },
+    {
+      "index": 49,
+      "case_id": "B010",
+      "estimated_worker_minutes": 8.299999999999999
+    },
+    {
+      "index": 54,
+      "case_id": "B015",
+      "estimated_worker_minutes": 8.299999999999999
+    },
+    {
+      "index": 73,
+      "case_id": "B034",
+      "estimated_worker_minutes": 8.299999999999999
+    },
+    {
+      "index": 17,
+      "case_id": "P018",
+      "estimated_worker_minutes": 7.699999999999999
+    },
+    {
+      "index": 25,
+      "case_id": "P026",
+      "estimated_worker_minutes": 4.85
+    },
+    {
+      "index": 6,
+      "case_id": "P007",
+      "estimated_worker_minutes": 4.55
+    },
+    {
+      "index": 44,
+      "case_id": "B005",
+      "estimated_worker_minutes": 4.199999999999999
+    },
+    {
+      "index": 13,
+      "case_id": "P014",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 15,
+      "case_id": "P016",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 18,
+      "case_id": "P019",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 23,
+      "case_id": "P024",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 28,
+      "case_id": "P029",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 33,
+      "case_id": "P034",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 38,
+      "case_id": "P039",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 46,
+      "case_id": "B007",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 48,
+      "case_id": "B009",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 52,
+      "case_id": "B013",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 61,
+      "case_id": "B022",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 64,
+      "case_id": "B025",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 69,
+      "case_id": "B030",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 70,
+      "case_id": "B031",
+      "estimated_worker_minutes": 4.1499999999999995
+    },
+    {
+      "index": 63,
+      "case_id": "B024",
+      "estimated_worker_minutes": 2.8
+    },
+    {
+      "index": 1,
+      "case_id": "P002",
+      "estimated_worker_minutes": 1.75
+    },
+    {
+      "index": 8,
+      "case_id": "P009",
+      "estimated_worker_minutes": 1.4
+    },
+    {
+      "index": 19,
+      "case_id": "P020",
+      "estimated_worker_minutes": 1.4
+    },
+    {
+      "index": 22,
+      "case_id": "P023",
+      "estimated_worker_minutes": 1.4
+    },
+    {
+      "index": 27,
+      "case_id": "P028",
+      "estimated_worker_minutes": 1.4
+    },
+    {
+      "index": 29,
+      "case_id": "P030",
+      "estimated_worker_minutes": 1.4
+    },
+    {
+      "index": 37,
+      "case_id": "P038",
+      "estimated_worker_minutes": 1.4
+    },
+    {
+      "index": 72,
+      "case_id": "B033",
+      "estimated_worker_minutes": 1.4
+    },
+    {
+      "index": 9,
+      "case_id": "P010",
+      "estimated_worker_minutes": 1.0499999999999998
+    },
+    {
+      "index": 14,
+      "case_id": "P015",
+      "estimated_worker_minutes": 1.0499999999999998
+    },
+    {
+      "index": 34,
+      "case_id": "P035",
+      "estimated_worker_minutes": 1.0499999999999998
+    },
+    {
+      "index": 35,
+      "case_id": "P036",
+      "estimated_worker_minutes": 1.0499999999999998
+    },
+    {
+      "index": 2,
+      "case_id": "P003",
+      "estimated_worker_minutes": 0.7
+    },
+    {
+      "index": 7,
+      "case_id": "P008",
+      "estimated_worker_minutes": 0.7
+    },
+    {
+      "index": 32,
+      "case_id": "P033",
+      "estimated_worker_minutes": 0.7
+    },
+    {
+      "index": 39,
+      "case_id": "P040",
+      "estimated_worker_minutes": 0.7
+    },
+    {
+      "index": 4,
+      "case_id": "P005",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 5,
+      "case_id": "P006",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 10,
+      "case_id": "P011",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 11,
+      "case_id": "P012",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 16,
+      "case_id": "P017",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 20,
+      "case_id": "P021",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 21,
+      "case_id": "P022",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 24,
+      "case_id": "P025",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 26,
+      "case_id": "P027",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 30,
+      "case_id": "P031",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 31,
+      "case_id": "P032",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 36,
+      "case_id": "P037",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 40,
+      "case_id": "B001",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 47,
+      "case_id": "B008",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 53,
+      "case_id": "B014",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 58,
+      "case_id": "B019",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 59,
+      "case_id": "B020",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 60,
+      "case_id": "B021",
+      "estimated_worker_minutes": 0.35
+    },
+    {
+      "index": 66,
+      "case_id": "B027",
+      "estimated_worker_minutes": 0.35
+    }
+  ],
+  "workers_per_node": 4,
+  "implementation_sha256": {
+    "scripts/v14_prepare_frozen75.py": "aba7f24f0f033396d284e8164c18d0d837e8023e5ceeafa3f76c00955cda3917",
+    "scripts/v14_phase1_extent.py": "6eceaaead5a1295e149ab2c40c1b099adc434e4502ccd3032003aeaa9b1e9233",
+    "scripts/v14_phase1_panels.py": "f3bbd90f958159e93681a77d3ede2738ed4a95b30e596df683b9f6786a075993",
+    "scripts/v14_saved_context.py": "44a52a33bb2f9169c9b48891d97703f8dbe6dfea4b5a4a9397b19d6638e91f6e",
+    "scripts/v14_prepare_frozen75_pack.py": "7b61be84eab3c50eb294f9dc175fed1e2aa05502f6c69585607bddd93044dd0d",
+    "scripts/v14_prepare_frozen75_pack.sh": "f22c8b43c4dd736a6df510b9534a2ba0d91417be1f6ea31ecd95f0f4b033a167"
+  },
+  "excluded_accepted_case_index": 68,
+  "scope": "Resource packing only: exact same74mandatory cases, no scientific selection/fitting/sampling change. Estimates come from actual22-mode and largest-extent pilots, not measured science. One allocated node runs up to4independent cases; accepted cases are verified/skipped on retry."
+}

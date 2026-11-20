@@ -1,5 +1,11 @@
 # 当前科学主线
 
+## 2026-11-20T03:39Z — production evidence and bounded PS1 checks
+
+All6891registered scans are terminal; no new scan is justified. Current unfinished work is outside-census C and existing global integration, final common-clock masks/area/identity/funnel, selected saved-mode evidence and one probability-designed human release. The old75 remain immutable and prior exposure is recorded. Private evidence batch61623753 is released after actual long-title PDF/context repairs; no human decision or candidate promotion has occurred.
+
+Geometry warming registers8341ordinary completed-mask keys,6269already cached/2072new; pilot61624433 succeeds. Qualification remains interim. PS1's real five-band blank source comparison is descriptive; the four-point mean-signal probe first fails on an empty-primary FITS container, with no photometry result. Retry61625458 corrects that representation only. This is technical operator validation, not a physical selection function or LS–PS1 gain. Original144 and targeted finite-light/component-loss conclusions remain unchanged.
+
 ## 2026-11-20T02:24Z — all 6,891 registered search fields are terminal
 
 The final manifest audit accepts **6,861 completed scans and 30 zero-valid-gr fields**. All 174 registered retries are accepted; no uncovered retry remains. The 30 unusable fields have zero valid mask area. R14 summed owned area is **24,481.307990 deg²**; this is not the final historical union or a physical-gain area. The source-bound terminal proof is `results/v14/progress_ab20261120/terminal_acceptance.json`.

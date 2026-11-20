@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-20T02:46:00Z",
+  "updated_utc": "2026-11-20T03:39:03.315857+00:00",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -12,9 +12,9 @@
     "full_search_terminal_accounting": "PASSED: ab 02:23:54Z, 6861 complete + 30 zero-valid-gr = 6891; all174 retries accepted, zero uncovered. Terminal acceptance binds all field manifests; summed owned24481.307990deg2 is not final union.",
     "historical_production_and_exact_mask_union": "Interim catalogue/ledger 61619421/61619423 accepted: 9576 qualified records / 9403 provisional positions, all 75 original identities preserved, 722 source hashes synchronized. Final all-field common-clock inventory and area union remain pending.",
     "same_eligible_record_C_complete": "7924 records / 17853 required seeds complete. All 269 registered historical priority records / 467 modes accepted. Remaining 1652 records / 2546 seeds are unattempted low-priority records; final sampled modes and outside-region C remain gates.",
-    "all_final_objects_images_and_evidence": "Old75 pilots:22modes61622229 and largest extent61623142 accepted, hashes and93PNG integrity checks pass,2full-raster visual samples inspected. Full2rh grfinite1.0forlargest. Remaining74mandatory cases61623753in10packs submitted, not complete. Final new-case population/C/evidence/privacy/allpageQA still open.",
+    "all_final_objects_images_and_evidence": "Mandatory74-case61623753 released after accepted phase-one61624220 and context61625386 title QA; unchanged sample and numeric C, original75 preserved. Bulk and final new cases/source evidence still pending.",
     "final_sampling_inclusion_probabilities": "Not drawn. Registered FINAL_REVIEW_PROTOCOL.md requires bounded complete-link administrative packets retaining all constituents, certainty cases plus declared region/score SRSWOR strata with positive inclusion probabilities; original nonuniform 35 retained with exposure flags.",
-    "final_anonymity_and_page_QA": "Unweighted phase-one pilot accepted; saved-context null and positive-membership pilots 61618104/61618873 accepted without refitting, six rasters inspected, zero missing expected native gr stamps. Context stays private. Final population selection/evidence/probability draw/PDF/ZIP QA pending."
+    "final_anonymity_and_page_QA": "Actual private3page PDF/ZIP/blank-form pilot passes inspected title correction, image integrity and neutral text/metadata/ZIP check; final population/aliases/evidence/allpage/privacy gates remain open. No human grades."
   },
   "human_responses": "unfilled; no seal or identity reveal",
   "scope": "Historical batch technical readiness is distinct from final project-wide delivery. Preserve release_v2 bytes. Final package must retain and crosswalk the original 75 positions.",
@@ -93,6 +93,15 @@
       "baseline_lost_case": "saved_matching_group_below_unchanged_cut_not_peak_merging",
       "global_physical_correction_validated": false
     },
-    "PS1_native_operator_build": "Official core and native five-band61622347 complete. Comparison61622975:11381native rows/band;3944matchedgri references/3937same nativeID. Descriptive photometry/shape comparison, not stellar completeness, canonical-primary selection or physical PS1 response. No DR2 equivalence accepted."
+    "PS1_native_operator_build": "Official core and native five-band61622347 complete. Comparison61622975:11381native rows/band;3944matchedgri references/3937same nativeID. Descriptive photometry/shape comparison, not stellar completeness, canonical-primary selection or physical PS1 response. No DR2 equivalence accepted.",
+    "PS1_mean_signal_preflight": {
+      "initial_job": "61625226",
+      "operator_returncode": 5,
+      "accepted": false,
+      "retry_job": "61625458",
+      "state": "submitted_not_accepted",
+      "physical_response_validated": false,
+      "Pdet_measured": false
+    }
   }
 }

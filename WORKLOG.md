@@ -2,6 +2,15 @@
 
 ## 2026-11-20
 
+### 11:39 CST — actual PDF/context QA, cache warming and PS1 mean-signal attempt
+
+- Observed clipped CMD titles in actual private PDF/context rasters; two narrow plotting repairs preserve all saved fits and old outputs.61624220COMPLETE46s;61625386COMPLETE1:36. Revised context/phase-one rasters inspected. Exact74case batch61623753 held only while all tasks pending, hashes verified, released same owner; no remaining user hold. Numeric review.py unchanged.
+- Geometry main-env61623948FAILEDmissingShapely; existing area-env61624254COMPLETED3:15. Registered8341unique ordinary masks,6269cachehits/2072new. Pilotvector61624433COMPLETED4:57;remaining61624957submitted. No final qualification/union claim.
+- PS1kernel61624929complete;mean-signal61625226SlurmCOMPLETEDbut operator5beforephotometry (emptyprimary/NAXIS0/cameraSIMPLE). Archived executed source and proof. Fix places linear pixels/native skycellheader onprimary;61625458submitted,notaccepted. No photon-noise or physicalPdet claim.
+- Files: plot/old75sourcehashplan/amendment,privatePDFassembler and aggregatepilotQA,area warm wrappers/execution,PS1kernel/meanprobe/config/failure proof,scientific memory/status/decisions/checklist/plan/report/gates. Commands:Slurm/explicitallowlist rsync/Pythonparse/bashsyntax/actualrasterinspection. Raw data private onNERSC;finalaliasdraw/usergrades/package/manuscriptnotstarted.
+- Next: existingoutsideCacceptance/globalrelease;acceptevidencecases/cache;finalcommonclockarea/sampling/evidence/privacy/pageQA. Original144/finite-light/size/backgroundlimits retained.
+
+
 ### 10:24 CST — all registered DR11 scans terminal; native PS1 photometry and old-75 preparation
 
 - 10:46CST follow-up: largest-extent retry61623142 COMPLETED4:07,1mode/full2rh grfinite1.0each/89.6arcmin square at3.84arcsec overview pixels plus retained central detail; full raster inspected. Both private pilots have matching hashes and93PNG integrity checks; only2full-raster visual samples so far, not final page QA. Initial74task×1h request rejected before job creation on aggregate admission estimate. Same74cases now source-hash-frozen in10packs61623753,4independent cases/node and2nodes concurrency; no new sampling/fit changes/overlapping owner.

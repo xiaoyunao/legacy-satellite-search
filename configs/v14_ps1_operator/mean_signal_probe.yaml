@@ -1,0 +1,11 @@
+seed: 487251
+observed_pixel_frame_g: [20.0, 22.5, 23.5, 24.0]
+placement_radius_arcsec: 150.0
+minimum_separation_arcsec: 60.0
+matching_radius_arcsec: 0.8
+template: isochrones/ps1/bressan2012/iso_a12.0_z0.00010.dat
+scope: Four isolated finite-kernel mean-signal calibrators in one acquired real background. Observed pixel-frame colours use one main-sequence template row; no distance, luminosity function or satellite population is inferred. Fixed integer-pixel centres avoid a new interpolation model. Keep actual background/variance/covariance/masks, and do not invent a Poisson conversion for coadd data units. Source photon noise, full PSF wings, field dependence, final catalogue calibration, primary selection and physical response are not validated. This preflight cannot measure completeness, a physical Pdet or LS-minus-PS1 gain.
+bright_unit_check_g: 20.0
+bright_unit_check_max_abs_mag_residual: 0.05
+bright_unit_check_max_offset_arcsec: 0.2
+unit_check_scope: Technical consistency only, conditional on no preexisting blank counterpart. Faint calibrators are not required to be detected. If the bright check fails, diagnose pixel scaling, finite PSF normalization and field dependence before any response inference; never tune discovery or morphology cuts to pass it.

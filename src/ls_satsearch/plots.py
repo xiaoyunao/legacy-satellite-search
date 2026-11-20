@@ -38,13 +38,13 @@ def candidate(path, spec, field, area, sample, sources, valid, mags, chosen, pea
     annulus = (rr > 3.5 * rh) & (rr < np.sqrt(3.5**2 + 1.5**2)*rh)
     locus = model[0]
     for axis, selection, title in zip(axes[0, 1:], (rr <= 1.5 * rh, annulus),
-                                      ('Central CMD', 'Equal geometric area annulus CMD')):
+                                      ('Central CMD', 'Background CMD')):
         g, r = sample[selection, 2:4].T
         axis.scatter(g-r, g, s=8, alpha=.6)
         # Do not connect distinct evolutionary phases across the RGB/HB handoff.
         axis.plot(locus[:, 0]-locus[:, 1], locus[:, 0]+dm, '.', color='tab:red', ms=1.5)
         axis.set(xlim=(-.5, 1.8), ylim=(max(23.5, g.max(initial=23.5)), 15), xlabel='$(g-r)_0$ (mag)',
-                 ylabel='$g_0$ (mag)', title=f'{title} ({len(g)})')
+                 ylabel='$g_0$ (mag)', title=f'{title}\n{len(g):,} sources'+(' (equal geometric area)' if title=='Background CMD' else ''))
     ax = axes[1, 0]
     rs = np.linspace(0, 6 * rh, 20)
     for mask, label in [(valid & chosen, 'PSF'), (valid & ~chosen, 'non-PSF')]:

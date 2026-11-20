@@ -1,0 +1,27 @@
+{
+  "job": "61623753",
+  "all_tasks_pending_and_held_before_change": true,
+  "original_plan_sha256": "070b077db6de21deca16925742670868d25916a6f9056d0ddd65f46f10f9c8ba",
+  "amended_plan_sha256": "5090f24f5d0b2bb5791efd40ad044e4f19c5241c58587a2c2fadfa3d177fd03e",
+  "same_case_indices": true,
+  "reason": "Actual PDF raster QA finds long background-CMD title clipped. Wrap title and regenerate phase-one panels while reusing verified context/full-extent rasters. No science, fitting, priority, sample or quota change. The same clipping was then observed in the held context CMD title and corrected before bulk execution.",
+  "state": "released_same_job_after_verified_amended_hashes",
+  "title_repair_job": "61624220",
+  "title_repair_state": "COMPLETED",
+  "title_repair_elapsed": "00:00:46",
+  "revised_pdf_pages": 3,
+  "page_QA_passed": true,
+  "release_verified_all_tasks_not_held": true,
+  "phase_one_amended_plan_sha256": "7714bd6ebc424c28ab9d418a87abfe4dbb99c1e94e6dbd5d2314c8242e5af299",
+  "context_title_repair": {
+    "job": "61625386",
+    "state": "COMPLETED",
+    "elapsed": "00:01:36",
+    "all_tasks_pending_held_before_repair": true,
+    "context_and_phase_one_full_rasters_inspected": true,
+    "release_verified_all_tasks_not_held": true,
+    "plots_sha256": "fd170c00ac4a6a4800c0ed0b463549c19037cca70835aeecd0f2711e034686fd",
+    "numeric_review_sha256": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95",
+    "scope": "Second actual raster QA repair wraps context CMD titles. Reuse source-bound saved fits and full-extent pixels; no C optimization or scientific change."
+  }
+}

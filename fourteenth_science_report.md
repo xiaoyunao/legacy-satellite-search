@@ -1,5 +1,13 @@
 # DR11 search and selection response
 
+## 2026-11-20T03:39Z — scientific scope while final integration closes
+
+Registered search execution is complete:6861successful scans plus30zero-valid-gr fields account for6891/6891;174registered retries accepted. Summed R14owned area24481.307990deg² remains distinct from the final historical union and from an empirically demonstrated gain footprint. Outside C and the common-clock final production release are unfinished; no new system is confirmed and no human grade is filled.
+
+The official archived PS1 operator produces real five-band blank measurements (61622347); same-image comparisons are descriptive, not a validated physical response. A bounded four-point finite-kernel mean-signal probe is now testing pixel/unit consistency. First attempt61625226 fails before photometry because a linear FITS file had an empty primary image; retry61625458 corrects the container. It neither adds invented Poisson noise to calibrated coadd units nor counts as a satellite trial. Full PSF/field dependence, photon/covariance response, canonical primary selection, faint-blue reference truth and cross-sky validation remain unresolved. The [official stack documentation](https://outerspace.stsci.edu/spaces/PANSTARRS/pages/298812339/PS1%2BStack%2BImages) distinguishes pixel-frame and catalogue calibration; a successful operator is not DR2 recipe equivalence.
+
+The accepted144native realizations,48sharedIMF populations/three skies, finite-light checks and fixed-population size losses remain the actual physical evidence. There is no validated LS–PS1 physical ΔPdet, global50%contour or abundance inference. Priority remains final production/evidence and bounded response validation, not expansion of the scientific grid or manuscript writing.
+
 ## 2026-11-20T02:24Z — all 6,891 registered search fields are terminal
 
 The final manifest audit accepts **6,861 completed scans and 30 zero-valid-gr fields**. All 174 registered retries are accepted; no uncovered retry remains. The 30 unusable fields have zero valid mask area. R14 summed owned area is **24,481.307990 deg²**; this is not the final historical union or a physical-gain area. The source-bound terminal proof is `results/v14/progress_ab20261120/terminal_acceptance.json`.

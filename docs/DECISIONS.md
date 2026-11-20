@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-11-20T03:39Z — evidence repairs and reusable geometry
+
+Actual three-page PDF QA found a clipped background-CMD title; held all still-pending evidence tasks, wrapped phase-one title, inspected the revised raster/PDF, then found and corrected the same issue in held context. Saved-mode fits and numerical review engine are unchanged. The exact original74case indices remain; amended implementation hashes and both repairs/releases are recorded in frozen75_pdf_layout_amendment.json. Do not alter render sources during execution.
+
+Use the existing dedicated area environment and immutable geometry cache while final C waits. Cached geometry is independent of production qualification; refresh qualification at final source clock rather than recomputing accepted polygons or claiming interim area final.
+
+The first PS1 mean-signal attempt failed before source measurement because an empty primary header caused cameraSIMPLE/NAXIS0 selection. Preserve its operator failure despite SlurmCOMPLETED; retry changes only the linear FITS image/container header. No discovery cut/model tuning or physical response claim follows.
+
 ## 2026-11-20T02:24Z — terminal scans and image-bound response checks
 
 Accept the registered scan roster as terminal under its actual manifest (6,861 complete + 30 zero-valid-gr); do not call this final production, union area or measured gain area before regional C and common-clock integration finish. No redundant scan submission is justified.

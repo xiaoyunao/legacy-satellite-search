@@ -36,7 +36,9 @@ def prepare(index):
         accepted = json.loads(final.read_text())
         if any(sha(Path(p)) != d for p,d in accepted['outputs'].items()):
             raise ValueError('Previously accepted private evidence changed')
-        if all('extent_status' in r for r in accepted['mode_status']):
+        if (all('extent_status' in r for r in accepted['mode_status']) and
+                accepted.get('phase1_renderer_sha256') == sha(Path('scripts/v14_phase1_panels.py')) and
+                all(json.loads(Path(r['context_manifest']).read_text()).get('plot_renderer_sha256') == sha(Path('src/ls_satsearch/plots.py')) for r in accepted['mode_status'])):
             print('Already prepared mandatory case',index)
             return
     attempt = OUT/case['case_id']/os.environ['SLURM_JOB_ID']
@@ -75,21 +77,31 @@ def prepare(index):
         seed = next(r for r in seeds if r['group_id']==case['source_group_id'] and int(float(r['peak_rank']))==rank)
         dest = attempt/f'alternative_{i+1:02d}'
         if accepted:
-            # Retain the accepted native context and phase-one rasters byte-for-byte.
+            # Reuse verified context only when its plotting source remains current.
             record = dict(old_modes[rank])
-            dest.mkdir(parents=True)
+            previous_context = json.loads(Path(record['context_manifest']).read_text())
+            if previous_context.get('plot_renderer_sha256') == sha(Path('src/ls_satsearch/plots.py')):
+                dest.mkdir(parents=True)
+            else:
+                render_mode(dest,mode,seed,membership,raw,field,area,sample,sources,valid,mags,chosen,model,
+                            saved['field'],saved['observing_conditions_source_sample'],root,region,bricks)
+                record['context_manifest'] = str(dest/'manifest.json')
         else:
             render_mode(dest,mode,seed,membership,raw,field,area,sample,sources,valid,mags,chosen,model,
                         saved['field'],saved['observing_conditions_source_sample'],root,region,bricks)
-            status = render_phase1(dest/'phase1.png',f'Observed field / alternative {i+1:02d}',
-                                  sample,area,field,model[0],mode,root,region,bricks)
-            if status['probabilities_or_scores_rendered']:
-                raise ValueError('Phase-one information policy failed')
-            write_json(dest/'phase1_status.json',status)
-            record = dict(seed_rank=rank,context_manifest=str(dest/'manifest.json'),phase1_status=status)
-        extent = render_extent(dest/'phase1_extent.png',sample,area,field,mode,root,region,bricks)
-        write_json(dest/'phase1_extent_status.json',extent)
-        record.update(extent_status=extent,extent_path=str(dest/'phase1_extent.png'))
+            record = dict(seed_rank=rank,context_manifest=str(dest/'manifest.json'))
+        status = render_phase1(dest/'phase1.png',f'Observed field / alternative {i+1:02d}',
+                              sample,area,field,model[0],mode,root,region,bricks)
+        if status['probabilities_or_scores_rendered']:
+            raise ValueError('Phase-one information policy failed')
+        write_json(dest/'phase1_status.json',status)
+        record.update(phase1_status=status,phase1_path=str(dest/'phase1.png'))
+        if accepted and record.get('extent_status',{}).get('renderer_sha256') == sha(Path('scripts/v14_phase1_extent.py')):
+            pass  # Existing full-extent pixels and radial data already have bound hashes.
+        else:
+            extent = render_extent(dest/'phase1_extent.png',sample,area,field,mode,root,region,bricks)
+            write_json(dest/'phase1_extent_status.json',extent)
+            record.update(extent_status=extent,extent_path=str(dest/'phase1_extent.png'))
         records.append(record)
     for p in attempt.rglob('*'):
         if p.is_file(): outputs[str(p)] = sha(p)

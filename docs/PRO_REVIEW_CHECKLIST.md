@@ -1,5 +1,15 @@
 # GPT Pro review: requirements and acceptance
 
+## 2026-11-20T03:39Z — current release gates
+
+- [x] All registered scans terminal; no uncovered retry.
+- [x] Two actual title/raster repairs accepted; original75 unchanged, numeric review unchanged.
+- [ ] Mandatory74case evidence61623753 complete and source/image proof accepted.
+- [ ] Remaining outside C exact-source acceptance61623103; existing global integration/final common-clock production/area/identities/funnel.
+- [ ] Final positive-probability sample, selected all-mode evidence, private alias mapping, anonymous PDF/ZIP/blank forms and full-page/privacy QA. One human session only.
+- [x] Native PS1 five-band blank photometry and descriptive same-image comparison.
+- [ ] Four-point mean-signal technical preflight61625458 after preserved pre-photometry failure61625226; canonical primary/faint-blue/condition-dependent physical response still unvalidated. No physical three-arm gain or abundance claim.
+
 ## 2026-11-20T02:24Z — search terminal gate passed
 
 - [x] 6,891/6,891 terminal: 6,861 completed, 30 zero-valid-gr; 174 retries accepted, zero uncovered, no positive-area unusable field. Saved field-level source hashes and terminal acceptance.

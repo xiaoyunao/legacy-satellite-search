@@ -1,0 +1,21 @@
+{
+  "pages": 3,
+  "source_package_manifest_sha256": "5b69a5ff7b995dbad80f5cc3a19434f31198e2d1d083f4180eee33501ca495d6",
+  "original_pages_visually_inspected": [
+    1,
+    2,
+    3
+  ],
+  "revised_page_visually_inspected": 2,
+  "revised_pages_pixel_identical_to_inspected_original": [
+    1,
+    3
+  ],
+  "PDF_text_identity_checks_passed": true,
+  "ZIP_entries_identity_checks_passed": true,
+  "PDF_author_empty": true,
+  "human_grade_table_unfilled": true,
+  "private_pilot": true,
+  "final_review_release": false,
+  "scope": "One mandatory old position, private actual-image layout test only. Fixed observed clipped long CMD title and rerendered PDF. Not full final-sample privacy/image/page QA or user grading."
+}

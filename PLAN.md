@@ -1,5 +1,12 @@
 # Plan
 
+## 2026-11-20T03:39Z — remaining production/evidence gates
+
+1. Registered scan terminal gate is passed. Follow only existing outside C owners 61470256/61470266, acceptance61623103 and global release61470267/61470508; diagnose actual terminal gaps before any retry. Then freeze the common-clock historical catalogue, masks/union, identities, C coverage and funnel.
+2. Mandatory old75 private renderer batch61623753 is released after real PDF/raster title QA. Verify each case's original membership/config/mode and output hashes; retain old artifacts. Final additional cases, probability sampling, full evidence/privacy/page QA remain outstanding; no intermediate human grades.
+3. Geometry preparation61624254 and vector pilot61624433 complete; remaining cache shards61624957 reuse immutable source geometry. This is not a final qualification or union freeze.
+4. Native PS1 five-band blank processing/comparison is measured, not physical response. Mean-signal61625226 failed at the FITS container before photometry; corrected primary-image retry61625458 is pending acceptance. Preserve that distinction and original144 science limits; no unsupported physical gain, new grid or manuscript.
+
 ## 2026-11-20T02:24Z — terminal scans; finish production and one review
 
 1. All 6,891 registered fields are terminal (6,861 scans + 30 zero-valid-gr); do not resubmit completed owners. Follow the existing outside-census C arrays and final aggregation jobs, validate exact source/seed/member artifacts, then freeze the common-clock historical production and actual mask union.

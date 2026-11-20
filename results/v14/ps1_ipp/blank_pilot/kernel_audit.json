@@ -1,0 +1,155 @@
+{
+  "job": "61624929",
+  "stack_proof_sha256": "aef7c340d04142466e38076cf8ced4b0a1d595f0c7154004660ec4733146aa73",
+  "rows": [
+    {
+      "band": "g",
+      "PSF_sha256": "67f0de8c44af778ed588c9d438d36c6ebedc14f4e761135a763c98b382b0e55a",
+      "shape": [
+        65,
+        65
+      ],
+      "sum": 55.43456589002744,
+      "minimum": 0.0001561738463351503,
+      "maximum": 1.050579309463501,
+      "negative_pixels": 0,
+      "negative_abs_fraction": -0.0,
+      "positive_centroid_pixels": [
+        31.99794747329421,
+        31.997246615605917
+      ],
+      "edge_two_pixel_positive_fraction": 0.003406183155869762,
+      "positive_light_within_radii": {
+        "2": 0.1758889091238513,
+        "4": 0.47557643604302574,
+        "8": 0.7702309731608704,
+        "16": 0.9258276819753054,
+        "24": 0.9720331553588878,
+        "32": 0.9932758862271249
+      }
+    },
+    {
+      "band": "r",
+      "PSF_sha256": "b07ab624e06e4085aed6c07325e89e77d97d6ed562d728a3fbaafdde61cd2c0a",
+      "shape": [
+        65,
+        65
+      ],
+      "sum": 28.077880190612632,
+      "minimum": 4.718549462268129e-05,
+      "maximum": 1.0405584573745728,
+      "negative_pixels": 0,
+      "negative_abs_fraction": -0.0,
+      "positive_centroid_pixels": [
+        31.999477642296682,
+        31.956776490931208
+      ],
+      "edge_two_pixel_positive_fraction": 0.002028112382033297,
+      "positive_light_within_radii": {
+        "2": 0.3069225965076755,
+        "4": 0.6518995269532456,
+        "8": 0.8590100068001701,
+        "16": 0.9552773288908591,
+        "24": 0.9832952226249583,
+        "32": 0.9960395791747468
+      }
+    },
+    {
+      "band": "i",
+      "PSF_sha256": "7937878e4ab0f0ea65017ca2d0cac71f3c20adcce9194f9e8f8e60c0508b84fa",
+      "shape": [
+        65,
+        65
+      ],
+      "sum": 37.57436872420658,
+      "minimum": 7.694956002524123e-05,
+      "maximum": 1.0499664545059204,
+      "negative_pixels": 0,
+      "negative_abs_fraction": -0.0,
+      "positive_centroid_pixels": [
+        31.958805852517848,
+        31.96798725410556
+      ],
+      "edge_two_pixel_positive_fraction": 0.002528111039333883,
+      "positive_light_within_radii": {
+        "2": 0.24643588052588575,
+        "4": 0.5863474519196957,
+        "8": 0.8259792229135136,
+        "16": 0.9445152821213785,
+        "24": 0.9792842829368832,
+        "32": 0.9950647138930506
+      }
+    },
+    {
+      "band": "z",
+      "PSF_sha256": "9f43ac87dc52ff0834d648e6f364944915e879ce9de91f90613b65f54331f927",
+      "shape": [
+        65,
+        65
+      ],
+      "sum": 25.64379166465369,
+      "minimum": 4.0880735468817875e-05,
+      "maximum": 1.027772068977356,
+      "negative_pixels": 0,
+      "negative_abs_fraction": -0.0,
+      "positive_centroid_pixels": [
+        31.999474939353465,
+        31.98762598996497
+      ],
+      "edge_two_pixel_positive_fraction": 0.001972309290866626,
+      "positive_light_within_radii": {
+        "2": 0.32288458194082376,
+        "4": 0.6634851928287001,
+        "8": 0.861254815186482,
+        "16": 0.9564244078230674,
+        "24": 0.9837236131796078,
+        "32": 0.9961005743453444
+      }
+    },
+    {
+      "band": "y",
+      "PSF_sha256": "8b87dbe1335a6a57d6c5d4c5e27b6836c6fb57cfaa158f1df6e34e3fab63ea65",
+      "shape": [
+        65,
+        65
+      ],
+      "sum": 27.197380363977572,
+      "minimum": 5.3628991736331955e-05,
+      "maximum": 1.02875554561615,
+      "negative_pixels": 0,
+      "negative_abs_fraction": -0.0,
+      "positive_centroid_pixels": [
+        31.96354756391041,
+        31.986603634641938
+      ],
+      "edge_two_pixel_positive_fraction": 0.0022689096111133166,
+      "positive_light_within_radii": {
+        "2": 0.3053228458498184,
+        "4": 0.6412349852907726,
+        "8": 0.844210638159829,
+        "16": 0.9502975679018344,
+        "24": 0.9813512039514021,
+        "32": 0.9955686651824085
+      }
+    }
+  ],
+  "original_physical_truth_sha256": "80561b99b27721c4d0d8412f8327d41ba7a14f25d6c88a63674a99e16cc90f73",
+  "original_truth_rows": 275,
+  "original_truth_columns": [
+    "ra",
+    "dec",
+    "g0",
+    "r0",
+    "flux_g",
+    "flux_r",
+    "flux_i",
+    "flux_z",
+    "ps1_g0",
+    "ps1_r0",
+    "ps1_i0"
+  ],
+  "official_source_basis": "psModules/src/objects/pmPSF_IO.c: centre-of-field unit-peak 65x65 PSF_MODEL representation, not an arbitrary local PSF or a documented total-flux-normalized injection kernel.",
+  "physical_PS1_response_validated": false,
+  "pixel_injection_performed": false,
+  "scope": "Inspect real fitted kernels and existing shared-star schema only. Finite support, field dependence, stack calibration and source-photon noise remain requirements before physical-response use. Do not treat coadd data units as individual photon counts."
+}

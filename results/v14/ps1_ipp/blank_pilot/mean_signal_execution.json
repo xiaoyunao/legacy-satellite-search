@@ -1,0 +1,45 @@
+{
+  "job": "61625226",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "debug",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c8",
+    "--mem=64G",
+    "-t",
+    "00:29:00",
+    "-J",
+    "ls14-ps1-mean-signal",
+    "-o",
+    "logs/%x-%j.log",
+    "scripts/v14_ps1_mean_signal_probe.sh"
+  ],
+  "inputs": {
+    "scripts/v14_ps1_mean_signal_probe.py": "9483cc45b02729dec8dfe40e3331a85e54643750436c0f79be3080f3308e8f16",
+    "scripts/v14_ps1_mean_signal_probe.sh": "2f2de862e44d6c0dd0925f8480d45c6f4cb5dc2d2206b8c57a2141d38962ad7a",
+    "configs/v14_ps1_operator/mean_signal_probe.yaml": "d644937ce9dbe9de7b0f873693b340d10063da7e344794eff7350c6fd0bf62a8"
+  },
+  "state": "submitted_not_complete",
+  "scope": "Four finite-kernel mean-signal calibrators on actual images. No source-photon noise approximation, Pdet or physical gain claim; not the original144system experiments.",
+  "first_attempt": {
+    "job": "61625226",
+    "slurm": "COMPLETED",
+    "operator_returncode": 5,
+    "accepted": false,
+    "root_cause": "Linear FITS written with empty primary HDU; psModules chose camera SIMPLE and attempted NAXIS=0 pixels before source processing. No source-response result.",
+    "executed_source": "references/run_sources/v14_ps1_mean_signal_probe_61625226.py"
+  },
+  "retry": {
+    "job": "61625458",
+    "state": "submitted_not_accepted",
+    "source_sha256": "ee07e2fb706084a5379ae6757cd09c3e3b5dc0b76f531d1e8a22dff3c893ffc7",
+    "fix": "Put linear image and native skycell header in primary HDU; no detector recipe/cut change."
+  }
+}

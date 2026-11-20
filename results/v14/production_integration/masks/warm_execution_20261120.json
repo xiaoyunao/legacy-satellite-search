@@ -1,0 +1,42 @@
+{
+  "job": "61624957",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "-A",
+    "desi",
+    "-q",
+    "regular",
+    "-C",
+    "cpu",
+    "-N1",
+    "-n1",
+    "-c1",
+    "--mem=32G",
+    "-t",
+    "00:29:00",
+    "--array=1-7%2",
+    "--dependency=afterok:61624433",
+    "-J",
+    "ls14-mask-warm-vectors",
+    "-o",
+    "logs/%x-%A_%a.log",
+    "--wrap",
+    "export LS_SAT_DATA=/pscratch/sd/y/yunao/legacy-satellite-search PYTHONPATH=src:. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; /pscratch/sd/y/yunao/legacy-satellite-search/envs/area-union-20261119/bin/python -u -m scripts.v14_mask_tiles vectorize --registration results/v14/production_integration/masks/tiled/8087a09fa6db81d3/registration.json --index $SLURM_ARRAY_TASK_ID"
+  ],
+  "registration_sha256": "b7e0c0903c0b233382629f59bbf3839d7d4c8c1025392971caa34d5f54f86e9c",
+  "pilot_job": "61624433",
+  "pilot_state": "COMPLETED",
+  "pilot_elapsed": "00:04:57",
+  "remaining_shards": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "final_area_claimed": false,
+  "state": "submitted_not_complete"
+}

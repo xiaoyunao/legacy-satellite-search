@@ -35,12 +35,12 @@ def render(output, label, sample, area, field, model, mode, root, region, bricks
         ax.add_patch(plt.Circle((0,0),scale*rh,fill=False,color='#555555',lw=.7,linestyle=style))
     ax.set(xlabel='East (arcmin)',ylabel='North (arcmin)',title='Observed selected sources',
            xlim=(-6*rh,6*rh),ylim=(-6*rh,6*rh),aspect='equal')
-    for ax,use,title in ((axes[0,1],core,'Core'),(axes[0,2],off,'Equal geometric area background')):
+    for ax,use,title in ((axes[0,1],core,'Core CMD'),(axes[0,2],off,'Background CMD')):
         g,r,eg,er=sample[use,2:6].T
         ax.errorbar(g-r,g,xerr=np.hypot(eg,er),yerr=eg,fmt='.',ms=3,lw=.45,
                     alpha=.55,color='#647c89')
         ax.plot(model[:,0]-model[:,1],model[:,0]+dm,'.',ms=1.2,color='#b64b40')
-        ax.set(xlabel='(g-r)0 (mag)',ylabel='g0 (mag)',title=f'{title}: {use.sum()} sources',
+        ax.set(xlabel='(g-r)0 (mag)',ylabel='g0 (mag)',title=f'{title}\n{use.sum():,} sources'+(' (equal geometric area)' if title=='Background CMD' else ''),
                xlim=(-.5,1.8),ylim=(max(24.5,g.max(initial=24.5)),15))
     bx,by=field.xy(bricks['RA'],bricks['DEC'])
     image_status={}
