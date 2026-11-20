@@ -2,6 +2,13 @@
 
 ## 2026-11-20
 
+### 2026-11-20T05:07Z — all original75 materials and weak saved controls accepted
+
+- All10original preparation packs61623753 completed; full proof61626094 COMPLETED58s verifies75/75cases,226saved modes and1223retained PNGs, original release hashes and zero image gaps. Explicit PNG/JSON allowlist sync completed; local hash/PIL verification matches all1223. This includes preserved attempts, not1223final pages or final package QA.
+- Saved weak controls use original blind-source/config/member packets without refitting: DELVE5 retry61628355 completed3:25 (7modes/35PNG); DELVE4 61628616 completed2:53 (6modes/30PNG). All output/member proofs and expected images pass; three full rasters per control inspected. First D5 attempt61628262 failed26s because deployment lacked existing public aggregate seed/fit files; their original archive hashes matched, and only those allowed tables were restored.
+- Files: saved-field preparation runner/wrapper/config, aggregate acceptance/execution receipts and current scientific records. Validation: real Slurm products, Python parse/bash syntax, local PNG/hash checks, sampled raster inspection. Private images/context remain ignored; no user grade, independent confirmation or current-policy recovery claim.
+- Next: accept existing global snapshot, corrected production/source post and current-source area union; freeze final universe and select/prepare new-case evidence and probability audit, then one final human release.
+
 ### 2026-11-20T04:37Z — retain the frozen analysis split in mask classification
 
 -Observedrealmetadata:outsidecensusoriginalfirsttenfieldsallmanifestpilot_eval,whilethealready-frozenfieldledgerassignseveryfifthpilot_dev. Maskinventorypreviouslyusedonlyoriginalrole,somiscalledrejectedcalibrationfieldsunqualified/unknownratherthandevelopment.

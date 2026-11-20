@@ -1,5 +1,10 @@
 # Decisions
 
+## 2026-11-20 — saved weak controls are evidence checks
+
+DELVE4/5 now have accepted private current-style materials from all13original retained blind/C modes, using original configs/templates/members. Retain them as certainty weak controls in final review with prior-exposure flags. This preparation does not rerun the current formal production policy, refit C or supply a user grade; no new recovery or confirmation claim follows from rendering. All original75 material integrity checks pass, but final whole-project release still waits for source/area/population/C/new-case/private-page gates.
+
+
 ## 2026-11-20T04:37Z — source-bound development mask labels
 
 The outside-census every-fifth-field calibration split was frozen in the analysis ledger without editing original manifests. Inventory classification now honors that ledger only with matching manifestSHA and preserves both roles; the real first-two-field/stale-ledger regression passes. This corrects labels for already rejected calibration fields; no detector, mask or geometry-cache change. Full counts await the pending closed-source post.

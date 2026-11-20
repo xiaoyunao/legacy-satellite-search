@@ -1,0 +1,39 @@
+{
+  "controls": {
+    "DELVE_5": {
+      "job": "61628355",
+      "state": "COMPLETED",
+      "elapsed": "00:03:25",
+      "source_groups": 2,
+      "modes": 7,
+      "proof_sha256": "54ac8429afe21584246aff61028fabfbe2353356f55801cde418971def485273",
+      "all_saved_membership_likelihoods_verified": true,
+      "all_output_hashes_and_35PNG_integrity_verified": true,
+      "missing_expected_centre_or_contributor_images": 0,
+      "full_rasters_inspected": [
+        "first_phase_one",
+        "middle_native_contributors",
+        "last_full_extent"
+      ],
+      "refitted": false
+    },
+    "DELVE_4": {
+      "job": "61628616",
+      "state": "COMPLETED",
+      "elapsed": "00:02:53",
+      "source_groups": 2,
+      "modes": 6,
+      "proof_sha256": "8fdd53dcd4a7b6d0edd4fb03281f17022122d614f81bf7ffe3dd6497d32341d1",
+      "all_saved_membership_likelihoods_verified": true,
+      "all_output_hashes_and_30PNG_integrity_verified": true,
+      "missing_expected_centre_or_contributor_images": 0,
+      "full_rasters_inspected": [
+        "first_phase_one",
+        "middle_native_contributors",
+        "last_full_extent"
+      ],
+      "refitted": false
+    }
+  },
+  "scope": "Private current-style material preparation from existing ordinary-blind-source weak controls only. Original control thresholds/configuration remain explicit; this is not a new formal-production recovery experiment, final sample, human grade or new system."
+}

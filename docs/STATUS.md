@@ -1,5 +1,10 @@
 # Status
 
+## 2026-11-20 13:07 CST — mandatory evidence accepted
+
+All original75 materials are now accepted: full integrity61626094 completes58s with75cases/226saved modes/1223retained PNGs, unchanged original release hashes and no image gaps; local allowlisted copy passes the same file hashes and PNG integrity. Saved DELVE4/5 control preparation also completes (6/7modes;30/35PNGs), with sampled native/phase-one/full-extent raster QA. These are private evidence preparation, not new fits, final sampling, human grades or final PDF QA. Final production/area/common-clock freeze and selected new-case evidence remain mandatory before the single user review.
+
+
 ## 2026-11-20T04:27Z — actual batch-version handoff
 
 The actual Slurm-spooled61470267/61470508batch scripts are byte-identical(SHA60ebf1b9…),bothinvoke snapshot and omit later production/registry/integrated/Ccoverage steps. All registered scans and outsideCwere terminal before the running snapshot started. Preserve61470267; after registering corrected post61627306and rebinding setup61626647,retire only wholly pending duplicate61470508and stale post61625808. Both are CANCELLED with zero elapsed; running work is untouched. New post's executed SHAec75cfac…matches its registered source and includes the missing integration stages plus lock/source/old75 checks. A rejected completed-job dependency created no job; actual accepted C products remain the gate.

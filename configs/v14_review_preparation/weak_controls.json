@@ -1,0 +1,44 @@
+{
+  "fields": [
+    {
+      "control_id": "DELVE_4",
+      "field": "weak_02",
+      "group_ids": [
+        "weak_02-A_base-0.3-001",
+        "weak_02-A_base-0.3-002"
+      ],
+      "scan_manifest": "../discovery-v5/weak/results/summary/weak_02-base/manifest.json",
+      "seeds": "results/v5/weak/holdout/sky_group_candidates.csv",
+      "fits": "results/v5/weak/holdout/group_review_modes.csv",
+      "run_version": "v5",
+      "raw_template_peaks": "runs/v5/weak_02-base/all_template_peaks.csv"
+    },
+    {
+      "control_id": "DELVE_5",
+      "field": "weak_03",
+      "group_ids": [
+        "weak_03-A_base-0.3-001",
+        "weak_03-A_base-0.3-002"
+      ],
+      "scan_manifest": "../discovery-v5/weak/results/summary/weak_03-base/manifest.json",
+      "seeds": "results/v5/weak/holdout/sky_group_candidates.csv",
+      "fits": "results/v5/weak/holdout/group_review_modes.csv",
+      "run_version": "v5",
+      "raw_template_peaks": "runs/v5/weak_03-base/all_template_peaks.csv"
+    }
+  ],
+  "input_sha256": {
+    "results/v5/weak/holdout/weak_reference_association.csv": "7299df6b4eafe95cbab30354898308c6136e35b3924cc2ac321b3502b8119c08",
+    "results/v5/weak/holdout/sky_group_candidates.csv": "9bcb304d6e63de96be420c28a056e2eb10d340855856e58cc5d935712f580c37",
+    "results/v5/weak/holdout/group_review_modes.csv": "eeeaa4e2200b3f725cd8cce3106192a0d98f931c4acdb99251537be7e8c4ecb3",
+    "scripts/v14_prepare_saved_field.py": "3e693c6254ea30df354d1d5654583dea47faad71905a9c3193454536bc9e2298",
+    "scripts/v14_prepare_saved_field.sh": "f3a03851920af74cb4fb381a1246bd0364de76b600386d77bf7c2035e8e06934",
+    "scripts/v14_saved_context.py": "44a52a33bb2f9169c9b48891d97703f8dbe6dfea4b5a4a9397b19d6638e91f6e",
+    "scripts/v14_phase1_panels.py": "6e1f6b094190963b93faf3280a4141a8ddd3c62e33e32d511b69db349cdec589",
+    "scripts/v14_phase1_extent.py": "6eceaaead5a1295e149ab2c40c1b099adc434e4502ccd3032003aeaa9b1e9233",
+    "src/ls_satsearch/plots.py": "fd170c00ac4a6a4800c0ed0b463549c19037cca70835aeecd0f2711e034686fd",
+    "src/ls_satsearch/review.py": "de9c5b9a9fc471a854029832cd268619971fe73ee4b2b543f082db519fe0be95"
+  },
+  "scientific_selection_or_new_trials": false,
+  "scope": "Mandatory weak-control evidence preparation only; existing ordinary blind source groups and every saved mode. Final aliases/sample and human grades remain unassigned. Original75 and numerical results unchanged."
+}

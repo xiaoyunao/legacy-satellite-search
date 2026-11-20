@@ -1,5 +1,10 @@
 # 当前科学主线
 
+## 2026-11-20 13:07 CST — mandatory evidence accepted
+
+All original75 materials are now accepted: full integrity61626094 completes58s with75cases/226saved modes/1223retained PNGs, unchanged original release hashes and no image gaps; local allowlisted copy passes the same file hashes and PNG integrity. Saved DELVE4/5 control preparation also completes (6/7modes;30/35PNGs), with sampled native/phase-one/full-extent raster QA. These are private evidence preparation, not new fits, final sampling, human grades or final PDF QA. Final production/area/common-clock freeze and selected new-case evidence remain mandatory before the single user review.
+
+
 ## 2026-11-20T04:37Z — source-bound development mask labels
 
 The outside-census every-fifth-field calibration split was frozen in the analysis ledger without editing original manifests. Inventory classification now honors that ledger only with matching manifestSHA and preserves both roles; the real first-two-field/stale-ledger regression passes. This corrects labels for already rejected calibration fields; no detector, mask or geometry-cache change. Full counts await the pending closed-source post.

@@ -4,14 +4,14 @@
 
 1. Keep running61470267,then corrected post61627306which actually integrates historical production/registry/ledger/Ccoverage/current masks. Do not resume cancelled duplicate61470508or stale post61625808. All16outsideCshards are accepted.
 2. Same source-bound area setup61626647nowdepends on61627306; tile packs61626690andcollector61626692unchanged. All8341geometry keys are cached. Final common-clock area/production acceptance remains open.
-3. Finish old75preparation61623753(sixpackscomplete atlastcheck),fullvalidator61626094,then final selected new cases/controlled probability audit/evidence/privacy/allpageQA. User grades remain blank until one final release.
+3. Original75preparation/fullvalidator complete (75cases/226modes/1223retainedPNG), as are saved DELVE4/5 controls. Finish final selected new cases/controlled probability audit/evidence/privacy/allpageQA. User grades remain blank until one final release.
 4. Preserve accepted144and supported limits; no PS1recipe tuning, extra physical grid, false gain/abundance claim or manuscript.
 
 ## 2026-11-20T04:19Z — outside C accepted; common-clock area pending
 
 1. Outside C is accepted16/16(979source groups/3102modes); no repeated fitting. Finish existing snapshots61470267/61470508, then61625808source/Ccoverage/WCSregistration. Common-clock global candidate counts remain pending.
 2. All8geometry-cache shards are complete. Source-bound index61626647 waits for the post-source registration and cache owner. Then61626690uses3packs×8workers over all720tiles;61626692collects the existing validated polygon-only overlay. No area is claimed before actual acceptance. Keep the registered area driver and underlying geometry methods unchanged during this chain.
-3. Old75private preparation61623753has four complete packs and the remaining original owners; full proof61626094 follows. After final discovery/area/identity/C freeze, select certainty plus positive-probability audit cases, finish all important-mode evidence/privacy/page QA and deliver one package. No interim grades.
+3. Old75private preparation61623753 and full proof61626094 are complete; all75cases accepted and locally verified. After final discovery/area/identity/C freeze, select certainty plus positive-probability audit cases, finish all important-mode evidence/privacy/page QA and deliver one package. No interim grades.
 4. Keep the accepted144/finite-light/size-response evidence and PS1bright-unit failure. No physical gain, abundance, parameter-grid expansion or manuscript.
 
 ## 2026-11-20T03:51Z — close production and preserve measured PS1 limit

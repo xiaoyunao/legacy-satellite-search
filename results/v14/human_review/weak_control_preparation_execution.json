@@ -1,0 +1,25 @@
+{
+  "job": "61628262",
+  "pilot_control": "DELVE_5",
+  "index": 1,
+  "state": "both_saved_control_materials_accepted",
+  "plan": "configs/v14_review_preparation/weak_controls.json",
+  "plan_sha256": "1816280f2477d102cd22230de9fd8316ae302e24920336bf845716b9d3b9f90a",
+  "scope": "Prepare saved ordinary-blind-scan weak controls with the same current unweighted/context/full-extent functions. Seven existing DELVE5modes first; no fit, new trial, final sampling, alias key or human grade. DELVE4follows only after source/member/image pilot acceptance.",
+  "first_attempt": {
+    "job": "61628262",
+    "state": "FAILED",
+    "elapsed": "00:00:26",
+    "cause": "Missing deployed public aggregate seed/fit tables; actual original NERSC archive hashes match local public copies; restored those allowed small tables before retry. No source pixels, fit or grades ran."
+  },
+  "pilot_retry": {
+    "job": "61628355",
+    "state": "COMPLETED_3m25s_all7modes_verified_35PNG",
+    "proof_sha256": "54ac8429afe21584246aff61028fabfbe2353356f55801cde418971def485273"
+  },
+  "remaining_control": {
+    "control": "DELVE_4",
+    "job": "61628616",
+    "state": "COMPLETED_2m53s_all6modes_verified_30PNG"
+  }
+}
