@@ -2,6 +2,13 @@
 
 ## 2026-11-20
 
+### 2026-11-20T07:35Z — historical saved-material readiness accepted
+
+-61633258 COMPLETED50s: one originalv7qualified record/one saved Cmode/fivePNGs; original scan configuration/template/member identities/likelihood and expected central/contributor images pass. Explicit private PNG/JSON and aggregate plan sync passes local hash/PIL checks. No refit, final source selection, new exposed context or grade.
+-This tests the generic historical namespace/legacy saved-membership fallback in addition to previously accepted newR14North/South sources. Missing explicit membership hashes in some legacy normalized rows still require every final selected packet's own saved-artifact/likelihood proof; numerical C coverage alone is not material readiness.
+-All three actual area packs complete45:52/47:08/42:47;720tiles present. Samecollector61626692eligible; no duplicate job. Prior comparable collector61579698COMPLETED2:11/RSS417000KiB supports current10min/32G request. Formaldeeper144stillrunning.
+-Next: actual area/frame/selected-C registration, complete selected evidence and one full-page/privacy-verified release; accept actual formal144depthresults.
+
 ### 2026-11-20T07:25Z — existing C adds distance context without new fits
 
 - Aggregate-only own-record diagnostic of the20benchmark audit: all8spatially matched covered/in-range targets have an existing position/DMcompatible C mode;7have a highestCdistance within0.25mag. Coma bestC18.0 versus literature18.13 restores strict-distance compatibility; VirgoII bestC21.0 versus literature19.29 stays wrong despite another compatible mode. Keep bothblind ranking and all alternatives, and prior forced/special-processing caveats.

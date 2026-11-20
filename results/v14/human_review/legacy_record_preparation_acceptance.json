@@ -1,0 +1,13 @@
+{
+  "job": "61633258",
+  "state": "COMPLETED",
+  "elapsed": "00:00:50",
+  "original_source_version": "v7",
+  "modes": 1,
+  "PNG_integrity_verified": 5,
+  "accepted_source_sha256": "2c771e3fd3e148af59cd5b2ce98d67c2d3b4e63630766c248f5eeec13c3f4575",
+  "original_scan_config_model_member_likelihood_verified": true,
+  "refitted": false,
+  "new_identity_context_private": true,
+  "final_sample_or_release": false
+}

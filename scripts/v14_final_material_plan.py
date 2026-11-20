@@ -104,7 +104,8 @@ def build(material_plan):
             key=tuple(mode['signature'])
             alternatives.setdefault(key,[]).append(mode)
         panels=[];sources=[]
-        for j,key in enumerate(sorted(alternatives),1):
+        ordered=sorted(alternatives,key=lambda k:(float(k[3]),float(k[4]),float(k[1]),float(k[2]),k[0],k[5:]))
+        for j,key in enumerate(ordered,1):
             origins=alternatives[key];mode=origins[0]
             # Saved rasters already carry local neutral alternative labels.
             # Do not relabel them with a conflicting global alternative number.
