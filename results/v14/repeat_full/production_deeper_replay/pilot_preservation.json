@@ -1,0 +1,34 @@
+{
+  "source_pilot_job": "61629992",
+  "source_acceptance_job": "61630419",
+  "pilot_completion_sha256": "f6004af73262b50f980a1b9531e8f4e65576fdcabcef51291b25d9757f6b61e8",
+  "pilot_acceptance_sha256": "3016c5e918719404abec589fa5372fcad5bca7435b9fd117bd8ec78be58d79c8",
+  "original_live_to_preserved": {
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_1.csv": {
+      "preserved": "results/v14/repeat_full/production_deeper_replay/pilot_frozen/v14_south_response_1.csv",
+      "sha256": "8bbf6bb11f78fbb538325b74e9b49bc448d1b22f3675dc453713996897531f62"
+    },
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_1.json": {
+      "preserved": "results/v14/repeat_full/production_deeper_replay/pilot_frozen/v14_south_response_1.json",
+      "sha256": "6d6d136e19f9ef48b9f66dfc09c640139c9f817deda2924e8d205d5490646638"
+    },
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_2.csv": {
+      "preserved": "results/v14/repeat_full/production_deeper_replay/pilot_frozen/v14_south_response_2.csv",
+      "sha256": "4129f2498ed071ce903874d6c834bdb353c0664790519a92a3a19527899d2175"
+    },
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_2.json": {
+      "preserved": "results/v14/repeat_full/production_deeper_replay/pilot_frozen/v14_south_response_2.json",
+      "sha256": "255347e29ce9d6fcea43b9dee6a333bec3299828cd43d43f2679fa8508da7a02"
+    },
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_3.csv": {
+      "preserved": "results/v14/repeat_full/production_deeper_replay/pilot_frozen/v14_south_response_3.csv",
+      "sha256": "8c4556ea293272ea92c1dea58a5d92203fccfd2c2285f3d1c16c41ba38d51476"
+    },
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_3.json": {
+      "preserved": "results/v14/repeat_full/production_deeper_replay/pilot_frozen/v14_south_response_3.json",
+      "sha256": "5e00a34cd12b141465f7b8d0be2c311fa439b1c6cc01efbf15b1f08fbf8a2885"
+    }
+  },
+  "all_mapped_hashes_match_recorded_completion": true,
+  "scope": "Explicit immutable byte-location mapping for the18-case pilot. The full replay replaces only the live three-site summary files; the accepted pilot copies and original completion remain retained. No science result or source data changed."
+}

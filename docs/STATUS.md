@@ -1,5 +1,14 @@
 # Status
 
+## 2026-11-20 14:57 CST — accepted evidence and paired formal-depth pilot
+
+Atlas/efficiency tail61629183 completes22:49; current atlas binds6861R14rasters and all four scientific PNGs pass full-raster layout inspection. Sidecar captions distinguish coarse/all-scope coverage, machine contexts and legacy catalogue/native pilot curves from qualified area, human grades and physicalPS1gain.
+
+New original-source renderer readiness61631306/61631657 accepts2records/5saved modes/25PNG with exact config/template/member/output checks; identity/context stay private. Original75/226modes and weakDELVE4/5controls remain preserved. Final sample/draw/required selected C/material/page/privacy QA remain gated by720tile acceptance.
+
+Formal deeper pilot61629992→61630419 accepts18paired cases/6potential populations/3skies: spatial5→6,highestDMcorrect5→5,retainedcorrect5→6,hardmembers132→230. Original fixed development cuts6.137901/7.520695 and common formal masks/grid verified. Three blank-core qualifying group counts are0/0/0baseline and2/1/1deeper; none match the18truth positions. These are3reused backgrounds, not18independent null experiments or a final depth-gain result. Fullsame144replay61630564 and proof61630992are queued; original baseline/legacydata and physicalPS1limitations stay separate.
+
+
 ## 2026-11-20 13:28 CST — closed-source production checkpoint
 
 Existing post61627306 completes7:42:10356qualified historical+R14records/10169provisional positions,all75identities retained. Exact Ccoverage8704records/20362seeds complete;1652records/2546seeds unattempted, to be completed when required by final selection. R14increment alone9070records/9007associations is separately retained. Local registry/ledger/Csource hashes pass.

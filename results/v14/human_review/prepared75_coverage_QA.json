@@ -1,0 +1,15 @@
+{
+  "scope": "Actual full-extent native gr canvas finite-pixel audit of the226accepted original modes; distinct from source/member stamps and human grading.",
+  "modes": 226,
+  "fully_finite_canvases": 225,
+  "canvases_ge_95pct_finite": 226,
+  "minimum_gr_finite_fraction": 0.971698608264414,
+  "partial_canvas": {
+    "case_id": "B009",
+    "seed_rank": 5,
+    "missing_fraction": 0.028301391735586,
+    "visual_observation": "Right outer canvas border is blank; central core/native panels and contributor stamps complete. Partial canvas is visible and retained, not zero-star sky or a human grade."
+  },
+  "full_rasters_additionally_inspected": 1,
+  "final_release": false
+}

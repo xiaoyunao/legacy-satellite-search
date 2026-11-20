@@ -29,5 +29,7 @@
   "collector_dependency": "afterok:61626690",
   "original_setup_dependencies": "afterok:61625808:61624957",
   "geometry_warming_state": "all8shards_completed_immutable_proofs_revalidated_in_setup",
-  "handoff_receipt": "results/v14/production_integration/checkpoints/outside_C_final_20261120/global_snapshot_handoff_20261120.json"
+  "handoff_receipt": "results/v14/production_integration/checkpoints/outside_C_final_20261120/global_snapshot_handoff_20261120.json",
+  "setup_state": "COMPLETED 00:27:47; all8341source/raster/cache proofs and current index accepted",
+  "current_registration": "results/v14/production_integration/masks/tiled/8094b69a21510971/registration.json"
 }

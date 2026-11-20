@@ -1,0 +1,8 @@
+{
+  "registration_job": "61632493",
+  "dependency": "afterok:61628955",
+  "state": "submitted_not_registered",
+  "runner": "scripts/v14_selected_C.py",
+  "runner_sha256": "3c00a450f66f8926c987c093009549a603d79bdb2688ec925f53c4091f7ac68e",
+  "scope": "Private exact-source selected-C addendum only after actual final frozen population/draw. Reuse existing complete records; register only not-attempted groups. No frame, selected-C result or final review release yet."
+}

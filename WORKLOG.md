@@ -2,6 +2,27 @@
 
 ## 2026-11-20
 
+### 2026-11-20T07:04Z — prepare the exact-source final selected-C bridge
+
+- Added private selected-C registration/execution/acceptance, gated by the actual frozen final frame and original probability draw. It preserves every qualified record at selected positions, reuses complete same-record C, and registers only not-attempted groups with original manifest/config/model. Unique member namespace protects existing accepted products. Partial/unavailable attempts remain explicit; no changed discovery cut, public frame or user grade.
+- Extended material registration with explicit selected-record input, a new private output directory and accepted source-bound C supplement. Original readiness plans/renderers are unchanged. Missing own-record C still fails rather than borrowing another source.
+- Validation: Python parse, shell syntax and focused multi-source position preservation/missing-position rejection pass. No final selected-C task or final material registration executed yet: frame remains dependent on actual720tile union. Actual area pack0 complete45:52, packs1/2running; formal deeper144 replay running, validator waits. Registered selected-C source registration61632493 afterok61628955. Five existing source-binding/eligibility/member-integrity unittest checks pass (pytest is not installed; no dependency added).
+- Next: accept existing area/frame and formal-depth owners, register selected missing C, prepare every selected mode and complete one anonymous release with full material/privacy/page QA.
+
+### 2026-11-20T06:51Z — source-bound new-record materials and completed atlas tail
+
+-61631306 COMPLETED1:34 (3modes/15PNG),61631657 COMPLETED1:09 (2modes/10PNG); original config/template/member/renderer hashes and expected centre/contributor images pass. New exact-source renderer and registration reuse existing numerical/plotting functions; no C refit, final sample/draw or user grades. New context/identity/figures stay private, with only source/raster structural QA until final anonymous page inspection.
+-Default bounded readiness subset uses new North/SouthDELVE records outsideold75. Existing SouthPS1main and Southoutsideprimary yielded no cases under the readiness-only small-mode filters; this is not a science non-detection claim or changed final selection. Final frame remains on its separate registered rule.
+-Atlas/efficiency tail61629183 COMPLETED22:49;6861current R14raster hashes match terminal counts. Explicit aggregate/figure allowlist sync completed, both full coordinate maps and two efficiency figures visually inspected. Atlas is coarse/all-scope coverage, not qualified union area or human grading. Efficiency plots retain initial catalogue/native pilot scope, not the full144formal comparison or validated physicalPS1gain.
+-Next: current720tile union/collector/frame; exact selected C/evidence; full formal-depth144+proof61630564/61630992; one final anonymous package.
+
+### 2026-11-20T06:12Z — formal depth pilot accepted; full same-population replay queued
+
+-61629992 COMPLETED10:27; independent source/result validator61630419 COMPLETED20s.18paired cases/6latent populations/3skies pass actual mask/core, engine, template, source85hash and monotone hard-member checks. Formal spatial5→6, highest-correct5→5,retained-correct5→6; hardmembers132→230. This is one six-cell repetition block, not a population conclusion.
+-Pilot summaries preserved under pilot_frozen before full writes. Full61630564registered90min/24CPU/192G, same144catalogues and verified18caches; remaining126scans only. Full proof/paired registered crossed-resampling and simultaneous conservative bounds follow. No new physical grid, source extraction,C or physicalPS1response.
+-Old75additional coverageQA:225/226extent canvases fully finite; B009outer border97.17%finite in bothbands,central/member stamps complete and raster inspected. Partial canvas retained/visible; no human grade.
+-Current area index61626647COMPLETED27:47/all8341cachekeys, source8094b69a21510971. Existing3tilepacks/collector/frame remain current owners; atlas61629183running. No final area/draw/review release yet.
+
 ### 2026-11-20T05:48Z — pair the deeper arm with the actual formal policy
 
 -Scientific bottleneck: formal baseline39/144 cannot pair with legacy deeper64/144 (different grid/mask/cuts). Freeze an alternative deeper replay of the same144catalogues/48latentpopulations/three skies, formal grid/mask and existing0.3budget A_deepcut7.520695022636638 from the original61.1deg2calibration. Mother limits24/23.5; baselineproduction6.137901unchanged. No new parameter node, extraction/population, C or physicalPS1response.

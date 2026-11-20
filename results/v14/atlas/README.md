@@ -1,5 +1,9 @@
-# Atlas checkpoint 61511922
+# Scope of the completed-source atlas
 
-These images accompany the current completed-cohort catalogue. Native field areas and actual scan completion are recorded in the manifest audit, separately from the coarse rendering.
+Run61629183 samples the completed observational rasters on the planning HEALPix grid and plots all6,861completed R14rasters plus earlier project coverage. It is an all-scope diagnostic, including development/control context. Formal qualified-production areas come from the separate source-bound WCS-mask union.
 
-The completed snapshot redrew both coordinates using the repaired polar bounding boxes. Its manifest contains 2,992 new raster inputs, including all thirteen fields flagged in `../progress_20261118b/polar_bound_audit.csv`. Their manifest hashes agree with the later field audit; the ICRS figure was inspected. Native area is unchanged by the rendering repair. The later 2026-11-19 audit has 3,078 complete fields, so the figure and latest area ledger still have different checkpoint clocks. This coarse rendering is not an area estimator or a final production-candidate map.
+The legacy legend's “awaiting valid scan” means a nominal brick-proxy sample lies outside the completed valid mask. All6,891registered fields already have terminal accounting;30have zero validgr area. These proxy samples do not count additional pending jobs or zero-star observed sky. “New measured” refers to this project's R14coverage relative to its earlier rasters, not new imaging or previously unexplored census area.
+
+“Reviewed positions” denotes catalogue/follow-up contexts, not completed user grading. Known-system and old-priority L0markers are not new systems or the final anonymous review list. Observing-condition panels show formal noise depth/seeing/proxy sampling, not stellar detection/classification completeness.
+
+The two PNGcoordinate maps were inspected in full after allowlisted synchronization. Exact qualified area/overlap and physical-gain claims remain in their own ledgers; the physical-gain footprint is unvalidated.

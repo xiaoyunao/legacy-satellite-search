@@ -1,0 +1,18 @@
+{
+  "pilot_job": "61631306",
+  "state": "two_original_source_records_accepted",
+  "readiness_source_records": 2,
+  "registered_modes": [
+    3,
+    2
+  ],
+  "pilot_index": 0,
+  "source_plan_sha256": "6e873565814652ce0a8cf61d567c11e20d82eb47ff3463c8b9289dffc345c057",
+  "runner_sha256": "c53a17d19e99e57f9b0892d8762ca0797c600f2cb378edb5d86a146d46d17417",
+  "scope": "Exact-source private renderer readiness only; canonical original configs/templates/saved C members, no optimization, final selection, anonymous permutation or human grade. New context/images remain private before final sealing. Original75 already covers SouthPS1 main; bounded North/SouthDECam cases exercise new records. Do not infer population coverage from readiness filters.",
+  "second_job": "61631657",
+  "second_state": "COMPLETED 00:01:09",
+  "accepted_records": 2,
+  "accepted_modes": 5,
+  "accepted_PNG_integrity": 25
+}

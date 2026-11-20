@@ -1,0 +1,29 @@
+{
+  "pilot_job": "61631306",
+  "state": "COMPLETED",
+  "elapsed": "00:01:34",
+  "accepted_records": 2,
+  "saved_modes": 5,
+  "verified_PNG": 25,
+  "source_proof_sha256": "a92858db7af164be348b7aeee5c01d34a380078733d586595458109fb1b75c93",
+  "all_saved_member_and_output_hashes_verified": true,
+  "missing_expected_images": 0,
+  "final_selection": false,
+  "human_grades_filled": false,
+  "context_and_identity_private": true,
+  "visual_QA_scope": "Original renderers were visually validated on old75/known-control cases. New record panels undergo source, membership, raster/structural QA now; final anonymous page QA is still required. No new identity/score-bearing image emitted in chat.",
+  "records": [
+    {
+      "job": "61631657",
+      "modes": 2,
+      "verified_PNG": 10,
+      "source_proof_sha256": "6a7e77cf5fcacfc0975ccfb17b3f69a690706551b608e0e3c820f0c7a086fc8c"
+    },
+    {
+      "job": "61631306",
+      "modes": 3,
+      "verified_PNG": 15,
+      "source_proof_sha256": "a92858db7af164be348b7aeee5c01d34a380078733d586595458109fb1b75c93"
+    }
+  ]
+}

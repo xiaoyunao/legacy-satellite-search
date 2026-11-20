@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-20T04:27:22.244435+00:00",
+  "updated_utc": "2026-11-20T06:58:16.741815+00:00",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
   "final_ready_for_human_review": false,
@@ -10,9 +10,9 @@
   },
   "gates": {
     "full_search_terminal_accounting": "PASSED: ab 02:23:54Z, 6861 complete + 30 zero-valid-gr = 6891; all174 retries accepted, zero uncovered. Terminal acceptance binds all field manifests; summed owned24481.307990deg2 is not final union.",
-    "historical_production_and_exact_mask_union": "Closed snapshot61629166accepted29s/all777local hashes. Historical same-source ledger10356records/10169provisional positions/all75identities; current-source mask inventory/index/720tile union still in existing61627306\u219261626647\u219261626690\u219261626692 chain. Atlas-only tail61629183separate after original61470267TIMEOUT.",
+    "historical_production_and_exact_mask_union": "Closed source post61627306accepted10356records/10169provisional positions/all75identities; cache/index61626647accepted27:47/all8341keys. Current720tile union61626690\u219261626692 and final frame61628955still pending; no final union/gain area claim. Atlas-only tail61629183running.",
     "same_eligible_record_C_complete": "Outside C16/16accepted61623103:979source groups/3102modes; all exact inputs/member proofs and local source hashes pass. Existing global coverage refresh still pending; do not add follow-ups to old7924/17853counts. Final sampled required modes remain a release gate.",
-    "all_final_objects_images_and_evidence": "Original75accepted75/75cases,226modes/1223retainedPNG; unchanged release hashes and local allowlisted copy verified. Saved DELVE4/5 controls accepted13modes/65PNG. Final selected new cases and complete package/privacy/all-page QA still pending.",
+    "all_final_objects_images_and_evidence": "Original75accepted75cases/226modes/1223retainedPNG; weakDELVE4/5controls13modes/65PNG; two new exact-source readiness records5modes/25PNG accepted. New context/identity stays private; final selection, selected-source C/evidence, anonymous/fullpage QA still pending.",
     "final_sampling_inclusion_probabilities": "Not frozen/drawn. Same pending61628955temporarily held before actual-source region/history binding QA. Source-mask hemisphere/census/extension strata, original75certainty, five compact regional priorities and two-per-score-bin SRSWOR, private aliases later. No postdraw spacing deletion.",
     "final_anonymity_and_page_QA": "Actual private3page PDF/ZIP/blank-form pilot passes inspected title correction, image integrity and neutral text/metadata/ZIP check; final population/aliases/evidence/allpage/privacy gates remain open. No human grades.",
     "required_source_bound_C_modes": "Current source audit:10356qualified records/22908required seeds;8704records/20362seeds all complete;1652low-priority records/2546seeds not attempted. Final selected original-record modes must be complete before release; no missing result set to zero."
@@ -108,6 +108,40 @@
       "bright_consistency_bands_tested": 5,
       "read_only_diagnostic_job": "61625886",
       "pixel_added_flux_conservation_max_abs_error": 1.1e-06
+    },
+    "formal_deeper_replay": {
+      "pilot_job": "61629992",
+      "pilot_acceptance_job": "61630419",
+      "accepted_paired_cases": 18,
+      "shared_latent_populations": 6,
+      "spatial_baseline_deeper": [
+        5,
+        6
+      ],
+      "highest_DM_correct_baseline_deeper": [
+        5,
+        5
+      ],
+      "usable_members_baseline_deeper": [
+        132,
+        230
+      ],
+      "three_blank_background_group_counts_baseline": [
+        0,
+        0,
+        0
+      ],
+      "three_blank_background_group_counts_deeper": [
+        2,
+        1,
+        1
+      ],
+      "blank_truth_position_matches_in_pilot": 0,
+      "full_job": "61630564",
+      "full_acceptance_job": "61630992",
+      "full_state": "pending_not_measured",
+      "C_replayed": false,
+      "physical_PS1_response_validated": false
     }
   },
   "post_integration_job": "61627306"

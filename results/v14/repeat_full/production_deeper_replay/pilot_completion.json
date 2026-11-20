@@ -1,0 +1,19 @@
+{
+  "job": "61629992",
+  "registration_sha256": "9064f8747b08ca2f07594b6659e0b5e4e5ba0326c25322f6baebbf1df11a0f36",
+  "native_catalogue_replays": 18,
+  "backgrounds": 3,
+  "full144": false,
+  "source_sha256": {
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_1.csv": "8bbf6bb11f78fbb538325b74e9b49bc448d1b22f3675dc453713996897531f62",
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_1.json": "6d6d136e19f9ef48b9f66dfc09c640139c9f817deda2924e8d205d5490646638",
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_2.csv": "4129f2498ed071ce903874d6c834bdb353c0664790519a92a3a19527899d2175",
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_2.json": "255347e29ce9d6fcea43b9dee6a333bec3299828cd43d43f2679fa8508da7a02",
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_3.csv": "8c4556ea293272ea92c1dea58a5d92203fccfd2c2285f3d1c16c41ba38d51476",
+    "results/v14/repeat_full/production_deeper_replay/v14_south_response_3.json": "5e00a34cd12b141465f7b8d0be2c311fa439b1c6cc01efbf15b1f08fbf8a2885"
+  },
+  "runner_sha256": "0f75f03b0787af0c0f0a663e2fd9775f98bd68447527b6e0a3d0209270e8f0ff",
+  "C_replayed": false,
+  "physical_PS1_response_validated": false,
+  "scope": "Fixed deeper research policy on the same registered native populations. Pure A-detection response; no new extraction, population, discovery area, borrowed C or global completeness. Pilot completion requires independent result/source QA before full execution."
+}

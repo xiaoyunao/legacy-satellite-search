@@ -1,12 +1,19 @@
 {
   "pilot_job": "61629992",
   "pilot_scope": "first6frozen trials \u00d73existing backgrounds=18; full144only after source/result/mask QA",
-  "state": "submitted_not_accepted",
+  "state": "pilot_accepted_full_registered",
   "runner_sha256": "0f75f03b0787af0c0f0a663e2fd9775f98bd68447527b6e0a3d0209270e8f0ff",
   "registration_sha256": "9064f8747b08ca2f07594b6659e0b5e4e5ba0326c25322f6baebbf1df11a0f36",
   "protocol_sha256": "57e30f6aaaaacee20b40bdcf7d2966a9402aeaa14b613fe5db281af2bd16b40c",
   "new_native_catalogues": 0,
   "new_latent_populations": 0,
   "physical_PS1_response_validated": false,
-  "C_replayed": false
+  "C_replayed": false,
+  "pilot_state": "COMPLETED 00:10:27; acceptance61630419 COMPLETED 00:00:20",
+  "pilot_acceptance_sha256": "3016c5e918719404abec589fa5372fcad5bca7435b9fd117bd8ec78be58d79c8",
+  "full_job": "61630564",
+  "full_state": "RUNNING observed2026-11-20T07:02Z; not accepted",
+  "full_scope": "Same144native catalogues; verify/skip first18cached cases and run remaining126formal deeper scans,192G/24CPU/90min. No new source extraction/populations.",
+  "full_acceptance_job": "61630992",
+  "full_acceptance_dependency": "afterok:61630564"
 }
