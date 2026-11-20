@@ -1,5 +1,14 @@
 # Plan
 
+## 2026-11-20T10:09Z — current handoff and next scientific decision
+
+- This round's registered scans/retries, historical production/qualified area/frame, selected exact-source C/materials and one final release are complete. All release-chain jobs terminal; final local/HOME hashes accepted.
+- User action: review only v14-final-1's163anonymous units, save one assessment per unit, then supply the completed table for immutable sealing. Reveal held scientific context/environments after that seal. No intermediate packet or pre-filled grade.
+- Remaining scientific limits: physicalPS1transfer fails current calibration; finite IMF light/footprint and only three100kpc backgrounds do not define true-V/global/15pc/continuous-distance completeness or abundance. The actual paired depth result does not pass the registered gain screen; retain frozen A baseline.
+- Next independently scoped research question: establish a validated physical PS1 response and calibrate light/footprint limits, or connect the accepted same-population radius catalogue losses to ordinary blind recovery. Do not describe these proposals as executed results. No manuscript work.
+- Reproduction and release protocol:docs/FINAL_REVIEW_GUIDE.md, final_review_release.json, science report and WORKLOG/git history. Earlier checkpoints below are retained history.
+
+
 ## 2026-11-20T09:28Z — current remaining delivery gates
 
 - Completed: all registered scans/terminal retries, historical qualified union/frame, selected exact-source C and226records/752modes of final image evidence. Material tail61637110COMPLETED4:54; all selected receipts are local.

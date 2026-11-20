@@ -1,5 +1,12 @@
 # Decisions
 
+## 2026-11-20T10:09Z — freeze one final review and preserve source-bound environments
+
+Release v14-final-1 only after full terminal/production/area/sample/C/native/pixel/page/privacy and durable-copy gates pass. One private permutation,163units, all original75 and weak controls retained; no intermediate grading. Generic observing diagrams lacked frozen known/environment tags: add the171page exact-record appendix from the immutable ledger and same key, without changing anonymous bytes, C, native panels or the draw. Missing catalogue annotation is not absence or classification.
+
+The user supplies the only scientific human grades. Seal one complete response table against this fixed PDF/ZIP/form before revealing held identities/context. All review weights describe the L0 administrative frame, not true-system completeness or abundance. Keep A baseline and the existing finite-light/PS1transfer limits; no new threshold tuning, optional physics grid or paper-body work was used to fill this delivery.
+
+
 ## 2026-11-20T08:37Z — retain baseline after the actual formal-depth test
 
 The accepted matched formal pair (same144native catalogues, mask/grid/template, existing development-budget cuts) gives spatial39→49, +6.94pp, crossed sensitivity[0,14.58]pp; no cell meets the registered>10ppand positive-lower screen. Continue frozen A baseline production. Keep deeper as a measured research arm; do not tune cuts after viewing these cases or extrapolate the three chosen skies into global physical gain. The authoritative pair table has144rows/48potential populations and two A arms; no physical PS1 or formal C arm is invented.

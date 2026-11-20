@@ -1,0 +1,82 @@
+{
+  "version": "v14-final-1",
+  "updated_utc": "2026-11-20T10:09Z",
+  "final_ready_for_human_review": true,
+  "one_formal_review_only": true,
+  "production_review_units": 161,
+  "weak_controls": 2,
+  "anonymous_units": 163,
+  "original75_retained": 75,
+  "selected_source_records": 226,
+  "selected_source_C_modes": 752,
+  "control_C_modes": 13,
+  "anonymous_pages": 1531,
+  "held_context_pages": 2493,
+  "held_environment_pages": 171,
+  "anonymous_artifacts": {
+    "anonymous_review.pdf": {
+      "sha256": "d93a804c50f5728272b8ee8d032083e6e7da0ee0eb80f1c81fd536b3fe172dfb",
+      "bytes": 806692335
+    },
+    "blank_review.csv": {
+      "sha256": "d03356abe3f9afe7d020cd645425726270b4288656f809af8a0605a8a77eca54",
+      "bytes": 1508
+    },
+    "page_index.csv": {
+      "sha256": "4418c09ceab1b6ba10fe789047d5c88cf612371c5b0d61ba227857e345e25b42",
+      "bytes": 2760
+    },
+    "README.txt": {
+      "sha256": "5adafda70c92a9b4332d50a57de4d365f438ef03c0d61093d82bce6c46685aaa",
+      "bytes": 107
+    }
+  },
+  "anonymous_ZIP_sha256": "27442b2c17cf657cd44d8a966eff1bdff403192f801a4fd4eba49f3dd9f8c1e0",
+  "anonymous_ZIP_bytes": 651550247,
+  "held_context_sha256": "9ede7741ed5db12daaf57cf7ba618e6925cc35e1164af8552d17f148df9276ca",
+  "held_environment_sha256": "9c03cf16f165c35400f8b780971f4b5ca5ab1c523cef9ed626b5e23ae7629f6e",
+  "private_held_archive_sha256": "50a9024cd9bb15de496a2f7c724118683345b0765e10103d938ee872ae2b61dd",
+  "QA": {
+    "every_anonymous_image_pixel_roundtrip": true,
+    "every_held_image_pixel_roundtrip": true,
+    "held_images_checked": 2295,
+    "all_PDF_pages_rendered_and_bounds_checked": 4195,
+    "anonymous_overview_sheets_actually_inspected": 39,
+    "anonymous_full_size_pages_actually_inspected": 6,
+    "neutral_annotation_metadata_ZIP_policy_passed": true,
+    "blank_forms_verified": true,
+    "environment_exact_source_records_and_text_verified": 226,
+    "local_source_files_hash_verified": 5104,
+    "local_source_PNGs_verified": 3853
+  },
+  "durable_archives": {
+    "HOME_job": "61639687",
+    "state": "COMPLETED00:00:19",
+    "files": 21,
+    "bytes": 1332130160,
+    "all_hashes_verified": true,
+    "receipt_sha256": "5af3322ec5c72089e065adfd60b37903393252ad35f464dde9502852054d87a1",
+    "local_anonymous_archive_identical": true,
+    "local_held_PDFs_and_metadata_match_archive_contents": true
+  },
+  "jobs": {
+    "material_retry": "61636581_1 COMPLETED00:06:10",
+    "material_tail": "61637110 COMPLETED00:04:54",
+    "PDF_assembly": "61636677 COMPLETED00:28:28",
+    "held_archive": "61638492 COMPLETED00:00:33",
+    "HOME_initial": "61639551 FAILED7s before any write; compute myquota unavailable",
+    "HOME_retry": "61639687 COMPLETED00:00:19"
+  },
+  "human_grades_filled": false,
+  "responses_sealed": false,
+  "identity_revealed": false,
+  "new_positions_automatically_promoted": false,
+  "scope": "Final frozen one-time anonymous review release. Every selected same-source C mode and original75 retained. Known environments and scientific context remain private until actual responses seal. Catalogue associations and administrative units are not physical classifications; audit weights concern the L0 frame, not satellite completeness or abundance. Physical PS1 transfer/full true-V spatial selection remain unvalidated.",
+  "release_and_QA_code_sha256": {
+    "scripts/v14_release_review.py": "8c26398e083de2ca088f7ce35e456c01620c353e6ddd30b9257c683f9ea8825c",
+    "scripts/v14_archive_home.py": "c761c39376485e43e0f589c5f3b8120823f60c4b22ad46ab48c6917f0756320f",
+    "scripts/v14_archive_held.py": "a888243d5c2dd0f101a532869f1d6c4562ccf1f7dc4cdf3cdbe2764b5226a701",
+    "scripts/v14_held_environment.py": "5fd924bb0c48002e9b9023191ae3d4c9e1091d5f2cf2e6247bfd8fdc48a7ae5f",
+    "scripts/v14_review_page_QA.py": "0f5b5c892aa01d4e38b754d4d03e257bed5ea32d2b728b8bcec86edde8e1596b"
+  }
+}

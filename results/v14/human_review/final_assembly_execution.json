@@ -1,0 +1,23 @@
+{
+  "production_review_units": 161,
+  "weak_controls": 2,
+  "original75_retained": 75,
+  "anonymous_units": 163,
+  "panels": 1530,
+  "human_grades_filled": false,
+  "final_ready_for_human_review": true,
+  "state": "accepted_final_one_time_release",
+  "anonymous_pages": 1531,
+  "held_context_pages": 2493,
+  "held_environment_pages": 171,
+  "anonymous_pixel_text_ZIP_form_QA_passed": true,
+  "anonymous_every_page_render_bounds_passed": true,
+  "anonymous_contact_sheets_inspected": 39,
+  "anonymous_full_size_pages_inspected": 6,
+  "held_environment_text_render_bounds_passed": true,
+  "held_primary_pixel_QA_job": "61636677 COMPLETED28:28",
+  "archive_job": "61638492 COMPLETED33s",
+  "held_images_verified": 2295,
+  "HOME_archive_job": "61639687 COMPLETED19s",
+  "HOME_archive_bytes": 1332130160
+}

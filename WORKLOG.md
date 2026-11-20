@@ -2,6 +2,24 @@
 
 ## 2026-11-20
 
+### 2026-11-20T10:09Z — durable final release accepted and one-time handoff
+
+-61639687COMPLETED19s:21files/1332130160bytes copied to actual HOME with all SHA256verified; observed quota reserve leaves~419MiB. Fresh actual login quota receipt resolves compute myquota limitation; original61639551failed before any archive creation. Local anonymous ZIP hash and all six held artifact hashes match durable manifests. No raw/member catalogues or identity keys are published.
+-Final163units/1531anonymous pages/2493held pages/171environment appendix; all4195page renders and image/text/ZIP/form/source-bound checks pass. SourcePNG3853/files5104local checks pass;39overview+6full-size anonymous visual checks actual. Preserve single private permutation and immutable old75hash7900621...b8; no grade/identity reveal/new-system promotion.
+-Published final_review_release.json and set final_delivery_statusready only after durable acceptance. README/guide/PROJECT_MEMORY/STATUS/DECISIONS/PLAN/report/checklist now point to one final version; old batch instructions clearly archived.
+-Validation: targeted Python parse and real render/archive/release runs; actual pilot release rejected, actual blank real final-response seal rejected before any write. Next user step is one completed assessment table; unsupported physicalPS1/fullselection/abundance remain explicit, no paper work.
+
+
+
+### 2026-11-20T10:05Z — actual final all-page QA and durable-copy tail
+
+-61636677 COMPLETED28:28:163units,1530anonymous rasters+cover=1531pages; held2493pages/2295images. Every anonymous/held image round-trips to registered source pixels; passive PDF/text/ZIP/blank forms pass. Local ZIP extraction/all artifact hashes agree. PDFium independently renders all1531+2493pages and checks nonblank/text/object bounds; document cache resets100pages on16GiBRAM. All39anonymous overview sheets and six full-size pages actually inspected; no human scientific grade or identity reveal.
+-Observed generic observing-page call supplies field_id but not frozen known/environment labels. Added171page held appendix from all226exact frozen source records and the same private key; every text fragment and every page's render/bounds pass. It preserves missing annotations as not-recorded, not absence or class. Same anonymous aliases/PDF/native figures/C results remain unchanged. Final-release gate now requires this appendix.
+-Actual finalizer passes full gates and regenerates the isolated five-entry ZIP with matching inner/outerready flags, unchangedPDF/form/index, draft receipt preserved. Source ZIP is651550247bytes/PDF806692335bytes.61638492COMPLETED33s creates675670933byte private context+environment archive; all six underlying local files match its hashes. Identity key stays separate/private.
+-Home-copy61639551 FAILED7s before any destination creation because myquota is unavailable on compute nodes. Actual login-node quota observation shows1.65GiBfree, targetabsent. Bounded retry61639687 uses that timestamped actual observation (<10min), original archive hashes and256MiBreserve; no guessed capacity or unrelated cleanup. Durable-copy completion remains pending until receipt.
+-Next: accept actual HOMEcopy, bind durable hashes and final readiness, publish one review release and hand off one blank response table. No optional science grid, paper text, thresholds or source fits changed.
+
+
 
 ### 2026-11-20T09:28Z — all final source materials complete
 

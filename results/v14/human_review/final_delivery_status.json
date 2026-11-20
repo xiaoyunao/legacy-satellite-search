@@ -1,8 +1,8 @@
 {
-  "updated_utc": "2026-11-20T08:43:58.531359+00:00",
+  "updated_utc": "2026-11-20T10:09Z",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
-  "final_ready_for_human_review": false,
+  "final_ready_for_human_review": true,
   "frozen_first_batch": {
     "positions": 75,
     "release": "results/v14/human_review/release_v2",
@@ -12,12 +12,13 @@
     "full_search_terminal_accounting": "PASSED: ab 02:23:54Z, 6861 complete + 30 zero-valid-gr = 6891; all174 retries accepted, zero uncovered. Terminal acceptance binds all field manifests; summed owned24481.307990deg2 is not final union.",
     "historical_production_and_exact_mask_union": "PASSED under represented working-mask/projection definition:61626692COMPLETED1:21,720tiles;qualified26886.647579deg\u00b2/allordinary28812.390012deg\u00b2. Historical10356records/10169positions; actual native continuum/physical-gain area not claimed.",
     "same_eligible_record_C_complete": "PASSED for final selected226source records:202existing+24new/32new modes;pilot61633906,full61633996andpost61634100all complete. Private exact-source addendum, no borrowed or zero-filled C. Frozen global all-production Cclock remains distinct.",
-    "all_final_objects_images_and_evidence": "IN PROGRESS:old75/226modes exactly reused;weakcontrols13modes preserved;old/native PDF runtime probes pass.61634971renders150remaining source records/523modes in3eight-worker packs. No final package/native full QA or grades claimed.",
-    "final_sampling_inclusion_probabilities": "PASSED:61628955COMPLETED46s;8981bounded administrative units,103certainty/29strata/58SRSWORaudit,161selected. All75original identities retained;28additional regional priorities and58auditunits. Two weak controls separate. No alias key or human grade yet.",
-    "final_anonymity_and_page_QA": "Actual private3page PDF/ZIP/blank-form pilot passes inspected title correction, image integrity and neutral text/metadata/ZIP check; final population/aliases/evidence/allpage/privacy gates remain open. No human grades.",
-    "required_source_bound_C_modes": "752original-source modes registered for226selected records, all numerical C covered. Exact old75reuses226modes after source/scan/model/member/all20Cfield equality; remaining523render modes/150records queued in61634971. Final saved/native/full-page evidence checks remain open."
+    "all_final_objects_images_and_evidence": "PASSED:226selected exact-source records/752modes plus13control modes; all centre/contributor/member/source checks; every final PNG verified; original75bytes preserved.",
+    "final_sampling_inclusion_probabilities": "PASSED frozen8981units/103certainty/29strata/58SRSWORaudit;161production+2weakcontrols=163anonymousunits. Single private OS permutation registered after all source gates; all75originalcases retained. No human grade or identity reveal.",
+    "final_anonymity_and_page_QA": "PASSED:1531anonymous pages/2493held pages/171environment pages. Every image/source pixel, all4195page renders/bounds, every environment annotation, passive PDF/text/ZIP/blank forms verified; all39anonymous overviews and6full-size pages inspected. Held identity images not emitted before seal.",
+    "required_source_bound_C_modes": "PASSED:all752selected original-source modes and13control modes numerically covered/rendered; source-bound masks/config/members verified. Global unattempted lower-priority C remains explicit and is not filled.",
+    "durable_copies": "PASSED:61639687COMPLETED19s,21files/1332130160bytes copied into actual HOME project with identical SHA256 and256MiBreserve. Local final PDF/ZIP/forms/held PDFs+metadata verified. Scratch is not the only copy."
   },
-  "human_responses": "unfilled; no seal or identity reveal",
+  "human_responses": "unfilled; no seal, identity reveal or automatic new-system promotion",
   "scope": "Historical batch technical readiness is distinct from final project-wide delivery. Preserve release_v2 bytes. Final package must retain and crosswalk the original 75 positions.",
   "scientific_experiments": {
     "native_CCD_trials_accepted": 144,
@@ -177,5 +178,7 @@
       }
     }
   },
-  "post_integration_job": "61627306"
+  "post_integration_job": "61627306",
+  "final_release_version": "v14-final-1",
+  "final_release_metadata": "results/v14/human_review/final_review_release.json"
 }

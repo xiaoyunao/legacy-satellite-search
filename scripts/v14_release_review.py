@@ -14,13 +14,19 @@ def digest(path):
 def load(path):return json.loads(path.read_text())
 
 
-def release(package,assembly,render_qa,visual_qa,held,held_render_qa):
+def release(package,assembly,render_qa,visual_qa,held,held_render_qa,environment,environment_render_qa):
     manifest_path=package/'package_manifest.json';manifest=load(manifest_path)
     if manifest['pilot'] or manifest['final_ready_for_human_review']:
         raise ValueError('Require a nonpilot package that has not already been released')
     registration=load(assembly/'registration.json');structure=load(package/'structural_QA.json')
     render=load(render_qa);visual=load(visual_qa);held_proof=load(held/'structural_QA.json')
     held_render=load(held_render_qa)
+    env=load(environment/'manifest.json');env_render=load(environment_render_qa)
+    key=assembly/'held_context_key.json'
+    if (env['inputs'][str(key)]!=digest(key)
+            or env['source_records']!=sum(len(u['production_record_ids']) for u in load(key)['units'])
+            or not env['every_rendered_annotation_text_verified']):
+        raise ValueError('Exact-source known/environment annotations required')
     if (registration['anonymous_units']!=manifest['units'] or registration['original75_retained']!=75
             or registration['weak_controls']!=2 or registration['human_grades_filled']):
         raise ValueError('Final unit/control/original-case gate failed')
@@ -31,10 +37,13 @@ def release(package,assembly,render_qa,visual_qa,held,held_render_qa):
                  'standalone_zip_verified','blank_forms_verified'):
         if structure.get(flag) is not True:raise ValueError('Missing full integrity check: '+flag)
     for qa,pdf,pages in ((render,package/'anonymous_review.pdf',manifest['pages']),
-                         (held_render,held/'held_context.pdf',held_proof['pages'])):
+                         (held_render,held/'held_context.pdf',held_proof['pages']),
+                         (env_render,environment/'held_environments.pdf',env['pages'])):
         if (qa['pdf_sha256']!=digest(pdf) or qa['pages']!=pages
                 or not qa['every_page_rendered'] or not qa['every_page_text_and_object_bounds_checked']):
             raise ValueError('Every-page render/layout check required')
+    if env['pdf_sha256']!=digest(environment/'held_environments.pdf'):
+        raise ValueError('Held environment PDF changed')
     if (held_proof['pdf_sha256']!=digest(held/'held_context.pdf')
             or not held_proof['every_held_image_pixel_roundtrip_verified']
             or held_proof['key_sha256']!=digest(assembly/'held_context_key.json')):
@@ -49,7 +58,8 @@ def release(package,assembly,render_qa,visual_qa,held,held_render_qa):
             raise ValueError('Released material changed')
     if digest(package/'anonymous_review.zip')!=manifest['zip_sha256']:
         raise ValueError('Pre-QA archive changed')
-    qa_paths=[package/'structural_QA.json',render_qa,visual_qa,held/'structural_QA.json',held_render_qa]
+    qa_paths=[package/'structural_QA.json',render_qa,visual_qa,held/'structural_QA.json',held_render_qa,
+              environment/'manifest.json',environment_render_qa]
     # Preserve the draft receipt. Only readiness metadata changes; PDF/forms/index stay byte-identical.
     (package/'package_manifest.preQA.json').write_bytes(manifest_path.read_bytes())
     with zipfile.ZipFile(package/'anonymous_review.zip') as archive:
@@ -79,6 +89,8 @@ def release(package,assembly,render_qa,visual_qa,held,held_render_qa):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    for name in ('package','assembly','render-qa','visual-qa','held','held-render-qa'):
+    for name in ('package','assembly','render-qa','visual-qa','held','held-render-qa',
+                 'environment','environment-render-qa'):
         parser.add_argument('--'+name,type=Path,required=True)
-    a=parser.parse_args();release(a.package,a.assembly,a.render_qa,a.visual_qa,a.held,a.held_render_qa)
+    a=parser.parse_args();release(a.package,a.assembly,a.render_qa,a.visual_qa,a.held,a.held_render_qa,
+                                a.environment,a.environment_render_qa)
