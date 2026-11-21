@@ -2,6 +2,10 @@
 
 ## 2026-11-21
 
+- Sampled 447 shared DR11–DES Y6 aperture depths from the two official DES weight-derived maps and native DR11 inverse variance in 61735544. Switched the first attempt 61735499 to the existing Shapely environment after its import failure. Verified the output hashes, data rows and map. Median differences are +0.147 mag in g and +0.110 mag in r.
+- Job 61735643 measured three shared sky positions for PS1. Checked 2,304 service-cutout pixels against the exact linearized native variance in each band. The 95th percentile relative differences are below 0.000031%. Submitted 61735663 for the full 417-position PS1 grid.
+- Slurm 61734142_1 completed. Task 0 timed out and the ten never-started regular tasks were migrated to shared CPUs under 61735557. Registered 61735679 to resume only task 0 from already validated pixels. Rebound the still-pending assembly 61734170 to both shared jobs. Checked 126 completed view receipts before the retry.
+
 - Job 61734776 completed in 53 s. Verified catalogue-context and same-record C statistics for 10,169 ungraded provisional positions, with the accepted WCS-area denominators. Added the aggregate figure and linked all five measured scientific figure classes.
 - 61734536 finished both native radius cases, and 61734735 accepted them. One common-support population on CCD background 1 has correct blind position and distance in both radius and depth arms. Increasing the radius from 10 to 15 pc adds nine native final associations, 17 PSF associations and three/five hard-selected associated sources at baseline/deeper limits. The other ten images are in shared CPU array 61734749, with dependent acceptance 61734780.
 - Fixed-position controls 61734221 timed out using dense masks at each position. The retry 61734663 completed in 64 s using row sums for the same disk and annulus counts. The calculation reproduced 480 exact test aperture pairs and checked the original target and first accepted control on each real field. Verified 12 rows from 1,504 area-matched positions. A deeper A comparison at a matched budget takes precedence over a standalone likelihood scan.

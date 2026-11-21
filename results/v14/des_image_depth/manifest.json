@@ -1,0 +1,38 @@
+{
+  "job": "61735544",
+  "code_sha256": "8a1939ab606505d4547116149e02046634edb659511aa09856978454de65f9cd",
+  "official_des_maps": {
+    "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6_sp_maps/main_sp_maps/y6_MAGLIM_decasu_WMEAN_g_1024_RING.fits.gz": "e8c6a6ba93f18768ea44b1d0a41da61556a18da505a54b18cdff6bba38230c73",
+    "https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6_sp_maps/main_sp_maps/y6_MAGLIM_decasu_WMEAN_r_1024_RING.fits.gz": "6cb6c02c67d8a25a30c5465ab6b85d2d5d0e13ef5deffbd4fd28b263f705fc57"
+  },
+  "frozen_raster_sha256": "895176e19592f397a5cfcb199efb1ca756eb72e4c2a0dcde5735cbb6a45fac18",
+  "ls_coadd_file_metadata_sha256": "95f8a0e30180faf50562095071e09e7bf698433c5f8f3bd299ee2571be3e74e0",
+  "wcs_des_only_samples_256": 91332,
+  "common_des_gr_map_samples_256": 66415,
+  "des_min_fracdet": 0.8,
+  "selected_sky_samples": 447,
+  "measured": 447,
+  "sample_nside": 16,
+  "band_statistics": {
+    "g": {
+      "median": 0.14691188181720705,
+      "p16_p84": [
+        0.033291961159608266,
+        0.28047439984931555
+      ]
+    },
+    "r": {
+      "median": 0.10979110001704484,
+      "p16_p84": [
+        0.009797711975025152,
+        0.202849553304205
+      ]
+    }
+  },
+  "outputs": {
+    "paired_aperture_depth.csv": "b335587026d4ca429e04c2cdad58e99c388db1e8b61d8880b85ca56a995e3779",
+    "des_image_depth_difference.pdf": "55e8c9e0444cd0d1349db5ab40f43993744b08e9b55e094e3fb7f3fd1665497a",
+    "des_image_depth_difference.png": "557a8f3e1cb6d680cf2bd39f016ee8256fbc6074b1bd6a88de03b9a85a9c140c"
+  },
+  "scope": "Geometry-only equal-area display samples on the DES-assigned qualified footprint. Same 10-sigma observed AB aperture-flux convention. LS variance uses the diagonal inverse variance and subpixel aperture fractions. Pixel covariance and differing weight construction limit strict calibration between the two surveys. Values describe coadd-weight noise, separate from matched-source photometry or effective stellar recovery."
+}

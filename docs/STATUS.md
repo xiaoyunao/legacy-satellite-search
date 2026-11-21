@@ -6,7 +6,9 @@ On 2026-11-21 the user withdrew the previous review packages pending a new convo
 
 Jobs 61733121, 61733122 and 61733147 completed. Their verified outputs cover 101 literature systems, the qualified Galactic footprint and LS-only observed 10σ depth, and four fixed-position catalogue diagnostics. The formal comparison sample has 67 covered, in-range objects and 49 ordinary A spatial matches. See the [science report](../fourteenth_science_report.md) for denominators and the fixed-centre measurements.
 
-The user confirmed the six-panel layout. Hercules preview 61733738, real candidate/control pilot 61733737, native blank 61733838 and the anonymous/held PDF pilot 61734147 completed. The full array 61734142 has 765 registered views, with dependent assembly 61734170. The final package awaits complete render, page/identity QA and archival.
+The user confirmed the six-panel layout. Hercules preview 61733738, real candidate/control pilot 61733737, native blank 61733838 and the anonymous/held PDF pilot 61734147 completed. Of the 765 registered views, 126 were present when the first rendering jobs stopped. One task completed and the other reached its limit. Shared-CPU tasks 61735557 and 61735679 will resume missing views from the same files. Assembly 61734170 depends on both. The final package awaits complete render, page and identity QA, and archival.
+
+Job 61735544 verified the DES Y6 comparison at 447 common positions. For a 2″ aperture and observed 10σ flux, median LS minus DES is +0.147 mag in g and +0.110 mag in r. The PS1 variance cutout pilot 61735643 matches exact native pixels in both bands. The 417-position PS1 comparison 61735663 is submitted. These formal image noise measurements address a different endpoint from point-source or stellar-system recovery.
 
 ## 2026-11-20T10:09Z — final one-time review release accepted
 
