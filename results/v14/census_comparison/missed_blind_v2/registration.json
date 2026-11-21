@@ -1,0 +1,819 @@
+{
+  "input_sha256": {
+    "results/v14/production_integration/masks/post_outside_C_registration_20261120.json": "ddef6a8cf0a2495662769611eaffa2a1954d9c6a6896bdd65e739217ac9504a4",
+    "results/v14/production_integration/masks/tiled/8094b69a21510971/registration.json": "0887032db6d1dc80e6b45279c234f8de0b3f67b52d28eeaf6e2021d9b60dc804",
+    "results/v14/census_comparison/missed_controls_fixed_diagnostics.csv": "765b7f263e8bf0473ab8d94a00183eb4e1f64704b3c4185a481a8c26cd09c63c",
+    "references/benchmarks.csv": "22a1a106ee1e173f11eaea1dff7b6a42d926dc414b2cb57e7638d96d07eed204"
+  },
+  "job": "61735798",
+  "code_sha256": "e8fc753d6906db0b8b60514559b5717733efbfc9968ab3e1f24e042f79b1c779",
+  "tests": [
+    {
+      "target": "Aquarius_IV",
+      "test": {
+        "field": "v14_south_delve_extension_0566",
+        "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0566-base/manifest.json",
+        "manifest_sha256": "485b70a322a26376fa0342d3a1abee74f03a011bdd6fd34f3db8625d81e88781",
+        "workspace": "regional_v14_south_delve_extension",
+        "region": "south",
+        "survey": 2,
+        "role": "pilot_eval",
+        "manifest_role": "pilot_eval",
+        "analysis_role_differs_from_manifest": false,
+        "classification": "qualified_discovery",
+        "geometry": [
+          330.29126213592235,
+          -3.527735715309086,
+          3.5488474048849636,
+          0.16666666666666666,
+          102
+        ],
+        "subdivision": 2,
+        "known_recovery_truth": null,
+        "raster": "runs/v14/v14_south_delve_extension_0566-base/owned_coverage.npy",
+        "apply_ownership": null,
+        "source_effective_deg2": 4.658167438271604,
+        "qualified_source_tables": [
+          "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+        ],
+        "qualification_diagnostics": []
+      },
+      "controls": [
+        {
+          "field": "v14_south_delve_extension_0522",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0522-base/manifest.json",
+          "manifest_sha256": "7924331f72191ba0ad4e531fc1a1a0b77db89d2aea88c0f2d1d16a97af2d4fee",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            302.33009708737865,
+            -7.055458639193791,
+            3.5488281141592632,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0522-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 4.504909336419752,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0320",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0320-base/manifest.json",
+          "manifest_sha256": "d3c7b8242983eb3e50b74e1c70efb07cb4a22df04a2b76faa227bf05b4e4c77f",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            314.50549450549454,
+            -28.220702846429596,
+            3.5483713706942983,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0320-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 6.1342380401234555,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0290",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0290-base/manifest.json",
+          "manifest_sha256": "a000fdc13ab9207a0c1c01a974bb9dc635ef99f48c0d0997774fa5d6717cca7f",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            321.1363636363636,
+            -31.747881822852055,
+            3.548212453692085,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0290-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 5.4287673611111105,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0423",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0423-base/manifest.json",
+          "manifest_sha256": "9bcf4c529030b58d29b776db290d70c18b48decadda03ef20264a5d05f31915f",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            303.6363636363636,
+            -17.638414276920237,
+            3.548684443982065,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0423-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 5.81851273148148,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0289",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0289-base/manifest.json",
+          "manifest_sha256": "ae5565634cbd99ec35a0aa398080765dabe318deafa42aec836a6e1e37cbd95c",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            317.0454545454545,
+            -31.747881822852055,
+            3.548212453692085,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0289-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 6.2409124228395045,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0457",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0457-base/manifest.json",
+          "manifest_sha256": "3ee8db114ab0958ca68b2077e1fbcca01e624e7e58f7701e9f4c0940a24e4f7e",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            300.6,
+            -14.110812560917562,
+            3.548747928496618,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0457-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 5.988341049382715,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        }
+      ]
+    },
+    {
+      "target": "DELVE_7",
+      "test": {
+        "field": "v14_south_des_0128",
+        "manifest": "regional_v14_south_des/results/summary/v14_south_des_0128-base/manifest.json",
+        "manifest_sha256": "60b2f52fedfadb6d5bbf3bab0274c203781e381ffbaf2acca8db12f10fe053da",
+        "workspace": "regional_v14_south_des",
+        "region": "south",
+        "survey": 1,
+        "role": "pilot_eval",
+        "manifest_role": "pilot_eval",
+        "analysis_role_differs_from_manifest": false,
+        "classification": "qualified_discovery",
+        "geometry": [
+          303.5820895522388,
+          -49.38005701484942,
+          3.546576369717653,
+          0.16666666666666666,
+          102
+        ],
+        "subdivision": 2,
+        "known_recovery_truth": null,
+        "raster": "runs/v14/v14_south_des_0128-base/owned_coverage.npy",
+        "apply_ownership": null,
+        "source_effective_deg2": 6.27315586419753,
+        "qualified_source_tables": [
+          "results/v14/discovery/south_des/main/sky_group_candidates.csv"
+        ],
+        "qualification_diagnostics": []
+      },
+      "controls": [
+        {
+          "field": "v14_south_des_0072",
+          "manifest": "regional_v14_south_des/results/summary/v14_south_des_0072-base/manifest.json",
+          "manifest_sha256": "d6ef149cbeda6b92a20d4a233ede7ff430d6eb20c07f76546cf57be6e62edd85",
+          "workspace": "regional_v14_south_des",
+          "region": "south",
+          "survey": 1,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            306.31578947368416,
+            -56.42960028602561,
+            3.5450489990052496,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_des_0072-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 8.126666666666665,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_des/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_des_0190",
+          "manifest": "regional_v14_south_des/results/summary/v14_south_des_0190-base/manifest.json",
+          "manifest_sha256": "38551afb8898875fa68c986e3d236d48a48192f075a7c63235cd3e657b3ea3c8",
+          "workspace": "regional_v14_south_des",
+          "region": "south",
+          "survey": 1,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            306.23376623376623,
+            -42.32817344581208,
+            3.5474640184625805,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_des_0190-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 7.397199074074073,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_des/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_des_0071",
+          "manifest": "regional_v14_south_des/results/summary/v14_south_des_0071-base/manifest.json",
+          "manifest_sha256": "517e4b3c03abc70325ed1b4a2b6f1c41040bebd7c63f84f606690cdf2ee7bcca",
+          "workspace": "regional_v14_south_des",
+          "region": "south",
+          "survey": 1,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            300.0,
+            -56.42960028602561,
+            3.5450489990052496,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_des_0071-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 6.999585262345677,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_des/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_des_0047",
+          "manifest": "regional_v14_south_des/results/summary/v14_south_des_0047-base/manifest.json",
+          "manifest_sha256": "4b028fb335096a51a0322333d4ca5b0aadac43c5b4d0594743848f8d44e4dc58",
+          "workspace": "regional_v14_south_des",
+          "region": "south",
+          "survey": 1,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            308.0769230769231,
+            -59.952966234950864,
+            3.543844649307977,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_des_0047-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 7.0933005401234555,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_des/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_des_0133",
+          "manifest": "regional_v14_south_des/results/summary/v14_south_des_0133-base/manifest.json",
+          "manifest_sha256": "fb8332efac3c9aaac8aee149e6c850b63490edf83387951df7930fd5ca48c6a7",
+          "workspace": "regional_v14_south_des",
+          "region": "south",
+          "survey": 1,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            330.44776119402985,
+            -49.38005701484942,
+            3.546576369717653,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_des_0133-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 4.790214120370369,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_des/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_des_0164",
+          "manifest": "regional_v14_south_des/results/summary/v14_south_des_0164-base/manifest.json",
+          "manifest_sha256": "ac89962853776dff80b78884406cfb70b5e2c5143800baf9c519c371bbcb1023",
+          "workspace": "regional_v14_south_des",
+          "region": "south",
+          "survey": 1,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            332.5,
+            -45.85433562148696,
+            3.5470755151115103,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_des_0164-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 8.791774691358023,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_des/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        }
+      ]
+    },
+    {
+      "target": "Gemini_I_DELVE_8",
+      "test": {
+        "field": "v14_south_delve_extension_0714",
+        "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0714-base/manifest.json",
+        "manifest_sha256": "00b233e9b146d8eb6500a56428498babb3bf3b457582d354e47d8aa37d272757",
+        "workspace": "regional_v14_south_delve_extension",
+        "region": "south",
+        "survey": 2,
+        "role": "pilot_eval",
+        "manifest_role": "pilot_eval",
+        "analysis_role_differs_from_manifest": false,
+        "classification": "qualified_discovery",
+        "geometry": [
+          118.18181818181819,
+          17.638414276920226,
+          3.5486844439820846,
+          0.16666666666666666,
+          102
+        ],
+        "subdivision": 2,
+        "known_recovery_truth": null,
+        "raster": "runs/v14/v14_south_delve_extension_0714-base/owned_coverage.npy",
+        "apply_ownership": null,
+        "source_effective_deg2": 11.323009259259257,
+        "qualified_source_tables": [
+          "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+        ],
+        "qualification_diagnostics": []
+      },
+      "controls": [
+        {
+          "field": "v14_south_delve_extension_0712",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0712-base/manifest.json",
+          "manifest_sha256": "6bdb85877d5328320a9453b6105aeda418a93a2ca8c961771d98364dd67896cd",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            110.9090909090909,
+            17.638414276920226,
+            3.5486844439820846,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0712-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 8.613703703703703,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0687",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0687-base/manifest.json",
+          "manifest_sha256": "56f86eb85e82c35d2f87aa720c85bbbf4027be57f8e0992b29d53cdb19508031",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            118.23529411764706,
+            10.583155586879824,
+            3.548795301465559,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0687-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 11.630111882716047,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0730",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0730-base/manifest.json",
+          "manifest_sha256": "f4a5910b946b472d32afb02d397041caa7b182d292c5087a59e761de04eefd5e",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            116.80851063829788,
+            24.693380837528082,
+            3.548499647480631,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0730-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 11.64597608024691,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0688",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0688-base/manifest.json",
+          "manifest_sha256": "a42d7837fbf72e02aa55e87d740b3cf1615389ffa914c33d599f659ebf48781e",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            121.76470588235294,
+            10.583155586879824,
+            3.548795301465559,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0688-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 11.528123070987652,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0720",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0720-base/manifest.json",
+          "manifest_sha256": "4c187b68bc84ad1b4789eac983c645e69ee812b419338161ec860e7d59e5e0bb",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            110.625,
+            21.16594359890239,
+            3.548602672261676,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0720-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 10.718416280864195,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_extension_0729",
+          "manifest": "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0729-base/manifest.json",
+          "manifest_sha256": "eea42365331b9f7bcd399222ba9965e1a025c7c45ab07eeaf7b5bac5351006a7",
+          "workspace": "regional_v14_south_delve_extension",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            112.97872340425532,
+            24.693380837528082,
+            3.548499647480631,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_extension_0729-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 11.443773148148146,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve_extension/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        }
+      ]
+    },
+    {
+      "target": "Sextans_II",
+      "test": {
+        "field": "v14_south_delve_0620",
+        "manifest": "regional_v14_south_delve/results/summary/v14_south_delve_0620-base/manifest.json",
+        "manifest_sha256": "8c33f12016bbaf8958f93f7254759e638cc53a0704b0dec6da3da43c209cadae",
+        "workspace": "regional_v14_south_delve",
+        "region": "south",
+        "survey": 2,
+        "role": "pilot_eval",
+        "manifest_role": "pilot_eval",
+        "analysis_role_differs_from_manifest": false,
+        "classification": "qualified_discovery",
+        "geometry": [
+          155.5339805825243,
+          0.0,
+          3.548853770253593,
+          0.16666666666666666,
+          102
+        ],
+        "subdivision": 2,
+        "known_recovery_truth": null,
+        "raster": "runs/v14/v14_south_delve_0620-base/owned_coverage.npy",
+        "apply_ownership": null,
+        "source_effective_deg2": 11.912010030864195,
+        "qualified_source_tables": [
+          "results/v14/discovery/south_delve/main/sky_group_candidates.csv"
+        ],
+        "qualification_diagnostics": []
+      },
+      "controls": [
+        {
+          "field": "v14_south_delve_0622",
+          "manifest": "regional_v14_south_delve/results/summary/v14_south_delve_0622-base/manifest.json",
+          "manifest_sha256": "7121b3537f70a72d0f9582d90aa1867bee585d13255a50c02aa7200d4ebbc484",
+          "workspace": "regional_v14_south_delve",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            162.52427184466018,
+            0.0,
+            3.548853770253593,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_0622-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 11.894373070987651,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_0618",
+          "manifest": "regional_v14_south_delve/results/summary/v14_south_delve_0618-base/manifest.json",
+          "manifest_sha256": "091eb5422d0594ba15b710905b3e1177d77ef219a7e714613fa822412da20e53",
+          "workspace": "regional_v14_south_delve",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            148.54368932038835,
+            0.0,
+            3.548853770253593,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_0618-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 10.702837577160492,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_0754",
+          "manifest": "regional_v14_south_delve/results/summary/v14_south_delve_0754-base/manifest.json",
+          "manifest_sha256": "d00bc2169ae3cc897cb72945490f228730e7970d9699e02f05e4802d1ba54b9b",
+          "workspace": "regional_v14_south_delve",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            155.5339805825243,
+            7.055458639193786,
+            3.5488281141592517,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_0754-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 11.860908564814812,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_0507",
+          "manifest": "regional_v14_south_delve/results/summary/v14_south_delve_0507-base/manifest.json",
+          "manifest_sha256": "439db4e8f6e66967f3926f4ef1598876d94c0c19f55717fb50abf28c9cc84307",
+          "workspace": "regional_v14_south_delve",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            155.5339805825243,
+            -7.055458639193791,
+            3.5488281141592632,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_0507-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 11.85490547839506,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_0567",
+          "manifest": "regional_v14_south_delve/results/summary/v14_south_delve_0567-base/manifest.json",
+          "manifest_sha256": "1650b0f48ca4d2c239b0bc33f49c541d8dbc7cb5593b530f71d46f9c6ea9422a",
+          "workspace": "regional_v14_south_delve",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            162.52427184466018,
+            -3.527735715309086,
+            3.5488474048849636,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_0567-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 11.984415509259257,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        },
+        {
+          "field": "v14_south_delve_0692",
+          "manifest": "regional_v14_south_delve/results/summary/v14_south_delve_0692-base/manifest.json",
+          "manifest_sha256": "43eaf565207c17be2070e2723652f2ada494c09a86c8f937b273acb395c86e1d",
+          "workspace": "regional_v14_south_delve",
+          "region": "south",
+          "survey": 2,
+          "role": "pilot_eval",
+          "manifest_role": "pilot_eval",
+          "analysis_role_differs_from_manifest": false,
+          "classification": "qualified_discovery",
+          "geometry": [
+            162.52427184466018,
+            3.527735715309086,
+            3.548847404884963,
+            0.16666666666666666,
+            102
+          ],
+          "subdivision": 2,
+          "known_recovery_truth": null,
+          "raster": "runs/v14/v14_south_delve_0692-base/owned_coverage.npy",
+          "apply_ownership": null,
+          "source_effective_deg2": 10.744542824074072,
+          "qualified_source_tables": [
+            "results/v14/discovery/south_delve/main/sky_group_candidates.csv"
+          ],
+          "qualification_diagnostics": []
+        }
+      ]
+    }
+  ],
+  "budget": 0.3,
+  "deeper_mag": 0.5,
+  "control_rule": "Nearest owned fields in the same regional workspace. Geometry and represented area only. Known benchmark positions and test fields excluded."
+}

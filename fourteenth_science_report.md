@@ -41,6 +41,10 @@ Each target is unusual in its local comparison, including several baseline measu
 
 The Galactic Aitoff maps use 512,637 covered NSIDE 256 sample centres from the accepted WCS masks. Their sampled area is 26,890.811 deg²; the formal union remains 26,886.648 deg². The LS panels show observed 10σ gr depths, using the corresponding hemisphere's brick summary converted from 5σ. Survey-wide matched-sky depth and classification comparisons require broader comparator coverage. The unannounced production positions are held on NERSC. [Footprint, depth and known recovery maps](results/v14/qualified_aitoff/)
 
+### Budget-matched Gemini I replay
+
+On the original 11.323 deg² Gemini I field, the A baseline misses Gemini I at a score cut of 5.983. With both limits relaxed by 0.5 mag, the same A detector yields a spatial match at the deeper cut of 6.452. The peak is 0.988′ from the published position and its highest distance mode is μ=20.50, 0.104 mag from the adopted distance. Both cuts retain 19 groups over the same 65.580 deg² in six local calibration fields. The corresponding Gemini I field counts are five groups at baseline and three at the deeper setting. This retrospective comparison tests a photometric cut in a fixed catalogue and demonstrates an ordinary blind recovery for this specific known system. The production A baseline retains its original region-specific cut. The three other missed-system comparisons are queued. [Paired results and manifests](results/v14/census_comparison/missed_blind_v2/)
+
 ### Matched LS–PS1 source-depth measurements
 
 On the three native CCD backgrounds, 41,809 PS1 primary positions within the LS mask have unique 0.8″ LS catalogue matches. Using each catalogue's PSF flux uncertainty and dereddened native passbands at a common 10σ, the median paired depth differences are positive.
@@ -58,6 +62,8 @@ The same 10σ convention was applied to matched point-source measurements in two
 ### Matched DES Y6 image-weight depth
 
 On the qualified South DR11 footprint assigned to DES by the census, we compared the released DES Y6 10σ 2″ diameter aperture maps with the same observed AB aperture on DR11 coadd inverse-variance images. We measured 447 positions, one geometry-selected position per intersecting Galactic NSIDE 16 cell, all with valid g and r. The median LS minus DES differences are +0.147 mag in g and +0.110 mag in r, with 16th–84th percentiles of +0.033 to +0.280 mag and +0.010 to +0.203 mag respectively. The LS aperture calculation uses fractional pixel weights and diagonal variance. Covariance from image resampling and differences in weight construction limit the direct comparison. These are formal noise depths. The matched-star measurements above and the CCD injection recovery measure separate endpoints. [DES Y6 aperture definition](https://arxiv.org/html/2501.05739v2) · [Official DES maps](https://desdr-server.ncsa.illinois.edu/despublic/y6a2_files/y6_sp_maps/main_sp_maps/) · [Matched aperture map and manifest](results/v14/des_image_depth/)
+
+The same aperture on 12 valid public DELVE DR3 coadds gives pilot medians of +0.026 mag in g and +0.027 mag in r. Geometry selects tile centres from the released coadd index and the qualified South DR11 mask. We use the science image zero point, original weights and unflagged pixels in each aperture. For one pilot tile, the empirical pixel scatter was 1.33 and 1.69 times its formal predicted value in g and r. The measurement remains a formal image-weight statistic with possible calibration and covariance differences. The broader tile-indexed sample is queued. [DELVE DR3 image products](https://datalab.noirlab.edu/data/delve) · [Aperture pilot](results/v14/delve_image_depth_index_pilot/)
 
 ### First 10/15 pc paired CCD result
 

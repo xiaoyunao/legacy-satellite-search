@@ -2,6 +2,10 @@
 
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
+## 2026-11-22 — Gemini I identifies a photometric selection loss
+
+Gemini I reappears in an ordinary deeper A scan at the same local group budget, with accurate position and distance. The comparison holds catalogue, masks, CMD template, radii and main distance grid fixed. A 0.5 mag relaxation supplies enough usable signal in this case. Keep the A baseline for production and complete the other three control comparisons before deciding if any merits an independent likelihood search. The image-weight depth comparisons describe survey noise. Physical LS–PS1 recovery still depends on validated stellar selection.
+
 ## 2026-11-21 — extended controls
 
 Keep the frozen A baseline and compare the loss stages for compact systems. The qualified search spatially matches 36 of 38 evaluable Tan strict systems and 4 of 15 evaluable compact appendix systems. The compact result is specific to the literature catalogue and the formal footprint/distance support. The deeper fixed-position diagnostics for Gemini I and Sextans II motivate a calibrated targeted control comparison. The three Galactic maps establish census assignment and formal LS sensitivity, with the physical LS–PS1 detection increment still open.

@@ -1,0 +1,34 @@
+{
+  "job": "61736109",
+  "sia": "https://datalab.noirlab.edu/sia/delve_dr3",
+  "raster_sha256": "895176e19592f397a5cfcb199efb1ca756eb72e4c2a0dcde5735cbb6a45fac18",
+  "tile_index_sha256": "71967f81dccc85ee87e98d3e0615d28233e1d6a2078a17a3e99862d0753a2547",
+  "code_sha256": "5984f6efa5ac3feb060443d2616968b3be6748fee6e02f40ef44c357ae312480",
+  "sample_nside": 8,
+  "candidate_points": 338,
+  "attempted": 12,
+  "measured": 12,
+  "band_statistics": {
+    "g": {
+      "median": 0.026194654850131727,
+      "p16_p84": [
+        -0.07050291875025735,
+        0.05872942240676579
+      ]
+    },
+    "r": {
+      "median": 0.027012362636053666,
+      "p16_p84": [
+        -0.06080593932069689,
+        0.1552892029988054
+      ]
+    }
+  },
+  "outputs": {
+    "paired_aperture_depth.csv": "a14bd98e1580477d84f539cf3053060c1a9d88b5a779796f2e21b14d001e2fd8",
+    "delve_image_depth_difference.png": "ca376fc2592a0f40fe5f93459cff90b708b37578ecb196ae8ad4870a774af287",
+    "delve_image_depth_difference.pdf": "9956ae427a3c15bb88f653a4578bea4076567c9f476e5687d048d490e71e3dc8",
+    "unavailable_samples.csv": "71a652b3955fe682232c71099cc47cabc43c1f8332faff4d4f55f1ddedf6ce55"
+  },
+  "scope": "Public DELVE DR3 standard SCI/MSK/WGT cutouts, using SCI MAGZERO and positive inverse variance in the unflagged shared aperture. Empty SIA responses remain unavailable. Diagonal noise only, without covariance or stellar completeness. Equal-area sample centres do not imply coverage of complete cells."
+}

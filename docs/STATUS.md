@@ -2,11 +2,17 @@
 
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
+## 2026-11-22 — Gemini I recovery at the same local review cost
+
+The blinded deeper A trial recovered Gemini I at 0.988′ and Δμ=+0.104 mag. The historical baseline peaks missed at the same six-field calibration budget of 19 groups over 65.580 deg². The corrected pilot 61735798 is verified. The other three control comparisons are submitted in 61736182. The production A baseline remains frozen.
+
+The DELVE tile-indexed g/r aperture pilot 61736109 measured all 12 positions. The broader comparison 61736181 is submitted for 338 public coadd-supported positions. The PS1 comparison remains queued in 61735663.
+
 ## 2026-11-21 — extended catalogue and footprint checks
 
 Jobs 61733121, 61733122 and 61733147 completed. Their verified outputs cover 101 literature systems, the qualified Galactic footprint and LS-only observed 10σ depth, and four fixed-position catalogue diagnostics. The formal comparison sample has 67 covered, in-range objects and 49 ordinary A spatial matches. See the [science report](../fourteenth_science_report.md) for denominators and the fixed-centre measurements.
 
-The user confirmed the six-panel layout. Hercules preview 61733738, real candidate/control pilot 61733737, native blank 61733838 and the anonymous/held PDF pilot 61734147 completed. Of the 765 registered views, 126 were present when the first rendering jobs stopped. One task completed and the other reached its limit. Shared-CPU tasks 61735557 and 61735679 will resume missing views from the same files. Assembly 61734170 depends on both. The final package awaits complete render, page and identity QA, and archival.
+The user confirmed the six-panel layout. Hercules preview 61733738, real candidate/control pilot 61733737, native blank 61733838 and the anonymous/held PDF pilot 61734147 completed. Of the 765 registered views, 126 were present when the first rendering jobs stopped. One task completed and the other reached its limit. The last two pages of the timed-out task are running in 61736167. The other packs are queued in 61735557. Assembly 61734170 depends on both. The final package awaits complete render, page and identity QA, and archival.
 
 Job 61735544 verified the DES Y6 comparison at 447 common positions. For a 2″ aperture and observed 10σ flux, median LS minus DES is +0.147 mag in g and +0.110 mag in r. The PS1 variance cutout pilot 61735643 matches exact native pixels in both bands. The 417-position PS1 comparison 61735663 is submitted. These formal image noise measurements address a different endpoint from point-source or stellar-system recovery.
 

@@ -1,5 +1,11 @@
 # Work log
 
+## 2026-11-22
+
+- Job 61735798 completed the Gemini I blind comparison. Six nearby owned fields (65.580 deg²) set 19 groups for each depth at the same budget. Baseline missed and the deeper A scan found a peak 0.988′ away at μ=20.50, 0.104 mag above the adopted distance. The first pilot 61735762 passed a model path without loading the template. Corrected the scanner call and verified the replacement registration preserved every field and parameter. Remaining controls are queued in 61736182.
+- The DELVE DR3 catalogue-matched cone has no corresponding SIA image at the original position. The official DELVE cutout service returned native SCI/MSK/WGT in a positive test. The first 12 geometry-only samples had no public SIA rows. A truncated TAP metadata attempt was replaced by eight verified RA slices in 61735863, yielding 41,918 tile centres per band. Job 61736109 matched all 12 archive-indexed pilot positions. Wider DELVE run 61736181 is submitted for 338 cells.
+- The held shared resumption 61735679 had not started. Rebound the assembly to 61736167 and 61735557, and started 61736167 to render the last two views of the original task 0. All 126 existing receipts remain reusable.
+
 ## 2026-11-21
 
 - Sampled 447 shared DR11–DES Y6 aperture depths from the two official DES weight-derived maps and native DR11 inverse variance in 61735544. Switched the first attempt 61735499 to the existing Shapely environment after its import failure. Verified the output hashes, data rows and map. Median differences are +0.147 mag in g and +0.110 mag in r.

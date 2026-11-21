@@ -1,5 +1,9 @@
 # Decisions
 
+## 2026-11-22 — continue the frozen detector on the targeted misses
+
+The Gemini I ordinary deeper trial succeeds at a matched local review cost. It uses the same WCS support and main grid as the baseline. Keep the alternative depth as a diagnostic and complete the other three comparisons first. Revisit independently scanning likelihood only if the remaining controls retain coherent photometric signals that the targeted A trials still miss.
+
 ## 2026-11-21 — fixed-centre signal precedes a new discovery method
 
 Four failed recovery controls have best deeper fixed-centre scores reached in at most 2 of 304–400 same-field, matched-area positions per object. These controls overlap and use the target distance. Use the existing detector on comparable development/test fields before committing to a separate likelihood scan. Deeper PSF photometry changes the target scores, so its influence needs to be measured at a common blind review budget first.
