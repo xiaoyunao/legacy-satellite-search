@@ -1,5 +1,7 @@
 # Legacy Satellite Search
 
+On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
+
 **Delivery policy: one frozen whole-project human review.** Follow [the final review guide](docs/FINAL_REVIEW_GUIDE.md) and the actual `final_delivery_status.json` readiness flag. The original 75-position release remains an immutable archived first batch; its earlier instructions do not request another review. The final sample contains 161 production units and two weak controls, in one anonymous version.
 
 This project searches the North BASS and South DECam photometric catalogs of DESI Legacy Imaging Surveys DR11 for faint Milky Way stellar systems. It compares real catalogue recoveries with PS1 at a matched review cost and tests the physical response through native-image injections. The main science sample spans 20–150 kpc and circularized half-light radii of 3–30 pc. South PS1 is the discovery priority. South DELVE and DES overlap fields provide deeper comparison samples. Nearby and distant search branches have their own calibration. The formal production main branch ends at distance modulus 20.75; the modulus 21.0 /150 kpc boundary experiment remains separate.

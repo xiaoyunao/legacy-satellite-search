@@ -2,7 +2,7 @@
   "updated_utc": "2026-11-20T10:09Z",
   "policy_source": "GPT Pro437262c6 and latest evening68fa1336; user next-round prompt",
   "one_formal_review_only": true,
-  "final_ready_for_human_review": true,
+  "final_ready_for_human_review": false,
   "frozen_first_batch": {
     "positions": 75,
     "release": "results/v14/human_review/release_v2",
@@ -16,7 +16,8 @@
     "final_sampling_inclusion_probabilities": "PASSED frozen8981units/103certainty/29strata/58SRSWORaudit;161production+2weakcontrols=163anonymousunits. Single private OS permutation registered after all source gates; all75originalcases retained. No human grade or identity reveal.",
     "final_anonymity_and_page_QA": "PASSED:1531anonymous pages/2493held pages/171environment pages. Every image/source pixel, all4195page renders/bounds, every environment annotation, passive PDF/text/ZIP/blank forms verified; all39anonymous overviews and6full-size pages inspected. Held identity images not emitted before seal.",
     "required_source_bound_C_modes": "PASSED:all752selected original-source modes and13control modes numerically covered/rendered; source-bound masks/config/members verified. Global unattempted lower-priority C remains explicit and is not filled.",
-    "durable_copies": "PASSED:61639687COMPLETED19s,21files/1332130160bytes copied into actual HOME project with identical SHA256 and256MiBreserve. Local final PDF/ZIP/forms/held PDFs+metadata verified. Scratch is not the only copy."
+    "durable_copies": "PASSED:61639687COMPLETED19s,21files/1332130160bytes copied into actual HOME project with identical SHA256 and256MiBreserve. Local final PDF/ZIP/forms/held PDFs+metadata verified. Scratch is not the only copy.",
+    "convolved_density_review": "Pending real-data pilot, all-mode rendering and final QA."
   },
   "human_responses": "unfilled; no seal, identity reveal or automatic new-system promotion",
   "scope": "Historical batch technical readiness is distinct from final project-wide delivery. Preserve release_v2 bytes. Final package must retain and crosswalk the original 75 positions.",
@@ -179,6 +180,8 @@
     }
   },
   "post_integration_job": "61627306",
-  "final_release_version": "v14-final-1",
-  "final_release_metadata": "results/v14/human_review/final_review_release.json"
+  "final_release_version": null,
+  "final_release_metadata": "results/v14/human_review/final_review_release.json",
+  "withdrawn_release": "v14-final-1",
+  "pending_release": "v14-final-2"
 }

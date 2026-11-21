@@ -1,5 +1,20 @@
 # Plan
 
+## 2026-11-21 — GPT Pro review 9ecab5b4 execution ledger
+
+| Goal | Concrete acceptance | State |
+| --- | --- | --- |
+| 1a. Withdraw previous packages | Local final delivery directory gone, GitHub main has no earlier-review package files, NERSC frozen copies checked | Local done, push pending |
+| 1b. Real diagnostic pilot | P001 fragment, P007 complex environment, ordinary L0 cases, weak controls and a blank field. Confirm shared axes, native usable area, 0.5′ and 2′ Gaussian densities, no score/identity on anonymous pages | Pending |
+| 1c. One final release | All 163 units and saved alternatives bound to frozen A/C and input models. Original evidence retained, new diagnostics complete, PDF and separate ZIP/form validated, held evidence private | Pending 1b |
+| 2a. Galactic Aitoff | Qualified WCS footprint, census assignments, known recoveries and misses, high extinction/low latitude context, private unlabeled production positions | Pending |
+| 2b. Depth and selection maps | Real matched-sky g/r depths, same S/N and extinction convention, survey-specific completeness and coverage limits, retained-star sample diagnostics | Pending |
+| 3a. Census recovery | Pinned author strict and compact rosters plus subsequent discovery controls, eligibility and blind A/C endpoints | Pending |
+| 3b. Failure diagnosis | Gemini I, DELVE 7, Aquarius IV, Sextans II. Trace masks, PSF and selection, CMD counts, local background, size and frozen score. Decide whether an independent likelihood pilot is warranted | Pending |
+| 4a. Physical response | Use existing 144 images and bounded light/size tests to choose targeted transition nodes. Paired outcomes by latent system and background. Validate PS1 response with independent reference or record measured limits | Pending |
+| 4b. Scientific figures | Footprint, known recovery, supported selection response, image losses and candidate statistics. Human grades and released identities depend on user sealing | Pending |
+| 5. Handoff | Source hashes, Slurm accounting, validated aggregate files and scope synchronized. One user review after new package QA | In progress |
+
 ## 2026-11-20T10:09Z — current handoff and next scientific decision
 
 - This round's registered scans/retries, historical production/qualified area/frame, selected exact-source C/materials and one final release are complete. All release-chain jobs terminal; final local/HOME hashes accepted.

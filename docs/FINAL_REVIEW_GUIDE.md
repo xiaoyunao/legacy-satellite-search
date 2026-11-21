@@ -1,5 +1,7 @@
 # 最终集中人工审查
 
+**旧版已撤下。** 本说明的填写流程将在 v14-final-2 验收通过后使用。
+
 以 `results/v14/human_review/final_delivery_status.json` 的实际交付状态为准。
 `final_ready_for_human_review=false` 时不要填写中间批次。
 

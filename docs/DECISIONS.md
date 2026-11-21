@@ -1,5 +1,7 @@
 # Decisions
 
+On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
+
 ## 2026-11-20T10:09Z — freeze one final review and preserve source-bound environments
 
 Release v14-final-1 only after full terminal/production/area/sample/C/native/pixel/page/privacy and durable-copy gates pass. One private permutation,163units, all original75 and weak controls retained; no intermediate grading. Generic observing diagrams lacked frozen known/environment tags: add the171page exact-record appendix from the immutable ledger and same key, without changing anonymous bytes, C, native panels or the draw. Missing catalogue annotation is not absence or classification.

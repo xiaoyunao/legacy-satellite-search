@@ -1,7 +1,7 @@
 {
   "version": "v14-final-1",
   "updated_utc": "2026-11-20T10:09Z",
-  "final_ready_for_human_review": true,
+  "final_ready_for_human_review": false,
   "one_formal_review_only": true,
   "production_review_units": 161,
   "weak_controls": 2,
@@ -78,5 +78,6 @@
     "scripts/v14_archive_held.py": "a888243d5c2dd0f101a532869f1d6c4562ccf1f7dc4cdf3cdbe2764b5226a701",
     "scripts/v14_held_environment.py": "5fd924bb0c48002e9b9023191ae3d4c9e1091d5f2cf2e6247bfd8fdc48a7ae5f",
     "scripts/v14_review_page_QA.py": "0f5b5c892aa01d4e38b754d4d03e257bed5ea32d2b728b8bcec86edde8e1596b"
-  }
+  },
+  "release_state": "withdrawn_for_density_redraw"
 }

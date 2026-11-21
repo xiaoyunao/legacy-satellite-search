@@ -1,5 +1,10 @@
 # Work log
 
+## 2026-11-21
+
+- Natively read latest full Pro message 9ecab5b4 and recovered project at bcc0f7e. Registered the multi-part goal in PLAN.
+- Verified every original 75-case release file against the NERSC copy and the v14-final-1 archive hashes against the accepted HOME receipt. Removed the local v1 delivery and staged deletion of the older public review PDFs/ZIP/forms from main. Prior scientific sources and the private NERSC archive still support the new render. GitHub releases API returned no upload assets.
+
 ## 2026-11-20
 
 ### 2026-11-20T10:09Z — durable final release accepted and one-time handoff
