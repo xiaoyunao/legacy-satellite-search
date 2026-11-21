@@ -2,6 +2,11 @@
 
 ## 2026-11-22
 
+- Job 61736238 measured archived baseline point-source counts at 1,930 Galactic sample centres. Verified the map and every aggregate hash. Median faint point-source density 2,701 per usable deg² and median PSF fraction 21.5% under the unchanged g/r cuts. 283 archive entries omitted during selection lacked the non-owned core area needed for these counts.
+- Interactive allocation 61736243 runs the receipt-bound PS1 and DELVE apertures and the three remaining deeper A controls on compute steps 0–3. Existing pending jobs 61735663, 61736181 and 61736182 were held first. Cancel an alternate job only after its replacement outputs pass, or release it for unfinished work.
+
+- Job 61736167_0 completed the two outstanding views of pack 0 in 54 s. Confirmed all 128 initial views. The ten queued packs in 61735557 had never started. Held those tasks after getting shared interactive allocation 61736204, and started exact pack rendering in four parallel ranks on step 61736204.0. Logs show packs 2–5 running. Preserve the held queue until the interactive result is accepted. Rebind 61734170 after every view receipt is present.
+
 - Job 61735798 completed the Gemini I blind comparison. Six nearby owned fields (65.580 deg²) set 19 groups for each depth at the same budget. Baseline missed and the deeper A scan found a peak 0.988′ away at μ=20.50, 0.104 mag above the adopted distance. The first pilot 61735762 passed a model path without loading the template. Corrected the scanner call and verified the replacement registration preserved every field and parameter. Remaining controls are queued in 61736182.
 - The DELVE DR3 catalogue-matched cone has no corresponding SIA image at the original position. The official DELVE cutout service returned native SCI/MSK/WGT in a positive test. The first 12 geometry-only samples had no public SIA rows. A truncated TAP metadata attempt was replaced by eight verified RA slices in 61735863, yielding 41,918 tile centres per band. Job 61736109 matched all 12 archive-indexed pilot positions. Wider DELVE run 61736181 is submitted for 338 cells.
 - The held shared resumption 61735679 had not started. Rebound the assembly to 61736167 and 61735557, and started 61736167 to render the last two views of the original task 0. All 126 existing receipts remain reusable.

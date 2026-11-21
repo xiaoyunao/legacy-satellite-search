@@ -1,0 +1,24 @@
+{
+  "job": "61736238",
+  "registration_sha256": "0887032db6d1dc80e6b45279c234f8de0b3f67b52d28eeaf6e2021d9b60dc804",
+  "raster_sha256": "895176e19592f397a5cfcb199efb1ca756eb72e4c2a0dcde5735cbb6a45fac18",
+  "code_sha256": "a62ac9f332ae6850f446d287b249bb334e29043909029403fb044a9120fb8e96",
+  "sampled_source_hashes_sha256": "40b09424288b1a6fec004cebd014fd392882eca6c29086d3cae11b89c83053a5",
+  "sample_nside": 16,
+  "samples": 1930,
+  "excluded": {
+    "missing_full_core_area": 283
+  },
+  "bands_by_region": {
+    "south": 1590,
+    "north": 340
+  },
+  "median_faint_psf_per_deg2": 2700.877092287368,
+  "median_faint_sample_psf_fraction": 0.2154788553239721,
+  "outputs": {
+    "selected_faint_sky.png": "6aa60c3cc37d9048a03d429ec0342193f92a514cdb3c86b064e036d90737a5e5",
+    "selected_faint_sky.pdf": "4302eae3f6f2a9fbeb1c300e4efab3571a5b4bb4fea4b67ae671f5288d76e399",
+    "selected_faint_sources.csv": "016febc0d6945a93d63dacaf06bd6a9a5c8596d8e57daa1aeb6c05f20e9374c2"
+  },
+  "scope": "Nearest eligible field centre per sampled Galactic cell on represented WCS coverage. Counts and full usable core areas come from the same archived field masks before ownership partitions. Per-field samples need not be independent. Point-source fractions include classification and foreground variation. No stellar truth, completeness, or brightness threshold inference."
+}
