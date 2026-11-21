@@ -2,7 +2,7 @@
 
 ## 2026-11-22 — continue the frozen detector on the targeted misses
 
-The Gemini I ordinary deeper trial succeeds at a matched local review cost. It uses the same WCS support and main grid as the baseline. Keep the alternative depth as a diagnostic and complete the other three comparisons first. Revisit independently scanning likelihood only if the remaining controls retain coherent photometric signals that the targeted A trials still miss.
+Gemini I succeeds in the ordinary deeper scan at matched local review cost. The three other controls remain missed. Their fixed-centre scores are below their deeper trial's calibrated cuts. DELVE 7 also lies below the minimum search scale, while the Sextans II aperture contains substantial CMD-matched non-PSF contamination. Keep A baseline for production and the alternative limit for targeted diagnostics. The current tests do not isolate a search-statistic limitation that justifies a standalone likelihood scan.
 
 ## 2026-11-21 — fixed-centre signal precedes a new discovery method
 

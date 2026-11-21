@@ -1,0 +1,3 @@
+target,search_field,arm,threshold,target_area_deg2,calibration_area_deg2,expected_control_groups,actual_control_groups,target_field_groups,spatial,blind_correct,correct_mode_exists,wide_mode_exists
+Sextans_II,v14_south_delve_0620,base,5.903247589186651,11.912010030864195,69.04198302469135,20,20,5,False,False,False,False
+Sextans_II,v14_south_delve_0620,deep,7.01159368690316,11.912010030864195,69.04198302469135,20,20,2,False,False,False,False

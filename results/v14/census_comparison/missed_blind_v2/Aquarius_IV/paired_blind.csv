@@ -1,0 +1,3 @@
+target,search_field,arm,threshold,target_area_deg2,calibration_area_deg2,expected_control_groups,actual_control_groups,target_field_groups,spatial,blind_correct,correct_mode_exists,wide_mode_exists
+Aquarius_IV,v14_south_delve_extension_0566,base,7.076442268941845,4.658167438271604,34.115680941358015,10,10,0,False,False,False,False
+Aquarius_IV,v14_south_delve_extension_0566,deep,8.400996797112754,4.658167438271604,34.115680941358015,10,10,0,False,False,False,False

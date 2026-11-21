@@ -85,9 +85,13 @@ def measure(task):
     area_deg2, _ = coverage_metrics(field, area_owned, config)
     if not np.isclose(area_deg2, task['source_effective_deg2'], atol=1e-9, rtol=0):
         raise ValueError('Owned mask differs from the accepted area')
-    base_path = data_path / saved['deduplicated_peaks_path']
+    cache = saved.get('deduplicated_peaks_path')
+    base_path = data_path / cache if cache else manifest_path.parent / 'deduplicated_peaks.csv'
+    original_peaks = read_csv(base_path)
+    if len(original_peaks) != saved['deduplicated_peaks']:
+        raise ValueError('Saved baseline peak inventory differs from its scan manifest')
     base = [{key: float(row[key]) for key in ('x', 'y', 'ra_deg', 'dec_deg', 'dm', 'rh_arcmin', 'score')}
-            for row in read_csv(base_path) if row['branch'] == 'main']
+            for row in original_peaks if row['branch'] == 'main']
     deeper = dict(config, g_max=config['g_max'] + .5, r_max=config['r_max'] + .5, dm=[16.5, 20.75, .25])
     sources, *_ = select(raw, field, area, deeper)
     peaks, _, _, _ = scan(sources, field, area, load_isochrone(template), deeper)

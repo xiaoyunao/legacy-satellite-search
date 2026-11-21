@@ -1,0 +1,18 @@
+{
+  "inputs_sha256": {
+    "missed_blind_v2/registration.json": "20fd89bb53039213de79a337e462b1051de916a003a548d8e64846cf1a811747",
+    "missed_blind_v3/registration.json": "095cf64ec6fa24bcab39393130ce767a9b29683562b159acf673c75f5d9a52f7",
+    "missed_blind_v2/Aquarius_IV/paired_blind.csv": "e532829f2bd239c8f0a7bd7a7f7b29ba69b9545d1d8274d3ea438a1fd8c1df17",
+    "missed_blind_v2/Aquarius_IV/manifest.json": "b1b9152e8c43be945f6e5604aa30de489a0c63804dd8504e071b7285f027bf47",
+    "missed_blind_v3/DELVE_7/paired_blind.csv": "1da03ea9f0b32f5ef3a4de85aabeae2554445e894a32ef44f3b4055d87e962c4",
+    "missed_blind_v3/DELVE_7/manifest.json": "b8944aa16a4340e9a02ac5fdf8859e2e64260293a7efde32dbe345ff04aee691",
+    "missed_blind_v2/Gemini_I_DELVE_8/paired_blind.csv": "90c01fe841fa3a58676d8d5b9d9f171388d72ca914c2387b6eefd5165fc762b6",
+    "missed_blind_v2/Gemini_I_DELVE_8/manifest.json": "852206d32a0a752810b1647ce3de3f6a916457a9ee4614d023f77f16bec2132d",
+    "missed_blind_v3/Sextans_II/paired_blind.csv": "0057784580f0757ef3ad9ded4117f8b2afdf3a80c4a064c411d2dd688dfa9072",
+    "missed_blind_v3/Sextans_II/manifest.json": "588e791c4dd5bb50d54d4984d2caf94c386d67943a7666c509baaae803006f2e"
+  },
+  "table_sha256": "57590fd0a164fc2dedaf249cf4f81d1684e834fa10ac91b93fcf386ea3d2f2bb",
+  "measured_fields": 4,
+  "rows": 8,
+  "scope": "Per-target thresholds calibrated on six local shared-area controls with the frozen A geometry and unchanged main distance grid. These are targeted tests of two hard photometric limits. Production and all-sky recovery rates are separate."
+}

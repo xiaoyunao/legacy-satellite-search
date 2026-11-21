@@ -1,0 +1,78 @@
+{
+  "job": "61736243",
+  "source_sha256": "20fd89bb53039213de79a337e462b1051de916a003a548d8e64846cf1a811747",
+  "table_sha256": "e532829f2bd239c8f0a7bd7a7f7b29ba69b9545d1d8274d3ea438a1fd8c1df17",
+  "measured": [
+    {
+      "field": "v14_south_delve_extension_0566",
+      "area": 4.658167438271604,
+      "template_sha256": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+      "owned_sha256": "cca02adf17def92d847533584ac4d0657d1f783c674f23216cf91c7ab75c1393",
+      "original_baseline_peaks_sha256": "77beae65038aa7e731850fcafb5e614fe4cfd8885cdb96c0110c6bc301e44b15",
+      "original_manifest_sha256": "485b70a322a26376fa0342d3a1abee74f03a011bdd6fd34f3db8625d81e88781",
+      "groups_base": 3577,
+      "groups_deep": 3490
+    },
+    {
+      "field": "v14_south_delve_extension_0522",
+      "area": 4.504909336419752,
+      "template_sha256": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+      "owned_sha256": "6ed7943aaf5b065f0867edb2de64adb33e7744998aff65603e51dbdc793d3764",
+      "original_baseline_peaks_sha256": "3750ba616f2edee57f71537e85c97129d6e944549a2231be38340d454cc12181",
+      "original_manifest_sha256": "7924331f72191ba0ad4e531fc1a1a0b77db89d2aea88c0f2d1d16a97af2d4fee",
+      "groups_base": 4058,
+      "groups_deep": 3982
+    },
+    {
+      "field": "v14_south_delve_extension_0320",
+      "area": 6.1342380401234555,
+      "template_sha256": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+      "owned_sha256": "b30dc8be58f7261a7cb7beedfe67ea1f15c512e87fc2793afd55b3bc1aedf04e",
+      "original_baseline_peaks_sha256": "524f58dd0cc6ca630cd16b22ce05104a97058bc3b8166527dda2d564d5ff6260",
+      "original_manifest_sha256": "d3c7b8242983eb3e50b74e1c70efb07cb4a22df04a2b76faa227bf05b4e4c77f",
+      "groups_base": 5129,
+      "groups_deep": 4953
+    },
+    {
+      "field": "v14_south_delve_extension_0290",
+      "area": 5.4287673611111105,
+      "template_sha256": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+      "owned_sha256": "02d09efd2e6b41e0df0203a9700b5eb10d72bdef898c0470116ef258cb6b4992",
+      "original_baseline_peaks_sha256": "c7b67dbb03def81860487d2f7611e435e4930cdae0edc5985d9ebd06abe82928",
+      "original_manifest_sha256": "a000fdc13ab9207a0c1c01a974bb9dc635ef99f48c0d0997774fa5d6717cca7f",
+      "groups_base": 4306,
+      "groups_deep": 4113
+    },
+    {
+      "field": "v14_south_delve_extension_0423",
+      "area": 5.81851273148148,
+      "template_sha256": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+      "owned_sha256": "1f014332a5d723310752ea919205e11355452c9e30f604eba6a31b47ce73b489",
+      "original_baseline_peaks_sha256": "e03cbc908b370f6bfc4e338ec75008ba3f304fd64f823d14f326b3c3aaffd220",
+      "original_manifest_sha256": "9bcf4c529030b58d29b776db290d70c18b48decadda03ef20264a5d05f31915f",
+      "groups_base": 5238,
+      "groups_deep": 5099
+    },
+    {
+      "field": "v14_south_delve_extension_0289",
+      "area": 6.2409124228395045,
+      "template_sha256": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+      "owned_sha256": "0024557f627d6443dc5c7d549a911559fc828718c502933fa534adc0111f9446",
+      "original_baseline_peaks_sha256": "5bda1d97b8bdb930ee8535cc50f67cca7a80fe49bbbe51c35778e46bc73268b8",
+      "original_manifest_sha256": "ae5565634cbd99ec35a0aa398080765dabe318deafa42aec836a6e1e37cbd95c",
+      "groups_base": 4986,
+      "groups_deep": 4758
+    },
+    {
+      "field": "v14_south_delve_extension_0457",
+      "area": 5.988341049382715,
+      "template_sha256": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+      "owned_sha256": "81d6822881641886b0a123b86746de3ba0bbac5b0b675d9ac552ff4a3b924678",
+      "original_baseline_peaks_sha256": "4d346e99bdae17bab4b93793f08a89dffcdb8583a4d25481902792f314123134",
+      "original_manifest_sha256": "3ee8db114ab0958ca68b2077e1fbcca01e624e7e58f7701e9f4c0940a24e4f7e",
+      "groups_base": 5181,
+      "groups_deep": 5043
+    }
+  ],
+  "scope": "Local retrospective A test with unchanged main distance grid, radii, candidate budget and parent catalogue. Baseline peaks are historical. New deeper peaks and calibration use original working-area cells. Matching applies the fixed position rule only after calibration. This does not replace production thresholds or estimate completeness."
+}

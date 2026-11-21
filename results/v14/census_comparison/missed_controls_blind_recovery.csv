@@ -1,0 +1,9 @@
+target,search_field,arm,threshold,target_area_deg2,calibration_area_deg2,expected_control_groups,actual_control_groups,target_field_groups,spatial,blind_correct,correct_mode_exists,wide_mode_exists,blind_dm,blind_dm_error,correct_mode_dm,offset_arcmin,representative_channel
+Aquarius_IV,v14_south_delve_extension_0566,base,7.076442268941845,4.658167438271604,34.115680941358015,10,10,0,False,False,False,False,,,,,
+Aquarius_IV,v14_south_delve_extension_0566,deep,8.400996797112754,4.658167438271604,34.115680941358015,10,10,0,False,False,False,False,,,,,
+DELVE_7,v14_south_des_0128,base,6.02856186191622,6.27315586419753,43.198740354938266,12,12,1,False,False,False,False,,,,,
+DELVE_7,v14_south_des_0128,deep,5.993115088932803,6.27315586419753,43.198740354938266,12,12,5,False,False,False,False,,,,,
+Gemini_I_DELVE_8,v14_south_delve_extension_0714,base,5.983345554190103,11.323009259259257,65.58010416666666,19,19,5,False,False,False,False,,,,,
+Gemini_I_DELVE_8,v14_south_delve_extension_0714,deep,6.451873047070851,11.323009259259257,65.58010416666666,19,19,3,True,True,True,True,20.5,0.10409376976187446,20.5,0.9882268096253376,A_deep
+Sextans_II,v14_south_delve_0620,base,5.903247589186651,11.912010030864195,69.04198302469135,20,20,5,False,False,False,False,,,,,
+Sextans_II,v14_south_delve_0620,deep,7.01159368690316,11.912010030864195,69.04198302469135,20,20,2,False,False,False,False,,,,,

@@ -2,6 +2,8 @@
 
 ## 2026-11-22
 
+- Completed and checked the four matched-budget A control comparisons. Gemini I is the only deeper recovery. Aquarius IV, Sextans II and DELVE 7 failed both catalogue limits. Older fields omitted the recorded path because their full peak CSV sits next to the original manifest. Added the existing legacy file location and verified row counts against the saved scan. Retried only the two affected controls in steps 61736243.4 and .5, preserving the exact registered test fields and calibration blocks. Synchronized both registrations and the eight measured rows. Cancelled the held duplicates.
+
 - PS1 step 61736243.0 completed in 4:47. Verified all output hashes and the Aitoff visual. 412 of 417 matched aperture positions passed. Median LS minus PS1 observed 10σ depth is +1.198 mag in g and +0.798 mag in r. The remaining five positions lacked a valid aperture in one of the surveys. Cancelled the held duplicate 61735663.
 
 - Job 61736238 measured archived baseline point-source counts at 1,930 Galactic sample centres. Verified the map and every aggregate hash. Median faint point-source density 2,701 per usable deg² and median PSF fraction 21.5% under the unchanged g/r cuts. 283 archive entries omitted during selection lacked the non-owned core area needed for these counts.
