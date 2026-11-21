@@ -1,0 +1,10 @@
+{
+  "accepted_table_sha256": "1ed4dbfdf9a5f5e45fb20c93f0c9332602670ba18479c1569b282e3166d8cd1a",
+  "acceptance_sha256": "19759590bdc5afc855bca16f82565c000238352709c719a68c79bd058247e185",
+  "code_sha256": "bcf816cc45ddf617ad66ca4b9af4872a3d173fb2572da2282bef5a0f17923eec",
+  "outputs": {
+    "paired_radius_ccd.png": "fe7054171414063d2c351dea6a7e14b895ce6bfab91f85bb6c4178c0d19011cf",
+    "paired_radius_ccd.pdf": "0c50b3d8942731986e7a762089aec98fe88b9033852f2c2eae82894ad4c49a19"
+  },
+  "scope": "Six paired cases from two shared latent populations and three backgrounds. Marks at left denote individual pairs and stage medians. Distance means the highest blind mode is correct. Conditional common-stamp comparison without extrapolation to a true-V population."
+}

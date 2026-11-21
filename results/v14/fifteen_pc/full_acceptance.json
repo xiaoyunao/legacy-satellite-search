@@ -1,0 +1,25 @@
+{
+  "job": "61736243",
+  "native_cases": 12,
+  "measured_pairs": 12,
+  "skies": 3,
+  "latent_populations": 2,
+  "inputs": {
+    "results/v14/fifteen_pc/trials/v14_south_response_1-00.json": "cdc8cb0a3b0b3c37e77e341bc9950f0a09b4e6ab236b612df252e54e4dd8f606",
+    "results/v14/fifteen_pc/trials/v14_south_response_1-01.json": "65fd5acc92e491652bf218771a87733fc571f0fc02d4aa3d85be9b6df192eecd",
+    "results/v14/fifteen_pc/trials/v14_south_response_2-00.json": "e552ac4e51523b0fdea24073a16f9d36003048eacdc38c749d089826e1b7ce79",
+    "results/v14/fifteen_pc/trials/v14_south_response_2-01.json": "f2dc066cc119752d2edb2d2b111a1e7f8082e9cefa072479438ed7af42b3ffda",
+    "results/v14/fifteen_pc/trials/v14_south_response_3-00.json": "690c88b358b37490afbfcbc7c9a3f999540a14562672ae575ff036514fe31897",
+    "results/v14/fifteen_pc/trials/v14_south_response_3-01.json": "33fce41857d5690895fa221206ea8d57c2fc445c7b63dc9a628e062a3438ce60",
+    "results/v14/fifteen_pc/trials/v14_south_response_1-02.json": "874bcea0921bc1f492258ca4f45e36f00a600ea183deb7bf345b804fc449130f",
+    "results/v14/fifteen_pc/trials/v14_south_response_1-03.json": "62c3ee59c561460b3e32f82106a2f89762807244eb0b4f8f5ead0c61ae0f32b8",
+    "results/v14/fifteen_pc/trials/v14_south_response_2-02.json": "380c662d3b0db6632ffaa0231d8152b6863203028ead5d2514f6eda86983b8cf",
+    "results/v14/fifteen_pc/trials/v14_south_response_2-03.json": "421979393c13c39adb794c7907b53c4dad023424811d8876095de049eca3d06f",
+    "results/v14/fifteen_pc/trials/v14_south_response_3-02.json": "d8b6f3f782e2b0bd5624d06837332601087eb529e8437b80d1e96f9c9758386f",
+    "results/v14/fifteen_pc/trials/v14_south_response_3-03.json": "f0bcc7c983082f8ed06b9c2d8cd794dc6bef4629ccc8dba6436a6ba163cabc2c"
+  },
+  "table_sha256": "1ed4dbfdf9a5f5e45fb20c93f0c9332602670ba18479c1569b282e3166d8cd1a",
+  "code_sha256": "7397bade4ba33ce42071bebdc52bb3bff164517c121a356b11484ab84d42fe85",
+  "every_input_verified": true,
+  "scope": "Finite common-stamp populations, paired across 10 and 15 pc. Catalogued sources, native detections, original formal A limits and whole-field blind recovery are measured. A pilot covers one population on one background. No complete physical luminosity response, cross-survey sensitivity or abundance inference."
+}

@@ -2,6 +2,10 @@
 
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
+## 2026-11-22 — the 10–15 pc source-level response
+
+Six paired native CCD trials use the same two finite-stamp populations in three 100 kpc backgrounds. Point-source associations increase in each 15 pc trial while exposure counts are nearly identical. At baseline the spatial recovery improves once and at deeper limits neither radius loses a spatial match. This supports measurable size-dependent image and catalogue response near this physical range. The ensemble is too small to establish a completeness contour or a physical gain over PS1.
+
 ## 2026-11-22 — Gemini I identifies a photometric selection loss
 
 Gemini I reappears in an ordinary deeper A scan at the same local group budget, with accurate position and distance. The comparison holds catalogue, masks, CMD template, radii and main distance grid fixed. A 0.5 mag relaxation supplies enough usable signal in this case. Keep the A baseline for production and complete the other three control comparisons before deciding if any merits an independent likelihood search. The image-weight depth comparisons describe survey noise. Physical LS–PS1 recovery still depends on validated stellar selection.

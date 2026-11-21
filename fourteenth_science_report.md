@@ -75,9 +75,17 @@ On the qualified South DR11 footprint assigned to DES by the census, we compared
 
 The same aperture on 12 valid public DELVE DR3 coadds gives pilot medians of +0.026 mag in g and +0.027 mag in r. Geometry selects tile centres from the released coadd index and the qualified South DR11 mask. We use the science image zero point, original weights and unflagged pixels in each aperture. For one pilot tile, the empirical pixel scatter was 1.33 and 1.69 times its formal predicted value in g and r. The measurement remains a formal image-weight statistic with possible calibration and covariance differences. The broader tile-indexed sample is queued. [DELVE DR3 image products](https://datalab.noirlab.edu/data/delve) · [Aperture pilot](results/v14/delve_image_depth_index_pilot/)
 
-### First 10/15 pc paired CCD result
+### Paired 10/15 pc native CCD result
 
-At 100 kpc, the first population and background have verified native images at both 10 and 15 pc. The matched experiment uses the same 293 generated members after a common stamp cut. The cut retains 98.54% of the parent rendered V-proxy light. The blind A search recovers the position and distance at both radii with both photometric limits. At 15 pc the image processing yields nine more final associated detections and 17 more PSF classifications. Three more associated sources pass the baseline selection and five more pass the deeper selection. The one-position comparison holds the rendered stellar population fixed while its placement relative to foreground and neighbouring members changes. It shows a size-dependent source response for this realization. The other five population–background pairs are registered and pending. [Pilot results and common support](results/v14/fifteen_pc/)
+The final 12 native cases compare two 100 kpc populations at 10 and 15 pc in three CCD backgrounds. Each radius uses the same 293 or 266 rendered stars for a given parent, keeping 98.54% or 99.21% of the parent's rendered proxy light. The realized V proxies on common support are −2.814 and −2.561. Across the six paired placements, the number of exposed members is nearly identical, at 1,675 and 1,674 respectively. Initial associated detections increase from 446 to 534, final associations from 557 to 617 and PSF associations from 393 to 482. Every pair gains PSF associations at 15 pc, with increases of 6–26. The members passing hard cuts increase from 86 to 108 at baseline and from 144 to 188 at the deeper limits.
+
+| A endpoint | 10 pc baseline | 15 pc baseline | 10 pc deeper | 15 pc deeper |
+| --- | ---: | ---: | ---: | ---: |
+| Blind position match | 5/6 | 6/6 | 6/6 | 6/6 |
+| Highest blind distance mode correct | 5/6 | 6/6 | 5/6 | 6/6 |
+| At least one retained correct distance mode | 5/6 | 6/6 | 6/6 | 6/6 |
+
+The earliest large change occurs at initial extraction, followed by increased point-source selection. Moving the same stars apart changes their blending with each other and with the foreground. The experiment holds the finite stamp support and luminosity realization fixed and varies radius in those real backgrounds. The shared populations and three skies limit inference about a general radius trend, a 50% contour and physical LS–PS1 gain. [Paired image-stage plot](results/v14/fifteen_pc/paired_radius_ccd.png) · [Verified CCD table](results/v14/fifteen_pc/full_pairs.csv)
 
 ### Candidate search burden
 

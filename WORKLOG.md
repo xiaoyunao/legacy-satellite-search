@@ -2,6 +2,8 @@
 
 ## 2026-11-22
 
+- All ten remaining 10/15 pc native runs in 61734749 completed. Slurm step 61736243.6 verified all twelve native source proofs and both depth arms. Initial detections 446→534, final associations 557→617, PSF associations 393→482, hard selection 86→108 at baseline and 144→188 at deeper limits. Baseline spatial 5/6→6/6 and deeper 6/6→6/6. Verified the table hash and plotted the same realized source pairs. Cancelled the held duplicate acceptance 61734780.
+
 - Completed and checked the four matched-budget A control comparisons. Gemini I is the only deeper recovery. Aquarius IV, Sextans II and DELVE 7 failed both catalogue limits. Older fields omitted the recorded path because their full peak CSV sits next to the original manifest. Added the existing legacy file location and verified row counts against the saved scan. Retried only the two affected controls in steps 61736243.4 and .5, preserving the exact registered test fields and calibration blocks. Synchronized both registrations and the eight measured rows. Cancelled the held duplicates.
 
 - PS1 step 61736243.0 completed in 4:47. Verified all output hashes and the Aitoff visual. 412 of 417 matched aperture positions passed. Median LS minus PS1 observed 10σ depth is +1.198 mag in g and +0.798 mag in r. The remaining five positions lacked a valid aperture in one of the surveys. Cancelled the held duplicate 61735663.

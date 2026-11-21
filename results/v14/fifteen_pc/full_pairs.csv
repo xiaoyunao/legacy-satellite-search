@@ -1,0 +1,13 @@
+site,original_trial,arm,r10_N_rendered,r10_N_exposed,r10_N_final,r10_N_psf,r10_N_used,r10_N_cmd,r10_N_initial,r10_spatial,r10_blind_correct,r10_correct_mode_exists,r10_blind_dm_error,r10_offset_arcmin,r15_N_rendered,r15_N_exposed,r15_N_final,r15_N_psf,r15_N_used,r15_N_cmd,r15_N_initial,r15_spatial,r15_blind_correct,r15_correct_mode_exists,r15_blind_dm_error,r15_offset_arcmin,delta_N_rendered,delta_N_exposed,delta_N_final,delta_N_psf,delta_N_used,delta_N_cmd,delta_N_initial
+v14_south_response_1,14,baseline,293,292,88,59,18,17,73,True,True,True,0.0,0.31028021893192603,293,291,97,76,21,21,87,True,True,True,0.0,0.31028021893192603,0,-1,9,17,3,4,14
+v14_south_response_1,14,deeper,293,292,88,59,31,30,73,True,True,True,0.0,0.161318043273045,293,291,97,76,36,36,87,True,True,True,0.0,0.41687331670942707,0,-1,9,17,5,6,14
+v14_south_response_1,2,baseline,266,266,80,52,13,13,70,True,True,True,0.0,0.02973128035586303,266,265,79,58,16,16,73,True,True,True,0.0,0.2637643620014255,0,-1,-1,6,3,3,3
+v14_south_response_1,2,deeper,266,266,80,52,18,18,70,True,True,True,0.0,0.15666492104284147,266,265,79,58,26,26,73,True,True,True,0.0,0.2637643620014255,0,-1,-1,6,8,8,3
+v14_south_response_2,14,baseline,293,292,96,68,16,16,74,True,True,True,0.0,0.493914109248867,293,293,119,94,17,17,101,True,True,True,0.0,0.41687490860576554,0,1,23,26,1,1,27
+v14_south_response_2,14,deeper,293,292,96,68,25,25,74,True,True,True,0.0,0.493914109248867,293,293,119,94,32,32,101,True,True,True,0.0,0.41687490860576554,0,1,23,26,7,7,27
+v14_south_response_2,2,baseline,266,266,84,63,9,9,65,False,False,False,,,266,266,98,75,16,16,85,True,True,True,-0.25,0.1941067535246477,0,0,14,12,7,7,20
+v14_south_response_2,2,deeper,266,266,84,63,21,21,65,True,False,True,-0.75,0.14016788858426332,266,266,98,75,32,32,85,True,True,True,-0.25,0.1941067535246477,0,0,14,12,11,11,20
+v14_south_response_3,14,baseline,293,293,123,90,17,17,95,True,True,True,0.0,0.21212859943045156,293,293,123,100,20,20,100,True,True,True,0.0,0.272602414587208,0,0,0,10,3,3,5
+v14_south_response_3,14,deeper,293,293,123,90,27,27,95,True,True,True,0.0,0.697997513751341,293,293,123,100,34,34,100,True,True,True,0.0,0.697997513751341,0,0,0,10,7,7,5
+v14_south_response_3,2,baseline,266,266,86,61,13,13,69,True,True,True,0.0,0.3962553645490504,266,266,101,79,18,18,88,True,True,True,0.0,0.263764215913059,0,0,15,18,5,5,19
+v14_south_response_3,2,deeper,266,266,86,61,22,22,69,True,True,True,0.0,0.4539266883093772,266,266,101,79,28,28,88,True,True,True,0.0,0.263764215913059,0,0,15,18,6,6,19

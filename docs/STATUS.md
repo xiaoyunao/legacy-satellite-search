@@ -2,6 +2,10 @@
 
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
+## 2026-11-22 — completed paired 10/15 pc native CCD experiment
+
+All 12 images and both depth arms passed the actual source checks in 61736243.6. With the same two finite-stamp populations across three backgrounds at 100 kpc, 15 pc gives 482 PSF associations versus 393 at 10 pc. Baseline position recovery is 6/6 versus 5/6. Deeper search position recovery is 6/6 at both radii. The differences are conditional on these populations and backgrounds.
+
 ## 2026-11-22 — Gemini I recovery at the same local review cost
 
 The blinded deeper A trial recovered Gemini I at 0.988′ and Δμ=+0.104 mag. The historical baseline peaks missed at the same six-field calibration budget of 19 groups over 65.580 deg². The corrected pilot 61735798 is verified. The other three matched-budget tests completed in 61736243. DELVE 7, Aquarius IV and Sextans II miss at both limits. The four pairs and their source manifests are verified. The production A baseline remains frozen.
