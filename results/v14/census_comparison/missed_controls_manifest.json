@@ -1,0 +1,17 @@
+{
+  "job": "61733147",
+  "inputs": {
+    "results/v14/production_integration/masks/post_outside_C_registration_20261120.json": "ddef6a8cf0a2495662769611eaffa2a1954d9c6a6896bdd65e739217ac9504a4",
+    "results/v14/production_integration/masks/tiled/8094b69a21510971/registration.json": "0887032db6d1dc80e6b45279c234f8de0b3f67b52d28eeaf6e2021d9b60dc804",
+    "results/v14/production_integration/masks/tiled/8094b69a21510971/vector_index.json": "6c09cfad2c16f376d90330dbc8da5bc823abacd82e1adbed0f6a9af59919cbb9",
+    "references/benchmarks.csv": "22a1a106ee1e173f11eaea1dff7b6a42d926dc414b2cb57e7638d96d07eed204",
+    "results/v14/production_integration/reconciled/qualified_discovery_records.csv": "a1a657e1f50917dec1bb6437caddbacca0dfb61760b5c3660d4d95982651abbc",
+    "regional_v14_south_des/results/summary/v14_south_des_0128-base/manifest.json": "60b2f52fedfadb6d5bbf3bab0274c203781e381ffbaf2acca8db12f10fe053da",
+    "regional_v14_south_delve/results/summary/v14_south_delve_0620-base/manifest.json": "8c33f12016bbaf8958f93f7254759e638cc53a0704b0dec6da3da43c209cadae",
+    "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0714-base/manifest.json": "00b233e9b146d8eb6500a56428498babb3bf3b457582d354e47d8aa37d272757",
+    "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0566-base/manifest.json": "485b70a322a26376fa0342d3a1abee74f03a011bdd6fd34f3db8625d81e88781"
+  },
+  "code_sha256": "13d26ff5cfbb4bcece0d95420ad9ad17cbe39819066a9ab131505a6ed0fae458",
+  "rows": 112,
+  "scope": "Fixed-centre diagnostics. Counts follow each eligible original field and its actual mask. Deeper offsets reuse the same catalogue and mask. Nominal binomial scores are descriptive; no discovery, membership or blind recall claims."
+}

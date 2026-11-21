@@ -2,6 +2,32 @@
 
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
+## 2026-11-21 — known-system recovery and qualified footprint
+
+The pinned Tan tables, three subsequent project controls and three Euclid systems contribute 101 literature objects. A control is evaluable when its centre lies in a qualified WCS mask and its literature distance modulus is within 16.5–20.75. A spatial recovery requires the ordinary A group anchor and at least one qualifying retained mode within the larger of 2′ and the literature circularized half-light radius. Each mode must pass its source threshold. The distance columns use the same spatial matches.
+
+| Literature sample | All | Evaluable | Spatial A match | Retained A mode within 0.25 mag | Representative A mode within 0.25 mag |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| All | 101 | 67 | 49 | 40 | 31 |
+| Tan strict main sample | 49 | 38 | 36 | 29 | 24 |
+| Tan compact appendix | 29 | 15 | 4 | 2 | 2 |
+| Tan compact appendix, detected by Tan | 15 | 9 | 4 | 2 | 2 |
+
+Existing C fits from the corresponding qualified production records cover all 49 eligible A spatial matches. A retained C mode is within 0.25 mag for 43, and the highest-TS spatially matched C mode is within 0.25 mag for 37. These are post-search comparisons to literature controls; the tally does not estimate population completeness. [Recovery table and C summary](results/v14/census_comparison/)
+
+Four baseline misses were remeasured at known positions. The table uses the nearest frozen distance grid point, the best fixed-centre score over mask-eligible formal scales within each arm, and the same native masks. Parentheses give the expected on-aperture background. The 0.5-mag experiment changes the catalogue limits while retaining the source images and classifiers.
+
+| Control | Baseline CMD counts (background) | Deeper CMD counts (background) | Nominal fixed-centre score |
+| --- | ---: | ---: | ---: |
+| DELVE 7 | 11 (2.37) | 14 (2.94) | 3.80 → 4.78 |
+| Sextans II | 71 (47.12) | 136 (86.07) | 2.90 → 5.82 |
+| Gemini I / DELVE 8 | 13 (3.52) | 15 (2.34) | 3.58 → 6.12 |
+| Aquarius IV | 7 (1.04) | 11 (1.70) | 3.31 → 4.80 |
+
+Gemini I changes its best scale from 1′ to 0.5′, so its on/off counts use different apertures. Sextans II uses 4′ in both arms. Gemini I and Sextans II are the clearest controls for a same-depth matched-background test. The fixed-position scores have no blind-search calibration. The four diagnostics do not establish a likelihood-search gain. [Stage counts and mask fractions](results/v14/census_comparison/missed_controls_fixed_diagnostics.csv)
+
+The Galactic Aitoff maps use 512,637 covered NSIDE 256 sample centres from the accepted WCS masks. Their sampled area is 26,890.811 deg²; the formal union remains 26,886.648 deg². LS formal gr depth is shown in observed 10σ magnitudes, using the corresponding hemisphere's brick summary converted from 5σ. Matched-sky PS1/DES/DELVE depth differences and classification response still require common coverage and sensitivity measurements. The unannounced production positions are held on NERSC. [Footprint, depth and known recovery maps](results/v14/qualified_aitoff/)
+
 ## 2026-11-20T10:09Z — final one-time review release accepted
 
 All 6,891 registered R14 fields are terminal: 6,861 complete and 30 without valid gr. The qualified historical ledger has 10,356 records at 10,169 provisional positions. Its represented exposure-mask/projection union is 26,886.647579 deg². This is searched area, not newly imaged or unexplored sky, and not an area with validated physical gain. The frozen frame has 8,981 administrative review units; 161 production units and two weak controls enter the final packet. All original 75 cases remain retained. Necessary C and image evidence covers 226 selected exact-source records, 752 source modes and 13 additional control modes.

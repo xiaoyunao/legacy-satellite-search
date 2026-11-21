@@ -2,6 +2,12 @@
 
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
+## 2026-11-21 — extended catalogue and footprint checks
+
+Jobs 61733121, 61733122 and 61733147 completed. Their verified outputs cover 101 literature systems, the qualified Galactic footprint and LS-only observed 10σ depth, and four fixed-position catalogue diagnostics. The formal comparison sample has 67 covered, in-range objects and 49 ordinary A spatial matches. See the [science report](../fourteenth_science_report.md) for denominators and the fixed-centre measurements.
+
+Review rendering and PDF jobs 61733126 and 61733191 were cancelled. The user requested a scientific six-panel page in the earlier style. The known-control preview, production redraw and single final package await layout confirmation.
+
 ## 2026-11-20T10:09Z — final one-time review release accepted
 
 All 6,891 registered R14 fields are terminal: 6,861 complete and 30 without valid gr. The qualified historical ledger has 10,356 records at 10,169 provisional positions. Its represented exposure-mask/projection union is 26,886.647579 deg². This is searched area, not newly imaged or unexplored sky, and not an area with validated physical gain. The frozen frame has 8,981 administrative review units; 161 production units and two weak controls enter the final packet. All original 75 cases remain retained. Necessary C and image evidence covers 226 selected exact-source records, 752 source modes and 13 additional control modes.

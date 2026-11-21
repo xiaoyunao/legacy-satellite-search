@@ -1,0 +1,25 @@
+{
+  "registration_sha256": "0887032db6d1dc80e6b45279c234f8de0b3f67b52d28eeaf6e2021d9b60dc804",
+  "vector_index_sha256": "6c09cfad2c16f376d90330dbc8da5bc823abacd82e1adbed0f6a9af59919cbb9",
+  "mask_keys_sampled": 7477,
+  "nside": 256,
+  "job": "61733122",
+  "brick_depth_sha256": {
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/survey-bricks-dr11-north.fits.gz": "37c1fad69f7466896a098641255fc2d1d6203116f32c907c7fdcd8f51cf16730",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/survey-bricks-dr11-south.fits.gz": "91a291a02708c086bca6a146b1369bb682564dbe177ec0d6d980691f4042ab35"
+  },
+  "known_audit_sha256": "e3b933d177c798447a38b1d11ea75e34ca621b08a3e9f19df52f6f86c9f16f5a",
+  "output_sha256": {
+    "ls_depth_and_conditions.png": "a9132d3ee47ec2283f939a1c30519d0e44815fcf531aada73fdeae3e85700dba",
+    "qualified_footprint.pdf": "7e6865febf847c213f4a2018d27f99007d7b20b1b9ffbbf7f95332553dc5926c",
+    "ls_depth_and_conditions.pdf": "da5939cfe0d74e9757593a6fa767946d457401d2179c281dafdec27ed77c8ce9",
+    "qualified_footprint.png": "ee0db82f23fe91e442428223b155341520aa4c8e2b23670ae40d1d47c4ae61cd",
+    "known_recovery.pdf": "31c6bc9b10b9dcedb2df282e858f2041ac87da2415b425ee299855bf0e3f3a25",
+    "known_recovery.png": "2fe6cbcb14b7bb0aadc511211865f4ba4a64a31b9dacabaf5cec96909a1ad3c7",
+    "display_sampling.csv": "0ebbc7093874f4c21d0a8c3b2410ed3d6397100e4c62c8b60dba72380a223373"
+  },
+  "sampled_qualified_deg2": 26890.81102500731,
+  "private_position_figures": true,
+  "depth_convention": "10sigma from DR11 brick-level 5sigma PSF magnitude minus 2.5log10(2). Nearest gr-valid brick within 0.22 degrees on the represented coverage of the relevant hemisphere. Observed magnitudes, prior to extinction correction.",
+  "scope": "Sampled display of accepted WCS mask polygons. Use the existing union ledger for formal solid angle. Formal noise depth and source response remain separate."
+}

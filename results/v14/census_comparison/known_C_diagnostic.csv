@@ -1,0 +1,102 @@
+name,formal_main_distance,centre_in_qualified_mask,ordinary_A_spatial_match,C_modes_at_A_matching_records,any_C_mode_DM_within_0p25,best_existing_C_dm,best_existing_C_dm_error,best_existing_C_TS,best_existing_C_TS_without_top3,best_C_DM_within_0p25,forced_fit,new_C_fits
+Antlia II,True,True,False,0,False,,,,,False,False,0
+Aquarius II,True,True,True,9,True,20.0,-0.16000000000000014,23.227703183351842,6.645783193619529,True,False,0
+Aquarius III,True,True,True,8,True,19.5,-0.16000000000000014,39.645157997081874,21.48119165884564,True,False,0
+Bootes I,True,True,True,25,True,19.0,-0.10999999999999943,790.7721662869017,764.1360371859568,True,False,0
+Bootes II,True,True,True,24,True,18.0,-0.10000000000000142,58.25520201138821,41.836823972299385,True,False,0
+Bootes III,True,True,True,14,True,18.5,0.16000000000000014,17.293372129300565,6.545822205390152,True,False,0
+Bootes IV,False,True,False,0,False,,,,,False,False,0
+Bootes V,True,True,True,48,True,20.25,0.21000000000000085,50.830077484742034,22.00689905806214,True,False,0
+Canes Venatici I,False,True,True,60,False,20.5,-1.120000000000001,352.2208146394164,335.9537854668822,False,False,0
+Canes Venatici II,False,True,True,11,True,21.0,-0.019999999999999574,109.08496557746861,79.57376758717308,True,False,0
+Carina,True,True,True,36,True,19.25,-0.8679999999999986,16365.702089667488,16322.913014898006,False,False,0
+Carina II,True,True,True,11,True,17.75,-0.11400000000000077,320.1959009467855,299.8803225832679,True,False,0
+Carina III,True,True,True,4,True,17.25,0.030000000000001137,85.7628025740246,68.34908712722373,True,False,0
+Centaurus I,True,True,True,9,True,20.25,-0.1039999999999992,117.02352496216108,89.118436277477,True,False,0
+Cetus II,True,True,True,4,False,17.0,-0.379999999999999,46.86618622917816,29.241339819695654,False,False,0
+Cetus III,False,True,False,0,False,,,,,False,False,0
+Columba I,False,True,True,6,False,21.0,-0.3099999999999987,51.18282422132741,35.07104006856607,False,False,0
+Coma Berenices,True,True,True,24,True,18.0,-0.129999999999999,319.02102755466217,299.61133850837456,True,False,0
+Crater II,True,True,True,32,True,20.5,0.1670000000000016,20.638315221326764,6.549107473708517,True,False,0
+DELVE 2,True,True,True,11,True,19.5,0.23999999999999844,37.00213450785604,19.82035453117328,True,False,0
+Draco,True,True,True,40,True,19.75,0.1930000000000014,12233.014432417087,12197.963869917743,True,False,0
+Draco II,True,True,True,30,True,16.75,0.0799999999999983,100.35253563889687,81.86206776410587,True,False,0
+Eridanus II,False,True,True,30,False,21.0,-1.8399999999999999,409.8508836662061,379.15653092564685,False,False,0
+Eridanus IV,True,True,True,14,True,19.5,0.28000000000000114,103.0509607487302,81.42658277947089,False,False,0
+Fornax,False,True,True,185,True,21.0,0.23000000000000043,400174.381421458,400109.9490205066,True,False,0
+Grus I,True,True,True,8,True,20.5,-0.010000000000001563,99.99757613288702,74.44577745505285,True,False,0
+Grus II,True,True,False,0,False,,,,,False,False,0
+Hercules,True,True,True,25,True,20.75,0.1700000000000017,91.01973725969688,63.764663200895825,True,False,0
+Horologium I,True,True,True,21,True,19.75,0.25,231.02750415336226,204.69342691547635,True,False,0
+Horologium II,True,True,True,3,True,19.5,0.03999999999999915,52.7462069695283,28.81016793922433,True,False,0
+Hydra II,False,True,True,12,True,20.75,-0.14999999999999858,206.1976761000652,174.4473016895584,True,False,0
+Hydrus I,True,True,True,31,True,17.0,-0.1999999999999993,1022.0895522021938,988.5618452319065,True,False,0
+Leo I,False,True,True,120,False,21.0,-1.0599999999999987,40330.29111608319,40280.588730131654,False,False,0
+Leo II,False,True,True,46,False,21.0,-0.8399999999999999,14248.15206672544,14199.202937386377,False,False,0
+Leo IV,False,True,True,8,True,21.0,0.10000000000000142,90.80271597068895,62.81342739938505,True,False,0
+Leo V,False,True,True,1,False,20.25,-0.8900000000000006,12.239514230835624,1.7656521526779247,False,False,0
+Leo VI,True,True,True,1,False,20.5,0.2699999999999996,19.541463645228657,3.7347077569832727,False,False,0
+Leo Minor I,True,True,True,5,True,19.75,0.19000000000000128,35.0092630348497,12.699759979683058,True,False,0
+LMC,True,False,True,437,True,18.0,-0.4770000000000003,8.189065873543449,3.4634822770466442,False,False,0
+Pegasus III,False,True,False,0,False,,,,,False,False,0
+Pegasus IV,True,True,True,14,True,19.75,-0.019999999999999574,198.30540433275362,164.62790333809298,True,False,0
+Phoenix II,True,True,True,16,True,19.75,0.14999999999999858,98.39094896875335,71.30499438204855,True,False,0
+Pictor I,True,True,True,9,True,20.5,0.1999999999999993,105.11461814341781,71.49487557733056,True,False,0
+Pictor II,True,True,True,20,True,18.5,0.23999999999999844,114.60449192401197,98.33034252589954,True,False,0
+Pisces II,False,True,True,5,False,21.0,-0.3099999999999987,35.516212485575075,14.20154318812331,False,False,0
+Reticulum II,True,True,True,48,True,17.25,-0.25,2268.4567458465353,2235.069002706206,True,False,0
+Reticulum III,True,True,True,3,True,20.25,0.4400000000000013,24.145739135403673,11.935921501377582,False,False,0
+Sagittarius,True,False,True,75,True,16.25,-0.8500000000000014,6407.365627270177,6366.552762915664,False,False,0
+Sculptor,True,True,True,87,True,19.75,0.129999999999999,198143.738409068,198092.40188043582,True,False,0
+Segue 1,True,True,True,16,True,17.0,0.1999999999999993,102.94335999883972,84.88311391284586,True,False,0
+Segue 2,True,True,True,16,True,17.75,-0.05999999999999872,345.1855872088252,319.5364522541469,True,False,0
+Sextans,True,True,True,55,True,19.75,0.0799999999999983,6824.498732387914,6795.7479562672925,True,False,0
+Sextans II,True,True,False,0,False,,,,,False,False,0
+SMC,True,True,True,149,True,19.75,0.7600000000000016,17210.98406885116,17193.286443473073,False,False,0
+Triangulum II,True,False,False,0,False,,,,,False,False,0
+Tucana II,True,True,True,17,True,18.75,0.0,316.86805293287296,297.8335617904138,True,False,0
+Tucana III,True,True,True,13,True,16.75,-0.05000000000000071,323.2907894028774,305.0579944607564,True,False,0
+Tucana IV,True,True,True,11,True,18.25,-0.10999999999999943,151.01642824915226,133.37061991127533,True,False,0
+Tucana V,True,True,True,12,False,19.0,0.3000000000000007,113.90733316373098,86.27376132257568,False,False,0
+Ursa Major I,True,True,True,14,True,20.0,0.05999999999999872,18.817203191324744,8.4135072107822,True,False,0
+Ursa Major II,True,True,True,58,True,17.75,0.05000000000000071,205.18549333248785,186.09482190168416,True,False,0
+Ursa Minor,True,True,True,61,True,19.25,0.019999999999999574,19114.29595940584,19081.21870772806,True,False,0
+Virgo I,True,True,False,0,False,,,,,False,False,0
+Virgo II,True,True,True,3,True,21.0,1.6999999999999993,42.10728243311799,18.256600224976857,False,False,0
+Virgo III,False,True,False,0,False,,,,,False,False,0
+Willman 1,True,True,True,20,True,17.75,-0.14999999999999858,292.9807144920509,264.0010074836458,True,False,0
+Crater/Laevens 1,False,True,False,0,False,,,,,False,False,0
+Sagittarius II,True,False,False,0,False,,,,,False,False,0
+Balbinot 1,True,True,False,0,False,,,,,False,False,0
+BLISS 1,True,True,False,0,False,,,,,False,False,0
+DELVE 1,True,True,True,13,False,16.25,-0.4299999999999997,103.7943361430639,80.89314955982431,False,False,0
+DELVE 3,True,False,False,0,False,,,,,False,False,0
+DELVE 4,True,False,False,0,False,,,,,False,False,0
+DELVE 5,True,False,False,0,False,,,,,False,False,0
+DELVE 6,True,True,False,0,False,,,,,False,False,0
+DES 1,True,True,True,5,False,17.25,-2.1499999999999986,51.60409208782856,20.996381543188953,False,False,0
+DES 3,True,True,False,0,False,,,,,False,False,0
+DES 4,True,False,False,0,False,,,,,False,False,0
+DES 5,True,False,False,0,False,,,,,False,False,0
+Eridanus III,True,True,True,14,True,19.75,-0.05000000000000071,77.77987642384187,45.649477765707445,True,False,0
+Gaia 3,True,True,False,0,False,,,,,False,False,0
+HSC 1,True,True,False,0,False,,,,,False,False,0
+Kim 1,False,True,False,0,False,,,,,False,False,0
+Kim 2,True,True,True,8,False,19.5,-0.6000000000000014,74.82791615478494,46.00244175871502,False,False,0
+Kim 3,False,True,False,0,False,,,,,False,False,0
+Koposov 1,True,True,False,0,False,,,,,False,False,0
+Koposov 2,True,True,False,0,False,,,,,False,False,0
+PS1 1,True,False,False,0,False,,,,,False,False,0
+SMASH 1,True,False,False,0,False,,,,,False,False,0
+To 1,True,True,False,0,False,,,,,False,False,0
+Ursa Major III,False,True,False,0,False,,,,,False,False,0
+YMCA-1,True,True,False,0,False,,,,,False,False,0
+Laevens 3,True,True,False,0,False,,,,,False,False,0
+Segue 3,False,True,False,0,False,,,,,False,False,0
+Alice,True,False,False,0,False,,,,,False,False,0
+DELVE_7,True,True,False,0,False,,,,,False,False,0
+Gemini_I_DELVE_8,True,True,False,0,False,,,,,False,False,0
+Aquarius_IV,True,True,False,0,False,,,,,False,False,0
+Ursa Minor II,True,True,True,5,True,17.0,0.5,19.37762774616355,2.497703145756603,False,False,0
+Fornax 7,False,True,False,0,False,,,,,False,False,0
+Eridanus V,False,True,False,0,False,,,,,False,False,0

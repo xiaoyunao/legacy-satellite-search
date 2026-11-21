@@ -2,6 +2,9 @@
 
 ## 2026-11-21
 
+- Verified Slurm terminal receipts and synchronized the public outputs from 61733121, 61733122 and 61733147. The extended known sample has 49 spatial A matches among 67 eligible objects. All 49 have existing same-record C fits. Verified source/output hashes, checked the three Galactic Aitoff maps visually, and kept the candidate layer on NERSC. Same-sky depth differences remain open.
+- The four fixed-centre diagnostics use original field caches, native areas and templates. At the nearest frozen distance grid point, deeper Gemini I and Sextans II show the largest increase in nominal score. Preserve the diagnostic labels and test against blanks before considering independent C search. The Data Lab probe returned HTTP 502.
+- The user requested the earlier scientific multi-panel visual style. Slurm 61733126 and 61733191 are cancelled. Wait for style confirmation before the sample redraw and keep the old package withdrawn.
 - Natively read latest full Pro message 9ecab5b4 and recovered project at bcc0f7e. Registered the multi-part goal in PLAN.
 - Verified every original 75-case release file against the NERSC copy and the v14-final-1 archive hashes against the accepted HOME receipt. Removed the local v1 delivery and staged deletion of the older public review PDFs/ZIP/forms from main. Prior scientific sources and the private NERSC archive still support the new render. GitHub releases API returned no upload assets.
 

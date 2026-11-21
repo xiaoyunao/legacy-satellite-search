@@ -2,6 +2,10 @@
 
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
+## 2026-11-21 — extended controls
+
+Keep the frozen A baseline and compare the loss stages for compact systems. The qualified search spatially matches 36 of 38 evaluable Tan strict systems and 4 of 15 evaluable compact appendix systems. The compact result is specific to the literature catalogue and the formal footprint/distance support. The deeper fixed-position diagnostics for Gemini I and Sextans II motivate a calibrated targeted control comparison. The three Galactic maps establish census assignment and formal LS sensitivity, with the physical LS–PS1 detection increment still open.
+
 ## 2026-11-20T10:09Z — final one-time review release accepted
 
 All 6,891 registered R14 fields are terminal: 6,861 complete and 30 without valid gr. The qualified historical ledger has 10,356 records at 10,169 provisional positions. Its represented exposure-mask/projection union is 26,886.647579 deg². This is searched area, not newly imaged or unexplored sky, and not an area with validated physical gain. The frozen frame has 8,981 administrative review units; 161 production units and two weak controls enter the final packet. All original 75 cases remain retained. Necessary C and image evidence covers 226 selected exact-source records, 752 source modes and 13 additional control modes.

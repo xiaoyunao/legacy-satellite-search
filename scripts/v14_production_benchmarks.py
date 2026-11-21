@@ -24,7 +24,7 @@ def separation(a,d,b,e):
     return float(np.rad2deg(2*np.arcsin(np.sqrt(np.clip(value,0,1))))*60)
 
 
-def run():
+def run(table=Path('references/benchmarks.csv')):
     import shapely
     if not os.getenv('SLURM_JOB_ID'):raise RuntimeError('Use allocated CPU for cached actual masks')
     receipt=ROOT/'masks/post_outside_C_registration_20261120.json'
@@ -33,7 +33,7 @@ def run():
     geometry=json.loads(registration.read_text());index_path=Path(geometry['output'])/'vector_index.json'
     index=json.loads(index_path.read_text())
     if index['registration_sha256']!=sha(registration):raise ValueError('Require actual current polygon index')
-    table=Path('references/benchmarks.csv');benchmarks=read_csv(table)
+    benchmarks=read_csv(table)
     catalogue=Path('results/v14/catalogue/candidate_modes.csv');records_path=ROOT/'reconciled/qualified_discovery_records.csv'
     records={r['detection_id']:r for r in read_csv(records_path)}
     inputs={str(p):sha(p) for p in (receipt,registration,index_path,table,catalogue,records_path)}
@@ -57,14 +57,23 @@ def run():
                 and mode['channel']=='A_base' and float(mode['budget'])==.3
                 and 16.5<=float(mode['dm'])<=20.75 and float(mode['score'])>=float(source['cutoff'])):
             by_detection[mode['detection_id']].append(mode)
+    mode_rows=[mode for modes in by_detection.values() for mode in modes]
+    mode_ra=np.deg2rad([float(m['ra_deg']) for m in mode_rows])
+    mode_dec=np.deg2rad([float(m['dec_deg']) for m in mode_rows])
     summaries=[];details=[]
     for i,truth in enumerate(benchmarks):
-        true_dm=5*math.log10(float(truth['D_kpc']))+10
-        radius=max(2.,float(truth['theta_h_arcmin']))
+        true_dm=float(truth['published_dm']) if truth.get('published_dm') else 5*math.log10(float(truth['D_kpc']))+10
+        half_light=float(truth['theta_h_arcmin']) if truth['theta_h_arcmin'] else None
+        radius=max(2.,half_light or 0.)
         matched=[];any_mode_match=False
-        for detection,modes in by_detection.items():
-            passing=[m for m in modes if separation(float(truth['ra_deg']),float(truth['dec_deg']),float(m['ra_deg']),float(m['dec_deg']))<=radius]
-            if not passing:continue
+        ra,dec=np.deg2rad([float(truth['ra_deg']),float(truth['dec_deg'])])
+        half_chord=np.sin((mode_dec-dec)/2)**2+np.cos(dec)*np.cos(mode_dec)*np.sin((mode_ra-ra)/2)**2
+        offsets=np.rad2deg(2*np.arcsin(np.sqrt(np.clip(half_chord,0,1))))*60
+        near=defaultdict(list)
+        for index in np.flatnonzero(offsets<=radius):
+            mode=mode_rows[index]
+            near[mode['detection_id']].append(mode)
+        for detection,passing in near.items():
             source=records[detection];any_mode_match=True
             anchor_matches=separation(float(truth['ra_deg']),float(truth['dec_deg']),
                 float(source['ra_deg']),float(source['dec_deg']))<=radius
@@ -74,7 +83,7 @@ def run():
                 details.append(dict(name=truth['name'],detection_id=detection,input=source['input'],field=source['field'],
                     source_sha256=source['source_sha256'],within_source_rank=source['within_cohort_rank'],
                     group_anchor_within_radius=anchor_matches,
-                    offset_arcmin=offset,offset_over_theta_h=offset/float(truth['theta_h_arcmin']),
+                    offset_arcmin=offset,offset_over_theta_h=offset/half_light if half_light else None,
                     dm=mode['dm'],dm_error=float(mode['dm'])-true_dm,rh_arcmin=mode['rh_arcmin'],
                     score=mode['score'],cutoff=source['cutoff'],representative=mode['representative']))
         supported=16.5<=true_dm<=20.75
@@ -88,7 +97,7 @@ def run():
             any_retained_mode_spatial_match=any_mode_match,
             retained_dm_within_0p75=any(abs(float(m['dm'])-true_dm)<=.75 for _,ms in matched for m in ms),
             highest_blind_mode_within_0p25=any(m['representative']=='True' and abs(float(m['dm'])-true_dm)<=.25 for _,ms in matched for m in ms),
-            scale_below_0p5= float(truth['theta_h_arcmin'])<.5,status=state,forced_centre_fit=False,
+            scale_below_0p5=half_light<.5 if half_light else None,status=state,forced_centre_fit=False,
             special_processing_audit='Not remeasured here; retain separate per-object processing audits.'))
     for name,digest in inputs.items():
         if sha(Path(name))!=digest:raise ValueError('Actual source changed during audit')
@@ -139,5 +148,10 @@ def c_diagnostics():
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--existing-C-only',action='store_true')
-    c_diagnostics() if parser.parse_args().existing_C_only else run()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--existing-C-only',action='store_true')
+    parser.add_argument('--benchmarks',type=Path,default=Path('references/benchmarks.csv'))
+    parser.add_argument('--output',type=Path,default=OUT)
+    args=parser.parse_args()
+    OUT=args.output
+    c_diagnostics() if args.existing_C_only else run(args.benchmarks)

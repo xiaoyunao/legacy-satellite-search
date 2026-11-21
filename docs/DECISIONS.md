@@ -2,6 +2,10 @@
 
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
+## 2026-11-21 — retain the frozen detector after the fixed-centre comparison
+
+Gemini I and Sextans II show the clearest increases in fixed-centre score after relaxing the photometric limits by 0.5 mag. Compare those same-depth signals with matched blank fields and CMD/background diagnostics before spending on an independent likelihood scan. The current data give weak evidence for a baseline searcher limitation. Use the actual mask union for area; the HEALPix Aitoff layer is for visualization. The independent formal depth-difference and source-response comparisons remain separate experiments.
+
 ## 2026-11-20T10:09Z — freeze one final review and preserve source-bound environments
 
 Release v14-final-1 only after full terminal/production/area/sample/C/native/pixel/page/privacy and durable-copy gates pass. One private permutation,163units, all original75 and weak controls retained; no intermediate grading. Generic observing diagrams lacked frozen known/environment tags: add the171page exact-record appendix from the immutable ledger and same key, without changing anonymous bytes, C, native panels or the draw. Missing catalogue annotation is not absence or classification.

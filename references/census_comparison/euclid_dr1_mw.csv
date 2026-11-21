@@ -1,0 +1,4 @@
+name,ra_deg,dec_deg,D_kpc,published_dm,M_V,semimajor_h_arcmin,ellipticity,reference
+Ursa Minor II,196.1542,75.5724,20,16.5,2.0,2.25,0.20,https://arxiv.org/html/2611.16025v1
+Fornax 7,38.8244,-33.9567,145,20.8,0.51,0.11,0.36,https://arxiv.org/html/2611.16025v1
+Eridanus V,28.8623,-47.7105,166,21.1,-1.45,0.25,0.20,https://arxiv.org/html/2611.16025v1
