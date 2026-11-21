@@ -1,5 +1,9 @@
 # Decisions
 
+## 2026-11-21 — fixed-centre signal precedes a new discovery method
+
+Four failed recovery controls have best deeper fixed-centre scores reached in at most 2 of 304–400 same-field, matched-area positions per object. These controls overlap and use the target distance. Use the existing detector on comparable development/test fields before committing to a separate likelihood scan. Deeper PSF photometry changes the target scores, so its influence needs to be measured at a common blind review budget first.
+
 On 2026-11-21 the user withdrew the previous review packages pending a new convolved-density edition. The previous readiness reports below refer to historical releases. NERSC retains the frozen source evidence and backup. See the current task ledger in PLAN.md.
 
 ## 2026-11-21 — retain the frozen detector after the fixed-centre comparison

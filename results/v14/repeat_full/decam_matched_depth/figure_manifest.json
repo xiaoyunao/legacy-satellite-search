@@ -1,0 +1,12 @@
+{
+  "inputs": {
+    "results/v14/repeat_full/matched_source_depth/depth_summary.csv": "be39a498ee88426037c9d582dcf95778326bd5e100040b14815e19aebffda0ce",
+    "results/v14/repeat_full/decam_matched_depth/matched_dec_am_depth.csv": "2cef23abb426b0ddd481eb76558618f0714ed51d8c9df064fe3fd1edb2393808"
+  },
+  "outputs": {
+    "local_survey_depth_comparison.png": "21a203d557ba1771e77c301a2ffdaf5a8a59be5a5f5c98d19dd7c1b289e3d8fa",
+    "local_survey_depth_comparison.pdf": "5933ba6c986e22a4060582a92bee38d47667ed25de53b4ef9aeaf9bffc063b37"
+  },
+  "code_sha256": "ea78859cfd49485e4804051a7710d4a7f5dce8408f103d52a756deced405ab73",
+  "scope": "Matched catalogue flux-error depth, with sample counts at right. Percentile bars describe source-to-source dispersion. These measured fields do not estimate the survey-wide distribution or completeness."
+}

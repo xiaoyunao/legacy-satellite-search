@@ -1,0 +1,15 @@
+{
+  "job": "61734735",
+  "native_cases": 2,
+  "measured_pairs": 2,
+  "skies": 1,
+  "latent_populations": 1,
+  "inputs": {
+    "results/v14/fifteen_pc/trials/v14_south_response_1-00.json": "cdc8cb0a3b0b3c37e77e341bc9950f0a09b4e6ab236b612df252e54e4dd8f606",
+    "results/v14/fifteen_pc/trials/v14_south_response_1-01.json": "65fd5acc92e491652bf218771a87733fc571f0fc02d4aa3d85be9b6df192eecd"
+  },
+  "table_sha256": "f6e7184e26f40c9140ef151ff355dc742c8ffe346acecc84219784ca319f1e00",
+  "code_sha256": "7397bade4ba33ce42071bebdc52bb3bff164517c121a356b11484ab84d42fe85",
+  "every_input_verified": true,
+  "scope": "Finite common-stamp populations, paired across 10 and 15 pc. Catalogued sources, native detections, original formal A limits and whole-field blind recovery are measured. A pilot covers one population on one background. No complete physical luminosity response, cross-survey sensitivity or abundance inference."
+}

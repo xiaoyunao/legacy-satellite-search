@@ -1,0 +1,22 @@
+{
+  "job": "61734659",
+  "source_queries": {
+    "DES DR2": {
+      "url": "https://datalab.noirlab.edu/tap/sync?request=doQuery&lang=ADQL&format=csv&query=SELECT+TOP+30000+ra%2Cdec%2Cwavg_mag_psf_g%2Cwavg_magerr_psf_g%2Cwavg_mag_psf_r%2Cwavg_magerr_psf_r%2Cextended_class_coadd+FROM+des_dr2.main+WHERE+ra+BETWEEN+303.82502892+AND+304.38897108+AND+dec+BETWEEN+-50.51000000+AND+-50.15000000",
+      "sha256": "4209498300a195af0993c3e8c6d12f72170eb06d236a1ac06b0c9d53f1b6f7e6",
+      "count": 14063,
+      "download_rows": 17917,
+      "source_scan_sha256": "60b2f52fedfadb6d5bbf3bab0274c203781e381ffbaf2acca8db12f10fe053da"
+    },
+    "DELVE DR3": {
+      "url": "https://datalab.noirlab.edu/tap/sync?request=doQuery&lang=ADQL&format=csv&query=SELECT+TOP+30000+ra%2Cdec%2Cwavg_mag_psf_g%2Cwavg_magerr_psf_g%2Cwavg_mag_psf_r%2Cwavg_magerr_psf_r%2Cext_xgb+FROM+delve_dr3.coadd_objects+WHERE+ra+BETWEEN+156.25698908+AND+156.61701092+AND+dec+BETWEEN+-0.81100000+AND+-0.45100000",
+      "sha256": "2a286ae1a18767ccd17734db79920980e1c58f30eedb91a4675c25d18e2c7d3d",
+      "count": 13574,
+      "download_rows": 17216,
+      "source_scan_sha256": "8c33f12016bbaf8958f93f7254759e638cc53a0704b0dec6da3da43c209cadae"
+    }
+  },
+  "code_sha256": "bdabb2fc62234fe4b7f057aa181504bc466b4d901e0c8bcf7664cf5ed3aa76a3",
+  "table_sha256": "2cef23abb426b0ddd481eb76558618f0714ed51d8c9df064fe3fd1edb2393808",
+  "scope": "Two qualified, 0.18-degree real-sky cones. Matched PSF photometry at 0.8 arcsec, classified as points in both catalogues. Common dereddening at each pair uses the LS DECam transmission for both photometric estimates. Survey magnitudes and errors remain in their native systems. The weighted single-exposure PSF error proxy and LS fit error can differ for shared DECam exposures. These are source-conditional comparisons, not independent sensitivity or an area/completeness estimate."
+}

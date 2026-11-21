@@ -26,6 +26,19 @@ Four baseline misses were remeasured at known positions. The table uses the near
 
 Gemini I changes its best scale from 1′ to 0.5′, so its on/off counts use different apertures. Sextans II uses 4′ in both arms. Gemini I and Sextans II are the clearest controls for a same-depth matched-background test. The fixed-position scores have no blind-search calibration. The four diagnostics do not establish a likelihood-search gain. [Stage counts and mask fractions](results/v14/census_comparison/missed_controls_fixed_diagnostics.csv)
 
+### Local background comparison for the four misses
+
+Random positions came from the same qualified fields and matched the target's usable on/off areas to within 10% at each eligible formal scale. At the nearest frozen distance grid point, the best fixed-centre score across eligible scales was evaluated at baseline and deeper limits. Known cores were excluded from the control on-apertures. The matched controls share overlapping apertures, so the ranks are descriptive and zero counts have finite resolution.
+
+| Control | Centres | Baseline controls at least as high | Deeper controls at least as high | Controls with at least as much paired improvement |
+| --- | ---: | ---: | ---: | ---: |
+| DELVE 7 | 304 | 0 | 0 | 1 |
+| Sextans II | 400 | 4 | 2 | 5 |
+| Gemini I / DELVE 8 | 400 | 0 | 0 | 14 |
+| Aquarius IV | 400 | 5 | 0 | 12 |
+
+Each target is unusual in its local comparison, including several baseline measurements. This supports a usable colour–magnitude signal at the known positions. The experiment changes photometric limits and selects a scale, with the target position and distance supplied. It does not measure how many region-wide peaks compete with the targets. Test the existing A search with deeper photometry on fixed development and test fields before adding a standalone likelihood search. A likelihood pilot becomes informative if calibrated deeper A still misses objects with demonstrably coherent signals and well-measured backgrounds. Keep the production thresholds frozen. [Fixed-position controls](results/v14/census_comparison/control_null/)
+
 The Galactic Aitoff maps use 512,637 covered NSIDE 256 sample centres from the accepted WCS masks. Their sampled area is 26,890.811 deg²; the formal union remains 26,886.648 deg². The LS panels show observed 10σ gr depths, using the corresponding hemisphere's brick summary converted from 5σ. Survey-wide matched-sky depth and classification comparisons require broader comparator coverage. The unannounced production positions are held on NERSC. [Footprint, depth and known recovery maps](results/v14/qualified_aitoff/)
 
 ### Matched LS–PS1 source-depth measurements
@@ -39,6 +52,12 @@ On the three native CCD backgrounds, 41,809 PS1 primary positions within the LS 
 | 3 | 1,418 | +1.44 | 1,963 | +0.89 |
 
 The table uses LS PSF sources and PS1 measurements with S/N between 5 and 20. Requiring the additional PS1 bright i-band point-source proxy shifts the medians by at most 0.03 mag. Across all positional matches, 11,114 pass the frozen LS baseline cuts and 13,632 pass the deeper LS research cuts. Both counts are limited to catalogue matches; sources missed entirely by either catalogue are outside the depth comparison. The map shows supported 5′ cells. These measurements establish local differences in catalogue flux-error depth. The real image-injection comparison and the independent PS1 source-response validation still govern any claim about physical recovery gain. [Matched depth products](results/v14/repeat_full/matched_source_depth/)
+
+The same 10σ convention was applied to matched point-source measurements in two 0.18° radius cones in other census assignments. In the DES DR2 cone, LS minus DES is +0.43 mag in g (821 pairs) and +0.53 mag in r (862 pairs). In the DELVE DR3 cone, LS minus DELVE is −0.15 mag in g (188 pairs) and −0.44 mag in r (177 pairs). The comparison uses the weighted single-exposure PSF magnitude errors published by DES and DELVE, plus the LS fit errors. Each pair shares the LS DECam extinction correction. The catalogues can share exposures, and the differences apply to the selected and matched sources in these two cones. [DES DR2 photometry](https://datalab.noirlab.edu/data-explorer?showTable=des_dr2.main) · [DELVE DR3 photometry](https://datalab.noirlab.edu/data-explorer?showTable=delve_dr3.coadd_objects) · [Five-field comparison](results/v14/repeat_full/decam_matched_depth/local_survey_depth_comparison.png)
+
+### First 10/15 pc paired CCD result
+
+At 100 kpc, the first population and background have verified native images at both 10 and 15 pc. The matched experiment uses the same 293 generated members after a common stamp cut. The cut retains 98.54% of the parent rendered V-proxy light. The blind A search recovers the position and distance at both radii with both photometric limits. At 15 pc the image processing yields nine more final associated detections and 17 more PSF classifications. Three more associated sources pass the baseline selection and five more pass the deeper selection. The one-position comparison holds the rendered stellar population fixed while its placement relative to foreground and neighbouring members changes. It shows a size-dependent source response for this realization. The other five population–background pairs are registered and pending. [Pilot results and common support](results/v14/fifteen_pc/)
 
 ## 2026-11-20T10:09Z — final one-time review release accepted
 

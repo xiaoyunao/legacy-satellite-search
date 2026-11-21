@@ -1,0 +1,28 @@
+{
+  "job": "61734663",
+  "seed": 726051,
+  "inputs": {
+    "results/v14/production_integration/masks/post_outside_C_registration_20261120.json": "ddef6a8cf0a2495662769611eaffa2a1954d9c6a6896bdd65e739217ac9504a4",
+    "results/v14/production_integration/masks/tiled/8094b69a21510971/registration.json": "0887032db6d1dc80e6b45279c234f8de0b3f67b52d28eeaf6e2021d9b60dc804",
+    "results/v14/production_integration/masks/tiled/8094b69a21510971/vector_index.json": "6c09cfad2c16f376d90330dbc8da5bc823abacd82e1adbed0f6a9af59919cbb9",
+    "references/benchmarks.csv": "22a1a106ee1e173f11eaea1dff7b6a42d926dc414b2cb57e7638d96d07eed204",
+    "results/v14/census_comparison/known_recovery_summary.csv": "e3b933d177c798447a38b1d11ea75e34ca621b08a3e9f19df52f6f86c9f16f5a",
+    "results/v14/census_comparison/missed_controls_fixed_diagnostics.csv": "765b7f263e8bf0473ab8d94a00183eb4e1f64704b3c4185a481a8c26cd09c63c",
+    "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0566-base/manifest.json": "485b70a322a26376fa0342d3a1abee74f03a011bdd6fd34f3db8625d81e88781",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/isochrones/des/bressan2012/iso_a12.0_z0.00010.dat": "bfaab1a071f22bb9b8edc66f5aee42c594f0a60e6730e43c71ea493267f797e2",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/runs/v14/area_polygon_cache/de4a8f57923e41cf324ff28e8be08b9ca3e37976c5b21f8f9983debe28e099ad-2.wkb": "67f667b24c9159a8b2a1f06abe40638d68f88a25f7582d36a8d3928b62abca7f",
+    "regional_v14_south_des/results/summary/v14_south_des_0128-base/manifest.json": "60b2f52fedfadb6d5bbf3bab0274c203781e381ffbaf2acca8db12f10fe053da",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/runs/v14/area_polygon_cache/e67f426d3a461221dc03f3544bbe5db17afdad77e17ab71b141cc491e3419f55-1.wkb": "735886b216b6cea85a07734d615f0f2aa4128edc23c7b70d4b0932d444c6ca73",
+    "regional_v14_south_delve_extension/results/summary/v14_south_delve_extension_0714-base/manifest.json": "00b233e9b146d8eb6500a56428498babb3bf3b457582d354e47d8aa37d272757",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/runs/v14/area_polygon_cache/f046cdff5d238a22764ac75f09eb378ac95d8c27b4e9c6fe91339425d50ed2d1-2.wkb": "23b1fad17207c6feda35b16adbda05af49ed0f7b0b6c75e6514a802651863ccc",
+    "regional_v14_south_delve/results/summary/v14_south_delve_0620-base/manifest.json": "8c33f12016bbaf8958f93f7254759e638cc53a0704b0dec6da3da43c209cadae",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/runs/v14/area_polygon_cache/5ff1be6be55bf13ac0958532361963ed387f1753b7b82f49346d38f6c3ff0ad0-2.wkb": "b3cf793bb3b87fda48d66ff7888beef32a19ab60dc9c4ec5f2feb3e3634454af"
+  },
+  "rows": 12,
+  "table_sha256": "1f9b4e1ab7a429edbe76e4ea2295bf7368171a9066f2869023feff75877a5f1d",
+  "code_sha256": "c58e658b66d697cd4b8b9ba99d149fccf29c41b96d43699a048cc172531175fe",
+  "area_relative_caliper": 0.1,
+  "within_arcmin": 90.0,
+  "max_controls": 400,
+  "scope": "Paired catalogue limits at the same fixed distance and eligible scale set. Random real positions within the same qualified mask exclude known cores and match usable on/off areas. Apertures overlap, so ranks are descriptive. No independent tail uncertainty, survey-wide trials correction, blind recall or classification."
+}

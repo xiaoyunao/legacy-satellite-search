@@ -1,0 +1,13 @@
+task_index,site,trial,parent_trial,rh_pc
+0,v14_south_response_1,0,14,10
+1,v14_south_response_1,1,14,15
+2,v14_south_response_2,0,14,10
+3,v14_south_response_2,1,14,15
+4,v14_south_response_3,0,14,10
+5,v14_south_response_3,1,14,15
+6,v14_south_response_1,2,2,10
+7,v14_south_response_1,3,2,15
+8,v14_south_response_2,2,2,10
+9,v14_south_response_2,3,2,15
+10,v14_south_response_3,2,2,10
+11,v14_south_response_3,3,2,15
