@@ -6,7 +6,7 @@ On 2026-11-21 the user withdrew the previous review packages pending a new convo
 
 The blinded deeper A trial recovered Gemini I at 0.988′ and Δμ=+0.104 mag. The historical baseline peaks missed at the same six-field calibration budget of 19 groups over 65.580 deg². The corrected pilot 61735798 is verified. The other three control comparisons are submitted in 61736182. The production A baseline remains frozen.
 
-The DELVE tile-indexed g/r aperture pilot 61736109 measured all 12 positions. The broader PS1 and DELVE comparisons and three remaining known-system controls run as steps in 61736243. Job 61736238 also verified and mapped the realized faint baseline point-source sample across 1,930 field centres.
+The DELVE tile-indexed g/r aperture pilot 61736109 measured all 12 positions. The PS1 comparison is verified on 412 of 417 sky positions, with median LS minus PS1 depths of +1.198 mag in g and +0.798 mag in r. The broader DELVE comparison and targeted controls are running in 61736243. Job 61736238 also verified and mapped the realized faint baseline point-source sample across 1,930 field centres.
 
 ## 2026-11-21 — extended catalogue and footprint checks
 

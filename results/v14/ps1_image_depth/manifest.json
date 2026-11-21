@@ -1,0 +1,52 @@
+{
+  "job": "61736243",
+  "native_variance_verification": {
+    "g": {
+      "native_stack_sha256": "81478d0b555e4ddee0a27f1cee90ef7a282851b1574fae3cad6c1179564e2cdc",
+      "cutout_sha256": "d610e710262813e7d57ef7eb1b4c48c7372ae87ed194a7051b789c821cf6f6c1",
+      "pixels": 2304,
+      "p95_relative_error": 3.018224106199341e-07,
+      "stack_id": 4297531
+    },
+    "r": {
+      "native_stack_sha256": "c174fe675a2fcdbfb2a8db9ecf4226f082364d9e695a11c655bcc0d230168120",
+      "cutout_sha256": "135e30f241d7926a36bace2c0e46cff3c8fca720763a5ff604813f54f6d29721",
+      "pixels": 2304,
+      "p95_relative_error": 1.2259017978522024e-07,
+      "stack_id": 4101543
+    }
+  },
+  "raster_sha256": "895176e19592f397a5cfcb199efb1ca756eb72e4c2a0dcde5735cbb6a45fac18",
+  "ls_brick_table_sha256": {
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/north/survey-bricks-dr11-north.fits.gz": "37c1fad69f7466896a098641255fc2d1d6203116f32c907c7fdcd8f51cf16730",
+    "/global/cfs/cdirs/cosmo/data/legacysurvey/dr11/south/survey-bricks-dr11-south.fits.gz": "91a291a02708c086bca6a146b1369bb682564dbe177ec0d6d980691f4042ab35"
+  },
+  "sample_nside": 8,
+  "candidate_points": 417,
+  "attempted": 417,
+  "measured": 412,
+  "band_statistics": {
+    "g": {
+      "median": 1.1976054663030968,
+      "p16_p84": [
+        0.7353439059092103,
+        1.6480960199124064
+      ]
+    },
+    "r": {
+      "median": 0.797670173305848,
+      "p16_p84": [
+        0.31727363848140305,
+        1.227059803618437
+      ]
+    }
+  },
+  "code_sha256": "e3dbbb6f2f42d509ac1754b00d4dba59ea50c5de9c975ba0c3e3394cd3a63bd7",
+  "outputs": {
+    "ps1_image_depth_difference.png": "480ec3dae5421985f17213ba232d563e1265238776df4e86b3267e3331f1422b",
+    "paired_aperture_depth.csv": "e95ad8d5c4585acc5ae27656641b9a606603b7afbf05926ef07578a46cdf7dc3",
+    "ps1_image_depth_difference.pdf": "2d7313ccd71da199d42479b20ecb7329a4e6b7bdfcecd4075a18118826c4d5fd",
+    "unavailable_samples.csv": "147ae874d693aa890f806db44720f0cb2366e7e21b537282348c75479579841d"
+  },
+  "scope": "Common formal observed AB aperture depth from positive diagonal variance. PS1 native variance scale is verified against same pixels in acquired full stacks. Public cutout masks are unavailable as usable bit images, so PS1 positions use the accepted census WCS mask and finite positive variance over the aperture. LS uses its own native passbands. Covariance and source completeness are outside the measured image-weight statistic."
+}

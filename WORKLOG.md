@@ -2,6 +2,8 @@
 
 ## 2026-11-22
 
+- PS1 step 61736243.0 completed in 4:47. Verified all output hashes and the Aitoff visual. 412 of 417 matched aperture positions passed. Median LS minus PS1 observed 10σ depth is +1.198 mag in g and +0.798 mag in r. The remaining five positions lacked a valid aperture in one of the surveys. Cancelled the held duplicate 61735663.
+
 - Job 61736238 measured archived baseline point-source counts at 1,930 Galactic sample centres. Verified the map and every aggregate hash. Median faint point-source density 2,701 per usable deg² and median PSF fraction 21.5% under the unchanged g/r cuts. 283 archive entries omitted during selection lacked the non-owned core area needed for these counts.
 - Interactive allocation 61736243 runs the receipt-bound PS1 and DELVE apertures and the three remaining deeper A controls on compute steps 0–3. Existing pending jobs 61735663, 61736181 and 61736182 were held first. Cancel an alternate job only after its replacement outputs pass, or release it for unfinished work.
 
