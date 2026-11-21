@@ -6,7 +6,7 @@ On 2026-11-21 the user withdrew the previous review packages pending a new convo
 
 Jobs 61733121, 61733122 and 61733147 completed. Their verified outputs cover 101 literature systems, the qualified Galactic footprint and LS-only observed 10σ depth, and four fixed-position catalogue diagnostics. The formal comparison sample has 67 covered, in-range objects and 49 ordinary A spatial matches. See the [science report](../fourteenth_science_report.md) for denominators and the fixed-centre measurements.
 
-Review rendering and PDF jobs 61733126 and 61733191 were cancelled. The user requested a scientific six-panel page in the earlier style. The known-control preview, production redraw and single final package await layout confirmation.
+The user confirmed the six-panel layout. Hercules preview 61733738, real candidate/control pilot 61733737, native blank 61733838 and the anonymous/held PDF pilot 61734147 completed. The full array 61734142 has 765 registered views, with dependent assembly 61734170. The final package awaits complete render, page/identity QA and archival.
 
 ## 2026-11-20T10:09Z — final one-time review release accepted
 

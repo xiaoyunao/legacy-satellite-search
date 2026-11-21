@@ -57,8 +57,15 @@ def build(source,output):
         'remain in the held second phase until actual responses are sealed.',
         'Previously exposed cases are retained; this does not restore prospective blindness.',
     ]
+    if plan.get('review_version'):
+        lines.insert(1, 'Review version: '+plan['review_version'])
     if plan.get('local_alternative_labels'):
         lines.append('Local alternative labels can recur across source versions. Refer to unique page/evidence numbers.')
+    if plan.get('science_panel_supplement'):
+        lines += [
+            'Each hypothesis starts with paired grayscale density maps, a radial profile and colour-magnitude plots.',
+            'Density divides smoothed counts by smoothed usable area. Native image evidence follows.',
+        ]
     doc.setFont('Helvetica',11)
     for i,line in enumerate(lines):doc.drawString(margin,height-90-23*i,line)
     doc.showPage();index=[]
@@ -94,6 +101,8 @@ def build(source,output):
     blind_manifest=dict(units=len(units),pages=1+sum(len(u['panels']) for u in units),
                         artifacts={p.name:digest(p) for p in content},human_grades_unfilled=True,
                         pilot=bool(plan.get('pilot')),final_ready_for_human_review=False)
+    if plan.get('review_version'):
+        blind_manifest['review_version']=plan['review_version']
     archive=output/'anonymous_review.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
         for p in content:z.write(p,p.name)

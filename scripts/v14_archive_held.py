@@ -10,7 +10,7 @@ def digest(path):
     with path.open('rb') as stream:return file_digest(stream,'sha256').hexdigest()
 
 
-def archive(package):
+def archive(package,key=Path('results/v14/human_review/final_private/final_assembly/held_context_key.json')):
     if 'final_private' not in package.parts:raise ValueError('Held archive must remain private')
     manifest=json.loads((package/'manifest.json').read_text())
     qa=json.loads((package/'structural_QA.json').read_text())
@@ -25,7 +25,8 @@ def archive(package):
     render=json.loads((environment/'render_QA.json').read_text())
     env_pdf=environment/'held_environments.pdf'
     if (digest(env_pdf)!=env['pdf_sha256'] or digest(env_pdf)!=render['pdf_sha256']
-            or env['inputs'].get('results/v14/human_review/final_private/final_assembly/held_context_key.json')!=qa['key_sha256']
+            or env['inputs'].get(str(key))!=qa['key_sha256']
+            or digest(key)!=qa['key_sha256']
             or not env['every_rendered_annotation_text_verified']
             or not render['every_page_rendered'] or not render['every_page_text_and_object_bounds_checked']):
         raise ValueError('Held frozen environment appendix and every-page QA required')
@@ -46,4 +47,9 @@ def archive(package):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--package',type=Path,required=True)
-    archive(parser.parse_args().package)
+    parser.add_argument('--key',type=Path)
+    args=parser.parse_args()
+    if args.key:
+        archive(args.package,args.key)
+    else:
+        archive(args.package)

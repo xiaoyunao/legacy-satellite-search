@@ -6,6 +6,7 @@ from pathlib import Path
 
 from PIL import Image
 from pypdf import PdfReader
+from scripts.v14_held_context_pdf import mode_images
 
 
 def digest(path):
@@ -31,9 +32,8 @@ def verify(key,package):
             origin=alternative['origins'][0];path=Path(origin['context_manifest'])
             if digest(path)!=origin['context_manifest_sha256']:raise ValueError('Mode proof changed')
             context=json.loads(path.read_text())
-            for name in ('context.png','conditions.png','images.png'):
-                image=path.parent/name
-                if digest(image)!=context['outputs'][name]:raise ValueError('Mode raster changed')
+            for image,checksum,_ in mode_images(path,context,alternative):
+                if digest(image)!=checksum:raise ValueError('Mode raster changed')
                 expected.append(image)
     reader=PdfReader(pdf)
     if reader.is_encrypted or reader.attachments or any(k in reader.trailer['/Root'] for k in ('/OpenAction','/AA','/AcroForm')):

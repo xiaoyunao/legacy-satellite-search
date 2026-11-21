@@ -18,6 +18,13 @@ from reportlab.pdfgen import canvas
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def mode_images(path, context, alternative):
+    for row in alternative.get('science_panels', ()):
+        yield Path(row['path']), row['sha256'], f"science overview, sigma {row['display_sigma_arcmin']:g} arcmin"
+    for name in ('context.png', 'conditions.png', 'images.png'):
+        yield path.parent / name, context['outputs'][name], name.removesuffix('.png')
+
+
 def build(key,output):
     if 'final_private' not in output.parts:raise ValueError('Keep held context private before response sealing')
     held=json.loads(key.read_text());inputs={str(key):sha(key)}
@@ -60,14 +67,13 @@ def build(key,output):
             text(f"Retained view {j:03d}: RA={mode['fit_ra_deg']}; Dec={mode['fit_dec_deg']}; DM={mode['fit_dm']}; rh={mode['fit_rh_arcmin']} arcmin")
             text(f"C TS={mode['ts']}; without top3={mode['C_refit_TS_without_top3']}; effective members={mode.get('effective_members','unavailable')}; evidence L0")
             text('Original mode/source references: '+', '.join(o['context_manifest'] for o in origins))
-            alternatives.append((j,path,context))
+            alternatives.append((j,path,context,alternative))
         doc.showPage()
-        for j,path,context in alternatives:
-            for name in ('context.png','conditions.png','images.png'):
-                image_path=path.parent/name
-                if sha(image_path)!=context['outputs'][name]:raise ValueError('Held raster changed')
+        for j,path,context,alternative in alternatives:
+            for image_path,checksum,heading in mode_images(path,context,alternative):
+                if sha(image_path)!=checksum:raise ValueError('Held raster changed')
                 inputs[str(image_path)]=sha(image_path)
-                doc.setFont('Helvetica-Bold',12);doc.drawString(margin,height-28,f'{alias} / retained view {j:03d} / '+name.replace('.png',''))
+                doc.setFont('Helvetica-Bold',12);doc.drawString(margin,height-28,f'{alias} / retained view {j:03d} / '+heading)
                 with Image.open(image_path) as im:
                     im.verify()
                 with Image.open(image_path) as im:
