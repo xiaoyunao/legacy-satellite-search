@@ -1,0 +1,5 @@
+census,provisional_positions,represented_unambiguous_deg2,approximate_positions_per_deg2,positions_with_same_record_C,known_system_or_position,known_environment_only,extended_galaxy_only,no_catalogue_context
+Unassigned or masked,1375,2624.8733741262413,0.5238347927765107,1300,201,0,963,211
+DES Y6,1513,4791.806758475998,0.31574729037721033,1347,216,0,285,1012
+DELVE DR3,4550,10894.403654129783,0.4176456228767707,3939,156,0,1011,3383
+PS1 DR1,2731,8565.827304655491,0.31882501279423564,1960,136,22,52,2521

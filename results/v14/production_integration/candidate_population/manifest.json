@@ -1,0 +1,17 @@
+{
+  "job": "61734776",
+  "inputs": {
+    "results/v14/production_integration/reconciled/provisional_positions.csv": "3fd8339eea08f88e8d49244a484b2f32a1a68809727a01ddaf56a0a983d10624",
+    "results/v14/production_integration/reconciled/manifest.json": "6665114a9230fc7aa5bc8b3637c000b3ef408cdecd5d00406336ef27ae05ec92",
+    "results/v14/production_integration/masks/post_outside_C_union_acceptance.json": "a4b12f502ca606912112958ad9fe03f3685abcb12b95f332dc77d02d66f18499",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/census.fits": "8b5b322cd13468f0b470abc3764d3bcb8db7e549aae20001924f87ac41fe4784",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/read_config.yaml": "c751b3c0524246854e232582589bbe0f4daccf26eff16db899f35b471a8a761a"
+  },
+  "outputs": {
+    "candidate_population_by_census.csv": "32390d72f8a1fdbfe621a716138ee030dd14dd937beb479ee5c9409e1584677f",
+    "candidate_population_by_census.png": "6cc509fb87a2b67fdd2678f30ebb322697cdd41a2d6060e955137a47f9de963b",
+    "candidate_population_by_census.pdf": "07a3c41b5e90c917fefe2ef834be082b4cb74deb004f91e12451d6d7471e9acb"
+  },
+  "code_sha256": "68b822a9e1a86be09b001dbe91c4c91e68e601c1c783156102c9f9852c5402d9",
+  "scope": "Ungraded provisional catalogue positions only. Context labels have precedence in displayed order so each position is counted once. Density uses representative exact census labels and the published unambiguous WCS-mask areas, with a small boundary mismatch. Existing same-record C has at least one completed fit; it does not certify all modes. These are search burden and context counts, not false-positive rates, true objects, the frozen anonymous sample or human grades."
+}

@@ -59,6 +59,18 @@ The same 10σ convention was applied to matched point-source measurements in two
 
 At 100 kpc, the first population and background have verified native images at both 10 and 15 pc. The matched experiment uses the same 293 generated members after a common stamp cut. The cut retains 98.54% of the parent rendered V-proxy light. The blind A search recovers the position and distance at both radii with both photometric limits. At 15 pc the image processing yields nine more final associated detections and 17 more PSF classifications. Three more associated sources pass the baseline selection and five more pass the deeper selection. The one-position comparison holds the rendered stellar population fixed while its placement relative to foreground and neighbouring members changes. It shows a size-dependent source response for this realization. The other five population–background pairs are registered and pending. [Pilot results and common support](results/v14/fifteen_pc/)
 
+### Candidate search burden
+
+The 10,169 ungraded provisional positions include 1,513 in DES Y6, 4,550 in DELVE DR3, 2,731 in PS1 DR1 and 1,375 outside the census assignments or inside its masks. Matching those counts to the represented unambiguous areas gives about 0.316, 0.418, 0.319 and 0.524 positions per deg², respectively. The unassigned or masked category includes 963 positions with an extended-galaxy annotation after first assigning known-system contexts. These counts characterize the review burden. The associations are catalogue context for the eventual blind review, with physical classification and independent confirmation still pending. [Candidate population by census](results/v14/production_integration/candidate_population/candidate_population_by_census.png)
+
+### Scientific figures
+
+- [Qualified WCS footprint and census coverage](results/v14/qualified_aitoff/qualified_footprint.png)
+- [Published-system recovery on the qualified masks](results/v14/qualified_aitoff/known_recovery.png)
+- [Conditional blind recovery on 144 real CCD realizations](results/v14/repeat_full/production_deeper_replay/figures/formal_spatial_recovery.png)
+- [Extraction and selection losses in the paired native images](results/v14/paired_radius/fixed_population_size_response.png)
+- [Provisional candidate population and search burden](results/v14/production_integration/candidate_population/candidate_population_by_census.png)
+
 ## 2026-11-20T10:09Z — final one-time review release accepted
 
 All 6,891 registered R14 fields are terminal: 6,861 complete and 30 without valid gr. The qualified historical ledger has 10,356 records at 10,169 provisional positions. Its represented exposure-mask/projection union is 26,886.647579 deg². This is searched area, not newly imaged or unexplored sky, and not an area with validated physical gain. The frozen frame has 8,981 administrative review units; 161 production units and two weak controls enter the final packet. All original 75 cases remain retained. Necessary C and image evidence covers 226 selected exact-source records, 752 source modes and 13 additional control modes.

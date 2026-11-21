@@ -2,6 +2,7 @@
 
 ## 2026-11-21
 
+- Job 61734776 completed in 53 s. Verified catalogue-context and same-record C statistics for 10,169 ungraded provisional positions, with the accepted WCS-area denominators. Added the aggregate figure and linked all five measured scientific figure classes.
 - 61734536 finished both native radius cases, and 61734735 accepted them. One common-support population on CCD background 1 has correct blind position and distance in both radius and depth arms. Increasing the radius from 10 to 15 pc adds nine native final associations, 17 PSF associations and three/five hard-selected associated sources at baseline/deeper limits. The other ten images are in shared CPU array 61734749, with dependent acceptance 61734780.
 - Fixed-position controls 61734221 timed out using dense masks at each position. The retry 61734663 completed in 64 s using row sums for the same disk and annulus counts. The calculation reproduced 480 exact test aperture pairs and checked the original target and first accepted control on each real field. Verified 12 rows from 1,504 area-matched positions. A deeper A comparison at a matched budget takes precedence over a standalone likelihood scan.
 - TAP ADQL geometric functions were not accepted by the current Data Lab endpoint. Bounded indexed-coordinate queries followed by local spherical filtering succeeded in 61734659. The DES/DELVE comparison tables pass SHA256 verification. Added a five-field flux-error comparison with source-percentile bars.
