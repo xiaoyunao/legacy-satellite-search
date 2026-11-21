@@ -26,7 +26,19 @@ Four baseline misses were remeasured at known positions. The table uses the near
 
 Gemini I changes its best scale from 1′ to 0.5′, so its on/off counts use different apertures. Sextans II uses 4′ in both arms. Gemini I and Sextans II are the clearest controls for a same-depth matched-background test. The fixed-position scores have no blind-search calibration. The four diagnostics do not establish a likelihood-search gain. [Stage counts and mask fractions](results/v14/census_comparison/missed_controls_fixed_diagnostics.csv)
 
-The Galactic Aitoff maps use 512,637 covered NSIDE 256 sample centres from the accepted WCS masks. Their sampled area is 26,890.811 deg²; the formal union remains 26,886.648 deg². LS formal gr depth is shown in observed 10σ magnitudes, using the corresponding hemisphere's brick summary converted from 5σ. Matched-sky PS1/DES/DELVE depth differences and classification response still require common coverage and sensitivity measurements. The unannounced production positions are held on NERSC. [Footprint, depth and known recovery maps](results/v14/qualified_aitoff/)
+The Galactic Aitoff maps use 512,637 covered NSIDE 256 sample centres from the accepted WCS masks. Their sampled area is 26,890.811 deg²; the formal union remains 26,886.648 deg². The LS panels show observed 10σ gr depths, using the corresponding hemisphere's brick summary converted from 5σ. Survey-wide matched-sky depth and classification comparisons require broader comparator coverage. The unannounced production positions are held on NERSC. [Footprint, depth and known recovery maps](results/v14/qualified_aitoff/)
+
+### Matched LS–PS1 source-depth measurements
+
+On the three native CCD backgrounds, 41,809 PS1 primary positions within the LS mask have unique 0.8″ LS catalogue matches. Using each catalogue's PSF flux uncertainty and dereddened native passbands at a common 10σ, the median paired depth differences are positive.
+
+| CCD background | g pairs | LS − PS1 g (mag) | r pairs | LS − PS1 r (mag) |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 858 | +1.57 | 1,639 | +0.64 |
+| 2 | 2,415 | +1.33 | 3,234 | +0.79 |
+| 3 | 1,418 | +1.44 | 1,963 | +0.89 |
+
+The table uses LS PSF sources and PS1 measurements with S/N between 5 and 20. Requiring the additional PS1 bright i-band point-source proxy shifts the medians by at most 0.03 mag. Across all positional matches, 11,114 pass the frozen LS baseline cuts and 13,632 pass the deeper LS research cuts. Both counts are limited to catalogue matches; sources missed entirely by either catalogue are outside the depth comparison. The map shows supported 5′ cells. These measurements establish local differences in catalogue flux-error depth. The real image-injection comparison and the independent PS1 source-response validation still govern any claim about physical recovery gain. [Matched depth products](results/v14/repeat_full/matched_source_depth/)
 
 ## 2026-11-20T10:09Z — final one-time review release accepted
 

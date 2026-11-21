@@ -1,0 +1,21 @@
+{
+  "job": "61734425",
+  "inputs": {
+    "results/v14/repeat_full/production_deeper_replay/registration.json": "9064f8747b08ca2f07594b6659e0b5e4e5ba0326c25322f6baebbf1df11a0f36",
+    "results/v14/repeat_full/production_replay/registration.json": "46fbb484ab168b4dbe4f770d0e1cc73f66242c605a8c749893d15cdeb1377e70",
+    "configs/v14_repeat/image_fields.csv": "f5eac1b2ae1ba753ee143ce19d344e17be1416b7f59b5dfdd5cfa2242b6a5929",
+    "results/v14/repeat_full/ps1_observing_conditions/manifest.json": "cbdcb4a495898c21ff76a58bb7e1a05483ceeca1193d32d68d04ee5011c7c96e",
+    "configs/v13/matched/south/matched.yaml": "422f1a57860d18f67e6a8ac6c185650e38b3df0bafab9f17cc8f8182a51d98d8",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_conditions/0640b8db7881a268/v14_south_response_1-01.csv": "30e9397ce1d06c03ca376bfeb5985b8953f851dd106c7fe0e5c357012f3410c9",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_conditions/0640b8db7881a268/v14_south_response_2-01.csv": "8236c4f26ce022097de0f10cec72788c4e29eafd30cd48e36daa89231cfacb24",
+    "/pscratch/sd/y/yunao/legacy-satellite-search/resources/v14/ps1_conditions/0640b8db7881a268/v14_south_response_3-01.csv": "bac6e1123f615fc4c72c3fe1d0ced450ef22e984d4a772e7eb0c3b2ccbcc1db0"
+  },
+  "code_sha256": "6e652c6c3060f4da53c67b5026ab236b6c45485b543b012d2ad6e43cec892b4c",
+  "outputs": {
+    "sample_counts.csv": "594b89986fd4b799bc78b24cce14ed01b0d6dee71b876035a2fab28d342e2359",
+    "depth_cells.csv": "88d520bab92986381c232d9c23eec59b46223cd86b5a05457334fd38561a2496",
+    "matched_depth.png": "fef496adf648e15a460a0af76b3f1db30af994c078cc90b47adac35edf2f2bf3",
+    "depth_summary.csv": "be39a498ee88426037c9d582dcf95778326bd5e100040b14815e19aebffda0ce"
+  },
+  "scope": "Matched real detections in the three South PS1 CCD backgrounds. LS and PS1 use the same S/N=10 and dereddened magnitude convention in their native passbands. The differences are conditional flux-error proxies, not background-only sensitivity, independent-sky coverage, source completeness, or calibrated physical LS\u2212PS1 gain. Spatial cells are displayed only when supported by paired sources."
+}
