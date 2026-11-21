@@ -2,6 +2,8 @@
 
 ## 2026-11-22
 
+- DELVE depth step 61736243.3 completed in 44:59. 325 of 338 indexed positions have valid paired g/r apertures. Seven positions lack a valid public DELVE aperture and six lack a valid DR11 aperture. Median LS minus DELVE is +0.056 mag in g and +0.032 mag in r. The shared-scale 61736243.7 atlas binds the accepted DES, DELVE and PS1 manifests and passed local image QA. Cancelled held duplicate 61736181 and closed the science allocation.
+
 - All ten remaining 10/15 pc native runs in 61734749 completed. Slurm step 61736243.6 verified all twelve native source proofs and both depth arms. Initial detections 446→534, final associations 557→617, PSF associations 393→482, hard selection 86→108 at baseline and 144→188 at deeper limits. Baseline spatial 5/6→6/6 and deeper 6/6→6/6. Verified the table hash and plotted the same realized source pairs. Cancelled the held duplicate acceptance 61734780.
 
 - Completed and checked the four matched-budget A control comparisons. Gemini I is the only deeper recovery. Aquarius IV, Sextans II and DELVE 7 failed both catalogue limits. Older fields omitted the recorded path because their full peak CSV sits next to the original manifest. Added the existing legacy file location and verified row counts against the saved scan. Retried only the two affected controls in steps 61736243.4 and .5, preserving the exact registered test fields and calibration blocks. Synchronized both registrations and the eight measured rows. Cancelled the held duplicates.

@@ -10,7 +10,7 @@ All 12 images and both depth arms passed the actual source checks in 61736243.6.
 
 The blinded deeper A trial recovered Gemini I at 0.988′ and Δμ=+0.104 mag. The historical baseline peaks missed at the same six-field calibration budget of 19 groups over 65.580 deg². The corrected pilot 61735798 is verified. The other three matched-budget tests completed in 61736243. DELVE 7, Aquarius IV and Sextans II miss at both limits. The four pairs and their source manifests are verified. The production A baseline remains frozen.
 
-The DELVE tile-indexed g/r aperture pilot 61736109 measured all 12 positions. The PS1 comparison is verified on 412 of 417 sky positions, with median LS minus PS1 depths of +1.198 mag in g and +0.798 mag in r. The broader DELVE depth comparison is running in 61736243. Job 61736238 also verified and mapped the realized faint baseline point-source sample across 1,930 field centres.
+The DELVE tile-indexed g/r aperture pilot 61736109 measured all 12 positions. The PS1 comparison is verified on 412 of 417 sky positions, with median LS minus PS1 depths of +1.198 mag in g and +0.798 mag in r. The broader DELVE comparison is complete at 325 of 338 positions. Median LS minus DELVE depths are +0.056 mag in g and +0.032 mag in r. The common-scale three-survey Aitoff atlas is verified. Job 61736238 also verified and mapped the realized faint baseline point-source sample across 1,930 field centres.
 
 ## 2026-11-21 — extended catalogue and footprint checks
 

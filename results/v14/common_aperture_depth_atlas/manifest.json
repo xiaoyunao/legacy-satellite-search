@@ -1,0 +1,80 @@
+{
+  "inputs": {
+    "DES Y6": {
+      "job": "61735544",
+      "manifest_sha256": "ab5608043fb818ab717a9b2f2eb737dbb93f33afceb16143fb4a45f9b192d19c",
+      "table_sha256": "b335587026d4ca429e04c2cdad58e99c388db1e8b61d8880b85ca56a995e3779",
+      "measured": 447,
+      "band_statistics": {
+        "g": {
+          "median": 0.14691188181720705,
+          "p16_p84": [
+            0.033291961159608266,
+            0.28047439984931555
+          ]
+        },
+        "r": {
+          "median": 0.10979110001704484,
+          "p16_p84": [
+            0.009797711975025152,
+            0.202849553304205
+          ]
+        }
+      }
+    },
+    "DELVE DR3": {
+      "job": "61736243",
+      "manifest_sha256": "949c7c74c39d76407e15cfcfada63825b72124b48f989e1b990ed149f0933571",
+      "table_sha256": "83b5083c4f4f36be2a175d5887b8d5033cd7e98a0063fa8e890b275972785721",
+      "measured": 325,
+      "band_statistics": {
+        "g": {
+          "median": 0.05644326555968604,
+          "p16_p84": [
+            -0.1359586413583176,
+            0.2924811825382394
+          ]
+        },
+        "r": {
+          "median": 0.03173460869267686,
+          "p16_p84": [
+            -0.2854563396323044,
+            0.3210006107308115
+          ]
+        }
+      }
+    },
+    "PS1 stacks": {
+      "job": "61736243",
+      "manifest_sha256": "232e5cfb71f17a168a067dbc528f0e2e0e7ff77465106955bfabe29046c8e99c",
+      "table_sha256": "e95ad8d5c4585acc5ae27656641b9a606603b7afbf05926ef07578a46cdf7dc3",
+      "measured": 412,
+      "band_statistics": {
+        "g": {
+          "median": 1.1976054663030968,
+          "p16_p84": [
+            0.7353439059092103,
+            1.6480960199124064
+          ]
+        },
+        "r": {
+          "median": 0.797670173305848,
+          "p16_p84": [
+            0.31727363848140305,
+            1.227059803618437
+          ]
+        }
+      }
+    }
+  },
+  "colour_bounds_mag": [
+    -2.0,
+    2.0
+  ],
+  "code_sha256": "a11541f68558d58e0565b00a8e85bc701ef724cf10e30b1137a06a32ba3e3a8f",
+  "outputs": {
+    "common_aperture_depth_atlas.png": "82866780bb21910ed85d839af8161a2e98dd9c95b71b6f01930b3222b8d988c1",
+    "common_aperture_depth_atlas.pdf": "406dd70d9373bff9c327c598ce15b0735f7086d0ba8e48c19c8da7dcee9c55e0"
+  },
+  "scope": "Sampled images and released survey weight maps. Formal observed AB aperture noise across native passbands. Blank areas have no plotted sample. Covariance, resolved-star selection and system recovery require separate measurements."
+}
